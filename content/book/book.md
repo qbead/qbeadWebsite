@@ -14,28 +14,28 @@ This is only a scaffolding for the (printed and electronic) textbook that will b
 ## Adventures
 
 1. [Biology of sight](/sight)
-2. [Animations and patterns](/animation)
+2. Animations and patterns
 3. [Make a step counter](/stepcounter)
-4. [Dancing companion](/dancing)
-5. [Compass](/compass)
-6. [Hacker’s common tools](/hacktools)
-7. [Stroboscope and stroboscopic photography](/stroboscope)
+4. Dancing companion
+5. Compass
+6. Hacker’s common tools
+7. Stroboscope and stroboscopic photography
 
 ## Computer Science 101
 
 1. Digital Electronics 
 2. The Tools of a Programmer
 3. Basic Programming Patters
-4. [Physical Computing](/physical_computing)
+4. Physical Computing
 
 ## Physics 101
 
 1. Vectors and Kinematics
 2. Rotation
-3. [Pendulums and Vibrations](/pendulum)
-4. [Inertial reference frames / Free fall](/inertia)
-5. [Light and Color](/lightandcolor)
-6. [Magnetism](/magnetism)
+3. Pendulums and Vibrations
+4. Inertial reference frames / Free fall
+5. Light and Color
+6. Magnetism
 7. Electricity
 
 ## Engineer’s Diary
