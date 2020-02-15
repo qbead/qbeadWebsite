@@ -1,6 +1,7 @@
 #!/bin/bash
 
-rm -rf build/*
+rm -rf build
+mkdir build
 
 cp -r content/images build/images
 cp -r static/* build/
@@ -23,7 +24,3 @@ for mdfile in content/book/*md; do\
     mkdir build/$name
     cp build/$name.html build/$name/index.html
 done
-
-cp -r codedoc build/codedoc
-
-#grep "title: " content/*.md | sort | sed -E "s/content\/([0-9\.a-zA-Z_]*)\.md:title: ([a-zA-Z ]*)/<a href='\\1.html'>\2<\/a><br>/" > build/all.html
