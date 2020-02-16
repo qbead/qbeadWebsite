@@ -20,16 +20,16 @@ The feedback after the event was overwhelmingly positive and confirmed our convi
 
 <figure>
 <img src="/images/behindthescenes/early_bracelet.jpg">
-<figurecaption>
+<figcaption>
 High schoolers assembling and showcasing the bracelets that they made.
-</figurecaption>
+</figcaption>
 </figure>
 
 <figure>
 <img src="/images/behindthescenes/2018-discovery-museum_1.jpg">
-<figurecaption>
+<figcaption>
 We have also found that the LED bracelets are an engaging demo when there isn't time for students to build one of their own. 
-</figurecaption>
+</figcaption>
 </figure>
     
 </div>
@@ -63,9 +63,9 @@ In the rest of this page, we will further describe the design process and our ch
     
 <figure>
 <img src="/images/for_parents/final_cover.jpg">
-<figurecaption>
+<figcaption>
 The cover of the SpinWheel Science and Exploration Field Guide. 
-</figurecaption>
+</figcaption>
 </figure>    
     
 </div>
@@ -87,9 +87,9 @@ We simultaneously iterated through the physical parameters for the device to arr
 
 <figure>
 <img src="/images/behindthescenes/draft_layout_inset.jpg">
-<figurecaption>
+<figcaption>
 The first draft of what would become the final layout of the SpinWheel, with enough LEDs to not only be beautiful, but also be able to represent cardinal directions, measured tilt, and other physical quantities.
-</figurecaption>
+</figcaption>
 </figure>
 </div>
 </div>
@@ -104,9 +104,9 @@ Once we had our components and a rough sketch of the layout, we began designing 
 
 <figure>
 <img src="/images/behindthescenes/schem_and_render.png">
-<figurecaption>
+<figcaption>
 The schematics and 3D renders of the SpinWheel.
-</figurecaption>
+</figcaption>
 </figure>
 </div>
 </div>
@@ -121,18 +121,18 @@ Before we were comfortable pushing the project forward, we wanted to test the Sp
 
 <figure>
 <img src="/images/behindthescenes/first_batch_pcb.jpg">
-<figurecaption>
+<figcaption>
 The first batch of printed circuit boards delivered to us for testing.
-</figurecaption>
+</figcaption>
 </figure>
 
 Given its small components, the SpinWheel is best assembled by robots. However, the cost of production is prohibitively high unless boards are ordered in bulk. Therefore, we decided to assemble a small number of test boards by hand before sending the SpinWheel off to our robotic colleagues. This permitted us to double check the performance of each component (and indeed led us to change some of our initial design choices), thus ensuring that the final device will work reliably.
 
 <figure>
 <img src="/images/behindthescenes/soldering-bridget-2.jpg">
-<figurecaption>
+<figcaption>
 Bridget checking connections on a newly hand-soldered SpinWheel.
-</figurecaption>
+</figcaption>
 </figure>
 
 </div>
@@ -176,16 +176,16 @@ This is the SpinWheel: a brilliant, easily-programmable, wearable device through
 
 <figure>
 <img src="/images/behindthescenes/colorful_earring_cropped.jpg">
-<figurecaption>
+<figcaption>
 The SpinWheel.
-</figurecaption>
+</figcaption>
 </figure>
 
 <figure>
 <img src="/images/behindthescenes/wearing_earring_cropped.jpg">
-<figurecaption>
+<figcaption>
 The SpinWheel as jewelry. Works as a keychain or an impropmptu compass as well.
-</figurecaption>
+</figcaption>
 </figure>
 </div>
 </div>
