@@ -13,6 +13,7 @@ for mdfile in content/main/*md; do\
     mkdir build/$name
     mv build/$name.html build/$name/index.html
 done
+cp build/index/index.html build/index.html
 
 for mdfile in content/book/*md; do\
     name=$(basename -s .md $mdfile)
