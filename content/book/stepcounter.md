@@ -110,7 +110,7 @@ void loop() {
   // And we tell the SpinWheel to show the light pattern we registered on
   // the previous line.
   SpinWheel.drawFrame();
-  Serial.print(total_acceleration);
+  Serial.print(intensity);
   Serial.println();
 }
 ```
