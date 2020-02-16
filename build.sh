@@ -11,7 +11,7 @@ for mdfile in content/main/*md; do\
     echo $name
     pandoc -o build/"$name".html -s -f markdown+emoji --mathjax --css="/custom.css" --css="/custom_main_v2.css" --template="custom_v2" --data-dir="data-dir" $mdfile;\
     mkdir build/$name
-    cp build/$name.html build/$name/index.html
+    mv build/$name.html build/$name/index.html
 done
 
 for mdfile in content/book/*md; do\
@@ -19,5 +19,5 @@ for mdfile in content/book/*md; do\
     echo $name
     pandoc -o build/"$name".html -s -f markdown+emoji --mathjax --css="/custom.css" --css="/custom_book.css" --template="custom_book" --data-dir="data-dir" $mdfile;\
     mkdir build/$name
-    cp build/$name.html build/$name/index.html
+    mv build/$name.html build/$name/index.html
 done
