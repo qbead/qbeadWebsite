@@ -1,4 +1,4 @@
 html:
 	./build.sh 
-server: html
+local_test_server: html
 	cd build && python3 -m http.server
