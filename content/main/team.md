@@ -16,7 +16,11 @@ Engineers](https://swe.sites.yale.edu/gradswe-0), and in particular, their
 channeled our passion for creating, teaching, and civil service to empower the
 next generation of makers. Through SpinWearables, we hope to reach even more
 students. All of the proceeds will go to funding the outreach events we run,
-providing free materials to students and teachers. If you want to get in touch or have any questions, email [mail@spinwearables.com](mailto:mail@spinwearables.com).
+providing free materials to students and teachers. 
+
+If you want to get in touch or have any questions, email [mail@spinwearables.com](mailto:mail@spinwearables.com). 
+
+And to stay up to date about the SpinWheel project, follow us on [Twitter](https://twitter.com/SpinWearables) and [Instagram](https://instagram.com/spinwearables?igshid=1hk2qphff1j1b).
 
 <figure>
 <img src="/images/behindthescenes/team_2.jpg">

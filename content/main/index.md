@@ -49,10 +49,13 @@ form > input {
 <input id="email" type="email" autocomplete="email" tabindex="0" aria-label="Your email" name="emailAddress" placeholder="email address" value="" required="" aria-invalid="true">
 <input class="round-button" id="button" type="submit" value="Notify me when launched!" />
 <!--<p style="width:70%;margin:1em auto 1em auto;">We will not email you more than twice, as we respect your time!</p>-->
+<p><strong>Follow us on:</strong></p>
+<p><strong>[Twitter](https://twitter.com/SpinWearables) and [Instagram](https://instagram.com/spinwearables?igshid=1hk2qphff1j1b)</strong></p>
 </form>
 <!--
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScpB8NUWgx-FhHzPOE5s-GHF2pZI4DTbhna-90F1GGhoF2YQQ/viewform?embedded=true" height="600" frameborder="0" marginheight="0" marginwidth="0" style="width:100%;">Loading…</iframe>
 -->
+
 </div>
 </div>
 
