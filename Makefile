@@ -1,4 +1,4 @@
 html:
 	./build.sh 
-server:
+server: html
 	cd build && python3 -m http.server
