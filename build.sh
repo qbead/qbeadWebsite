@@ -12,9 +12,6 @@ for mdfile in content/main/*md; do\
     pandoc -o build/"$name".html -s -f markdown+emoji --mathjax --css="/custom.css" --css="/custom_main_v2.css" --template="custom_v2" --data-dir="data-dir" $mdfile;\
     mkdir build/$name
     cp build/$name.html build/$name/index.html
-    pandoc -o build/"$name"v1.html -s -f markdown+emoji --mathjax --css="/custom.css" --css="/custom_main_v1.css" --template="custom_v1" --data-dir="data-dir" $mdfile;\
-    mkdir build/"$name"v1
-    cp build/"$name"v1.html build/"$name"v1/index.html
 done
 
 for mdfile in content/book/*md; do\
