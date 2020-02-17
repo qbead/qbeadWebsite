@@ -3,6 +3,14 @@ title: Light and Color
 keywords: color, light, electromagnetism
 ---
 
+::: intro-box
+In this lesson, we'll introduce the concept of waves and how this matters for understanding light.
+:::
+
+::: warning :
+This lesson is still under-development. Check back soon for more links and the full lesson!
+:::
+
 ::: further-reading
 todo: refer to the science of vision page, but focus on electromagnetism
 :::
