@@ -4,6 +4,10 @@ keywords: stepcounter, motion, acceleration
 header-image: /images/banners/stepcounter.png 
 ---
 
+::: intro-box
+In this adventure, you’ll learn how to use the motion sensor to turn the SpinWheel into a StepCounter.
+:::
+
 A step counter needs to detect motion, add up each time motion is detected, and somehow display the cummulative value. The SpinWheel has a motion sensor that can deal with the first task, a small controller (computer) that can perform the addition, and a number of LEDs that can be used as a display. Here we will see how to put these features together to make our own custom step counter.
 
 To start, plug in the SpinWheel to your computer and open up an "empty" sketch in the Arduino software. If you need help remembering how to do this, you can get a recap of how to connect your SpinWheel to your computer in our ["Quick Start Guide"](/quickstart).
@@ -40,7 +44,7 @@ If you want to learn more about what a vector is and how they are used by mathem
 :::
 
 One way to do it is to calculate 
-$\sqrt{a_x^2+a_y^2+a_z^2}$ 
+$$\sqrt{a_x^2+a_y^2+a_z^2}$$
 where $a_x$ is the acceleration in the x directions and so on. The code to do that operation looks like `sqrt(SpinWheel.ax*SpinWheel.ax + SpinWheel.ay*SpinWheel.ay + SpinWheel.az*SpinWheel.az)`. We will save this value in the variable `total_acceleration`.
 
 We will also send this value to the computer connected to the SpinWheel in order to confirm that everything is working. The command `Serial.print(total_acceleration)` does just that. In the Arduino software we can use `Tools -> Serial Plotter` to visualize the results.

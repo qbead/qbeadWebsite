@@ -4,6 +4,10 @@ keywords: sight, vision, color
 header-image: /images/banners/colors_and_eye.png 
 ---
 
+::: intro-box
+In this adventure, we trick our eyes into perceiving a rainbow of colors using the LEDs that only display red, green, and blue.
+:::
+
 The human eye is a fairly special organ. On one hand, it is already a spectacular sensor that, by far, outperform all the other senses in the amount of information it gives us about our surroundings. On the other hand, it is a hacked together compromise that leaves so much of the richness of color and light imperceptible to us. Here we will explore the limitations of this important sensor and we will even find out a few ways in which we can trick that sensor into believing things that are not there.
 
 ## Colors
