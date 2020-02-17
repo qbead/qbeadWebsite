@@ -22,11 +22,13 @@ main {
 
 div.intro-box {
   background-color: var(--color-intro-box);
-  padding: var(--panel-padding);
+  padding: 15px;
   border-radius: var(--panel-padding);
   margin: var(--panel-margin);
   line-height: var(--panel-lineheight);
   color: white;
+  text-align: center;
+  margin-bottom: 3em;
 }
 
 div.intro-box > p:first-child {
@@ -121,7 +123,7 @@ div.sourceCode > pre:before {
   display: block;
 }
 
-code {
+p > code {
   background-color: var(--color-code);
   padding: 3px;
   border-radius: 3px;
