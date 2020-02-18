@@ -2,6 +2,14 @@ The majority of the [spinwearables.com](https://spinwearables.com) website is ge
 
 You need to install `pandoc` to generate the website.
 
+It would be nice to set up your git properly so that the commit log is neat. Use the following commands to set real name, email, and password storage:
+
+```bash
+git config --global user.name "FIRST LAST"
+git config --global user.email "your@email.com"
+git config --global credential.helper store
+```
+
 A typical workflow would be:
 
 ```bash
