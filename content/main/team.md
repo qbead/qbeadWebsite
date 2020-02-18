@@ -67,7 +67,7 @@ And to stay up to date about the SpinWheel project, follow us on [Twitter](https
 <div>
 <h1>Becky</h1>
 <h2>Molecular Bioengineering</h2>
-Becky decided to pursue biomedical engineering so she could use her skills in math and science to improve human health. As a graduate student at Yale, however, she has discovered a second passion: teaching engineering skills to the next generation of college students. Having come from a small high school with limited STEM offerings, she recognizes the value of early exposure to hands-on technical projects--not only for building skills but building confidence as well. She is excited to reach even more students through SpinWearables.
+[Becky](/becky) decided to pursue biomedical engineering so she could use her skills in math and science to improve human health. As a graduate student at Yale, however, she has discovered a second passion: teaching engineering skills to the next generation of college students. Having come from a small high school with limited STEM offerings, she recognizes the value of early exposure to hands-on technical projects--not only for building skills but building confidence as well. She is excited to reach even more students through SpinWearables.
 </div>
 </div>
 
@@ -109,7 +109,7 @@ with her dog Cary.
 <div>
 <h1>Jenna</h1>
 <h2>Atmospheric Chemistry</h2>
-Jenna is a Ph.D. candidate in Environmental Engineering at Yale. She studies the complex mixture of organic compounds in the atmosphere, and how chemical changes at the molecular-level may impact the overall health and environmental effects of the air we breathe. She loves working with the SpinWearables team and the Yale Society of Women Engineers outreach team to share and explore the exciting world of STEM with middle and high school students.
+[Jenna](/jenna) is a Ph.D. candidate in Environmental Engineering at Yale. She studies the complex mixture of organic compounds in the atmosphere, and how chemical changes at the molecular-level may impact the overall health and environmental effects of the air we breathe. She loves working with the SpinWearables team and the Yale Society of Women Engineers outreach team to share and explore the exciting world of STEM with middle and high school students.
 </div>
 </div>
 

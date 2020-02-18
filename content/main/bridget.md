@@ -1,7 +1,7 @@
 ---   
 title: A Conversation with ...
 keywords: spinwheel, education, STEM, outreach, science, engineering day, engineering, biological engineering, environmental engineering
-header-image: /images/for_parents/volunteer_placeholder.jpg
+header-image: /images/behindthescenes/2018-discovery-museum_1.jpg
 subtitle: ... Bridget about her research and why she is involved with STEM outreach.
 ---
 
