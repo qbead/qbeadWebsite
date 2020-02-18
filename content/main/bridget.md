@@ -1,6 +1,6 @@
 ---   
 title: A Conversation with ...
-keywords: spinwheel, education, STEM, outreach, science, engineering day, engineering
+keywords: spinwheel, education, STEM, outreach, science, engineering day, engineering, biological engineering, environmental engineering
 header-image: /images/for_parents/volunteer_placeholder.jpg
 subtitle: ... Bridget about her research and why she is involved with STEM outreach.
 ---
@@ -54,7 +54,7 @@ Why pick just one? I've always loved both science and history.
 <p>
 **Who is your STEM role model?**
 
-After my postdoc, I want to be a college professor. Prof. Desiree Plata, who I met at Yale, bu is now at MIT, has been one of my most important mentors in this process and my inspiration for “what I want to be when I grow up.”
+After my postdoc, I want to be a college professor. Prof. Desiree Plata, who I met at Yale and is now at MIT, has been one of my most important mentors in applying for faculty jobs and my inspiration for “what I want to be when I grow up.”
 </p>
 </div>
 </div>
@@ -85,7 +85,7 @@ I decided to major in engineering because I wanted to be able to get a job right
 <p>
 **What is your favorite part about doing STEM outreach?**
 
-I love working with students who are already passionate about science and answering all of their questions. However, it is particularly rewarding when I’m able to help a student who didn’t think science was “for” them become excited about the activity I’m leading or realize that science is so much more than what they had been exposed to in school 
+I love working with students who are already passionate about science and answering all of their questions. However, it is particularly rewarding when I’m able to help a student who didn’t think science was “for” them become excited about the activity I’m leading or realize that science is so much more than what they had been exposed to in school. 
 </p>
 </div>
 </div>
@@ -104,7 +104,7 @@ I’m a black belt in taekwondo.
 <div class="row">
 <div class="column long-text">
 <p>
-For more information about Bridget's research and outreach, check out her [website](bridgethegarty.com)
+For more information about Bridget's research and outreach, check out her [website](https://www.bridgethegarty.com/)
 </p>
 </div>
 </div>
