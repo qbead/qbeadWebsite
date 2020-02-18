@@ -1,6 +1,6 @@
 ---
-title: The Science of Vision
-keywords: sight, vision, color
+title: The Biology of Sight
+keywords: sight, vision, color, biology, optical illusions
 header-image: /images/banners/colors_and_eye.png 
 ---
 
