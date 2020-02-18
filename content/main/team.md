@@ -76,7 +76,7 @@ Becky decided to pursue biomedical engineering so she could use her skills in ma
 <div>
 <h1>Bridget</h1>
 <h2>Computational Microbiology</h2>
-As a kid, Bridget was always asking "why?" Luckily, her parents put up with her incessant questioning and taught her to love the process of discovering new information. Bridget continues to pursue answers to her questions as a researcher at the University of Michigan, studying the microbes that survive in buildings. Outside of the lab, she shares her love of science and engineering by designing and leading activities that help participants, particularly girls, envision themselves as engineers. Through SpinWearables, she is excited to develop educational kits to inspire the next generation of engineers.
+As a kid, [Bridget](/bridget) was always asking "why?" Luckily, her parents put up with her incessant questioning and taught her to love the process of discovering new information. Bridget continues to pursue answers to her questions as a researcher at the University of Michigan, studying the microbes that survive in buildings. Outside of the lab, she shares her love of science and engineering by designing and leading activities that help participants, particularly girls, envision themselves as engineers. Through SpinWearables, she is excited to develop educational kits to inspire the next generation of engineers.
 </div>
 </div>
 
