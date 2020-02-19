@@ -74,7 +74,7 @@ I study the molecular mechanisms that cells use to migrate. An improved understa
 <p>
 **What is the coolest part of your job?**
 
-Going to conferences and getting to share your work with scientists from around the world!
+Going to conferences and getting to share my work with scientists from around the world!
 </p>
 </div>
 </div>
