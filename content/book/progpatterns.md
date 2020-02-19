@@ -166,12 +166,112 @@ float root4(float x) {
 }
 ```
 
+# Functions that do not return values
+
+Functions are occasionally used to change something in the environment of the
+device instead of as advanced calculators. Such functions do not return a value
+and so they do not need any extra variables in which to store their output. One
+example of such a function would be the `delay` function that simply pauses the
+computer for a specified time. The following example will stop everything and
+wait for 1000 milliseconds which is one second:
+
+```c++
+delay(1000);
+```
+
+When creating our own functions of this type, we mark them as `void`, instead
+of `int` or `float` or something else, to denote that their returned value is
+void or "empty". For instance, here we define a function that always pauses the
+program for exactly half a second:
+
+```c++
+void delay_half_a_second() {
+  delay(500);
+}
+```
+
+Notice how we did not need to use the `return` keyword. In this particular case
+we also did not have any parameters in the parentheses that defined our
+function, but we can very well have such parameters if we wish. For instance,
+this function takes numbers of seconds as its input and pauses the program for
+that long (by calculating the number of milliseconds corresponding to the given
+number of seconds and using the `delay` function).
+
+```c++
+void delay_seconds(int number_of_seconds) {
+  int number_of_milliseconds = 1000 * number_of_seconds;
+  delay(number_of_milliseconds);
+}
+```
+
+# Comments
+
+As the code we write grows more and more, it helps to add notes in the code to
+ourselves and our friends. That way it is easier to understand the purpose of
+the code when we look at it again in the future. Such notes are usually called
+"comments", and they are completely neglected by the computer. In the language
+we are using they are denoted by a double slash `//` -- everything to the right
+of these symbols, until the end of the line, is a message for fellow humans. We
+will use such comments below in some more complicated examples of code.
+
+```c++
+// I am writing this comment to remind me that the next
+// line stores the number 5 in the variable named my_test_variable.
+int my_test_variable = 5;
+```
+
 # The first function to run when a program starts
 
-`setup` and `loop` are functions you always have to define, because the computer searches for them when it starts a new program.
+After we have created all the variables we will need and all of our special
+functions that will help us do what we want, we need to actually start the
+program. But the program needs to know what to run first. In different
+languages this is done differently, but in our particular case we do it by
+defining two special functions: `setup` and `loop`. Our computer is instructed
+to run these functions first: It looks at the `setup` function and runs it
+first, before anything else. Usually this function is used to **set up** any
+settings we might need in advance. Then the computer repeatedly runs the `loop`
+function, which is named this way exactly because it **runs in a loop**.
 
-# conditions and loops are for the next lesson
+Here is a large example that includes all these features. It will use the
+`Serial.println()` function in order to send messages to the computer.
 
-# rename the lesson
+```c++
+// First we define a convenient pausing function
+// that waits a given number of seconds
+void delay_seconds(int number_of_seconds) {
+  int number_of_milliseconds = 1000 * number_of_seconds;
+  delay(number_of_milliseconds);
+}
 
-# link to https://www.arduino.cc/en/Tutorial/Foundations
+
+// This is the setup function that will automatically run
+// first when the device starts.
+void setup() {
+  // The next line ensures that the communication hardware
+  // on our device is ready to send messages.
+  // The name "Serial" is such for historical reasons
+  // (it is the name for this type of communication).
+  Serial.begin(9600); // The 9600 is the speed of the conection.
+}
+
+// Define a variable in which we will store a counter that goes up by one on
+// each step.
+int counter = 1;
+
+// This function runs repeatedly after the setup function finishes.
+void loop() {
+  // Send a message to the connected computer.
+  // The message will just be the value of the counter.
+  Serial.println(counter);
+  // Increment the value of the counter.
+  counter = counter + 1;
+  // Wait for a second before you start the loop function again.
+  delay_seconds(1);
+}
+```
+
+::: further-reading
+The Arduino community has very detailed resources on the programming language
+that we are using. You can start with their
+[tutorial](https://www.arduino.cc/en/Tutorial/Foundations) for instance.
+:::
