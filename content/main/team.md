@@ -131,7 +131,7 @@ books. With unlimited time and brainpower, she might also be studying history an
 <div>
 <h1>Stefan</h1>
 <h2>Quantum Information</h2>
-Since high school Stefan has enjoyed sharing the wonders of science with
+Since high school [Stefan](/stefan) has enjoyed sharing the wonders of science with
 others, organizing extraculicular courses and summer break Physics events.
 While a graduate student at Yale's Quantum Institute he felt most at home in
 Yale's makerspace, preparing contraptions to be used in middle- and high-school
