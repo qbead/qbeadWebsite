@@ -5,7 +5,7 @@ keywords: SpinWheel, arduino, setup
 
 The SpinWheel has four components: a power source (the battery), a sensor (for motion and magnetic fields), a set of lights (the light emitting diodes), and a micro computer.
 
-The kit you receive will contain the battery, detached from the rest of the circuitry. Simply plug the battery connector in the appropriate jack on the board and you can start using the SpinWheel as a wearable accessory, as it is already preloaded with a number of pleasant visualizations. You can press the button to switch between different ones.
+The kit you receive will contain the battery, detached from the rest of the circuitry. Simply plug the battery connector in the appropriate jack on the board and you can start using the SpinWheel as a wearable accessory, as it is already preloaded with a number of basic programs. You can press the button to switch between different ones.
 
 The kits also contains a booklet with various challenges you can undertake. A number of them do not require you to make any modifications to the SpinWheel and permit you to make various measurements related to the physics of the world around you.
 
