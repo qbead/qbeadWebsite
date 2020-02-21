@@ -99,7 +99,7 @@ Physics Department. She spends most of her time building instruments for radio
 telescopes, and flying drones to measure these radio telescopes. This is all
 with the goal of understanding “Dark Energy”, which is this mysterious form of
 energy in the universe that is causing it to expand in an accelerating way. She
-also enjoy hiking, playing the flute, taking photos, SWE outreach, and hanging
+also enjoys hiking, playing the flute, taking photos, SWE outreach, and hanging
 with her dog Cary.
 </div>
 </div>
@@ -121,7 +121,7 @@ with her dog Cary.
 Sam is a Physics graduate student at Yale studying neutrino physics.
 Neutrinos are weird particles, and understanding their mysterious properties might answer
 major questions about matter and the universe. For example, this field could uncover knowledge
-about how the universe formed. Outside of the lab, she enjoy hiking, running, and reading good
+about how the universe formed. Outside of the lab, she enjoys hiking, running, and reading good
 books. With unlimited time and brainpower, she might also be studying history and art.
 </div>
 </div>
