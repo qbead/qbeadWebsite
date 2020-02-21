@@ -110,3 +110,11 @@ Likes ice cream.
 </div>
 
 
+<div class="row">
+<div class="column long-text">
+<p>
+For more information about Stefan's research, outreach and other projects, check out his [website](https://krastanov.org/).
+</p>
+</div>
+</div>
+

@@ -104,7 +104,7 @@ I’m a black belt in taekwondo.
 <div class="row">
 <div class="column long-text">
 <p>
-For more information about Bridget's research and outreach, check out her [website](https://www.bridgethegarty.com/)
+For more information about Bridget's research and outreach, check out her [website](https://www.bridgethegarty.com/).
 </p>
 </div>
 </div>
