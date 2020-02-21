@@ -1,7 +1,7 @@
 ---
 title: A Conversation with ...
 keywords: spinwheel, education, STEM, outreach, science, engineering day, engineering, biomedical engineering
-header-image: /images/teampics/
+header-image: /images/teampics/elise_outreach.jpg
 subtitle: ... Elise about her research and why she is involved with STEM outreach.
 ---
 

@@ -85,7 +85,7 @@ As a kid, [Bridget](/bridget) was always asking "why?" Luckily, her parents put 
 <div>
 <h1>Elise</h1>
 <h2>Computational Bioengineering</h2>
-Elise is a Biomedical Engineering Ph.D. candidate at Yale University, specifically studying biological system dynamics in cells with a focus on signalling pathways in HIV. In high school, she was encouraged in her scientific journey by mentors and teachers who provided key guideposts for STEM success. She is thankful for the strong STEM outreach community at Yale, who strive to inspire the next generation to pursue STEM. 
+[Elise](/elise) is a Biomedical Engineering Ph.D. candidate at Yale University, specifically studying biological system dynamics in cells with a focus on signalling pathways in HIV. In high school, she was encouraged in her scientific journey by mentors and teachers who provided key guideposts for STEM success. She is thankful for the strong STEM outreach community at Yale, who strive to inspire the next generation to pursue STEM. 
 </div>
 </div>
 
