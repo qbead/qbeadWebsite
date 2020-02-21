@@ -12,7 +12,7 @@ On one hand, the human eye is a spectacular sensor that, by far, outperforms all
 
 ## Colors
 
-When light comes from the Sun (or most other sources of illumination), we perceive it as lacking a hue (or being white). In reality, this light is a mixture of many colors. One way we can see this mixture is using a prism. A prism works by bending (“refracting”) light at different angles depending on its color, allowing us to see all of the colors that make up white light. This is why if you let sunlight shine through a prism, you can see a rainbow.
+When light comes from the Sun (or most other sources of illumination), we perceive it as lacking a hue (or being white). In reality, white light is a mixture of many colors. One way we can see this mixture is by using a prism. A prism works by bending (“refracting”) light at different angles depending on its color, allowing us to see all of the colors that make up white light. This is why if you let sunlight shine through a prism, you can see a rainbow.
 
 The light-sensing tissue in the back of our eyes (the retina) has small cells that respond to some of these colors. They are called “cone cells” and there are three separate groups of them, sensing mainly three different groups of colors: roughly separated into red, green, and blue hues. For instance, the blue-sensing cones respond to blue light, but do not respond to red light, and vice versa. 
 
@@ -82,11 +82,13 @@ changeColor();
 </script>
 </div>
 
-This will allow us to program the SpinWheel to display beautiful colorful patterns (while using only a small set of hardware components). This is why the sliders go from 0 to 255 instead a more obvious set of numbers like 0 to 100 - this is the range used by the SpinWheel. 
+This will allow us to program the SpinWheel to display beautiful colorful patterns (while using only a small set of hardware components). This is why the sliders go from 0 to 255 instead of a more obvious set of numbers like 0 to 100 - this is the range used by the SpinWheel for the minimum and maximum of red, green, and blue allowed in the mixture. 
 
 Now let's start programming the SpinWheel to light up a specific color! Pick a color you like by changing the sliders above (for instance, I like this purple `(195,0,255)`), and make the large LEDs on the SpinWheel show that color.
 
 If you have trouble understanding the commands below, be sure to read our [quick start guide](/quickstart) and if necessary some of the Computer Science 101 sections. 
+
+One more quick point: depending on how bright it is in the room where you are programming the SpinWheel, you may want to change the brightness of the LEDs. For instance, something that seems blinding when working on it under artificial lights will seem dim in full sunlight. If you'd like to change the brightnes of the SpinWheel (for any reason!), you can add `SpinWheel.largeLEDs.setBrightness(X);` into the setup loop, and change the value of X how you wish.
 
 ```cpp
 #include "SpinWearables.h"
@@ -203,4 +205,12 @@ Right at the point where the red and blue stop being observable on their own, yo
 
 ![If you move the SpinWheel rapidly in front of your eyes, you will see the purple color separate in two distinct streaks of red and blue.](/images/bookpics/fast_pov_streak.jpg "Picture of a fast-moving SpinWheel")
 
-These two tools, of faking rich colors by combining just red, green, and blue, and of faking static images by very rapidly cycling through partial frames, are the basis for many of our technologies, and are tools we’ll keep using as we program the SpinWheel in more complicated ways.
+These two tools--faking rich colors by combining just red, green, and blue and faking a complete static image by very rapidly cycling through incomplete images--are the basis for many technologies , and are tools we’ll keep using as we program the SpinWheel in more complicated ways.
+
+::: further-reading
+To keep exploring, you can try other color combinations! 
+
+For instance, what happens if you mix red and green? 
+
+Can you make orange?
+:::
