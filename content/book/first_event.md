@@ -7,7 +7,7 @@ header-video: /images/banners/linewheel_crossfade.mp4
 ::: intro-box
 **Thank you for signing up to help test the SpinWheel!**
 
-We hope by the end of this event you will be more comfortable with the Arduino platform and that you will have successfully used this knowledge to program the SpinWheel yourself. With our volunteers help, you will complete the SpinWheel's initial setup. We will then provide a quick presentation on programming. Our volunteers will then be there to answer any questions you may have as you complete the "Biology of Sight" adventure. We hope you enjoy using the SpinWheel!
+We hope that by the end of this event you will be more comfortable with the Arduino platform and that you will have successfully used this knowledge to program the SpinWheel yourself. With our volunteers' help, you will complete the SpinWheel's initial setup. We will then provide a quick presentation on programming. Our volunteers will then be there to answer any questions you may have as you complete the "Biology of Sight" adventure. We hope you enjoy using the SpinWheel!
 :::
 
 
