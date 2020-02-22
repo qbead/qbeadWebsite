@@ -34,3 +34,5 @@ We hope by the end of this event you will be more comfortable with the Arduino p
 <iframe src="/progpatterns" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
 
 <iframe src="/sight" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+
+<iframe src="/quickapi" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
