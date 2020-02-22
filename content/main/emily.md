@@ -1,7 +1,7 @@
 ---
 title: A Conversation with ...
 keywords: spinwheel, education, STEM, outreach, science, engineering day, engineering, biomedical engineering
-header-image: /images/teampics/
+header-image: /images/teampics/emily_outreach.jpg
 subtitle: ... Emily about her research and why she is involved with STEM outreach.
 ---
 
@@ -44,7 +44,7 @@ Staten Island, NY
 <p>
 **What was your favorite subject in high school?**
 
-That’s tough.. Music theory, history, math, physics?
+That’s tough.. Music theory, history, math, physics
 </p>
 </div>
 </div>
@@ -55,7 +55,7 @@ That’s tough.. Music theory, history, math, physics?
 <p>
 **What is the focus of your research?**
 
-I build telescopes out in South Africa that measure the size of the Universe and how it changed billions of years ago.
+I build telescopes in South Africa that measure the size of the Universe and how it changed billions of years ago.
 </p>
 </div>
 </div>

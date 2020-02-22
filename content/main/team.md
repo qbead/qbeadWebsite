@@ -94,7 +94,7 @@ As a kid, [Bridget](/bridget) was always asking "why?" Luckily, her parents put 
 <div>
 <h1>Emily</h1>
 <h2>Experimental Cosmology</h2>
-Emily is a PhD student in the Yale
+[Emily](/emily) is a PhD student in the Yale
 Physics Department. She spends most of her time building instruments for radio
 telescopes, and flying drones to measure these radio telescopes. This is all
 with the goal of understanding “Dark Energy”, which is this mysterious form of
