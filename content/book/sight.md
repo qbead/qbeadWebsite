@@ -14,9 +14,13 @@ On one hand, the human eye is a spectacular sensor that, by far, outperforms all
 
 When light comes from the Sun (or most other sources of illumination), we perceive it as lacking a hue (or being white). In reality, white light is a mixture of many colors. One way we can see this mixture is by using a prism. A prism works by bending (“refracting”) light at different angles depending on its color, allowing us to see all of the colors that make up white light. This is why if you let sunlight shine through a prism, you can see a rainbow.
 
-The light-sensing tissue in the back of our eyes (the retina) has small cells that respond to some of these colors. They are called “cone cells” and there are three separate groups of them, sensing mainly three different groups of colors: roughly separated into red, green, and blue hues. For instance, the blue-sensing cones respond to blue light, but do not respond to red light, and vice versa. 
+![A prism forming a rainbow from sunlight.](/images/bookpics/prism_floor.png "Illustration of a rainbow forming from sunlight")
 
-This leads to a problem… If our eyes can sense only red, green, and blue, how come we can see yellow? Our eyes and brains have evolved so that “predominantly red” and “predominantly green” cones respond slightly to yellow. If our brain detects that both groups of cones are activated, it knows to interpret the color as yellow. And similar compromises are made for the other colors we can detect, for instance, purple activates both the red- and blue-sensing cones. 
+The light-sensing tissue in the back of our eyes (the retina) has small cells that respond to some of these colors. They are called “cone cells” and there are three separate groups of them classified by the color that they sense the best - red, green, or blue. For instance, the blue-sensing cones respond to blue light, but do not respond to red light, and vice versa. 
+
+![An artistic rendering of a close-up of the back of the eye illustrating the rods (black rectangles) and cones (triangles colored by type).](/images/bookpics/rods_cones.jpg "Close-up cartoon of rods and cones in an eye")
+
+This leads to a problem… If our eyes can sense only red, green, and blue, how come we can see yellow? Our eyes and brains have evolved so that our red- and green-sensing cones both respond slightly to yellow. If our brain detects that both groups of cones are activated, it knows to interpret the color as yellow. And similar compromises are made for the other colors we can detect, for instance, purple activates both the red- and blue-sensing cones. 
 
 ::: further-reading
 There is an animal that can (unlike us) detect the difference between a true pure color, and a mixture of colors that fakes the presence of the given color. It is called a mantis shrimp and it has 12 different types of cone cells in its eye. The Oatmeal comics has [an informative and entertaining strip about it](https://theoatmeal.com/comics/mantis_shrimp).
@@ -84,11 +88,13 @@ changeColor();
 
 This will allow us to program the SpinWheel to display beautiful colorful patterns (while using only a small set of hardware components). This is why the sliders go from 0 to 255 instead of a more obvious set of numbers like 0 to 100 - this is the range used by the SpinWheel for the minimum and maximum of red, green, and blue allowed in the mixture. 
 
-Now let's start programming the SpinWheel to light up a specific color! Pick a color you like by changing the sliders above (for instance, I like this purple `(195,0,255)`), and make the large LEDs on the SpinWheel show that color.
+Now let's start programming the SpinWheel to light up a specific color! Upload the BiologyOfSight_mixing_colors sketch. Pick a color you like by changing the sliders above (for instance, I like this purple `(195,0,255)`), and make the large LEDs on the SpinWheel show that color by editing the code and uploading it to the SpinWheel.
 
 If you have trouble understanding the commands below, be sure to read our [quick start guide](/quickstart) and if necessary some of the Computer Science 101 sections. 
 
-One more quick point: depending on how bright it is in the room where you are programming the SpinWheel, you may want to change the brightness of the LEDs. For instance, something that seems blinding when working on it under artificial lights will seem dim in full sunlight. If you'd like to change the brightnes of the SpinWheel (for any reason!), you can add `SpinWheel.largeLEDs.setBrightness(X);` into the setup loop, and change the value of X how you wish.
+::: warning :
+One more quick point: depending on how bright it is in the room where you are programming the SpinWheel, you may want to change the brightness of the LEDs. For instance, something that seems blinding when working on it under artificial lights will seem dim in full sunlight. If you'd like to change the brightnes of the SpinWheel (for any reason!), you can add `SpinWheel.largeLEDs.setBrightness(X);` into the setup loop, and change the value of X to any value you wish between 0 (off) and 255 (brightest).
+:::
 
 ```cpp
 #include "SpinWearables.h"
@@ -209,8 +215,8 @@ These two tools--faking rich colors by combining just red, green, and blue and f
 
 ::: further-reading
 To keep exploring, you can try other color combinations! 
-
-For instance, what happens if you mix red and green? 
-
-Can you make orange?
+<ul>
+<li>For instance, what happens if you mix red and green? </li>
+<li>Can you make orange?</li>
+</ul>
 :::
