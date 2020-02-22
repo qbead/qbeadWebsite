@@ -81,7 +81,7 @@ Since accessibility was our top priority, we decided to base our device on the w
 
 Moreover, our desire to use the minimal amount of extra components led us to choose the Atmega32u4 chip, as this particular chip has a built-in USB interface that the students can use for programming. This same chip is used in the popular Arduino Leonardo and Arduino Micro boards. The open hardware community, and in particular the Arduino organization, have used this chip in many designs, providing a wealth of documentation and reference circuit diagrams that made our work much easier.
 
-In addition to the micro controller, we picked a 9-degrees-of-freedom motion sensor (for acceleration, rotation, and magnetic field sensing), a LiPo battery charger, and the required support components.
+In addition to the microcontroller, we picked a 9-degrees-of-freedom motion sensor (for acceleration, rotation, and magnetic field sensing), a LiPo battery charger, and the required support components.
     
 We simultaneously iterated through the physical parameters for the device to arrive at something that was wearable, beautiful, and included sufficient LEDs to represent cardinal directions, measured tilt, and other physical quantities.
 

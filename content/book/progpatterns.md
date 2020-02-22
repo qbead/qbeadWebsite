@@ -18,8 +18,8 @@ The vast majority of computer languages do share a number of patterns, just
 like many human languages share ideas like the distinction between a noun and a
 verb, or the difference between a word and a sentence. We will describe the
 most important such patterns in this chapter. We will use a very popular older
-language that runs well on limited hardware like the SpinWheel's micro
-controller. The name of the language is `C++`.
+language that runs well on limited hardware like the SpinWheel's
+microcontroller. The name of the language is `C++`.
 
 # Variables
 
