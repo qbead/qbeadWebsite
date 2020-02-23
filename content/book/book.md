@@ -24,9 +24,8 @@ This is only a scaffolding for the (printed and electronic) textbook that will b
 ## Computer Science 101
 
 1. Digital Electronics 
-2. The Tools of a Programmer
-3. Basic Programming Patters
-4. Physical Computing
+2. [Basic Programming Patterns](/progpatterns)
+3. Physical Computing
 
 ## Physics 101
 
