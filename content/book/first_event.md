@@ -39,8 +39,6 @@ Learning to code is just like learning a new language - it may not be easy at fi
   }
 </script>
 
-<iframe src="/progpatterns" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
-
 <iframe src="/sight" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
 
 <iframe src="/quickapi" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
