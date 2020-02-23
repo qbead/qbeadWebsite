@@ -39,6 +39,10 @@ Learning to code is just like learning a new language - it may not be easy at fi
   }
 </script>
 
+::: further-reading
+We are now going to introduce some of the important programming concepts to program the SpinWheel. If you’d like to reference this information, check out our [basic programming guide](/progpatterns).
+:::
+
 <iframe src="/sight" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
 
 <iframe src="/quickapi" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
