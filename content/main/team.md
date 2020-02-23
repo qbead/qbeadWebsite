@@ -118,7 +118,7 @@ with her dog Cary.
 <div>
 <h1>Sam</h1>
 <h2>Neutrino Physics</h2>
-Sam is a Physics graduate student at Yale studying neutrino physics.
+[Sam](/samantha) is a Physics graduate student at Yale studying neutrino physics.
 Neutrinos are weird particles, and understanding their mysterious properties might answer
 major questions about matter and the universe. For example, this field could uncover knowledge
 about how the universe formed. Outside of the lab, she enjoys hiking, running, and reading good
