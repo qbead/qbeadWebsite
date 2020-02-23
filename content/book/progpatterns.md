@@ -7,7 +7,7 @@ Writing a computer program of your own, whether a desktop app, an interactive
 website, or the hidden brain of a robot, starts by writing a sequence of
 instructions in one of the many available computer languages. Some such
 languages are incredibly complex and picky about the correctness of the written
-instructions: a small "grammar" error and the computer can not understand what
+instructions: a small "grammar" error and the computer cannot understand what
 you wanted from it. Other languages are simpler, and even somewhat lenient in
 the format of the instructions written in them. Using such languages usually
 requires a more powerful computer, as it takes a lot of resources to teach a
@@ -48,7 +48,7 @@ the variable however we wish as long as it is a single word or multiple words
 separated with underscores. We usually pick names that tell us something about
 the purpose of the variable. We can put whatever value we wish as long as it is
 not too big (bigger than roughly 30 000). There are ways to store bigger
-numbers too, but they take more memory, which we might not have much off in a
+numbers too, but they take more memory, which we might not have much of in a
 small wearable micro computer.
 
 Similarly, if we want to work with fractions, we use the variable type `float`
@@ -69,7 +69,7 @@ Functions, also known as routines, are commands that take a few variables and
 do something useful with them. Maybe they compute a new value based on the
 variables that were given to them and then they provide this value so that we
 can store it for future use. Or maybe they do something that affects the world
-around them, like blinking and LED, playing a sounds, or sending a message.
+around them, like blinking an LED, playing a sound, or sending a message.
 
 Here is an example of the former, a function called `max` that takes two
 numbers and it returns the larger of the two.
@@ -83,7 +83,7 @@ int resulting_number = max(number_a, number_b);
 The value stored in `resulting_number` in this case would be `7`.
 
 Here is another example where one of the arguments for our function is
-specified directly, without first being stored in a variable. In this case the
+specified directly, without first being stored in a variable. In this case, the
 value stored in `resulting_number` will be `8`:
 
 ```c++
@@ -117,12 +117,12 @@ modern programming languages.
 
 # Creating your own function
 
-The programming language would not always have all the functions you might
+The programming language may not always have all the functions you
 need. A large part of programming is creating your own functions and building
 interesting complex useful functions out of small simple functions. Here we
 will give an example of how to write your own function that takes two numbers
 and it returns their average. If the two numbers are $x$ and $y$, we want to
-computed $\frac{x+y}{2}$. We will name the function `avg`. Let us first write
+compute $\frac{x+y}{2}$. We will name the function `avg`. Let us first write
 an example of how this function would be used if it already existed:
 
 ```c++
@@ -209,7 +209,7 @@ void delay_seconds(int number_of_seconds) {
 As the code we write grows more and more, it helps to add notes in the code to
 ourselves and our friends. That way it is easier to understand the purpose of
 the code when we look at it again in the future. Such notes are usually called
-"comments", and they are completely neglected by the computer. In the language
+"comments", and they are completely ignored by the computer. In the language
 we are using they are denoted by a double slash `//` -- everything to the right
 of these symbols, until the end of the line, is a message for fellow humans. We
 will use such comments below in some more complicated examples of code.
