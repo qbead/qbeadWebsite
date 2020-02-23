@@ -11,6 +11,15 @@ We hope that by the end of this event you will be more comfortable with the Ardu
 
 :::
 
+The SpinWheel has four components: a power source (the battery), a sensor (for motion and magnetic fields), a set of lights (the light emitting diodes, or LEDs), and a micro computer (the brain of the device).
+
+Much of the joy of the SpinWheel comes from your potential to change it, and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. You can do that by by using [the Arduino programming package](https://arduino.cc/en/Main/Software) that is already available on the computers provided for this activity.
+
+Plug your SpinWheel into your computer with a micro USB cable and open the Arduino software. You should be able to see your device appear in `Tools→ Port`. There will be some text describing the serial port which you need to select in order for the software to connect to the SpinWheel. If there are multiple ports and you are unsure which one is the right one, simply check which one disappears when you unplug the SpinWheel.
+
+Under the Tools menu, select Arduino Leonardo as the board (a.k.a. processor), so that the software knows which “dialect” to use to talk to the device (just like a language you speak can have different dialects!).
+
+Learning to code is just like learning a new language - it may not be easy at first, but once you learn the basics, you will be able to write code to communicate effectively with computers! Today we will do this together by exploring a few SpinWheel code examples.
 
 <style>
   iframe {
@@ -29,8 +38,6 @@ We hope that by the end of this event you will be more comfortable with the Ardu
     i.parentElement.removeChild(i);
   }
 </script>
-
-<iframe src="/quickstart" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
 
 <iframe src="/progpatterns" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
 
