@@ -88,7 +88,7 @@ changeColor();
 
 This will allow us to program the SpinWheel to display beautiful colorful patterns (while using only a small set of hardware components). This is why the sliders go from 0 to 255 instead of a more obvious set of numbers like 0 to 100 - this is the range used by the SpinWheel for the minimum and maximum of red, green, and blue allowed in the mixture. 
 
-Now let's start programming the SpinWheel to light up a specific color! Upload the BiologyOfSight_mixing_colors sketch. Pick a color you like by changing the sliders above (for instance, I like this purple `(195,0,255)`), and make the large LEDs on the SpinWheel show that color by editing the code and uploading it to the SpinWheel.
+Now let's start programming the SpinWheel to light up a specific color! You can use the code shown below. Pick a color you like by changing the sliders above (for instance, I like this purple `(195,0,255)`), and make the large LEDs on the SpinWheel show that color by editing the code and uploading it to the SpinWheel.
 
 If you have trouble understanding the commands below, be sure to read our [quick start guide](/quickstart) and if necessary some of the Computer Science 101 sections. 
 
