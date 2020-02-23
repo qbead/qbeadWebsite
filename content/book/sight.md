@@ -14,11 +14,11 @@ On one hand, the human eye is a spectacular sensor that, by far, outperforms all
 
 When light comes from the Sun (or most other sources of illumination), we perceive it as lacking a hue (or being white). In reality, white light is a mixture of many colors. One way we can see this mixture is by using a prism. A prism works by bending (“refracting”) light at different angles depending on its color, allowing us to see all of the colors that make up white light. This is why if you let sunlight shine through a prism, you can see a rainbow.
 
-![A prism forming a rainbow from sunlight.](/images/bookpics/prism_floor.png "Illustration of a rainbow forming from sunlight")
+![A prism forming a rainbow from sunlight.](/images/bookpics/prism_floor.jpg "Illustration of a rainbow forming from sunlight")
 
 The light-sensing tissue in the back of our eyes (the retina) has small cells that respond to some of these colors. They are called “cone cells” and there are three separate groups of them classified by the color that they sense the best - red, green, or blue. For instance, the blue-sensing cones respond to blue light, but do not respond to red light, and vice versa. 
 
-![An artistic rendering of a close-up of the back of the eye illustrating the rods (black rectangles) and cones (triangles colored by type).](/images/bookpics/rods_cones.jpg "Close-up cartoon of rods and cones in an eye")
+![An artistic rendering of a close-up of the back of the eye illustrating the rods (black rectangles) and cones (triangles colored by type).](/images/bookpics/rods_cones.png "Close-up cartoon of rods and cones in an eye")
 
 This leads to a problem… If our eyes can sense only red, green, and blue, how come we can see yellow? Our eyes and brains have evolved so that our red- and green-sensing cones both respond slightly to yellow. If our brain detects that both groups of cones are activated, it knows to interpret the color as yellow. And similar compromises are made for the other colors we can detect, for instance, purple activates both the red- and blue-sensing cones. 
 
