@@ -11,7 +11,7 @@ The battery was detached from the circuit board so we could ship the kit to you.
 
 Your kit also contains a booklet with various activities you can complete (the SpinWheel Field Guide). Some of them do not require you to make any modifications to the SpinWheel.
 
-However, much of the joy of the SpinWheel comes from your potential to change it, and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. You can do that by first installing the Arduino software, which you can download from [arduino.cc/en/Main/Software](arduino.cc/en/Main/Software).
+However, much of the joy of the SpinWheel comes from your potential to change it, and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. You can do that by first installing the Arduino software, which you can download from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software).
 
 Plug your SpinWheel into your computer with a micro USB cable. Keep the switch in the "Off" position (this detaches the battery in the SpinWheel circuitry, but it still keeps the SpinWheel connected to the USB cable - note: you do not need to physically detach the battery here! Keep it plugged into your SpinWheel, just flip the switch to “Off”). 
 
