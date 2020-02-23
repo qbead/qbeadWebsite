@@ -70,19 +70,27 @@ However, the ideas in our educational guide are just a starting point - your chi
 
 <div class="row dark-transparent ">
 <div class="column large-text">
-With the SpinWheel, anyone can introduce their children to programming and engineering without needing to have a technical background or the time necessary for designing an engaging STEM lesson from scratch. This can be especially useful for teachers who are seeking a hands-on way to excite students about the topics they are learning about in class.
+With the SpinWheel, anyone can introduce their children to programming and engineering without needing to have a technical background or the time necessary for designing an engaging STEM lesson from scratch. This can be especially useful for teachers who are seeking a hands-on way to excite students about the topics they are learning about in class. 
 </div>
 <div class="column column-long"><img src="/images/banners/colors_and_eye.png"></div>
 </div>
 
-<div class="row dark-transparent ">
+
+
+<div class="row transparent">
 <div class="column large-text">
 The SpinWheel is also perfect for learning outside of the classroom! It can be used for one off STEM outreach events or be the basis for a series of lessons at a summer camp. The SpinWheel is also perfect for museums seeking a hands-on demo to introduce scientific concepts.
 </div>
 <div class="column column-long"><img src="/images/for_parents/2019-girl-scouts_6.jpg"></div>
 </div>
 
-<div class="row">
+<div class="row dark-transparent">
+<div class="column">
+For an example of how we recently used the "Biology of Sight" adventure to introduce basic Arduino programming, check out this [student guide](/first_event).
+</div>
+</div>
+
+<div class="row transparent">
 <div class="column">
 <strong>Feel free to contact us at [mail@spinwearables.com](mailto:mail@spinwearables.com) for more information about the SpinWheel!</strong>
 </div>
