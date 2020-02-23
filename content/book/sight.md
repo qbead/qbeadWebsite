@@ -93,7 +93,7 @@ Now let's start programming the SpinWheel to light up a specific color! You can 
 If you have trouble understanding the commands below, be sure to read our [quick start guide](/quickstart) and if necessary some of the Computer Science 101 sections. 
 
 ::: warning :
-One more quick point: depending on how bright it is in the room where you are programming the SpinWheel, you may want to change the brightness of the LEDs. For instance, something that seems blinding when working on it under artificial lights will seem dim in full sunlight. If you'd like to change the brightnes of the SpinWheel (for any reason!), you can add `SpinWheel.largeLEDs.setBrightness(X);` into the `setup` function, and change the value of X to any value you wish between 0 (off) and 255 (brightest).
+One more quick point: depending on how bright it is in the room where you are programming the SpinWheel, you may want to change the brightness of the LEDs. For instance, something that seems blinding when working on it under artificial lights will seem dim in full sunlight. If you'd like to change the brightness of the SpinWheel (for any reason!), you can add `SpinWheel.largeLEDs.setBrightness(X);` into the `setup` function, and change the value of X to any value you wish between 0 (off) and 255 (brightest).
 :::
 
 ```cpp
