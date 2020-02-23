@@ -211,7 +211,7 @@ Right at the point where the red and blue stop being observable on their own, yo
 
 ![If you move the SpinWheel rapidly in front of your eyes, you will see the purple color separate in two distinct streaks of red and blue.](/images/bookpics/fast_pov_streak.jpg "Picture of a fast-moving SpinWheel")
 
-These two tools--faking rich colors by combining just red, green, and blue and faking a complete static image by very rapidly cycling through incomplete images--are the basis for many technologies , and are tools we’ll keep using as we program the SpinWheel in more complicated ways.
+These two tools--faking rich colors by combining just red, green, and blue and faking a complete static image by very rapidly cycling through incomplete images--are the basis for many technologies, and are tools we’ll keep using as we program the SpinWheel in more complicated ways.
 
 ::: further-reading
 To keep exploring, you can try other color combinations! 
