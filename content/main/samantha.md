@@ -1,7 +1,7 @@
 ---
 title: A Conversation with ...
 keywords: spinwheel, education, STEM, outreach, science, engineering day, engineering, biomedical engineering
-header-image: /images/teampics/
+header-image: /images/teampics/sam_bio.jpg
 subtitle: ... Samantha about her research and why she is involved with STEM outreach.
 ---
 
@@ -44,7 +44,7 @@ Asheville, NC
 <p>
 **What was your favorite subject in high school?**
 
-Psychology
+Chemistry, Physics, and History
 </p>
 </div>
 </div>
@@ -54,7 +54,7 @@ Psychology
 <p>
 **Who is your STEM role model?**
 
-My former labmate Kshitiz. He’s now a UCONN professor and what I’d call a “social” scientist. He takes the time to get to know people and builds interesting scientific collaborations in the process!
+I have so many!
 </p>
 </div>
 </div>
@@ -64,7 +64,7 @@ My former labmate Kshitiz. He’s now a UCONN professor and what I’d call a �
 <p>
 **What is the focus of your research?**
 
-I study the molecular mechanisms that cells use to migrate. An improved understanding of cell migration can help us identify ways to prevent cancer from spreading in the body.
+I study tiny particles called neutrinos. Billions of these pass through you each second. There’re a lot of mysteries about these particles, and understanding them better could answer big questions about other particles and even how the universe was formed. 
 </p>
 </div>
 </div>
@@ -74,7 +74,7 @@ I study the molecular mechanisms that cells use to migrate. An improved understa
 <p>
 **What is the coolest part of your job?**
 
-Going to conferences and getting to share my work with scientists from around the world!
+My two favorite parts of my job as a graduate student are working on experiments and teaching students. I like running experiments because you get to ask interesting questions, design something to try and answer this question, then you sometimes get surprising answers. Right now, I teach a lab course. I enjoy this because I get to help students as they ask questions and then run experiments to try and answer questions about the world around them. 
 </p>
 </div>
 </div>
@@ -84,7 +84,7 @@ Going to conferences and getting to share my work with scientists from around th
 <p>
 **Why did you decide to go to grad school?**
 
-When I was a student at BU, I started working in a science lab to make some extra money and I loved it! I enjoy the creativity involved in my job every day.
+I grew up in the mountains of North Carolina, hiking and spending a lot of time outside. Nature was always very beautiful to me. In high school, I first took chemistry and physics, and I started to realize how data could tell us a lot about nature and how things worked. I also joined Robotics club and found that I enjoyed building things too. This eventually grew to me wanting to do experimental physics! 
 </p>
 </div>
 </div>
@@ -94,7 +94,7 @@ When I was a student at BU, I started working in a science lab to make some extr
 <p>
 **What is your favorite part about doing STEM outreach?**
 
-When I was in high school, I enjoyed the challenge of my math and science classes, but I didn’t have a good sense of the career paths that were available to me. Participating in science outreach gives me the opportunity to make STEM careers tangible to students and to teach them about the impact that scientists and engineers have every day!
+My favorite part of outreach events is when students discover something about the world that they find interesting. Science can take a lot of hard work, but I think it's also fun and very exciting. Getting to share this excitement with all learners is my favorite part of outreach. 
 </p>
 </div>
 </div>
@@ -104,7 +104,7 @@ When I was in high school, I enjoyed the challenge of my math and science classe
 <p>
 **What is a fun fact about you?**
 
-I am a huge reality tv fan! Survivor is my favorite, and I watch every Wednesday!
+The experiments in my field can be very big and have hundreds of people working together on them. I’ve worked on experiments based in California, Italy, Switzerland, and North Dakota. I’ve gotten to visit most of these places too. 
 </p>
 </div>
 </div>
