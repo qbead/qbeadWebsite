@@ -43,12 +43,13 @@ form > input {
   border: none;
 }
 </style>
-<form action="https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit" method="get" id="signup-form">
-<p><strong>Our prelaunch page is now live on Kickstarter!</strong></p>    
-<p>You can follow our page to get updates about our progress and be notified when we launch.</p>
-<input class="round-button" id="button" type="submit" value="Take me to the Kickstarter page!" />
+<form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScpB8NUWgx-FhHzPOE5s-GHF2pZI4DTbhna-90F1GGhoF2YQQ/formResponse" method="post" id="signup-form">
+<p><strong>Our project is now on Kickstarter!</strong></p>
+<label>My Email:</label>
+<input id="email" type="email" autocomplete="email" tabindex="0" aria-label="Your email" name="emailAddress" placeholder="email address" value="" required="" aria-invalid="true">
+<input class="round-button" id="button" type="submit" value="Notify me when launched!" />
 <!--<p style="width:70%;margin:1em auto 1em auto;">We will not email you more than twice, as we respect your time!</p>-->
-<p><strong>You can also follow us on:</strong></p>
+<p><strong>Follow us on:</strong></p>
 <p><strong>[Twitter](https://twitter.com/SpinWearables) and [Instagram](https://instagram.com/spinwearables?igshid=1hk2qphff1j1b)</strong></p>
 </form>
 <!--
@@ -60,7 +61,7 @@ form > input {
 
 
 <div class="row">
-<div class="column">
+<div class="column large-text">
 [We are a group of volunteers](/team) with a passion for teaching science and building beautiful things. We work under the umbrella of Yale's Society of Women Engineers, leading hands-on outreach events with hundreds of K-12 students each year. The SpinWheel is the kit that we wish that we had had before going to college!   
 </div>
 <div class="column column-long"><img src="/images/team_2.jpg"></div>
