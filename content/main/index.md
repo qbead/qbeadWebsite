@@ -12,7 +12,7 @@ subtitle: Children have the natural <em>curiosity</em> and <br> <em>capacity</em
 
 <div class="row">
 <div class="column long-text">
-**Introducing the SpinWheel:** A small programmable, sensor-enabled trinket, facilitating student exploration of Physics and Computer Science. The SpinWheel can be worn as jewelry, sported as a keychain, or used as a compass. It comes with a Science and Exploration Field Guide containing multiple educational and artistic activities. The students will be able to program the SpinWheel, creating a unique, science-infused piece of art that they would be proud to wear and call their own.
+**Introducing the SpinWheel:** A small programmable, sensor-enabled trinket, facilitating student exploration of Physics and Computer Science. The SpinWheel can be worn as jewelry, sported as a keychain, or used as a compass. It comes with a Science and Exploration Field Guide containing multiple educational and artistic activities written for students ages 12-212. Anyone can program the SpinWheel to create, a unique, science-infused piece of art that they would be proud to wear and call their own.
 </div>
 </div>
     
