@@ -42,8 +42,8 @@ of the Yale graduate student section of the Society of Women Engineers.
   text-decoration: none;
 }
 </style>
-<div method="get" id="kickstarter">
-<p><strong>Our prelaunch page is now live on Kickstarter!</strong></p>    
+<div id="kickstarter">
+<p id="signup-form"><strong>Our prelaunch page is now live on Kickstarter!</strong></p>    
 <p>You can follow our page to get updates about our progress and be notified when we launch.</p>
 <a href="https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit" class="round-button">Take me to the Kickstarter page!</a>
 <p><strong>You can also follow us on:</strong></p>
