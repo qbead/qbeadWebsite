@@ -60,9 +60,9 @@ However, the ideas in our educational guide are just a starting point - your chi
 <li>Parents looking to introduce their kids to coding</li>
 <li>Parents of homeschooled kids</li>
 <li>[Teachers](/educators)</li>
-<li>Volunteers running science outreach events</li> 
-<li>Museums</li>
-<li>Summer camps</li>
+<li>[Volunteers running science outreach events](/museums)</li> 
+<li>[Museums](/museums)</li>
+<li>[Summer camps](/museums)</li>
 </ul>
 <strong>Anyone else who wants to learn how to program their own colorful keychain or jewelry!</strong>
 </div>
@@ -79,7 +79,7 @@ With the SpinWheel, anyone can introduce their children to programming and engin
 
 <div class="row transparent">
 <div class="column large-text">
-The SpinWheel is also perfect for learning outside of the classroom! It can be used for one off STEM outreach events or be the basis for a series of lessons at a summer camp. The SpinWheel is also perfect for museums seeking a hands-on demo to introduce scientific concepts.
+The SpinWheel is also perfect for [learning outside of the classroom/(/museums)! It can be used for one off STEM outreach events or be the basis for a series of lessons at a summer camp. The SpinWheel is also perfect for museums seeking a hands-on demo to introduce scientific concepts.
 </div>
 <div class="column column-long"><img src="/images/for_parents/testing_sight_2.jpg"></div>
 </div>

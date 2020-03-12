@@ -1,7 +1,7 @@
 ---   
-title: The SpinWheel in Museums, Summer Camps, Outreach Events, and More
-keywords: spinwheel, education, STEM, outreach, science, engineering day, teachers, educators, engineering, computer science, physics, museums, summer camps, outreach
-header-image: /images/educators_page.jpg
+title: The SpinWheel in Museums, Summer Camps, Outreach Events, and More!
+keywords: spinwheel, education, STEM, outreach, science, engineering day, teachers, educators, engineering, computer science, physics, museums, summer camps, outreach, girl scouts
+header-image: /images/for_parents/2018-STEMagination-girlscouts_0.JPG
 subtitle: A more detailed discussion of some possible uses of the SpinWheel outside of your home or classroom.
 ---
 
@@ -11,11 +11,18 @@ subtitle: A more detailed discussion of some possible uses of the SpinWheel outs
 </div>
 </div>
 
-<div class="row dark-transparent ">
+<div class="row row-small-reverse dark-transparent ">
+<div class="column column-long"><img src="/images/for_parents/spinwheel_classroom_2.jpg"></div>  
 <div class="column large-text">
 If you have access to computers for each student or for groups of students, the SpinWheel adventures provided with the device's educational materials will enable your students to gain experience coding.  
 </div>
-<div class="column column-long"><img src="/images/for_parents/spinwheel_classroom_2.jpg"></div>
+</div>  
+
+<div class="row dark-transparent ">
+<div class="column large-text">
+We hope this will empower those without technical backgrounds, whether parents, Girl Scout troop leaders, or other volunteers, to introduce coding to their children.
+</div>
+<div class="column column-long"><img src="/images/for_parents/girl_scouts_1.jpeg"></div>
 </div>
 
 <div class="row">
@@ -33,6 +40,12 @@ The SpinWheel also provides opportunities to explore scientific phenomena, such 
 
 <div class="row">
 <div class="column long-text">
-<p>For instance, one of the adventures in our educational materials will take students through learning to program the SpinWheel to become a compass. If you have computer access, your students can dive into the programming portion of the activity. In addition to the programming activity, we will also include supplemental lessons and activities for exploring magnetism using both a physical compass (of the type students are probably more comfortable with - a physical compass is not included in the kit) and using pre-loaded programs on the SpinWheel.</p>
+<p>For example, one of the adventures in our educational materials will take students through learning to program the SpinWheel to become a compass. If you have computer access, your students can dive into the programming portion of the activity. In addition to the programming activity, we will also include supplemental lessons and activities for exploring magnetism using both a physical compass (of the type students are probably more comfortable with - a physical compass is not included in the kit) and using pre-loaded programs on the SpinWheel.</p>
+</div>
+</div>
+
+<div class="row">
+<div class="column long-text">
+<p>Alternatively, the SpinWheel can be used to demo various scientific phenomena, whether in classroom setting or beyond. We can provide self-contained computer software (if necessary, preinstalled on cheap hardware or as an Android app) for a large set of possible demos. For instance, the SpinWheel can be used as a magnetic field sensor, while the attached computer or smartphone shows detailed information about the measurements and presents them in a more scientific fashion. This could be used to teach basic science about magnetism or introduce the engineering that enabled a functioning compass in each of our cell phones. </p>
 </div>
 </div>
