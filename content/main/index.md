@@ -11,8 +11,10 @@ subtitle: Children have the natural <em>curiosity</em> and <br> <em>capacity</em
 </div>
 
 <div class="row">
-<div class="column long-text">
-**Introducing the SpinWheel:** A small programmable, sensor-enabled trinket, facilitating student exploration of Physics and Computer Science. The SpinWheel can be worn as jewelry, sported as a keychain, or used as a compass. It comes with a Science and Exploration Field Guide containing multiple educational and artistic activities written for students ages 12-212. Anyone can program the SpinWheel to create, a unique, science-infused piece of art that they would be proud to wear and call their own.
+<div class="column large-text">
+<p>**Introducing the SpinWheel!** </p>
+<p>A small, colorful, programmable, wearable kit to facilitate student exploration of physics, engineering, and computer science.</p> 
+<p>With the programs that come pre-loaded on the device, it can be immediately worn as jewelry or sported as a keychain. With help from our educational guide, it can be programmed to be a compass, step-counter, and more.</p>
 </div>
 </div>
     
@@ -21,11 +23,18 @@ subtitle: Children have the natural <em>curiosity</em> and <br> <em>capacity</em
 We will launch the SpinWheel on Kickstarter for a run of a 1000 units. All proceeds will go to the science outreach efforts
 of the Yale graduate student section of the Society of Women Engineers.
 </div>
-<div class="column column-long"><video src="/images/behindthescenes/pretty_device.mp4" muted autoplay playsinline loop></video></div>
+<div class="column column-long"><img src="/images/for_parents/testing_sight.jpg"></div>
+</div>
+
+<div class="row row-small-reverse">
+<div class="column column-long"><img src="/images/behindthescenes/keychain_illuminated_cropped.jpg"></div>
+<div class="column large-text">
+The crowdfunding campaign will be **launched March 16th**. The device is fully built and tested. We just need to raise enough resources for a manufacturing run.
+</div>
 </div>
 
 <div class="row row-small-reverse dark-transparent">
-<div class="column column-long"><img src="/images/behindthescenes/earring_3.jpg"></div>
+<div class="column column-long"><img src="/images/backpack_keychains.jpg"></div>
 <div class="column large-text">
 <style>
 #kickstarter {
@@ -65,14 +74,13 @@ of the Yale graduate student section of the Society of Women Engineers.
 <div class="column large-text">
 Our STEM backgrounds provided us with the technical expertise to design the SpinWheel. We made the SpinWheel aesthetically-pleasing and wrote the educational materials assuming [no prior experience](/for_parents) to help make STEM more accessible. 
 </div>
-
 </div>
 
 <div class="row">
 <div class="column large-text">
-The crowdfunding campaign will be **launched March 16th**. The device is fully built and tested. We just need to raise enough resources for a manufacturing run.
+The SpinWheel comes with a "Field Guide" containing multiple educational and artistic activities written for students ages 12-212. Anyone can program the SpinWheel to create a unique, science-infused piece of art that they would be proud to wear and call their own.
 </div>
-<div class="column column-long"><img src="/images/behindthescenes/keychain_illuminated_cropped.jpg"></div>
+<div class="column column-long"><img src="/images/for_parents/final_cover.jpg"></div>
 </div>
 
 <div class="row dark">
