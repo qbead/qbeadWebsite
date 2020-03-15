@@ -79,7 +79,7 @@ With the SpinWheel, anyone can introduce their children to programming and engin
 
 <div class="row transparent">
 <div class="column large-text">
-The SpinWheel is also perfect for [learning outside of the classroom/(/museums)! It can be used for one off STEM outreach events or be the basis for a series of lessons at a summer camp. The SpinWheel is also perfect for museums seeking a hands-on demo to introduce scientific concepts.
+The SpinWheel is also perfect for [learning outside of the classroom](/museums)! It can be used for one off STEM outreach events or be the basis for a series of lessons at a summer camp. The SpinWheel is also perfect for museums seeking a hands-on demo to introduce scientific concepts.
 </div>
 <div class="column column-long"><img src="/images/for_parents/testing_sight_2.jpg"></div>
 </div>
