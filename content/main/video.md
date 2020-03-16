@@ -21,8 +21,8 @@ header-image: /images/behindthescenes/sky_lit_up_device_crop2.jpg
 }
 </style>
 <div id="kickstarter">
-<p id="signup-form"><strong>Our prelaunch page is now live on Kickstarter!</strong></p>    
-<p>You can follow our page to get updates about our progress and be notified when we launch.</p>
+<p id="signup-form"><strong>We are live on Kickstarter!</strong></p>    
+<p>You can follow us for updates on the project or support us by donating or purchasing the SpinWheel.</p>
 <a href="https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit" class="round-button">Take me to the Kickstarter page!</a>
 <p><strong>You can also follow us on:</strong></p>
 <p><strong>[Twitter](https://twitter.com/SpinWearables) and [Instagram](https://instagram.com/spinwearables?igshid=1hk2qphff1j1b)</strong></p>
