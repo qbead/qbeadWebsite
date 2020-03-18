@@ -159,4 +159,13 @@ The SpinWearables team would like to thank the following individuals:
 Jack has always been passionate about both art and science. As a high schooler, he started an online business LiveWire ArtWorks to sell his jewelry and wire sculptures--much of which was inspired by nature. While at Brown, understanding the complexity and imaging the beauty of materials captivated his imagination and led him to major in materials engineering. Through TAing and tutoring for engineering courses, Jack discovered the joy of sharing science with others. Jack acts as an artistic consultant for the SpinWearables team.
 </div>
 </div>
+
+<div class="team-member">
+<img src="/images/teampics/mariya_s.jpg">
+<div>
+<h1>Mariya</h1>
+<h2>Architecture</h2>
+Passionate about art, Mariya acquired a major in architecture and started her studio – Monochra. She started drawing in high school and began to realize that helping people visualize their ideas is something that makes her feel most happy. She helped our team in creating storyboards and some visual assets for the project.
+</div>
+</div>
 </div>
