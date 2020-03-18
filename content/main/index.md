@@ -27,7 +27,7 @@ of the Yale graduate student section of the Society of Women Engineers.
 </div>
 
 <div class="row row-small-reverse">
-<div class="column column-long"><img src="/images/behindthescenes/keychain_illuminated_cropped.jpg"></div>
+<div class="column column-long"><img src="/images/tree_keychain.jpg"></div>
 <div class="column large-text">
 The crowdfunding campaign will be **launched March 16th**. The device is fully built and tested. We just need to raise enough resources for a manufacturing run.
 </div>

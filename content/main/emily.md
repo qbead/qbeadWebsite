@@ -73,16 +73,6 @@ I travel to lots of cool places (like South Africa, where I got to go on Safaris
 <div class="row">
 <div class="column long-text">
 <p>
-**Why did you decide to go to grad school?**
-
-When I was a student at BU, I started working in a science lab to make some extra money and I loved it! I enjoy the creativity involved in my job every day.
-</p>
-</div>
-</div>
-
-<div class="row">
-<div class="column long-text">
-<p>
 **What is your favorite part about doing STEM outreach?**
 
 Watching students light up when they see physics/engineering concepts come to life. Their passion gives me hope for the future, and reminds me how lucky I am to study physics for a living.
