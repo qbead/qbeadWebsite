@@ -129,7 +129,8 @@ linear algebra operations that we will need.
 <style>
   iframe {
     width: 95%;
-    height: 0.3vh;
+    height: 30vh;
+    min-height:400px;
   }
 </style>
 <script>
