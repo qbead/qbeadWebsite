@@ -142,7 +142,7 @@ linear algebra operations that we will need.
     i.parentElement.removeChild(i);
   }
 </script>
-<iframe src="/examples/RNN/net.h.html" frameborder="0" scrolling="no" onload="cleanIframe(this)"></iframe>
+<iframe src="/codedoc/examples/RNN/net.h.html" frameborder="0" scrolling="no" onload="cleanIframe(this)"></iframe>
 
 The `network()` function is the one that looks at the globally defined array
 `input`, computes one iteration of our recurrent neural network on it, and
