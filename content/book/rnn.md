@@ -84,7 +84,7 @@ vector $\vec{b}_r$ (bias) are parameters to be trained. $\sigma$ is the threshol
 
 Out of this memory we can now compute the output of the recurrent layer of the
 neural network:
-$$\text{recurrent layer output:}\ \ \ \vec{v}_\textrm{rec}=\sigma(W_o\cdot\vec{c}+\vec{b}_o),$$
+$$\text{recurrent layer output:}\ \ \ \vec{v}_\textrm{rec}=\sigma(W_o\cdot\vec{s}+\vec{b}_o),$$
 where $W_o$ and $\vec{b}_o$ are more parameters that need to be trained.
 
 We can repeat multiple such recurrent layers, where the output of the previous
@@ -126,8 +126,28 @@ We will need to implement a mock neural network to do these tests. This file
 (also embedded below) contains such an implementation, together with all the
 linear algebra operations that we will need.
 
+<style>
+  iframe {
+    width: 95%;
+    height: 0.3vh;
+  }
+</style>
+<script>
+  function cleanIframe(obj) {
+    var l = obj.contentWindow.document.getElementById('license');
+    l.parentElement.removeChild(l);
+    var n = obj.contentWindow.document.getElementsByClassName('nav')[0];
+    n.parentElement.removeChild(n);
+    var i = obj.contentWindow.document.getElementById('isso-thread');
+    i.parentElement.removeChild(i);
+  }
+</script>
+<iframe src="/examples/RNN/net.h.html" frameborder="0" scrolling="no" onload="cleanIframe(this)"></iframe>
+
 The `network()` function is the one that looks at the globally defined array
 `input`, computes one iteration of our recurrent neural network on it, and
 stores the results in the globally defined array `output`. It then finds which
 element of `output` is the largest, and reports it as the most probable gesture
 being recorded by the device.
+
+
