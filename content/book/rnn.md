@@ -122,7 +122,8 @@ only integers. This is, however, much more succeptible to bugs, so let us first
 benchmark the performance of a typical floating point network running on a
 16MHz Arduino.
 
-We will need to implement a mock neural network to do these tests. This file
+We will need to implement a mock neural network to do these tests.
+[This `net.h` file](/codedoc/examples/RNN/net.h.html)
 (also embedded below) contains such an implementation, together with all the
 linear algebra operations that we will need.
 
@@ -131,6 +132,8 @@ linear algebra operations that we will need.
     width: 95%;
     height: 30vh;
     min-height:400px;
+    display: block;
+    margin: auto;
     border: black 1px solid;
     border-radius: 1em;
   }
@@ -147,10 +150,34 @@ linear algebra operations that we will need.
 </script>
 <iframe src="/codedoc/examples/RNN/net.h.html" frameborder="0" scrolling="yes" onload="cleanIframe(this)"></iframe>
 
-The `network()` function is the one that looks at the globally defined array
-`input`, computes one iteration of our recurrent neural network on it, and
-stores the results in the globally defined array `output`. It then finds which
-element of `output` is the largest, and reports it as the most probable gesture
-being recorded by the device.
+The `network()` function at the bottom of that file is the one that looks at
+the globally defined array `input`, computes one iteration of our recurrent
+neural network on it, and stores the results in the globally defined array
+`output`. It then finds which element of `output` is the largest, and reports
+it as the most probable gesture being recorded by the device.
 
+The entirety of the user code, assuming `net.h` contains properly trained
+parameters, would then be
 
+```c++
+SpinWheel.readIMU();
+input[0] = SpinWheel.ax; // acceleration components
+input[1] = SpinWheel.ay;
+input[2] = SpinWheel.az;
+input[3] = SpinWheel.gx; // rotation speed components
+input[4] = SpinWheel.gy;
+input[5] = SpinWheel.gz;
+size_t c = network();
+```
+
+where most of the lines simply move measurement data from the sensor to the neural network code. At the end the variable `c` contains the number representing the most probable gesture according to the neural network. At that point `c` can be used as a trigger to perform other operations on the device, e.g. lighting up the LEDs in a pretty pattern to acknowledge the detected gesture.
+
+By using the `millis()` function (which reports number of milliseconds since the device has started) we can measure how slow the neural network computation is. TODO
+
+### Regulating the pace of the computation
+
+Now that we know we are fast enough, we need to ensure that each measurement and each neural network computation are done at regular intervals.
+
+## Training the neural network
+
+## Visualizing the results and the infromation flow through the network itself
