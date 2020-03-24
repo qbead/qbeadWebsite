@@ -1,6 +1,7 @@
 ---
 title: Gesture Recognition and Recurrent Neural Networks on an Arduino
 keywords: neural network, gesture recognition, arduino
+header-video: /images/bookpics/rnn_vis.mp4
 ---
 
 This lesson is part of the SpinWheel series. The
