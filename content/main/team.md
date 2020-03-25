@@ -168,4 +168,16 @@ Jack has always been passionate about both art and science. As a high schooler, 
 Passionate about art, Mariya acquired a major in architecture and started her studio – Monochra. She started drawing in high school and began to realize that helping people visualize their ideas is something that makes her feel most happy. She helped our team in creating storyboards and some visual assets for the project.
 </div>
 </div>
+
+<div class="team-member">
+<img src="/images/teampics/tess_s.jpg">
+<div>
+<h1>Tess</h1>
+<h2>Sustainable Structural Engineering</h2>
+Tess is currently a PhD student in Stanford's Civil and Environmental Engineering Department, and she's passionate about making the buildings we live and work in more sustainable through her research. Female mentors, such as her older sister, have played a large role in her interest in engineering, and so she enjoys inspiring younger girls to pursue careers in STEM. She also loves opportunities to use her graphic design skills for good causes, such as through Stanford's Graduate Society of Women Engineers and the SpinWheel! 
 </div>
+</div>
+</div>
+
+
+
