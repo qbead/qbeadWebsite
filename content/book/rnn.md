@@ -498,3 +498,9 @@ better and improve upon it. The next guide would explore:
 - The output of the network can be a bit jittery (observe the last layer from
   the video above). A low-pass filter on that output might be a useful
   postprocessing addition to the model.
+
+And here you can find the `python` code used for
+[training](https://nbviewer.jupyter.org/github/SpinWearables/SpinWearablesFirmware/blob/master/examples/RNN/training.ipynb)
+and
+[visualization](https://nbviewer.jupyter.org/github/SpinWearables/SpinWearablesFirmware/blob/master/examples/RNN/visualizing.ipynb)
+of the network.
