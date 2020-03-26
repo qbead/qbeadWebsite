@@ -59,7 +59,7 @@ As you can see in the detailed resources cited above, an artificial neuron is a 
 Thus, by layering such artificial neurons we can input the motion sensor data
 and output, after a few layers, a number representing the gesture we
 have been performing while holding the device. A very important step would be
-to teach or "train" the neural network to made that decision. Just like in
+to teach or "train" the neural network how to make that decision. Just like in
 biology, this will be done by changing the strength of the connections between
 the neurons, i.e. by finding appropriate values for the aforementioned weights.
 
@@ -73,15 +73,17 @@ recurrent neural network. This leads us to our architecture of choice.
 
 Our motion sensor can easily report measured acceleration and rotation 50 times
 a second. This will be the input for our recurrent neural network: a
-6-dimensional vector containing the acceleration and rotation speed
-measurements for each of the 3 directions of space:
-$$\text{input vector:}\ \ \ \vec{v}_\textrm{in}.$$
-We will also reserver a vector $\vec{s}$ as a memory. With each new sensor
+6-dimensional vector containing the acceleration $\vec{a}$ and rotation speed $\vec{\omega}$
+components for each of the 3 directions of space:
+$$\text{input vector:}\ \ \ \vec{v}_\textrm{in} = (a_x,a_y,a_z,\omega_x,\omega_y,\omega_z).$$
+We will also reserve a vector $\vec{s}$ as a memory. With each new
 measurement sent to the network (50 times a second), we will update that memory
 in the following way:
 $$\text{memory update rule:}\ \ \ \vec{s}\leftarrow \sigma(W_s\cdot\vec{s}+U\cdot\vec{v}_\textrm{in}+\vec{b}_s),$$
 Where the matrices $W_s$ and $U$ (synapse connection weights) as well as the
-vector $\vec{b}_s$ (bias) are parameters to be trained. $\sigma$ is the thresholding function, for which we have chosen to use $relu$, because it is easy to compute on simple hardware.
+vector $\vec{b}_s$ (bias) are parameters to be trained. $\sigma$ is the
+thresholding function, for which we have chosen to use $\textrm{relu}$, because it is
+easy to compute on simple hardware.
 
 Out of this memory we can now compute the output of the recurrent layer of the
 neural network:
@@ -116,7 +118,7 @@ The typical Arduino hardware does not directly support floating point numbers.
 The compiler still lets you use them, but the generated machine code emulates
 them by using the underlying integer data types. This emulation is usually
 judged to be much too slow, as a simple multiplication of two floating point
-numbers will take many times more than the time for an integer numbers
+numbers will take much longer than the time for an integer numbers
 multiplication. If this significant overhead is making our network too slow for
 the 50Hz rate at which we want to run it, we can retrain the network to use
 only integers. This is, however, much more succeptible to bugs, so let us first
@@ -189,7 +191,13 @@ topics later on, as a way to enable more advanced types of gesture recognition.
 
 ### Regulating the pace of the computation
 
-Now that we know we are fast enough, we need to ensure that each measurement and each neural network computation are done at regular intervals. Otherwise a small change in our neural network architecture might significantly change the rate at which we are acquiring measurements, by virtue of the computation taking longer. Instead, we will simply ensure that each computation starts at regular intervals and takes less time than the length of the interval, without worrying exactly how long that is. We can do this by defining a `pacer` function:
+Now that we know we are fast enough, we need to ensure that each measurement
+and each neural network computation are done at regular intervals. Otherwise a
+small change in our neural network architecture might significantly change the
+rate at which we are acquiring measurements, because of the computation taking
+longer. Instead, we will simply ensure that each computation starts at regular
+intervals and takes less time than the length of the interval, without worrying
+exactly how long that is. We can do this by defining a `pacer` function:
 
 ```c++
 void pacer(long period_ms) {
@@ -220,7 +228,14 @@ void loop() {
 
 ## Implementing the same neural network in Python
 
-We will need to train the neural network, and regrettably the microcontroller of the SpinWheel can be too slow for that. Instead, we will gather the necessary data from the SpinWheel, but run the training procedure on a separate computer. It is straightforward to reimplement our neural network in `numpy` or `tensorflow`, two popular Python libraries for numerical computation (`tensorflow` in particular provides us with the gradients for free). Other popular options are `jax` and `pytorch`, but in all of these libraries the code would look virtually the same.
+We will need to train the neural network, and regrettably the microcontroller
+of the SpinWheel can be too slow for that. Instead, we will gather the
+necessary data from the SpinWheel, but run the training procedure on a separate
+computer. It is straightforward to reimplement our neural network in `numpy` or
+`tensorflow`, two popular Python libraries for numerical computation
+(`tensorflow` in particular provides us with the gradients for free). Other
+popular options are `jax` and `pytorch`, but in all of these libraries the code
+would look virtually the same.
 
 We start by implementing a generic single layer RNN, implementing the
 previously mentioned math in code:
@@ -235,8 +250,8 @@ def rnn_step(state, v_in, Ws, U, Bs, Wo, Bo):
 Here `@` denotes matrix multiplication.
 
 The neural network as a whole will repeatedly apply two such RNN layers to the
-incoming measurements in order to get us the output vector of probabilities for
-different gestures. To set the notation, we will denote the parameters of the
+incoming measurements in order to get us the output vector of probabilities.
+To set the notation, we will denote the parameters of the
 network as `W1s, U1, W1o, B1s, B1o, W2s, U2, W2o, B2s, B2o, Wout, Bout`: these
 are the same matrices and bias vectors discussed earlier. The final neural
 network would look like:
@@ -286,8 +301,10 @@ fixed-duration recordings. For instance, we cut all records into sequences of
 resulting in a three-axis array with dimensions 50-by-6-by-n where $n\approx
 N/50$.
 
+![Reshaping the array containing all of our training data by cutting it up in smaller 1-second tracks and stacking them. Doing this simplifies the rest of our code and makes training easier to frame.](/images/bookpics/rnn_array_reshape.png "Reshaping the array containing the training data.")
+
 Now we can simply apply our first RNN layer to the entirety of the recorded
-data (which we will denote simply `x` to keep with convention)
+data (which we will denote simply `x` to keep with conventions).
 
 ```python
 states, v1_outs = tf.scan(
@@ -296,7 +313,7 @@ states, v1_outs = tf.scan(
 )
 ```
 
-`v1_outs` is a vector with the same dimensions as x now, but instead of
+Now `v1_outs` is a vector with the same dimensions as `x`, but instead of
 containing the input recordings at a given time step, it contains the outputs
 of the first RNN layer at that same time step.
 
@@ -408,7 +425,16 @@ area of research to interpret their behavior. We can perform a humble attempt
 of our own to do that same task. Thankfully our network is rather small, so it
 is feasible to represent it graphically:
 
-![Visualization of the network: Each column corresponds to a set of neurons (the input, namely the motion measurements, then the memory and output of the first RNN layer, followed by the second RNN layer, followed by the `softmax` output predictions). Bigger circle implies larger numerical value. Between each two columns we pictorially represent the synapses, with thicker lines implying larger weight. In order they are `U1`, `W1o`, `U2`, `W2o`, and `Wout`. The feedback synapses in the memories `W1s` and `W2s` are not shown -- they would connect neurons withing the $s_1$ and $s_2$ columns. The biases for each layer of neurons is also not represented.](/images/bookpics/rnn_vis.png "Visualization of the network.")
+![Visualization of the network: Each column corresponds to a set of neurons
+(the input, namely the motion measurements, then the memory and output of the
+first RNN layer, followed by the second RNN layer, followed by the `softmax`
+output predictions). Bigger circle implies larger numerical value. Between each
+two columns we pictorially represent the synapses, where thicker lines
+represent larger weights. In order, they are `U1`, `W1o`, `U2`, `W2o`, and
+`Wout`. The feedback synapses in the memories `W1s` and `W2s` are not shown --
+they would connect neurons within the $s_1$ and $s_2$ columns. The biases for
+each layer of neurons is also not represented.](/images/bookpics/rnn_vis.png
+"Visualization of the network.")
 
 On its own, such a visualization does not immediately give too much useful
 information. But we can create an animation of the entire history of the
@@ -417,14 +443,55 @@ actual recording of the device (you might want to full-screen it):
 
 <video src="/images/bookpics/rnn_vis_inset.mp4" muted autoplay playsinline loop controls></video>
 
-TODO: a bit more discussion of the video and fixing some relative sizes
+A few question spring here:
+
+- Some neurons become very active, but their outgoing connections are weak
+  (thin lines). Is this desired or is the network unnecessary convoluted?
+- Many neurons in the same layer seem to respond in the same way. Does this
+  mean we do not need such larger layers?
+- Even neurons deep in the network seem to respond mostly to the immediate
+  motion measurement, not to the overall gesture. Is this is a desired feature
+  or is it a sign of a bad architectural decision? 
+
+Some of these question go against the standard approach of deep learning, where
+we just explode the number of training parameters, hopefully making the cost
+landscape easier to train on. However, such questions of simplifying our neural
+network might be important when we want to run them on simple underpowered
+hardware.
 
 ## Next Steps
 
 There are a number of important steps to take in order to understand this setup
-better and improve upon it.
+better and improve upon it. The next guide would explore:
 
-- Was it really necessary to use a neural network for this task? Look at the video above and how noticeable the x and y accelerations were. Maybe we can simply use a low-pass filter that takes the magnitudes of the x and y accelerations and makes the decisions purely based on that. This would certainly work for the simple gestures we picked here, but it will not work well for a general gesture. Moreover, this type of "feature engineering" (the technical term for cherry-picking parts of the signal manually) needs to be redone for every new gesture. On the other hand, a neural network simply needs to be trained on the new training data without much extra thought being put into it.
-- Can we force our network, through judicious use of regularization, to learn a simple model like the one above on its own. After all, this is the whole reason for regularization: to steer the learning process away from unnecessarily convoluted and overfitting models. Until recently this was a very popular notion in machine learning: that we should look at the simplest and smallest neural net. While in this case we can probably do it, this approach does not scale. It turns out that it is much easier to train significantly overparameterized system than to train a small system. This is the big surprise the recent progress in deep neural networks taught us: while the extra parameters are "unnecessary", they make the learning process drastically easier.
-- We know that LSTM and GRU architectures can run on the SpinWheel or other Arduino-compatible hardware (both in terms of clock-rate and RAM). **Such architectures are much better at "remembering" the recent past and will be indispensable for advanced gesture recognition.** This will be the main next step in this series of educational activities.
-- The output of the network can be a bit jittery (observe the last layer from the video above). A low-pass filter on that output might be a useful postprocessing addition to the model.
+- Was it really necessary to use a neural network for this task? Look at the
+  video above and how noticeable the x and y accelerations were. Maybe we can
+  simply use a low-pass filter that takes the magnitudes of the x and y
+  accelerations and makes the decisions purely based on that. This would
+  certainly work for the simple gestures we picked here, but it will not work
+  well for a general gesture. Moreover, this type of "feature engineering" (the
+  technical term for cherry-picking parts of the signal manually) needs to be
+  redone for every new gesture. On the other hand, a neural network simply needs
+  to be trained on the new training data without much extra thought being put
+  into it.
+- Can we force our network, through judicious use of regularization, to learn a
+  simpler model, like the one above, on its own. After all, this is the whole
+  reason for regularization: to steer the learning process away from
+  unnecessarily convoluted and overfitting models. Until recently this was a very
+  popular notion in machine learning: that we should look at the simplest and
+  smallest neural net. While in the present case we can probably do it, this approach
+  does not scale. It turns out that it is much easier to train significantly
+  overparameterized system than to train a small neural net. This is the big surprise
+  the recent progress in deep neural networks taught us: while the extra
+  parameters are "unnecessary", they make the learning process drastically
+  easier.
+- We know that LSTM and GRU architectures can run on the SpinWheel and other
+  Arduino-compatible hardware (both in terms of clock-rate and RAM). **Such
+  architectures are much better at "remembering" the recent past and will be
+  indispensable for advanced gesture recognition.** This will be the main next
+  step in this series of educational activities.
+- If we switch to using only integers the network can be an order of magnitude
+  larger.
+- The output of the network can be a bit jittery (observe the last layer from
+  the video above). A low-pass filter on that output might be a useful
+  postprocessing addition to the model.
