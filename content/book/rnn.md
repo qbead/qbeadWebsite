@@ -433,8 +433,7 @@ two columns we pictorially represent the synapses, where thicker lines
 represent larger weights. In order, they are `U1`, `W1o`, `U2`, `W2o`, and
 `Wout`. The feedback synapses in the memories `W1s` and `W2s` are not shown --
 they would connect neurons within the $s_1$ and $s_2$ columns. The biases for
-each layer of neurons is also not represented.](/images/bookpics/rnn_vis.png
-"Visualization of the network.")
+each layer of neurons is also not represented.](/images/bookpics/rnn_vis.png "Visualization of the network.")
 
 On its own, such a visualization does not immediately give too much useful
 information. But we can create an animation of the entire history of the
