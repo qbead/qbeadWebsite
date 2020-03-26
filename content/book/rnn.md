@@ -458,6 +458,10 @@ landscape easier to train on. However, such questions of simplifying our neural
 network might be important when we want to run them on simple underpowered
 hardware.
 
+<a href="https://www.kickstarter.com/projects/spinwheel/447670470">
+<figure><img src="/images/kickstarter_support.png"></figure><figcaption>We are trying to bring similar resources, from the middle-school level to the undergraduate level, to more curious minds. Supporting our non-profit Kickstarter would greatly help us.</figcaption>
+</a>
+
 ## Next Steps
 
 There are a number of important steps to take in order to understand this setup
