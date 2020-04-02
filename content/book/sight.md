@@ -5,12 +5,16 @@ header-image: /images/banners/colors_and_eye.png
 ---
 
 ::: intro-box
-In this adventure, you'll trick your eyes into perceiving a rainbow of colors using only red, green, and blue LEDs.
+In this adventure, you'll trick your eyes into perceiving a rainbow of colors using only red, green, and blue LEDs. This lesson has two parts:
+<ol>
+<li><strong> Colors</strong>: learn more about how your eyes detect color and try programming a virtual SpinWheel</li>
+<li><strong> Persistence of Vision</strong>: use the SpinWheel to explore a limitation of our eyes that animators take advantage of </li>
+</ol>
 :::
 
 On one hand, the human eye is a spectacular sensor that, by far, outperforms all our other senses in the amount of information it gives us about our surroundings. On the other hand, it leaves much of the richness of color and light imperceptible to us. Here, we will explore the limitations of this important organ; we will even learn a few ways in which we can trick it into seeing colors that aren’t actually there.
 
-## Colors
+## Part 1. Colors
 
 When light comes from the Sun (or most other sources of illumination), we perceive it as lacking a hue (or being white). In reality, white light is a mixture of many colors. One way we can see this mixture is by using a prism. A prism works by bending (“refracting”) light at different angles depending on its color, allowing us to see all of the colors that make up white light. This is why if you let sunlight shine through a prism, you can see a rainbow.
 
@@ -86,9 +90,11 @@ changeColor();
 </script>
 </div>
 
-This will allow us to program the SpinWheel to display beautiful colorful patterns (while using only a small set of hardware components). This is why the sliders go from 0 to 255 instead of a more obvious set of numbers like 0 to 100 - this is the range used by the SpinWheel for the minimum and maximum of red, green, and blue allowed in the mixture. 
+This will allow us to program the SpinWheel (or the SpinWheel animation below) to display beautiful colorful patterns (while using only a small set of hardware components). This is why the sliders go from 0 to 255 instead of a more obvious set of numbers like 0 to 100 - this is the range used by the SpinWheel for the minimum and maximum of red, green, and blue allowed in the mixture. 
 
 Now let's start programming the SpinWheel to light up a specific color! You can use the code shown below. Pick a color you like by changing the sliders above (for instance, I like this purple `(195,0,255)`), and make the large LEDs on the SpinWheel show that color by editing the code and uploading it to the SpinWheel.
+
+To experiment with this without having a SpinWheel, then you can try the code below here on our animated SpinWheel. By changing the value of `SpinWheel.setLargeLEDsUniform()` you can have the animation light up as you would the real SpinWheel. 
 
 If you have trouble understanding the commands below, be sure to read our [quick start guide](/quickstart) and if necessary some of the Computer Science 101 sections. 
 
@@ -130,7 +136,7 @@ void loop() {
 </pre>
 </div>
 
-## Persistence of Vision
+## Part 2. Persistence of Vision
 
 Our eyes have another imperfection we can take advantage of while programming the SpinWheel: they are rather slow. Consider the example below, where you can select the speed at which a shade of blue and a shade of red switch between each other.
 
