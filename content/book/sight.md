@@ -114,6 +114,16 @@ void loop() {
 }
 ```
 
+<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
+<script src='/simspinwheel/simspinwheel.js'></script>
+<div class="ssw-codecontent">
+<div class="ssw-codeblock">void loop() {
+  int t = millis();</div>
+<textarea class="ssw-codeblock">  SpinWheel.setLargeLEDsUniform((t/10)%255, 0, (t/10)%255);</textarea>
+<div class="ssw-codeblock">  SpinWheel.drawFrame();
+}</div>
+</div>
+
 ## Persistence of Vision
 
 Our eyes have another imperfection we can take advantage of while programming the SpinWheel: they are rather slow. Consider the example below, where you can select the speed at which a shade of blue and a shade of red switch between each other.
