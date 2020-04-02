@@ -17,6 +17,21 @@ In this section, we will teach you how to control all of the large LEDs together
 code will go here
 ```
 
+<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
+<script src='/simspinwheel/simspinwheel.js'></script>
+<div class="ssw-codecontent" markdown=0>
+<pre class="ssw-codeblock">
+void loop() {
+  int t = millis();
+</pre>
+<textarea class="ssw-codeblock">
+  SpinWheel.setLargeLEDsUniform(255, 255, 0);
+</textarea>
+<pre class="ssw-codeblock">
+  SpinWheel.drawFrame();
+}
+</pre>
+</div>
 
 ## Turn on all the Small LEDs
 In this section, we will teach you how to control all of the small LEDs together.
