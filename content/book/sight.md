@@ -116,12 +116,18 @@ void loop() {
 
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
 <script src='/simspinwheel/simspinwheel.js'></script>
-<div class="ssw-codecontent">
-<div class="ssw-codeblock">void loop() {
-  int t = millis();</div>
-<textarea class="ssw-codeblock">  SpinWheel.setLargeLEDsUniform((t/10)%255, 0, (t/10)%255);</textarea>
-<div class="ssw-codeblock">  SpinWheel.drawFrame();
-}</div>
+<div class="ssw-codecontent" markdown=0>
+<pre class="ssw-codeblock">
+void loop() {
+  int t = millis();
+</pre>
+<textarea class="ssw-codeblock">
+  SpinWheel.setLargeLEDsUniform((t/10)%255, 0, (t/10)%255);
+</textarea>
+<pre class="ssw-codeblock">
+  SpinWheel.drawFrame();
+}
+</pre>
 </div>
 
 ## Persistence of Vision
