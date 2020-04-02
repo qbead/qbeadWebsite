@@ -81,6 +81,16 @@ As a kid, [Bridget](/bridget) was always asking "why?" Luckily, her parents put 
 </div>
 
 <div class="team-member">
+<img src="/images/teampics/chris_s.jpg">
+<div>
+<h1>Chris</h1>
+<h2>Neutrino Physics</h2>
+While a graduate student at Yale, Chris was involved with many outreach activities in Yale's Pathways to Science program, leading events for hundreds of students. Chris's research at Yale focused on understanding the nature of the neutrino particle by searching for rare nuclear decays. After finishing his PhD, he now works as a Data Scientist for CarMax, but still remains active in STEM outreach. In his free time, Chris enjoys reading, hiking, and traveling around the world.
+</div>
+</div>
+
+
+<div class="team-member">
 <img src="/images/teampics/elise_s.jpg">
 <div>
 <h1>Elise</h1>
