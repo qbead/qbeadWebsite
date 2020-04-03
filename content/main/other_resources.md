@@ -13,39 +13,53 @@ window.onload = function (){
       var img = li.querySelector('img');
       var a = li.querySelector('a');
       img.src = '/images/otherresourcespics/' + a.href.replace(/\//g,'.').replace(/:/g,'.') + '.png';
+      img.onclick = function() {window.location=a.href;};
     });
   })
 };
 </script>
 <style>
+.row-grid {
+  display: block !important;
+}
+.column-grid {
+  margin: 1rem !important;
+  text-align: center !important;
+}
 ul.other_resources {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(360px, 1fr));
+  grid-auto-rows: 1fr;
 }
 ul.other_resources > li {
   display: flex;
   flex-direction: row;
   margin: 10px 0;
   align-items: center;
-}
-.row-small-reverse ul.other_resources > li {
-  flex-direction: row-reverse;
+  flex-basis: 350px;
 }
 ul.other_resources > li > img {
-  max-width:30%;
-  margin: 1rem;
+  width:30%;
+  margin-right: 1rem;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
-.column {
-  justify-content: start;
+ul.other_resources > li > p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  flex-grow: 1;
 }
 </style>
 
-<div class="row">
-<div class="column">
+<div class="row row-grid">
+<div class="column column-grid">
 <h2>Video Channels</h2>
 </div>
-<div class="column column-long">
+<div class="column column-grid column-long">
 <ul class="other_resources">
 <li><img src=""> <p><a href="https://physicsgirl.org/">Physics Girl</a></p></li>
 <li><img src=""> <p><a href="https://kurzgesagt.org/">Kurtzgesagt</a></p></li>
@@ -57,8 +71,11 @@ ul.other_resources > li > img {
 </div>
 </div>
 
-<div class="row row-small-reverse">
-<div class="column column-long">
+<div class="row row-grid">
+<div class="column column-grid">
+<h2>Activity Lists and Orgs</h2>
+</div>
+<div class="column column-grid column-long">
 <ul class="other_resources">
 <li><img src=""> <p><a href="https://swe.org/k-12-outreach/youth-programs/">Society of Women Engineers - youth programs</a></p></li>
 <li><img src=""> <p><a href="https://girlswhocode.com/code-at-home/">Girls Who Code</a></p></li>
@@ -69,16 +86,13 @@ ul.other_resources > li > img {
 <li><img src=""> <p><a href="http://getbook.at/CraftyElectronics">The Crafty Kids Guide to DIY Electronics</a></p></li>
 </ul>
 </div>
-<div class="column">
-<h2>Activity Lists and Orgs</h2>
-</div>
 </div>
 
-<div class="row">
-<div class="column">
+<div class="row row-grid">
+<div class="column column-grid">
 <h2>Kits</h2>
 </div>
-<div class="column column-long">
+<div class="column column-grid column-long">
 <ul class="other_resources">
 <li><img src=""> <p><a href="https://spinwearables.com">Our SpinWheel Kit</a></p></li>
 <li><img src=""> <p><a href="https://www.geekmomprojects.com/">Bright Wearables</a></p></li>
@@ -89,23 +103,23 @@ ul.other_resources > li > img {
 </div>
 </div>
 
-<div class="row row-small-reverse">
-<div class="column column-long">
+<div class="row row-grid">
+<div class="column column-grid">
+<h2>Virtual Museums</h2>
+</div>
+<div class="column column-grid column-long">
 <ul class="other_resources">
 <li><img src=""> <p><a href="https://mos.org/MOSatHome">Museum of Science</a></p></li>
 <li><img src=""> <p><a href="https://adventuresinfamilyhood.com/20-virtual-field-trips-to-take-with-your-kids.html">Adventures in Familihood's Museum List</a></p></li>
 </ul>
 </div>
-<div class="column">
-<h2>Virtual Museums</h2>
-</div>
 </div>
 
-<div class="row">
-<div class="column">
+<div class="row row-grid">
+<div class="column column-grid">
 <h2>Computer Games</h2>
 </div>
-<div class="column column-long">
+<div class="column column-grid column-long">
 <ul class="other_resources">
 <li><img src=""> <p><a href="https://www.minecraft.net/en-us/">Minecraft</a></p></li>
 <li><img src=""> <p><a href="https://www.kerbalspaceprogram.com/">Kerbal Space Program</a></p></li>
@@ -115,25 +129,25 @@ ul.other_resources > li > img {
 </div>
 </div>
 
-<div class="row row-small-reverse">
-<div class="column column-long">
+<div class="row row-grid">
+<div class="column column-grid">
+<h2>Introductory CAD/Electronics Online Tools</h2>
+</div>
+<div class="column column-grid column-long">
 <ul class="other_resources">
 <li><img src=""> <p><a href="https://www.tinkercad.com/">Tinkercad</a></p></li>
 <li><img src=""> <p><a href="https://www.blockscad3d.com/">BlocksCAD</a></p></li>
 <li><img src=""> <p><a href="https://www.tinkercad.com/circuits">Tinkercad Circuits</a></p></li>
 </ul>
 </div>
-<div class="column">
-<h2>Introductory CAD/Electronics Online Tools</h2>
-</div>
 </div>
 
-<div class="row">
-<div class="column">
+<div class="row row-grid">
+<div class="column column-grid">
 <h2>Books</h2>
 Read any and every well received  book you can get your hands on. Read them all with a grain of salt. Glean from them advice and elements that resonate with you. No one "expert" has all of the answers. Some are just plain flat out wrong and dangerous, but many others are helpful, and some are just brilliant. You need to trust your own instincts to disregard the bad advice, use the good that pertains to your situation, and be inspired and transformed by the brilliant.
 </div>
-<div class="column column-long">
+<div class="column column-grid column-long">
 <ul class="other_resources">
 <li><img src=""> <p><a href="https://angeladuckworth.com/grit-book/">Grit: The power of Passion and Perserverance - Angela Duckworth</a></p></li>
 <li><img src=""> <p><a href="https://www.wired.com/2012/10/geek-mom-book/">Geek Mom: Projects, tips, and Adventures for Mom's and Their 21st Century Families - Barron</a></p></li>
