@@ -122,10 +122,10 @@ ul.other_resources > li > p {
 </div>
 <div class="column column-grid column-long">
 <ul class="other_resources">
-<li><img src=""> <p><a href="https://www.minecraft.net/en-us/">Minecraft</a></p></li>
-<li><img src=""> <p><a href="https://www.kerbalspaceprogram.com/">Kerbal Space Program</a></p></li>
-<li><img src=""> <p><a href="https://www.factorio.com/">Factorio</a></p></li>
-<li><img src=""> <p><a href="https://www.citiesskylines.com/">Cities and Skylines</a></p></li>
+<li><img src=""> <p><a href="https://www.minecraft.net/en-us/">Minecraft</a> A "sandbox" game with a whole world to explor. With the freedom to discover and extract raw materials, craft tools, build structures or earthworks.</p></li>
+<li><img src=""> <p><a href="https://www.kerbalspaceprogram.com/">Kerbal Space Program</a> Create your own space program, designing and launching your own rockets from scratch, with detailed but playful physics and engineering simulations.</p></li>
+<li><img src=""> <p><a href="https://www.factorio.com/">Factorio</a> A gigantic "sandbox" game in which you have to build an ever-larger automated factory.</p></li>
+<li><img src=""> <p><a href="https://www.citiesskylines.com/">Cities and Skylines</a> Build and manage your own city. You can recreate your own town and see how small changes affect the entire community.</p></li>
 </ul>
 </div>
 </div>
