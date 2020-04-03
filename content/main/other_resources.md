@@ -1,5 +1,5 @@
 ---
-title: Other Educational ResourcesSpinWearables
+title: Assorted Educational Resources
 keywords: spinwheel, education, STEM, outreach, science, engineering day, electronics, computer science, physics
 header-image: /images/behindthescenes/sky_lit_up_device_crop2.jpg
 ---
@@ -36,11 +36,14 @@ ul.other_resources > li > img {
   max-width:30%;
   margin: 1rem;
 }
+.column {
+  justify-content: start;
+}
 </style>
 
 <div class="row">
 <div class="column">
-<h1>Video Channels</h1>
+<h2>Video Channels</h2>
 </div>
 <div class="column column-long">
 <ul class="other_resources">
@@ -56,36 +59,51 @@ ul.other_resources > li > img {
 
 <div class="row row-small-reverse">
 <div class="column column-long">
-TODO https://swe.org/k-12-outreach/youth-programs/ https://girlswhocode.com/code-at-home/ https://stemactivitiesforkids.com/ engineerday.com/  
+<ul class="other_resources">
+<li><img src=""> <p><a href="https://swe.org/k-12-outreach/youth-programs/">Society of Women Engineers - youth programs</a></p></li>
+<li><img src=""> <p><a href="https://girlswhocode.com/code-at-home/">Girls Who Code</a></p></li>
+<li><img src=""> <p><a href="https://stemactivitiesforkids.com/">STEM Activities Repository</a></p></li>
+<li><img src=""> <p><a href="https://engineeringday.com">Engineering Day</a></p></li>
+<li><img src=""> <p><a href="https://www.acs.org/content/acs/en/education/students/highschool/chemistryclubs/activities/food-and-chemistry.html">American Chemical Society's Food and Chemistry</a></p></li>
+<li><img src=""> <p><a href="https://www.geekmomprojects.com/">Geek Mom Projects</a></p></li>
+<li><img src=""> <p><a href="http://getbook.at/CraftyElectronics">The Crafty Kids Guide to DIY Electronics</a></p></li>
+</ul>
 </div>
 <div class="column">
-<h1>Activities Lists and Orgs</h1>
+<h2>Activity Lists and Orgs</h2>
 </div>
 </div>
 
 <div class="row">
 <div class="column">
-<h1>Kits</h1>
+<h2>Kits</h2>
 </div>
 <div class="column column-long">
 <ul class="other_resources">
-TODO our kit and others
+<li><img src=""> <p><a href="https://spinwearables.com">Our SpinWheel Kit</a></p></li>
+<li><img src=""> <p><a href="https://www.geekmomprojects.com/">Bright Wearables</a></p></li>
+<li><img src=""> <p><a href="https://www.kiwico.com/">KiwiCo</a></p></li>
+<li><img src=""> <p><a href="https://www.adafruit.com/">Adafruit</a></p></li>
+<li><img src=""> <p><a href="https://www.sparkfun.com/">SparkFun</a></p></li>
 </ul>
 </div>
 </div>
 
 <div class="row row-small-reverse">
 <div class="column column-long">
-TODO https://mos.org/MOSatHome https://adventuresinfamilyhood.com/20-virtual-field-trips-to-take-with-your-kids.html
+<ul class="other_resources">
+<li><img src=""> <p><a href="https://mos.org/MOSatHome">Museum of Science</a></p></li>
+<li><img src=""> <p><a href="https://adventuresinfamilyhood.com/20-virtual-field-trips-to-take-with-your-kids.html">Adventures in Familihood's Museum List</a></p></li>
+</ul>
 </div>
 <div class="column">
-<h1>Virtual Museums</h1>
+<h2>Virtual Museums</h2>
 </div>
 </div>
 
 <div class="row">
 <div class="column">
-<h1>Computer Games</h1>
+<h2>Computer Games</h2>
 </div>
 <div class="column column-long">
 <ul class="other_resources">
@@ -102,10 +120,28 @@ TODO https://mos.org/MOSatHome https://adventuresinfamilyhood.com/20-virtual-fie
 <ul class="other_resources">
 <li><img src=""> <p><a href="https://www.tinkercad.com/">Tinkercad</a></p></li>
 <li><img src=""> <p><a href="https://www.blockscad3d.com/">BlocksCAD</a></p></li>
+<li><img src=""> <p><a href="https://www.tinkercad.com/circuits">Tinkercad Circuits</a></p></li>
 </ul>
 </div>
 <div class="column">
-<h1>Introductory CAD/Electronics Online Tools</h1>
+<h2>Introductory CAD/Electronics Online Tools</h2>
+</div>
+</div>
+
+<div class="row">
+<div class="column">
+<h2>Books</h2>
+Read any and every well received  book you can get your hands on. Read them all with a grain of salt. Glean from them advice and elements that resonate with you. No one "expert" has all of the answers. Some are just plain flat out wrong and dangerous, but many others are helpful, and some are just brilliant. You need to trust your own instincts to disregard the bad advice, use the good that pertains to your situation, and be inspired and transformed by the brilliant.
+</div>
+<div class="column column-long">
+<ul class="other_resources">
+<li><img src=""> <p><a href="https://angeladuckworth.com/grit-book/">Grit: The power of Passion and Perserverance - Angela Duckworth</a></p></li>
+<li><img src=""> <p><a href="https://www.wired.com/2012/10/geek-mom-book/">Geek Mom: Projects, tips, and Adventures for Mom's and Their 21st Century Families - Barron</a></p></li>
+<li><img src=""> <p><a href="http://www.creativityincbook.com/">Creativity Inc: Overcoming the Unseen Forces That Stand in the Way of True Inspiration - Amy Wallace and Edwin Catmull</a></p></li>
+<li><img src=""> <p><a href="https://www.tonywagner.com/creating-innovators">
+Creating Innovators: The Making of Young People Who Will Change the World - Tony Wagner</a></p></li>
+<li><img src=""> <p><a href="https://www.adamgrant.net/originals">Originals: How Non-Conformists Move the World - Adam Grant</a></p></li>
+</ul>
 </div>
 </div>
 
