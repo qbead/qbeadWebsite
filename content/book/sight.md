@@ -90,17 +90,11 @@ changeColor();
 </script>
 </div>
 
-This will allow us to program the SpinWheel (or the SpinWheel animation below) to display beautiful colorful patterns (while using only a small set of hardware components). This is why the sliders go from 0 to 255 instead of a more obvious set of numbers like 0 to 100 - this is the range used by the SpinWheel for the minimum and maximum of red, green, and blue allowed in the mixture. 
+This will allow us to program the SpinWheel to display beautiful colorful patterns (while using only a small set of hardware components). This is why the sliders go from 0 to 255 instead of a more obvious set of numbers like 0 to 100 - this is the range used by the SpinWheel for the minimum and maximum of red, green, and blue allowed in the mixture. If you do not have a SpinWheel at hand, you can program the virtual one further down on this page.
 
-Now let's start programming the SpinWheel to light up a specific color! You can use the code shown below. Pick a color you like by changing the sliders above (for instance, I like this purple `(195,0,255)`), and make the large LEDs on the SpinWheel show that color by editing the code and uploading it to the SpinWheel.
+Now let's start programming the SpinWheel to light up a specific color! You can use the code shown below. Pick a color you like by changing the sliders above (for instance, I like this purple `(195,0,255)`), and make the large LEDs on the SpinWheel show that color by editing the code and uploading it to the SpinWheel or running it on the virtual SpinWheel below. By changing the values in `SpinWheel.setLargeLEDsUniform(...)` you can have the animation light up in the desired color.
 
-To experiment with this without having a SpinWheel, then you can try the code below here on our animated SpinWheel. By changing the value of `SpinWheel.setLargeLEDsUniform()` you can have the animation light up as you would the real SpinWheel. 
-
-If you have trouble understanding the commands below, be sure to read our [quick start guide](/quickstart) and if necessary some of the Computer Science 101 sections. 
-
-::: warning :
-One more quick point: depending on how bright it is in the room where you are programming the SpinWheel, you may want to change the brightness of the LEDs. For instance, something that seems blinding when working on it under artificial lights will seem dim in full sunlight. If you'd like to change the brightness of the SpinWheel (for any reason!), you can add `SpinWheel.largeLEDs.setBrightness(X);` into the `setup` function, and change the value of X to any value you wish between 0 (off) and 255 (brightest).
-:::
+If you have trouble understanding the commands below, be sure to read our [quick start guide](/quickstart) and if necessary some of the Computer Science 101 sections.
 
 ```cpp
 #include "SpinWearables.h"
@@ -120,15 +114,20 @@ void loop() {
 }
 ```
 
+You can try this code in this small simulator that lets you see directly from
+this page how the SpinWheel would respond if you run the code. Below you can
+change the brightness of each of the red, green, and blue components of the
+light emitters.
+
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
 <script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
-void loop() {
-  int t = millis();
+void setup() {
+  SpinWheel.begin();
 </pre>
 <textarea class="ssw-codeblock">
-  SpinWheel.setLargeLEDsUniform((t/10)%255, 0, (t/10)%255);
+  SpinWheel.setLargeLEDsUniform(195, 0, 255);
 </textarea>
 <pre class="ssw-codeblock">
   SpinWheel.drawFrame();
@@ -201,7 +200,7 @@ getT();
 </script>
 </div>
 
-Since web browsers are not particularly well adapted to this type of rapid color change, the flicker at high speeds is rather unpleasant. However at these speeds, you will start to see purple and the red and blue will become less clearly noticeable. Unlike web browsers, the SpinWheel is up to this task, though. The following program will cycle between red and blue at variable delays. Experiment with the value for the delay. At what delay do you stop distinguishing the two colors and start seeing only purple?
+Since web browsers are not particularly well adapted to this type of rapid color change, the flicker at high speeds is rather unpleasant. However at these speeds, you will start to see purple and the red and blue will become less clearly noticeable. Unlike web browsers, the SpinWheel is up to this task. The following program will cycle between red and blue at variable delays. Experiment with the value for the delay. At what delay do you stop distinguishing the two colors and start seeing only purple?
 
 ```cpp
 #include "SpinWearables.h"
