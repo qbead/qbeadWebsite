@@ -11,7 +11,7 @@ subtitle:  Access the video from our workshop and more links!
 
 <div class="row">
 <div class="column long-text">
-<p>Thank you to everyone who tuned in to our first virtual Parent and Educator Program! We hope that you learned something from following along with our demos and are ready to some yourself. You can [download the video here](link to the video). If you are looking for more resources, we have a curated list of some of [our favorite videos, activities, and more here](/other_resources)</p>
+<p>Thank you to everyone who tuned in to our first virtual Parent and Educator Program! We hope that you learned something from following along with our demos and are ready to some yourself. You can [download the video here](/large_files/workshop20200404.mp4). If you are looking for more resources, we have a curated list of some of [our favorite videos, activities, and more here](/other_resources)</p>
 </div>
 </div>
     
