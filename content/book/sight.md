@@ -1,7 +1,7 @@
 ---
 title: The Biology of Sight
 keywords: sight, vision, color, biology, optical illusions
-header-image: /images/banners/colors_and_eye.png 
+header-image: /images/banners/colors_and_eye.png
 ---
 
 ::: intro-box
@@ -16,25 +16,25 @@ On one hand, the human eye is a spectacular sensor that, by far, outperforms all
 
 ## Part 1. Colors
 
-When light comes from the Sun (or most other sources of illumination), we perceive it as lacking a hue (or being white). In reality, white light is a mixture of many colors. One way we can see this mixture is by using a prism. A prism works by bending (“refracting”) light at different angles depending on its color, allowing us to see all of the colors that make up white light. This is why if you let sunlight shine through a prism, you can see a rainbow.
+When light comes from the Sun (or most other sources of illumination), we perceive it as lacking a hue (or being white). In reality, white light is a mixture of many colors. This mixture can be seen by using a prism to split out the components of the mixture. A prism works by bending, or “refracting”, light at different angles depending on its color, thereby allowing us to see all of the colors that make up white light. This is why if you let sunlight shine through a prism, you can see a rainbow.
 
 ![A prism forming a rainbow from sunlight.](/images/bookpics/prism_floor.jpg "Illustration of a rainbow forming from sunlight")
 
-The light-sensing tissue in the back of our eyes (the retina) has small cells that respond to some of these colors. They are called “cone cells” and there are three separate groups of them classified by the color that they sense the best - red, green, or blue. For instance, the blue-sensing cones respond to blue light, but do not respond to red light, and vice versa. 
+The light-sensing tissue in the back of our eyes, the retina, has small cells that respond to some of these colors. They are called “cone cells” and are classified into three separate groups by the color that they sense the best: red, green, or blue. Each of these cells responds only to one of these three colors, but not the others. For instance, the blue-sensing cones respond to blue light, but do not respond to red light, and vice versa.
 
 ![An artistic rendering of a close-up of the back of the eye illustrating the rods (black rectangles) and cones (triangles colored by type).](/images/bookpics/rods_cones.png "Close-up cartoon of rods and cones in an eye")
 
-This leads to a problem… If our eyes can sense only red, green, and blue, how come we can see yellow? Our eyes and brains have evolved so that our red- and green-sensing cones both respond slightly to yellow. If our brain detects that both groups of cones are activated, it knows to interpret the color as yellow. And similar compromises are made for the other colors we can detect, for instance, purple activates both the red- and blue-sensing cones. 
+This leads to a problem… If our eyes can sense only red, green, and blue, how come we can see yellow? Our eyes and brains have evolved so that our red- and green-sensing cones both respond slightly to yellow. If our brain detects that both groups of cones are activated, it knows to interpret the color as yellow. And similar compromises are made for the other colors we can detect. For instance, purple activates both the red- and blue-sensing cones.
 
 ::: further-reading
-There is an animal that can (unlike us) detect the difference between a true pure color, and a mixture of colors that fakes the presence of the given color. It is called a mantis shrimp and it has 12 different types of cone cells in its eye. The Oatmeal comics has [an informative and entertaining strip about it](https://theoatmeal.com/comics/mantis_shrimp).
+There is an animal that can (unlike us) detect the difference between a true pure color, and a mixture of colors that fakes the presence of the given color. This animal is a mantis shrimp, and it has 12 different types of cone cells in its eye. The Oatmeal comics has [an informative and entertaining strip about it](https://theoatmeal.com/comics/mantis_shrimp).
 :::
 
 ::: further-reading
 You can learn more about the spectrum of light in the section on [light and color](/lightandcolor).
 :::
 
-We can exploit this imperfection of our eyes to make rich colorful displays (such as in a computer screen) while using only three colors. Since our eyes cannot distinguish between true purple and a mixture of blue and red, we don’t need a purple light source, only blue and red lights (and green for the other color combinations). If you look with a magnifying glass at a TV screen displaying a white page, you will see it is made out of red, blue, and green dots. Below you can move the sliders in order to see how all the colors of the rainbow can be made by mixing just red, green, and blue (or our eyes can be convinced of that, even if it is not true).
+We can exploit this imperfection of our eyes to make rich colorful displays (such as the screen you are viewing this on!) while using only three colors. In a sense, we are reverse-engineering colors! Since our eyes cannot distinguish between true purple and a mixture of blue and red, we don’t need a purple light source, only blue and red lights (and green for the other color combinations). If you look with a magnifying glass at a TV screen displaying a white page, you will see it is made out of red, blue, and green dots. Below you can move the sliders in order to see how all the colors of the rainbow can be made by mixing just red, green, and blue (or our eyes can be convinced of that, even if it is not true).
 
 <style>
 #colortests {
@@ -90,11 +90,11 @@ changeColor();
 </script>
 </div>
 
-This will allow us to program the SpinWheel to display beautiful colorful patterns (while using only a small set of hardware components). This is why the sliders go from 0 to 255 instead of a more obvious set of numbers like 0 to 100 - this is the range used by the SpinWheel for the minimum and maximum of red, green, and blue allowed in the mixture. If you do not have a SpinWheel at hand, you can program the virtual one further down on this page.
+This will allow us to program the SpinWheel to display beautiful colorful patterns (while using only a small set of hardware components). 0-255 is the range used by the SpinWheel for the minimum and maximum of red, green, and blue allowed in the mixture (While these numbers look strange to a human, computers use only 1's and 0's, where 0-255 is a nice, round number!). If you do not have a SpinWheel at hand, you can program the virtual one further down on this page.
 
-Now let's start programming the SpinWheel to light up a specific color! You can use the code shown below. Pick a color you like by changing the sliders above (for instance, I like this purple `(195,0,255)`), and make the large LEDs on the SpinWheel show that color by editing the code and uploading it to the SpinWheel or running it on the virtual SpinWheel below. By changing the values in `SpinWheel.setLargeLEDsUniform(...)` you can have the animation light up in the desired color.
+Now let's start programming the SpinWheel to light up a specific color! You can use the code shown below. First, pick a color you like by changing the sliders above (for instance, I like this purple `(195,0,255)`), and you can make the large LEDs on the SpinWheel show that color by editing the code and uploading it to the SpinWheel or running it on the virtual SpinWheel below. By changing the values in `SpinWheel.setLargeLEDsUniform(...)` you can have the animation light up in the desired color.
 
-If you have trouble understanding the commands below, be sure to read our [quick start guide](/quickstart) and if necessary some of the Computer Science 101 sections.
+If you have trouble understanding the commands below, be sure to read our [quick start guide](/quickstart) and, if necessary, some of the Computer Science 101 sections.
 
 ```cpp
 #include "SpinWearables.h"
@@ -137,7 +137,7 @@ void setup() {
 
 ## Part 2. Persistence of Vision
 
-Our eyes have another imperfection we can take advantage of while programming the SpinWheel: they are rather slow. Consider the example below, where you can select the speed at which a shade of blue and a shade of red switch between each other.
+Our eyes have another imperfection we can take advantage of while programming the SpinWheel: they are rather slow when compared with the speed of electronics! Consider the example below, where you can select the speed at which a shade of blue and a shade of red switch between each other.
 
 <style>
 #povtests {
@@ -200,7 +200,7 @@ getT();
 </script>
 </div>
 
-Since web browsers are not particularly well adapted to this type of rapid color change, the flicker at high speeds is rather unpleasant. However at these speeds, you will start to see purple and the red and blue will become less clearly noticeable. Unlike web browsers, the SpinWheel is up to this task. The following program will cycle between red and blue at variable delays. Experiment with the value for the delay. At what delay do you stop distinguishing the two colors and start seeing only purple?
+Since web browsers are not particularly well adapted to this type of rapid color change, the flicker at high speeds is rather unpleasant. However, as you speed up the color changes, you will start to see purple and the red and blue will become less clearly distinct. Unlike web browsers, the SpinWheel is up to this task. The following program will cycle between red and blue at variable delays. Experiment with the value for the delay. At what delay do you stop distinguishing the two colors and start seeing only purple?
 
 ```cpp
 #include "SpinWearables.h"
@@ -228,11 +228,11 @@ void loop() {
 }
 ```
 
-Right at the point where the red and blue stop being observable on their own, you can perform another experiment that showcases the persistence of vision effect. Instead of keeping the SpinWheel immobile, start shaking it back and forth rapidly. Now the light emitters will be in different locations when they emit red and blue, and this will let you again distinguish the two colors. But once you stop shaking the device, it will once again look purple.
+Right at the point where the red and blue stop being observable on their own, you can perform another experiment that showcases the persistence of vision effect. Instead of keeping the SpinWheel immobile, start shaking it back and forth rapidly. By doing this, the light emitters will be in different locations when they emit either red or blue, and this will let you again distinguish the two colors. Once you stop shaking the device, it will once again look purple.
 
 ![If you move the SpinWheel rapidly in front of your eyes, you will see the purple color separate in two distinct streaks of red and blue.](/images/bookpics/fast_pov_streak.jpg "Picture of a fast-moving SpinWheel")
 
-These two tools--faking rich colors by combining just red, green, and blue and faking a complete static image by very rapidly cycling through incomplete images--are the basis for many technologies, and are tools we’ll keep using as we program the SpinWheel in more complicated ways.
+These two tools -- faking rich colors by combining just red, green, and blue and faking a complete static image by very rapidly cycling through incomplete images -- are the basis for many technologies, and are tools we’ll keep using as we program the SpinWheel in more complicated ways.
 
 ::: further-reading
 To keep exploring, you can try other color combinations! 
