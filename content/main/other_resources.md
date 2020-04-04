@@ -4,6 +4,24 @@ keywords: spinwheel, education, STEM, outreach, science, engineering day, electr
 header-image: /images/behindthescenes/sky_lit_up_device_crop2.jpg
 ---
 
+<div class="row dark">
+<div class="column">
+<p>
+These are our team's favorite educational resources. We use many of them daily, both for leisure and for educational purposes.
+</p>
+<ol>
+<li><a href="#video">Video Channels</a></li>
+<li><a href="#activity">Activities and Organizations</a></li>
+<li><a href="#kits">Kits</a></li>
+<li><a href="#museums">Virtual Museums</a></li>
+<li><a href="#games">Computer Games</a></li>
+<li><a href="#cad">Easy Computer-aided Design Tools</a></li>
+<li><a href="#books">Books</a></li>
+<ol>
+</div>
+</div>
+
+
 <script>
 window.onload = function (){
   var lists = document.querySelectorAll('ul.other_resources');
@@ -55,7 +73,7 @@ ul.other_resources > li > p {
 }
 </style>
 
-<div class="row row-grid">
+<div class="row row-grid" id="video">
 <div class="column column-grid">
 <h2>Video Channels</h2>
 </div>
@@ -72,7 +90,7 @@ ul.other_resources > li > p {
 </div>
 </div>
 
-<div class="row row-grid">
+<div class="row row-grid" id="activity">
 <div class="column column-grid">
 <h2>Activity Lists and Orgs</h2>
 </div>
@@ -89,7 +107,7 @@ ul.other_resources > li > p {
 </div>
 </div>
 
-<div class="row row-grid">
+<div class="row row-grid" id="kits">
 <div class="column column-grid">
 <h2>Kits</h2>
 </div>
@@ -104,7 +122,7 @@ ul.other_resources > li > p {
 </div>
 </div>
 
-<div class="row row-grid">
+<div class="row row-grid" id="museums">
 <div class="column column-grid">
 <h2>Virtual Museums</h2>
 </div>
@@ -116,7 +134,7 @@ ul.other_resources > li > p {
 </div>
 </div>
 
-<div class="row row-grid">
+<div class="row row-grid" id="games">
 <div class="column column-grid">
 <h2>Computer Games</h2>
 </div>
@@ -130,7 +148,7 @@ ul.other_resources > li > p {
 </div>
 </div>
 
-<div class="row row-grid">
+<div class="row row-grid" id="cad">
 <div class="column column-grid">
 <h2>Introductory CAD/Electronics Online Tools</h2>
 </div>
@@ -143,7 +161,7 @@ ul.other_resources > li > p {
 </div>
 </div>
 
-<div class="row row-grid">
+<div class="row row-grid" id="books">
 <div class="column column-grid">
 <h2>Books</h2>
 Read any and every well received  book you can get your hands on. Read them all with a grain of salt. Glean from them advice and elements that resonate with you. No one "expert" has all of the answers. Some are just plain flat out wrong and dangerous, but many others are helpful, and some are just brilliant. You need to trust your own instincts to disregard the bad advice, use the good that pertains to your situation, and be inspired and transformed by the brilliant.
