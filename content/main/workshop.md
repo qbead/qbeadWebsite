@@ -2,7 +2,7 @@
 title: "Virtual Parent Workshop: Inexpensive and Fun STEM Activities"
 keywords: spinwheel, education, STEM, outreach, science, engineering day, electronics, computer science, physics, stem at home, science activitiesience, engineering day, electronics, computer science, physics, parent and educator workshop
 header-image: /images/behindthescenes/sky_lit_up_device_crop2.jpg
-subtitle:  Access the video from our workshop and more links! 
+subtitle:  Access the video from our workshop and some highlights from the Q&A! 
 ---
 
 <div class="row dark-transparent">
@@ -41,7 +41,7 @@ For everyone just tuning in, we've included answers to some of the questions tha
 <h3>What about if I live in a city?</h3>
 <p>One option is to grow things in a window. For instance, one of our participants suggested growing scallions, onions, and other veg with roots that you may have left over from cooking. If you have access to a park, then you can also do most of the activities listed above!</p>
 
-<h3>A great overall advice from the audience!</h3>
+<h3>And definitely keep in mind this piece of advice from our audience!</h3>
 <p>Some of the most important things to do with any of these activities is to have kids write down a prediction (and why they think their prediction is true) then have them try to figure out the “Why” of the results.  If kids are trying to explain what’s happening (writing, talking, drawing), that’s where the learning takes place.</p>
 </div>
 </div>
@@ -49,8 +49,8 @@ For everyone just tuning in, we've included answers to some of the questions tha
 
 <div class="row">
 <div class="column long-text">
-<h2>Questions about the particular demos we used</h2>
-<p>These are just a couple of examples of impromptu questions that were sparked during our demos. The particular details here might not be important for the overall goal of finding great STEM activities, rather they are just a reminder of how everything can be questioned.</p>
+<h2>Questions about the particular demos we chose</h2>
+<p>We chose these to illustrate some of the questions that were sparked during our demos. The specific details here are not important for the overall goal of finding great STEM activities, rather they are just a reminder of how everything can be questioned.</p>
 
 <h3>Why doesn't the dirt just sink in the dish soap and pepper demo?</h3>
 <p>The dirt floats because it is less dense than the water. The soap pushes the dirt away and the water keeps holding it up. </p>
