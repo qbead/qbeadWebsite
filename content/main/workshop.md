@@ -6,12 +6,12 @@ subtitle:  Access the video from our workshop and more links!
 ---
 
 <div class="row dark-transparent">
-<div class="column"><video style="margin:auto;max-width:100%;" poster="/large_files/workshop20200404_snap.jpg" src="/large_files/workshop20200404.mp4" playsinline controls></video></div>
+<div class="column"><video style="margin:auto;max-width:100%;" poster="https://large.spinwearables.com/workshop20200404_snap.png" src="https://large.spinwearables.com/workshop20200404.mp4" playsinline controls></video></div>
 </div>
 
 <div class="row">
 <div class="column long-text">
-<p>Thank you to everyone who tuned in to our first virtual Parent and Educator Program! We hope that you learned something from following along with our demos and are ready to some yourself. You can [download the video here](/large_files/workshop20200404.mp4). If you are looking for more resources, we have a curated list of some of [our favorite videos, activities, and more here](/other_resources)</p>
+<p>Thank you to everyone who tuned in to our first virtual Parent and Educator Program! We hope that you learned something from following along with our demos and are ready to some yourself. You can [download the video here](https://large.spinwearables.com/workshop20200404.mp4). If you are looking for more resources, we have a curated list of some of [our favorite videos, activities, and more here](/other_resources)</p>
 </div>
 </div>
     
