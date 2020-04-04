@@ -3,6 +3,9 @@ title: Basic SpinWheel Commands
 keywords: SpinWheel, arduino, setup
 ---
 
+<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
+<script src='/simspinwheel/simspinwheel.js'></script>
+
 ::: intro-box
 This adventure is an introduction to programming the SpinWheel that will teach you what you need to know to begin customizing the LED lattice however you imagine.
 :::
@@ -13,16 +16,9 @@ If you have never programmed with Arduino before, be sure to read our [quick sta
 ## Turn on all the Large LEDs
 In this section, we will teach you how to control all of the large LEDs together.
 
-```cpp
-code will go here
-```
-
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
-  int t = millis();
 </pre>
 <textarea class="ssw-codeblock">
   SpinWheel.setLargeLEDsUniform(255, 255, 0);
@@ -35,23 +31,53 @@ void loop() {
 
 ## Turn on all the Small LEDs
 In this section, we will teach you how to control all of the small LEDs together.
-```cpp
-essentially the same code will go here but for the small LEDs
-```
+
+<div class="ssw-codecontent" markdown=0>
+<pre class="ssw-codeblock">
+void loop() {
+</pre>
+<textarea class="ssw-codeblock">
+  SpinWheel.setSmallLEDsUniform(255, 255, 0);
+</textarea>
+<pre class="ssw-codeblock">
+  SpinWheel.drawFrame();
+}
+</pre>
+</div>
 
 ## Control a Specific Large LED
 Learn how to turn on just one large LED at a time.
 
-```cpp
-code will go here to light up one large LED
-```
+<div class="ssw-codecontent" markdown=0>
+<pre class="ssw-codeblock">
+void loop() {
+</pre>
+<textarea class="ssw-codeblock">
+  SpinWheel.clearAllLEDs();
+  SpinWheel.setLargeLED(4, 255, 255, 0);
+</textarea>
+<pre class="ssw-codeblock">
+  SpinWheel.drawFrame();
+}
+</pre>
+</div>
 
 ## Control a Specific Small LED
 Learn how to turn on just one small LED at a time.
 
-```cpp
-code will go here to light up one small LED
-```
+<div class="ssw-codecontent" markdown=0>
+<pre class="ssw-codeblock">
+void loop() {
+</pre>
+<textarea class="ssw-codeblock">
+  SpinWheel.clearAllLEDs();
+  SpinWheel.setSmallLED(4, 255, 255, 0);
+</textarea>
+<pre class="ssw-codeblock">
+  SpinWheel.drawFrame();
+}
+</pre>
+</div>
 
 ## Customize Each LED!
 We'll walk you through a more complicated example using what we learned above. Using this knowledge you can control the interface.
