@@ -2,7 +2,7 @@
 title: Our Team
 keywords: spinwheel, education, STEM, outreach, science, engineering day, electronics, computer science, physics
 header-image: /images/behindthescenes/team_2_crop.jpg
-subtitle: We are a group of volunteers with a passion for teaching science and building beautiful things. 
+subtitle: We are a group of volunteers with a passion for teaching science and building beautiful things.
 ---
 
 <div class="row dark">
@@ -16,9 +16,9 @@ Engineers](https://swe.sites.yale.edu/gradswe-0), and in particular, their
 channeled our passion for creating, teaching, and civil service to empower the
 next generation of makers. Through SpinWearables, we hope to reach even more
 students. All of the proceeds will go to funding the outreach events we run,
-providing free materials to students and teachers. 
+providing free materials to students and teachers.
 
-If you want to get in touch or have any questions, email [mail@spinwearables.com](mailto:mail@spinwearables.com). 
+If you want to get in touch or have any questions, email [mail@spinwearables.com](mailto:mail@spinwearables.com).
 
 And to stay up to date about the SpinWheel project, follow us on [Twitter](https://twitter.com/SpinWearables) and [Instagram](https://instagram.com/spinwearables?igshid=1hk2qphff1j1b).
 
@@ -85,7 +85,7 @@ As a kid, [Bridget](/bridget) was always asking "why?" Luckily, her parents put 
 <div>
 <h1>Chris</h1>
 <h2>Neutrino Physics</h2>
-While a graduate student at Yale, Chris was involved with many outreach activities in Yale's Pathways to Science program, leading events for hundreds of students. Chris's research at Yale focused on understanding the nature of the neutrino particle by searching for rare nuclear decays. After finishing his PhD, he now works as a Data Scientist for CarMax, but still remains active in STEM outreach. In his free time, Chris enjoys reading, hiking, and traveling around the world.
+While a graduate student at Yale, [Chris](/chris) was involved with many outreach activities in Yale's Pathways to Science program, leading events for hundreds of students. Chris's research at Yale focused on understanding the nature of the neutrino particle by searching for rare nuclear decays. After finishing his PhD, he now works as a Data Scientist for CarMax, but still remains active in STEM outreach. In his free time, Chris enjoys reading, hiking, and traveling around the world.
 </div>
 </div>
 
@@ -95,7 +95,7 @@ While a graduate student at Yale, Chris was involved with many outreach activiti
 <div>
 <h1>Elise</h1>
 <h2>Computational Bioengineering</h2>
-[Elise](/elise) is a Biomedical Engineering Ph.D. candidate at Yale University, specifically studying biological system dynamics in cells with a focus on signalling pathways in HIV. In high school, she was encouraged in her scientific journey by mentors and teachers who provided key guideposts for STEM success. She is thankful for the strong STEM outreach community at Yale, who strive to inspire the next generation to pursue STEM. 
+[Elise](/elise) is a Biomedical Engineering Ph.D. candidate at Yale University, specifically studying biological system dynamics in cells with a focus on signalling pathways in HIV. In high school, she was encouraged in her scientific journey by mentors and teachers who provided key guideposts for STEM success. She is thankful for the strong STEM outreach community at Yale, who strive to inspire the next generation to pursue STEM.
 </div>
 </div>
 
@@ -152,14 +152,14 @@ designing hands-on outreach materials, including the SpinWheel.
 </div>
 </div>
 </div>
- 
- 
+
+
 <div class="row dark">
 <div class="column long-text light" style="padding:1rem;">
 The SpinWearables team would like to thank the following individuals:
 </div>
 </div>
-  
+
 <div class="row dark">
 <div class="team-member">
 <img src="/images/teampics/jack_s.jpg">
@@ -184,10 +184,7 @@ Passionate about art, Mariya acquired a major in architecture and started her st
 <div>
 <h1>Tess</h1>
 <h2>Sustainable Structural Engineering</h2>
-Tess is currently a PhD student in Stanford's Civil and Environmental Engineering Department, and she's passionate about making the buildings we live and work in more sustainable through her research. Female mentors, such as her older sister, have played a large role in her interest in engineering, and so she enjoys inspiring younger girls to pursue careers in STEM. She also loves opportunities to use her graphic design skills for good causes, such as through Stanford's Graduate Society of Women Engineers and the SpinWheel! 
+Tess is currently a PhD student in Stanford's Civil and Environmental Engineering Department, and she's passionate about making the buildings we live and work in more sustainable through her research. Female mentors, such as her older sister, have played a large role in her interest in engineering, and so she enjoys inspiring younger girls to pursue careers in STEM. She also loves opportunities to use her graphic design skills for good causes, such as through Stanford's Graduate Society of Women Engineers and the SpinWheel!
 </div>
 </div>
 </div>
-
-
-
