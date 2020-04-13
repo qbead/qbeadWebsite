@@ -99,6 +99,7 @@ ul.other_resources > li > p {
 <li><img src=""> <p><a href="https://swe.org/k-12-outreach/youth-programs/">Society of Women Engineers - youth programs</a></p></li>
 <li><img src=""> <p><a href="https://girlswhocode.com/code-at-home/">Girls Who Code</a></p></li>
 <li><img src=""> <p><a href="https://stemactivitiesforkids.com/">STEM Activities Repository</a></p></li>
+<li><img src=""> <p><a href="https://www.teachengineering.org/k12engineering/what">Teach Engineering Repository</a></p></li>
 <li><img src=""> <p><a href="https://engineeringday.com">Engineering Day</a></p></li>
 <li><img src=""> <p><a href="https://www.acs.org/content/acs/en/education/students/highschool/chemistryclubs/activities/food-and-chemistry.html">American Chemical Society's Food and Chemistry</a></p></li>
 <li><img src=""> <p><a href="https://www.geekmomprojects.com/">Geek Mom Projects</a></p></li>
