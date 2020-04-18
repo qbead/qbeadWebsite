@@ -3,6 +3,33 @@ title: Dancing Companion
 keywords: dancing, kinematics, color, light, programming
 header-image: /images/banners/dancer_color.png 
 ---
+
+<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
+<script src='/simspinwheel/simspinwheel.js'></script>
+
+
+# Test of motion simulation
+
+After you click `Run`, grab the SpinWheel and shake it.
+
+<div class="ssw-codecontent" markdown=0>
+<pre class="ssw-codeblock">
+void loop() {
+  SpinWheel.readIMU();
+  float ax = abs(SpinWheel.ax)*100;
+  float ay = abs(SpinWheel.ay)*100;
+</pre>
+<textarea class="ssw-codeblock">
+  SpinWheel.setLargeLEDsUniform(ax, ay, 0);
+</textarea>
+<pre class="ssw-codeblock">
+  SpinWheel.drawFrame();
+}
+</pre>
+</div>
+
+# Draft
+
 Dancing Companion
 
 Intro bubble
