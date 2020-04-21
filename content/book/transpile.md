@@ -22,7 +22,7 @@ to help us reach more curious young minds and to get the device and teaching
 kit showcased in this lesson.
 
 ::: intro-box
-We built the [SpinWheel](https://www.kickstarter.com/projects/spinwheel/447670470) and its [engaging aesthetics](https://spinwearables.com) around the Arduino platform because of its low bariers to entry. We also want our online learning resources to be interactive, in the style of [Explorable Explanations](https://explorabl.es/), as this significantly improves learning outcomes. Thus, we needed to find a way to "compile" example C code in our webpages and show how it would affect the physical device. Moreover, the device has motion sensors which is central to many of the lessons we want to teach, hence the need to find a way to simulate that in a web page as well. Read on to see our misadventures into hacking together the most fragile C-to-Javascript transpiler: 100 lines of silly code that open up great pedagogical opportunities.
+We built the [SpinWheel](https://www.kickstarter.com/projects/spinwheel/447670470) and its [engaging aesthetics](https://spinwearables.com) around the Arduino platform because of its low barier to entry. We also want our online learning resources to be interactive, in the style of [Explorable Explanations](https://explorabl.es/), as this significantly improves learning outcomes. Thus, we needed to find a way to "compile" example C code in our webpages and show how it would affect the physical device. Since the device has motion sensors which are central to many of the lessons we want to teach, we sought a way to simulate that in a web page as well. Read on to see our misadventures in hacking together the most fragile C-to-Javascript transpiler: 100 lines of silly code that open up great pedagogical opportunities.
 :::
 
 ::: warning
@@ -35,11 +35,11 @@ This is the SpinWheel:
 
 <video src="/images/bookpics/preloaded_tilt3.mp4" muted autoplay playsinline loop></video>
 
-And this is the result of a [lesson](/stepcounter) of how to turn this wearable keychanin/jewelry into a step counter. The large LEDs respond to the current motion, while the small LEDs accumulate the total motion, hence counting "steps".
+And this is the result of a [lesson](/stepcounter) which teaches how to turn this wearable keychanin/jewelry into a step counter. The large LEDs respond to the current motion, while the small LEDs accumulate the total motion, hence counting "steps".
 
 <video src="/images/bookpics/stepcounter_final.mp4" muted autoplay playsinline loop></video>
 
-The C++ code to do that is fairly simple (or it would be after you go through our lessons). We can show it here in its entirety, but even such a short piece of code can look intimidating to students. Instead, let us explore how we can present it in an **interactive** fashion inside of the browser.
+The C++ code to do that is fairly simple (or it would be after you go through our [lessons](/book)). We can show it here in its entirety, but even such a short piece of code can look intimidating to those new to coding. Instead, let us explore how we can present it in an **interactive** fashion inside of the browser.
 
 ```c++
 float total_motion = 0;
@@ -72,16 +72,16 @@ void loop() {
 Given the aforementioned constrains, we have to find a way to compile C++ code inside of the browser and then let it run, mimicking this wearable embedded device. Here were a few ideas we iterated through:
 
 1. Maybe we can send the code to a backend server which will compile it to a form executable in the browser ([Emscripten](https://emscripten.org/) maybe?), then send it back to the page and hook it up to a mock rendering of the SpinWheel...
-    - Definitely not something a group of volunteers with crazy schedules trying to prepare for their Thesis defenses want to spend weeks on!
-    - Just the idea of sandboxing the server is already unpleasant...
-    - And how do we hook in the motion sensor?
+    - Definitely not something a group of volunteers with crazy schedules trying to prepare for their thesis defenses want to spend weeks on!
+    - Just the idea of sandboxing the server is unpleasant...
+    - And how do we incorporate the motion sensor?
     - Reporting compilation errors back to students!? Terrible idea that will immediately turn them away from programming!
 2. Have a much more restricted set of examples, where students can modify only a single variable and the rest of the code is rendered and immutable. The actual simulation of the device will then be a completely separate piece of Javascript code that we write case-by-case.
     - So much manual labor involved for such a limited and borderline boring experience...
 3. Use regex to turn the C++ code into Javascript code!
     - Will we be able to live with the shame of such a hackish solution?
 
-Yes, we will find a way to live with the shame. We will incorporate some of 2 as well, so that the fragility of our "transpiler" is not too obvious. A silver lining is that separation between editable code and pre-rendered code will guide the attention of the student to the part of the code that is most important to the concept under study.
+Yes, we will find a way to live with the shame. We will incorporate some of option 2 as well, so that the fragility of our "transpiler" is not too obvious. A silver lining of this approach is that separation between editable code and pre-rendered code will guide the attention of the student to the part of the code that is most important to the concept under study.
 
 Without further ado, here is an example of what a humble version of the final result would look like. Click on `Run`! Does it do what you would expect given the code?
 
@@ -103,7 +103,7 @@ void loop() {
 </pre>
 </div>
 
-Play a bit with the modifiable part. It is still fragile, with many ways to break it, but it is sufficient for guided explorations. We will also explain the `Debug` button shortly.
+Play a bit with the modifiable part. It is still fragile, with many ways to break it, but it is sufficient for guided explorations. For an example of how it can be integrated into a lesson, check out our [biology of sight activity](/sight). If you are wondering about the `Debug` button, don't worry, we will also explain it shortly.
 
 
 ## Editable vs Immutable Parts of the Examples
@@ -162,7 +162,7 @@ And we place all these `small-led` and `large-led` `div`s using css.
 ⋮
 ```
 
-Finally, we just use Javascript to modify them. Each `<div class="ssw-codecontent">` has its own `SpinWheel` Javascript class that has methods with the same names as the C++ methods, so that the "transpiler" has an easy time hooking up to the virtual SpinWheel. For example, here is the Javascript version of the `drawFrame()`, without any painful bit-fidling that the hardware version required. We also include the class constructor, as it is responsible for acquiring handles for all the `div`s whose colors we will be changing (the virtual LEDs)
+Finally, we just use Javascript to modify them. Each `<div class="ssw-codecontent">` has its own `SpinWheel` Javascript class that has methods with the same names as the C++ methods, so that the "transpiler" has an easy time hooking up to the virtual SpinWheel. For example, here is the Javascript version of the `drawFrame()`, without any painful bit-fiddling that the hardware version required. We also include the class constructor, as it is responsible for acquiring handles for all the `div`s whose colors we will be changing (the virtual LEDs).
 
 ```javascript
 constructor(container) {
@@ -195,7 +195,7 @@ base_code = base_code.replace(RegExp('(?:[^\\w])('+pair[0]+')(?:[^\\w])','g'),
                               x=>x.replace(pair[0], pair[1]));
 ```
 
-`pair` is just the pair of keywords that we need to translate: the C++ one and the Javascript one. For instance one such pair would be `['int', 'var']`. Obviously, we are loosing some fidelity in the translation, especially around data types, and we can only use C++ constructs that close to the Javascript syntax, but for a well-controlled educational snippet of code that is all we need. A big part of engineering is to know when to not overengineer your solution.
+`pair` is just the pair of keywords that we need to translate: the C++ one and the Javascript one. For instance one such pair would be `['int', 'var']`. Obviously, we are losing some fidelity in the translation, especially around data types, and we can only use C++ constructs close to the Javascript syntax, but for a well-controlled educational snippet of code that is all we need. A big part of engineering is to know when to not overengineer your solution.
 
 The regex needs to be a bit more carefully designed, as we want to turn `int intensity` into `var intensity`, not `var varensity` which a simple replace would have given us. We use non-capturing groups for that. Consider the `(?:[^\w])` piece in `(?:[^\w])(keyword)(?:[^\w])`. It matches everything that is not (`^`) a word-character (`\w`), i.e. not `a-zA-Z0-9_`. However, it does not capture it due to the `?:` prefix for the group. Thus, this regex captures only `keyword` as long as it is not a substring in another word. Now we just need to build up our dictionary of keywords...
 
