@@ -18,11 +18,11 @@ is a small Arduino-compatible sensor-enabled wearable device, meant to be used
 for teaching physics and computer science through an artistic medium. You can
 support our non-profit
 [Kickstarter](https://www.kickstarter.com/projects/spinwheel/447670470)
-to help us reach more curious young minds and to get the device and teaching
+to help us reach more curious young minds and to purchase the device and teaching
 kit showcased in this lesson.
 
 ::: intro-box
-We built the [SpinWheel](https://www.kickstarter.com/projects/spinwheel/447670470) and its [engaging aesthetics](https://spinwearables.com) around the Arduino platform because of its low barier to entry. We also want our online learning resources to be interactive, in the style of [Explorable Explanations](https://explorabl.es/), as this significantly improves learning outcomes. Thus, we needed to find a way to "compile" example C code in our webpages and show how it would affect the physical device. Since the device has motion sensors which are central to many of the lessons we want to teach, we sought a way to simulate that in a web page as well. Read on to see our misadventures in hacking together the most fragile C-to-Javascript transpiler: 100 lines of silly code that open up great pedagogical opportunities.
+We built the [SpinWheel](https://www.kickstarter.com/projects/spinwheel/447670470) and its [engaging aesthetics](https://spinwearables.com) around the Arduino platform because of its low barrier to entry. We also wanted our online learning resources to be interactive, in the style of [Explorable Explanations](https://explorabl.es/), as this significantly improves learning outcomes. Thus, we needed to find a way to "compile" example C code in our webpages and show how changes to the code would affect the physical device. Since the SpinWheel contains motion sensors which are central to many of the lessons we want to teach, we sought a way to simulate that in a web page as well. Read on to see our misadventures in hacking together the most fragile C-to-Javascript transpiler: 100 lines of silly code that open up great pedagogical opportunities.
 :::
 
 ::: warning
@@ -35,11 +35,11 @@ This is the SpinWheel:
 
 <video src="/images/bookpics/preloaded_tilt3.mp4" muted autoplay playsinline loop></video>
 
-And this is the result of a [lesson](/stepcounter) which teaches how to turn this wearable keychanin/jewelry into a step counter. The large LEDs respond to the current motion, while the small LEDs accumulate the total motion, hence counting "steps".
+And this is the result of a [lesson](/stepcounter) which teaches how to turn this wearable keychain/jewelry into a step counter. The large LEDs respond to the current motion, while the small LEDs accumulate the total motion, hence counting "steps".
 
 <video src="/images/bookpics/stepcounter_final.mp4" muted autoplay playsinline loop></video>
 
-The C++ code to do that is fairly simple (or it would be after you go through our [lessons](/book)). We can show it here in its entirety, but even such a short piece of code can look intimidating to those new to coding. Instead, let us explore how we can present it in an **interactive** fashion inside of the browser.
+The C++ code to do this is fairly simple (or it will be after you go through our [lessons](/book)). Instead of focusing on the code here, we will explore how we can present it in an **interactive** fashion inside of the web browser.
 
 ```c++
 float total_motion = 0;
@@ -69,7 +69,7 @@ void loop() {
 
 ## Scoping the "Transpiler" Project
 
-Given the aforementioned constrains, we have to find a way to compile C++ code inside of the browser and then let it run, mimicking this wearable embedded device. Here were a few ideas we iterated through:
+Given the aforementioned constraints, we had to find a way to compile C++ code inside of the browser and then let it run, mimicking the wearable device. Here were a few ideas we iterated through:
 
 1. Maybe we can send the code to a backend server which will compile it to a form executable in the browser ([Emscripten](https://emscripten.org/) maybe?), then send it back to the page and hook it up to a mock rendering of the SpinWheel...
     - Definitely not something a group of volunteers with crazy schedules trying to prepare for their thesis defenses want to spend weeks on!
@@ -108,7 +108,7 @@ Play a bit with the modifiable part. It is still fragile, with many ways to brea
 
 ## Editable vs Immutable Parts of the Examples
 
-As mentioned, we will let the students modify only small parts of the "C++" code. We do that by writing parts of the code snippets in preformatted `div`s, while the editable part is in `textarea` tags. The **entirety** of html or markdown that the lesson writer needs to write for the above example is this:
+As mentioned, we will let the students modify only small parts of the "C++" code. We do this by writing parts of the code snippets in preformatted `div`s, while the editable part is in `textarea` tags. The **entirety** of html or markdown that the lesson writer needs to write for the above example is this:
 
 ```html
 <div class="ssw-codecontent" markdown=0>
@@ -195,7 +195,7 @@ base_code = base_code.replace(RegExp('(?:[^\\w])('+pair[0]+')(?:[^\\w])','g'),
                               x=>x.replace(pair[0], pair[1]));
 ```
 
-`pair` is just the pair of keywords that we need to translate: the C++ one and the Javascript one. For instance one such pair would be `['int', 'var']`. Obviously, we are losing some fidelity in the translation, especially around data types, and we can only use C++ constructs close to the Javascript syntax, but for a well-controlled educational snippet of code that is all we need. A big part of engineering is to know when to not overengineer your solution.
+`pair` is just the pair of keywords that we need to translate: the C++ one and the Javascript one. For instance one such pair would be `['int', 'var']`. Obviously, we are losing some fidelity in the translation, especially around data types, and we can only use C++ constructs close to the Javascript syntax, but for a well-controlled educational snippet of code that is all we need. A big part of engineering is to know when to not over engineer your solution.
 
 The regex needs to be a bit more carefully designed, as we want to turn `int intensity` into `var intensity`, not `var varensity` which a simple replace would have given us. We use non-capturing groups for that. Consider the `(?:[^\w])` piece in `(?:[^\w])(keyword)(?:[^\w])`. It matches everything that is not (`^`) a word-character (`\w`), i.e. not `a-zA-Z0-9_`. However, it does not capture it due to the `?:` prefix for the group. Thus, this regex captures only `keyword` as long as it is not a substring in another word. Now we just need to build up our dictionary of keywords...
 
@@ -237,7 +237,7 @@ void loop() {
 </pre>
 </div>
 
-We still need to figure out how to present the colors in a more noticeable fashion, but **your virtual SpinWheel lit up with colors infered from your virtual motionsensor**. This also ended being embarrassingly simple to implement. We just added a `onmousemove` handler to the `div` containing the image of the SpinWheel. Then we calculate the numerical second derivative of the positions in the `_ddx` and `_ddy` properties of the class. Note that we are also using an exponential decay filter `_ddx = 0.1*(dx-_dx)/dt + 0.9*_ddx` in order to smooth out the signal.
+We still need to figure out how to present the colors in a more noticeable fashion, but **your virtual SpinWheel lit up with colors infered from your virtual motion sensor**. This also ended being embarrassingly simple to implement. We just added a `onmousemove` handler to the `div` containing the image of the SpinWheel. Then we calculate the numerical second derivative of the positions in the `_ddx` and `_ddy` properties of the class. Note that we are also using an exponential decay filter `_ddx = 0.1*(dx-_dx)/dt + 0.9*_ddx` in order to smooth out the signal.
 
 ```javascript
 function elementDrag(e) {
