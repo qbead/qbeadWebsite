@@ -18,7 +18,7 @@ is a small Arduino-compatible sensor-enabled wearable device, meant to be used
 for teaching physics and computer science through an artistic medium. You can
 support our non-profit
 [Kickstarter](https://www.kickstarter.com/projects/spinwheel/447670470)
-to help us reach more curious young minds and to purchase the device and teaching
+to help us reach more curious young minds and to get the device and teaching
 kit showcased in this lesson.
 
 ::: intro-box
@@ -39,7 +39,7 @@ And this is the result of a [lesson](/stepcounter) which teaches how to turn thi
 
 <video src="/images/bookpics/stepcounter_final.mp4" muted autoplay playsinline loop></video>
 
-The C++ code to do this is fairly simple (or it will be after you go through our [lessons](/book)). Instead of focusing on the code here, we will explore how we can present it in an **interactive** fashion inside of the web browser.
+The C++ code to do this is fairly simple (or it will be after you go through our [lessons](/book)). We can show it here in its entirety, but even such a short piece of code can look intimidating to those new to coding. Instead, let us explore how we can present it in an **interactive** fashion inside of the browser.
 
 ```c++
 float total_motion = 0;
@@ -69,7 +69,7 @@ void loop() {
 
 ## Scoping the "Transpiler" Project
 
-Given the aforementioned constraints, we had to find a way to compile C++ code inside of the browser and then let it run, mimicking the wearable device. Here were a few ideas we iterated through:
+Given the aforementioned constraints, we have to find a way to compile C++ code inside of the browser and then let it run, mimicking the wearable device. Here were a few ideas we iterated through:
 
 1. Maybe we can send the code to a backend server which will compile it to a form executable in the browser ([Emscripten](https://emscripten.org/) maybe?), then send it back to the page and hook it up to a mock rendering of the SpinWheel...
     - Definitely not something a group of volunteers with crazy schedules trying to prepare for their thesis defenses want to spend weeks on!
@@ -103,7 +103,7 @@ void loop() {
 </pre>
 </div>
 
-Play a bit with the modifiable part. It is still fragile, with many ways to break it, but it is sufficient for guided explorations. For an example of how it can be integrated into a lesson, check out our [biology of sight activity](/sight). If you are wondering about the `Debug` button, don't worry, we will also explain it shortly.
+Play a bit with the modifiable part. It is still fragile, with many ways to break it, but it is sufficient for guided explorations. We will also explain the `Debug` button shortly.
 
 
 ## Editable vs Immutable Parts of the Examples
