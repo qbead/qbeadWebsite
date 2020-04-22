@@ -1,5 +1,5 @@
 ---
-title: Turning Code Snippets from C to Javascript for In-page Demos
+title: C++ to Javascript translation for interactive Arduino webpage lessons
 keywords: transpile, javascript, C, emulate, simulate
 header-video: /images/banners/linewheel_crossfade.mp4
 ---
@@ -237,7 +237,7 @@ void loop() {
 </pre>
 </div>
 
-We still need to figure out how to present the colors in a more noticeable fashion, but **your virtual SpinWheel lit up with colors infered from your virtual motion sensor**. This also ended being embarrassingly simple to implement. We just added a `onmousemove` handler to the `div` containing the image of the SpinWheel. Then we calculate the numerical second derivative of the positions in the `_ddx` and `_ddy` properties of the class. Note that we are also using an exponential decay filter `_ddx = 0.1*(dx-_dx)/dt + 0.9*_ddx` in order to smooth out the signal.
+We still need to figure out how to present the colors in a more noticeable fashion, but **your virtual SpinWheel lits up with colors infered from your virtual motion sensor**. This also ended being embarrassingly simple to implement. We just added a `onmousemove` handler to the `div` containing the image of the SpinWheel. Then we calculate the numerical second derivative of the positions in the `_ddx` and `_ddy` properties of the class. Note that we are also using an exponential decay filter `_ddx = 0.1*(dx-_dx)/dt + 0.9*_ddx` in order to smooth out the signal.
 
 ```javascript
 function elementDrag(e) {
