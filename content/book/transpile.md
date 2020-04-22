@@ -13,11 +13,11 @@ header-video: /images/banners/linewheel_crossfade.mp4
 </style>
 
 This lesson is part of the SpinWheel series. The
-[SpinWheel](https://www.kickstarter.com/projects/spinwheel/447670470)
+[SpinWheel](https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit?ref=skiphq)
 is a small Arduino-compatible sensor-enabled wearable device, meant to be used
 for teaching physics and computer science through an artistic medium. You can
 support our non-profit
-[Kickstarter](https://www.kickstarter.com/projects/spinwheel/447670470)
+[Kickstarter](https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit?ref=skiphq)
 to help us reach more curious young minds and to get the device and teaching
 kit showcased in this lesson.
 
@@ -268,7 +268,7 @@ Now all we have to do is flesh out our Javascript `SpinWheel` class such that it
 We would be happy to hear your feedback on this little hack of ours. Feel free to contact us at `mail@spinwearables.com`! And consider supporting our kickstarter.
 
 
-<a href="https://www.kickstarter.com/projects/spinwheel/447670470">
+<a href="https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit?ref=skiphq">
 <figure><img src="/images/kickstarter_support.png"></figure><figcaption>We are trying to bring similar resources, from the middle-school level to the undergraduate level, to more curious minds. Supporting our non-profit Kickstarter would greatly help us.</figcaption>
 </a>
  
