@@ -191,13 +191,13 @@ The `_ssw_lLEDdiv` array contains the handles for all `div`s, while the `_ssw_lL
 It is embarrassingly simple, but quite effective:
 
 ```javascript
-base_code = base_code.replace(RegExp('(?:[^\\w])('+pair[0]+')(?:[^\\w])','g'),
-                              x=>x.replace(pair[0], pair[1]));
+base_code = base_code.replace(RegExp('\\b'+pair[0]+'\\b','g'),
+                              pair[1]);
 ```
 
 `pair` is just the pair of keywords that we need to translate: the C++ one and the Javascript one. For instance one such pair would be `['int', 'var']`. Obviously, we are losing some fidelity in the translation, especially around data types, and we can only use C++ constructs close to the Javascript syntax, but for a well-controlled educational snippet of code that is all we need. A big part of engineering is to know when to not over engineer your solution.
 
-The regex needs to be a bit more carefully designed, as we want to turn `int intensity` into `var intensity`, not `var varensity` which a simple replace would have given us. We use non-capturing groups for that. Consider the `(?:[^\w])` piece in `(?:[^\w])(keyword)(?:[^\w])`. It matches everything that is not (`^`) a word-character (`\w`), i.e. not `a-zA-Z0-9_`. However, it does not capture it due to the `?:` prefix for the group. Thus, this regex captures only `keyword` as long as it is not a substring in another word. Now we just need to build up our dictionary of keywords...
+The regex needs to be a bit more carefully designed, but for the moment it suffices. E.g. we want to turn `int intensity` into `var intensity`, not `var varensity` which a simple replace would have given us. To do that, the `\b` piece in `\bkeyword\b` matches everything that is not a word-character, i.e. not `a-zA-Z0-9_`.
 
 And we need to be a bit careful how we call that `loop` function - we need a timed callback, because a busy loop would cause the webpage to hang. The gist of our solutions is:
 
