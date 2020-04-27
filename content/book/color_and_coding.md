@@ -5,9 +5,7 @@ header-image: /images/banners/colors_and_eye.png
 ---
 
 ::: intro-box
-**Welcome to the Colors and Coding Workshop!**
-
-Color mixing works differently if we are working with paint or LEDs. This workshop will give you a chance to see just how, as well as learn more about how your eye works! The first part will explore the phenomenon of "persistence of vision." Then we'll talk more about how our eyes perceive color. Finally, using a simulator you can run directly in your internet browser, you will be able to experiment with the code necessary for controlling the color of virtual LEDs. 
+Color mixing works differently if we are working with paint or LEDs. This short activity will give you a chance to see just how, as well as learn more about how your eye works! The first part will explore the phenomenon of "persistence of vision." Then we'll talk more about how our eyes perceive color. Finally, using a simulator you can run directly in your internet browser, you will be able to experiment with the code necessary for controlling the color of virtual LEDs. 
 
 :::
 
