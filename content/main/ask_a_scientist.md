@@ -33,7 +33,7 @@ Tiny organisms are all around us whether we are inside or outside and can affect
 
 <div class="row dark">
 <div class="column long-text">
-What’s the matter with antimatter? [Sam](/sam), a PhD student in particle physics at Yale, talks about matter, different forms of radiation, and how her research in nuclear physics is helping us answer questions about the early universe.
+What’s the matter with antimatter? [Sam](/samantha), a PhD student in particle physics at Yale, talks about matter, different forms of radiation, and how her research in nuclear physics is helping us answer questions about the early universe.
 </div>
 </div>
 
