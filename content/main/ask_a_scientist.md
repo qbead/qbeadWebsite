@@ -13,7 +13,7 @@ subtitle:  Access the videos of each of our scientists and some highlights from 
 
 <div class="row dark">
 <div class="column long-text">
-Can a cell glow green? Learn all about microscopes, fluorescence and how these glowing cells are leading to cures for viruses like HIV. Watch the below clip from Elise.
+Can a cell glow green? Learn all about microscopes, fluorescence and how these glowing cells are leading to cures for viruses like HIV. Watch the below clip from [Elise](/elise), a PhD student in biomedical engineering at Yale.
 </div>
 </div>
 
@@ -23,7 +23,7 @@ Can a cell glow green? Learn all about microscopes, fluorescence and how these g
 
 <div class="row dark">
 <div class="column long-text">
-Tiny organisms are all around us whether we are inside or outside and can affect our health. Listen below to Bridget explain more about the microbes that can be found in our homes and how environmental engineers are studying them to design healthier buildings and safer drinking water treatment processes.
+Tiny organisms are all around us whether we are inside or outside and can affect our health. Listen below to [Bridget](/bridget), a researcher in environmental engineering at the University of Michigan, explain more about the microbes that can be found in our homes and how environmental engineers are studying them to design healthier buildings and safer drinking water treatment processes.
 </div>
 </div>
 
@@ -33,7 +33,7 @@ Tiny organisms are all around us whether we are inside or outside and can affect
 
 <div class="row dark">
 <div class="column long-text">
-What’s the matter with antimatter? Sam talks about matter, different forms of radiation, and how her research in nuclear physics is helping us answer questions about the early universe.
+What’s the matter with antimatter? [Sam](/sam), a PhD student in particle physics at Yale, talks about matter, different forms of radiation, and how her research in nuclear physics is helping us answer questions about the early universe.
 </div>
 </div>
 
