@@ -15,13 +15,13 @@ subtitle: Children have the natural <em>curiosity</em> and <br> <em>capacity</em
 <p>**Introducing the SpinWheel!** </p>
 <p>A small, colorful, programmable, wearable kit to facilitate student exploration of physics, engineering, and computer science.</p> 
 <p>With the programs that come pre-loaded on the device, it can be immediately worn as jewelry or sported as a keychain. With help from our educational guide, it can be programmed to be a compass, step-counter, and more.</p>
+<p>All proceeds will go to the science outreach efforts of the Yale graduate student section of the Society of Women Engineers.</p>
 </div>
 </div>
     
 <div class="row">
 <div class="column large-text">
-We will launch the SpinWheel on Kickstarter for a run of a 1000 units. All proceeds will go to the science outreach efforts
-of the Yale graduate student section of the Society of Women Engineers.
+We have successfully funded a first manufacturing run of the SpinWheel on Kickstarter. Thank you to all of our many backers, we wouldn't have been successful without you! 
 </div>
 <div class="column column-long"><img src="/images/for_parents/testing_sight.jpg"></div>
 </div>
@@ -29,7 +29,7 @@ of the Yale graduate student section of the Society of Women Engineers.
 <div class="row row-small-reverse">
 <div class="column column-long"><img src="/images/tree_keychain.jpg"></div>
 <div class="column large-text">
-The crowdfunding campaign will be **launched March 16th**. The device is fully built and tested. We just need to raise enough resources for a manufacturing run.
+Now that our crowdfunding campaign is over, we just need to manufacture the SpinWheels and finish crafting the educational materials. The device is fully built and tested. We can't wait to get it into our backers' hands! 
 </div>
 </div>
 
@@ -52,9 +52,9 @@ The crowdfunding campaign will be **launched March 16th**. The device is fully b
 }
 </style>
 <div id="kickstarter">
-<p id="signup-form"><strong>We are live on Kickstarter!</strong></p>    
-<p>You can follow us for updates on the project or support us by donating or purchasing the SpinWheel.</p>
-<a href="https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit" class="round-button">Take me to the Kickstarter page!</a>
+<p id="signup-form"><strong>Our crowdfunding campaign is now over.</strong></p>    
+<p>However, we have a limited number of SpinWheels available for order while supplies last. Email [mail@spinwearables.com](mailto:mail@spinwearables.com) for more information. You can follow us for updates on the project.</p>
+<a href="https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit" class="round-button">Learn more about the Kickstarter campaign</a>
 <p><strong>You can also follow us on:</strong></p>
 <p><strong>[Twitter](https://twitter.com/SpinWearables) and [Instagram](https://instagram.com/spinwearables?igshid=1hk2qphff1j1b)</strong></p>
 </div>
