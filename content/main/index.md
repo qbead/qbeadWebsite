@@ -51,7 +51,7 @@ Now that our crowdfunding campaign is over, we just need to manufacture the Spin
   text-decoration: none;
 }
 </style>
-<div>
+<div id="kickstarter">
 <p><strong>Our crowdfunding campaign is now over.</strong></p>    
 <p>However, we have a limited number of SpinWheels available for order [from our store](https://store.spinwearables.com/) while supplies last. You can follow us for updates on the project.</p>
 <a href="https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit" class="round-button">The Kickstarter campaign</a>
