@@ -18,7 +18,7 @@ Can a cell glow green? Learn all about microscopes, fluorescence and how these g
 </div>
 
 <div class="row dark-transparent">
-<div class="column"><video style="margin:auto;max-width:100%;" poster="https://large.spinwearables.com/askascientist20200428_elise.png" src="https://large.spinwearables.com/askascientist20200428_elise.mp4" playsinline controls></video></div>
+<div class="column"><video style="margin:auto;max-width:100%;" poster="https://large.spinwearables.com/askascientist20200428_elise.png" src="https://large.spinwearables.com/askascientist20200428_elise.mp4" playsinline controls><track default kind="captions" srclang="en" src="https://large.spinwearables.com/askascientist20200428_elise.vtt"/></video></div>
 </div>
 
 <div class="row dark">
