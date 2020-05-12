@@ -28,7 +28,7 @@ Tiny organisms are all around us whether we are inside or outside and can affect
 </div>
 
 <div class="row dark-transparent">
-<div class="column"><video style="margin:auto;max-width:100%;" poster="https://large.spinwearables.com/askascientist20200428_bridget.png" src="https://large.spinwearables.com/askascientist20200428_bridget.mp4" playsinline controls></video></div>
+<div class="column"><video crossorigin style="margin:auto;max-width:100%;" poster="https://large.spinwearables.com/askascientist20200428_bridget.png" src="https://large.spinwearables.com/askascientist20200428_bridget.mp4" playsinline controls><track default kind="captions" srclang="en" label="On" src="https://large.spinwearables.com/askascientist20200428_bridget.vtt"/></video></div>
 </div>
 
 <div class="row dark">
