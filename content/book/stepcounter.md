@@ -16,6 +16,8 @@ Here we will see how to put these features together to make our own custom step 
 
 To start, plug in the SpinWheel to your computer and open up an "empty" sketch in the Arduino software. If you need help remembering how to do this, you can get a recap of how to connect your SpinWheel to your computer in our ["Quick Start Guide"](/quickstart).
 
+## Tabula Rasa
+
 We will build our Step Counter program in this empty sketch. A good first step is to write some simple test code that just prints a few messages, confirming that the device is not broken. For instance, copy the following code that repeatedly sends the message "I am working!" to the computer to which the SpinWheel is attached. As always, we will try to add comments to the code, so that the purpose of each line is explained.
 
 ```cpp
@@ -34,6 +36,8 @@ void loop() {
   Serial.println("I am working!"); 
 }
 ```
+
+## Measuring Motion
 
 Now we can begin to add useful functionality to our sketch.
 The first step is to ensure that the SpinWheel can measure something related to the motion.
@@ -84,6 +88,8 @@ void loop() {
 
 You might have noticed that we are only detecting motion; we are not actually counting steps yet. Since writing the code that turns the SpinWheel into a step counter is complicated, it is helpful to break it up into less complicated steps. Through programming the SpinWheel, we will help you learn how to split a big problem into small pieces for yourself. We hope you will find this skill useful not only when programming!
 
+## Displaying Motion
+
 Our next task is to change the SpinWheel's LEDs based on this motion data. Having visual feedback at each stage of our work makes it easier to detect errors in our code. We will use the `setLargeLEDsUniform` function to turn all 8 of the large LEDs on at the same time. We will use an equal mixture of red, green, and blue, in order to make them light up in white.
 
 ::: further-reading
@@ -130,6 +136,8 @@ void loop() {
   Serial.println();
 }
 ```
+
+## Counting Steps
 
 Finally, we can work on our goal: using the SpinWheel to display all of our detected motion in order to show how much we have moved over time. We will simply add up the values for "kinematic_acceleration". For this we don't have to be particularly precise: we just want one number that contains some information about the total motion we have exerted. We can call that variable `total_motion` and each time we detect motion we update it with `total_motion = total_motion + conversion_factor * kinematic_acceleration`. We introduced the small number `conversion_factor` so that we keep the value of `total_motion` growing slowly.
 
@@ -179,6 +187,10 @@ You might need to experiment with the value of `conversion_factor` in order to m
 ::: further-reading
 Other interesting features would be to show different colors when the detected acceleration is too small to be counted. Moreover, you can use the colors of the small LEDs to give more information.
 :::
+
+## Virtual SpinWheel
+
+You can use this simulation of a SpinWheel to play with the code without uploading it to a physical device. After clicking "Run", you can grab the image of the SpinWheel and shake it to have the virtual device respond to that motion.
 
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
 <script src='/simspinwheel/simspinwheel.js'></script>
