@@ -5,14 +5,12 @@ header-image: /images/banners/stepcounter.png
 ---
 
 ::: intro-box
-In this adventure, you’ll learn how to use the motion sensor to turn the SpinWheel into a StepCounter.
-:::
-
 A step counter needs to detect motion, add up each time motion is detected, and somehow display the cummulative value. The SpinWheel has a motion sensor that can deal with the first task, a small controller (computer) that can perform the addition, and a number of LEDs that can be used as a display. Here we will see how to put these features together to make our own custom step counter.
+:::
 
 To start, plug in the SpinWheel to your computer and open up an "empty" sketch in the Arduino software. If you need help remembering how to do this, you can get a recap of how to connect your SpinWheel to your computer in our ["Quick Start Guide"](/quickstart).
 
-We will build our Step Counter program in this empty sketch. First, copy the following into that empty sketch:
+We will build our Step Counter program in this empty sketch. A good first step is to write some simple test code that does not do anything particularly useful, but prints a few messages, confirming that the device is not broken. For instance, copy the following code that simply repeatedly sends the message "I am working!" to the computer to which the SpinWheel is attached. As always, we will try to add comments to the code, so that the purpose of each line is explained.
 
 ```cpp
 #include "SpinWearables.h"
@@ -33,19 +31,25 @@ void loop() {
 }
 ```
 
-Now we'll go through the code necessary to measure the motion of the SpinWheel. This is the first step in making our step counter. To see how this code can be written, just scroll down a bit farther.
+Now we can begin to add useful functionality to our sketch.
+The first step is to ensure that the SpinWheel can measure something related to the motion.
+At each repetition step in `loop` we want to command the motion sensor to report the new values:
+we do that by calling `SpinWheel.readIMU()` where IMU stands for Inertial Measurement Unit,
+a fancy name for something that senses motion.
 
-For every iteration of `loop` we need the motion sensor to report the new values: we do this by erasing th content inside of `loop` and calling `SpinWheel.readIMU()` where IMU stands for Inertial Measurement Unit, a fancy name for something that senses motion. To use these measurements, we need to add some more code.    
-
-Since we don't care in which direction the motion is strongest, we can use a single number to report the overall motion of the SpinWheel. One way to do that is using what mathematicians call "calculating the magnitude" or "calculating the norm" of a "vector."
+We want to measure a single number related to the overall motion of the SpinWheel,
+i.e. we do not care on which of the 3 directions in space is the motion strongest.
+One way to do that is to combine the values describing the motion along each direction in one single number.
+Mathematicians call this "calculating the magnitude" or "calculating the norm" of a "vector".
 
 ::: further-reading
 If you want to learn more about what a vector is and how they are used by mathematicians and engineers, check out our lesson on ["Vectors"](/vectors).
 :::
 
-One way to do it is to calculate 
-$$\sqrt{a_x^2+a_y^2+a_z^2}$$
-where $a_x$ is the acceleration in the x directions and so on. The code to do that operation looks like `sqrt(SpinWheel.ax*SpinWheel.ax + SpinWheel.ay*SpinWheel.ay + SpinWheel.az*SpinWheel.az)`. We will save this value in the variable `total_acceleration`.
+A convenient way to get "this magnitude" would be to calculate $\sqrt{a_x^2+a_y^2+a_z^2}$,
+where $a_x$ is the acceleration in the x directions and so on.
+The code to do that operations looks like `sqrt(SpinWheel.ax*SpinWheel.ax + SpinWheel.ay*SpinWheel.ay + SpinWheel.az*SpinWheel.az)`.
+We will save this value in the variable `total_acceleration`.
 
 We will also send this value to the computer connected to the SpinWheel in order to confirm that everything is working. The command `Serial.print(total_acceleration)` does just that. In the Arduino software we can use `Tools -> Serial Plotter` to visualize the results.
 
@@ -75,7 +79,7 @@ void loop() {
 
 You might have noticed that we are only detecting motion; we are not actually counting steps yet. Since writing the code that turns the SpinWheel into a step counter is complicated, it is helpful to break it up into less complicated steps. Through programming the SpinWheel, we will help you learn how to split a big problem into small pieces for yourself. We hope you will find this skill useful not only when programming!
 
-Our next task is to change the SpinWheel's LEDs based on this motion data. Having visual feedback at each stage of our work makes it easier to detect errors in our codee. We will use the `setLargeLEDsUniform` function to turn all 8 of the large LEDs on at the same time. We will use an equal mixture of red, green, and blue, in order to make them light up in white.
+Our next task is to change the SpinWheel's LEDs based on this motion data. Having visual feedback at each stage of our work makes it easier to detect errors in our code. We will use the `setLargeLEDsUniform` function to turn all 8 of the large LEDs on at the same time. We will use an equal mixture of red, green, and blue, in order to make them light up in white.
 
 ::: further-reading
 To further explore why we can trick our brains to perceive a red, blue, and green LED really close together as white, check out the ["Biology of Sight" activity](/sight).
