@@ -10,7 +10,7 @@ A step counter needs to detect motion, add up each time motion is detected, and 
 
 To start, plug in the SpinWheel to your computer and open up an "empty" sketch in the Arduino software. If you need help remembering how to do this, you can get a recap of how to connect your SpinWheel to your computer in our ["Quick Start Guide"](/quickstart).
 
-We will build our Step Counter program in this empty sketch. A good first step is to write some simple test code that does not do anything particularly useful, but prints a few messages, confirming that the device is not broken. For instance, copy the following code that simply repeatedly sends the message "I am working!" to the computer to which the SpinWheel is attached. As always, we will try to add comments to the code, so that the purpose of each line is explained.
+We will build our Step Counter program in this empty sketch. A good first step is to write some simple test code that just prints a few messages, confirming that the device is not broken. For instance, copy the following code that repeatedly sends the message "I am working!" to the computer to which the SpinWheel is attached. As always, we will try to add comments to the code, so that the purpose of each line is explained.
 
 ```cpp
 #include "SpinWearables.h"
@@ -25,15 +25,14 @@ void setup() {
 
 void loop() {
   // Send a confirmation message over and over.
-  Serial.print("I am working!"); 
-  // Print a new line after each message.
-  Serial.println(); 
+  Serial.println("I am working!"); 
 }
 ```
 
 Now we can begin to add useful functionality to our sketch.
 The first step is to ensure that the SpinWheel can measure something related to the motion.
-At each repetition step in `loop` we want to command the motion sensor to report the new values:
+The function `loop` is repeatedly being called by our SpinWheel and each time that happens we want
+to instruct the motion sensor to report the new values it has measured:
 we do that by calling `SpinWheel.readIMU()` where IMU stands for Inertial Measurement Unit,
 a fancy name for something that senses motion.
 
@@ -46,9 +45,9 @@ Mathematicians call this "calculating the magnitude" or "calculating the norm" o
 If you want to learn more about what a vector is and how they are used by mathematicians and engineers, check out our lesson on ["Vectors"](/vectors).
 :::
 
-A convenient way to get "this magnitude" would be to calculate $\sqrt{a_x^2+a_y^2+a_z^2}$,
+A convenient way to get this "magnitude" would be to calculate $\sqrt{a_x^2+a_y^2+a_z^2}$,
 where $a_x$ is the acceleration in the x directions and so on.
-The code to do that operations looks like `sqrt(SpinWheel.ax*SpinWheel.ax + SpinWheel.ay*SpinWheel.ay + SpinWheel.az*SpinWheel.az)`.
+The code to do that operations looks like `sqrt(pow(SpinWheel.ax,2) + pow(SpinWheel.ay,2) + pow(SpinWheel.az,2))`.
 We will save this value in the variable `total_acceleration`.
 
 We will also send this value to the computer connected to the SpinWheel in order to confirm that everything is working. The command `Serial.print(total_acceleration)` does just that. In the Arduino software we can use `Tools -> Serial Plotter` to visualize the results.
@@ -71,7 +70,7 @@ void loop() {
   // The "sum of the squares" is a common way to measure total ammount of
   // motion independent of direction. Mathematicians call it "the norm of
   // the vector describing the motion".
-  float total_acceleration = sqrt(SpinWheel.ax*SpinWheel.ax+SpinWheel.ay*SpinWheel.ay+SpinWheel.az*SpinWheel.az);
+  float total_acceleration = sqrt(pow(SpinWheel.ax,2) + pow(SpinWheel.ay,2) + pow(SpinWheel.az,2));
   Serial.print(total_acceleration);
   Serial.println();
 }
@@ -85,10 +84,12 @@ Our next task is to change the SpinWheel's LEDs based on this motion data. Havin
 To further explore why we can trick our brains to perceive a red, blue, and green LED really close together as white, check out the ["Biology of Sight" activity](/sight).
 :::
 
- The intensity of each color will be proportional to the detected acceleration. However, you might have noticed that the `total_acceleration` value is 1, not 0, at rest. This is because the accelerometer cannot distinguish between the force of gravity acting on it at all times, and the forces of inertia acting on it when you shake it. To account for that, we subtract 1 from this value. This is how we obtain `kinematic_acceleration = total_acceleration - 1`. "Kinematic" is a fancy word physicists use to refer to things related to motion. We calculate intensity based on that value with `intensity = 20*kinematic_acceleration` and use it in the `setLargeLEDsUniform` function. We chose a factor of 20 in order to make the LEDs brighter. Below you can see the code in its entirety.
+ The intensity of each color will be proportional to the detected acceleration. However, you might have noticed that the `total_acceleration` value is 1, not 0, at rest. This is because the accelerometer cannot distinguish between the force of gravity acting on it at all times, and the forces of inertia acting on it when you shake it. To account for that, we subtract 1 from this value. This is how we obtain `kinematic_acceleration = total_acceleration - 1`. "Kinematic" is a fancy word physicists use to refer to things related to motion. We calculate intensity based on that value with `intensity = 20*kinematic_acceleration` and use it in the `setLargeLEDsUniform` function. We chose a factor of 20 in order to make the LEDs brighter.
+
+Below you can see the code in its entirety, and <a href="#stepcounter-sim1"target="_self">at the bottom of the page</a> you can try running it on a virtual SpinWheel.
 
 ::: further-reading
-There are a lot of intricate facts about motion and gravity, related to the fact that our motion sensor can not distinguish between the two. You can read more about it in the section on ["Inertial reference frames and Free fall"](./inertia). Einstein himself was thinking about this everyday fact when he was developing the general theory of relativity.
+There are a lot of intricate facts about motion and gravity, related to the fact that our motion sensor can not distinguish between the two. You can read more about it in the section on ["Inertial reference frames and Free fall"](./inertia), which will also explain why `total_acceleration` at rest is 1g. Einstein himself was thinking about this everyday fact when he was developing the general theory of relativity.
 :::
 
 ```cpp
@@ -102,9 +103,10 @@ void setup() {
 
 void loop() {
   SpinWheel.readIMU();
-  float total_acceleration = sqrt(SpinWheel.ax*SpinWheel.ax+SpinWheel.ay*SpinWheel.ay+SpinWheel.az*SpinWheel.az);
-  // This `total_acceleration` includes the effect of the gravitational
-  // field even at rest.  We want only the component of that measurement
+  // `total_acceleration` includes the effect of the 
+  // gravitational field even at rest. 
+  float total_acceleration = sqrt(pow(SpinWheel.ax,2) + pow(SpinWheel.ay,2) + pow(SpinWheel.az,2));
+  // For sensing motion, we want only the component of that measurement
   // that is related to motion.
   // Kinematic is a fancy word for "related to moving".
   float kinematic_acceleration = abs(total_acceleration - 1.0); 
@@ -145,7 +147,7 @@ float conversion_factor = 0.01;
 
 void loop() {
   SpinWheel.readIMU();
-  float total_acceleration = sqrt(SpinWheel.ax*SpinWheel.ax+SpinWheel.ay*SpinWheel.ay+SpinWheel.az*SpinWheel.az);
+  float total_acceleration = sqrt(pow(SpinWheel.ax,2) + pow(SpinWheel.ay,2) + pow(SpinWheel.az,2));
   float kinematic_acceleration = abs(total_acceleration - 1.0); 
   int intensity = 20*kinematic_acceleration;
   SpinWheel.setLargeLEDsUniform(intensity, intensity, intensity);
@@ -164,10 +166,40 @@ void loop() {
 }
 ```
 
-You might need to experiment with the value of `conversion_factor` in order to make your device present the total number of steps in a way you like. In the demo below we have also changed some of the colors. Can you do something similar?
-
+You might need to experiment with the value of `conversion_factor` in order to make your device present the total number of steps in a way you like. In the video below we have also changed some of the colors. Can you do something similar? Under the video there is a widget in which you can experiment with this code within your browser without needing a physical SpinWheel.
+ 
 <video src="/images/bookpics/stepcounter_final.mp4" muted autoplay playsinline loop></video>
 
 ::: further-reading
 Other interesting features would be to show different colors when the detected acceleration is too small to be counted. Moreover, you can use the colors of the small LEDs to give more information.
 :::
+
+<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
+<script src='/simspinwheel/simspinwheel.js'></script>
+
+<div class="ssw-codecontent" markdown=0 id="stepcounter-sim1">
+<pre class="ssw-codeblock">
+float total_motion = 0;
+float threshold = 0.1;
+float conversion_factor = 0.01;
+
+void loop() {
+  SpinWheel.readIMU();
+  float total_acceleration = sqrt(pow(SpinWheel.ax,2)
+                                 +pow(SpinWheel.ay,2)
+                                 +pow(SpinWheel.az,2));
+  float kinematic_acceleration = abs(total_acceleration - 1.0); 
+  int intensity = 20*kinematic_acceleration;
+  SpinWheel.setLargeLEDsUniform(intensity, intensity, intensity);
+</pre>
+<textarea class="ssw-codeblock">
+  if (kinematic_acceleration>threshold) {
+    total_motion = total_motion+conversion_factor*kinematic_acceleration;
+  }
+  SpinWheel.setSmallLEDs(0,total_motion,255,255,255);
+</textarea>
+<pre class="ssw-codeblock">
+  SpinWheel.drawFrame();
+}
+</pre>
+</div>
