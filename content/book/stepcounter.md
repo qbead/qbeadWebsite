@@ -5,7 +5,13 @@ header-image: /images/banners/stepcounter.png
 ---
 
 ::: intro-box
-A step counter needs to detect motion, add up each time motion is detected, and somehow display the cummulative value. The SpinWheel has a motion sensor that can deal with the first task, a small controller (computer) that can perform the addition, and a number of LEDs that can be used as a display. Here we will see how to put these features together to make our own custom step counter.
+A step counter needs to detect motion,
+record each time that happens,
+and display the total count.
+The SpinWheel has a motion sensor that can deal with the first task,
+a small controller (computer) that can perform the recording,
+and a number of LEDs that can be used as a display.
+Here we will see how to put these features together to make our own custom step counter.
 :::
 
 To start, plug in the SpinWheel to your computer and open up an "empty" sketch in the Arduino software. If you need help remembering how to do this, you can get a recap of how to connect your SpinWheel to your computer in our ["Quick Start Guide"](/quickstart).
