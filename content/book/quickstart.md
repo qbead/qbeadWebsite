@@ -7,7 +7,7 @@ Thanks for your interest in the SpinWheel! Your kit contains: 1 SpinWheel, 1 bat
 
 The SpinWheel has four components: a power source (the battery), a sensor (for motion and magnetic fields), a set of lights (the light emitting diodes, or LEDs), and a micro computer (the brain of the device).
 
-The battery was detached from the circuit board so we could ship the kit to you. Simply plug the battery connector into the appropriate jack on the circuit board and you can start using the SpinWheel as a wearable accessory, as it is already preloaded with several basic programs. To turn the SpinWheel on, flip the switch on the back. You should see it turn on and light up brightly! You can press the button on the back of the SpinWheel to toggle between different programs.
+You'll notice that the battery is not attached to the SpinWheel. Simply plug the battery connector into the appropriate jack on the circuit board and you can start using the SpinWheel as a wearable accessory, as it is already preloaded with several basic programs. To turn the SpinWheel on, flip the switch on the back. You should see it turn on and light up brightly! You can press the button on the back of the SpinWheel to toggle between different programs.
 
 Your kit also contains a booklet with various activities you can complete (the SpinWheel Field Guide). Some of them do not require you to make any modifications to the SpinWheel.
 
