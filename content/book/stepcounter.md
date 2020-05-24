@@ -142,53 +142,17 @@ void loop() {
 Finally, we can work on our goal: using the SpinWheel to display all of our detected motion in order to show how much we have moved over time. We will simply add up the values for "kinematic_acceleration". For this we don't have to be particularly precise: we just want one number that contains some information about the total motion we have exerted. We can call that variable `total_motion` and each time we detect motion we update it with `total_motion = total_motion + conversion_factor * kinematic_acceleration`. We introduced the small number `conversion_factor` so that we keep the value of `total_motion` growing slowly.
 
 
-We only want motions of a certain size to be counted as motion. We can do this by introducing a minimum `threshold` under which motion is not counted. We do that by using an `if` statement of the form `if (kinematic_acceleration>threshold)`. Without this addition to our code, small vibrations would be falsely included in our count. 
-
-Finally, we use the 12 smaller LEDs in order to show the value of `total_motion`. If `total_motion` is 1, we light up only the first LED. If it is 5, we light up the first five LEDs, and so on. We use the `SpinWheel.setSmallLEDs()` function to do that.
-
-```cpp
-#include "SpinWearables.h"
-using namespace SpinWearables;
-
-void setup() {
-  Serial.begin(115200);
-  SpinWheel.begin();
-}
-
-float total_motion = 0;
-float threshold = 0.1;
-float conversion_factor = 0.01;
-
-void loop() {
-  SpinWheel.readIMU();
-  float total_acceleration = sqrt(pow(SpinWheel.ax,2) + pow(SpinWheel.ay,2) + pow(SpinWheel.az,2));
-  float kinematic_acceleration = abs(total_acceleration - 1.0); 
-  int intensity = 20*kinematic_acceleration;
-  SpinWheel.setLargeLEDsUniform(intensity, intensity, intensity);
-  // Accumulate all of the motion readings over time in a single number.
-  // To avoid false readings, perform the accumulation only if the motion
-  // was sufficiently strong.
-  if (kinematic_acceleration>threshold) {
-    total_motion = total_motion+conversion_factor*kinematic_acceleration;
-  }
-  // Display how much you have moved, by turning on the corresponding
-  // number of small LEDs.
-  SpinWheel.setSmallLEDs(0,total_motion,255,255,255);
-  SpinWheel.drawFrame();
-  Serial.print(total_motion);
-  Serial.println();
-}
-```
-
-You might need to experiment with the value of `conversion_factor` in order to make your device present the total number of steps in a way you like. In the video below we have also changed some of the colors. Can you do something similar? Under the video there is a widget in which you can experiment with this code within your browser without needing a physical SpinWheel.
- 
-<video src="/images/bookpics/stepcounter_final.mp4" muted autoplay playsinline loop></video>
-
-::: further-reading
-Other interesting features would be to show different colors when the detected acceleration is too small to be counted. Moreover, you can use the colors of the small LEDs to give more information.
-:::
-
-### More about thresholding
+We only want motions of a certain size to be counted as motion.
+We can do this by introducing a minimum `threshold` under which motion is not counted.
+We do that by using an `if` statement of the form `if (kinematic_acceleration>threshold)`.
+Without this addition to our code, small vibrations would be falsely included in our count.
+You can observe this effect in the interactive chart below.
+In the chart you can see the grey line depicting the values reported by the motion sensor.
+By manipulating the slider you can change the threshold at which values are counted in the total.
+If the threshold is too low all the small vibrations detected by the sensor are counted in,
+falsely inflating the total sum.
+However, by setting the threshold higher, we are able to count only the three very noticeable strong motions:
+they actually correspond to real steps and need to be counted in.
 
 <script src='/chart/Chart.bundle.min.js'></script>
 <div><input style="width:30%" type="range" min="0" max="100" value="20" id="thrSlider"> Use this slider to set the threshold.</div>
@@ -251,7 +215,7 @@ var thrChart = new Chart(ctx, {
                 }
             }],
             yAxes: [{
-                scaleLabel: {labelString: 'acceleration value', display: true},
+                scaleLabel: {labelString: 'value', display: true},
                 ticks: {
                     min:0,
                     max:1
@@ -262,6 +226,50 @@ var thrChart = new Chart(ctx, {
 });
 thrUpdate();
 </script>
+
+Finally, we use the 12 smaller LEDs in order to show the value of `total_motion`. If `total_motion` is 1, we light up only the first LED. If it is 5, we light up the first five LEDs, and so on. We use the `SpinWheel.setSmallLEDs()` function to do that.
+
+```cpp
+#include "SpinWearables.h"
+using namespace SpinWearables;
+
+void setup() {
+  Serial.begin(115200);
+  SpinWheel.begin();
+}
+
+float total_motion = 0;
+float threshold = 0.1;
+float conversion_factor = 0.01;
+
+void loop() {
+  SpinWheel.readIMU();
+  float total_acceleration = sqrt(pow(SpinWheel.ax,2) + pow(SpinWheel.ay,2) + pow(SpinWheel.az,2));
+  float kinematic_acceleration = abs(total_acceleration - 1.0); 
+  int intensity = 20*kinematic_acceleration;
+  SpinWheel.setLargeLEDsUniform(intensity, intensity, intensity);
+  // Accumulate all of the motion readings over time in a single number.
+  // To avoid false readings, perform the accumulation only if the motion
+  // was sufficiently strong.
+  if (kinematic_acceleration>threshold) {
+    total_motion = total_motion+conversion_factor*kinematic_acceleration;
+  }
+  // Display how much you have moved, by turning on the corresponding
+  // number of small LEDs.
+  SpinWheel.setSmallLEDs(0,total_motion,255,255,255);
+  SpinWheel.drawFrame();
+  Serial.print(total_motion);
+  Serial.println();
+}
+```
+
+You might need to experiment with the value of `conversion_factor` in order to make your device present the total number of steps in a way you like. In the video below we have also changed some of the colors. Can you do something similar? Under the video there is a widget in which you can experiment with this code within your browser without needing a physical SpinWheel.
+ 
+<video src="/images/bookpics/stepcounter_final.mp4" muted autoplay playsinline loop></video>
+
+::: further-reading
+Other interesting features would be to show different colors when the detected acceleration is too small to be counted. Moreover, you can use the colors of the small LEDs to give more information.
+:::
 
 ## Virtual SpinWheel
 
