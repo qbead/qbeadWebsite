@@ -141,14 +141,28 @@ void loop() {
 </pre>
 </div>
 
+### Set overall brightness
+
+::: warning :
+`TODO` Needs to be implemented.
+:::
+
 ## Advanced LED Manipulation
 
 ::: warning :
-TODO consider `setSmallLEDsPointer` and `setSmallLEDsProgress`. Create `setSmallLEDsRainbow` and `setLargeLEDsRainbow`.
+`TODO` consider `setSmallLEDsPointer` and `setSmallLEDsProgress`. Create `setSmallLEDsRainbow` and `setLargeLEDsRainbow`.
 :::
 
 ## Color and Brightness Helpers
 
 ::: warning :
-TODO consider `colorWheel`, `triangularWave`, `parabolaWave`, and `faston_slowoff`.
+`TODO` consider `colorWheel`, `triangularWave`, `parabolaWave`, and `faston_slowoff`.
 :::
+
+## Motion Sensing and Compass
+
+::: warning :
+`TODO` Turn this into a detailed writeup.
+:::
+
+To request measurements from the sensor you need to call `SpinWearables.readIMU`. Then the measurement data will be available in `ax,ay,az,gx,gy,gz,mx,my,mz` in some units. There is also a temperature sensor.
