@@ -273,31 +273,41 @@ Other interesting features would be to show different colors when the detected a
 
 ## Virtual SpinWheel
 
-You can use this simulation of a SpinWheel to play with the code without uploading it to a physical device. After clicking "Run", you can grab the image of the SpinWheel and shake it to have the virtual device respond to that motion.
+You can use this simulation of a SpinWheel to play with the code without uploading it to a physical device. After clicking "Run", you can grab the image of the SpinWheel and shake it to have the virtual device respond to that motion. Try to play with the threshold value, change colors, and even change how quickly the small LEDs turn on.
 
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
 <script src='/simspinwheel/simspinwheel.js'></script>
 
 <div class="ssw-codecontent" markdown=0 id="stepcounter-sim1">
-<pre class="ssw-codeblock">
+<textarea class="ssw-codeblock">
 float total_motion = 0;
 float threshold = 0.1;
-float conversion_factor = 0.01;
+float conversion_factor = 0.2;
+</textarea>
+<pre class="ssw-codeblock">
 
 void loop() {
   SpinWheel.readIMU();
+</pre>
+<textarea class="ssw-codeblock">
   float total_acceleration = sqrt(pow(SpinWheel.ax,2)
                                  +pow(SpinWheel.ay,2)
                                  +pow(SpinWheel.az,2));
+</textarea>
+<pre class="ssw-codeblock">
   float kinematic_acceleration = abs(total_acceleration - 1.0); 
-  int intensity = 20*kinematic_acceleration;
-  SpinWheel.setLargeLEDsUniform(intensity, intensity, intensity);
 </pre>
 <textarea class="ssw-codeblock">
+  int intensity = 2000*kinematic_acceleration;
+  SpinWheel.setLargeLEDsUniform(intensity, 0, intensity);
+</textarea>
+<pre class="ssw-codeblock">
   if (kinematic_acceleration>threshold) {
     total_motion = total_motion+conversion_factor*kinematic_acceleration;
   }
-  SpinWheel.setSmallLEDs(0,total_motion,255,255,255);
+</pre>
+<textarea class="ssw-codeblock">
+  SpinWheel.setSmallLEDs(0,total_motion,255,0,0);
 </textarea>
 <pre class="ssw-codeblock">
   SpinWheel.drawFrame();
