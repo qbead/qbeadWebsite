@@ -29,7 +29,56 @@ If you wanted to make green, what colors would you use?
 
 What ink colors does a typical printer have?
 
-(Insert widget about Adding reflective/absorptive color pigments together (widget))
+<style>
+#scolortests {
+  font-size: 2rem;
+}
+#scolortests input {
+  width: 20%;
+  margin: 0;
+}
+#scolortests span {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+#scolortests .spacer {
+  width:5%;
+}
+#scolortests .vis {
+  width: 20%;
+  height: 2em;
+  line-height: 2em;
+  border: solid 1px;
+  border-color: black;
+  color: black;
+}
+#sredshow {border-color: cyan !important;}
+#sgreenshow {border-color: magenta !important;}
+#sblueshow {border-color: yellow !important;}
+</style>
+<div id="scolortests">
+<div><input type="range" min="0" max="255" value="255" id="sred"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="sgreen"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="sblue"></div>
+<div><span class="vis" id="sredshow">255</span><span class="spacer">+</span><span class="vis" id="sgreenshow">255</span><span class="spacer">+</span><span class="vis" id="sblueshow">255</span><span class="spacer">=</span><span class="vis" id="srgbshow">&nbsp;</span></div>
+<script>
+function schangeColor(){
+  var complement_r = document.getElementById("sred").value;
+  var complement_g = document.getElementById("sgreen").value;
+  var complement_b = document.getElementById("sblue").value;
+  document.getElementById("srgbshow").style["background-color"]=`rgb(${255-complement_r},${255-complement_g},${255-complement_b})`;
+  document.getElementById("sredshow").innerHTML=complement_r;
+  document.getElementById("sredshow").style["background-color"]=`rgb(${255-complement_r},255,255)`;
+  document.getElementById("sgreenshow").innerHTML=complement_g;
+  document.getElementById("sgreenshow").style["background-color"]=`rgb(255,${255-complement_g},255)`;
+  document.getElementById("sblueshow").innerHTML=complement_b;
+  document.getElementById("sblueshow").style["background-color"]=`rgb(255,255,${255-complement_b})`;
+}
+document.getElementById("sred").oninput = schangeColor;
+document.getElementById("sgreen").oninput = schangeColor;
+document.getElementById("sblue").oninput = schangeColor;
+schangeColor();
+</script>
+</div>
 
 
 |   		|**Pigments**	| **Digital displays**	
@@ -44,56 +93,53 @@ What ink colors does a typical printer have?
 When we make colors digitally, such as the colors you see on this webpage, color mixing works differently. Here we create colors with an LED display. These displays works differently than when we color with pigments. The widget below shows the three digital primary colors, which we can combine in amounts from 0 to 255. Looking at the widget below, notice how with all three slide bars at 255, the box at the right is white. By adjusting the relative amount of green, red, and blue using the slide bars, you can change the color displayed.
 
 <style>
-#colortests {
+#acolortests {
   font-size: 2rem;
-  text-shadow:
-    -1px -1px 0 white,
-    1px -1px 0  white,
-    -1px 1px 0  white,
-    1px 1px 0   white;
 }
-#colortests input {
+#acolortests input {
   width: 20%;
   margin: 0;
 }
-#colortests span {
+#acolortests span {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
 }
-#colortests .spacer {
+#acolortests .spacer {
   width:5%;
 }
-#colortests .vis {
+#acolortests .vis {
   width: 20%;
   height: 2em;
   line-height: 2em;
   border: solid 1px;
+  border-color: black;
+  color: white;
 }
-#redshow {border-color: red !important;}
-#greenshow {border-color: green !important;}
-#blueshow {border-color: blue !important;}
+#aredshow {border-color: red !important;}
+#agreenshow {border-color: green !important;}
+#ablueshow {border-color: blue !important;}
 </style>
-<div id="colortests">
-<div><input type="range" min="0" max="255" value="255" id="red"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="green"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="blue"></div>
-<div><span class="vis" id="redshow">255</span><span class="spacer">+</span><span class="vis" id="greenshow">255</span><span class="spacer">+</span><span class="vis" id="blueshow">255</span><span class="spacer">=</span><span class="vis" id="rgbshow">&nbsp;</span></div>
+<div id="acolortests">
+<div><input type="range" min="0" max="255" value="255" id="ared"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="agreen"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="ablue"></div>
+<div><span class="vis" id="aredshow">255</span><span class="spacer">+</span><span class="vis" id="agreenshow">255</span><span class="spacer">+</span><span class="vis" id="ablueshow">255</span><span class="spacer">=</span><span class="vis" id="argbshow">&nbsp;</span></div>
 <script>
-function changeColor(){
-  var r = document.getElementById("red").value;
-  var g = document.getElementById("green").value;
-  var b = document.getElementById("blue").value;
-  document.getElementById("rgbshow").style["background-color"]=`rgb(${r},${g},${b})`;
-  document.getElementById("redshow").innerHTML=r;
-  document.getElementById("redshow").style["background-color"]=`rgba(255,0,0,${r/255})`;
-  document.getElementById("greenshow").innerHTML=g;
-  document.getElementById("greenshow").style["background-color"]=`rgba(0,255,0,${g/255})`;
-  document.getElementById("blueshow").innerHTML=b;
-  document.getElementById("blueshow").style["background-color"]=`rgba(0,0,255,${b/255})`;
+function achangeColor(){
+  var r = document.getElementById("ared").value;
+  var g = document.getElementById("agreen").value;
+  var b = document.getElementById("ablue").value;
+  document.getElementById("argbshow").style["background-color"]=`rgb(${r},${g},${b})`;
+  document.getElementById("aredshow").innerHTML=r;
+  document.getElementById("aredshow").style["background-color"]=`rgb(${r},0,0)`;
+  document.getElementById("agreenshow").innerHTML=g;
+  document.getElementById("agreenshow").style["background-color"]=`rgb(0,${g},0)`;
+  document.getElementById("ablueshow").innerHTML=b;
+  document.getElementById("ablueshow").style["background-color"]=`rgb(0,0,${b})`;
 }
-document.getElementById("red").oninput = changeColor;
-document.getElementById("green").oninput = changeColor;
-document.getElementById("blue").oninput = changeColor;
-changeColor();
+document.getElementById("ared").oninput = achangeColor;
+document.getElementById("agreen").oninput = achangeColor;
+document.getElementById("ablue").oninput = achangeColor;
+achangeColor();
 </script>
 </div>
 
