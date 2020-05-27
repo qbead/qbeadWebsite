@@ -81,7 +81,7 @@ schangeColor();
 </div>
 
 
-|   		|**Pigments**	| **Digital displays**	
+|   		| Pigments	| Digital displays	
 |---		|---	|---			|
 |Components     	|Red, yellow, blue	|Red, green, blue  	 
 |White   	|No components  	|All components   	
