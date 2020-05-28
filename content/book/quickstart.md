@@ -21,14 +21,17 @@ Open the Arduino software. You should be able to see your device appear in the T
 
 Now you can go back to the Tools menu and select `Tools→ Board`. Select Arduino Leonardo as the board (a.k.a. processor), so that the software knows which “dialect” to use to talk to the device (computer languages have dialects just like human languages!).
 
+<!--TODO: Needs new image, probably a drawing.-->
 ![Use `Tools→ Port` and `Tools→ Board` to change the settings on the Arduino software.](/images/quickstart/port_and_board_screenshot.png "Use `Tools→ Port` and `Tools→ Board` to change the settings on the Arduino software.")
 
 Learning to code is just like learning a new language - it may not be easy at first, but once you learn the basics, you will be able to write code to communicate effectively with computers! To get the first set of examples of this new language, download [our collection of sample code](/software/SpinWearablesFirmware.zip) (this will download a zip file). Then you can use `Sketch→ Include Library→ Add .ZIP Library` and navigate to the zip file to add it. You can always download this file anew if in your experimentation you have lost the original -- and experimentation is encouraged.
 
+<!--TODO: Needs new image, probably a drawing.-->
 ![Add new programs to your Arduino library using the `Include Library` menu options.](/images/quickstart/adding_libraries_screenshot.png "Add new programs to your Arduino library using the `Include Library` menu options.")
 
 To test that your device is working properly, you can install a new set of programs to animate your SpinWheel by opening `File→ Examples→ SpinWearables` and picking one of the examples. For instance, pick `BlinkingFirmware` and upload it by pressing the upload button (the arrow at the top). Now, your SpinWheel will contain all the pre-loaded animations it came with, plus the new colorful blinking one (from `BlinkingFirmware`) you just uploaded.
 
+<!--TODO: Needs new image, probably a drawing.-->
 ![Upload programs to your SpinWheel using the `Upload` button (highlighted in white).](/images/quickstart/upload_button_screenshot.png "Upload programs to your SpinWheel using the `Upload` button (highlighted in white).")
 
 In future SpinWheel activities, you will be writing new programs to animate the SpinWheel. To transfer a program from your computer to your SpinWheel, simply connect your SpinWheel to your computer, open your new program in the Arduino software and press the upload button.
