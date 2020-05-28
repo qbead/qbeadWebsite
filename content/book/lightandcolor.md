@@ -235,12 +235,12 @@ When we look at an object, we see its color. But how does this happen? When the 
 
 Now we know that light is a wave. More specifically, light is an electromagnetic wave, and we will get to that later. First, let's explore the properties of a wave.
 
-Waves
+### Waves
 A wave is a repetitive motion traveling through a medium. Some examples are shown in the table below.
 
-|**Type of Wave**  		|**Medium**
-|---		|---	|---		
-|Ocean wave     	|Water	 
+|**Type of Wave**  |**Medium**
+|---		|---		
+|Ocean wave     |Water	 
 |Sound wave   	|Air  	
 |Light   	|?
 
