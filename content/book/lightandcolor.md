@@ -25,6 +25,8 @@ Whether you're walking through a lush forest or art museum, our world is full of
 
 If you've ever painted before, you’ve probably mixed colors on a pallet. In art class, you’ve learned about the difference between primary and secondary colors. Primary colors can be used to make all other colors (secondary colors). When painting, our primary colors are red, yellow, and blue. When we are paining, we are using the pigments in our paint to create the various colors. The idea of using pigments to create color is used in our clothes, painting our houses and even coloring our food.
 
+(add a picture of a painting pallet or easel?)
+
 If you wanted to make green, what colors would you use?
 
 What ink colors does a typical printer have?
@@ -210,4 +212,47 @@ Interestingly, a wave can travel long distances without needing the medium itsel
 
 (some pictures might be very helpful here)
  	  
+Waves are characterized by their frequency, wavelength, and speed. 
+Wavelength describes the length of one wave. 
+You can use the widget below to change the wavelength of a wave.
 
+(To do: Add widget where the properties of a wave can be changed. When the wavelength changes have the wave change color, potentially add the sine function)
+
+The frequency of a wave describes how often the repetitive motion of a wave is repeated. 
+We describe this motion in Hertz (Hz), which stands for the number of waves per second. 
+For example, a wave with a frequency of 3 Hz, 
+would repeat its motion 3 times in one second.
+Finally, the speed of a wave describes how fast the wave moves forward.
+Sound and light are both waves,
+and if you've ever watched a thunderstorm you know that you see lightning flash before you hear the boom of thunder.
+The speed of a sound wave is 343 m/s (meters per second),
+while the speed of light is 299,792,458 m/s. 
+
+::: Comparison
+A highway spped limit of 60 miles per hour is about 27 m/s.
+::: 
+
+Now that we've described all the properties of waves, let's discuss how this relates to light and color.
+If you change the wavelength of the light wave in our widget, the wave changes color. This is an analogy to real life,
+because the wavelength of a light ray corresponds to its color. 
+
+However, our eyes can only detect a small range of the possible wavelengths of light. 
+This range is called the visible spectrum.
+Looking at the whole spectrum of light, called the Electromagnetic spectrum, 
+you can see that different wavelengths of light create microwaves that help to heat your food, and radio waves, that allow you to listen to your favorite music.
+We interact with these waves in other ways, 
+but we can't see microwaves or radio waves like we can see visible light. 
+
+(Insert picture of the electromagnetic spectrum)
+
+Finally, the question of what is an electromagnetic wave? 
+Electromagnetic waves are waves, like sound waves or ocean waves. 
+Instead of traveling vibrations in the air or water, they are vibrations of… it is complicated.
+There are many metaphors we can use to describe the medium of electromagnetic waves.
+Studying its inner workings has led to some of the greatest discoveries in Physics: general relativity and quantum mechanics.
+Instead of retracing the steps of physicists over two hundred years,
+we have focused on describing light, based on what we can measure about it, such as its wavelength. 
+
+::: Electricity and Magnetism
+If you are interested in learning more about electricity and magnetism, two topics related to electromagnetic waves, go to their lessons.
+:::
