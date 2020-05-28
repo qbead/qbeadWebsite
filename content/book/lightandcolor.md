@@ -35,6 +35,11 @@ What ink colors does a typical printer have?
 #scolortests {
   font-size: 2rem;
 }
+#scolortests .explain {
+  font-size: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
 #scolortests input {
   width: 20%;
   margin: 0;
@@ -60,6 +65,9 @@ What ink colors does a typical printer have?
 #sblueshow {border-color: yellow !important;}
 </style>
 <div id="scolortests">
+<div class="explain">
+Imagine a white sheet of paper (reflecting all colors of white light) on which we add pigments that absorb some colors. That would be cyan (absorbing red and reflecting green and blue), magenta (absorbing green), and yellow (absorbing blue). Adding up these pigments leads to absorbing all colors and reflecting none, making the page black.
+</div>
 <div><input type="range" min="0" max="255" value="255" id="sred"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="sgreen"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="sblue"></div>
 <div><span class="vis" id="sredshow">255</span><span class="spacer">+</span><span class="vis" id="sgreenshow">255</span><span class="spacer">+</span><span class="vis" id="sblueshow">255</span><span class="spacer">=</span><span class="vis" id="srgbshow">&nbsp;</span></div>
 <script>
@@ -98,6 +106,11 @@ When we make colors digitally, such as the colors you see on this webpage, color
 #acolortests {
   font-size: 2rem;
 }
+#acolortests .explain {
+  font-size: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
 #acolortests input {
   width: 20%;
   margin: 0;
@@ -121,10 +134,21 @@ When we make colors digitally, such as the colors you see on this webpage, color
 #aredshow {border-color: red !important;}
 #agreenshow {border-color: green !important;}
 #ablueshow {border-color: blue !important;}
+#acolortests .svganim {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
 </style>
 <div id="acolortests">
+<div class="explain">
+Imagine a white sheet of paper (i.e. paper that does not absorb any of the colors of light falling on it) in a dark room. We shine three lights on it, with different intensity: a red, a green, and a blue light. If we shine them all together, we reflect all visible color components of the sheet of paper and see a white color.
+</div>
 <div><input type="range" min="0" max="255" value="255" id="ared"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="agreen"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="ablue"></div>
 <div><span class="vis" id="aredshow">255</span><span class="spacer">+</span><span class="vis" id="agreenshow">255</span><span class="spacer">+</span><span class="vis" id="ablueshow">255</span><span class="spacer">=</span><span class="vis" id="argbshow">&nbsp;</span></div>
+<div class="svganim">
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" markdown=0> <filter id="alight"> <feDiffuseLighting id="asvgred" in="SourceGraphic" result="lightr" lighting-color="#f00" diffuseConstant="1.5"> <fePointLight x="50" y="150" z="80" /> <!--<feSpotLight x="15" y="20" z="40" limitingConeAngle="25" pointsAtX="50" pointsAtY="50" pointsAtZ="20"/>--> </feDiffuseLighting> <feDiffuseLighting id="asvggreen" in="SourceGraphic" result="lightg" lighting-color="#0f0" diffuseConstant="1.5"> <fePointLight x="100" y="30" z="80" /> <!--<feSpotLight x="100" y="-10" z="40" limitingConeAngle="25" pointsAtX="100" pointsAtY="60" pointsAtZ="0"/>--> </feDiffuseLighting> <feDiffuseLighting id="asvgblue" in="SourceGraphic" result="lightb" lighting-color="#00f" diffuseConstant="1.5"> <fePointLight x="150" y="150" z="80" /> <!--<feSpotLight x="185" y="20" z="40" limitingConeAngle="25" pointsAtX="150" pointsAtY="50" pointsAtZ="20"/>--> </feDiffuseLighting> <feComposite in="SourceGraphic" in2="lightr" result="sourceWithR" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>    <feComposite in="SourceGraphic" in2="lightg" result="sourceWithG" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>    <feComposite in="SourceGraphic" in2="lightb" result="sourceWithB" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>    <feComposite in="sourceWithR" in2="sourceWithG" result="sourceWithRG" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>    <feComposite in="sourceWithRG" in2="sourceWithB" result="sourceWithRGB" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>    </filter> <circle cx="100" cy="100" r="80" fill="white" stroke="black" stroke-opacity="1" filter="url(#alight)" /> </svg>
+</div>
 <script>
 function achangeColor(){
   var r = document.getElementById("ared").value;
@@ -133,10 +157,13 @@ function achangeColor(){
   document.getElementById("argbshow").style["background-color"]=`rgb(${r},${g},${b})`;
   document.getElementById("aredshow").innerHTML=r;
   document.getElementById("aredshow").style["background-color"]=`rgb(${r},0,0)`;
+  document.getElementById("asvgred").setAttribute("lighting-color",`rgb(${r},0,0)`);
   document.getElementById("agreenshow").innerHTML=g;
   document.getElementById("agreenshow").style["background-color"]=`rgb(0,${g},0)`;
+  document.getElementById("asvggreen").setAttribute("lighting-color",`rgb(0,${g},0)`);
   document.getElementById("ablueshow").innerHTML=b;
   document.getElementById("ablueshow").style["background-color"]=`rgb(0,0,${b})`;
+  document.getElementById("asvgblue").setAttribute("lighting-color",`rgb(0,0,${b})`);
 }
 document.getElementById("ared").oninput = achangeColor;
 document.getElementById("agreen").oninput = achangeColor;
