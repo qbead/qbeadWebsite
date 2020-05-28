@@ -63,6 +63,38 @@ What ink colors does a typical printer have?
 #sredshow {border-color: cyan !important;}
 #sgreenshow {border-color: magenta !important;}
 #sblueshow {border-color: yellow !important;}
+#scolortests .svganim {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+#scolortests .svganim > span {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  mix-blend-mode: multiply;
+}
+#scolortests .svganim > #cblob {
+  left: 50px;
+  top: 30px;
+  background-color: cyan;
+  border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+}
+#scolortests .svganim > #yblob {
+  left: 40px;
+  top: 40px;
+  background-color: yellow;
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+}
+#scolortests .svganim > #mblob {
+  left: 60px;
+  top: 40px;
+  background-color: magenta;
+  border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
+}
 </style>
 <div id="scolortests">
 <div class="explain">
@@ -70,6 +102,7 @@ Imagine a white sheet of paper (reflecting all colors of white light) on which w
 </div>
 <div><input type="range" min="0" max="255" value="255" id="sred"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="sgreen"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="sblue"></div>
 <div><span class="vis" id="sredshow">255</span><span class="spacer">+</span><span class="vis" id="sgreenshow">255</span><span class="spacer">+</span><span class="vis" id="sblueshow">255</span><span class="spacer">=</span><span class="vis" id="srgbshow">&nbsp;</span></div>
+<div class="svganim"><span id="cblob"></span><span id="yblob"></span><span id="mblob"></span></div>
 <script>
 function schangeColor(){
   var complement_r = document.getElementById("sred").value;
@@ -78,10 +111,13 @@ function schangeColor(){
   document.getElementById("srgbshow").style["background-color"]=`rgb(${255-complement_r},${255-complement_g},${255-complement_b})`;
   document.getElementById("sredshow").innerHTML=complement_r;
   document.getElementById("sredshow").style["background-color"]=`rgb(${255-complement_r},255,255)`;
+  document.getElementById("cblob").style["background-color"]=`rgb(${255-complement_r},255,255)`;
   document.getElementById("sgreenshow").innerHTML=complement_g;
   document.getElementById("sgreenshow").style["background-color"]=`rgb(255,${255-complement_g},255)`;
+  document.getElementById("yblob").style["background-color"]=`rgb(255,${255-complement_g},255)`;
   document.getElementById("sblueshow").innerHTML=complement_b;
   document.getElementById("sblueshow").style["background-color"]=`rgb(255,255,${255-complement_b})`;
+  document.getElementById("mblob").style["background-color"]=`rgb(255,255,${255-complement_b})`;
 }
 document.getElementById("sred").oninput = schangeColor;
 document.getElementById("sgreen").oninput = schangeColor;
