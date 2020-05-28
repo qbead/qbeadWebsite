@@ -16,7 +16,7 @@ Here we will see how to put these features together to make our own custom step 
 
 To start, plug in the SpinWheel to your computer and open up an "empty" sketch in the Arduino software. If you need help remembering how to do this, you can get a recap of how to connect your SpinWheel to your computer in our ["Quick Start Guide"](/quickstart).
 
-## Tabula Rasa
+## From an Empty Sketch
 
 We will build our Step Counter program in this empty sketch. A good first step is to write some simple test code that just prints a few messages, confirming that the device is not broken. For instance, copy the following code that repeatedly sends the message "I am working!" to the computer to which the SpinWheel is attached. As always, we will try to add comments to the code, so that the purpose of each line is explained.
 
