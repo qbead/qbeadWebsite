@@ -4,15 +4,6 @@ keywords: sight, vision, color, biology, optical illusions
 header-image: /images/banners/colors_and_eye.png
 ---
 
-This lesson is part of the SpinWheel series. The
-[SpinWheel](https://www.kickstarter.com/projects/spinwheel/447670470)
-is a small Arduino-compatible sensor-enabled wearable device, meant to be used
-for teaching physics and computer science through an artistic medium. You can
-support our non-profit
-[Kickstarter](https://www.kickstarter.com/projects/spinwheel/447670470)
-to help us reach more curious young minds and to get the device and teaching
-kit showcased in this lesson.
-
 ::: intro-box
 In this adventure, you'll trick your eyes into perceiving a rainbow of colors using only red, green, and blue LEDs. This lesson has two parts:
 <ol>
