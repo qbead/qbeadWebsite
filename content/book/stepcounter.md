@@ -52,7 +52,7 @@ One way to do that is to combine the 3 values describing the motion along each d
 Mathematicians call this "calculating the magnitude" or "calculating the norm" of a "vector".
 
 ::: further-reading
-If you want to learn more about what vectors and how they are used by mathematicians and engineers, check out our lesson on ["Vectors"](/vectors).
+If you want to learn more about what vectors are and how they are used by mathematicians and engineers, check out our lesson on ["Vectors"](/vectors).
 :::
 
 A convenient way to get this "magnitude" is to calculate $\sqrt{a_x^2+a_y^2+a_z^2}$,
