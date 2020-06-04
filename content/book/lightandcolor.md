@@ -139,6 +139,7 @@ function waveLengthToRGB(Wavelength){
     var b = Blue==0.0 ? 0 : Math.round(IntensityMax * Math.pow(Blue * factor, Gamma));
     return [r,g,b];
 }
+// <!--TODO: Does not work in safari... Try setAttribute("transform")-->
 function waveUpdate() {
   var t = waveSlider.value;
   waveView.innerHTML = t;
