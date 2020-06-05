@@ -16,30 +16,26 @@ todo: refer to the science of vision page, but focus on electromagnetism
 :::
 
 
-## Colors
-Whether you're walking through a lush forest or art museum, our world is full of colors. Colors make a painting beautiful and make our homes and schools much more fun. Colors also have practical uses such as the colors on a stoplight or color-coding your class notes. Let's explore how colors are made, mixed, and emerge from light!
+## Lights
+As you are reading this lesson, you are most likely surrounded by a variety of lights. Light emits from your computer screen and from the lights in your room. Light enters through your windows or open door. Light even comes from you refrigerator when you get a snack! You interact with light in various ways throughout your day; and while most of this light is white, some is more colorful. Some examples are street lights, the light creating the colors on this page, and the light coming from a hot stove top. In this lesson, we wile explore the properties of light and how it creates the colors we see.
 
-(Colorful picture goes here)
+<!--TODO: Needs an pretty image of light(s).-->
+(Colorful picture of lights goes here)
 
 ### Rainbows and White Light
-Now that we've explained colors and how to mix colors, let's talk about white light and rainbows. When light travels from the Sun, or most other sources of illumination, we perceive it as lacking a hue. We call this white light. In reality, white light is a mixture of many colors of light. This mixture can be seen by using a prism to split out the different colors that make up the mixture.
+Let's begin by talking about white light and rainbows. When light travels from the Sun, or most other sources of illumination, we perceive it as lacking a hue. We call this white light. In reality, white light is a mixture of many colors of light. This mixture can be seen by using a prism to split out the different colors that make up the mixture.
 
+<!--TODO: Needs a picture of a prism with colored lights.-->
 (Prism picture here)
 
 Do you see how white light goes into the prism, and the entire spectrum of colors emerges from the other side?
 
-But what is happening here? We are witnessing the process of dispersion when we see white light spread out into its different colors. Dispersion is a property of waves, and through this process, waves are separated by their wavelengths.  Light is a wave, and different colors of light have different wavelengths. 
+What is happening here? We are witnessing the process of dispersion when we see white light spread out into its different colors. Dispersion is a property of waves, and causes waves to be separated by their wavelengths. By studying the dispersion of light, and many other studies we won't discuss here, we have learned that light is an electromagnetic wave. Let's break that idea down and study the general properties of waves and then look more at electromagnetic waves.
 
-
-(Reflection, absorption, transmission (partial, by color) (super cool widget can be added here))
-
-When we look at an object, we see its color. But how does this happen? When the light in the room hits the object, some of the light is absorbed by the object, while the rest is reflected. If an object absorbs all colors of light except for blue, the blue light wave will reflect off of the object and travel until it hits another object. When it hits our eyes, we see the blue light and describe the object as blue. In order to see any object, some of the light must be reflected to your eye. The wavelengths of light that are reflected control what color we see.
 
 ## Light is an Electromagnetic Wave
 
-Now we know that light is a wave. More specifically, light is an electromagnetic wave, and we will get to that later. First, let's explore the properties of a wave.
-
-### Waves
+### Waves are travelling motion
 
 A wave is a repetitive motion traveling through a medium. Some examples are shown in the table below.
 
@@ -49,12 +45,12 @@ A wave is a repetitive motion traveling through a medium. Some examples are show
 |Sound wave   	|Air  	
 |Light   	|?
 
-Interestingly, a wave can travel long distances without needing the medium itself to travel that full distance. For instance, the crests of an ocean wave can be ridden all the way to the shore, but very little of the water actually travels along, water mainly moves up and down at the same location. Similarly, when we hear a sound, our ears are detecting vibrations in nearby air, not air that traveled a long distance. 
+Interestingly, a wave can travel long distances without needing the medium itself to travel that full distance. For instance, the crests of an ocean wave can be ridden all the way to the shore, but very little of the water actually moves closer to shore. The water mainly moves up and down at the same location. A great example of this is when a crowd of people performs "The Wave" while at a sports event. If everyone works together, the wave can propagate throughout the entire stadium, but each individual remains in their original location, simply moving up and down when the wave passes through them. 
 
-(some pictures might be very helpful here)
+<!--TODO: Picture of people doing the wave? or something else showing waves.-->
  	  
 Waves are characterized by their frequency, wavelength, and speed. 
-Wavelength describes the length of one wave. 
+Wavelength describes the length of one wave, or the distance between the peaks. 
 You can use the widget below to change the wavelength of a wave.
 
 <style>
@@ -158,7 +154,7 @@ waveUpdate();
 
 The frequency of a wave describes how often the repetitive motion of a wave is repeated. 
 We describe this motion in Hertz (Hz), which stands for the number of waves per second. 
-For example, a wave with a frequency of 3 Hz, 
+For example, a wave with a frequency of 3 Hz 
 would repeat its motion 3 times in one second.
 Finally, the speed of a wave describes how fast the wave moves forward.
 Sound and light are both waves,
@@ -166,23 +162,22 @@ and if you've ever watched a thunderstorm you know that you see lightning flash 
 The speed of a sound wave is 343 m/s (meters per second),
 while the speed of light is 299,792,458 m/s. 
 
+
 ::: Comparison
-A highway spped limit of 60 miles per hour is about 27 m/s.
+For comparison, a highway speed limit of 60 miles per hour is about 27 m/s.
 ::: 
 
-Now that we've described all the properties of waves, let's discuss how this relates to light and color.
-If you change the wavelength of the light wave in our widget, the wave changes color. This is an analogy to real life,
-because the wavelength of a light ray corresponds to its color. 
+<!--TODO: Image of a sin wave with wave length and frequency labeled.-->
+(add image of both wave length and frequency for one wave)
 
-However, our eyes can only detect a small range of the possible wavelengths of light. 
-This range is called the visible spectrum.
-Looking at the whole spectrum of light, called the Electromagnetic spectrum, 
-you can see that different wavelengths of light create microwaves that help to heat your food, and radio waves, that allow you to listen to your favorite music.
-We interact with these waves in other ways, 
-but we can't see microwaves or radio waves like we can see visible light. 
+You may have noticed that, as you changed the wavelength in the widget, the color also changed. This is because the wavelength of light controls its color. Red light has a longer wavelength than blue light. Light with a wavelength between 380 and 700 nanometers  is called the visible spectrum (1 nanometer is 0.000000001 meter). This is the light that our eyes can see; but light exists outside of that range. The whole spectrum of light is called the Electromagnetic Spectrum.
+Looking at this spectrum, you can see that different wavelengths of light create microwaves that help to heat your food, and radio waves that allow you to listen to your favorite music. we can't see microwaves or radio waves like we can see visible light
+but 2e interact with these waves in other ways. 
 
+<!--TODO: Picture of the electromagnetic spectrum.-->
 (Insert picture of the electromagnetic spectrum)
 
+### Electromagnetic Waves
 Finally, the question of what is an electromagnetic wave? 
 Electromagnetic waves are waves, like sound waves or ocean waves. 
 Instead of traveling vibrations in the air or water, they are vibrations of… it is complicated.
@@ -191,6 +186,17 @@ Studying its inner workings has led to some of the greatest discoveries in Physi
 Instead of retracing the steps of physicists over two hundred years,
 we have focused on describing light, based on what we can measure about it, such as its wavelength. 
 
-::: Electricity and Magnetism
-If you are interested in learning more about electricity and magnetism, two topics related to electromagnetic waves, go to their lessons.
+
+::: further-reading
+ Electricity and Magnetism: If you are interested in learning more about electricity and magnetism, two topics related to electromagnetic waves, go to their lessons.
 :::
+
+### Light waves and color
+
+Let's wrap up by discussing how light waves impact the colors we see. 
+When we look at an object, we see its color. When the light in the room hits the object, some of the light is absorbed by the color pigments in the object, while the rest is reflected. If an object absorbs all colors of light except for blue, the blue light wave will reflect off of the object and travel until it hits another object. When it hits our eyes, we see the blue light and describe the object as blue. In order to see any object, some of the light must be reflected to your eye. The wavelengths of light that are reflected control what color we see.
+
+
+<!--TODO: Picture of reflection and absorption.-->
+
+
