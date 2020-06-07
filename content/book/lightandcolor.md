@@ -169,7 +169,7 @@ The speed of a sound wave is 343 m/s (meters per second),
 while the speed of light is 299,792,458 m/s. 
 
 
-::: Comparison
+::: comparison
 For comparison, a highway speed limit of 60 miles per hour is about 27 m/s.
 ::: 
 
@@ -197,10 +197,29 @@ we have focused on describing light, based on what we can measure about it, such
  Electricity and Magnetism: If you are interested in learning more about electricity and magnetism, two topics related to electromagnetic waves, go to their lessons.
 :::
 
-### Light waves and color
+### Light Waves and Color
 
 Let's wrap up by discussing how light waves impact the colors we see. 
-When we look at an object, we see its color. When the light in the room hits the object, some of the light is absorbed by the color pigments in the object, while the rest is reflected. If an object absorbs all colors of light except for blue, the blue light wave will reflect off of the object and travel until it hits another object. When it hits our eyes, we see the blue light and describe the object as blue. In order to see any object, some of the light must be reflected to your eye. The wavelengths of light that are reflected control what color we see.
+
+When we look at an object, we see its color. 
+But how does this happen? 
+The answer to this question can be explained in terms of reflection, absorption, transmission. 
+When light travels through different mediums, interesting things happen. 
+A neat property of light is that it travels differently through different materials. 
+One example is that light travels at a different speed in the air than in water. 
+Each time light travels from one material to another, it can be reflected, absorbed, or transmitted. 
+When light is reflected, it bounces off the interface where the materials meet and travels in the other direction. 
+When it's absorbed, the light stops traveling in the new material, and this can result in heat. 
+This is why your black shirt gets hot in the sun; it absorbs a lot of light. 
+Finally, light can be transmitted, which means the light keeps traveling in the new material. 
+
+When the light in the room hits the object, some of the light is absorbed by the color pigments in the object, 
+while the rest is reflected. 
+If an object absorbs all colors of light except for blue, 
+the blue light wave will reflect off of the object and travel until it hits another object. 
+When it hits our eyes, we see the blue light and describe the object as blue. 
+In order to see any object, some of the light must be reflected to your eye. 
+The wavelengths of light that are reflected control what color we see.
 
 
 <!--TODO: Picture of reflection and absorption.-->
