@@ -19,7 +19,7 @@ todo: refer to the science of vision page, but focus on electromagnetism
 ## Colors
 Whether you're walking through a lush forest or art museum, our world is full of colors. Colors make a painting beautiful and make our homes and schools much more fun. Colors also have practical uses such as the colors on a stoplight or color-coding your class notes. Let's explore how colors are made, mixed, and emerge from light!
 
-(Colorful picture goes here)
+<!--TODO: Colorful picture goes here -->
 
 ### Mixing Colors with Pigments
 
@@ -32,8 +32,7 @@ Pigments work by absorbing certain wavelengths of light and reflecting others. T
 When painting in elementary school, you likely were given a red, yellow, and blue to use to mix the rest of the colors you wanted. With these colors you can create more colors such as green, orange, and purple. Your teacher may have taught you at this time the difference between primary and secondary colors. Primary colors are those that can't be mixed from other colors. While secondary colors can be created from mixing other colors.  
 
 
-(maybe insert image of typical "primary blue, red, yellow" paint bottles)
-
+<!--TODO: maybe insert image of typical "primary blue, red, yellow" paint bottles -->
 
 Using these three paints, you may have struggled to get a true purple or the exact green that you imagined. The reason for this is that the red and blue that you were given are not true primary colors. On the other hand, a typical printer uses true primary colors: yellow, cyan (a fancy word for the specific blue that is a primary color), and magenta (the specific color word for the red that is a primary color). 
 
@@ -41,7 +40,7 @@ Using these three paints, you may have struggled to get a true purple or the exa
 
 In elementary school you weren't taught these names for the colors because they are seen as "too hard." The important thing from this lesson isn't remembering these words, but the idea of mixing colors. 
 
-(add a picture of a painting pallet or easel?)
+<!--TODO: add a picture of a painting pallet or easel? -->
 
 If you have ever mixed colors using yellow, cyan, and magenta, you may have noticed how many more colors you can mix using them then instead of what we think of as "primary red, yellow, and blue." Now let us experiment a bit with mixing colors using the widget below.
 
