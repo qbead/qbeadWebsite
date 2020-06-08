@@ -24,7 +24,7 @@ microcontroller. The name of the language is `C++`.
 # Variables
 
 Computer programs do one thing and one thing only: process information. That
-information can be when a click happened in a game, or the recording of your
+information can be the time when a click happened in a game, or the recording of your
 voice on your phone, or it can be a picture of the road in a self-driving car.
 Before processing such data, we need a way to instruct the computer to store it
 in its memory. This is done through **variables**.
@@ -42,7 +42,7 @@ int my_special_integer = 6;
 
 ```
 
-This reserves a cell in the memory of the computer, lets us refer to that cell
+This reserves a location in the memory of the computer, called a cell, lets us refer to that cell
 by the name `my_special_integer` and stores the value `6` in it. We can name
 the variable however we wish as long as it is a single word or multiple words
 separated with underscores. We usually pick names that tell us something about
@@ -66,12 +66,15 @@ involve circles.
 # Functions
 
 Functions, also known as routines, are commands that take a few variables and
-do something useful with them. Maybe they compute a new value based on the
-variables that were given to them and then they provide this value so that we
-can store it for future use. Or maybe they do something that affects the world
+do something useful with them. They could compute a new value based on the
+variables that were given to them and then provide this value so that we
+can store it for future use. They could also do something that affects the world
 around them, like blinking an LED, playing a sound, or sending a message.
 
-Here is an example of the former, a function called `max` that takes two
+Some functions are already built into the programming language, similar to how
+a new cell phone comes with pre-installed apps. We can use these functions without
+having to write them ourselves.
+Here is an example function called `max` that takes two
 numbers and it returns the larger of the two.
 
 ```c++
@@ -80,7 +83,8 @@ int number_b = 7;
 int resulting_number = max(number_a, number_b);
 ```
 
-The value stored in `resulting_number` in this case would be `7`.
+The value stored in `resulting_number` in this case would be `7`. The variables
+number\_a and number\_b are called the `arguments` of the function. 
 
 Here is another example where one of the arguments for our function is
 specified directly, without first being stored in a variable. In this case, the
@@ -91,12 +95,12 @@ int my_number = 6;
 int resulting_number = max(my_number, 8);
 ```
 
-As you have seen the typical syntactic rules for the use of a function is to
+As you have seen, the typical syntactic rules for the use of a function is to
 put its arguments inside parenthesis immediately after the name of the
 function. You might have seen this in math class with trigonometric functions
 like $\sin{(x)}$ or $\cos{(x)}$.
 
-We can nest functions and use arithmetic operations as well. For instance, here
+We can nest functions and use arithmetic operations on the arguements as well. For instance, here
 we will use two more functions, `min` which returns the smaller of two numbers
 and `sqrt` which returns the square root of a given number. Could you explain
 why the value stored in `resulting_number` in the following example is `4`?
@@ -117,23 +121,22 @@ modern programming languages.
 
 # Creating your own function
 
-The programming language may not always have all the functions you
-need. A large part of programming is creating your own functions and building
-interesting complex useful functions out of small simple functions. Here we
-will give an example of how to write your own function that takes two numbers
-and it returns their average. If the two numbers are $x$ and $y$, we want to
-compute $\frac{x+y}{2}$. We will name the function `avg`. Let us first write
+A large part of programming is creating your own functions and building
+interesting, complex and useful functions out of small simple functions. Here we
+give an example of how to write your own function that takes two numbers, $x$ and $y$,
+and it returns their average, $\frac{x+y}{2}$. 
+We will name the function `avg`. Let us first write
 an example of how this function would be used if it already existed:
 
 ```c++
-float number_a = 3.5;
-float number_b = 2.5;
-float resulting_number = avg(number_a, number_b);
+float x = 3.5;
+float y = 2.5;
+float resulting_number = avg(x, y);
 ```
 
-In this code example `resulting_number` will have the value of `3.0`.
+In this code example, `resulting_number` will have the value of `3.0`.
 
-To define this new function we need to write down its name, together with the type of data it will be producing and followed by a block of computational instructions:
+To define this new function, we need to write down its name, together with the type of data it will be producing, followed by a set of computational instructions:
 
 ```c++
 float avg(float first_argument, float second_argument) {
@@ -141,17 +144,21 @@ float avg(float first_argument, float second_argument) {
 }
 ```
 
-The very first `float` in this piece of code is necessary because the computer
+Let's step through each part of this code.
+
+* `float avg(.....)`: The very first `float` in this piece of code is necessary because the computer
 needs to know what type of values the function will provide (in this case they
-are fractions). Then we have the name we have picked for our function, namely
-`avg`. Then, in parentheses, just as if we are applying the function, we have a
-list of the arguments the function will be taking. We have to specify their
-types, so we wrote `float` to denote working with fractions. We also gave
+are fractions). Then we have the name we have picked for our function, `avg`. 
+* `float first_argument, float second_argument` : In parentheses, we have a list of the arguments the function
+will be taking. Unlike when we call the function, we have to specify their types, 
+so we wrote `float` to denote working with fractions. We also gave
 temporary names for these arguments, so that we can refer to them in the
-expression that is making up the function. In our case, this expression is
-simply the sum of the two arguments multiplied by one-half. We use the `return`
-keyword just in front of this expression, in order to mark it as the result
-coming from (**returned by**) this function.
+expression that is making up the function. 
+* `{ ... }` : The open and close bracket surround the instructions of our code.
+* `0.5*(first_argument+second_argument) ` : This where the math happens in our
+function. It is simply the sum of the two arguments multiplied by one-half. 
+* `return` : a keyword to mark this line as code as the result
+coming from (**returned by**) this function to be returned to the code that called the function.
 
 We can have multiple sequential instructions inside the block in case the
 computation is more difficult. That is the purpose of the figure brackets `{ }`
@@ -169,11 +176,11 @@ float root4(float x) {
 # Functions that do not return values
 
 Functions are occasionally used to change something in the environment of the
-device instead of as advanced calculators. Such functions do not return a value
+device instead of being used as advanced calculators. Such functions do not return a value
 and so they do not need any extra variables in which to store their output. One
 example of such a function would be the `delay` function that simply pauses the
 computer for a specified time. The following example will stop everything and
-wait for 1000 milliseconds which is one second:
+wait for 1000 milliseconds (which is one second):
 
 ```c++
 delay(1000);
