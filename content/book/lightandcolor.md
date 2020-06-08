@@ -17,7 +17,7 @@ todo: refer to the science of vision page, but focus on electromagnetism
 
 
 ## Lights
-As you are reading this lesson, you are most likely surrounded by a variety of lights. Light emits from your computer screen and from the lights in your room. Light enters through your windows or open door. Light even comes from you refrigerator when you get a snack! You interact with light in various ways throughout your day; and while most of this light is white, some is more colorful. Some examples are street lights, the light creating the colors on this page, and the light coming from a hot stove top. In this lesson, we wile explore the properties of light and how it creates the colors we see.
+As you are reading this lesson, you are most likely surrounded by a variety of lights. Light emits from your computer screen and from the lights in your room. Light enters through your windows or open door. Light even comes from you refrigerator when you get a snack! You interact with light in various ways throughout your day; and while most of this light is white, some is more colorful. Some examples are street lights, the light creating the colors on this page, and the light coming from a hot stove top. In this lesson, we will explore the properties of light and how it creates the colors we see.
 
 <!--TODO: Needs an pretty image of light(s).-->
 (Colorful picture of lights goes here)
@@ -28,7 +28,7 @@ Let's begin by talking about white light and rainbows. When light travels from t
 <!--TODO: Needs a picture of a prism with colored lights.-->
 (Prism picture here)
 
-Do you see how white light goes into the prism, and the entire spectrum of colors emerges from the other side?
+Do you see how white light goes into the prism and the entire spectrum of colors emerges from the other side?
 
 What is happening here? We are witnessing the process of dispersion when we see white light spread out into its different colors. Dispersion is a property of waves, and causes waves to be separated by their wavelengths. By studying the dispersion of light, and many other studies we won't discuss here, we have learned that light is an electromagnetic wave. Let's break that idea down and study the general properties of waves and then look more at electromagnetic waves.
 
@@ -47,8 +47,9 @@ A wave is a repetitive motion traveling through a medium. Some examples are show
 
 Interestingly, a wave can travel long distances without needing the medium itself to travel that full distance. For instance, the crests of an ocean wave can be ridden all the way to the shore, but very little of the water actually moves closer to shore. The water mainly moves up and down at the same location. A great example of this is when a crowd of people performs "The Wave" while at a sports event. If everyone works together, the wave can propagate throughout the entire stadium, but each individual remains in their original location, simply moving up and down when the wave passes through them. 
 
-<!--TODO: Picture of people doing the wave? or something else showing waves.-->
- 	  
+<!--TODO: Picture of various types of waves and maybe of people doing the wave? -->
+
+### Properties of Waves 	  
 Waves are characterized by their frequency, wavelength, and speed. 
 Wavelength describes the length of one wave, or the distance between the peaks. 
 You can use the widget below to change the wavelength of a wave.
@@ -163,9 +164,10 @@ We describe this motion in Hertz (Hz), which stands for the number of waves per 
 For example, a wave with a frequency of 3 Hz 
 would repeat its motion 3 times in one second.
 Finally, the speed of a wave describes how fast the wave moves forward.
-Sound and light are both waves,
-and if you've ever watched a thunderstorm you know that you see lightning flash before you hear the boom of thunder.
-The speed of a sound wave is 343 m/s (meters per second),
+Sound and light are both waves with different speeds. During a thunderstorm,
+you see lightning flash before you hear the boom of thunder even though both
+waves started in the same location.
+This is because the speed of a sound wave is 343 m/s (meters per second),
 while the speed of light is 299,792,458 m/s. 
 
 
@@ -176,17 +178,17 @@ For comparison, a highway speed limit of 60 miles per hour is about 27 m/s.
 <!--TODO: Image of a sin wave with wave length and frequency labeled.-->
 (add image of both wave length and frequency for one wave)
 
-You may have noticed that, as you changed the wavelength in the widget, the color also changed. This is because the wavelength of light controls its color. Red light has a longer wavelength than blue light. Light with a wavelength between 380 and 700 nanometers  is called the visible spectrum (1 nanometer is 0.000000001 meter). This is the light that our eyes can see; but light exists outside of that range. The whole spectrum of light is called the Electromagnetic Spectrum.
-Looking at this spectrum, you can see that different wavelengths of light create microwaves that help to heat your food, and radio waves that allow you to listen to your favorite music. we can't see microwaves or radio waves like we can see visible light
-but 2e interact with these waves in other ways. 
+You may have noticed that, as you changed the wavelength in the widget, the color also changed. This is because the wavelength of light controls its color with red light having a long wavelength and purple light having a shorter wavelength. Light with a wavelength between 380 and 700 nanometers  is called the visible spectrum (1 nanometer is 0.000000001 meter). This is the light that our eyes can see; but light exists outside of that range. The whole spectrum of light is called the Electromagnetic Spectrum.
+Looking at this spectrum, you can see that different wavelengths of light create microwaves that help to heat your food, and radio waves that allow you to listen to your favorite music. We can't see microwaves or radio waves like we can see visible light
+but we interact with these waves in other ways. 
 
 <!--TODO: Picture of the electromagnetic spectrum.-->
 (Insert picture of the electromagnetic spectrum)
 
 ### Electromagnetic Waves
-Finally, the question of what is an electromagnetic wave? 
+Finally, if visible light is part of the Electromagnetic Spectrum, what exactly is an electromagnetic wave? 
 Electromagnetic waves are waves, like sound waves or ocean waves. 
-Instead of traveling vibrations in the air or water, they are vibrations of… it is complicated.
+Instead of traveling vibrations in the air or water, they are vibrations of … it is complicated.
 There are many metaphors we can use to describe the medium of electromagnetic waves.
 Studying its inner workings has led to some of the greatest discoveries in Physics: general relativity and quantum mechanics.
 Instead of retracing the steps of physicists over two hundred years,
@@ -224,4 +226,7 @@ The wavelengths of light that are reflected control what color we see.
 
 <!--TODO: Picture of reflection and absorption.-->
 
-
+::: further-reading 
+To learn more about colors and how the different waelengths combine to make the colors we see, go to the lesson on Color Theory.
+To learn more about how our eyes percieve color, go to the lesson on the Biology of Sight
+::: 
