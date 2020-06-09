@@ -5,7 +5,7 @@ keywords: physical computing, computer science, arduino, programming
 
 Writing a computer program of your own, whether a desktop app, an interactive
 website, or the hidden brain of a robot, starts by writing a sequence of
-instructions in one of the many available computer languages. Some such
+instructions in one of the many available computer languages. Some
 languages are incredibly complex and picky about the correctness of the written
 instructions: a small "grammar" error and the computer cannot understand what
 you wanted from it. Other languages are simpler, and even somewhat lenient in
@@ -24,15 +24,15 @@ microcontroller. The name of the language is `C++`.
 # Variables
 
 Computer programs do one thing and one thing only: process information. That
-information can be the time when a click happened in a game, or the recording of your
-voice on your phone, or it can be a picture of the road in a self-driving car.
-Before processing such data, we need a way to instruct the computer to store it
-in its memory. This is done through **variables**.
+information can be the time of a mouse click, an voice mail on your phone,
+or a picture of the road taken by a self-driving car.
+Before processing such data, we have to tell the computer to store it
+in its memory. This is done using **variables**.
 
-For the moment we will discuss only two types of variables: integer numbers and
-fractions.  Integers are easier for the computer to work with, because it does
-not need to track all the data behind the decimal point. Treating them
-separately from fractions lets us have faster code, which is especially
+We will only discuss two types of variables: integer numbers and
+decimals, although others exist.  Integers are easier for the computer to work with because it does
+not need to store all of the data after the decimal point. Treating them
+separately from decimals lets us have faster code, which is especially
 important for small computers like ours.
 
 To **define** a new integer variable you need the following line in your code:
@@ -42,16 +42,15 @@ int my_special_integer = 6;
 
 ```
 
-This reserves a location in the memory of the computer, called a cell, lets us refer to that cell
-by the name `my_special_integer` and stores the value `6` in it. We can name
-the variable however we wish as long as it is a single word or multiple words
-separated with underscores. We usually pick names that tell us something about
-the purpose of the variable. We can put whatever value we wish as long as it is
-not too big (bigger than roughly 30 000). There are ways to store bigger
-numbers too, but they take more memory, which we might not have much of in a
-small wearable micro computer.
+This reserves a location in the memory of the computer, 
+lets us refer to that location by the name `my_special_integer`,
+and stores the value `6` there. We can name
+the variable anything as long as it is a single word (or multiple words
+separated with underscores). We usually pick names that tell us something about
+the purpose of the variable. In this variable type, we can store any integer
+we want as long as it is not too large (larger than roughly 30,000).
 
-Similarly, if we want to work with fractions, we use the variable type `float`
+If we want to work with decimals, we use the variable type `float`
 instead of `int`. The name comes from the early history of computers and is
 unimportant for our purposes.
 
@@ -59,23 +58,30 @@ unimportant for our purposes.
 float pi = 3.1415;
 ```
 
-Above we stored the number $\pi$ in a variable with the name `pi`, which would
-let us use it in other parts of our code if we need to do computations that
+Here we stored part of the number $\pi$ in a variable with the name `pi`. We could
+then use this variable in other parts of our code to do computations that
 involve circles.
+
+Notice that through all of our code we have used the equality sign `=` to mean
+"store the value on the right in the memory cell on the left". This differs
+from the usual mathematical meaning of the sign, which is usually means
+"check if the left and right side have the same value". You can blame early
+computer scientists and their laziness for the misuse of this sign in most
+modern programming languages.
 
 # Functions
 
 Functions, also known as routines, are commands that take a few variables and
-do something useful with them. They could compute a new value based on the
-variables that were given to them and then provide this value so that we
-can store it for future use. They could also do something that affects the world
-around them, like blinking an LED, playing a sound, or sending a message.
+do something useful with them. A function could act like a calculator,
+computing a new value based on the variables that are given to it. A function
+could also do something that affects the world
+around it, like blinking an LED, playing a sound, or sending a message.
 
-Some functions are already built into the programming language, similar to how
-a new cell phone comes with pre-installed apps. We can use these functions without
+Most programing languages have some functions built into them, similar to how
+a new cellphone comes with pre-installed apps. We can use these functions without
 having to write them ourselves.
 Here is an example function called `max` that takes two
-numbers and it returns the larger of the two.
+numbers as input and returns the larger number.
 
 ```c++
 int number_a = 5;
@@ -83,8 +89,15 @@ int number_b = 7;
 int resulting_number = max(number_a, number_b);
 ```
 
-The value stored in `resulting_number` in this case would be `7`. The variables
-number\_a and number\_b are called the `arguments` of the function. 
+Let's step through each part of this code.
+
+* `int number_a = 5` assigns the value of 5 to the integer variable `number_a`
+* `int number_b = 7` assigns the value of 7 to the integer variable `number_b`
+* `int resulting_number = max(....)` store the result of the function `max(...)` in the integer variable `resulting number`
+* `max(number_a, number_b)` calls the function `max(...)` with two arguments,
+`number_a` and `number_b`, and returns the larger number.
+
+The value stored in `resulting_number` in this case would be `7`. 
 
 Here is another example where one of the arguments for our function is
 specified directly, without first being stored in a variable. In this case, the
@@ -95,7 +108,7 @@ int my_number = 6;
 int resulting_number = max(my_number, 8);
 ```
 
-As you have seen, the typical syntactic rules for the use of a function is to
+As you have seen, the typical syntax rules for the use of a function are to
 put its arguments inside parenthesis immediately after the name of the
 function. You might have seen this in math class with trigonometric functions
 like $\sin{(x)}$ or $\cos{(x)}$.
@@ -112,19 +125,13 @@ int number_b = 7;
 int resulting_number = max(sqrt(number_a-1) * 2, min(number_b, 2));
 ```
 
-Notice that through all of this code we have used the equality sign `=` to mean
-"store the value on the right in the memory cell on the left". This differs
-from the usual mathematical meaning of the sign, which is usually meant to say
-"check if the left and right side have the same value". You can blame early
-computer scientists and their laziness for the misuse of this sign in most
-modern programming languages.
 
-# Creating your own function
+# Creating your own functions
 
 A large part of programming is creating your own functions and building
 interesting, complex and useful functions out of small simple functions. Here we
 give an example of how to write your own function that takes two numbers, $x$ and $y$,
-and it returns their average, $\frac{x+y}{2}$. 
+and returns their average, $\frac{x+y}{2}$. 
 We will name the function `avg`. Let us first write
 an example of how this function would be used if it already existed:
 
@@ -148,22 +155,21 @@ Let's step through each part of this code.
 
 * `float avg(.....)`: The very first `float` in this piece of code is necessary because the computer
 needs to know what type of values the function will provide (in this case they
-are fractions). Then we have the name we have picked for our function, `avg`. 
+are decimals). Then we have the name we have picked for our function, `avg`. 
 * `float first_argument, float second_argument` : In parentheses, we have a list of the arguments the function
 will be taking. Unlike when we call the function, we have to specify their types, 
-so we wrote `float` to denote working with fractions. We also gave
-temporary names for these arguments, so that we can refer to them in the
-expression that is making up the function. 
-* `{ ... }` : The open and close bracket surround the instructions of our code.
+so we wrote `float` to denote working with decimals. We also gave
+temporary names for these arguments so that we can refer to them in the function. 
+* `{ ... }` : The open and close bracket surround the instructions of our function.
 * `0.5*(first_argument+second_argument) ` : This where the math happens in our
 function. It is simply the sum of the two arguments multiplied by one-half. 
-* `return` : a keyword to mark this line as code as the result
-coming from (**returned by**) this function to be returned to the code that called the function.
+* `return` : a keyword to state that the result of this line of code should 
+be returned to the code that called the function.
 
-We can have multiple sequential instructions inside the block in case the
+We can have multiple sequential instructions inside the block when the
 computation is more difficult. That is the purpose of the figure brackets `{ }`
 - to separate all the code that defines our function from the rest of the
-program. For instance, here we will show how to compute the 4th root of a
+program that might be in the same file. For instance, here we will show how to compute the 4th root of a
 number:
 
 ```c++
@@ -177,17 +183,18 @@ float root4(float x) {
 
 Functions are occasionally used to change something in the environment of the
 device instead of being used as advanced calculators. Such functions do not return a value
-and so they do not need any extra variables in which to store their output. One
-example of such a function would be the `delay` function that simply pauses the
-computer for a specified time. The following example will stop everything and
-wait for 1000 milliseconds (which is one second):
+and are used without a variable needed to store their output. One
+example of such a function is the `delay` function that pauses the
+computer for a specified length time. The following example will stop everything and
+wait for 1000 milliseconds (which equals one second) before executing the next line:
 
 ```c++
 delay(1000);
 ```
 
-When creating our own functions of this type, we mark them as `void`, instead
-of `int` or `float` or something else, to denote that their returned value is
+When creating our own function of this type, we write the type of data it will
+be returning as `void`, instead of `int` or `float` or something else. 
+This denotes that the returned value is
 void or "empty". For instance, here we define a function that always pauses the
 program for exactly half a second:
 
@@ -199,10 +206,10 @@ void delay_half_a_second() {
 
 Notice how we did not need to use the `return` keyword. In this particular case
 we also did not have any parameters in the parentheses that defined our
-function, but we can very well have such parameters if we wish. For instance,
-this function takes numbers of seconds as its input and pauses the program for
-that long (by calculating the number of milliseconds corresponding to the given
-number of seconds and using the `delay` function).
+function, but we can have such parameters if we need them. For instance,
+this function takes the number of seconds as its input and pauses the program for
+that long. It does this by calculating the number of milliseconds corresponding to the provided
+number of seconds and then uses the `delay` function.
 
 ```c++
 void delay_seconds(int number_of_seconds) {
@@ -213,11 +220,12 @@ void delay_seconds(int number_of_seconds) {
 
 # Comments
 
-As the code we write grows more and more, it helps to add notes in the code to
-ourselves and our friends. That way it is easier to understand the purpose of
+As the code we write grows longer, it helps to add notes in the code to
+ourselves and our friends who might view our code.
+This makes it easier to understand the purpose of
 the code when we look at it again in the future. Such notes are usually called
-"comments", and they are completely ignored by the computer. In the language
-we are using they are denoted by a double slash `//` -- everything to the right
+"comments", and are completely ignored by the computer when it runs the code. In the language
+we are using, comments are denoted by a double slash `//` -- everything to the right
 of these symbols, until the end of the line, is a message for fellow humans. We
 will use such comments below in some more complicated examples of code.
 
@@ -227,23 +235,25 @@ will use such comments below in some more complicated examples of code.
 int my_test_variable = 5;
 ```
 
-# The first function to run when a program starts
+# Putting it all together
 
-After we have created all the variables we will need and all of our special
-functions that will help us do what we want, we need to actually start the
-program. But the program needs to know what to run first. In different
-languages this is done differently, but in our particular case we do it by
+After we have created all the variables and functions we need for our code do what we 
+want it to do, we need to actually start the
+program. To do this, the program needs to know what function to run first. In different
+languages this is done differently, but, in our particular case, we do it by
 defining two special functions: `setup` and `loop`. Our computer is instructed
-to run these functions first: It looks at the `setup` function and runs it
-first, before anything else. Usually this function is used to **set up** any
-settings we might need in advance. Then the computer repeatedly runs the `loop`
-function, which is named this way exactly because it **runs in a loop**.
+to run these functions first. It finds the `setup` function and runs it
+before anything else. Usually this function is used to **set up** any
+settings we need in advance. Then the computer repeatedly runs the `loop`
+function, which is named this way because it **runs in a loop**. To run 
+any of the other function we have written, we
+have to call the functions from the `loop` function.
 
 Here is a large example that includes all these features. It will use the
 `Serial.println()` function in order to send messages to the computer.
 
 ```c++
-// First we define a convenient pausing function
+// Here we define a convenient pausing function
 // that waits a given number of seconds
 void delay_seconds(int number_of_seconds) {
   int number_of_milliseconds = 1000 * number_of_seconds;
