@@ -24,16 +24,16 @@ microcontroller. The name of the language is `C++`.
 # Variables
 
 Computer programs do one thing and one thing only: process information. That
-information can be the time of a mouse click, an voice mail on your phone,
+information can be the time of a mouse click, a voicemail on your phone,
 or a picture of the road taken by a self-driving car.
 Before processing such data, we have to tell the computer to store it
 in its memory. This is done using **variables**.
 
-We will only discuss two types of variables: integer numbers and
-decimals, although others exist.  Integers are easier for the computer to work with because it does
+We will only discuss two types of variables: integers and
+decimals. Other types do exist, but we won't cover them here.  Integers are easier for the computer to work with because it does
 not need to store all of the data after the decimal point. Treating them
 separately from decimals lets us have faster code, which is especially
-important for small computers like ours.
+important for small computers like in the SpinWheel.
 
 To **define** a new integer variable you need the following line in your code:
 
@@ -62,9 +62,9 @@ Here we stored part of the number $\pi$ in a variable with the name `pi`. We cou
 then use this variable in other parts of our code to do computations that
 involve circles.
 
-Notice that through all of our code we have used the equality sign `=` to mean
+Notice that throughout all of our code we have used the equality sign `=` to mean
 "store the value on the right in the memory cell on the left". This differs
-from the usual mathematical meaning of the sign, which is usually means
+from the usual mathematical meaning of the sign, which usually means
 "check if the left and right side have the same value". You can blame early
 computer scientists and their laziness for the misuse of this sign in most
 modern programming languages.
@@ -72,9 +72,9 @@ modern programming languages.
 # Functions
 
 Functions, also known as routines, are commands that take a few variables and
-do something useful with them. A function could act like a calculator,
+do something useful with them. A function can act like a calculator,
 computing a new value based on the variables that are given to it. A function
-could also do something that affects the world
+can also do something that affects the world
 around it, like blinking an LED, playing a sound, or sending a message.
 
 Most programing languages have some functions built into them, similar to how
@@ -109,13 +109,13 @@ int resulting_number = max(my_number, 8);
 ```
 
 As you have seen, the typical syntax rules for the use of a function are to
-put its arguments inside parenthesis immediately after the name of the
+put its arguments inside parentheses immediately after the name of the
 function. You might have seen this in math class with trigonometric functions
 like $\sin{(x)}$ or $\cos{(x)}$.
 
-We can nest functions and use arithmetic operations on the arguements as well. For instance, here
+We can nest functions and use arithmetic operations on the arguments as well. For instance, here
 we will use two more functions, `min` which returns the smaller of two numbers
-and `sqrt` which returns the square root of a given number. Could you explain
+and `sqrt` which returns the square root of a given number. Can you explain
 why the value stored in `resulting_number` in the following example is `4`?
 Here is a hint: $\sqrt{5-1}=\sqrt{4}=2$.
 
@@ -125,11 +125,10 @@ int number_b = 7;
 int resulting_number = max(sqrt(number_a-1) * 2, min(number_b, 2));
 ```
 
-
 # Creating your own functions
 
 A large part of programming is creating your own functions and building
-interesting, complex and useful functions out of small simple functions. Here we
+interesting, complex, and useful functions out of small simple functions. Here we
 give an example of how to write your own function that takes two numbers, $x$ and $y$,
 and returns their average, $\frac{x+y}{2}$. 
 We will name the function `avg`. Let us first write
@@ -160,14 +159,14 @@ are decimals). Then we have the name we have picked for our function, `avg`.
 will be taking. Unlike when we call the function, we have to specify their types, 
 so we wrote `float` to denote working with decimals. We also gave
 temporary names for these arguments so that we can refer to them in the function. 
-* `{ ... }` : The open and close bracket surround the instructions of our function.
+* `{ ... }` : The curly brackets surround the instructions of our function.
 * `0.5*(first_argument+second_argument) ` : This where the math happens in our
 function. It is simply the sum of the two arguments multiplied by one-half. 
 * `return` : a keyword to state that the result of this line of code should 
 be returned to the code that called the function.
 
 We can have multiple sequential instructions inside the block when the
-computation is more difficult. That is the purpose of the figure brackets `{ }`
+computation is more difficult. That is the purpose of the curly brackets `{ }`
 - to separate all the code that defines our function from the rest of the
 program that might be in the same file. For instance, here we will show how to compute the 4th root of a
 number:
@@ -183,7 +182,7 @@ float root4(float x) {
 
 Functions are occasionally used to change something in the environment of the
 device instead of being used as advanced calculators. Such functions do not return a value
-and are used without a variable needed to store their output. One
+and don't need a variable to store their output. One
 example of such a function is the `delay` function that pauses the
 computer for a specified length time. The following example will stop everything and
 wait for 1000 milliseconds (which equals one second) before executing the next line:
@@ -195,7 +194,7 @@ delay(1000);
 When creating our own function of this type, we write the type of data it will
 be returning as `void`, instead of `int` or `float` or something else. 
 This denotes that the returned value is
-void or "empty". For instance, here we define a function that always pauses the
+empty or "void". For instance, here we define a function that always pauses the
 program for exactly half a second:
 
 ```c++
@@ -237,15 +236,15 @@ int my_test_variable = 5;
 
 # Putting it all together
 
-After we have created all the variables and functions we need for our code do what we 
+After we have created all the variables and functions we need for our code to do what we 
 want it to do, we need to actually start the
 program. To do this, the program needs to know what function to run first. In different
-languages this is done differently, but, in our particular case, we do it by
+languages this is done differently. In our particular case, we do it by
 defining two special functions: `setup` and `loop`. Our computer is instructed
 to run these functions first. It finds the `setup` function and runs it
 before anything else. Usually this function is used to **set up** any
 settings we need in advance. Then the computer repeatedly runs the `loop`
-function, which is named this way because it **runs in a loop**. To run 
+function, which is named this way because it **runs in a loop** (or repeats itself). To run 
 any of the other function we have written, we
 have to call the functions from the `loop` function.
 
