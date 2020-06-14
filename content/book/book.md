@@ -49,7 +49,7 @@ We are excited to provide you with this adventure guide, to be your companion on
 
 ## Map
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script src="/jquery.min.js"></script>
 <script src="/springy/springy.js"></script>
 <script src="/springy/springyui.js"></script>
 
