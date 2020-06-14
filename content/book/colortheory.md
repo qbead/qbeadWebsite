@@ -1,6 +1,6 @@
 ---
-title: Light and Color
-keywords: color, light, electromagnetism
+title: Color Theory
+keywords: color, light, electromagnetism, color theory, pigments, art
 ---
 
 ::: intro-box
