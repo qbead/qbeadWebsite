@@ -52,7 +52,8 @@ Interestingly, a wave can travel long distances without needing the medium itsel
 ### Properties of Waves 	  
 Waves are characterized by their frequency, wavelength, and speed. 
 Wavelength describes the length of one wave, or the distance between the peaks. 
-You can use the widget below to change the wavelength of a wave.
+You can use the widget below to change the wavelength of a wave
+(This widget will not display properly in Safari).
 
 <style>
 #wavewidget {
@@ -75,7 +76,7 @@ You can use the widget below to change the wavelength of a wave.
 }
 </style>
 <div id="wavewidget">
-<div>Pick a wavelength (it fades to black beyond the visible range):</div>
+<div>Pick a wavelength (Waves beyond the visible range are displayed as black):</div>
 <div>300nm <input style="width:80%;top:0.5rem;position:relative;" type="range" min="300" max="800" value="500" id="waveSlider"> 800nm</div>
 <div><span class="vis"><span id="waveView"></span>nm</span></div>
 <svg id="tagsvgwave" width="800" height="100" viewBox="0 0 800 100"> <defs> <path id="svgwave" fill=none stroke=black stroke-width="2" d="M0 50 C 40 90, 60 90, 100 50 C 140 10, 160 10, 200 50 C 240 90, 260 90, 300 50 C 340 10, 360 10, 400 50 C 440 90, 460 90, 500 50 C 540 10, 560 10, 600 50 C 640 90, 660 90, 700 50 C 740 10, 760 10, 800 50 C 840 90, 860 90, 900 50 C 940 10, 960 10, 1000 50 C 1040 90, 1060 90, 1100 50 C 1140 10, 1160 10, 1200 50 C 1240 90, 1260 90, 1300 50 C 1340 10, 1360 10, 1400 50 C 1440 90, 1460 90, 1500 50 C 1540 10, 1560 10, 1600 50 C 1640 90, 1660 90, 1700 50 C 1740 10, 1760 10, 1800 50 C 1840 90, 1860 90, 1900 50 C 1940 10, 1960 10, 2000 50 C 2040 90, 2060 90, 2100 50 C 2140 10, 2160 10, 2200 50 C 2240 90, 2260 90, 2300 50 C 2340 10, 2360 10, 2400 50 C 2440 90, 2460 90, 2500 50 C 2540 10, 2560 10, 2600 50 C 2640 90, 2660 90, 2700 50 C 2740 10, 2760 10, 2800 50 C 2840 90, 2860 90, 2900 50 C 2940 10, 2960 10, 3000 50 C 3040 90, 3060 90, 3100 50 C 3140 10, 3160 10, 3200 50 C 3240 90, 3260 90, 3300 50 C 3340 10, 3360 10, 3400 50 C 3440 90, 3460 90, 3500 50 C 3540 10, 3560 10, 3600 50 C 3640 90, 3660 90, 3700 50 C 3740 10, 3760 10, 3800 50 C 3840 90, 3860 90, 3900 50 C 3940 10, 3960 10, 4000 50 C 4040 90, 4060 90, 4100 50 C 4140 10, 4160 10, 4200 50 C 4240 90, 4260 90, 4300 50 C 4340 10, 4360 10, 4400 50 C 4440 90, 4460 90, 4500 50 C 4540 10, 4560 10, 4600 50 C 4640 90, 4660 90, 4700 50 C 4740 10, 4760 10, 4800 50 C 4840 90, 4860 90, 4900 50 C 4940 10, 4960 10, 5000 50 C 5040 90, 5060 90, 5100 50" /> </defs> <use xlink:href="#svgwave" x="0" y="0"> <animate attributeName="x" from="0" to="-200" dur="3s" repeatCount="indefinite"/> </use> </svg>
@@ -162,25 +163,29 @@ waveUpdate();
 The frequency of a wave describes how often the repetitive motion of a wave is repeated. 
 We describe this motion in Hertz (Hz), which stands for the number of waves per second. 
 For example, a wave with a frequency of 3 Hz 
-would repeat its motion 3 times in one second.
+repeats its motion 3 times in one second.
 Finally, the speed of a wave describes how fast the wave moves forward.
-Sound and light are both waves with different speeds. During a thunderstorm,
+Sound and light are both waves but they have different speeds. During a thunderstorm,
 you see lightning flash before you hear the boom of thunder even though both
 waves started in the same location.
 This is because the speed of a sound wave is 343 m/s (meters per second),
 while the speed of light is 299,792,458 m/s. 
 
 
-::: comparison
+::: further-reading
 For comparison, a highway speed limit of 60 miles per hour is about 27 m/s.
 ::: 
 
 <!--TODO: Image of a sin wave with wave length and frequency labeled.-->
 (add image of both wave length and frequency for one wave)
 
-You may have noticed that, as you changed the wavelength in the widget, the color also changed. This is because the wavelength of light controls its color with red light having a long wavelength and purple light having a shorter wavelength. Light with a wavelength between 380 and 700 nanometers  is called the visible spectrum (1 nanometer is 0.000000001 meter). This is the light that our eyes can see; but light exists outside of that range. The whole spectrum of light is called the Electromagnetic Spectrum.
+You may have noticed that, as you changed the wavelength in the widget, the color also changed. This is because the wavelength of light controls its color with red light having a long wavelength and purple light having a shorter wavelength. Light with a wavelength between 380 and 700 nanometers  is called the visible spectrum. This is the light that our eyes can see; but light exists outside of that range. The whole spectrum of light is called the Electromagnetic Spectrum.
 Looking at this spectrum, you can see that different wavelengths of light create microwaves that help to heat your food, and radio waves that allow you to listen to your favorite music. We can't see microwaves or radio waves like we can see visible light
 but we interact with these waves in other ways. 
+
+::: further-reading
+How small is a nanometer? There are 1,000,000,000 nanometers in one meter. For comparison,  human hair is about 50,000 nanometers in diameter.
+::: 
 
 <!--TODO: Picture of the electromagnetic spectrum.-->
 (Insert picture of the electromagnetic spectrum)
