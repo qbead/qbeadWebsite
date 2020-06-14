@@ -5,21 +5,17 @@ keywords: physical computing, computer science, arduino, programming
 
 Writing a computer program of your own, whether a desktop app, an interactive
 website, or the hidden brain of a robot, starts by writing a sequence of
-instructions in one of the many available computer languages. Some
-languages are incredibly complex and picky about the correctness of the written
-instructions: a small "grammar" error and the computer cannot understand what
-you wanted from it. Other languages are simpler, and even somewhat lenient in
-the format of the instructions written in them. Using such languages usually
-requires a more powerful computer, as it takes a lot of resources to teach a
-computer how to deal with even a fraction of the vagueness and imprecision of
-human languages.
-
-The vast majority of computer languages do share a number of patterns, just
-like many human languages share ideas like the distinction between a noun and a
+instructions in one of the many available computer languages. 
+In this lesson, we will use a very popular older
+language that runs well on simple computers like the SpinWheel's microcontroller.
+The name of this language is `C++`.
+While `C++` has a specific set of commands and rules used to write computer programs,
+the main ideas are common to other programming languages. In fact, the vast majority 
+of computer languages share the same patterns, just
+like how many human languages share ideas such as the distinction between a noun and a
 verb, or the difference between a word and a sentence. We will describe the
-most important such patterns in this chapter. We will use a very popular older
-language that runs well on limited hardware like the SpinWheel's
-microcontroller. The name of the language is `C++`.
+most important such patterns in this chapter. 
+
 
 # Variables
 
@@ -81,7 +77,8 @@ Most programing languages have some functions built into them, similar to how
 a new cellphone comes with pre-installed apps. We can use these functions without
 having to write them ourselves.
 Here is an example function called `max` that takes two
-numbers as input and returns the larger number.
+numbers as input and returns the larger number. The input values are also called the
+**arguments** of the function.
 
 ```c++
 int number_a = 5;
@@ -152,9 +149,9 @@ float avg(float first_argument, float second_argument) {
 
 Let's step through each part of this code.
 
-* `float avg(.....)`: The very first `float` in this piece of code is necessary because the computer
-needs to know what type of values the function will provide (in this case they
-are decimals). Then we have the name we have picked for our function, `avg`. 
+* `float avg(.....)`: The very first `float` specifies the type of data the
+function will produce (in this case they
+are decimals). This is followed by the name we have picked for our function, `avg`. 
 * `float first_argument, float second_argument` : In parentheses, we have a list of the arguments the function
 will be taking. Unlike when we call the function, we have to specify their types, 
 so we wrote `float` to denote working with decimals. We also gave
@@ -180,35 +177,31 @@ float root4(float x) {
 
 # Functions that do not return values
 
-Functions are occasionally used to change something in the environment of the
+Functions can also be used to change something in the environment of the
 device instead of being used as advanced calculators. Such functions do not return a value
 and don't need a variable to store their output. One
 example of such a function is the `delay` function that pauses the
-computer for a specified length time. The following example will stop everything and
-wait for 1000 milliseconds (which equals one second) before executing the next line:
+computer for the length of time specified by the input variable.
+In the following example, calling the `delay`
+function will pause the program for 1000 milliseconds 
+(which equals one second) before executing the next line:
 
 ```c++
+a = 1
 delay(1000);
+b = 5
 ```
 
-When creating our own function of this type, we write the type of data it will
-be returning as `void`, instead of `int` or `float` or something else. 
+While this built-in function is nice, what if we want to specify the delay in
+seconds instead of milliseconds? When writing our own functions that do not 
+have a return value, we specify the type of data that the function will
+be returning as `void`.
 This denotes that the returned value is
-empty or "void". For instance, here we define a function that always pauses the
-program for exactly half a second:
-
-```c++
-void delay_half_a_second() {
-  delay(500);
-}
-```
-
-Notice how we did not need to use the `return` keyword. In this particular case
-we also did not have any parameters in the parentheses that defined our
-function, but we can have such parameters if we need them. For instance,
-this function takes the number of seconds as its input and pauses the program for
-that long. It does this by calculating the number of milliseconds corresponding to the provided
-number of seconds and then uses the `delay` function.
+empty or "void". 
+Our new function takes the number of seconds as its input,
+calculates the number of milliseconds corresponding to the provided
+number of seconds and then uses the `delay` function to pause the program for that length of time.
+We do not need to use the `return` keyword because our function doesn't return a value.
 
 ```c++
 void delay_seconds(int number_of_seconds) {
@@ -216,6 +209,10 @@ void delay_seconds(int number_of_seconds) {
   delay(number_of_milliseconds);
 }
 ```
+
+
+
+
 
 # Comments
 
