@@ -4,7 +4,7 @@ keywords: color, light, electromagnetism
 ---
 
 ::: intro-box
-In this lesson, we'll introduce the concept of colors. We will also describe how the properties of light make the colors that we see.
+In this lesson, we'll talk more about the properties and how these lead to the colors that we see. 
 :::
 
 ::: warning :
@@ -227,6 +227,6 @@ The wavelengths of light that are reflected control what color we see.
 <!--TODO: Picture of reflection and absorption.-->
 
 ::: further-reading 
-To learn more about colors and how the different waelengths combine to make the colors we see, go to the lesson on Color Theory.
-To learn more about how our eyes percieve color, go to the lesson on the Biology of Sight
+To learn more about colors and how the different waelengths combine to make the colors we see, go to the lesson on [Color Theory](/colortheory).
+To learn more about how our eyes percieve color, go to the lesson on the [Biology of Sight](/sight).
 ::: 
