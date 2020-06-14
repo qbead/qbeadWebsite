@@ -224,20 +224,7 @@ Take a moment to play around with these and see if you can make your favorite co
 Did you notice how if you put the amount of blue at 0, but leave the red and green at 255 that you make yellow? This is different than mixing colors with paint! While yellow is a primary color for mixing paint, it isn't a primary color when mixing with light sources (green is instead!).
 
 ::: further-reading
-The reason this works has to do with how our eyes detect light and how our brains turn that into the image of the world that we see. To explore this more, go through the [Biology of Sight Adventure](/sight).
+The reason that there are three primary colors for mixing with light sources and pigments has to do with how our eyes detect light and how our brains turn that into the image of the world that we see. To explore this more, go through the [Biology of Sight Adventure](/sight).
 :::
-
-
-
-
-Here's a table to summarize these two different types of color mixing:
-
-<!--TODO: contextualize this table better-->
-
-|       | Pigments  | Light Sources  
-|---    |---  |---      |
-|Components       |Red, yellow, blue  |Red, green, blue    
-|White    |No components    |All components     
-|Black    |All components   |No components 
 
 
