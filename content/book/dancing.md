@@ -25,7 +25,7 @@ I imagine a box with a line through it where there is a dot on the line, and you
 
 Notice when you dragged your mouse, your screen lit up at different brightnesses and colors! Try moving your mouse faster and slower! Also, in different directions!
 
-As you can see, when you drag the mouse faster, the line gets more colorful! How fast or slow the mouse is moving is called speed. Now, did you also notice that if you dragged the mouse forward, then backward, the overall color changed? This is because we can assign a direction to our speed, and call it velocity! In our one dimensional case left or right, or perhaps positive and negative, tell us the direction we are moving.
+As you can see, when you drag the mouse faster, the line gets more colorful! How fast or slow the mouse is moving is called speed. Now, did you also notice that if you dragged the mouse forward, then backward, the overall color changed? This is because we can assign a direction to our speed, and call it velocity! In our one dimensional case, left or right, or perhaps positive and negative, tell us the direction we are moving.
 
 ## Linear motion: A Three Line Dance
 
