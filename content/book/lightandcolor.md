@@ -11,19 +11,15 @@ In this lesson, we'll talk more about the properties of light and how these lead
 This lesson is still under-development. Check back soon for more links and the full lesson!
 :::
 
-::: further-reading
-todo: refer to the science of vision page, but focus on electromagnetism
-:::
-
 
 ## Lights
-As you are reading this lesson, you are most likely surrounded by a variety of lights. Light emits from your computer screen and from the lights in your room. Light enters through your windows or open door. Light even comes from you refrigerator when you get a snack! You interact with light in various ways throughout your day; and while most of this light is white, some is more colorful. Some examples are street lights, the light creating the colors on this page, and the light coming from a hot stove top. In this lesson, we will explore the properties of light and how it creates the colors we see.
+As you are reading this lesson, you are most likely surrounded by a variety of lights. Light emits from your computer screen and from the lamps in your room. Light enters through your windows or open door. Light even comes from you refrigerator when you get a snack! You interact with light in various ways throughout your day; and while most of this light is white, some is more colorful. Some examples are street lights, the light creating the colors on this page, and the light coming from a hot stove top. In this lesson, we will explore the properties of light and how it creates the colors we see.
 
 <!--TODO: Needs an pretty image of light(s).-->
 (Colorful picture of lights goes here)
 
 ### Rainbows and White Light
-Let's begin by talking about white light and rainbows. When light travels from the Sun, or most other sources of illumination, we perceive it as lacking a hue. We call this white light. In reality, white light is a mixture of many colors of light. This mixture can be seen by using a prism to split out the different colors that make up the mixture.
+Let's begin by talking about white light and rainbows. When light travels from the Sun, or most other sources of illumination, we perceive it as lacking a hue. We call this white light. In reality, white light is a mixture of many colors of light. This mixture can be seen by using a prism to split apart the different colors that make up the mixture.
 
 <!--TODO: Needs a picture of a prism with colored lights.-->
 (Prism picture here)
@@ -52,8 +48,8 @@ Interestingly, a wave can travel long distances without needing the medium itsel
 ### Properties of Waves 	  
 Waves are characterized by their frequency, wavelength, and speed. 
 Wavelength describes the length of one wave, or the distance between the peaks. 
-You can use the widget below to change the wavelength of a wave
-(This widget will not display properly in Safari).
+You can use the widget below to change the wavelength of a wave.
+(This widget will not display properly in Safari.)
 
 <style>
 #wavewidget {
@@ -176,7 +172,7 @@ For comparison, a highway speed limit of 60 miles per hour is about 27 m/s.
 <!--TODO: Image of a sin wave with wave length and frequency labeled.-->
 (add image of both wave length and frequency for one wave)
 
-You may have noticed that, as you changed the wavelength in the widget, the color also changed. This is because the wavelength of light controls its color with red light having a long wavelength and purple light having a shorter wavelength. Light with a wavelength between 380 and 700 nanometers is called the visible spectrum. (For comparison,  human hair is about 50,000 nanometers in diameter.)
+You may have noticed that, as you changed the wavelength in the widget, the color also changed. This is because the wavelength of light controls its color with red light having a long wavelength and purple light having a shorter wavelength. Light with a wavelength between 380 and 700 nanometers is called the visible spectrum. (For comparison, a human hair is about 50,000 nanometers in diameter.)
 This is the light that our eyes can see; but light exists outside of that range. The whole spectrum of light is called the Electromagnetic Spectrum.
 Looking at this spectrum, you can see that different wavelengths of light create microwaves that help to heat your food, and radio waves that allow you to listen to your favorite music. We can't see microwaves or radio waves like we can see visible light
 but we interact with these waves in other ways. 
@@ -196,25 +192,24 @@ we have focused on describing light, based on what we can measure about it, such
 
 
 ::: further-reading
- Electricity and Magnetism: If you are interested in learning more about electricity and magnetism, two topics related to electromagnetic waves, go to their lessons.
+If you are interested in learning more topic related to electromagnetic waves, go to the lessons on [Electricity]() and [Magnetism](/magnetism).
 :::
+<!--TODO: Add link to electricity page.-->
 
-### Light Waves and Color
+## Light Waves and Color
 
 Let's wrap up by discussing how light waves impact the colors we see. 
 
-When we look at an object, we see its color. 
-But how does this happen? 
-The answer to this question can be explained in terms of reflection, absorption, transmission. 
-When light travels through different mediums, interesting things happen. 
 A neat property of light is that it travels differently through different materials. 
 One example is that light travels at a different speed in the air than in water. 
 Each time light travels from one material to another, it can be reflected, absorbed, or transmitted. 
 When light is reflected, it bounces off the interface where the materials meet and travels in the other direction. 
-When it's absorbed, the light stops traveling in the new material, and this can result in heat. 
+When it's absorbed, the light doesn't travel in the new material but is absorbed by the particles in the material instead. This can result in heat. 
 This is why your black shirt gets hot in the sun; it absorbs a lot of light. 
-Finally, light can be transmitted, which means the light keeps traveling in the new material. 
+Finally, light can be transmitted, which means the light keeps traveling in the new material, although it may have a different speed or direction.
 
+When we look at an object, we see its color. 
+But how does this happen?
 When the light in the room hits the object, some of the light is absorbed by the color pigments in the object, 
 while the rest is reflected. 
 If an object absorbs all colors of light except for blue, 
