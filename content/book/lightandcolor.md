@@ -170,22 +170,17 @@ you see lightning flash before you hear the boom of thunder even though both
 waves started in the same location.
 This is because the speed of a sound wave is 343 m/s (meters per second),
 while the speed of light is 299,792,458 m/s. 
-
-
-::: further-reading
 For comparison, a highway speed limit of 60 miles per hour is about 27 m/s.
-::: 
+
 
 <!--TODO: Image of a sin wave with wave length and frequency labeled.-->
 (add image of both wave length and frequency for one wave)
 
-You may have noticed that, as you changed the wavelength in the widget, the color also changed. This is because the wavelength of light controls its color with red light having a long wavelength and purple light having a shorter wavelength. Light with a wavelength between 380 and 700 nanometers  is called the visible spectrum. This is the light that our eyes can see; but light exists outside of that range. The whole spectrum of light is called the Electromagnetic Spectrum.
+You may have noticed that, as you changed the wavelength in the widget, the color also changed. This is because the wavelength of light controls its color with red light having a long wavelength and purple light having a shorter wavelength. Light with a wavelength between 380 and 700 nanometers is called the visible spectrum. (For comparison,  human hair is about 50,000 nanometers in diameter.)
+This is the light that our eyes can see; but light exists outside of that range. The whole spectrum of light is called the Electromagnetic Spectrum.
 Looking at this spectrum, you can see that different wavelengths of light create microwaves that help to heat your food, and radio waves that allow you to listen to your favorite music. We can't see microwaves or radio waves like we can see visible light
 but we interact with these waves in other ways. 
 
-::: further-reading
-How small is a nanometer? There are 1,000,000,000 nanometers in one meter. For comparison,  human hair is about 50,000 nanometers in diameter.
-::: 
 
 <!--TODO: Picture of the electromagnetic spectrum.-->
 (Insert picture of the electromagnetic spectrum)
