@@ -46,3 +46,58 @@ This is only a scaffolding for the (printed and electronic) textbook that will b
 ## Community Rules
 
 We are excited to provide you with this adventure guide, to be your companion on your journey of exploration with the SpinWheel. Each adventure and lesson includes a comment section in which you are encouraged to ask questions or help other adventurers understand the world around them. Comments will be moderated by our volunteers, so we ask you to be polite and helpful and to expect the same from others.
+
+## Map
+
+<script src="/jquery.min.js"></script>
+<script src="/springy/springy.js"></script>
+<script src="/springy/springyui.js"></script>
+
+<script>
+var graphJSON = {
+  "nodes": [
+    "Quick Start",
+    "Biology of Sight",
+    "Stroboscope",
+    "Animations and Patterns",
+    "Step Counter",
+    "Dancing Companion",
+    "Compass",
+    "Programming Patterns",
+    "Light and Color",
+    "Color Theory",
+    "Inertial Reference Frames",
+    "Rotation",
+    "Magnetism"
+  ],
+  "edges": [
+    ["Quick Start", "Biology of Sight"],
+    ["Quick Start", "Stroboscope"],
+    ["Quick Start", "Programming Patterns"],
+    ["Biology of Sight", "Light and Color"],
+    ["Biology of Sight", "Color Theory"],
+    ["Programming Patterns", "Step Counter"],
+    ["Programming Patterns", "Animations and Patterns"],
+    ["Animations and Patterns", "Dancing Companion"],
+    ["Dancing Companion", "Compass"],
+    ["Compass", "Magnetism"],
+    ["Dancing Companion", "Inertial Reference Frames"],
+    ["Dancing Companion", "Rotation"],
+    ["Step Counter", "Inertial Reference Frames"],
+  ]
+};
+
+jQuery(function(){
+  var graph = new Springy.Graph();
+  graph.loadJSON(graphJSON);
+
+  var springy = jQuery('#springymap').springy({
+    graph: graph,
+    stiffnes: 200,
+    repulsion: 2000,
+    damping: 0.5
+  });
+});
+</script>
+
+<canvas id="springymap" width="800" height="600" />

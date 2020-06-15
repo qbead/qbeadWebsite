@@ -26,7 +26,7 @@ Before processing such data, we have to tell the computer to store it
 in its memory. This is done using **variables**.
 
 We will only discuss two types of variables: integers and
-decimals. Other types do exist, but we won't cover them here.  Integers are easier for the computer to work with because it does
+decimals. Other types do exist, but we won't cover them here. Integers are easier for a computer to work with because it does
 not need to store all of the data after the decimal point. Treating them
 separately from decimals lets us have faster code, which is especially
 important for small computers like in the SpinWheel.
@@ -67,11 +67,11 @@ modern programming languages.
 
 # Functions
 
-Functions, also known as routines, are commands that take a few variables and
-do something useful with them. A function can act like a calculator,
+In computer programming, functions are commands that take a few variables and
+do something useful with them. Functions are reusable pieces of code. A function can act like a calculator,
 computing a new value based on the variables that are given to it. A function
 can also do something that affects the world
-around it, like blinking an LED, playing a sound, or sending a message.
+around it, like blinking an LED, playing a sound, or sending a message. 
 
 Most programing languages have some functions built into them, similar to how
 a new cellphone comes with pre-installed apps. We can use these functions without
@@ -109,6 +109,8 @@ As you have seen, the typical syntax rules for the use of a function are to
 put its arguments inside parentheses immediately after the name of the
 function. You might have seen this in math class with trigonometric functions
 like $\sin{(x)}$ or $\cos{(x)}$.
+
+<!--TODO: Computer science and math both use the word function in slightly different ways. Consider adding a link that talks about this more.-->
 
 We can nest functions and use arithmetic operations on the arguments as well. For instance, here
 we will use two more functions, `min` which returns the smaller of two numbers

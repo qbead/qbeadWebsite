@@ -4,7 +4,7 @@ keywords: color, light, electromagnetism
 ---
 
 ::: intro-box
-In this lesson, we'll talk more about the properties and how these lead to the colors that we see. 
+In this lesson, we'll talk more about the properties of light and how these lead to the colors that we see. 
 :::
 
 ::: warning :
