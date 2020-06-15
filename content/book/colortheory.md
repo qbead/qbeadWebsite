@@ -29,12 +29,12 @@ If you've ever painted before, you’ve probably mixed colors on a pallet. When 
 Pigments work by absorbing certain wavelengths of light and reflecting others. To read more about how light is a wave, check out our [light and color lesson](/lightandcolor).
 :::
 
-When painting in elementary school, you likely were given a red, yellow, and blue to use to mix the rest of the colors you wanted. With these colors you can create more colors such as green, orange, and purple. Your teacher may have taught you at this time the difference between primary and secondary colors. Primary colors are those that can't be mixed from other colors. While secondary colors can be created from mixing other colors.  
+When painting in elementary school, you likely were given red, yellow, and blue to use to mix the rest of the colors you wanted. With these colors you can create more colors such as green, orange, and purple. Your teacher may have taught you the difference between primary and secondary colors. Primary colors are those that can't be mixed from other colors while secondary colors can be created by mixing other colors.  
 
 
 <!--TODO: maybe insert image of typical "primary blue, red, yellow" paint bottles -->
 
-Using these three paints, you may have struggled to get a true purple or the exact green that you imagined. The reason for this is that the red and blue that you were given are not true primary colors. On the other hand, a typical printer uses true primary colors: yellow, cyan (a fancy word for the specific blue that is a primary color), and magenta (the specific color word for the red that is a primary color). 
+Using these three paints, you may have struggled to get a true purple or the exact green that you imagined. The reason for this is that the red and blue that you were given are not true primary colors. The true primary colors can be seen in a typical printer that uses yellow, cyan (a fancy word for the specific blue that is a primary color), and magenta (the specific color word for the red that is a primary color). 
 
 <!--TODO: add an animation/widget/image showing where red and magenta are on the color wheel -->
 
@@ -42,7 +42,7 @@ In elementary school you weren't taught these names for the colors because they 
 
 <!--TODO: add a picture of a painting pallet or easel? -->
 
-If you have ever mixed colors using yellow, cyan, and magenta, you may have noticed how many more colors you can mix using them then instead of what we think of as "primary red, yellow, and blue." Now let us experiment a bit with mixing colors using the widget below.
+If you have ever mixed colors using yellow, cyan, and magenta, you may have noticed how many more colors you can mix using them instead of what we think of as "primary red, yellow, and blue." Experiment a bit with mixing colors using the widget below.
 
 <style>
 #scolortests {
@@ -140,12 +140,12 @@ Experimenting with this widget, you may have been able to make green from mixing
 
 
 ::: further-reading
-Did you notice how if you wanted to get a darker green, you could add magenta? Adding a color's "complement" is actually a more effective way to make a darker color then adding black. Adding magenta makes a darker green because red is green's complementary color. Complementary colors are opposite each other on the color wheel. This website talks more about [complementary colors](https://www.thesprucecrafts.com/definition-of-complementary-colors-2577513). 
+Did you notice how if you wanted to get a darker green, you could add magenta? Adding magenta makes a darker green because red is green's complementary color. Adding a color's "complement" is actually a more effective way to make a darker color then adding black. Complementary colors are opposite each other on the color wheel. This website talks more about [complementary colors](https://www.thesprucecrafts.com/definition-of-complementary-colors-2577513). 
 :::
 
 ### Mixing Colors With Light 
 
-When we make colors with light sources, color mixing works differently. Your computer or tv screen works by creating colors using an LED display using only three colors of light. When we mix paint, our primary colors are magenta (red), cyan (blue), and yellow. When we create color with an LED display, instead we vary the amount of green, red, and blue, which we can think of as the three digital primary colors.
+When we make colors with light sources, color mixing works differently. Your computer or tv screen works by creating colors using an LED display using only three colors of light. When we mix paint, our primary colors are magenta (red), cyan (blue), and yellow. When we create color with an LED display instead, we vary the amount of green, red, and blue, which we can think of as the three digital primary colors.
 
 The widget below shows the three digital primary colors, which we can combine in amounts from 0 to 255. Looking at the widget below, notice how with all three slide bars at 255, the box at the right is white. By adjusting the relative amount of green, red, and blue using the slide bars, you can change the color displayed.
 
