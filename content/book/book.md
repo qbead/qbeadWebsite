@@ -33,9 +33,10 @@ This is only a scaffolding for the (printed and electronic) textbook that will b
 2. Rotation
 3. Pendulums and Vibrations
 4. Inertial reference frames / Free fall
-5. Light and Color
-6. Magnetism
-7. Electricity
+5. [Light and Color](/lightandcolor)
+6. [Color Theory](/colortheory)
+7. Magnetism
+8. Electricity
 
 ## Engineer’s Diary
 
