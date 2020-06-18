@@ -7,18 +7,23 @@ header-image: /images/banners/stepcounter.png
 ::: intro-box
 A step counter needs to detect motion,
 record the movement,
-and display the total.
+and display the total number of steps taken.
 The SpinWheel has a motion sensor that can deal with the first task,
 a small controller (computer) that can record this data,
 and a number of LEDs that can be used as a display.
 Here we will see how to put these features together to make our own custom step counter.
 :::
 
-To start, plug the SpinWheel into your computer and open up an "empty" sketch in the Arduino software. If you need help remembering how to do this, you can get a recap of how to connect your SpinWheel to your computer in our ["Quick Start Guide"](/quickstart).
+To start, plug the SpinWheel into your computer and open up an "empty" sketch in the Arduino software. If you need help remembering how to do this, you can get a recap of how to connect your SpinWheel to your computer in our [Quick Start Guide](/quickstart).
 
 ## From an Empty Sketch
 
-We will build our Step Counter program in this empty sketch. A good first step is to write some simple test code that just prints a few messages, confirming that your device is still functioning. For instance, copy the following code into your file. This code, once running on the SpinWheel, will repeatedly send the message "I am working!" to the computer that your SpinWheel is attached to. As always, we will add comments to the code, so that the purpose of each line is explained. (A comment is a line of code that is not run by the computer, but meant to be interpreted by humans. In this code, comment lines start with `//`). 
+We will build our Step Counter program step by step, starting with this empty sketch.
+A good first step is to write some simple test code that just prints a few messages, confirming that your device is still functioning. For instance, copy the following code into your file. This code, once running on the SpinWheel, will repeatedly send the message "I am working!" to the computer that your SpinWheel is attached to. As always, we will add comments to the code, so that the purpose of each line is explained. (A comment is a line of code that is not run by the computer, but meant to be interpreted by humans. In this code, comment lines start with `//`).
+
+::: further-reading
+You can consult our [Programming Patterns page](/progpatterns) to remind yourself how to read the computer code shown below.
+:::
 
 ```cpp
 #include "SpinWearables.h"
@@ -58,7 +63,7 @@ If you want to learn more about what vectors are and how they are used by mathem
 :::
 
 A convenient way to get this "magnitude" is to calculate $\sqrt{a_x^2+a_y^2+a_z^2}$,
-where $a_x$ is the acceleration in the x direction that was returned by the `SpinWheel.readIMU()` function, and so on.
+where $a_x$ is the acceleration in the x direction that was read by the `SpinWheel.readIMU()` function, $a_y$ corresponds to the y direction, and $a_z$ corresponds to the z direction.
 The code to do this operation looks like `sqrt(pow(SpinWheel.ax,2) + pow(SpinWheel.ay,2) + pow(SpinWheel.az,2))`.
 We will save this value in the variable `total_acceleration`.
 
@@ -95,15 +100,17 @@ You might have noticed that we are currently only detecting motion; we are not a
 Our next task is to change the SpinWheel's LEDs based on the motion data we have collected. Having visual feedback at each stage of our work makes it easier to detect errors in our code. We will use the `setLargeLEDsUniform` function to turn all 8 of the large LEDs on at the same time. We will use an equal mixture of red, green, and blue, in order to make them light up in white.
 
 ::: further-reading
-To further explore why we can trick our brains to perceive a red, blue, and green LED really close together as white, check out the ["Biology of Sight" activity](/sight).
+To further explore why we can trick our brains to perceive a mixture of red, green, and blue colors as white, check out the ["Biology of Sight" activity](/sight).
 :::
 
-The intensity of each color will be proportional to the detected acceleration. However, you might have noticed that the `total_acceleration` value is 1, not 0, at rest. This is because the motion sensor (called an accelerometer) cannot distinguish between the force of gravity acting on it at all times, and the forces of inertia acting on it when you shake it. To account for that, we subtract 1 from `total_acceleration`. This is how we obtain `kinematic_acceleration = total_acceleration - 1`. "Kinematic" is a fancy word physicists use to refer to things related to motion. We calculate intensity based on that value with `intensity = 20*kinematic_acceleration` and use it in the `setLargeLEDsUniform` function. We chose a factor of 20 in order to make the LEDs brighter.
+The intensity of each color will be proportional to the detected acceleration. However, you might have noticed that the `total_acceleration` value is 1, not 0, at rest. This is because the motion sensor (called an accelerometer) cannot distinguish between the force of gravity acting on it at all times, and the forces of inertia acting on it when you shake it.
+To account for that, we subtract 1 (the magnitude of gravity) from `total_acceleration`.
+This is how we obtain `kinematic_acceleration = total_acceleration - 1`. "Kinematic" is a fancy word physicists use to refer to things related to motion. We calculate intensity based on that value with `intensity = 20*kinematic_acceleration` and use it in the `setLargeLEDsUniform` function. We chose a factor of 20 in order to make the LEDs brighter.
 
-Below you can see the code in its entirety, and <a href="#stepcounter-sim1"target="_self">at the bottom of the page</a> you can try running it on a virtual SpinWheel.
+Below you can see the code to perform this task.
 
 ::: further-reading
-There are a lot of intricate facts about motion and gravity that relate to why our motion sensor can not distinguish between the two. You can read more about it in the section on ["Inertial reference frames and Free fall"](./inertia), which will also explain why `total_acceleration` at rest is 1g. Einstein himself was thinking about this everyday fact when he was developing the general theory of relativity.
+There are a lot of intricate facts about motion and gravity that relate to why our motion sensor can not distinguish between the two. You can read more about it in the section on ["Inertial reference frames and Free fall"](./inertia), which will also explain why `total_acceleration` at rest, as measured by our sensor, is 1 unit. Einstein himself was thinking about this everyday fact when he was developing the general theory of relativity.
 :::
 
 ```cpp
@@ -141,10 +148,10 @@ void loop() {
 
 ## Counting Steps
 
-Finally, we can meet goal: using the SpinWheel to display all of our detected motion to show how much we have moved over time. We will simply add up the values for "kinematic_acceleration". For this, we don't have to be particularly precise: we just want one number that contains some information about the total motion we have exerted. We can call that variable `total_motion` and each time we detect motion we update it with `total_motion = total_motion + conversion_factor * kinematic_acceleration`. We introduced the small number `conversion_factor` so that we keep the value of `total_motion` growing slowly.
+Finally, we can achieve our goal: using the SpinWheel to display all detected motion, showing how much we have moved over time. We will simply add up the values for "kinematic_acceleration". For this, we don't have to be particularly precise: we just want one number that contains some information about the total motion we have exerted. We can call that variable `total_motion` and each time we detect motion we update it with `total_motion = total_motion + conversion_factor * kinematic_acceleration`. We introduced the small number `conversion_factor` so that we keep the value of `total_motion` growing slowly.
 
 
-We only want motions of a certain size to be counted as steps. For example, if you take a step, we want that to be counted, but we don't want slight movements such as the slight movement of the hand holding your SpinWheel to be counted.
+We only want motions of a certain size to be counted as steps. For example, if you take a step, we want that to be counted, but we don't want slight movements, such as the jitter of the hand holding your SpinWheel, to be counted.
 
 We can do this by introducing a minimum `threshold` under which motion is not counted.
 We do this by using an `if` statement of the form `if (kinematic_acceleration>threshold)`.
@@ -156,6 +163,9 @@ If the threshold is too low, all the small vibrations detected by the sensor are
 falsely inflating the total sum.
 However, by setting the threshold higher, we are able to count only the three very noticeable strong motions (i.e. the peaks that approach a value of 1 on the y-axis):
 they actually correspond to real steps and need to be counted.
+But if we set the threshold too high, then none of the motions are counted, and once again, the stepcounter will not work properly.
+
+<!--TODO: Make the plot fit with the rest of the aesthetics. Maybe use rough.js -->
 
 <script src='/chart/Chart.bundle.min.js'></script>
 <div><input style="width:30%" type="range" min="0" max="100" value="20" id="thrSlider"> Use this slider to set the threshold.</div>
@@ -231,6 +241,8 @@ thrUpdate();
 </script>
 
 Finally, we use the 12 smaller LEDs in order to show the value of `total_motion`. If `total_motion` is 1, we light up only the first LED. If it is 5, we light up the first five LEDs, and so on. We use the `SpinWheel.setSmallLEDs()` function to do this.
+
+Below you can see the code in its entirety, and <a href="#stepcounter-sim1">at the bottom of the page</a> you can try running it on a virtual SpinWheel.
 
 ```cpp
 #include "SpinWearables.h"
