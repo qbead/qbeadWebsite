@@ -4,45 +4,37 @@ keywords: color, light, electromagnetism, color theory, pigments, art
 ---
 
 ::: intro-box
-In this lesson, we'll introduce the concept of colors. We will also describe how the properties of light make the colors that we see.
-:::
-
-::: warning :
-This lesson is still under-development. Check back soon for more links and the full lesson!
-:::
-
-::: further-reading
-todo: refer to the science of vision page, but focus on electromagnetism
+Human perception of light and color has many curious features rooted in biology and physics. However, there is a more immediate practical discipline, called Color Theory, that deals with the engineering questions of what are the minimum number of pigments (or colored lights) we can use to create any other color. We will briefly explore it here.
 :::
 
 
 ## Colors
+
 Whether you're walking through a lush forest or art museum, our world is full of colors. Colors make a painting beautiful and make our homes and schools much more fun. Colors also have practical uses such as the colors on a stoplight or color-coding your class notes. Let's explore how colors are made, mixed, and emerge from light!
 
-<!--TODO: Colorful picture goes here -->
+![image credit to Pikrepo](/images/bookpics/assorted_paint_kit.jpg "image credit to Pikrepo")
 
 ### Mixing Colors with Pigments
 
-If you've ever painted before, you’ve probably mixed colors on a pallet. When we are painting, we are using the pigments in our paint to create color. The idea of using pigments to create color is used in our clothes, painting our houses and even coloring our food. 
+If you've ever painted before, you’ve probably mixed colors on a palette. When we are painting, we are using the pigments in our paint to reflect light of only certain color. The idea of using pigments to create color is used in our clothes, painting our houses, and even coloring our food. 
 
 ::: further-reading
-Pigments work by absorbing certain wavelengths of light and reflecting others. To read more about how light is a wave, check out our [light and color lesson](/lightandcolor).
+Pigments work by absorbing certain components of light and reflecting others. To read more about colors as components of light, check out our [Light and Color lesson](/lightandcolor).
 :::
 
 When painting in elementary school, you likely were given red, yellow, and blue to use to mix the rest of the colors you wanted. With these colors you can create more colors such as green, orange, and purple. Your teacher may have taught you the difference between primary and secondary colors. Primary colors are those that can't be mixed from other colors while secondary colors can be created by mixing other colors.  
 
-
 <!--TODO: maybe insert image of typical "primary blue, red, yellow" paint bottles -->
 
-Using these three paints, you may have struggled to get a true purple or the exact green that you imagined. The reason for this is that the red and blue that you were given are not true primary colors. The true primary colors can be seen in a typical printer that uses yellow, cyan (a fancy word for the specific blue that is a primary color), and magenta (the specific color word for the red that is a primary color). 
+Using these three paints, you may have struggled to get a true purple or the exact green that you imagined. The reason for this is that the red and blue that you were given are not true primary colors. The true primary colors can be seen in a typical printer that uses yellow, cyan (a fancy word for the specific blue that is a primary color), and magenta (the specific color word for the hue of red that is a primary color). 
 
 <!--TODO: add an animation/widget/image showing where red and magenta are on the color wheel -->
 
-In elementary school you weren't taught these names for the colors because they are seen as "too hard." The important thing from this lesson isn't remembering these words, but the idea of mixing colors. 
+In elementary school you weren't taught these names for the colors because they are seen as "too hard". The important thing from this lesson isn't remembering these words, but the idea of mixing colors. 
 
 <!--TODO: add a picture of a painting pallet or easel? -->
 
-If you have ever mixed colors using yellow, cyan, and magenta, you may have noticed how many more colors you can mix using them instead of what we think of as "primary red, yellow, and blue." Experiment a bit with mixing colors using the widget below.
+If you have ever mixed colors using yellow, cyan, and magenta, you may have noticed how many more colors you can mix using them instead of what we wrongly think of as "primary red, yellow, and blue". You can experiment with such mixtures by adjusting the sliders below.
 
 <style>
 #scolortests {
@@ -136,8 +128,11 @@ schangeColor();
 </script>
 </div>
  	  
-Experimenting with this widget, you may have been able to make green from mixing together cyan and yellow or orange from yellow and magenta. You may have noticed that you could also make the color red that is often introduced in elementary school as a primary color by mixing together magenta and yellow.
+Experimenting with this widget, you may have been able to make green from mixing together cyan and yellow or orange from yellow and magenta. You may have noticed that you could also make the color red that is often introduced in elementary school as a primary color by mixing together magenta and yellow. 
 
+![Printers use the same principle of mixing different amounts of magenta, cyan, and yellow, in order to reflect only the desired colors. The [halftone technique](https://en.wikipedia.org/wiki/Halftone) is a good example, where microscopic dots of different sizes and colors are used to make the illusion of a smooth color at a distance. (image credit to Wikimedia)](/images/bookpics/halftone.png)
+
+<!--TODO: experiment where you have a green leaf but you illuminate it only with red light and all you see is the leaf looking black... maybe even say that this is why growth lights are mostly red / chlorophyll is green>-->
 
 ::: further-reading
 Did you notice how if you wanted to get a darker green, you could add magenta? Adding magenta makes a darker green because red is green's complementary color. Adding a color's "complement" is actually a more effective way to make a darker color then adding black. Complementary colors are opposite each other on the color wheel. This website talks more about [complementary colors](https://www.thesprucecrafts.com/definition-of-complementary-colors-2577513). 
@@ -218,6 +213,8 @@ document.getElementById("ablue").oninput = achangeColor;
 achangeColor();
 </script>
 </div>
+
+![An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background. (image credit to Wikimedia)](/images/bookpics/lcd_pixels_macro.jpg "An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background")
 
 Take a moment to play around with these and see if you can make your favorite color!
 
