@@ -1,10 +1,12 @@
 ---
 title: Light and Color
 keywords: color, light, electromagnetism
+header-image: /images/banners/strobe_lights.jpg
+
 ---
 
 ::: intro-box
-The physical properties of light are important for our understanding of color. Here we will introduce how physcists think about light and what properties define it. Most importantly, we will see how these properties relate to the color we see.
+The physical properties of light are important for our understanding of color. Here we introduce how physcists think about light and the properties that define it. Most importantly, we will see how these properties relate to the color we see.
 :::
 
 ::: warning :
@@ -15,14 +17,12 @@ This lesson is still under-development. Check back soon for more links and the f
 ## Lights
 As you are reading this lesson, you are most likely surrounded by a variety of lights. Light emits from your computer screen and from the lamps in your room. Light enters through your windows or open door. Light even comes from you refrigerator when you get a snack! You interact with light in various ways throughout your day; and while most of this light is white, some is more colorful. Some examples are street lights, the light creating the colors on this page, and the light coming from a hot stove top. In this lesson, we will explore the properties of light and how it creates the colors we see.
 
-<!--TODO: Needs an pretty image of light(s).-->
-(Colorful picture of lights goes here)
 
 ### Rainbows and White Light
 Let's begin by talking about white light and rainbows. When light travels from the Sun, or most other sources of illumination, we perceive it as lacking a hue. We call this white light. In reality, white light is a mixture of many colors of light. This mixture can be seen by using a prism to split apart the different colors that make up the mixture.
 
-<!--TODO: Needs a picture of a prism with colored lights.-->
-(Prism picture here)
+![White light being split into colors by a prism.](/images/bookpics/optical-glass-triangular-prism.jpg "Picture of a white light being split into colors by a prism")
+
 
 Do you see how white light goes into the prism and the entire spectrum of colors emerges from the other side?
 
@@ -170,7 +170,7 @@ For comparison, a highway speed limit of 60 miles per hour is about 27 m/s.
 
 
 <!--TODO: Image of a sin wave with wave length and frequency labeled.-->
-(add image of both wave length and frequency for one wave)
+(add image of both wavelength and frequency for one wave)
 
 You may have noticed that, as you changed the wavelength in the widget, the color also changed. This is because the wavelength of light controls its color with red light having a long wavelength and purple light having a shorter wavelength. Light with a wavelength between 380 and 700 nanometers is called the visible spectrum. (For comparison, a human hair is about 50,000 nanometers in diameter.)
 This is the light that our eyes can see; but light exists outside of that range. The whole spectrum of light is called the Electromagnetic Spectrum.
@@ -179,7 +179,10 @@ but we interact with these waves in other ways.
 
 
 <!--TODO: Picture of the electromagnetic spectrum.-->
-(Insert picture of the electromagnetic spectrum)
+![The Electromagnetic Spectrum](/images/bookpics/EM_spectrum.png "The Electromagnetic Spectrum")
+
+https://commons.wikimedia.org/wiki/File:EM_spectrumrevised.png
+
 
 ### Electromagnetic Waves
 Finally, if visible light is part of the Electromagnetic Spectrum, what exactly is an electromagnetic wave? 
