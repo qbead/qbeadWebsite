@@ -44,17 +44,18 @@ and stores the value `6` there. We can name
 the variable anything as long as it is a single word (or multiple words
 separated with underscores). We usually pick names that tell us something about
 the purpose of the variable. In this variable type, we can store any integer
-we want as long as it is not too large (larger than roughly 30,000).
+we want as long as it is not too large
+(no larger than roughly 30 000, due to limitations of how this computer stores integers).
 
 If we want to work with decimals, we use the variable type `float`
 instead of `int`. The name comes from the early history of computers and is
-unimportant for our purposes.
+unimportant for our purposes (how the decimal point can "float" between the digits).
 
 ```c++
 float pi = 3.1415;
 ```
 
-Here we stored part of the number $\pi$ in a variable with the name `pi`. We could
+Here we stored an approximation of the number $\pi$ in a variable with the name `pi`. We could
 then use this variable in other parts of our code to do computations that
 involve circles.
 
@@ -154,7 +155,7 @@ Let's step through each part of this code.
 * `float avg(.....)`: The very first `float` specifies the type of data the
 function will produce (in this case they
 are decimals). This is followed by the name we have picked for our function, `avg`. 
-* `float first_argument, float second_argument` : In parentheses, we have a list of the arguments the function
+* `float first_argument, float second_argument`: In parentheses, we have a list of the arguments the function
 will be taking. Unlike when we call the function, we have to specify their types, 
 so we wrote `float` to denote working with decimals. We also gave
 temporary names for these arguments so that we can refer to them in the function. 
@@ -177,6 +178,14 @@ float root4(float x) {
 }
 ```
 
+Maybe the functions `avg` and `root4` seem too redundant to you,
+and you would prefer to always write `(x+y)/2` instead of `avg(x,y)`.
+This is quite valid feeling for such short functions,
+but as you build more complex programs you will have longer pieces of code
+that would be cumbersome to repeat every time.
+Functions let you have a shorthand notation,
+so you do not need to make such repetitions.
+
 # Functions that do not return values
 
 Functions can also be used to change something in the environment of the
@@ -189,9 +198,9 @@ function will pause the program for 1000 milliseconds
 (which equals one second) before executing the next line:
 
 ```c++
-a = 1
+a = calculation1();
 delay(1000);
-b = 5
+b = calculation2();
 ```
 
 While this built-in function is nice, what if we want to specify the delay in
@@ -243,9 +252,7 @@ defining two special functions: `setup` and `loop`. Our computer is instructed
 to run these functions first. It finds the `setup` function and runs it
 before anything else. Usually this function is used to **set up** any
 settings we need in advance. Then the computer repeatedly runs the `loop`
-function, which is named this way because it **runs in a loop** (or repeats itself). To run 
-any of the other function we have written, we
-have to call the functions from the `loop` function.
+function, which is named this way because it **runs in a loop** (or repeats itself).
 
 Here is a large example that includes all these features. It will use the
 `Serial.println()` function in order to send messages to the computer.
