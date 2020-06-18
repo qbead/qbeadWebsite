@@ -4,7 +4,7 @@ keywords: color, light, electromagnetism
 ---
 
 ::: intro-box
-In this lesson, we'll talk more about the properties of light and how these lead to the colors that we see. 
+The physical properties of light are important for our understanding of color. Here we will introduce how physcists think about light and what properties define it. Most importantly, we will see how these properties relate to the color we see.
 :::
 
 ::: warning :
