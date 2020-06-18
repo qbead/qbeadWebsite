@@ -13,6 +13,8 @@ This lesson is still under-development. Check back soon for more links and the f
 
 
 <!--TODO: Intro will go here.-->
+This lesson will focus on understanding the many things around us that spin. Whether it's a frisbee, a tire wheel, a dancer, or even an amusement park ride, rotation is all around us. When objects are moving in straight lines, we call this linear motion. In previous lessons, we’ve discussed how to describe linear motion in terms of velocity. How about rotational motion? What tools do we have to explain this motion?
+
 
 # Angular Displacement
 When dealing with circular motion or rotation (for instance, for a ball on a string or a horse on a merry-go-round), then it is useful to describe its position using an angle ($\theta$). The change between the original angle of the ball and its final angle is typically specified as the change in $\theta$ (or $\Delta \theta$) and is known as angular displacement. While $\theta$ can be defined using either degrees or radian, radians are commonly used. (which do we use?)
@@ -26,8 +28,17 @@ To describe the motion of this ball as it is spun around on a string, we use som
 
 Did you notice how as you made the string longer, the linear velocity increased but the angular velocity stayed the same? This is because to trace the larger circle at the same rate, it has to move faster when it is farther away. If you measured the linear velocity at points moving out from the origin, you could see that they steadily increase.
 
+Now imagine you are riding a merry-go-round. Out of the many colorful horses, you’ve picked your favorite and are traveling around and around under flashing lights. After counting the seconds it takes to go around on time, you find that you are moving at a rate of 1 trip, or one revolution, every 10 seconds. With some conversions, this number describes your angular velocity. One revolution is equivalent to one circle, which has 360 degrees or 2Pi radians. Your speed of 1 revolution every 10 seconds can also be described as an angular velocity of 36 degrees/second or traveling -- radians/second. 
+
+Now how would your ride be different if you choose a horse closer to the center or closer to the edge of the merry-go-round? Would your speed change? The answer depends on what speed you are talking about!! No matter where you sat on the merry-go-round, your angular speed would stay the same. The whole merry go round is moving together, so, you will rotate at a rate of 1 revolution per 10 seconds!
+
+So what does change between different horses? 
+ 
+<!--TODO: Finish this anology and integrate with the text above.-->
+
 # Angular Acceleration
 do we want to add this?
+If we do, we can extend the anaology to a merry-go-round stopping or starting
 
 
 # Polar Coordinates
