@@ -13,7 +13,18 @@ This lesson is still under-development. Check back soon for more links and the f
 
 
 <!--TODO: Intro will go here.-->
-This lesson will focus on understanding the many things around us that spin. Whether it's a frisbee, a tire wheel, a dancer, or even an amusement park ride, rotation is all around us. When objects are moving in straight lines, we call this linear motion. In previous lessons, we’ve discussed how to describe linear motion in terms of velocity. How about rotational motion? What tools do we have to explain this motion?
+Imagine you are getting on a merry-go-round. 
+Out of the many colorful options, you choose to ride your favorite horse in the middle row. 
+The operator starts the ride, and you begin traveling around under flashing lights and bright mirrors. 
+Now what would have been physically different about this ride had you chosen the horse to your right or left? 
+You'll be able to answer this by the end of the lesson!
+
+This lesson will focus on understanding the many things around us that spin. 
+Whether it's a frisbee, a tire wheel, a dancer, or even you on an amusement park ride, rotation is all around us. 
+When objects move in straight lines, 
+we call this linear motion. 
+In previous lessons, we’ve discussed how to describe linear motion.
+How about rotational motion? What tools do we have to explain this motion?
 
 
 # Angular Displacement
@@ -26,19 +37,10 @@ To describe the motion of this ball as it is spun around on a string, we use som
 
 ## add widget where gives angular and linear velocity with a slidebar for the radius of the ball spinning around 
 
-Did you notice how as you made the string longer, the linear velocity increased but the angular velocity stayed the same? This is because to trace the larger circle at the same rate, it has to move faster when it is farther away. If you measured the linear velocity at points moving out from the origin, you could see that they steadily increase.
-
-Now imagine you are riding a merry-go-round. Out of the many colorful horses, you’ve picked your favorite and are traveling around and around under flashing lights. After counting the seconds it takes to go around on time, you find that you are moving at a rate of 1 trip, or one revolution, every 10 seconds. With some conversions, this number describes your angular velocity. One revolution is equivalent to one circle, which has 360 degrees or 2Pi radians. Your speed of 1 revolution every 10 seconds can also be described as an angular velocity of 36 degrees/second or traveling -- radians/second. 
-
-Now how would your ride be different if you choose a horse closer to the center or closer to the edge of the merry-go-round? Would your speed change? The answer depends on what speed you are talking about!! No matter where you sat on the merry-go-round, your angular speed would stay the same. The whole merry go round is moving together, so, you will rotate at a rate of 1 revolution per 10 seconds!
-
-So what does change between different horses? 
- 
-<!--TODO: Finish this anology and integrate with the text above.-->
+Did you notice how as you made the string longer, the linear velocity increased but the angular velocity stayed the same? This is because to trace the larger circle at the same rate, it has to move faster when it is farther away. If you measured the linear velocity at points moving out from the origin, you could see that they steadily increase. 
 
 # Angular Acceleration
 do we want to add this?
-If we do, we can extend the anaology to a merry-go-round stopping or starting
 
 
 # Polar Coordinates
@@ -55,10 +57,22 @@ Going back to our discussion above about angular displacement, you can see how p
 
 ## add an animation here, maybe of a ball on a string
 
+Let's tie all of these concepts together to describe your ride on the merry-go-round! 
+But, also imagine a second ride where you chose the yellow horse to your left (closer to the center) instead. 
+How would the following properties of your trip change: Angular displacement, angular velocity, linear velocity, angular acceleration?
 
+Answer: (Could we hide this in a dropdown box that you have to click to open)
 
+Your angular displacement, angular velocity, and angular acceleration would stay the same on both rides. 
+The two horses lie along the same radial line, so in polar coordinates, their theta coordinate would be the same, but r would change. 
+Theta remaining the same results in the horses have equal angular displacements. 
+For angular velocity and acceleration, every horse on the ride would have the same value. 
+This is because the entire merry-go-round starts, moves, and stops together at the same rate.
 
-
+What would change between the two horses is your linear velocity. 
+Switching to the yellow horse decreases your r coordinate, and means you are traveling in a smaller circle. 
+Just like for the ball on a string, when r decreases, your linear velocity also decreases.
+ 
 
 ::: further-reading 
 To apply some of these concepts to the SpinWheel, go to [Dancing with Color](/dancing) adventure.
