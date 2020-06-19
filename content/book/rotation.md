@@ -44,7 +44,17 @@ do we want to add this?
 
 
 # Polar Coordinates
-In the [vectors and kinematics lesson](/vectors), we introduced the idea of a vector. When defining vectors in this lesson, we used something called 'Cartesian coordinates.' If we think of a vector connecting the origin to the point, Cartesian coordinates provide the x and y position $(x, y)$. This is very useful for straight lines, (give more examples). In other cases, something called polar coordinates can be more useful. Polar coordinates define a vector differently. Rather than giving the x and y position, they specify the length of the vector ($r$) and its direction ($\theta$) $(r, \theta)$. This is easier to describe using a visual:
+In the [vectors and kinematics lesson](/vectors), 
+we introduced the idea of coordinates, which describe a point in space. 
+In this lesson, we used something called 'Cartesian coordinates.' 
+If we think of a line connecting the origin to the point, 
+Cartesian coordinates provide the x and y position $(x, y)$. 
+This is very useful for straight lines, (give more examples). 
+In other cases, something called polar coordinates can be more useful. 
+Polar coordinates define points in space differently. 
+Rather than giving the x and y position, they specify points as their position on a circle. 
+The two polar coordinate describes the radius of the circle ($r$) and its direction ($\theta$) $(r, \theta)$. 
+This is easier to describe using a visual:
 
 ## add visual here of cartesian vs polar coordinates
 caption: Here you can see how both polar and cartesian coordinates can be used to describe a point's location.
