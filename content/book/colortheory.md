@@ -4,13 +4,15 @@ keywords: color, light, electromagnetism, color theory, pigments, art
 ---
 
 ::: intro-box
-Human perception of light and color has many curious features rooted in biology and physics. However, there is a more immediate practical discipline, called Color Theory, that deals with the engineering questions of what are the minimum number of pigments (or colored lights) we can use to create any other color. We will briefly explore it here.
+Human perception of light and color has many curious features rooted in biology and physics.
+However, there is a more immediate practical discipline, called Color Theory, that deals with the engineering questions of what are the base pigments (or colored lights) we need to vividly reproduce any other color.
+We will briefly explore this discipline here.
 :::
 
 
 ## Colors
 
-Whether you're walking through a lush forest or art museum, our world is full of colors. Colors make a painting beautiful and make our homes and schools much more fun. Colors also have practical uses such as the colors on a stoplight or color-coding your class notes. Let's explore how colors are made, mixed, and emerge from light!
+Whether you're walking through a lush forest or an art museum, our world is full of colors. Colors enhance a painting's beauty and make our homes and schools much more fun. Colors also have practical uses such as the colors on a stoplight or color-coding your class notes. Let's explore how colors are made, mixed, and how they emerge from white light!
 
 ![Many bright minds of our civilization have studied the science behind colors in the pursuit of art.<a class="imagecredit" href="https://www.pikrepo.com/flrza/assorted-paint-kit">image credit Pikrepo</a>](/images/bookpics/assorted_paint_kit.jpg "image credit to Pikrepo")
 
@@ -22,15 +24,17 @@ If you've ever painted before, you’ve probably mixed colors on a palette. When
 Pigments work by absorbing certain components of light and reflecting others. To read more about colors as components of light, check out our [Light and Color lesson](/lightandcolor).
 :::
 
-When painting in elementary school, you likely were given red, yellow, and blue to use to mix the rest of the colors you wanted. With these colors you can create more colors such as green, orange, and purple. Your teacher may have taught you the difference between primary and secondary colors. Primary colors are those that can't be mixed from other colors while secondary colors can be created by mixing other colors.  
+When painting in elementary school, you likely were given red, yellow, and blue to use to mix the rest of the colors you wanted. With these colors you can create more colors such as green, orange, and purple. Your teacher may have taught you the difference between the three primary colors and the secondary colors. Primary colors are those that can't be mixed from other colors while secondary colors can be created by mixing others. The primary colors are so special, because the human eyes have three special sensors, one for each of the colors. The sensation of all the secondary colors is created by the interplay between these three sensors.
 
 <!--TODO: maybe insert image of typical "primary blue, red, yellow" paint bottles -->
 
-Using these three paints, you may have struggled to get a true purple or the exact green that you imagined. The reason for this is that the red and blue that you were given are not true primary colors. The true primary colors can be seen in a typical printer that uses yellow, cyan (a fancy word for the specific blue that is a primary color), and magenta (the specific color word for the hue of red that is a primary color). 
+Using the three aforementioned paints (red, blue, and yellow), you may have struggled to get a true purple or the exact green that you imagined.
+The reason for this is that the red and blue that you were given are not true primary colors — they are not the exact hues complementary to the eye's color sensors.
+The true primary colors can be seen in a typical printer that uses yellow, cyan (a fancy word for the specific blue that is a primary color), and magenta (the specific almost-red color that is a primary color). 
 
 <!--TODO: add an animation/widget/image showing where red and magenta are on the color wheel -->
 
-In elementary school you weren't taught these names for the colors because they are seen as "too hard". The important thing from this lesson isn't remembering these words, but the idea of mixing colors. 
+In elementary school you weren't taught these names for the colors because they are seen as "too hard". The important thing from this lesson isn't remembering these words, but the idea that mixing these three particular colors lets you control precisely the color reflected from your canvas.
 
 <!--TODO: add a picture of a painting pallet or easel? -->
 
@@ -128,21 +132,40 @@ schangeColor();
 </script>
 </div>
  	  
-Experimenting with this widget, you may have been able to make green from mixing together cyan and yellow or orange from yellow and magenta. You may have noticed that you could also make the color red that is often introduced in elementary school as a primary color by mixing together magenta and yellow. 
+Experimenting with this colormixer, you may have been able to make green from mixing together cyan and yellow or orange from yellow and magenta. You may have noticed that you could also make the color red that is often introduced in elementary school as a primary color by mixing together magenta and yellow. This is because magenta absorbs blue, while yellow absorbs green, thus leaving only red to be reflected. You might have noticed that we have started discussing the red, green, and blue contained in white light a lot. The next section explains their importance as another type of primary colors.
 
 ![Printers use the same principle of mixing different amounts of magenta, cyan, and yellow, in order to reflect only the desired colors. The [halftone technique](https://en.wikipedia.org/wiki/Halftone) is a good example, where microscopic dots of different sizes and colors are used to make the illusion of a smooth color at a distance. <a class="imagecredit" href="https://en.wikipedia.org/wiki/File:Halftoningcolor.svg">image credit Wikimedia</a>](/images/bookpics/halftone.png)
 
 <!--TODO: experiment where you have a green leaf but you illuminate it only with red light and all you see is the leaf looking black... maybe even say that this is why growth lights are mostly red / chlorophyll is green>-->
 
 ::: further-reading
-Did you notice how if you wanted to get a darker green, you could add magenta? Adding magenta makes a darker green because red is green's complementary color. Adding a color's "complement" is actually a more effective way to make a darker color then adding black. Complementary colors are opposite each other on the color wheel. This website talks more about [complementary colors](https://www.thesprucecrafts.com/definition-of-complementary-colors-2577513). 
+Did you notice how if you wanted to get a darker green, you could add magenta? Adding magenta makes a darker green because red is green's complementary color. Adding a color's "complement" is actually a more effective way to make a darker color than adding black. Complementary colors are opposite each other on the color wheel. This website talks more about [complementary colors](https://www.thesprucecrafts.com/definition-of-complementary-colors-2577513). 
 :::
+
+<!--TODO: The complementary colors link seems unreliable and might stop existing anytime. Find another source. -->
 
 ### Mixing Colors With Light 
 
-When we make colors with light sources, color mixing works differently. Your computer or tv screen works by creating colors using an LED display using only three colors of light. When we mix paint, our primary colors are magenta (red), cyan (blue), and yellow. When we create color with an LED display instead, we vary the amount of green, red, and blue, which we can think of as the three digital primary colors.
+When we make colors with light sources, color mixing works differently.
+Instead of using a pigment that absorbs a given color and reflects all others,
+we directly work by adding up base colors.
+Because of this, color mixing with pigments is frequently called subtractive color mixing
+(each of our base pigments removes a color from the initial ray of white light),
+while color mixing with colored light is called additive color mixing
+(each of the colored light sources adds up a new base color).
+Therefore, the primary colors for light-based (additive) color mixing are exactly the ones each of the primary pigments is removing.
 
-The widget below shows the three digital primary colors, which we can combine in amounts from 0 to 255. Looking at the widget below, notice how with all three slide bars at 255, the box at the right is white. By adjusting the relative amount of green, red, and blue using the slide bars, you can change the color displayed.
+|Primary Pigment Color<br>(a.k.a. subtractive)  | Complemented by Primary Light Color<br>(a.k.a. additive)
+|---		|---		
+|Cyan<br>(absorbs red and reflects green and blue) | Red
+|Magenta<br>(absorbs green and reflects red and blue) | Green
+|Yellow<br>(absorbs blue and reflects red and green) | Blue
+
+Your computer or TV screen works by emitting the three additive primary colors (red, green, and blue) from a grid of very small light sources (pixels and sub-pixels). These sources are so close together that from a distance we see them as overlapping and observe only the mixture of three primary colors. Thus, we can have pixels perceived as an arbitrary secondary color.
+
+![An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background. <a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:LCD_Pixels_Macro.jpg">image credit Wikimedia</a>](/images/bookpics/lcd_pixels_macro.jpg "An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background")
+
+The colormixer below shows the three additive primary colors, which we can combine in amounts from 0 to 255. Looking at the colormixer, notice how with all three slide bars at 255, the box at the right is white. By adjusting the relative amount of green, red, and blue using the slide bars, you can change the color displayed.
 
 <style>
 #acolortests {
@@ -214,14 +237,15 @@ achangeColor();
 </script>
 </div>
 
-![An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background. <a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:LCD_Pixels_Macro.jpg">image credit Wikimedia</a>](/images/bookpics/lcd_pixels_macro.jpg "An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background")
-
 Take a moment to play around with these and see if you can make your favorite color!
 
-Did you notice how if you put the amount of blue at 0, but leave the red and green at 255 that you make yellow? This is different than mixing colors with paint! While yellow is a primary color for mixing paint, it isn't a primary color when mixing with light sources (green is instead!).
+Did you notice how if you put the amount of blue at 0, but leave the red and green at 255 that you make yellow? 
+This is yet another way to observe the link between the pigment-based color mixing and the light-source based one. Take this even further. Pick your favorite color in the additive color mixer and try to reproduce it in the subtractive (pigment based) colormixer. See the relationship that emerges between the complementary primary colors: the more red you desire, the less cyan (the pigment absorbing red) you may use.
 
 ::: further-reading
 The reason that there are three primary colors for mixing with light sources and pigments has to do with how our eyes detect light and how our brains turn that into the image of the world that we see. To explore this more, go through the [Biology of Sight Adventure](/sight).
 :::
 
+
+<!--TODO: maybe the sliders in this activity should go from 0 to 100, not from 0 to 255-->
 
