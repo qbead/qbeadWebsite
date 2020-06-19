@@ -33,7 +33,7 @@ What is happening here? We are witnessing the process of dispersion when we see 
 
 A wave is a repetitive motion traveling through a medium. Some examples are shown in the table below.
 
-|**Type of Wave**  |**Medium**
+|Type of Wave  |Medium
 |---		|---		
 |Ocean wave     |Water	 
 |Sound wave   	|Air  	
