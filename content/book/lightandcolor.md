@@ -1,8 +1,6 @@
 ---
 title: Light and Color
 keywords: color, light, electromagnetism
-header-image: /images/banners/strobe_lights.jpg
-
 ---
 
 ::: intro-box
@@ -17,12 +15,12 @@ This lesson is still under-development. Check back soon for more links and the f
 ## Lights
 As you are reading this lesson, you are most likely surrounded by a variety of lights. Light emits from your computer screen and from the lamps in your room. Light enters through your windows or open door. Light even comes from you refrigerator when you get a snack! You interact with light in various ways throughout your day; and while most of this light is white, some is more colorful. Some examples are street lights, the light creating the colors on this page, and the light coming from a hot stove top. In this lesson, we will explore the properties of light and how it creates the colors we see.
 
+![Understanding the interplay between color and light enables the creation of wondrous technology and art.](/images/bookpics/disco_lights.jpg)
 
 ### Rainbows and White Light
 Let's begin by talking about white light and rainbows. When light travels from the Sun, or most other sources of illumination, we perceive it as lacking a hue. We call this white light. In reality, white light is a mixture of many colors of light. This mixture can be seen by using a prism to split apart the different colors that make up the mixture.
 
-![White light being split into colors by a prism.](/images/bookpics/optical-glass-triangular-prism.jpg "Picture of a white light being split into colors by a prism")
-
+![White light being split into colors by a prism.](/images/bookpics/optical_glass_triangular_prism.jpg "Picture of a white light being split into colors by a prism")
 
 Do you see how white light goes into the prism and the entire spectrum of colors emerges from the other side?
 
@@ -177,9 +175,7 @@ This is the light that our eyes can see; but light exists outside of that range.
 Looking at this spectrum, you can see that different wavelengths of light create microwaves that help to heat your food, and radio waves that allow you to listen to your favorite music. We can't see microwaves or radio waves like we can see visible light
 but we interact with these waves in other ways. 
 
-
-<!--TODO: Picture of the electromagnetic spectrum.-->
-![The Electromagnetic Spectrum](/images/bookpics/EM_spectrum.png "The Electromagnetic Spectrum")
+![The Electromagnetic Spectrum](/images/bookpics/EM_spectrum.png "The Electromagnetic Spectrum"){style="width:100%;max-width:100%"}
 
 https://commons.wikimedia.org/wiki/File:EM_spectrumrevised.png
 
