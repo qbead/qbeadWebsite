@@ -12,7 +12,7 @@ Human perception of light and color has many curious features rooted in biology 
 
 Whether you're walking through a lush forest or art museum, our world is full of colors. Colors make a painting beautiful and make our homes and schools much more fun. Colors also have practical uses such as the colors on a stoplight or color-coding your class notes. Let's explore how colors are made, mixed, and emerge from light!
 
-![image credit to Pikrepo](/images/bookpics/assorted_paint_kit.jpg "image credit to Pikrepo")
+![Many bright minds of our civilization have studied the science behind colors in the pursuit of art.<a class="imagecredit" href="https://www.pikrepo.com/flrza/assorted-paint-kit">image credit Pikrepo</a>](/images/bookpics/assorted_paint_kit.jpg "image credit to Pikrepo")
 
 ### Mixing Colors with Pigments
 
@@ -130,7 +130,7 @@ schangeColor();
  	  
 Experimenting with this widget, you may have been able to make green from mixing together cyan and yellow or orange from yellow and magenta. You may have noticed that you could also make the color red that is often introduced in elementary school as a primary color by mixing together magenta and yellow. 
 
-![Printers use the same principle of mixing different amounts of magenta, cyan, and yellow, in order to reflect only the desired colors. The [halftone technique](https://en.wikipedia.org/wiki/Halftone) is a good example, where microscopic dots of different sizes and colors are used to make the illusion of a smooth color at a distance. (image credit to Wikimedia)](/images/bookpics/halftone.png)
+![Printers use the same principle of mixing different amounts of magenta, cyan, and yellow, in order to reflect only the desired colors. The [halftone technique](https://en.wikipedia.org/wiki/Halftone) is a good example, where microscopic dots of different sizes and colors are used to make the illusion of a smooth color at a distance. <a class="imagecredit" href="https://en.wikipedia.org/wiki/File:Halftoningcolor.svg">image credit Wikimedia</a>](/images/bookpics/halftone.png)
 
 <!--TODO: experiment where you have a green leaf but you illuminate it only with red light and all you see is the leaf looking black... maybe even say that this is why growth lights are mostly red / chlorophyll is green>-->
 
@@ -214,7 +214,7 @@ achangeColor();
 </script>
 </div>
 
-![An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background. (image credit to Wikimedia)](/images/bookpics/lcd_pixels_macro.jpg "An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background")
+![An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background. <a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:LCD_Pixels_Macro.jpg">image credit Wikimedia</a>](/images/bookpics/lcd_pixels_macro.jpg "An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background")
 
 Take a moment to play around with these and see if you can make your favorite color!
 
