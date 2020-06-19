@@ -171,8 +171,7 @@ You may have noticed that, as you changed the wavelength with the slider above, 
 This is because the wavelength of light controls its color.
 The sensors in our eyes react differently to different wavelengths, which leads to perceiving different sensations of color.
 Red light has a long wavelength and purple light has a shorter wavelength.
-Light with a wavelength between 380 and 700 nanometers is called the visible spectrum and it is the only type of electromagnetic waves our eyes can detect.
-(For comparison, a human hair is about 50,000 nanometers in diameter.)
+Light with a wavelength between 380 and 700 nanometers is called the visible spectrum and it is the only type of electromagnetic waves our eyes can detect.<span class="footnote"><sup>[✱]</sup><span>For comparison, a human hair is about 50,000 nanometers in diameter.</span></span>
 But light exists outside of that range as well.
 The whole spectrum of light is called the Electromagnetic Spectrum.
 Looking at the figure below, summarizing this spectrum, you can see that some wavelengths of light correspond to microwaves that help to heat your food or deliver your WiFi signal.

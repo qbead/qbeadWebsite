@@ -149,10 +149,8 @@ Did you notice how if you wanted to get a darker green, you could add magenta? A
 When we make colors with light sources, color mixing works differently.
 Instead of using a pigment that absorbs a given color and reflects all others,
 we directly work by adding up base colors.
-Because of this, color mixing with pigments is frequently called subtractive color mixing
-(each of our base pigments removes a color from the initial ray of white light),
-while color mixing with colored light is called additive color mixing
-(each of the colored light sources adds up a new base color).
+Because of this, color mixing with pigments is frequently called subtractive color mixing<span class="footnote"><sup>[✱]</sup><span>Each of our base pigments removes a color from the initial ray of white light.</span></span>,
+while color mixing with colored light is called additive color mixing<span class="footnote"><sup>[✱]</sup><span>Each of the colored light sources adds up a new base color.</span></span>.
 Therefore, the primary colors for light-based (additive) color mixing are exactly the ones each of the primary pigments is removing.
 
 |Primary Pigment Color<br>(a.k.a. subtractive)  | Complemented by Primary Light Color<br>(a.k.a. additive)
