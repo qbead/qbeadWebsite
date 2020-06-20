@@ -26,6 +26,9 @@ we call this linear motion.
 In previous lessons, we’ve discussed how to describe linear motion.
 How about rotational motion? What tools do we have to explain this motion?
 
+::: further-reading 
+If you aren't already familiar with the concepts of displacement, velocity, and acceleration, we recommend first reading our [vectors and kinematics lesson](/vectors) lesson. 
+::: 
 
 # Angular Displacement
 When dealing with circular motion or rotation (for instance, for a ball on a string or a horse on a merry-go-round), then it is useful to describe its position using an angle ($\theta$). The change between the original angle of the ball and its final angle is typically specified as the change in $\theta$ (or $\Delta \theta$) and is known as angular displacement. While $\theta$ can be defined using either degrees or radian, radians are commonly used. (which do we use?)
@@ -40,7 +43,14 @@ To describe the motion of this ball as it is spun around on a string, we use som
 Did you notice how as you made the string longer, the linear velocity increased but the angular velocity stayed the same? This is because to trace the larger circle at the same rate, it has to move faster when it is farther away. If you measured the linear velocity at points moving out from the origin, you could see that they steadily increase. 
 
 # Angular Acceleration
-do we want to add this?
+
+To describe the change in velocity of an object, scientists use a concept called acceleration. For instance, as a ball picks up speed as it rolls down an incline, it increases its acceleration. In a similar way, you can use angular acceleration to describe the rate of change of angular velocity.
+
+To help understand better the idea of angular acceleration, we have two animations below. On the left, the ball on a string is spinning at a constant angular velocity. As its speed is not changing, the angular acceleration is zero. However, on the right, you can see that the ball's velocity increases and then decreases. The faster that this change in angular velocity occurs the larger the angular acceleration will be. If you adjust the sliders below, you can see that the time that it takes to change between the minimum and maximum acceleration changes. 
+
+## add widget/animation that demonstrates angular acceleration
+
+Did you notice how if you increase the angular acceleration that the time it takes to get to the maximum velocity decreases? This is because with a faster angular acceleration, it takes less time to get to the maximum angular velocity. Conversely, with a smaller angular acceleration, it will take more time to get to the maxiumum angular velocity. This is similar to how a sprinter that can accelerate faster will beat in a race another sprinter who has the same top speed but a slower acceleration. Since the first sprinter can reach their top speed faster, they will be ahead of the other sprinter in the race, even if they can run equally fast.
 
 
 # Polar Coordinates
