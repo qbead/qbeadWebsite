@@ -30,7 +30,7 @@ This is only a scaffolding for the (printed and electronic) textbook that will b
 ## Physics 101
 
 1. Vectors and Kinematics
-2. Rotation
+2. [Rotation](/rotation)
 3. Pendulums and Vibrations
 4. Inertial reference frames / Free fall
 5. [Light and Color](/lightandcolor)
