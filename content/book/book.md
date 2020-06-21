@@ -69,7 +69,8 @@ var graphJSON = {
     "Color Theory",
     "Inertial Reference Frames",
     "Rotation",
-    "Magnetism"
+    "Magnetism",
+    "Vectors and Kinematics"
   ],
   "edges": [
     ["Quick Start", "Biology of Sight"],
@@ -83,7 +84,8 @@ var graphJSON = {
     ["Dancing Companion", "Compass"],
     ["Compass", "Magnetism"],
     ["Dancing Companion", "Inertial Reference Frames"],
-    ["Dancing Companion", "Rotation"],
+    ["Dancing Companion", "Vectors and Kinematics"],
+    ["Vectors and Kinematics", "Rotation"],
     ["Step Counter", "Inertial Reference Frames"],
   ]
 };
