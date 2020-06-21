@@ -5,7 +5,7 @@ keywords: color, light, electromagnetism, color theory, pigments, art
 
 ::: intro-box
 Human perception of light and color has many curious features rooted in biology and physics.
-However, there is a more immediate practical discipline, called Color Theory, that deals with the engineering questions of what are the base pigments (or colored lights) we need to vividly reproduce any other color.
+However, there is a more immediate practical discipline, called Color Theory, that deals with the engineering questions of the base pigments (or colored lights) we need to vividly reproduce any other color.
 We will briefly explore this discipline here.
 :::
 
@@ -18,7 +18,7 @@ Whether you're walking through a lush forest or an art museum, our world is full
 
 # Perceiving Color
 
-Before we explore how to mix colors, it is useful to understand some basics of how the human eye works. At the back of our eye, there is a light-sensing tissue, called the retina. The retina has cells that <span class="footnote">respond to light<span>called rods, which help us see when there is little light, such as at dusk</span></span> and other cells that <span class="footnote">respond to specific wavelengths of light<span>called cones, that allow us to see color</span></span>. The cone cells are classified into three separate groups by the color that they sense the best: red, green, or blue. For instance, the blue-sensing cones respond most to blue light, and allow our brain to perceive blue.
+Before we explore how to mix colors, it is useful to understand some basics of how the human eye works. At the back of our eye, there is a light-sensing tissue called the retina. The retina has some cells (rods) that <span class="footnote">respond to light<span>called rods, which help us see when there is little light, such as at dusk</span></span> and other cells (cones) that <span class="footnote">respond to specific wavelengths of light<span>called cones, that allow us to see color</span></span>. The cone cells are classified into three separate groups by the color that they sense the best: red, green, or blue. For instance, the blue-sensing cones respond most to blue light, and allow our brain to perceive blue.
 
 ![An artistic rendering of a close-up of the back of the eye illustrating the rods (black) and cones (triangles colored by type).](/images/bookpics/rods_cones.png "Close-up cartoon of rods and cones in an eye")
 
@@ -33,12 +33,12 @@ When we mix colors, whether using LEDs (or other sources of light) or pigments (
 
 # Mixing Colors With Light Sources
 
-One way to create color is to work directly with light sources that emit colors that match the sensors in our eyes. Computer and tv screens work in this way. These screens are made up of a grid of very small red, green, and blue light sources (pixels and sub-pixels). These colors were chosen because they match the light our cone cells detect. By placing these tiny light sources so close together, we can trick our brain into seeing not only red, blue, and green, but a whole rainbow of colors. This is because our eyes can't distinguish between yellow light which activates both the red and green cones and a mixture of red and green light from light sources sufficiently close together. 
+One way to create color is to work directly with light sources that emit colors that match the sensors in our eyes. Computer and TV screens work in this way. These screens are made up of a grid of very small red, green, and blue light sources (pixels and sub-pixels). These colors were chosen because they match the light our cone cells detect. By placing these tiny light sources so close together, we can trick our brain into seeing not only red, blue, and green, but a whole rainbow of colors. This is because our eyes can't distinguish between yellow light which activates both the red and green cones and a mixture of red and green light from light sources sufficiently close together. 
 
 ![An up-close picture of a computer screen, showing the red, green, and blue light sources, making up the white background. These sources, or subpixels, are so close together that from a distance we see them as overlapping and observe only their mixture.<a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:LCD_Pixels_Macro.jpg">image credit Wikimedia</a>](/images/bookpics/lcd_pixels_macro.jpg "An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background")
 
 
-By varying the amount of the red, green, and blue light emitted, we can trick our brains into perceiving a diversity of color. This type of color mixing is called additive color mixing: each of the colored light sources adds up a new base color. The colormixer below allows you to try mixing color in this way. Looking at the colormixer, notice how with all three slide bars at 255, the box at the right is white. By adjusting the relative amount of green, red, and blue using the slide bars, you can change the color displayed.
+By varying the amount of the red, green, and blue light emitted, we can trick our brains into perceiving a diversity of color. This type of color mixing is called additive color mixing: each of the colored light sources adds up to a new base color. The colormixer below allows you to try mixing color in this way. Looking at the colormixer, notice how with all three slide bars at 255, the box at the right is white. By adjusting the relative amount of green, red, and blue using the slide bars, you can change the color displayed.
 
 <style>
 #acolortests {
@@ -81,7 +81,7 @@ By varying the amount of the red, green, and blue light emitted, we can trick ou
 <div id="acolortests">
 <div class="explain">
 
-Imagine a white sheet of paper (i.e. paper that does not absorb any of the colors of light falling on it) in a dark room. We shine three lights on it, with different intensity: a red, a green, and a blue light. If we shine them all together, we reflect all visible color components of the sheet of paper and see a white color. Take a moment to play around with these and see if you can make your favorite color!
+Imagine a white sheet of paper (i.e. paper that does not absorb any of the colors of light falling on it) in a dark room. We shine three lights on it, with different intensity: a red, a green, and a blue light. If we shine them all together, we reflect all visible color components of the sheet of paper and see a white color. Take a moment to play around with these and see if you can make your favorite color! You can see what this white sheet of paper would look like below the sliders. 
 </div>
 <div><input type="range" min="0" max="255" value="255" id="ared"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="agreen"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="ablue"></div>
 <div><span class="vis" id="aredshow">255</span><span class="spacer">+</span><span class="vis" id="agreenshow">255</span><span class="spacer">+</span><span class="vis" id="ablueshow">255</span><span class="spacer">=</span><span class="vis" id="argbshow">&nbsp;</span></div>
@@ -118,7 +118,7 @@ achangeColor();
 
 ### Mixing Colors with Pigments
 
-Now let's explore a type of color mixing that you might be more familiar with: mixing with pigments. If you've ever painted before, you’ve probably mixed colors on a palette. When we are painting, we are using the pigments in our paint to reflect light of only certain colors. Color mixing with pigments is frequently called subtractive color mixing because each of our base pigments removes a color from the initial ray of white light.
+Now let's explore a type of color mixing that you might be more familiar with: mixing with pigments. If you've ever painted before, you’ve probably mixed colors on a palette. When we are painting, we are using the pigments in our paint to reflect light of only certain colors. Color mixing with pigments is frequently called subtractive color mixing because each of our base pigments removes a color (or reflects that color) from the initial ray of white light.
 The idea of using pigments to create color is used in our clothes, painting our houses, and even coloring our food. 
 
 ::: further-reading
@@ -206,7 +206,7 @@ If you have ever mixed colors using yellow, cyan, and magenta, you may have noti
 </style>
 <div id="scolortests">
 <div class="explain">
-Imagine a white sheet of paper (reflecting all colors of white light) on which we add pigments that absorb some colors. That would be cyan (absorbing red and reflecting green and blue), magenta (absorbing green), and yellow (absorbing blue). Adding up these pigments leads to absorbing all colors and reflecting none, making the page black.
+Imagine a white sheet of paper (reflecting all colors of white light) on which we add pigments that absorb some colors. That would be cyan (absorbing red and reflecting green and blue), magenta (absorbing green), and yellow (absorbing blue). Adding up these pigments leads to absorbing all colors and reflecting none, making the page black. You can see what the sheet of paper would look like below the sliders.
 </div>
 <div><input type="range" min="0" max="255" value="255" id="sred"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="sgreen"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="sblue"></div>
 <div><span class="vis" id="sredshow">255</span><span class="spacer">+</span><span class="vis" id="sgreenshow">255</span><span class="spacer">+</span><span class="vis" id="sblueshow">255</span><span class="spacer">=</span><span class="vis" id="srgbshow">&nbsp;</span></div>
