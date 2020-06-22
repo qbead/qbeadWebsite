@@ -4,18 +4,18 @@ keywords: color, light, electromagnetism
 ---
 
 ::: intro-box
-The physical properties of light are important for our understanding of color. Here we introduce how physcists think about light and the properties that define it. Most importantly, we will see how these properties relate to the color we see.
+The physical properties of light are important for our understanding of color. Here we introduce how physicists think about light and the properties that define it. Most importantly, we will see how these properties relate to the color we see.
 :::
 
-## Lights
 As you are reading this lesson, you are most likely surrounded by a variety of lights. Light emits from your computer screen and from the lamps in your room. Light enters through your windows or open door. Light even comes from your refrigerator when you get a snack! You interact with light in various ways throughout your day; and while most of this light is white, some is more colorful. Some examples are street lights, the light creating the colors on this page, and the light coming from a hot stove top. In this lesson, we will explore the properties of light and how it creates the colors we see.
 
-![Understanding the interplay between color and light enables the creation of wondrous technology and art. <a class="imagecredit" href="https://www.pikrepo.com/fqyvu/multicolored-strobe-lights">image credit Pikrepo</a>](/images/bookpics/disco_lights.jpg)
+![Understanding the interplay between color and light enables  
+the creation of wondrous technology and art. <a class="imagecredit" href="https://www.pikrepo.com/fqyvu/multicolored-strobe-lights">image credit Pikrepo</a>](/images/bookpics/disco_lights.jpg)
 
-### Rainbows and White Light
-Let's begin by talking about white light and rainbows. When light travels from the Sun, or most other sources of illumination, we perceive it as lacking a hue. We call this white light. In reality, white light is a mixture of many colors of light. This mixture can be seen by using a prism to split apart the different colors that make up the mixture.
+### White Light is a Mixture of Colors
+Let's begin by talking about white light. When light travels from the Sun, or most other sources of illumination, we perceive it as lacking a hue. We call this white light. In reality, white light is a mixture of many colors of light. This mixture can be seen by using a prism to split apart the different colors that make up the mixture.
 
-![White light being split into colors by a prism. The white light shines on the prism from the bottom left, and a big part of it is refracted and split as it passes through the prism. <a class="imagecredit" href="https://www.pexels.com/photo/optical-glass-triangular-prism-3845161/">image credit Pexels</a>](/images/bookpics/optical_glass_triangular_prism.jpg "Picture of a white light being split into colors by a prism")
+![White light being split into colors by a prism. The white light shines on the prism from the bottom left, and most of it is refracted and split as it passes through the prism. <a class="imagecredit" href="https://www.pexels.com/photo/optical-glass-triangular-prism-3845161/">image credit Pexels</a>](/images/bookpics/optical_glass_triangular_prism.jpg "Picture of a white light being split into colors by a prism")
 
 Do you see how white light goes into the prism and the entire spectrum of colors emerges from the other side?
 
@@ -25,7 +25,7 @@ We will break this idea down and study the general properties of waves and then 
 
 ## Light is an Electromagnetic Wave
 
-### Waves are travelling motion
+### Waves are traveling motion
 
 A wave is a repetitive motion traveling through a medium. Some examples are shown in the table below.
 
@@ -41,11 +41,9 @@ Interestingly, a wave can travel long distances without needing the medium itsel
 
 ### Properties of Waves
 
-Waves are characterized by what we call their <!--frequency,--> wavelength and speed.
-The quantity we call wavelength describes the length of one repetition of the wave, or in other words, the distance between the peaks.
-You can use the interactive drawing below to see how the wavelength affects the appearance of the wave.
+Scientists characterize waves using two properties called wavelength and speed.
+Wavelength describes the length of one repetition of the wave, or in other words, the distance between the peaks.  You can use the interactive drawing below to see how the wavelength affects the appearance of the wave. In this drawing, waves beyond the visible range are displayed as black. (We will discuss the visible range more below!)<span class="footnote"><sup>[✱]</sup><span>This widget might not work in Safari. If you can't change the wavelength, try using a different browser.</span></span>
 
-<!--TODO: find a way to mention that this widget does not work in safari without polluting the main text-->
 
 <style>
 #wavewidget {
@@ -68,7 +66,7 @@ You can use the interactive drawing below to see how the wavelength affects the 
 }
 </style>
 <div id="wavewidget">
-<div>Pick a wavelength (Waves beyond the visible range are displayed as black. We will discuss the visible range more below!):</div>
+<div>Pick a wavelength :</div>
 <div>300nm <input style="width:80%;top:0.5rem;position:relative;" type="range" min="300" max="800" value="500" id="waveSlider"> 800nm</div>
 <div><span class="vis"><span id="waveView"></span>nm</span></div>
 <svg id="tagsvgwave" width="800" height="100" viewBox="0 0 800 100"> <defs> <path id="svgwave" fill=none stroke=black stroke-width="2" d="M0 50 C 40 90, 60 90, 100 50 C 140 10, 160 10, 200 50 C 240 90, 260 90, 300 50 C 340 10, 360 10, 400 50 C 440 90, 460 90, 500 50 C 540 10, 560 10, 600 50 C 640 90, 660 90, 700 50 C 740 10, 760 10, 800 50 C 840 90, 860 90, 900 50 C 940 10, 960 10, 1000 50 C 1040 90, 1060 90, 1100 50 C 1140 10, 1160 10, 1200 50 C 1240 90, 1260 90, 1300 50 C 1340 10, 1360 10, 1400 50 C 1440 90, 1460 90, 1500 50 C 1540 10, 1560 10, 1600 50 C 1640 90, 1660 90, 1700 50 C 1740 10, 1760 10, 1800 50 C 1840 90, 1860 90, 1900 50 C 1940 10, 1960 10, 2000 50 C 2040 90, 2060 90, 2100 50 C 2140 10, 2160 10, 2200 50 C 2240 90, 2260 90, 2300 50 C 2340 10, 2360 10, 2400 50 C 2440 90, 2460 90, 2500 50 C 2540 10, 2560 10, 2600 50 C 2640 90, 2660 90, 2700 50 C 2740 10, 2760 10, 2800 50 C 2840 90, 2860 90, 2900 50 C 2940 10, 2960 10, 3000 50 C 3040 90, 3060 90, 3100 50 C 3140 10, 3160 10, 3200 50 C 3240 90, 3260 90, 3300 50 C 3340 10, 3360 10, 3400 50 C 3440 90, 3460 90, 3500 50 C 3540 10, 3560 10, 3600 50 C 3640 90, 3660 90, 3700 50 C 3740 10, 3760 10, 3800 50 C 3840 90, 3860 90, 3900 50 C 3940 10, 3960 10, 4000 50 C 4040 90, 4060 90, 4100 50 C 4140 10, 4160 10, 4200 50 C 4240 90, 4260 90, 4300 50 C 4340 10, 4360 10, 4400 50 C 4440 90, 4460 90, 4500 50 C 4540 10, 4560 10, 4600 50 C 4640 90, 4660 90, 4700 50 C 4740 10, 4760 10, 4800 50 C 4840 90, 4860 90, 4900 50 C 4940 10, 4960 10, 5000 50 C 5040 90, 5060 90, 5100 50" /> </defs> <use xlink:href="#svgwave" x="0" y="0"> <animate attributeName="x" from="0" to="-200" dur="3s" repeatCount="indefinite"/> </use> </svg>
@@ -171,6 +169,8 @@ You may have noticed that, as you changed the wavelength with the slider above, 
 This is because the wavelength of light controls its color.
 The sensors in our eyes react differently to different wavelengths, which leads to perceiving different sensations of color.
 Red light has a long wavelength and purple light has a shorter wavelength. Using the interactive drawing, pick a red color and a purple color and notice how different their wavelengths are.
+
+
 Light with a wavelength between 380 and 700 nanometers is called the visible spectrum and it is the only type of electromagnetic waves our eyes can detect.<span class="footnote"><sup>[✱]</sup><span>For comparison, a human hair is about 50,000 nanometers in diameter.</span></span>
 But light exists outside of that range as well.
 The whole spectrum of light is called the Electromagnetic Spectrum.
@@ -184,14 +184,13 @@ but we interact with these waves in other ways.
 ### Electromagnetic Waves
 
 Finally, if visible light is part of the Electromagnetic Spectrum, what exactly is an electromagnetic wave? 
-Electromagnetic waves are waves, like sound waves or ocean waves. 
-Instead of traveling vibrations in the air or water, they are vibrations of … it is complicated.
-There are many metaphors we can use to describe the medium of electromagnetic waves.
-Studying its inner workings has led to some of the greatest discoveries in Physics:
-general relativity and quantum mechanics.
-Instead of retracing the steps of physicists over two hundred years,
-we have focused on describing light, based on what we can measure about it, such as its wavelength. 
-
+Electromagnetic waves are waves, like sound waves or ocean waves.
+Instead of traveling vibrations in the air or water, they are vibrations of … it is complicated. Their motion involve both an electric field and a magnetic field. 
+Studying the inner workings of electromagnetic waves has led to some of the 
+greatest discoveries in Physics: general relativity and quantum mechanics.
+Instead of retracing the steps of physicists over two hundred years to discover the inner 
+workings of electromagnetic waves, we have focused on describing light, based on what we 
+can measure about it, such as its wavelength. 
 
 ::: further-reading
 If you are interested in learning more topic related to electromagnetic waves, go to the lessons on [Electricity]() and [Magnetism](/magnetism).
@@ -209,7 +208,7 @@ When light is reflected, it bounces off the interface where the materials meet a
 When it's absorbed, the light doesn't travel in the new material but is absorbed by the particles in the material instead. This can result in heat. 
 This is why your black shirt gets hot in the sun; it absorbs a lot of light. 
 Finally, light can be transmitted, which means the light keeps traveling in the new material, although it may have a different speed or direction.
-Importantly, differen wavelengths (i.e. different colors) of light can interact differently with a given material.
+Importantly, different wavelengths (i.e. different colors) of light can interact differently with a given material.
 
 When we look at an object, we see its color. 
 But how does this happen?
