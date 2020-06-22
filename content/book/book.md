@@ -11,6 +11,8 @@ This is only a scaffolding for the (printed and electronic) textbook that will b
 
 [Quick Start](/quickstart)
 
+[SpinWheel Programming Reference](/basics)
+
 ## Adventures
 
 1. [Biology of sight](/sight)
