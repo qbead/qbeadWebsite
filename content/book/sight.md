@@ -17,9 +17,7 @@ On one hand, the human eye is a spectacular sensor that far outperforms all our 
 
 When light comes from the Sun (or most other sources of illumination), we perceive it as lacking a hue (or, white light). In reality, white light is a mixture of many colors. This mixture can be seen by using a prism to separate the components of the mixture. A prism works by bending, or “refracting”, light at different angles depending on its color, thereby allowing us to see all of the colors that make up white light. This is why if you let sunlight shine through a prism, you can see a rainbow.
 
-<!--TODO: we need a better picture, one that includes a prism-->
-
-![A prism forming a rainbow from sunlight.](/images/bookpics/prism_floor.jpg "Illustration of a rainbow forming from sunlight")
+![White light being split into colors by a prism. The white light shines on the prism from the bottom left, and a big part of it is refracted and split as it passes through the prism. <a class="imagecredit" href="https://www.pexels.com/photo/optical-glass-triangular-prism-3845161/">image credit Pexels</a>](/images/bookpics/optical_glass_triangular_prism.jpg "Picture of a white light being split into colors by a prism")
 
 The light-sensing tissue in the back of our eyes, the retina, has small cells that respond to some of these colors. They are called “cone cells” and are classified into three separate groups by the color that they sense the best: red, green, or blue. Each of these cells responds only to one of these three colors, but not the others. For instance, the blue-sensing cones respond to blue light, but do not respond to red light, and vice versa.
 
