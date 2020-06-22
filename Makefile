@@ -3,4 +3,7 @@ html:
 local_test_server: todos html
 	cd build && python3 -m http.server
 todos:
-	grep -r "<!--TODO:" -a1 content/
+	grep -r "<!--TODO:" content/
+	grep -r "<!--FIGURE:" content/
+	grep -r "<!--IMAGE:" content/
+	grep -r "<!--WIDGET:" content/
