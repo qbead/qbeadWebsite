@@ -5,7 +5,7 @@ keywords: color, light, electromagnetism, color theory, pigments, art
 
 ::: intro-box
 Human perception of light and color has many curious features rooted in biology and physics.
-However, there is a more immediate practical discipline, called Color Theory, that deals with the engineering questions of the base pigments (or colored lights) we need to vividly reproduce any other color.
+However, there is a more immediate practical discipline, called Color Theory, that deals with the engineering questions of the base pigments (or colored lights) that we need to vividly reproduce any other color.
 We will briefly explore this discipline here.
 :::
 
@@ -18,11 +18,13 @@ Whether you're walking through a lush forest or an art museum, our world is full
 
 # Perceiving Color
 
-Before we explore how to mix colors, it is useful to understand some basics of how the human eye works. At the back of our eye, there is a light-sensing tissue called the retina. The retina has some cells (rods) that <span class="footnote">respond to light<span>called rods, which help us see when there is little light, such as at dusk</span></span> and other cells (cones) that <span class="footnote">respond to specific wavelengths of light<span>called cones, that allow us to see color</span></span>. The cone cells are classified into three separate groups by the color that they sense the best: red, green, or blue. For instance, the blue-sensing cones respond most to blue light, and allow our brain to perceive blue.
+<!--TODO: Be extremely clear here (extra text to be added) that for the majority of the lesson we will pretend that only red, green, and blue photons exist. As far as color theory is converned, there is no such thing as wavelength or a yellow photon.-->
+
+Before we explore how to mix colors, it is useful to understand some basics of how the human eye works. At the back of our eye, there is a light-sensing tissue called the retina. The retina has some cells that <span class="footnote">respond to light<span>called rods, which help us see when there is little light, such as at dusk</span></span> and other cells that <span class="footnote">respond to specific wavelengths of light<span>called cones, that allow us to see color</span></span>. The cone cells are classified into three separate groups by the color that they sense the best: red, green, or blue. For instance, the blue-sensing cones respond most to blue light, and allow our brain to perceive blue.
 
 ![An artistic rendering of a close-up of the back of the eye illustrating the rods (black) and cones (triangles colored by type).](/images/bookpics/rods_cones.png "Close-up cartoon of rods and cones in an eye")
 
-You may have noticed a problem at this point. If our eyes only have sensors for three colors, how do we see other colors, like yellow? We're able to see more colors because our red- and green-sensing cones both respond slightly to yellow light as well. Our brain has learned to interpret both our red and green sensing cones being activated as yellow. Similarly, our red and blue sensors both have some sensitivity for purple light, allowing us to perceive purple as well.
+You may have noticed a problem at this point. If our eyes only have sensors for three colors, how do we see other colors, like yellow? We're able to see more colors because our red- and green-sensing cones both respond slightly to yellow light as well. Our brain then interprets both the red and green sensing cones being activated as yellow. Similarly, our red and blue sensors both have some sensitivity for purple light, allowing us to perceive purple as well.
 
 ::: further-reading
 If this has sparked your curiosity to learn more about how your eye works and how our brain turns that information into all the colors we can see, then try out our [Biology of Sight](/sight) Adventure.
@@ -33,12 +35,13 @@ When we mix colors, whether using LEDs (or other sources of light) or pigments (
 
 # Mixing Colors With Light Sources
 
-One way to create color is to work directly with light sources that emit colors that match the sensors in our eyes. Computer and TV screens work in this way. These screens are made up of a grid of very small red, green, and blue light sources (pixels and sub-pixels). These colors were chosen because they match the light our cone cells detect. By placing these tiny light sources so close together, we can trick our brain into seeing not only red, blue, and green, but a whole rainbow of colors. This is because our eyes can't distinguish between yellow light which activates both the red and green cones and a mixture of red and green light from light sources sufficiently close together. 
+One way to create color is to work directly with light sources that emit colors that match the sensors in our eyes. Computer and TV screens work in this way. These screens are made up of a grid of very small red, green, and blue light sources (pixels and sub-pixels). These colors were chosen because they match the light our cone cells detect. By placing these tiny light sources so close together, our brain sees them as one single light source. Moreover, our eyes can't distinguish between yellow light which activates both the red and green cones and a mixture of red and green light from light sources sufficiently close together. This way we can trick our brain into seeing not only red, blue, and green, but a whole rainbow of colors.
 
 ![An up-close picture of a computer screen, showing the red, green, and blue light sources, making up the white background. These sources, or subpixels, are so close together that from a distance we see them as overlapping and observe only their mixture.<a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:LCD_Pixels_Macro.jpg">image credit Wikimedia</a>](/images/bookpics/lcd_pixels_macro.jpg "An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background")
 
+<!--TODO: The next paragraph has very significant repetition of stuff said in the previous paragraph. General rewrite of both paragraphs might help.-->
 
-By varying the amount of the red, green, and blue light emitted, we can trick our brains into perceiving a diversity of color. This type of color mixing is called additive color mixing: each of the colored light sources adds up to a new base color. The colormixer below allows you to try mixing color in this way. Looking at the colormixer, notice how with all three slide bars at 255, the box at the right is white. By adjusting the relative amount of green, red, and blue using the slide bars, you can change the color displayed.
+By varying the amount of the red, green, and blue light emitted, we can trick our brains into perceiving a diversity of color. This type of color mixing is called additive color mixing: each of the colored light sources adds up to a new color. The colormixer below allows you to try mixing color in this way. Looking at the colormixer, notice how with all three slide bars at 255, the box at the right is white. By adjusting the relative amount of green, red, and blue using the slide bars, you can change the color displayed.
 
 <style>
 #acolortests {
@@ -81,7 +84,7 @@ By varying the amount of the red, green, and blue light emitted, we can trick ou
 <div id="acolortests">
 <div class="explain">
 
-Imagine a white sheet of paper (i.e. paper that does not absorb any of the colors of light falling on it) in a dark room. We shine three lights on it, with different intensity: a red, a green, and a blue light. If we shine them all together, we reflect all visible color components of the sheet of paper and see a white color. Take a moment to play around with these and see if you can make your favorite color! You can see what this white sheet of paper would look like below the sliders. 
+Imagine a white ball (i.e. a ball that reflects all of the colors of light falling on it) in a dark room. We shine three lights on it, with different intensity: a red, a green, and a blue light. If we shine them all together, the ball reflects them all and see a white color. Take a moment to play around with these and see if you can make your favorite color! You can see this illuminated ball below the sliders.
 </div>
 <div><input type="range" min="0" max="255" value="255" id="ared"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="agreen"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="ablue"></div>
 <div><span class="vis" id="aredshow">255</span><span class="spacer">+</span><span class="vis" id="agreenshow">255</span><span class="spacer">+</span><span class="vis" id="ablueshow">255</span><span class="spacer">=</span><span class="vis" id="argbshow">&nbsp;</span></div>
@@ -118,16 +121,16 @@ achangeColor();
 
 ### Mixing Colors with Pigments
 
-Now let's explore a type of color mixing that you might be more familiar with: mixing with pigments. If you've ever painted before, you’ve probably mixed colors on a palette. When we are painting, we are using the pigments in our paint to reflect light of only certain colors. Color mixing with pigments is frequently called subtractive color mixing because each of our base pigments removes a color (or reflects that color) from the initial ray of white light.
+Now let's explore a type of color mixing that you might be more familiar with: mixing with pigments. If you've ever painted before, you’ve probably mixed colors on a palette. When we are painting, we are using the pigments in our paint to reflect light of only certain colors. Color mixing with pigments is frequently called subtractive color mixing because each of our base pigments absorbs a color from the initial ray of white light.
 The idea of using pigments to create color is used in our clothes, painting our houses, and even coloring our food. 
 
 ::: further-reading
 Pigments work by absorbing certain components of light and reflecting others. To read more about colors as components of light, check out our [Light and Color lesson](/lightandcolor).
 :::
 
-When painting in elementary school, you likely were given red, yellow, and blue to use to mix the rest of the colors you wanted. With these colors you can create more colors such as green, orange, and purple. Using the red, blue, and yellow paints your art teacher provided, you may have struggled to get a true purple or the exact green that you imagined.
-The reason for this is that the red and blue that you were given are not the best matches for our eye's color sensors.
-Better colors for creating vibrant colors are those that a typical printer uses: yellow, cyan (a fancy word for the specific blue that is a primary color), and magenta (the specific almost-red color that is a primary color). 
+When painting in elementary school, you likely were given red, yellow, and blue to create the rest of the colors you wanted. With these colors you can mix more colors such as green, orange, and purple. You may have struggled to get a true purple or the exact green that you imagined, if you were using only the red, blue, and yellow paints your art teacher provided.
+The reason for this is that the red and blue pigments that you were given are not the best matches for our eye's color sensors.
+Better base pigments for creating vibrant colors are those that a typical printer uses: yellow, cyan (a fancy word for the specific blue that is a primary color), and magenta (the specific almost-red color that is a primary color). 
 
 Primary colors are special because they allow you to create all other colors. Primary colors can't be mixed from other colors, while secondary colors can be created by mixing others. Cyan, yellow, and magenta are primary colors because each of these pigments absorbs the light that best activates one of the three sensors in our eyes. For instance, cyan colored pigments absorb red light and reflect green and blue light. 
 
@@ -137,7 +140,7 @@ Primary colors are special because they allow you to create all other colors. Pr
 |Magenta<br>(absorbs green and reflects red and blue) | Green
 |Yellow<br>(absorbs blue and reflects red and green) | Blue
 
-<!--TODO: Mariya is making a visual to better represent this -->
+<!--IMAGE: Mariya is making a visual to better represent this -->
 
 
 If you have ever mixed colors using yellow, cyan, and magenta, you may have noticed how many more colors you can mix using them instead of what we wrongly think of as "primary red, yellow, and blue". You can experiment with such mixtures by adjusting the sliders below.
@@ -242,21 +245,18 @@ Did you notice how if you wanted to get a darker green, you could add magenta? A
 
 <!--TODO: The complementary colors link seems unreliable and might stop existing anytime. Find another source. -->
 
-<!--TODO: Expand on complementary colors -->
+<!--WIDGET: Expand on complementary colors and add a widget that compares mixing in black with mixing in complementary color. -->
 
-When we were talking about creating color with light sources, we mentioned how our computer screen works by putting tiny light sources of green, red, and blue light so close together that our eyes can't distinguish between the separate light sources. Color printing works in a similar way, but using tiny dots of yellow, cyan, and magenta ink. By overlaying microscopic dots of color of varying size, color printers can give the illusion of smooth color. 
+When we were talking about creating color with light sources, we mentioned how our computer screen works by putting tiny light sources of green, red, and blue light so close together that our eyes can't distinguish between the separate light sources. Color printing works in a similar way, but using tiny dots of yellow, cyan, and magenta ink. By overlaying microscopic dots of color of varying size, color printers can give the illusion of smooth color.
 
-![The [halftone technique](https://en.wikipedia.org/wiki/Halftone) is a good example of this, where microscopic dots of different sizes and colors are used to make the illusion of a smooth color at a distance. <a class="imagecredit" href="https://en.wikipedia.org/wiki/File:Halftoningcolor.svg">image credit Wikimedia</a>](/images/bookpics/halftone.png)
+![The [halftone technique](https://en.wikipedia.org/wiki/Halftone) is a good example of this, where microscopic dots of different sizes and colors are used to make the illusion of a smooth color at a distance. <a class="imagecredit" href="https://en.wikipedia.org/wiki/File:Halftoningcolor.svg">image credit Wikimedia</a>](/images/bookpics/halftone.png "The halftone technique.")
 
 
 <!--TODO: this part should be integrated more -->
 
-Have you ever noticed how some of your clothes may look a different color when in your room at night versus outside on a sunny day? 
+Have you ever noticed how some of your clothes may look a different color when in your room at night versus outside on a sunny day?  The light that comes from a light bulb is actually made up of a different combination of colors than sunlight. For that reason, the pigments in your clothes may reflect a different combination of colors back at your eyes under different light sources, changing your perception of the color. This property also explains why a green leaf will look black under red light. The <span class="footnote">pigments<span>mostly a particular molecule called chlorophyll</span></span> absorb red light and reflect the other colors. Therefore, if only illuminated by red light, all of the light is absorbed, and it appears black.
 
-Answer: (can we hide this like for the rotations activity?)
-
-The light that comes from a light bulb is actually made up of a different combination of colors than sunlight. For that reason, the pigments in your clothes may reflect a different combination of colors back at your eyes under different light sources, changing your perception of the color. This property also explains why a green leaf will look black under red light. The <span class="footnote">pigments<span>mostly a particular molecule called chlorophyll</span></span> absorb red light and reflect the other colors. Therefore, if only illuminated by red light, all of the light is absorbed, and it appears black.
-
+<!--FIGURE: add a picture of alexandrite gems -->
 
 <!--TODO: might be useful to have a summary section kind of like Sam added to the rotations activity -->
 
