@@ -17,7 +17,7 @@ The operator starts the ride, and you begin traveling around under flashing ligh
 Now what would have been physically different about this ride had you chosen the horse to your right or left? 
 You'll be able to answer this by the end of the lesson!
 
-## add image of a merry go round here
+![When learning about rotation, try to connect these concepts to the experince of riding a merry-go-round. <a class="imagecredit" href="https://www.pikrepo.com/ftrla/selective-focus-photography-of-merry-go-round-during-nighttime">image credit Pikrepo</a>](/images/bookpics/MerryGoRound.jpg)
 
 This lesson will focus on understanding the many things around us that spin. 
 Whether it's a frisbee, a tire wheel, a dancer, or even yourself on an amusement park ride, rotation is all around us. 
