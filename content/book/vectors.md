@@ -45,8 +45,79 @@ is the distance of the diagonal (sqrt(2)) and the direction is 45 degrees. Try m
 in various directions and distances using the widget below and see how the magnitude and 
 direction change.
 
-Widget: allow user to input coordinates, draw the vector and output the magnitude
-and direction
+<style>
+#grid1d {
+  text-align: center;
+}
+#grid1d #location {
+  width: 10%;
+  top:0.5rem;
+}
+
+
+#grid1d .vis {
+  width: 40%;
+  font-size: 2rem;
+  height: 4rem;
+  line-height: 4rem;
+  border: solid 1px;
+  border-color: black;
+  display: block;
+  margin: auto;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0  white,
+    -1px 1px 0  white,
+    1px 1px 0   white;
+}
+
+#move2d .spacer {
+
+  width:5%;
+}
+
+</style>
+
+<div id="grid1d">
+<input type="number" min="-10" max="10"  id="xvalue">
+<input type="number" min="-10" max="10"  id="yvalue">
+
+<span class="spacer"></span>
+
+<svg id="axis" width="800" height="800" viewBox="0 0 800 800">
+<line x1="0" y1="400" x2="800" y2="400" style="stroke:rgb(1,1,1);stroke-width:2" />
+<line x1="400" y1="0" x2="400" y2="800" style="stroke:rgb(1,1,1);stroke-width:2" />
+</svg>
+<span class="spacer"></span>
+
+<button id="plotButton">Plot</button>
+
+<script>
+
+//extract desired elements
+var xElement = document.getElementById("xvalue");
+var yElement = document.getElementById("yvalue");
+
+var entireDiv = document.getElementById("move2d");
+var waveVis = document.querySelector("#move2d .vis");
+
+// define event handler
+function plotVector(){
+	// extract desired info
+    var x = xElement.value;
+    var y = yElement.value;
+  	console.log(x)
+  
+    
+}
+
+// decide what event handlers to use
+plotButton.onclick = plotVector;
+
+
+</script>
+</div>
+
 
 So far, we have only discussed displacement vectors. But vectors can be used to
 represent many different quantities. Of importance to the Spinwheel is the representation
