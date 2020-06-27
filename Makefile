@@ -1,5 +1,5 @@
 html:
-	./build.sh 
+	./build.sh $(match) 
 local_test_server: todos html
 	cd build && python3 -m http.server
 todos:
