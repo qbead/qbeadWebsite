@@ -2,12 +2,12 @@
 title: Ask A Scientist
 keywords: sight, vision, color, biology, optical illusions, outreach, demos, activities, ask a scientist, stem at home
 header-image: /images/behindthescenes/sky_lit_up_device_crop2.jpg
-subtitle:  Access the videos of each of our scientists and some highlights from the Q&A! 
+subtitle:  Here are the videos of each of our scientists and some highlights from the Q&A from our first Ask A Scientist program. Check out our [YouTube page](https://www.youtube.com/channel/UCJCUmQVLcKqzArJEcV8GbKg/) for the rest of the series! 
 ---
 
 <div class="row">
 <div class="column long-text">
-<p>Thank you to everyone who tuned in to our first virtual Ask A Scientist Program! We hope that you learned something from each of our scientists. If you are looking for more resources to keep exploring, we have a curated list of some of [our favorite videos, activities, and more here](/other_resources).</p>
+<p>For our first Ask A Scientist event, [Elise](/elise), [Bridget](/bridget), and [Sam](/samantha) shared an intro to their research and answered some questions about why they decided to pursue science. We hope you enjoy the below videos!</p> 
 </div>
 </div>
 
@@ -50,15 +50,13 @@ Sam, Bridget, and Elise also answered some more questions, including when they k
 <div class="row dark-transparent">
 <div class="column"><video style="margin:auto;max-width:100%;" poster="https://large.spinwearables.com/askascientist20200428_questions.png" src="https://large.spinwearables.com/askascientist20200428_questions.mp4" playsinline controls></video></div>
 </div>
-    
+
+
 <div class="row">
 <div class="column long-text">
-Over the next few days, we'll include answers to some of the questions that showed up in the chat during the session for anyone else who might be wondering the same thing! We'll also be answering some of the questions that we ran out of time to answer.
+<p>We hope that you learned something from each of our scientists! If you enjoy these videos and want to hear from even more scientists, then check out our [YouTube page](https://www.youtube.com/channel/UCJCUmQVLcKqzArJEcV8GbKg/). For more resources to keep exploring, we have a curated list of some of [our favorite videos, activities, and more](/other_resources).</p> 
 </div>
 </div>
-
-
-
 
 
 
