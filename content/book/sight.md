@@ -146,6 +146,10 @@ void setup() {
 
 Our eyes have another imperfection that we can take advantage of while programming the SpinWheel: they are rather slow at perceiving changes when compared to the speed that electronics can operate at! This is often described as the persistence of vision. Consider the example below, where you can select the speed at which a shade of blue and a shade of red switch between each other.
 
+::: warning
+Be careful with the next demo! It involves flashing colors and it might be inappropriate for people suffering from epilepsy!
+:::
+
 <style>
 #povtests {
   font-size: 2rem;
@@ -210,6 +214,7 @@ getT();
 Since web browsers are not particularly well adapted to this type of rapid color change, the flicker at high speeds is rather unpleasant. However, as you speed up the color changes, you will start to see purple, and the original red and blue will become less clearly distinct. Unlike web browsers, the SpinWheel is up to this task. The following program will cycle between red and blue at variable delays. Experiment with the value for the delay time. At what delay time do you stop distinguishing the two original colors and start seeing only purple?
 
 ```cpp
+// BE CAREFUL IF YOU SUFFER FROM EPILEPSY AS THIS WILL CAUSE FLASHING COLORS!!!
 #include "SpinWearables.h"
 using namespace SpinWearables;
 
@@ -218,7 +223,8 @@ void setup() {
   SpinWheel.begin();
 }
 
-// CHANGE THIS VALUE! EXPERIMENT!
+// BE CAREFUL IF YOU SUFFER FROM EPILEPSY AS THIS WILL CAUSE FLASHING COLORS!!!
+// Change this value! Experiment!
 int delay_time_in_milliseconds = 500;
 
 void loop() {
