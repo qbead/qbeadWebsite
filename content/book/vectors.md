@@ -13,38 +13,36 @@ This lesson is still under-development. Check back soon for the full lesson!
 :::
 
 
-Universally, in every human endeavor,
-the most important tool that helps us progress as a technological civilization is doodling.
+Universally, in every human endeavor, doodling has been a crucial tool in our development as 
+a technological civilization.
 Many great inventions, many ideas that have changed the world,
-have started as a scribble on a napkin,
-born out of a lively conversation between colleagues and friends.
-This process of rendering our thoughts in drawings lets us communicate better with our friends,
-and even more importantly, it lets us understand our own thoughts better.
-
-As the sophistication of our ideas grow,
-our drawings also grow more intricate
-and the tools and concepts we use in them become more formal.
-This formality brings us great powers,
-but with great power comes a lot of weird crap.
+were born out of a lively conversation and scribble on a napkin.
+The process of rendering our thoughts in drawings allows us to more clearly communicate
+and, even more importantly, it helps us clarify and better understand our own thoughts.
 
 Throughout science, the most important doodle is the arrow.
-We use arrows to denote directions, positions, orientations, flows, motions, tensions, and a myriad other properties and phenomena.
+We use arrows to denote directions, positions, orientations, flows, motions, tensions,
+ and a myriad other properties and phenomena.
 We use longer arrows to denote faster movement or larger displacement or more intense tension.
-And we orient the arrows differently, to denote different orientations.
+And we orient the arrows differently, to denote different relative orientations.
 
 We can start using numbers to describe these arrows,
 an important step if we want to use them for specific scientific purposes.
-We will indeed do that later in this lessons,
-but, as with any other scientific concept,
-it is important to first understand the soul of the arrow,
-to distil its essence, to doodle with it.
+In this lesson, we will explain how to formalize these arrows 
+and use them to describe real life phenomena.
+But first, as with any other scientific concept,
+it is important to understand the soul of the arrow,
+and to distill its essence. Essentially, we must begin by doodling with arrows.
 
-For the rest of the lesson we will call these arrows "vectors",
-because it is always useful to give special names to important concepts.
+## Using Arrows
+
+The arrows we have been discussing are called "vectors."
+Knowing the special name for important concepts is always useful. 
 It certainly helps, when searching in the library,
 to know to ask about vectors instead of "the type of arrows scientists use in their doodles".
 As Ursula Le Guin writes, knowing one's true name gives you power over them.
 
+### Displacement Vectors
 A great way to see the power of vectors is to employ them to describe intricate motion.
 However, before we describe a journey, we need to describe its starting point.
 We need to be able to draw a vector corresponding to our own position:
@@ -59,14 +57,27 @@ And by *adding* these steps together, we finally find our new position.
 This leads us to two important concepts.
 First is vector addition.
 Vector addition is easy to understand if you think of vectors as representing motion.
-Vector $\vec{A}$ represents displacement and ...
-When we perform both displacements we denote the new compound displacement as $\vec{C}$ ...
+Vector $\vec{A}$ represents displacement (movement) in one direction and
+vector $\vec{B}$ represents displacement in another direction.
+When we perform both displacements we denote the new compound displacement as $\vec{C}$.
 
 `An animation of the displacements being summed up.`
 
 `A drawing of all the steps and a new vector pointing to the "you ended here" point`.
 
-The second crucial concept is the idea of a rate of change. Steps... steps per second... velocity...
+### Velocity Vectors
+
+The second crucial concept is the idea of a rate of change. 
+Instead of simply measuring the displacement, we can also measure the movement
+per second. When we include the direction of the movement, we create a velocity vector.
+The displacement will be the sum of the velocity vectors (??).
+To explore this concept, create a velocity vector by dragging the black dot in the
+circle below. This vector and the corresponding displacement vector will appear on the right.
+As you change the velocity, the total displacement will be shown in black while the current
+velocity is shown in red. Can you use large velocity vectors to create a displacement vector
+that returns to the center point? What happens if you quickly make a vertical velocity vector
+followed by one that moves to the right? Can you make the movement
+path (shown in gray) form a circle?
 
 `A widget where you pick a velocity and you get a trajectory and a position vector. Click on the black dot and drag it around. A lot of prettifying left to do.`
 
@@ -207,7 +218,14 @@ function dragElementVel(elmnt, ctx, vctx) {
 dragElementVel(v2p_vhandle, v2p_ctx, v2p_vctx);
 </script>
 
-Yada yada how the acceleration is the same but for velocity...
+### Acceleration Vectors
+
+In addition to studying the velocity, we also care about the acceleration, or change
+in velocity over time. This next widget allows you to manipulate the acceleration in
+the left most circle and see the corresponding change in velocity in the center. The
+acceleration (green), velocity (red) and total displacement (black) are shown on the right.
+Can you use the acceleration vectors to make a velocity of zero? Can you make the movement
+path (shown in gray) form a circle?
 
 <style>
 #a_to_path {
@@ -344,24 +362,25 @@ function dragElementAcc(elmnt, ctx, vctx, actx) {
 dragElementAcc(a2p_vhandle, a2p_ctx, a2p_vctx, a2p_actx);
 </script>
 
+## Vector Magnitude and Orientation
+
 Now that we have mastered the essence of vectors,
 we will proceed to conquer their representation as pairs of numbers:
 an important tool if we are to use our new powers on a computer,
-as computers understand only numbers.
+as computers only understand numbers.
 Vectors have a length (mathematicians usually call it *magnitude* or *norm*) and orientation.
 We will see how to encode these properties as pairs of numbers. 
 
-Stefan: **I strongly believe we should use meters or steps, but definitely not feet**
 
 Imagine that you are standing in the middle of an empty school cafeteria. The floor is 
-tiled with squares that are 1 foot wide. We will imagine that a giant coordinate system 
+tiled with squares. We will imagine that a giant coordinate system 
 has been drawn on the floor and you are standing at the location x = 0 and y = 0.
 
 (add image)
 
-If you take a step forward, we can define the magnitude of your displacement
-vector by comparing your final and initial positions. In this case, the magnitude is 1 foot
-because you are 1 foot from your starting position.
+If you take a  step forward to the next tile, we can define a displacement vector between your initial 
+to final position. In this case, the magnitude of this vector is 1 tile
+because you are 1 tile from your starting position.
 The direction of your movement is defined using an angle. This requires agreeing on how
 to describe the direction. If we were looking at a map, we might agree to describe the direction
 relative to North. For vector motion, scientists, mathematicians and others have agreed to
@@ -369,14 +388,14 @@ describe the direction of a vector in terms of the angle relative to east, or th
 In this case, if you have moved towards the door in the image, you have moved north, or 
 with an angle of 90 degrees from the x-axis.
 
-If your friend, who has joined you in this adventure, moves 1 step to the right from the 
-center of the cafeteria, she will have also moved with a magnitude of 1 foot. But her
+If your friend, who has joined you in this adventure, moves to the right from the 
+center of the cafeteria, she will have also moved with a magnitude of 1 tile. But her
 direction will be 0 degrees.
 
 (add image with diagonal motion)
 Now, lets move back to the center of the cafeteria and move on a diagonal one tile. This
-motion is the combination of moving one foot up and one foot to the right. The magnitude
-is the distance of the diagonal (sqrt(2)) and the direction is 45 degrees. Try moving
+motion is the combination of moving one tile up and one tile to the right. The magnitude
+is the distance of the diagonal (sqrt(2 tiles)) and the direction is 45 degrees. Try moving
 in various directions and distances using the widget below and see how the magnitude and 
 direction change.
 
@@ -419,9 +438,9 @@ direction change.
 
 <span class="spacer"></span>
 
-<svg id="axis" width="800" height="800" viewBox="0 0 800 800">
-<line x1="0" y1="400" x2="800" y2="400" style="stroke:rgb(1,1,1);stroke-width:2" />
-<line x1="400" y1="0" x2="400" y2="800" style="stroke:rgb(1,1,1);stroke-width:2" />
+<svg id="axis" width="400" height="400" viewBox="0 0 400 400">
+<line x1="0" y1="200" x2="400" y2="200" style="stroke:rgb(1,1,1);stroke-width:2" />
+<line x1="200" y1="0" x2="200" y2="400" style="stroke:rgb(1,1,1);stroke-width:2" />
 </svg>
 <span class="spacer"></span>
 
@@ -454,26 +473,8 @@ plotButton.onclick = plotVector;
 </div>
 
 
-So far, we have only discussed displacement vectors. But vectors can be used to
-represent many different quantities. Of importance to the Spinwheel is the representation
-of velocity. Instead of measuring the amount and direction an item has moved, we can measure the speed
+Now that we have represented displacement vectors with numbers, lets discuss velocity vectors.
+Instead of measuring the amount and direction an item has moved, we can measure the speed
 and direction, giving a velocity vector. In the video below, a ball is rolling down a slope.
 The vector to represent this motion has a magnitude of 5 meters per second and a direction
-of 330 degrees.
-
-(image or video of a ball moving down a slope)
-
-Introduction of vectors as having magnitude and direction
-
-Use of angles to represent direction
-
-example of a ball rolling down a slope
-
-We can describe motion through the competing forces acting on an object
-
-Kinematics encompasses motion of objects through space by describing their speed and direction. 
-
-Speed/Velocity
-
-acceleration/Inertia 
-(Examples of differentially massed objects)
+of 330 degrees. The same concept applies to acceleration vectors.
