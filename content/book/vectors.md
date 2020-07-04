@@ -13,28 +13,17 @@ This lesson is still under-development. Check back soon for the full lesson!
 :::
 
 
-Universally, in every human endeavor, doodling has been a crucial tool in our development as 
-a technological civilization.
-Many great inventions, many ideas that have changed the world,
-were born out of a lively conversation and scribble on a napkin.
-The process of rendering our thoughts in drawings allows us to more clearly communicate
-and, even more importantly, it helps us clarify and better understand our own thoughts.
+Creating a sketch is often the first step in solving a problem, whether creating a new technology or solving a problem in math class. This process can first help us better understand our own thoughts. Then, if we want to share our idea with someone else, the drawing can help us communicate it more clearly. 
 
-Throughout science, the most important doodle is the arrow.
-We use arrows to denote directions, positions, orientations, flows, motions, tensions,
- and a myriad other properties and phenomena.
-We use longer arrows to denote faster movement or larger displacement or more intense tension.
-And we orient the arrows differently, to denote different relative orientations.
 
-We can start using numbers to describe these arrows,
-an important step if we want to use them for specific scientific purposes.
-In this lesson, we will explain how to formalize these arrows 
-and use them to describe real life phenomena.
-But first, as with any other scientific concept,
-it is important to understand the soul of the arrow,
-and to distill its essence. Essentially, we must begin by doodling with arrows.
+One of the most important elements of many scientific sketches is the arrow.
+We use arrows to denote directions, positions, orientations, motions,
+ and a myriad other scientific phenomena.
 
-## Using Arrows
+
+When arrows are used by scientists to describe these real life phenomena, numbers are essential for further specifying what the arrow represents. By the end of the lesson, you will use arrows in just this way to describe scientific phenomena like velocity and acceleration. First, we will introduce the scientific term for these arrows and use drawing to understand their essence.
+
+## Using Vectors
 
 The arrows we have been discussing are called "vectors."
 Knowing the special name for important concepts is always useful. 
