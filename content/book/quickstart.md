@@ -32,7 +32,7 @@ The SpinWheel has four components: a power source (the battery), a sensor (for m
 
 5. To charge, plug a micro USB cable into the USB jack, flip the switch to "USB" and charge using a computer or USB-to-wall converter.  You should also keep the switch in this position when you are not using the SpinWheel and for long term storage to protect the battery from discharging. Note: the battery may require charging before use.
 
-Your kit contains a booklet (the SpinWheel Field Guide) with various activities you can complete . The activities in the booklet are also found in expanded versions online. We highly recommend that you make use of both. 
+Your kit contains a booklet (the SpinWheel Field Guide) with various activities you can complete. The activities in the booklet are also found in expanded versions online. We highly recommend that you make use of both. 
 
 ## Setting Up the Arduino Software
 
@@ -48,6 +48,8 @@ Now you can go back to the Tools menu and select `Tools→ Board`. Select Arduin
 
 
 ![Installing Arduino libraries.](/images/quickstart/arduino_library_setup.small.png "Installing Arduino libraries.")
+
+## Programming the SpinWheel
 
 Learning to code is just like learning a new language - it may not be easy at first, but once you learn the basics, you will be able to write code to communicate effectively with computers! To get the first set of examples of this new language, download [our collection of sample code](/software/SpinWearablesFirmware.zip) (this will download a zip file). Then you can use `Sketch→ Include Library→ Add .ZIP Library` and navigate to the zip file to add it. You can always download this file anew if in your experimentation you have lost the original -- and experimentation is encouraged. The new files can be found under `File→ Examples→ SpinWearables`. Open any file to see an example of the language used to communicate with the SpinWheel. You will learn more about this language in future lessons.
 
