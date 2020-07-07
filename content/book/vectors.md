@@ -381,6 +381,7 @@ is the distance of the diagonal (sqrt(2 tiles)) and the direction is 45 degrees.
 in various directions and distances using the widget below and see how the magnitude and 
 direction change.
 
+
 <style>
 #grid1d {
   text-align: center;
@@ -391,59 +392,86 @@ direction change.
 }
 
 
-#grid1d .vis {
-  width: 40%;
-  font-size: 2rem;
-  height: 4rem;
-  line-height: 4rem;
-  border: solid 1px;
-  border-color: black;
-  display: block;
-  margin: auto;
-  text-shadow:
-    -1px -1px 0 white,
-    1px -1px 0  white,
-    -1px 1px 0  white,
-    1px 1px 0   white;
-}
 
-#move2d .spacer {
+#grid1d .spacer {
 
   width:5%;
 }
 
+
 </style>
-
-<div id="grid1d">
-<input type="number" min="-10" max="10"  id="xvalue">
-<input type="number" min="-10" max="10"  id="yvalue">
-
-<span class="spacer"></span>
-
-<svg id="axis" width="400" height="400" viewBox="0 0 400 400">
-<line x1="0" y1="200" x2="400" y2="200" style="stroke:rgb(1,1,1);stroke-width:2" />
-<line x1="200" y1="0" x2="200" y2="400" style="stroke:rgb(1,1,1);stroke-width:2" />
-</svg>
-<span class="spacer"></span>
+<dif id= "grid1d">
+<div id="vectorGrid">
+<canvas class="trajectory1D" width=400 height=400></canvas>
+</div>
+<div id="values">
+<span class="spacer">X displacement: </span><input type="number" min="-10" max="10"  id="xvalue">
+<span class="spacer">Y displacement: </span><input type="number" min="-10" max="10"  id="yvalue">
 
 <button id="plotButton">Plot</button>
 
-<script>
+<span class="spacer">Magnitude: </span><span class="vis" id="magshow">0</span>
+<span class="spacer">Angle: </span><span class="vis" id="angshow">0</span>
 
-//extract desired elements
+</div>
+</div>
+<script>
+const v_to_path2D = document.getElementById('vectorGrid');
+const ctx2D = v_to_path2D.getElementsByClassName('trajectory1D')[0].getContext('2d');
 var xElement = document.getElementById("xvalue");
 var yElement = document.getElementById("yvalue");
 
-var entireDiv = document.getElementById("move2d");
-var waveVis = document.querySelector("#move2d .vis");
+
+function canvas_arrow2D(context, fromx, fromy, tox, toy) {
+  var headlen = 10;
+  var dx = tox - fromx;
+  var dy = toy - fromy;
+  var angle = Math.atan2(dy, dx);
+  context.moveTo(fromx, fromy);
+  context.lineTo(tox, toy);
+  context.lineTo(tox - headlen * Math.cos(angle - Math.PI / 6), toy - headlen * Math.sin(angle - Math.PI / 6));
+  context.moveTo(tox, toy);
+  context.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
+
+  
+}
+
+function canvas_axis(context, maxX, maxY) {
+  var midX = maxX/2;
+  var midY = maxY/2;
+  context.moveTo(midX, 0);
+  context.lineTo(midX,maxY);
+  context.moveTo(0, midY);
+  context.lineTo(maxX, midY);
+}
 
 // define event handler
 function plotVector(){
 	// extract desired info
     var x = xElement.value;
     var y = yElement.value;
-  	console.log(x)
+    x_scale = x*15 + 200; // make relative to our image in scale up
+    y_scale = -y*15 + 200; // flip the sign
   
+	var m_canvas = document.createElement('canvas'); // A frame buffer for only the path
+  	m_canvas.width = 400;
+  	m_canvas.height = 400
+  
+	ctx2D.clearRect(0,0,400,400);
+    ctx2D.drawImage(m_canvas,0,0);
+    ctx2D.strokeStyle='black';
+    ctx2D.beginPath();
+    canvas_arrow2D(ctx2D,200,200,x_scale, y_scale);
+    ctx2D.stroke();
+	canvas_axis(ctx2D, 400, 400);
+	ctx2D.stroke();
+	var magnitude = Math.sqrt(x*x  + y*y);
+	var direction_angle = Math.atan2(y,x)/Math.PI*180;
+	if (direction_angle < 0){
+		direction_angle = direction_angle + 360;
+	}
+	document.getElementById("magshow").innerHTML=magnitude.toFixed(2);
+	document.getElementById("angshow").innerHTML=direction_angle.toFixed(2);
     
 }
 
@@ -452,7 +480,6 @@ plotButton.onclick = plotVector;
 
 
 </script>
-</div>
 
 
 Now that we have represented displacement vectors with numbers, lets discuss velocity vectors.
