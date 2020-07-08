@@ -13,15 +13,21 @@ This lesson is still under-development. Check back soon for the full lesson!
 :::
 
 
-Creating a sketch is often the first step in solving a problem, whether creating a new technology or solving a problem in math class. This process can first help us better understand our own thoughts. Then, if we want to share our idea with someone else, the drawing can help us communicate it more clearly. 
+Doodling has been a crucial tool in our development as 
+a technological civilization.
+Many great inventions, many ideas that have changed the world,
+were born out of a lively conversation and scribble on a napkin.
+The process of rendering our thoughts in drawings allows us to clarify and better understand our own thoughts and leads us to more clearly communicate our ideas to others.
 
 
 One of the most important elements of many scientific sketches is the arrow.
-We use arrows to denote directions, positions, orientations, motions,
- and a myriad other scientific phenomena.
+We use arrows to denote directions, positions, orientations, flows, motions,
+and a myriad other properties and phenomena.
+We use longer arrows to denote faster movement or larger displacement or more intense flows.
+And we orient the arrows differently, to denote different relative orientations.
 
 
-When arrows are used by scientists to describe these real life phenomena, numbers are essential for further specifying what the arrow represents. By the end of the lesson, you will use arrows in just this way to describe scientific phenomena like velocity and acceleration. First, we will introduce the scientific term for these arrows and use drawing to understand their essence.
+By the end of the lesson, you will use arrows in just this way to describe scientific phenomena like velocity and acceleration. First, we will introduce the scientific term for these arrows and use drawings to understand their essence.
 
 ## Using Vectors
 
@@ -205,7 +211,7 @@ dragElementVel(v2p_vhandle, v2p_ctx, v2p_vctx);
 ### Acceleration Vectors
 
 In addition to the velocity, we also care about the acceleration, or change
-in velocity over time. This next widget allows you to manipulate the acceleration in
+in velocity over time. This next drawing allows you to manipulate the acceleration in
 the farthest left circle and see the corresponding change in velocity in the center. The
 acceleration (green), velocity (red) and total displacement (black) are shown on the right.
 Can you use the acceleration vectors to make a velocity of zero? Can you make the movement
@@ -414,7 +420,8 @@ direction change.
 <span class="spacer">Angle: </span><span class="vis" id="angshow">0</span>
 
 </div>
-</div>
+
+
 <script>
 const v_to_path2D = document.getElementById('vectorGrid');
 const ctx2D = v_to_path2D.getElementsByClassName('trajectory1D')[0].getContext('2d');
