@@ -185,7 +185,7 @@ but we interact with these waves in other ways.
 
 Finally, if visible light is part of the Electromagnetic Spectrum, what exactly is an electromagnetic wave? 
 Electromagnetic waves are waves, like sound waves or ocean waves.
-Instead of traveling vibrations in the air or water, they are vibrations of … it is complicated. Their motion involve both an electric field and a magnetic field. 
+Instead of traveling vibrations in the air or water, they are vibrations of … it is complicated. Their motion involves both an electric field and a magnetic field. (In this context, a field is similar to a map that describe how an electric charge or a magnet would be affected if placed at any location.)
 Studying the inner workings of electromagnetic waves has led to some of the 
 greatest discoveries in Physics: general relativity and quantum mechanics.
 Instead of retracing the steps of physicists over two hundred years to discover the inner 
