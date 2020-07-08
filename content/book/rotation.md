@@ -43,7 +43,115 @@ When dealing with circular motion or rotation (for instance, for a ball on a str
 # Angular Velocity 
 To describe the motion of this ball as it is spun around on a string, we use something called angular velocity. Usually when we think of velocity, we are thinking of something called linear velocity, which is defined as the change in position over the time. Angular velocity is very similar, but it is instead defined as the change in angle over the time. While angular velocity and linear velocity are related they are not the same. For instance, take our ball, if we change the length of the string, we can keep our angular velocity the same, but the linear velocity will be different. You can experiment with how changing the length of the string changes the angular and linear velocity using the interactive animation below.
 
-## add widget where gives angular and linear velocity with a slidebar for the radius of the ball spinning around 
+<style>
+#angRot {
+  width: 400px;
+  height: 600px;
+  position: relative;
+  justify-content: center;
+
+}
+#angBox{
+  width: 800px;
+  height: 400px;
+  position: absolute;
+
+}
+#angAnimation {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background-color: red;
+  top: 200px;
+  left: 200px;
+}
+
+#trajectory {
+width: 10px;
+  height: 10px;
+  position: absolute;
+  }
+  
+  #angOutput {
+left: 400px;
+  top: 0px;
+  position: absolute;
+  }
+</style>
+
+
+<div id="angRot">
+<div id="dataBar">
+<span class="spacer">radius : </span><input type="number" min="0" max="10"  id="rvalue">
+<button id="angButton">Show</button>
+</div>
+<div id="angBox">
+<canvas class="trajectory" width=400 height=400></canvas>
+<div id ="angAnimation"></div>
+<div id="angOutput">
+<span class="spacer">Velocities </span><br> 
+<span class="spacer">Linear (units/second): </span><span class="vis" id="linV">  </span><br> 
+<span class="spacer">Angular (degrees/second): </span><span class="vis" id="angV">   </span>
+</div>
+</div>
+</div>
+
+<script>
+
+var radius = document.getElementById("radiusBar");
+const drawBox = document.getElementById("angBox");
+const angImage = drawBox.getElementsByClassName('trajectory')[0].getContext('2d');
+var rElement = document.getElementById("rvalue");
+
+
+function myMove() {
+	var r = rElement.value;
+	if (r> 0){
+	var linVol = 2*Math.PI*r/4; // animation takes 4 seconds
+	var angVol = 90;
+	}
+	else{
+	var linVol = 0;
+	var angVol = 0;
+	}
+	document.getElementById("linV").innerHTML=linVol.toFixed(2);
+	document.getElementById("angV").innerHTML=angVol.toFixed(2);
+
+
+	var m_canvas = document.createElement('canvas'); // A frame buffer for only the path
+  	m_canvas.width = 400;
+  	m_canvas.height = 400
+  
+	angImage.clearRect(0,0,400,400);
+	angImage.beginPath();
+	angImage.arc(200, 200, r*10, 0, 2 * Math.PI);
+	angImage.stroke();
+	angImage.beginPath();
+	angImage.moveTo(200, 200);
+  	angImage.lineTo((r*10+200), 200);
+	angImage.stroke();
+
+
+  var elem = document.getElementById("angAnimation");   
+  var pos = 0;
+  
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 360) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = 195+ Math.sin(pos*Math.PI/180)*r*10 + 'px'; 
+      elem.style.left = 195+ Math.cos(pos*Math.PI/180)*r*10 + 'px'; 
+    }
+  }
+  
+}
+
+angButton.onclick = myMove;
+
+</script>
+
 
 Did you notice how as you made the string longer, the linear velocity increased but the angular velocity stayed the same? This is because to trace the larger circle at the same rate, it has to move faster when it is farther away. If you measured the linear velocity at points moving out from the origin, you could see that they steadily increase. However, the angular velocity remains the same because the ball is still covering the same 360 degrees of the circle. 
 
