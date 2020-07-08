@@ -1,5 +1,5 @@
 ---
-title: Dancing Companion
+title: Dancing with Color
 keywords: dancing, kinematics, color, light, programming
 header-image: /images/banners/dancer_color.png 
 ---
@@ -163,32 +163,239 @@ Instead of describing each point by drawing three separate lines,
 we could think of this motion in terms of points along a circle. 
 This system is called polar coordinates.
 
-In this coordinate system, 
-we can represent points on a circle, first by describing how large the circle is, by its radius, r.
-Then we express how far to go along the circular path by some angle, theta.
-If a dancer is making small tight turns, like chaînés turns, r will be small. 
-If a dancer is making a wide turn, an attitude or a fouetté, r would be bigger! 
-The angle in this coordinate system describes how far along the dancer is in their turn.
-At the start of the turn, the angle would be small. As the turn continued, the angle would get larger. 
+::: further-reading
+Polar coordinates are useful to describe points along a circle more easily than in Cartesian coordinates, but knowing more about them isn't important for the rest of this lesson. If you are interested in diving into this idea a bit more deeply, then check out our [rotation lesson](/rotation).  
+:::
 
-With this new system, we can describe points in space (or in a turn!) as (r, theta) instead of (x,y,z).
-In this animation, click anywhere in space to see how we could move there using this new coordinate system. 
+There are special sensors in your SpinWheel, called gyroscopes, that allow it to detect rotational motion. 
+We can use the output from these sensors to have the SpinWheel respond to spinning! To begin, we can start with a simpler case and program the SpinWheel to light up when it detects rotation around one axis. 
 
-<!--TODO: Animation -->
-Animation: Very similar to 2, but move to a point in space using a polar system. Trace out to r, then sweep to an angle theta, making an arc. Leave the colorful path there until another point is selected
+::: further-reading
+To learn more about modifying the SpinWheel's LED display with the output from the SpinWheel's motion sensors, check out the ["Step Counter" activity](/stepcounter). This lesson will teach you to access the output from the motion sensors, monitor it on your computer, and use this to turn your SpinWheel into a step counter.
+:::
 
-<!--TODO: Picture or gif of a dancer turning that traces out the polar angle theta -->
+In this case, we're measuring the rotation around the SpinWhee's x-axis, which is stored in the variable SpinWheel.gx. As the sensor is very sensitive, we only want to change color if there is sufficient rotation. In this case, we will only have the color change if absolute value of the rotation is greater than 1. 
 
-To see this coordinate system in action, upload this sketch to SpinWheel. 
+<!--TODO: Maybe only choose one or two of these to be in the lesson and have the rest be elsewhere; Add more context/explanation/better commenting -->
 
-<!--TODO: Have a program where the spinwheel responds to rotational motion -->
+```cpp
+#include "SpinWearables.h"
+using namespace SpinWearables;
+
+void setup() {
+  // Initialize all of the hardware on the SpinWheel.
+  SpinWheel.begin();
+}
+
+
+void loop() {
+  // Define a variable that will store whether or not the SpinWheel is spinning.
+  int spinning = 0; 
+
+  SpinWheel.readIMU();
+  // If the x rotation (gx) is big enough, then 
+  // turn on the LEDs
+  if (abs(SpinWheel.gx) > 1) {
+    spinning = 255;
+  }
+
+  SpinWheel.setLargeLEDsUniform(0, spinning, spinning);
+  // Make the SpinWheel show the registered color.
+  SpinWheel.drawFrame();
+ }
+```
+
+One simple modification to this script that we can make is to have the LEDs change color based on the direction of rotation. In the script below, the LEDs light up green up when the device is spun in one direction, and blue when spun in the other direction. If you prefer other colors, then you can modify the code below to change the colors.
+  
+```cpp
+#include "SpinWearables.h"
+using namespace SpinWearables;
+
+void setup() {
+  // Initialize all of the hardware on the SpinWheel.
+  SpinWheel.begin();
+}
+
+int pos_spin = 0;
+int neg_spin = 0;
+
+void loop() {
+  SpinWheel.readIMU();
+  // If the x rotation (gx) is big enough, then 
+  // change the color of the big LEDs based on the
+  // direction of the spin
+  if (abs(SpinWheel.gx) > 1) {
+    pos_spin = 255;
+    neg_spin = 0;
+  }
+  else if (SpinWheel.gx < -1) {
+    neg_spin = 255;
+    pos_spin = 0;
+  }
+  else {
+    pos_spin = 0;
+    neg_spin = 0;
+  }
+  // If gz is positive, set the big LEDs to light up green
+  // If gz is negative, set the big LEDs to light up blue
+  SpinWheel.setLargeLEDsUniform(0, pos_spin, neg_spin);
+  // Make the SpinWheel show the registered color.
+  SpinWheel.drawFrame();
+ }
+```
+
+It is also possible to measure and change the SpinWheel's LEDs color based on rotation in 3D space. In the sketch below, you can the red, green, and blue components of the LEDs to respond to the rotation around the x, y, and z axes. We also have the small LEDs and not only the large LEDs light up in response to the SpinWheel's motion.
+
+
+```cpp
+#include "SpinWearables.h"
+using namespace SpinWearables;
+
+void setup() {
+  // Initialize all of the hardware on the SpinWheel.
+  SpinWheel.begin();
+}
+
+int red = 0;
+int green = 0;
+int blue = 0;
+
+void loop() {
+  SpinWheel.readIMU();
+  // If the rotation in the x direction is big enough,
+  // turn the red LED of each big LED on.
+  if (abs(SpinWheel.gx) > 1) {
+    red = 255;
+  }
+  // If the rotation in the y direction is big enough,
+  // turn the green LED of each big LED on.
+  if (abs(SpinWheel.gy) > 1) {
+    green = 255;
+  }
+  // If the rotation in the z direction is big enough,
+  // turn the blue LED of each big LED on.
+  if (abs(SpinWheel.gz) > 1)  {
+    blue = 255;
+  }
+  // If the rotation in all directions is small enough,
+  // turn the big LEDs off.
+  if ((abs(SpinWheel.gx)+abs(SpinWheel.gy)+abs(SpinWheel.gz)) < 1) {
+    red = 0;
+    green = 0;
+    blue = 0;
+  }
+  
+  SpinWheel.setLargeLEDsUniform(red, green, blue);
+  SpinWheel.setSmallLEDsUniform(red, green, blue);
+
+  // Make the SpinWheel show the registered color.
+  SpinWheel.drawFrame();
+ }
+```
+
+One of the programs that came preloaded on your SpinWheel was an LED "snake" that spins around the device. We can modify this snake so that it only rotates when you rotate. You will program the SpinWheel LEDs to light up and turn and turn like a dancer. In this script, we'll introduce a new function: `SpinWheel.setSmallLEDsPointer(angle, decay, red, green, and blue)`. Angle controls how big the snake is, decay the fade at the end of the snake, and red, green, and blue represent the red, green, and blue component of the small LEDs. The "snake" only moves when you rotate along the x axis. Can you modify the color of the snake? How long the snake is? Have it respond to other motion?
+
+
+```cpp
+#include "SpinWearables.h"
+using namespace SpinWearables;
+
+void setup() {
+  // Initialize all of the hardware on the SpinWheel.
+  SpinWheel.begin();
+}
+
+uint8_t angle; 
+
+void loop() {
+  SpinWheel.readIMU();
+
+  // if there is sufficient rotation, have the snake rotate
+  if (abs(SpinWheel.gx) > 1) { 
+    angle = (millis()>>4)&0xff;    
+  }
+
+  // this is a function that we created to display a "snake"
+  SpinWheel.setSmallLEDsPointer(angle, 500, 0, 255, 255);
+    
+  // Make the SpinWheel show the registered color.
+  SpinWheel.drawFrame();
+}
+```
 
 
 ## The Grand Finale: Showing Off All Its Colors
 
-You’ve explored motion so far in this adventure. To see the SpinWheel “dance” and show off all its colors, upload this final sketch of the adventure. You will program the SpinWheel LEDs to light up and turn and turn like a dancer. 
+You’ve explored motion so far in this adventure. Using the above scripts as a starting point, you can modify the SpinWheel to respond to your motion however you see fit! We'll leave you with one final more complicated sketch to inspire your imagination.
 
-<!--TODO: Write a program where the outer edges of the SpinWheel lights up in a snake at different speeds -->
+<!--TODO: Make the color wheel better, have the snake stop moving slowly, maybe step through what this does more -->
+
+```cpp
+/// # Dancing with Color: Step x, have the color wheel change only 
+// if there is rotation
+//
+
+#include "SpinWearables.h"
+using namespace SpinWearables;
+
+void setup() {
+  SpinWheel.begin();
+}
+
+int offset = 0;
+int colorChange;
+
+// #### Color wheel
+// Frequently one needs to access the color (or hue) wheel. It is particularly
+// important when making rainbows for instance. This function takes a coordinate
+// on the circle (a single byte, 0 to 255, where 255 denotes a whole turn), and
+// turns it into the corresponding hue.
+// ![Depiction of the colorwheel.](./colorwheel.png)
+uint32_t colorWheel(int wheelPos) {
+  wheelPos = 255 - wheelPos;
+  if(wheelPos < 85) {
+    return color(255 - wheelPos * 3, 0, wheelPos * 3);
+  }
+  if(wheelPos < 170) {
+    wheelPos -= 85;
+    return color(0, wheelPos * 3, 255 - wheelPos * 3);
+  }
+  wheelPos -= 170;
+  return color(wheelPos * 3, 255 - wheelPos * 3, 0);
+}
+
+uint8_t angle;
+
+void loop() {
+  SpinWheel.readIMU();
+  // figure out how to get smoother color wheel so doesn't change when switch direction
+  // if rotation is fast, add a step to the offset
+  if (abs(SpinWheel.gx) > 1) {
+    offset = SpinWheel.gx*100; 
+    Serial.println(offset);
+  }
+
+  // make the rainbow in the large LEDs
+  for (int i=0; i<4; i++) {
+    colorChange = offset+i*255/4;
+    Serial.println(colorChange);
+    SpinWheel.setLargeLED(i, colorWheel(colorChange));
+    SpinWheel.setLargeLED(7-i, colorWheel(colorChange));
+  }
+
+
+  // make a snake in the small LEDs
+  // if there is sufficient rotation, have the snake rotate
+  if (abs(SpinWheel.gx) > 1) { 
+    angle = (millis()>>4)&0xff;    
+  }
+
+  // this is a function that we created to display a "snake"
+  SpinWheel.setSmallLEDsPointer(angle, 500, 0, 255, 255);
+
+  SpinWheel.drawFrame();
+}
+```
 
 
 To see even more dances mathematically, you can watch Mariel Pettee’s, a physics graduate student who studies particle physics as well as physics and dance, AI-generated dances here: 
