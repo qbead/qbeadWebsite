@@ -1,6 +1,6 @@
 html:
 	./build.sh $(match) 
-local_test_server: todos html
+local_test_server: html
 	cd build && python3 -m http.server
 todos:
 	grep -r "<!--TODO:" content/ || true
