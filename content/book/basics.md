@@ -21,7 +21,7 @@ If a function involves the motion sensor,
 you can grab the virtual device with your mouse and shake it,
 simulating how the physical sensor would respond to real motion.
 
-## LED Manipuation
+## LED Manipulation
 
 There are a number of functions that let you manipulate the state of the LEDs,
 however, for the LEDs to actually respond to these manipulations,
@@ -160,7 +160,7 @@ There are some undocumented and unfinished functions, among them: `setSmallLEDsP
 
 The `colorWheel` function turns a single number representing an angle into a color from the color wheel.
 
-The `triangularWave` and `parabolaWave` functions provide for a convenient periodic patterns, useful in animations.
+The `triangularWave` and `parabolaWave` functions provide for convenient periodic patterns, useful in animations.
 
 The `faston_slowoff` function can be used to pleasantly filter time-dependent measurements. For instance, it can be used to rapidly brighten an LED when a motion is detected and then slowly let the light decay after the motion stops.
 

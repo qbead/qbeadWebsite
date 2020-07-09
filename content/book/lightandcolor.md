@@ -168,7 +168,7 @@ For comparison, a highway speed limit of 60 miles per hour is about 27 m/s.
 You may have noticed that, as you changed the wavelength with the slider above, the color also changed.
 This is because the wavelength of light controls its color.
 The sensors in our eyes react differently to different wavelengths, which leads to perceiving different sensations of color.
-Red light has a long wavelength and purple light has a shorter wavelength. Using the interactive drawing, pick a red color and a purple color and notice how different their wavelengths are.
+Red light has a long wavelength and purple light has a shorter wavelength. Using the interactive drawing above, pick a red color and a purple color and notice how different their wavelengths are.
 
 
 Light with a wavelength between 380 and 700 nanometers is called the visible spectrum and it is the only type of electromagnetic waves our eyes can detect.<span class="footnote"><sup>[✱]</sup><span>For comparison, a human hair is about 50,000 nanometers in diameter.</span></span>
@@ -185,7 +185,7 @@ but we interact with these waves in other ways.
 
 Finally, if visible light is part of the Electromagnetic Spectrum, what exactly is an electromagnetic wave? 
 Electromagnetic waves are waves, like sound waves or ocean waves.
-Instead of traveling vibrations in the air or water, they are vibrations of … it is complicated. Their motion involves both an electric field and a magnetic field. (In this context, a field is similar to a map that describe how an electric charge or a magnet would be affected if placed at any location.)
+Instead of traveling vibrations in the air or water, they are vibrations of … it is complicated. Their motion involves both an electric field and a magnetic field. (In this context, a field is similar to a map that describes how an electric charge or a magnet would be affected if placed at any location.)
 Studying the inner workings of electromagnetic waves has led to some of the 
 greatest discoveries in Physics: general relativity and quantum mechanics.
 Instead of retracing the steps of physicists over two hundred years to discover the inner 
