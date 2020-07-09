@@ -153,7 +153,6 @@ Can you picture how their arms and feet move through space in small tight turns,
 Watch this video from --- to see dancing path represented: 
 
 <!--TODO: Find out licence for video and upload it -->
-<!--TODO: Find videos that describe these different turns -->
 
 The answer is yes! 
 There are many different ways we can describe all types of different dances! 
@@ -162,6 +161,9 @@ A dancer turning is a type of rotational motion.
 Instead of describing each point by drawing three separate lines, 
 we could think of this motion in terms of points along a circle. 
 This system is called polar coordinates.
+
+![Notice how in tight turns or wide turns, a dancers feet create different size circles through space. We coudl describe these circles using polar coordinates.
+](/images/dance_turn.jpg)
 
 ::: further-reading
 Polar coordinates are useful to describe points along a circle more easily than in Cartesian coordinates, but knowing more about them isn't important for the rest of this lesson. If you are interested in diving into this idea a bit more deeply, then check out our [rotation lesson](/rotation).  
@@ -175,6 +177,10 @@ To learn more about modifying the SpinWheel's LED display with the output from t
 :::
 
 In this case, we're measuring the rotation around the SpinWhee's x-axis, which is stored in the variable SpinWheel.gx. As the sensor is very sensitive, we only want to change color if there is sufficient rotation. In this case, we will only have the color change if absolute value of the rotation is greater than 1. 
+
+![In this picture you can see the x and y axes of your SpinWheel.
+](/images/dance_axis.jpg)
+
 
 <!--TODO: Maybe only choose one or two of these to be in the lesson and have the rest be elsewhere; Add more context/explanation/better commenting -->
 
