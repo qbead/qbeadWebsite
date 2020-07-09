@@ -141,7 +141,7 @@ function myMove() {
       clearInterval(id);
     } else {
       pos++; 
-      elem.style.top = 195+ Math.sin(pos*Math.PI/180)*r*10 + 'px'; 
+      elem.style.top = 195- Math.sin(pos*Math.PI/180)*r*10 + 'px'; 
       elem.style.left = 195+ Math.cos(pos*Math.PI/180)*r*10 + 'px'; 
     }
   }
