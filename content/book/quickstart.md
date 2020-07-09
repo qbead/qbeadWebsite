@@ -56,9 +56,11 @@ Learning to code is just like learning a new language - it may not be easy at fi
 <!--TODO: Needs new image, probably a drawing.-->
 ![Upload programs to your SpinWheel using the `Upload` button (highlighted in white).](/images/quickstart/upload_button_screenshot.png "Upload programs to your SpinWheel using the `Upload` button (highlighted in white).")
 
-To test that your SpinWheel is working properly, you can install a new program from the example files to animate your SpinWheel. Choose a file to install by opening `File→ Examples→ SpinWearables` and picking one of the examples. For instance, pick `BlinkingFirmware` and upload it by pressing the upload button (the arrow at the top). Now, your SpinWheel will contain all the pre-loaded animations it came with, plus the new colorful blinking one (from `BlinkingFirmware`) you just uploaded.
+To test that your SpinWheel is working properly, you can install a new program from the example files to animate your SpinWheel. Choose a file to install by opening `File→ Examples→ SpinWearables` and picking one of the examples. For instance, pick `BlinkingFirmware` and upload it by pressing the upload button (the arrow at the top). Now your SpinWheel will have the new colorful blinking one (from `BlinkingFirmware`) you just uploaded. 
+
+Doing this will overwrite the preloaded sketch that came on your SpinWheel. If you want your SpinWheel to have the sketch that was preloaded on the SpinWheel again, simply download the 'SpinWheelStockFirmware' from the SpinWearables examples.
 
 
-In future SpinWheel activities, you will be writing new programs to animate the SpinWheel. To transfer a program from your computer to your SpinWheel, simply connect your SpinWheel to your computer, open your new program in the Arduino software and press the upload button.
+In future SpinWheel activities, you will be writing new programs to animate the SpinWheel. To transfer a program from your computer to your SpinWheel, simply connect your SpinWheel to your computer, open your new program in the Arduino software and press the upload button. 
  
 Congratulations! You are now ready to continue with the rest of the SpinWheel activities!
