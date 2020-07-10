@@ -200,7 +200,7 @@ How would the following properties of your trip change: Angular displacement, an
 ![Here's a picture of this merry-go-round ride!
 ](/images/merry_go_round.jpg)
 
-Answer: (Could we hide this in a dropdown box that you have to click to open?)
+<!-- TODO: Maybe hide this in a dropdown box that you have to click to open? -->
 
 Your angular displacement, angular velocity, and angular acceleration would stay the same on both rides. 
 The two horses lie along the same radial line, so in polar coordinates, their $\theta$ coordinate would be the same, but $r$ would change. 
@@ -214,7 +214,8 @@ Just like for the ball on a string, when $r$ decreases, your linear velocity als
 
 How would your angular acceleration change as you ride on the merry-go-round?
 
-Answer: (Could we hide this in a dropdown box that you have to click to open?)
+
+<!-- TODO: Maybe hide this in a dropdown box that you have to click to open? -->
 
 When you first get on the merry-go-round, your angular velocity and angular acceration are both zero. Once the merry-go-round starts moving, your angular velocity increases until it reaches a constant velocity. During that time, your angular acceleration will describe this increase in angular velocity. However, once you reach the constant angular velocity of most of the merry-go-round ride, your angular velocity is no longer changing and so your angular acceleration is again zero. At the end of the ride, your angular velocity is going to decrease back to zero at a rate controlled by the angular acceleration. Then when once the merry-go-round has stopped moving, your angular velocity and acceleration are again zero.
  
