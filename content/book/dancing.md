@@ -351,30 +351,11 @@ void setup() {
 int offset = 0;
 int colorChange;
 
-// #### Color wheel
-// Frequently one needs to access the color (or hue) wheel. It is particularly
-// important when making rainbows for instance. This function takes a coordinate
-// on the circle (a single byte, 0 to 255, where 255 denotes a whole turn), and
-// turns it into the corresponding hue.
-// ![Depiction of the colorwheel.](./colorwheel.png)
-uint32_t colorWheel(int wheelPos) {
-  wheelPos = 255 - wheelPos;
-  if(wheelPos < 85) {
-    return color(255 - wheelPos * 3, 0, wheelPos * 3);
-  }
-  if(wheelPos < 170) {
-    wheelPos -= 85;
-    return color(0, wheelPos * 3, 255 - wheelPos * 3);
-  }
-  wheelPos -= 170;
-  return color(wheelPos * 3, 255 - wheelPos * 3, 0);
-}
 
 uint8_t angle;
 
 void loop() {
   SpinWheel.readIMU();
-  // figure out how to get smoother color wheel so doesn't change when switch direction
   // if rotation is fast, add a step to the offset
   if (abs(SpinWheel.gx) > 1) {
     offset = SpinWheel.gx*100; 
