@@ -389,103 +389,84 @@ direction change.
 
 
 <style>
-#grid1d {
+#grid2d {
   text-align: center;
 }
-#grid1d #location {
-  width: 10%;
-  top:0.5rem;
+.grid2dcontrol > input {
+  width: 40px;
 }
-
-
-
-#grid1d .spacer {
-
-  width:5%;
-}
-
-
 </style>
-<dif id= "grid1d">
+
+<div id= "grid2d">
 <div id="vectorGrid">
 <canvas class="trajectory1D" width=400 height=400></canvas>
 </div>
 <div id="values">
-<span class="spacer">X displacement: </span><input type="number" min="-10" max="10"  id="xvalue">
-<span class="spacer">Y displacement: </span><input type="number" min="-10" max="10"  id="yvalue">
-
-<button id="plotButton">Plot</button>
-
-<span class="spacer">Magnitude: </span><span class="vis" id="magshow">0</span>
-<span class="spacer">Angle: </span><span class="vis" id="angshow">0</span>
-
+<div class="grid2dcontrol">X displacement: <input type="number" min="-10" max="10"  id="xvalue"></div>
+<div class="grid2dcontrol">Y displacement: <input type="number" min="-10" max="10"  id="yvalue"></div>
+<div class="grid2dcontrol">Magnitude: <span class="vis" id="magshow">0</span></div>
+<div class="grid2dcontrol">Angle: <span class="vis" id="angshow">0</span>&deg;</div>
 </div>
-
+</div>
 
 <script>
 const v_to_path2D = document.getElementById('vectorGrid');
 const ctx2D = v_to_path2D.getElementsByClassName('trajectory1D')[0].getContext('2d');
 var xElement = document.getElementById("xvalue");
 var yElement = document.getElementById("yvalue");
-
-
-function canvas_arrow2D(context, fromx, fromy, tox, toy) {
-  var headlen = 10;
-  var dx = tox - fromx;
-  var dy = toy - fromy;
-  var angle = Math.atan2(dy, dx);
-  context.moveTo(fromx, fromy);
-  context.lineTo(tox, toy);
-  context.lineTo(tox - headlen * Math.cos(angle - Math.PI / 6), toy - headlen * Math.sin(angle - Math.PI / 6));
-  context.moveTo(tox, toy);
-  context.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
-
-  
-}
+xElement.value = 2;
+yElement.value = 2;
+var xcurrent = 0;
+var ycurrent = 0;
 
 function canvas_axis(context, maxX, maxY) {
   var midX = maxX/2;
   var midY = maxY/2;
+  var stepX = maxX/20;
+  var stepY = maxY/20;
+  context.strokeStyle='rgba(0,0,0,0.5)';
+  context.lineWidth=1;
   context.moveTo(midX, 0);
   context.lineTo(midX,maxY);
   context.moveTo(0, midY);
   context.lineTo(maxX, midY);
+  context.stroke();
+  context.strokeStyle='rgba(0,0,0,0.1)';
+  for (var i=-10; i<=10; i++) {
+    context.moveTo(0,midY+i*stepY);
+    context.lineTo(maxX,midY+i*stepY);
+    context.moveTo(midX+i*stepX,0);
+    context.lineTo(midX+i*stepX,maxY);
+  }
+  context.stroke();
 }
 
-// define event handler
-function plotVector(){
-	// extract desired info
-    var x = xElement.value;
-    var y = yElement.value;
-    x_scale = x*15 + 200; // make relative to our image in scale up
-    y_scale = -y*15 + 200; // flip the sign
+function plot_all(){
+    xcurrent = 0.8*xcurrent + 0.2*xElement.value;
+    ycurrent = 0.8*ycurrent + 0.2*yElement.value;
+    var x = xcurrent;
+    var y = ycurrent;
+    x_scale = x*20 + 200;
+    y_scale = -y*20 + 200;
   
-	var m_canvas = document.createElement('canvas'); // A frame buffer for only the path
-  	m_canvas.width = 400;
-  	m_canvas.height = 400
-  
-	ctx2D.clearRect(0,0,400,400);
-    ctx2D.drawImage(m_canvas,0,0);
-    ctx2D.strokeStyle='black';
+    ctx2D.clearRect(0,0,400,400);
     ctx2D.beginPath();
-    canvas_arrow2D(ctx2D,200,200,x_scale, y_scale);
+    canvas_axis(ctx2D, 400, 400);
+    ctx2D.beginPath();
+    ctx2D.strokeStyle='black';
+    ctx2D.lineWidth=2;
+    canvas_arrow(ctx2D,200,200,x_scale, y_scale);
     ctx2D.stroke();
-	canvas_axis(ctx2D, 400, 400);
-	ctx2D.stroke();
-	var magnitude = Math.sqrt(x*x  + y*y);
-	var direction_angle = Math.atan2(y,x)/Math.PI*180;
-	if (direction_angle < 0){
-		direction_angle = direction_angle + 360;
-	}
-	document.getElementById("magshow").innerHTML=magnitude.toFixed(2);
-	document.getElementById("angshow").innerHTML=direction_angle.toFixed(2);
-    
+    var magnitude = Math.sqrt(x*x  + y*y);
+    var direction_angle = Math.atan2(y,x)/Math.PI*180;
+    if (direction_angle < 0){
+    	direction_angle = direction_angle + 360;
+    }
+    document.getElementById("magshow").innerHTML=magnitude.toFixed(1);
+    document.getElementById("angshow").innerHTML=direction_angle.toFixed(0);
 }
 
-// decide what event handlers to use
-plotButton.onclick = plotVector;
-
-
+setInterval(plot_all, 50);
 </script>
 
 
