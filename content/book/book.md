@@ -16,7 +16,7 @@ This is only a scaffolding for the (printed and electronic) textbook that will b
 ## Adventures
 
 1. [Biology of sight](/sight)
-2. Animations and patterns
+2. [Animations and patterns](/animation)
 3. [Make a step counter](/stepcounter)
 4. Dancing companion
 5. Compass
