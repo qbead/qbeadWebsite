@@ -402,10 +402,12 @@ direction change.
 <canvas class="trajectory1D" width=400 height=400></canvas>
 </div>
 <div id="values">
-<div class="grid2dcontrol">X displacement: <input type="number" min="-10" max="10"  id="xvalue"></div>
-<div class="grid2dcontrol">Y displacement: <input type="number" min="-10" max="10"  id="yvalue"></div>
-<div class="grid2dcontrol">Magnitude: <span class="vis" id="magshow">0</span></div>
-<div class="grid2dcontrol">Angle: <span class="vis" id="angshow">0</span>&deg;</div>
+<div class="grid2dcontrol">X component: <span id="xshow">0</span></div>
+<div><input type="range" min="-10" max="10"  id="xvalue"></div>
+<div class="grid2dcontrol">Y component: <span id="yshow">0</span></div>
+<div><input type="range" min="-10" max="10"  id="yvalue"></div>
+<div class="grid2dcontrol">Magnitude: <span id="magshow">0</span></div>
+<div class="grid2dcontrol">Angle: <span id="angshow">0</span>&deg;</div>
 </div>
 </div>
 
@@ -462,6 +464,8 @@ function plot_all(){
     if (direction_angle < 0){
     	direction_angle = direction_angle + 360;
     }
+    document.getElementById("xshow").innerHTML=xcurrent.toFixed(1);
+    document.getElementById("yshow").innerHTML=ycurrent.toFixed(1);
     document.getElementById("magshow").innerHTML=magnitude.toFixed(1);
     document.getElementById("angshow").innerHTML=direction_angle.toFixed(0);
 }
