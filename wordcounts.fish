@@ -1,4 +1,4 @@
-for AUTHOR in "" # (git shortlog -s | cut -c8-) ""
+for AUTHOR in (git shortlog -s | cut -c8-) ""
     echo $AUTHOR
     set COUNT_TOTAL 0
     for COMM in (git log --all --pretty=format:'%H' --no-merges --author="$AUTHOR")
