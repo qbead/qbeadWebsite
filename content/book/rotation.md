@@ -34,6 +34,9 @@ If you aren't already familiar with the concepts of displacement, velocity, and 
 When dealing with circular motion or rotation (for instance, for a ball on a string or a horse on a merry-go-round), then it is useful to describe its position using an angle ($\theta$). The change between the original angle of the ball and its final angle is typically specified as the change in $\theta$ (or $\Delta \theta$) and is known as angular displacement. Displacement is a useful term to describe an object's change in position and can be defined as an angle (angular displacement) or distance (linear displacement). This concept is easier to understand through diagrams. In the image below you can see how linear displacement and angular displacement are related to each other.
 
 ## add image of a ball moving in a straight line to demonstrate displacement and ball on string with an angle sketched out to define angular displacement
+
+<video src="/images/bookpics/ang_lin_displacement.mp4" muted autoplay playsinline loop></video>
+
 ![This pictures shows the difference between angular displacement ($\theta$) and linear displacement.
 ](/images/angular_disp.jpg)
 
