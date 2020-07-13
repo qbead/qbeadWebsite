@@ -44,6 +44,8 @@ One useful way to use vectors is to describe the straight-line distance between 
 
 However, what if you want to represent a more complicated journey? Maybe after stopping at point A, you then move to point B. We can then draw a vector between point A and point B. We can then add additional points and vectors to represent the rest of the journey. 
 
+
+<video src="/images/bookpics/vector_multiple_steps.mp4" muted autoplay playsinline loop></video>
 `Add an animation of multiple steps`
 
 At the end of our journey, we can add these steps together to find our final position.
