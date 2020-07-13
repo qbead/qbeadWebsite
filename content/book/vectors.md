@@ -39,6 +39,7 @@ to know to look for information on vectors instead of "the type of arrows scient
 ### Displacement Vectors
 One useful way to use vectors is to describe the straight-line distance between two points. For instance, imagine that you are currently standing at the point labeled 'start' at the center of the drawing below and then walk to the point labeled 'A'. We can use a vector to represent the distance you covered walking between the two points. The direction of the arrow indicates the direction of your motion.
 
+<video src="/images/bookpics/vector_displacement.mp4" muted autoplay playsinline loop></video>
 `Add an animation of point labeled 'start,' something to indicate motion, point labeled 'A,' and then a vector appearing. `
 
 However, what if you want to represent a more complicated journey? Maybe after stopping at point A, you then move to point B. We can then draw a vector between point A and point B. We can then add additional points and vectors to represent the rest of the journey. 
