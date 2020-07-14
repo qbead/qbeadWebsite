@@ -8,8 +8,8 @@ keywords: animations, frames, timing
 
 
 To create an animation or a video,
-we need a rapid sequence of still images,
-rapid enough that it looks like a smoothly changing pattern to our yes.
+we need a rapid sequence of still images, called frames.
+The frames must be displayed rapidly enough that it looks like a smoothly changing pattern to our eyes.
 This is true both for the computer screen playing a video
 and for the SpinWheel lights, changing their light patterns.
 For example, this is a short repeating animation of a rainbow pattern playing on the LEDs.
@@ -29,25 +29,26 @@ and a lot of computer memory to store the artwork.
 
 However, there is another type of art, called *generative art*,
 which does not have such taxing requirements.
-It does obey different constraints, and it requires a particular mindset,
+It obeys different constraints, and it requires a particular mindset,
 but its beauty comes from the fact that you tell a computer how to create art on its own,
 instead drawing the art yourself.
 The creative element moves from your hands and eyes, to deeper into your imagination,
 and it depends on your skill to instruct and teach a computer to do something.
 We will explore this type of art here.
 We will learn how to command a computer (the SpinWheel) to draw patterns of color that evolve in time.
-Along the way we might even learn a bit about how to write programs by accident.
+Along the way we might even learn a bit about how to write programs.
 
 <!--TODO: some warning that you need to have done the quick start and have the Arduino software.-->
 
 ## Timing
 
 Our first goal, before we are able to make something as advanced as the rainbow pattern above,
-would be to simply make our device blink.
+is to simply make our device blink.
 
 <video src="/images/bookpics/simple_blink.mp4" muted autoplay playsinline loop></video>
 
-The first thing we need to consider is how we time the frames of our animation.
+To make our devide blink, we need to tell it how long to be on or off.
+This is the timing of our animation.
 Thankfully our device has a built-in timer that can measure milliseconds (thousands of a second).
 One of the first things we will need to do in our generative art program,
 would be to ask for the time and save it for future calculations.
@@ -57,11 +58,12 @@ The necessary command that we need to write looks like
 int t = millis();
 ```
 
-Here, `millis()` is the <span class="footnote">command that reads the number of milliseconds since the device has started.
-<span>
+Here, `millis()` is a <span class="footnote"> command that reads the number of milliseconds since the device has started. 
+<span>.
 This command, together with many other useful commands comes built into the software we are using.
 We will later even learn how to make commands of our own.
 </span></span>
+Commands are special directions that ask the computer to complete a task.
 The rest of the small piece code depicted above ensures that the number of milliseconds given by `millis()` is stored somewhere: in the variable we have named `t` (you can use more descriptive names if you wish). We also had to specify the type of the variable (`int` as in "integer") because otherwise our computer will get confused.
 
 <!--FIGURE: An image showing the type and name on the lhs, and the expression on the rhs, stressing the rigidity of this syntax.-->
@@ -83,11 +85,16 @@ if we want our animation to repeat every 2500 milliseconds (2.5 seconds),
 then the number on which the animation depends,
 should itself repeat in the same manner.
 
+*Add animation or figure showing time being divided into intervals*
+<!--FIGURE: Figure or Animation showing subdividing time into equal intervals. -->
+
+
 The simplest way to do that is to subdivide the number of milliseconds into equal intervals,
 and see how many milliseconds have passed since the start of the current interval.
-We can do that by performing division with remainder. For example, if 5600 milliseconds have passed since the deviced was powered, then two full intervals of 2500 milliseconds have passed and we are 600 milliseconds into the third interval:
+We can do that by dividing the number of seconds and looking at the remainder. For example, if 5600 milliseconds have passed since the deviced was powered, then two full intervals of 2500 milliseconds have passed and we are 600 milliseconds into the third interval:
 
 $$5600 = 2\times2500 + 600.$$
+*Show in an image*
 
 We can also consider different length intervals, but for now we will stick to 2.5 seconds as it is short enough for us to be able to see the animation we create without waiting too much, and long enough that our eyes can capture how things change during this interval.
 
