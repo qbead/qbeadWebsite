@@ -37,27 +37,28 @@ When searching in the library (or on the internet!) for more information, it cer
 to know to look for information on vectors instead of "the type of arrows scientists use in their doodles." Now that we know the name for this concept, let's dive deeper. 
 
 ### Displacement Vectors
-One useful way to use vectors is to describe the straight-line distance between two points. For instance, imagine that you are currently standing at the point labeled 'start' at the center of the drawing below and then walk to the point labeled 'A'. We can use a vector to represent the distance you covered walking between the two points. The direction of the arrow indicates the direction of your motion.
+One useful way to use vectors is to describe the straight-line distance between two points. For instance, imagine that you are currently standing at the point labeled 'start' at the center of the drawing below and then walk to the point labeled 'Location 1'. We can use a vector to represent the distance you covered walking between the two points. The direction of the arrow indicates the direction of your motion.
 
 <video src="/images/bookpics/vector_displacement.mp4" muted autoplay playsinline loop></video>
-`Add an animation of point labeled 'start,' something to indicate motion, point labeled 'A,' and then a vector appearing. `
+<center>Once you reach a destination, a vector can be drawn from your starting to final location.</center>
 
-However, what if you want to represent a more complicated journey? Maybe after stopping at point A, you then move to point B. We can then draw a vector between point A and point B. We can then add additional points and vectors to represent the rest of the journey. 
 
+However, what if you want to represent a more complicated journey? Maybe after stopping at Location 1, you then move to Location 2. We can then draw a vector between these two points. We can then add additional points and vectors to represent the rest of the journey. 
 
 <video src="/images/bookpics/vector_multiple_steps.mp4" muted autoplay playsinline loop></video>
-`Add an animation of multiple steps`
+<center>For each step of your journey, you can draw a vector between the prior and current location.</center>
+
 
 At the end of our journey, we can add these steps together to find our final position.
 The process of adding these vectors together is called vector addition.
 By framing vectors as representing motion, the idea of vector addition becomes easier to understand.
+
 Vector $\vec{A}$ represents displacement (movement) in one direction and
 vector $\vec{B}$ represents displacement in another direction.
 We can represent our total displacement by connecting our starting and ending positions with a vector: $\vec{C}$.
 
-`An animation of the displacements being summed up.`
-
-`A drawing of all the steps and a new vector pointing to the "you ended here" point`.
+<video src="/images/bookpics/vector_summation.mp4" muted autoplay playsinline loop></video>
+<center> The total displacement,$\vec{D}$, is the sum of vectors $\vec{A}$, $\vec{B}$ and $\vec{C}$ </center>
 
 ### Velocity Vectors
 
