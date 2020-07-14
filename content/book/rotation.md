@@ -36,12 +36,11 @@ When dealing with circular motion or rotation (for instance, for a ball on a str
 ## add image of a ball moving in a straight line to demonstrate displacement and ball on string with an angle sketched out to define angular displacement
 
 <video src="/images/bookpics/ang_lin_displacement.mp4" muted autoplay playsinline loop></video>
+<center>This pictures shows the difference between angular displacement ($\theta$) and linear displacement. </center>
 
-![This pictures shows the difference between angular displacement ($\theta$) and linear displacement.
-](/images/angular_disp.jpg)
 
-![Notice how for different size circles, the angular displacement of two cases can be the same, while the linear displacment varies.
-](/images/2radi.jpg)
+<video src="/images/bookpics/compare_rotations.mp4" muted autoplay playsinline loop></video>
+<center>Two movements can have the same angular displacement but different linear displacements.</center>
 
 # Angular Velocity 
 To describe the motion of this ball as it is spun around on a string, we use something called angular velocity. Usually when we think of velocity, we are thinking of something called linear velocity, which is defined as the change in position over the time. Angular velocity is very similar, but it is instead defined as the change in angle over the time. While angular velocity and linear velocity are related they are not the same. For instance, take our ball, if we change the length of the string, we can keep our angular velocity the same, but the linear velocity will be different. You can experiment with how changing the length of the string changes the angular and linear velocity using the interactive animation below.
