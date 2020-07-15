@@ -33,8 +33,6 @@ If you aren't already familiar with the concepts of displacement, velocity, and 
 # Angular Displacement
 When dealing with circular motion or rotation (for instance, for a ball on a string or a horse on a merry-go-round), then it is useful to describe its position using an angle ($\theta$). The change between the original angle of the ball and its final angle is typically specified as the change in $\theta$ (or $\Delta \theta$) and is known as angular displacement. Displacement is a useful term to describe an object's change in position and can be defined as an angle (angular displacement) or distance (linear displacement). This concept is easier to understand through diagrams. In the image below you can see how linear displacement and angular displacement are related to each other.
 
-## add image of a ball moving in a straight line to demonstrate displacement and ball on string with an angle sketched out to define angular displacement
-
 <video src="/images/bookpics/ang_lin_displacement.mp4" muted autoplay playsinline loop></video>
 <center>This pictures shows the difference between angular displacement ($\theta$) and linear displacement. </center>
 
@@ -163,7 +161,8 @@ To describe the change in velocity of an object, scientists use a concept called
 
 To help understand better the idea of angular acceleration, we have two animations below. On the left, the ball on a string is spinning at a constant angular velocity. As its angular velocity is not changing, the angular acceleration is zero. However, on the right, you can see that the ball's angular velocity increases and then decreases. The faster that this change in angular velocity occurs the larger the angular acceleration will be. If you adjust the sliders below, you can see that the time that it takes to change between the minimum and maximum acceleration changes. 
 
-## add widget/animation that demonstrates angular acceleration
+<video src="/images/bookpics/rotation_acceleration.mp4" muted autoplay playsinline loop></video>
+
 
 Did you notice how if you increase the angular acceleration that the time it takes to get to the maximum velocity decreases? This is because with a faster angular acceleration, it takes less time to get to the maximum angular velocity. Conversely, with a smaller angular acceleration, it will take more time to get to the maxiumum angular velocity. This is similar to how a sprinter that can accelerate faster will beat in a race another sprinter who has the same top speed but a slower acceleration. Since the first sprinter can reach their top speed faster, they will be ahead of the other sprinter in the race, even if they can run equally fast. 
 
@@ -182,8 +181,8 @@ The two polar coordinates describes the radius of the circle ($r$) and its direc
 This is easier to describe using a visual:
 
 
-![Here you can see how both polar and cartesian coordinates can be used to describe a point's location.
-](/images/polar_xy.jpg)
+![The same point can be described using cartesian coordinates (left image) and polar coordinates (right plot).
+](/images/rotation_polarCoordinates.png)
 
 It sometimes is important to switch from Cartesian to polar coordiantes or in the reverse from polar to Cartesian coordinates. $x$, $r$, and $\theta$ are related to each other using the cosine function, which relates $\theta$ to the ratio between $x$ and $r$ ($cos(\theta) = x/r$). The sine function ($sin(\theta) = y/r$) relates $/theta$ to the ratio between $y$ and $r$.
 
