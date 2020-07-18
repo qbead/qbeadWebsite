@@ -132,7 +132,7 @@ When painting in elementary school, you likely were given red, yellow, and blue 
 The reason for this is that the red and blue pigments that you were given are not the best matches for our eye's color sensors.
 Better base pigments for creating vibrant colors are those that a typical printer uses: yellow, cyan (a fancy word for the specific blue that is a primary color), and magenta (the specific almost-red color that is a primary color). 
 
-Primary colors are special because they allow you to create all other colors. Primary colors can't be mixed from other colors, while secondary colors can be created by mixing others. Cyan, yellow, and magenta are primary colors because each of these pigments absorbs the light that best activates one of the three sensors in our eyes. For instance, cyan colored pigments absorb red light and reflect green and blue light. 
+Primary colors are special because they allow you to create all other colors. Primary colors can't be mixed from other colors, while secondary colors can be created by mixing others. Cyan, yellow, and magenta are primary colors because each of these pigments absorbs the light that best activates one of the three sensors in our eyes. For instance, cyan colored pigments absorb red light and reflect green and blue light.  
 
 |Primary Pigment Color<br>(a.k.a. subtractive)  | Complemented by Primary Light Color<br>(a.k.a. additive)
 |---    |---    
@@ -142,6 +142,9 @@ Primary colors are special because they allow you to create all other colors. Pr
 
 <!--IMAGE: Mariya is making a visual to better represent this -->
 
+::: further-reading
+At this point, you may be wondering why your art teachers told you that red, yellow, and blue are the primary colors. The reason for this is because historically red, yellow, and blue were thought to be true primaries. However, once we learned more about how the eye works we realized that magenta, yellow, and cyan were much better matches for our eyes' sensors. The less accurate red, yellow, and blue system persists in elementary art classrooms because many art teachers think it is too difficult to teach young kids the difference between cyan and "primary blue" (also, it is harder to buy bulk paints in cyan and magenta). This makes it harder to mix vibrant colors in art class and to confusion when learning otherwise later on.
+:::
 
 If you have ever mixed colors using yellow, cyan, and magenta, you may have noticed how many more colors you can mix using them instead of what we wrongly think of as "primary red, yellow, and blue". You can experiment with such mixtures by adjusting the sliders below.
 
