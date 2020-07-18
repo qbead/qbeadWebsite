@@ -283,7 +283,7 @@ You might need to experiment with the value of `conversion_factor` in order to m
 <video src="/images/bookpics/stepcounter_final.mp4" muted autoplay playsinline loop></video>
 
 ::: further-reading
-Other interesting features would be to show different colors when the detected acceleration is too small to be counted. Moreover, you can use the colors of the small LEDs to give more information.
+Other interesting features would be to show different colors when the detected acceleration is too small to be counted. Moreover, you can use the colors of the small LEDs to give more information. For instance, this is one way that you can modify the code that we presented to allow your step counter to display a count of your steps past 12. Another way you could do this is modify the device so the LEDs only light up every 10, or 100 steps.
 :::
 
 ## Virtual SpinWheel
