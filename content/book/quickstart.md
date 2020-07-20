@@ -19,6 +19,10 @@ The SpinWheel has four components: a power source (the battery), a sensor (for m
 
 <!--TODO: Fix image so Battery Jack label isn't cut off. Consider labeling the battery and switch-->
 
+::: warning :
+The SpinWheel contains sensitive electronic components that are securely soldered onto the printed circuit board, but that can break if jostled excessively. For this reason, it is important that you are gentle with your SpinWheel when you plug it into your computer to program or plug it in to charge, and be gentle when putting it into storage in a backpack, purse, or pocket. Storing the SpinWheel in a smaller pocket within your bag or in the box you received it in will help keep it safe. 
+:::
+
 
 ## Quick Start
 
