@@ -42,8 +42,9 @@ Interestingly, a wave can travel long distances without needing the medium itsel
 ### Properties of Waves
 
 Scientists characterize waves using two properties called wavelength and speed.
-Wavelength describes the length of one repetition of the wave, or in other words, the distance between the peaks.  You can use the interactive drawing below to see how the wavelength affects the appearance of the wave. In this drawing, waves beyond the visible range are displayed as black. (We will discuss the visible range more below!)<span class="footnote"><sup>[✱]</sup><span>This widget might not work in Safari. If you can't change the wavelength, try using a different browser.</span></span>
+Wavelength describes the length of one repetition of the wave, or in other words, the distance between the peaks.  You can use the interactive drawing below to see how the wavelength affects the appearance of the wave. In this drawing, waves beyond the visible range are displayed as black. (We will discuss the visible range more below!)
 
+<!--WIDGET:make the color of the wave change too-->
 
 <style>
 #wavewidget {
