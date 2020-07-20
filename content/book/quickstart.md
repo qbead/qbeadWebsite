@@ -26,11 +26,11 @@ The SpinWheel contains sensitive electronic components that are securely soldere
 
 ## Quick Start
 
-1. You'll notice that the battery is not attached to the SpinWheel. Simply plug the battery connector into the battery jack on the circuit board and you can start using the SpinWheel as a wearable accessory, as it is already preloaded with several basic programs. 
+1. You'll notice that the battery is not attached to the SpinWheel. Simply plug the battery connector into the battery jack on the circuit board and you can start using the SpinWheel as a wearable accessory, as it is already preloaded with several basic animations. 
 
 2. To turn on the SpinWheel, flip the switch on the back to "BAT". You should see it turn on and light up brightly! 
 
-3. You can press the button on the back of the SpinWheel to toggle between different programs. 
+3. You can press the button on the back of the SpinWheel to toggle between different animations. 
 
 4. To turn off the SpinWheel, flip the switch to "USB". 
 
@@ -40,7 +40,7 @@ Your kit contains a booklet (the SpinWheel Field Guide) with various activities 
 
 ## Setting Up the Arduino Software
 
-While you can use the SpinWheel with the preloaded programs, much of the joy of the SpinWheel comes from your potential to change it, and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. Start by installing the Arduino software on your computer, which you can download for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software).
+While you can use the SpinWheel with the preloaded animations, much of the joy of the SpinWheel comes from your potential to change it, and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. Start by installing the Arduino software on your computer, which you can download for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software).
 
 
 <!--TODO: Needs new image, probably a drawing.-->
@@ -61,7 +61,7 @@ Feel free to edit the examples without worry of overwriting them — the origina
 <!--TODO: Needs new image, probably a drawing.-->
 ![Upload programs to your SpinWheel using the `Upload` button (highlighted in white).](/images/quickstart/upload_button_screenshot.png "Upload programs to your SpinWheel using the `Upload` button (highlighted in white).")
 
-To test that your SpinWheel is working properly, you can install a new program from the example files to animate your SpinWheel. Choose a file to install by opening `File→ Examples→ SpinWearables` and picking one of the examples. For instance, pick `BlinkingFirmware` and upload it by pressing the upload button (the arrow at the top). Now your SpinWheel will have the new colorful blinking one (from `BlinkingFirmware`) you just uploaded. 
+To test that your SpinWheel is working properly, you can install a new program, or sketch, from the example files to animate your SpinWheel. Choose a file to install by opening `File→ Examples→ SpinWearables` and picking one of the examples. For instance, pick `BlinkingFirmware` and upload it by pressing the upload button (the arrow at the top). Now your SpinWheel will have the new colorful blinking one (from `BlinkingFirmware`) you just uploaded. 
 
 Doing this will overwrite the preloaded sketch that came on your SpinWheel. If you want your SpinWheel to have the sketch that was preloaded on the SpinWheel again, simply download the 'SpinWheelStockFirmware' from the SpinWearables examples.
 
