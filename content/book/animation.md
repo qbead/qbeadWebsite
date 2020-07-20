@@ -31,14 +31,17 @@ However, there is another type of art, called *generative art*,
 which does not have such taxing requirements.
 It obeys different constraints, and it requires a particular mindset,
 but its beauty comes from the fact that you tell a computer how to create art on its own,
-instead drawing the art yourself.
+instead of drawing the art yourself.
 The creative element moves from your hands and eyes, to deeper into your imagination,
 and it depends on your skill to instruct and teach a computer to do something.
 We will explore this type of art here.
 We will learn how to command a computer (the SpinWheel) to draw patterns of color that evolve in time.
 Along the way we might even learn a bit about how to write programs.
 
-<!--TODO: some warning that you need to have done the quick start and have the Arduino software.-->
+::: warning :
+If you haven't already done the [quickstart guide](/quickstart), then we recommend reading it before finishing the rest of the lesson. It contains important information about downloading the software necessary to program the SpinWheel and other useful information.
+:::
+
 
 ## Timing
 
@@ -47,7 +50,7 @@ is to simply make our device blink.
 
 <video src="/images/bookpics/simple_blink.mp4" muted autoplay playsinline loop></video>
 
-To make our devide blink, we need to tell it how long to be on or off.
+To make our device blink, we need to tell it how long to be on or off.
 This is the timing of our animation.
 Thankfully our device has a built-in timer that can measure milliseconds (thousands of a second).
 One of the first things we will need to do in our generative art program,
@@ -98,7 +101,7 @@ $$5600 = 2\times2500 + 600.$$
 
 We can also consider different length intervals, but for now we will stick to 2.5 seconds as it is short enough for us to be able to see the animation we create without waiting too much, and long enough that our eyes can capture how things change during this interval.
 
-Lastly, we need to find how to tell the computer that we want it to compute a division with reminder for us. Thankfully, we can find in our dictionary of programming languages that the notation `a % b` is <span class="footnote">frequently used<span>Programmers have the bad habbit of taking established symbols like the percentage sign and using it for unrelated conceps, like its use here for division with remainder.</span></span> to mean "find the reminder of dividing `a` by `b`". With all this knowledge, we now know how to store a new variable `t_repeat` which measures time in repeating intervals of (for example) 2500 milliseconds.
+Lastly, we need to find how to tell the computer that we want it to compute a division with reminder for us. Thankfully, we can find in our dictionary of programming languages that the notation `a % b` is <span class="footnote">frequently used<span>Programmers have the bad habbit of taking established symbols like the percentage sign and using it for unrelated concepts, like its use here for division with remainder.</span></span> to mean "find the reminder of dividing `a` by `b`". With all this knowledge, we now know how to store a new variable `t_repeat` which measures time in repeating intervals of (for example) 2500 milliseconds.
 
 ```c++
 int t_repeat = t % 2500;
@@ -110,7 +113,7 @@ int t_repeat = t % 2500;
 
 ### A picture that depends on time
 
-Finally, we have all that we need to create our first animation. We will use the timing variable we have created `t_repeat`, and based on its value we will calculating a brightness value `b`. We will use this brightness variable to set all of the large LEDs (and each of their red, green, and blue colors) to the same time-dependent value. We had to divide `t_repeat`, because otherwise `b` will go beyond `255`, which is the maximal permitted brightness value for our software. You can see the full code in the simulator below, or you can find it in the Arduino software by navigating to `Examples → Animations_and_Patterns → Simple_Blink`. We also have a [webpage with detailed explanation of the code](/codedoc/examples/Animations_and_Patterns/Simple_Blink/Simple_Blink.ino.html) if you prefer to copy it from there.
+Finally, we have all that we need to create our first animation. We will use the timing variable we have created `t_repeat`, and based on its value we will calculate a brightness value `b`. We will use this brightness variable to set all of the large LEDs (and each of their red, green, and blue colors) to the same time-dependent value. We had to divide `t_repeat`, because otherwise `b` will go beyond `255`, which is the maximal permitted brightness value for our software. You can see the full code in the simulator below, or you can find it in the Arduino software by navigating to `Examples → Animations_and_Patterns → Simple_Blink`. We also have a [webpage with detailed explanation of the code](/codedoc/examples/Animations_and_Patterns/Simple_Blink/Simple_Blink.ino.html) if you prefer to copy it from there. 
 
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
@@ -127,6 +130,8 @@ void loop() {
 }
 </pre>
 </div>
+
+By learning to control the SpinWheel's LEDs, you are learning some basic coding concepts. To expand on this, we have also put together a refernce guide that introduces [some of the most important patterns for learning programming](/progpatterns).   
 
 ## More sophisticated patterns
 
@@ -166,7 +171,11 @@ void loop() {
 </pre>
 </div>
 
-Up to now we have discussed how turn a time-dependent number into a brightness.
+::: further-reading
+If you want to learn more about controlling the SpinWheel's LEDs, then try out our [Biology of Sight](/sight) Adventure. The [color theory](/colortheory) lesson provides more information about why we can use red, green, and blue LEDs to represent all the colors of the rainbow.
+:::
+
+Up to now we have discussed how to turn a time-dependent number into a brightness.
 However, instead of having time-dependent intensity of light,
 we might be more interested in a time-dependent hue.
 One particularly lovely way to achieve this is to use a color wheel,
@@ -205,7 +214,7 @@ we can use `SpinWheel.setLargeLED(i,r,g,b)`,
 where the first argument `i` is the number of the LED we want to change.
 Similarly, we use `SpinWheel.setSmallLED(i,r,g,b)` to do the same for the smaller LEDs.
 
-Now we will see the last conceptual tool we will need.
+Now we will introduce the last conceptual tool we will need.
 To create an interesting time-dependent pattern
 where different LEDs show different colors and intensities,
 we simply need to control each of them separately.
