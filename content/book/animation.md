@@ -11,7 +11,7 @@ To create an animation or a video,
 we need a rapid sequence of still images, called frames.
 The frames must be displayed rapidly enough that it looks like a smoothly changing pattern to our eyes.
 This is true both for the computer screen playing a video
-and for the SpinWheel lights, changing their light patterns.
+and for the SpinWheel lights changing their light patterns.
 For example, this is a short repeating animation of a rainbow pattern playing on the LEDs.
 
 <video src="/images/behindthescenes/pretty_device.mp4" muted autoplay playsinline loop></video>
@@ -52,9 +52,8 @@ is to simply make our device blink.
 
 To make our device blink, we need to tell it how long to be on or off.
 This is the timing of our animation.
-Thankfully our device has a built-in timer that can measure milliseconds (thousands of a second).
-One of the first things we will need to do in our generative art program,
-would be to ask for the time and save it for future calculations.
+Thankfully our device has a built-in timer that can measure milliseconds (thousandths of a second).
+One of the first things we will need to do in our generative art program is to ask for the time and save it for future calculations.
 The necessary command that we need to write looks like
 
 ```c++
@@ -67,7 +66,7 @@ This command, together with many other useful commands comes built into the soft
 We will later even learn how to make commands of our own.
 </span></span>
 Commands are special directions that ask the computer to complete a task.
-The rest of the small piece code depicted above ensures that the number of milliseconds given by `millis()` is stored somewhere: in the variable we have named `t` (you can use more descriptive names if you wish). We also had to specify the type of the variable (`int` as in "integer") because otherwise our computer will get confused.
+The rest of the small piece of code depicted above ensures that the number of milliseconds given by `millis()` is stored somewhere: in the variable we have named `t` (you can use more descriptive names if you wish). We also had to specify the type of the variable (`int` as in "integer") because otherwise our computer will get confused.
 
 <!--FIGURE: An image showing the type and name on the lhs, and the expression on the rhs, stressing the rigidity of this syntax.-->
 
@@ -101,7 +100,7 @@ $$5600 = 2\times2500 + 600.$$
 
 We can also consider different length intervals, but for now we will stick to 2.5 seconds as it is short enough for us to be able to see the animation we create without waiting too much, and long enough that our eyes can capture how things change during this interval.
 
-Lastly, we need to find how to tell the computer that we want it to compute a division with reminder for us. Thankfully, we can find in our dictionary of programming languages that the notation `a % b` is <span class="footnote">frequently used<span>Programmers have the bad habbit of taking established symbols like the percentage sign and using it for unrelated concepts, like its use here for division with remainder.</span></span> to mean "find the reminder of dividing `a` by `b`". With all this knowledge, we now know how to store a new variable `t_repeat` which measures time in repeating intervals of (for example) 2500 milliseconds.
+Lastly, we need to tell the computer that we want it to compute a division with reminder for us. Thankfully, we can find in our dictionary of programming languages that the notation `a % b` is <span class="footnote">frequently used<span>Programmers have the bad habit of taking established symbols like the percentage sign and using it for unrelated concepts, like its use here for division with remainder.</span></span> to mean "find the reminder of dividing `a` by `b`". With all this knowledge, we now know how to store a new variable `t_repeat` which measures time in repeating intervals of (for example) 2500 milliseconds.
 
 ```c++
 int t_repeat = t % 2500;
@@ -175,7 +174,7 @@ void loop() {
 If you want to learn more about controlling the SpinWheel's LEDs, then try out our [Biology of Sight](/sight) Adventure. The [color theory](/colortheory) lesson provides more information about why we can use red, green, and blue LEDs to represent all the colors of the rainbow.
 :::
 
-Up to now we have discussed how to turn a time-dependent number into a brightness.
+Up until now we have discussed how to turn a time-dependent number into a brightness.
 However, instead of having time-dependent intensity of light,
 we might be more interested in a time-dependent hue.
 One particularly lovely way to achieve this is to use a color wheel,
@@ -209,7 +208,7 @@ we have already seen that we need to use `SpinWheel.setLargeLEDsUniform(r,g,b)`,
 where `r`, `g`, and `b` are the red, green, and blue components of the color we desire.
 They need to be between 0 (turned off) and 255 (maximum intensity).
 To do the same to the smaller LEDs, we can use `SpinWheel.setSmallLEDsUniform(r,g,b)`.
-To illuminate a single large LEDs (enumerate from 0 to 7),
+To illuminate a single large LED (enumerate from 0 to 7),
 we can use `SpinWheel.setLargeLED(i,r,g,b)`,
 where the first argument `i` is the number of the LED we want to change.
 Similarly, we use `SpinWheel.setSmallLED(i,r,g,b)` to do the same for the smaller LEDs.
