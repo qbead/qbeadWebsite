@@ -112,7 +112,9 @@ int t_repeat = t % 2500;
 
 ### A picture that depends on time
 
-Finally, we have all that we need to create our first animation. We will use the timing variable we have created `t_repeat`, and based on its value we will calculate a brightness value `b`. We will use this brightness variable to set all of the large LEDs (and each of their red, green, and blue colors) to the same time-dependent value. We had to divide `t_repeat`, because otherwise `b` will go beyond `255`, which is the maximal permitted brightness value for our software. You can see the full code in the simulator below, or you can find it in the Arduino software by navigating to `Examples → Animations_and_Patterns → Simple_Blink`. We also have a [webpage with detailed explanation of the code](/codedoc/examples/Animations_and_Patterns/Simple_Blink/Simple_Blink.ino.html) if you prefer to copy it from there. 
+Finally, we have all that we need to create our first animation. We will use the timing variable we have created `t_repeat`, and based on its value we will calculate a brightness value `b`. We will use this brightness variable to set all of the large LEDs (and each of their red, green, and blue colors) to the same time-dependent value. We had to divide `t_repeat`, because otherwise `b` will go beyond `255`, which is the maximal permitted brightness value for our software. You can see the full code in the simulator below, or you can find it in the Arduino software by navigating to `Examples → Animations_and_Patterns → Simple_Blink`. 
+
+We also have a [webpage with detailed explanation of the code](/codedoc/examples/Animations_and_Patterns/Simple_Blink/Simple_Blink.ino.html), if you are interested in learning more specifically about what each line of the following code does. This page also has the full sketch with some lines of coding setting up the SpinWheel. If you want to run the following code on your SpinWheel, you can also copy it from that page directly. 
 
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
