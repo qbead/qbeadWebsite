@@ -115,11 +115,39 @@ with her dog Cary.
 </div>
 
 <div class="team-member">
+<img src="/images/teampics/jack_s.jpg">
+<div>
+<h1>Jack</h1>
+<h2>Materials Engineering</h2>
+Jack has always been passionate about both art and science. As a high schooler, he started an online business LiveWire ArtWorks to sell his jewelry and wire sculptures--much of which was inspired by nature. While at Brown, understanding the complexity and imaging the beauty of materials captivated his imagination and led him to major in materials engineering. Through TAing and tutoring for engineering courses, Jack discovered the joy of sharing science with others. Jack acts as an artistic consultant for the SpinWearables team.
+</div>
+</div>
+
+<div class="team-member">
 <img src="/images/teampics/jenna_s.jpg">
 <div>
 <h1>Jenna</h1>
 <h2>Atmospheric Chemistry</h2>
 [Jenna](/jenna) is a Ph.D. candidate in Environmental Engineering at Yale. She studies the complex mixture of organic compounds in the atmosphere, and how chemical changes at the molecular-level may impact the overall health and environmental effects of the air we breathe. She loves working with the SpinWearables team and the Yale Society of Women Engineers outreach team to share and explore the exciting world of STEM with middle and high school students.
+</div>
+</div>
+
+<div class="row dark">
+<div class="team-member">
+<img src="/images/teampics/jen_s.jpg">
+<div>
+<h1>Jennifer</h1>
+<h2>Computational Biology</h2>
+Jennifer uses computers to understand the structure of proteins. She loves teaching and seeks to ensure that the content she presents is accessible to all students. As a grad student at Yale, Jennifer shared her love of science with students through outreach programs to inspire others to consider a career in STEM. She recently finished a postdoc at UMass Med and is about to start a combined research and teaching position at Tufts. With the time between these positions she is excited to have joined the SpinWearables team to help hone the educational materials.   
+</div>
+</div>
+
+<div class="team-member">
+<img src="/images/teampics/mariya_s.jpg">
+<div>
+<h1>Mariya</h1>
+<h2>Architecture</h2>
+Passionate about art, Mariya acquired a major in architecture and started her studio – Monochra. She started drawing in high school and began to realize that helping people visualize their ideas is something that makes her feel most happy. She helped our team in creating storyboards and some visual assets for the project.
 </div>
 </div>
 
@@ -150,34 +178,6 @@ computers jointly at MIT and Harvard, but spends much of his free time
 designing hands-on outreach materials, including the SpinWheel.
 </div>
 </div>
-</div>
-</div>
-
-
-<div class="row dark">
-<div class="column long-text light" style="padding:1rem;">
-The SpinWearables team would like to thank the following individuals:
-</div>
-</div>
-
-<div class="row dark">
-<div class="team-member">
-<img src="/images/teampics/jack_s.jpg">
-<div>
-<h1>Jack</h1>
-<h2>Materials Engineering</h2>
-Jack has always been passionate about both art and science. As a high schooler, he started an online business LiveWire ArtWorks to sell his jewelry and wire sculptures--much of which was inspired by nature. While at Brown, understanding the complexity and imaging the beauty of materials captivated his imagination and led him to major in materials engineering. Through TAing and tutoring for engineering courses, Jack discovered the joy of sharing science with others. Jack acts as an artistic consultant for the SpinWearables team.
-</div>
-</div>
-
-<div class="team-member">
-<img src="/images/teampics/mariya_s.jpg">
-<div>
-<h1>Mariya</h1>
-<h2>Architecture</h2>
-Passionate about art, Mariya acquired a major in architecture and started her studio – Monochra. She started drawing in high school and began to realize that helping people visualize their ideas is something that makes her feel most happy. She helped our team in creating storyboards and some visual assets for the project.
-</div>
-</div>
 
 <div class="team-member">
 <img src="/images/teampics/tess_s.jpg">
@@ -187,4 +187,14 @@ Passionate about art, Mariya acquired a major in architecture and started her st
 Tess is currently a PhD student in Stanford's Civil and Environmental Engineering Department, and she's passionate about making the buildings we live and work in more sustainable through her research. Female mentors, such as her older sister, have played a large role in her interest in engineering, and so she enjoys inspiring younger girls to pursue careers in STEM. She also loves opportunities to use her graphic design skills for good causes, such as through Stanford's Graduate Society of Women Engineers and the SpinWheel!
 </div>
 </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
 </div>
