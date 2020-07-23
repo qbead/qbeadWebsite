@@ -3,77 +3,86 @@ title: Vectors and Kinematics
 keywords: vectors, kinematics
 ---
 
-
 ::: intro-box
-In this lesson, we'll introduce the basics of vectors and kinematics.
+Scientist and engineers use drawings of arrows to denote position and motion.
+They are called vectors and as thinking about them make many motion-related
+problems much easier.
 :::
 
-::: warning :
-This lesson is still under-development. Check back soon for the full lesson!
-:::
-
-
-Doodling has been a crucial tool in our development as 
-a technological civilization.
+Doodling is a crucial and empowering tool used by artists, scientists, and engineers.
 Many great inventions, many ideas that have changed the world,
 were born out of a lively conversation and scribble on a napkin.
 The process of rendering our thoughts in drawings allows us to clarify and better understand our own thoughts and leads us to more clearly communicate our ideas to others.
 
-
-One of the most important elements of many scientific sketches is the arrow.
+One of the most important elements of many scientific doodles is the arrow.
 We use arrows to denote directions, positions, orientations, flows, motions,
 and a myriad other properties and phenomena.
 We use longer arrows to denote faster movement or larger displacement or more intense flows.
-And we orient the arrows differently, to denote different relative orientations.
-
-
-By the end of the lesson, you will use arrows in just this way to describe scientific phenomena like velocity and acceleration. First, we will introduce the scientific term for these arrows and use drawings to understand their essence.
+And we orient the arrows differently, to denote different directions and positions.
+By the end of the lesson, you will use arrows in just this way to describe concepts like velocity and acceleration. But first, let's start with an informal doodle to get the hang of it.
 
 ## Using Vectors
 
-The specific arrows we introduced above are called "vectors" by scientists and mathematicians.
+The specific arrows we introduced above are called *vectors* by scientists and mathematicians.
 Knowing the special name for important concepts helps scientists communicate more effectively and makes it easier to find out more about topic. 
-When searching in the library (or on the internet!) for more information, it certainly does make it easier
-to know to look for information on vectors instead of "the type of arrows scientists use in their doodles." Now that we know the name for this concept, let's dive deeper. 
+When searching in the library (or on the internet) for more information, it certainly does make it easier
+to know to look for information on *vectors* instead of "the type of arrows scientists use in their doodles".
+Now that we know the name for this concept, let's dive deeper. 
 
-### Displacement Vectors
-One useful way to use vectors is to describe the straight-line distance between two points. For instance, imagine that you are currently standing at the point labeled 'start' at the center of the drawing below and then walk to the point labeled 'Location 1'. We can use a vector to represent the distance you covered walking between the two points. The direction of the arrow indicates the direction of your motion.
+### Position and Displacement
 
-<video src="/images/bookpics/vector_displacement.mp4" muted autoplay playsinline loop></video>
-<center>Once you reach a destination, a vector can be drawn from your starting to final location.</center>
+The most immediate application of our arrow doodles (vectors), is to denote a position in space and how that position changes.
+We would need a *starting point* with respect to which we will denote all other positions.
+Imagine you are at that starting point.
+Then you take a few more steps in an arbitrary direction and you are at a new location.
+You can draw a vector between the starting position and the initial position.
+This vector then represents your displacement.
+We can endow the *starting point* with the special property of being the center of our map.
+Frequently this center is called the *origin* of our map.
+Vectors starting at that origin can be thought of representing not only displacement,
+but also a current position.
 
+<figure><video src="/images/bookpics/vector_displacement.mp4" muted autoplay playsinline loop></video><figcaption>A vector can be used to denote the motion from one point to another.</figcaption></figure>
 
-However, what if you want to represent a more complicated journey? Maybe after stopping at Location 1, you then move to Location 2. We can then draw a vector between these two points. We can then add additional points and vectors to represent the rest of the journey. 
+However, what if you want to represent a more complicated journey?
+Maybe after stopping at Location 1,
+you then move to Location 2.
+This second displacement will be denoted by a second vector.
 
-<video src="/images/bookpics/vector_multiple_steps.mp4" muted autoplay playsinline loop></video>
-<center>For each step of your journey, you can draw a vector between the prior and current location.</center>
+<figure><video src="/images/bookpics/vector_multiple_steps.mp4" muted autoplay playsinline loop></video><figcaption>For each step of your journey, you can draw a vector between the prior and current location.</figcaption></figure>
 
+An important concept comes up when we try to describe the final destination of the journey.
+The final position is the result of all preceding displacements.
+It almost feels natural to call the final position the *sum of all preceding displacements*.
+But notice this is a different type of addition that the one we have seen before with numbers.
+It is not only the size that matters here, but also the orientation.
+We have a special name for this type of operation. We call it *vector addition*.
 
-At the end of our journey, we can add these steps together to find our final position.
-The process of adding these vectors together is called vector addition.
 By framing vectors as representing motion, the idea of vector addition becomes easier to understand.
+<span class="footnote">Vector<span>We denote variables representing vectors with a cute little arrow above the letter.</span></span> $\vec{A}$ represents the first displacement.
+Then vector $\vec{B}$ and $\vec{C}$ represent the second and third steps of our journey,
+each in a slightly different direction.
 
-Vector $\vec{A}$ represents displacement (movement) in one direction and
-vector $\vec{B}$ represents displacement in another direction.
-We can represent our total displacement by connecting our starting and ending positions with a vector: $\vec{C}$.
+<figure><video src="/images/bookpics/vector_summation.mp4" muted autoplay playsinline loop></video><figcaption>The total displacement, $\vec{D}$, is the sum of vectors $\vec{A}$, $\vec{B}$, and $\vec{C}$</figcaption></figure>
 
-<video src="/images/bookpics/vector_summation.mp4" muted autoplay playsinline loop></video>
-<center> The total displacement,$\vec{D}$, is the sum of vectors $\vec{A}$, $\vec{B}$ and $\vec{C}$ </center>
+Then we can write $$\vec{D} = \vec{A}+\vec{B}+\vec{C}$$ and from the drawing we can see that $\vec{D}$,
+the vector representing the final position, is the one connecting the starting point and the end destination.
+It is also the vector obtained by following one after the other
+each of the vectors representing the sequence of displacements.
+In other words, to add to vectors together, we simply put the start of the second vector where the first vector ends. Then the new vector, joining the start of the first vector and the end of the second vector, represents the sum, i.e. the total displacement.
 
 ### Velocity Vectors
 
-In addition to simply measuring the displacement of your motion, we can also measure velocity, or the movement
-per second. A velocity vector represents the direction of your movement. 
-The displacement will be the sum of the velocity vectors (??).
-To explore this concept, create a velocity vector by dragging the black dot in the
-circle below. This vector and the corresponding displacement vector will appear on the right.
-As you change the velocity, the total displacement will be shown in black while the current
-velocity is shown in red. Can you use large velocity vectors to create a displacement vector
-that returns to the center point? What happens if you quickly make a vertical velocity vector
-followed by one that moves to the right? Can you make the movement
-path (shown in gray) form a circle? Notice how the size of the velocity vector changes based on how quickly the point is moving.
+Motion, however, is not always described by a few discrete steps.
+Usually, motion is a smooth process in which the position of a point slowly and smoothly changes,
+very much unlike the abrupt discrete steps seen above.
 
-`A widget where you pick a velocity and you get a trajectory and a position vector. Click on the black dot and drag it around. A lot of prettifying left to do.`
+Vectors become even more useful here.
+They permit us to introduce the notion of *instantaneous velocity* ("instantaneous" is just a fancy word for "current"). This would be a vector, whose orientation points along the current direction of motion.
+This vector is longer if the position is changing faster (a longer vector represents a higher speed),
+or shorter if the position is changing slowly.
+
+
 
 <style>
 #v_to_path {
