@@ -18,44 +18,39 @@ The concept map illustrates how we see the lessons and adventures being connecte
 <script src="/springy/springyui.js"></script>
 
 <script>
-var graphJSON = {
-  "nodes": [
-    "Quick Start",
-    "Biology of Sight",
-    "Stroboscope",
-    "Animations and Patterns",
-    "Step Counter",
-    "Dancing Companion",
-    "Compass",
-    "Programming Patterns",
-    "Light and Color",
-    "Color Theory",
-    "Inertial Reference Frames",
-    "Rotation",
-    "Magnetism",
-    "Vectors and Kinematics"
-  ],
-  "edges": [
-    ["Quick Start", "Biology of Sight"],
-    ["Quick Start", "Stroboscope"],
-    ["Quick Start", "Animations and Patterns"],
-    ["Biology of Sight", "Light and Color"],
-    ["Light and Color", "Color Theory"],
-    ["Animations and Patterns", "Step Counter"],
-    ["Animations and Patterns", "Programming Patterns"],
-    ["Programming Patterns", "Dancing Companion"],
-    ["Dancing Companion", "Compass"],
-    ["Compass", "Magnetism"],
-    ["Dancing Companion", "Inertial Reference Frames"],
-    ["Dancing Companion", "Vectors and Kinematics"],
-    ["Vectors and Kinematics", "Rotation"],
-    ["Step Counter", "Inertial Reference Frames"],
-  ]
-};
 
 jQuery(function(){
   var graph = new Springy.Graph();
-  graph.loadJSON(graphJSON);
+
+  var quick = graph.newNode({label: "Quick Start"});
+  var sight = graph.newNode({label: "Biology of Sight"});
+  var strobe = graph.newNode({label: "Stroboscope"});
+  var ani = graph.newNode({label: "Animations and Patterns"});
+  var step = graph.newNode({label: "Step Counter"});
+  var dance = graph.newNode({label: "Dancing Companion"});
+  var compass = graph.newNode({label: "Compass"});
+  var progpatterns = graph.newNode({label: "Programming Patterns"});
+  var light = graph.newNode({label: "Light and Color"});
+  var colortheory = graph.newNode({label: "Color Theory"});
+  var inertia = graph.newNode({label: "Inertial Reference Frames"});
+  var rotation = graph.newNode({label: "Rotation"});
+  var magnet = graph.newNode({label: "Magnetism"});
+  var vector = graph.newNode({label: "Vectors and Kinematics"});
+  
+  graph.newEdge(quick, sight); 
+  graph.newEdge(quick, strobe);
+  graph.newEdge(quick, ani); 
+  graph.newEdge(sight, light); 
+  graph.newEdge(light, colortheory); 
+  graph.newEdge(ani, step); 
+  graph.newEdge(ani, progpatterns); 
+  graph.newEdge(progpatterns, dance);
+  graph.newEdge(dance, compass); 
+  graph.newEdge(compass, magnet);
+  graph.newEdge(dance, inertia); 
+  graph.newEdge(dance, vector); 
+  graph.newEdge(vector, rotation); 
+  graph.newEdge(step, inertia);
 
   var springy = jQuery('#springymap').springy({
     graph: graph,
@@ -64,6 +59,7 @@ jQuery(function(){
     damping: 0.5
   });
 });
+
 </script>
 
 <canvas id="springymap" width="800" height="600">
