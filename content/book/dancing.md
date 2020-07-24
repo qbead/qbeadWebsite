@@ -150,11 +150,8 @@ As you move the SpinWheel, do you notice the different colors and brightness? Ju
 We've talked about moving through space in line, 
 but now imagine a dancer's feet doing turn after turn and their arms outstretched in different configurations. 
 Can you picture how their arms and feet move through space in small tight turns, like chaînés turns, and wide turns, like an attitude or a fouetté? 
-Watch this video from --- to see dancing path represented: 
 
-<!--TODO: Find out licence for video and upload it -->
 
-The answer is yes! 
 There are many different ways we can describe all types of different dances! 
 Mathematically, we could say that there are many different coordinate systems to describe motion. 
 A dancer turning is a type of rotational motion. 
@@ -332,57 +329,9 @@ void loop() {
 
 ## The Grand Finale: Showing Off All Its Colors
 
-You’ve explored motion so far in this adventure. Using the above scripts as a starting point, you can modify the SpinWheel to respond to your motion however you see fit! We'll leave you with one final more complicated sketch to inspire your imagination.
-
-<!--TODO: Make the color wheel better, have the snake stop moving slowly, maybe step through what this does more -->
-
-```cpp
-/// # Dancing with Color: Step x, have the color wheel change only 
-// if there is rotation
-//
-
-#include "SpinWearables.h"
-using namespace SpinWearables;
-
-void setup() {
-  SpinWheel.begin();
-}
-
-int offset = 0;
-int colorChange;
-
-
-uint8_t angle;
-
-void loop() {
-  SpinWheel.readIMU();
-  // if rotation is fast, add a step to the offset
-  if (abs(SpinWheel.gx) > 1) {
-    offset = SpinWheel.gx*100; 
-    Serial.println(offset);
-  }
-
-  // make the rainbow in the large LEDs
-  for (int i=0; i<4; i++) {
-    colorChange = offset+i*255/4;
-    Serial.println(colorChange);
-    SpinWheel.setLargeLED(i, colorWheel(colorChange));
-    SpinWheel.setLargeLED(7-i, colorWheel(colorChange));
-  }
-
-
-  // make a snake in the small LEDs
-  // if there is sufficient rotation, have the snake rotate
-  if (abs(SpinWheel.gx) > 1) { 
-    angle = (millis()>>4)&0xff;    
-  }
-
-  // this is a function that we created to display a "snake"
-  SpinWheel.setSmallLEDsPointer(angle, 500, 0, 255, 255);
-
-  SpinWheel.drawFrame();
-}
-```
+You’ve explored motion so far in this adventure. Using the above scripts as a starting point, you can modify the SpinWheel to respond to your motion however you see fit! 
+We'll leave you with one final more complicated sketch to inspire your imagination. 
+Here is a webpage with a [grand finale code and explaination](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html). 
 
 
 To see even more dances mathematically, you can watch Mariel Pettee’s, a physics graduate student who studies particle physics as well as physics and dance, AI-generated dances here: 
