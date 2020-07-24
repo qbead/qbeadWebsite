@@ -178,37 +178,11 @@ In this case, we're measuring the rotation around the SpinWhee's x-axis, which i
 ![In this picture you can see the x and y axes of your SpinWheel.
 ](/images/dance_axis.jpg)
 
+To see the senor respond to rotional motion, upload [this sketch](/codedoc/examples/Dancing_with_Color/1D_Rotation_Light_Up_Basic/1D_Rotation_Light_Up_Basic.ino.html) and explore what happens when you rotate your SpinWheel.
 
 <!--TODO: Maybe only choose one or two of these to be in the lesson and have the rest be elsewhere; Add more context/explanation/better commenting -->
 
-```cpp
-#include "SpinWearables.h"
-using namespace SpinWearables;
-
-void setup() {
-  // Initialize all of the hardware on the SpinWheel.
-  SpinWheel.begin();
-}
-
-
-void loop() {
-  // Define a variable that will store whether or not the SpinWheel is spinning.
-  int spinning = 0; 
-
-  SpinWheel.readIMU();
-  // If the x rotation (gx) is big enough, then 
-  // turn on the LEDs
-  if (abs(SpinWheel.gx) > 1) {
-    spinning = 255;
-  }
-
-  SpinWheel.setLargeLEDsUniform(0, spinning, spinning);
-  // Make the SpinWheel show the registered color.
-  SpinWheel.drawFrame();
- }
-```
-
-One simple modification to this script that we can make is to have the LEDs change color based on the direction of rotation. In the script below, the LEDs light up green up when the device is spun in one direction, and blue when spun in the other direction. If you prefer other colors, then you can modify the code below to change the colors.
+One simple modification we can make to the previous sketch is to have the LEDs change color based on the direction of rotation. In the script below, the LEDs light up green up when the device is spun in one direction, and blue when spun in the other direction. If you prefer other colors, then you can modify the code below to change the colors.
   
 ```cpp
 #include "SpinWearables.h"
@@ -247,60 +221,17 @@ void loop() {
  }
 ```
 
-It is also possible to measure and change the SpinWheel's LEDs color based on rotation in 3D space. In the sketch below, you can the red, green, and blue components of the LEDs to respond to the rotation around the x, y, and z axes. We also have the small LEDs and not only the large LEDs light up in response to the SpinWheel's motion.
+It is also possible to measure and change the SpinWheel's LEDs color based on rotation in 3D space. 
+In [this sketch](/codedoc/examples/Dancing_with_Color/3D_Rotation_Light_Up/3D_Rotation_Light_Up.ino.html) 
+,you can code the red, green, and blue components of the LEDs to respond to the rotation around the x, y, and z axes. 
+We have the small LEDs and the large LEDs light up in response to the SpinWheel's motion.
 
-
-```cpp
-#include "SpinWearables.h"
-using namespace SpinWearables;
-
-void setup() {
-  // Initialize all of the hardware on the SpinWheel.
-  SpinWheel.begin();
-}
-
-int red = 0;
-int green = 0;
-int blue = 0;
-
-void loop() {
-  SpinWheel.readIMU();
-  // If the rotation in the x direction is big enough,
-  // turn the red LED of each big LED on.
-  if (abs(SpinWheel.gx) > 1) {
-    red = 255;
-  }
-  // If the rotation in the y direction is big enough,
-  // turn the green LED of each big LED on.
-  if (abs(SpinWheel.gy) > 1) {
-    green = 255;
-  }
-  // If the rotation in the z direction is big enough,
-  // turn the blue LED of each big LED on.
-  if (abs(SpinWheel.gz) > 1)  {
-    blue = 255;
-  }
-  // If the rotation in all directions is small enough,
-  // turn the big LEDs off.
-  if ((abs(SpinWheel.gx)+abs(SpinWheel.gy)+abs(SpinWheel.gz)) < 1) {
-    red = 0;
-    green = 0;
-    blue = 0;
-  }
-  
-  SpinWheel.setLargeLEDsUniform(red, green, blue);
-  SpinWheel.setSmallLEDsUniform(red, green, blue);
-
-  // Make the SpinWheel show the registered color.
-  SpinWheel.drawFrame();
- }
-```
 
 One of the programs that came preloaded on your SpinWheel was an LED "snake" that spins around the device. 
 We can modify this snake so that it only rotates when you rotate. 
 You will program the SpinWheel LEDs to light up and turn and turn like a dancer. 
 [In this script](/codedoc/examples/Dancing_with_Color/Motion_Snake/Motion_Snake.ino.html)
-, we'll introduce a new function: `SpinWheel.setSmallLEDsPointer(angle, decay, red, green, and blue)`. 
+,we'll introduce a new function: `SpinWheel.setSmallLEDsPointer(angle, decay, red, green, and blue)`. 
 Angle controls how big the snake is, 
 decay the fade at the end of the snake, and red, green, and blue represent the red, green, and blue component of the small LEDs. 
 The "snake" only moves when you rotate along the x axis. 
