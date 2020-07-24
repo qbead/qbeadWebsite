@@ -296,35 +296,16 @@ void loop() {
  }
 ```
 
-One of the programs that came preloaded on your SpinWheel was an LED "snake" that spins around the device. We can modify this snake so that it only rotates when you rotate. You will program the SpinWheel LEDs to light up and turn and turn like a dancer. In this script, we'll introduce a new function: `SpinWheel.setSmallLEDsPointer(angle, decay, red, green, and blue)`. Angle controls how big the snake is, decay the fade at the end of the snake, and red, green, and blue represent the red, green, and blue component of the small LEDs. The "snake" only moves when you rotate along the x axis. Can you modify the color of the snake? How long the snake is? Have it respond to other motion?
-
-
-```cpp
-#include "SpinWearables.h"
-using namespace SpinWearables;
-
-void setup() {
-  // Initialize all of the hardware on the SpinWheel.
-  SpinWheel.begin();
-}
-
-uint8_t angle; 
-
-void loop() {
-  SpinWheel.readIMU();
-
-  // if there is sufficient rotation, have the snake rotate
-  if (abs(SpinWheel.gx) > 1) { 
-    angle = (millis()>>4)&0xff;    
-  }
-
-  // this is a function that we created to display a "snake"
-  SpinWheel.setSmallLEDsPointer(angle, 500, 0, 255, 255);
-    
-  // Make the SpinWheel show the registered color.
-  SpinWheel.drawFrame();
-}
-```
+One of the programs that came preloaded on your SpinWheel was an LED "snake" that spins around the device. 
+We can modify this snake so that it only rotates when you rotate. 
+You will program the SpinWheel LEDs to light up and turn and turn like a dancer. 
+[In this script](/codedoc/examples/Dancing_with_Color/Motion_Snake/Motion_Snake.ino.html)
+, we'll introduce a new function: `SpinWheel.setSmallLEDsPointer(angle, decay, red, green, and blue)`. 
+Angle controls how big the snake is, 
+decay the fade at the end of the snake, and red, green, and blue represent the red, green, and blue component of the small LEDs. 
+The "snake" only moves when you rotate along the x axis. 
+Can you modify the color of the snake? 
+How long the snake is? Have it respond to other motion?
 
 
 ## The Grand Finale: Showing Off All Its Colors
