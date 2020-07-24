@@ -334,6 +334,11 @@ We'll leave you with one final more complicated sketch to inspire your imaginati
 Here is a webpage with a [grand finale code and explaination](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html). 
 
 
-To see even more dances mathematically, you can watch Mariel Pettee’s, a physics graduate student who studies particle physics as well as physics and dance, AI-generated dances here: 
+To see even more dances mathematically, 
+you can watch Mariel Pettee’s, 
+a physics graduate student who studies particle physics as well as physics and dance, 
+[AI-generated dances](https://vimeo.com/400629616) below. You can also watch more of her videos [here](https://vimeo.com/400641881) and read a [paper](https://arxiv.org/abs/1907.05297)  on this research.  
+
+
 <!--TODO: insert Mariel's video here -->
 
