@@ -102,6 +102,7 @@ changeColor();
 </script>
 </div>
 
+
 ::: further-reading
 You can learn more about the spectrum of light and the physics behind it in the section on
 [Light and Color](/lightandcolor).
@@ -109,6 +110,7 @@ Or if you are interested in the study of color as perceived by humans,
 and how this informs the choice of pigments and colored lights,
 see the section on [Color Theory](/colortheory).
 :::
+
 
 Now let us start programming the SpinWheel to light up in a specific color! First, copy the code shown here to a new sketch in the Arduino software. Pick a color you like by changing the sliders above (for instance, we like this purple `(195,0,255)`)
 You can make the large LEDs on the SpinWheel display that color by changing the values in `SpinWheel.setLargeLEDsUniform(...)` . For example, to create our pretty purple color, we would change `SpinWheel.setLargeLEDsUniform(0, 0, 0)` to `SpinWheel.setLargeLEDsUniform(195,0,255)`. Finally, save the sketch and upload it to your SpinWheel. If you do not have a SpinWheel at hand, you can program the virtual one further down on this page. 
@@ -256,7 +258,7 @@ Right at the point where the red and blue stop being observable on their own, yo
 
 ![If you move the SpinWheel rapidly in front of your eyes, you will see the purple color separate in two distinct streaks of red and blue.](/images/bookpics/fast_pov_streak.jpg "Picture of a fast-moving SpinWheel")
 
-These two tools -- faking rich colors by combining just red, green, and blue, and faking a complete static image by very rapidly cycling through incomplete images -- are the basis for many technologies, and are tools we’ll keep using as we program the SpinWheel in more advanced ways.
+These two tools -- faking rich colors by combining just red, green, and blue, and faking a faking one image by rapidly cycling through others -- are the basis for many technologies, and are tools we’ll keep using as we program the SpinWheel in more advanced ways.
 
 
 <!--TODO: This further reading box seems inappropriate. Use different format for this block-->
