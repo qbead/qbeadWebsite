@@ -32,7 +32,7 @@ which does not have such taxing requirements.
 It obeys different constraints, and it requires a particular mindset,
 but its beauty comes from the fact that you tell a computer how to create art on its own,
 instead of drawing the art yourself.
-The creative element moves from your hands and eyes, to deeper into your imagination,
+The creative element is deep in your imagination,
 and it depends on your skill to instruct and teach a computer to do something.
 We will explore this type of art here.
 We will learn how to command a computer (the SpinWheel) to draw patterns of color that evolve in time.
@@ -40,13 +40,18 @@ Along the way we might even learn a bit about how to write programs.
 
 ::: warning :
 If you haven't already done the [quickstart guide](/quickstart), then we recommend reading it before finishing the rest of the lesson. It contains important information about downloading the software necessary to program the SpinWheel and other useful information.
-:::
 
+Keep in mind that we will be learning a new language,
+a language that lets us instruct a simple computer (the SpinWheel's brain) to do something.
+Just like with any other language, at first you will not be able to understand all the words or the <span class="footnote">entire sentence.<span>In this metaphor a sentence is a computer program.</span></span>
+As a new acolyte, the important thing is to latch on to the words that mean something to you, even if you can not read the entire spell.
+:::
 
 ## Timing
 
 Our first goal, before we are able to make something as advanced as the rainbow pattern above,
 is to simply make our device blink.
+We do that, because it gives us the framework upon which to build more sophisticated animations.
 
 <video src="/images/bookpics/simple_blink.mp4" muted autoplay playsinline loop></video>
 
@@ -60,13 +65,12 @@ The necessary command that we need to write looks like
 int t = millis();
 ```
 
-Here, `millis()` is a <span class="footnote"> command that reads the number of milliseconds since the device has started. 
-<span>.
-This command, together with many other useful commands comes built into the software we are using.
-We will later even learn how to make commands of our own.
-</span></span>
+We will shortly see how this command can be weaved in with others in a whole program.
+Here, `millis()` is a
+<span class="footnote">command that reads the number of milliseconds since the device has started.<span>This command, together with many other useful commands comes built into the software we are using.
+We will later even learn how to make commands of our own.</span></span>
 Commands are special directions that ask the computer to complete a task.
-The rest of the small piece of code depicted above ensures that the number of milliseconds given by `millis()` is stored somewhere: in the variable we have named `t` (you can use more descriptive names if you wish). We also had to specify the type of the variable (`int` as in "integer") because otherwise our computer will get confused.
+The rest of the small piece of code depicted above ensures that the number of milliseconds given by `millis()` is stored somewhere: in the variable we have named `t` (you can use more descriptive names if you wish). We also had to specify the type of the variable (`int` as in "integer") because otherwise our SpinWheel will get confused.
 
 <!--FIGURE: An image showing the type and name on the lhs, and the expression on the rhs, stressing the rigidity of this syntax.-->
 
@@ -75,8 +79,6 @@ Based on that number, another piece of code can decide when to shine a given col
 when to be illuminating brightly or showing subdued colors,
 when to alternate hues from one LED to the other,
 and in this particular case, simply when to blink.
-
-### Repeating patterns and division with remainder
 
 What follows is the most crucial concepts in the construction of our animations.
 If we want our animations to repeat,
@@ -87,34 +89,39 @@ if we want our animation to repeat every 2500 milliseconds (2.5 seconds),
 then the number on which the animation depends,
 should itself repeat in the same manner.
 
-*Add animation or figure showing time being divided into intervals*
 <!--FIGURE: Figure or Animation showing subdividing time into equal intervals. -->
-
 
 The simplest way to do that is to subdivide the number of milliseconds into equal intervals,
 and see how many milliseconds have passed since the start of the current interval.
-We can do that by dividing the number of seconds and looking at the remainder. For example, if 5600 milliseconds have passed since the deviced was powered, then two full intervals of 2500 milliseconds have passed and we are 600 milliseconds into the third interval:
+We can do that by dividing the number of seconds and looking at the remainder.
+For example, if 5600 milliseconds have passed since the device was powered, then two full intervals of 2500 milliseconds have passed and we are 600 milliseconds into the third interval:
 
 $$5600 = 2\times2500 + 600.$$
-*Show in an image*
 
-We can also consider different length intervals, but for now we will stick to 2.5 seconds as it is short enough for us to be able to see the animation we create without waiting too much, and long enough that our eyes can capture how things change during this interval.
+<!--FIGURE: figure describing this division and reminder. -->
 
-Lastly, we need to tell the computer that we want it to compute a division with reminder for us. Thankfully, we can find in our dictionary of programming languages that the notation `a % b` is <span class="footnote">frequently used<span>Programmers have the bad habit of taking established symbols like the percentage sign and using it for unrelated concepts, like its use here for division with remainder.</span></span> to mean "find the reminder of dividing `a` by `b`". With all this knowledge, we now know how to store a new variable `t_repeat` which measures time in repeating intervals of (for example) 2500 milliseconds.
+We can also consider different length intervals,
+but for now we will stick to 2.5 seconds as it is short enough for us to be able to see the animation we create without waiting too much,
+and long enough that our eyes can capture how things change during this interval.
+
+Lastly, we need to tell the computer that we want it to compute a division with reminder for us.
+Thankfully, we can find in our dictionary of programming languages that the notation `a % b` is <span class="footnote">frequently used<span>Programmers have the bad habit of taking established symbols like the percentage sign and using it for unrelated concepts, like its use here for division with remainder.</span></span> to mean "find the reminder of dividing `a` by `b`".
+With all this knowledge, we now know how to store a new variable `t_repeat` which measures time in repeating intervals of (for example) 2500 milliseconds.
 
 ```c++
 int t_repeat = t % 2500;
 ```
 
-<video src="/images/bookpics/time_remainder.mp4" muted autoplay playsinline loop></video>
-
-<!--TODO: More explanations about what this division with remainder is-->
+<figure><video src="/images/bookpics/time_remainder.mp4" muted autoplay playsinline loop></video><figcaption>Using a clock to create a repeating pattern: the counter in our timer (in blue) is divided in equal intervals, and the remainder of that division (in orange) provides a steady repeating sequence of numbers on which we can base a repeating animation.</figcaption></figure>
 
 ### A picture that depends on time
 
-Finally, we have all that we need to create our first animation. We will use the timing variable we have created `t_repeat`, and based on its value we will calculate a brightness value `b`. We will use this brightness variable to set all of the large LEDs (and each of their red, green, and blue colors) to the same time-dependent value. We had to divide `t_repeat`, because otherwise `b` will go beyond `255`, which is the maximal permitted brightness value for our software. You can see the full code in the simulator below, or you can find it in the Arduino software by navigating to `Examples → Animations_and_Patterns → Simple_Blink`. 
-
-We also have a [webpage with detailed explanation of the code](/codedoc/examples/Animations_and_Patterns/Simple_Blink/Simple_Blink.ino.html), if you are interested in learning more specifically about what each line of the following code does. This page also has the full sketch with some lines of coding setting up the SpinWheel. If you want to run the following code on your SpinWheel, you can also copy it from that page directly. 
+Finally, we have all that we need to create our first animation. We will use the timing variable we have created `t_repeat`, and based on its value we will calculate a brightness value `b`.
+We will use this brightness variable to set all of the large LEDs (and each of their red, green, and blue colors) to the same time-dependent value.
+A brief excerpt of the necessary code is shown in the SpinWheel simulator below.
+<span class="footnote">Try to explain in the words of your own language what every single line of the computer programming language says.<span>You will frequently hear programmers talk about the "story" that their code tells. Being able to retell the instructions of a piece of computer code in the form of a human-language story is a sure sign you are starting to understand a piece of code.</span></span>
+As a hint, we will mention that `setLargeLEDsUniform` is used to set all large LEDs to the same uniform color (specified by three numbers, corresponding to the red, green, and blue components of the color).
+Try to make small modifications (change the color from white to red, make the brightness lower, etc) and run the code in the simulator by clicking the "run" button.
 
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
@@ -132,7 +139,14 @@ void loop() {
 </pre>
 </div>
 
-By learning to control the SpinWheel's LEDs, you are learning some basic coding concepts. To expand on this, we have also put together a refernce guide that introduces [some of the most important patterns for learning programming](/progpatterns).   
+We had to divide `t_repeat` by 10, because otherwise `b` will go beyond `255`, which is the maximal permitted brightness value for our software.
+Now let us upload this code to the SpinWheel device itself. Connect your device with a USB cable to your computer and load the file, ready to upload, in the Arduino software.
+You can find the entirety of the necessary code in the Arduino software by navigating to `Examples → SpinWearables → Animations_and_Patterns → Simple_Blink`. 
+Try some of the same modifications that you attempted in the simulator from the previous paragraph.
+
+We also have a [webpage with detailed explanation of the code](/codedoc/examples/Animations_and_Patterns/Simple_Blink/Simple_Blink.ino.html), if you are interested in learning more about what each line of the code does. 
+
+By learning to control the SpinWheel's LEDs, you are learning some basic coding concepts. To expand on this, we have also put together a reference guide that introduces [some of the most important patterns in programming](/progpatterns).   
 
 ## More sophisticated patterns
 
@@ -230,9 +244,9 @@ void loop() {
   int t = millis();
   int t_repeat = t % 2500;
   int w = triangularWave(t_repeat/10);
-  int w_oposite = 255 - w;
+  int w_opposite = 255 - w;
   SpinWheel.setLargeLED(0, w, 0, 0);
-  SpinWheel.setLargeLED(2, 0, w_oposite, 0);
+  SpinWheel.setLargeLED(2, 0, w_opposite, 0);
   SpinWheel.drawFrame();
 </textarea>
 <pre class="ssw-codeblock">
