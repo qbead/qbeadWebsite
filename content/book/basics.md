@@ -1,5 +1,5 @@
 ---
-title: Basic SpinWheel Commands
+title: Learning to Program the SpinWheel
 keywords: SpinWheel, arduino, setup
 toc: yes
 ---
@@ -8,18 +8,17 @@ toc: yes
 <script src='/simspinwheel/simspinwheel.js'></script>
 
 ::: intro-box
-This document lists some of the most important functions available with the SpinWheel code library.
-With these functions you can detect motion and set the LEDs to different color patterns.
-If you have never programmed with Arduino before, be sure to read our [quick start guide](/quickstart)
-and if necessary some of the [Computer Science 101 sections](/progpatterns). 
-For more details you can consult the [annotated source code](/codedoc/SpinWearables.h.html),
-listing everything available in the library.
+This document will help you learn the basics of programming the SpinWheel's
+LEDs to different color patterns.
+Before reading this, be sure to read our [quick start guide](/quickstart). 
 :::
 
 You can use the virtual SpinWheel simulator to test each of these functions.
 If a function involves the motion sensor,
 you can grab the virtual device with your mouse and shake it,
 simulating how the physical sensor would respond to real motion.
+
+<!--TODO: add a section to discuss setup/loop so know this going into everything else-->
 
 ## LED Manipulation
 
@@ -148,12 +147,6 @@ At maximal settings the large LEDs are blindingly bright and pull a total curren
 which would deplete our battery in less than 10 minutes.
 Using the maximal setting would cause the battery to wear out much quicker and would cause significant heating.
 
-## Advanced LED Manipulation
-
-<!--TODO: expand this section and implement as necessary-->
-
-There are some undocumented and unfinished functions, among them: `setSmallLEDsPointer` and `setSmallLEDsProgress` and the unfinished `setSmallLEDsRainbow` and `setLargeLEDsRainbow`.
-
 ## Color and Brightness Helpers
 
 <!--TODO: expand this section and implement as necessary-->
@@ -163,9 +156,3 @@ The `colorWheel` function turns a single number representing an angle into a col
 The `triangularWave` and `parabolaWave` functions provide for convenient periodic patterns, useful in animations.
 
 The `faston_slowoff` function can be used to pleasantly filter time-dependent measurements. For instance, it can be used to rapidly brighten an LED when a motion is detected and then slowly let the light decay after the motion stops.
-
-## Motion Sensing and Compass
-
-<!--TODO: expand this section and implement as necessary-->
-
-To request measurements from the sensor you need to call `SpinWearables.readIMU`. Then the measurement data will be available in `ax,ay,az,gx,gy,gz,mx,my,mz` in some units. There is also a temperature sensor.
