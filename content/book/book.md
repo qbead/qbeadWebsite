@@ -98,7 +98,7 @@ These activities build on the ideas presented in the introductory adventures. If
 
 ### Associated Lessons
 1. [Vectors and Kinematics](/vectors)
-2. [Rotation](/rotation)
+2. Rotation (planned)
 3. Inertial Reference Frames / Free Fall (planned)
 
 ## Advanced Adventures
