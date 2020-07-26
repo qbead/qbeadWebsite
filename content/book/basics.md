@@ -1,11 +1,7 @@
 ---
 title: Learning to Program the SpinWheel
 keywords: SpinWheel, arduino, setup
-toc: yes
 ---
-
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
 
 ::: intro-box
 This document will help you learn the basics of programming the SpinWheel's
@@ -13,146 +9,108 @@ LEDs to different color patterns.
 Before reading this, be sure to read our [quick start guide](/quickstart). 
 :::
 
-You can use the virtual SpinWheel simulator to test each of these functions.
-If a function involves the motion sensor,
-you can grab the virtual device with your mouse and shake it,
-simulating how the physical sensor would respond to real motion.
+Approach this page the way you would approach the first page of a foreign language you want to learn.
+Try to pick out separate words and commands that make sense, without worrying about the overall structure,
+correct syntax, or proper grammar. As time passes and you have learnt new things, come back to this page
+and see whether you can understand a bit more of it.
 
-<!--TODO: add a section to discuss setup/loop so know this going into everything else-->
+In different communities, computer programs are referred to by different names:
+program, sketch, script, etc.
+Arduino tends to call them sketches, because in them you sketch out what your device is supposed to do.
+We also like the name script, because it invokes the idea of a sequence of instructions:
+the instructions you give to the device and the order in which you want them to be executed.
 
-## LED Manipulation
+Computers are not particularly smart, so you need to be very explicit in your instructions.
+The particular language we are using imposes a certain structure on our programs.
+The most bare-bones program would look like this:
 
-There are a number of functions that let you manipulate the state of the LEDs,
-however, for the LEDs to actually respond to these manipulations,
-you also need to call `SpinWheel.drawFrame()` when you are done.
-That way you can make multiple modifications, preparing the final image,
-without the intermediate unfinished images showing up.
+```c++
+void setup() {
 
-If you want to reset the image, you can call `SpinWheel.clearAllLEDs()`,
-which will set all LEDs to be dark,
-deleting any color information that they were previously set to.
-
-### Turn on all the Large LEDs with `setLargeLEDsUniform`
-
-`setLargeLEDsUniform` takes three arguments, the red, green, and blue components of the desired color.
-Their range is between 0 and 255 (one byte).
-
-<div class="ssw-codecontent" markdown=0>
-<pre class="ssw-codeblock">
-void loop() {
-</pre>
-<textarea class="ssw-codeblock">
-  SpinWheel.setLargeLEDsUniform(255, 0, 155);
-  SpinWheel.drawFrame();
-</textarea>
-<pre class="ssw-codeblock">
 }
-</pre>
-</div>
 
-### Turn on all the Small LEDs with `setSmallLEDsUniform`
-
-`setSmallLEDsUniform`, same as `setLargeLEDsUniform`, takes three arguments, the red, green, and blue components of the desired color.
-Their range is between 0 and 255 (one byte).
-
-<div class="ssw-codecontent" markdown=0>
-<pre class="ssw-codeblock">
 void loop() {
-</pre>
-<textarea class="ssw-codeblock">
-  SpinWheel.setSmallLEDsUniform(255, 255, 0);
-  SpinWheel.drawFrame();
-</textarea>
-<pre class="ssw-codeblock">
+
 }
-</pre>
-</div>
+```
 
-### Control a Specific Large LED with `setLargeLED`
+This program does absolutely nothing.
+<span class="footnote">It contains two blocks<span>Marked by the brackets { and }.</span></span>
+we need to fill out with instructions.
+The `setup` which executes only once, immediately after the device is powered up.
+This block is used for (surprise) setting up any initial conditions we might require.
 
-The first argument of `setLargeLED` is a number between 0 and 7, denoting which of the 8 LEDs is to be turned on. The other three arguments are the red, green, and blue components of the color.
+And then there is the `loop` block. This block is executed repeatedly "in a loop",
+starting immediately after `setup` is done and repeating itself until the power is turned off.
+Most of our instructions will be written in that block.
+They will frequently take the form of measuring time or motion,
+and then producing a color or a pattern of colors depending on the measurement.
 
-<div class="ssw-codecontent" markdown=0>
-<pre class="ssw-codeblock">
+A program that is capable of instructing the hardware specific to the SpinWheel
+(e.g. the LEDs and motion sensor) would require a few more incantations:
+
+```c++
+// Include extra resources and commands
+// specific to the SpinWheel.
+#include "SpinWearables.h"
+using namespace SpinWearables;
+
+void setup() {
+  // Instruct the specific SpinWheel hardware
+  // to be ready to receive instructions.
+  SpinWheel.begin();
+}
+
 void loop() {
-</pre>
-<textarea class="ssw-codeblock">
-  SpinWheel.clearAllLEDs();
-  SpinWheel.setLargeLED(4, 255, 155, 0);
-  SpinWheel.drawFrame();
-</textarea>
-<pre class="ssw-codeblock">
+
 }
-</pre>
-</div>
+```
 
-### Control a Specific Small LED with `setSmallLED`
+Notice the faded bluish text prepended by two slashes `//`. This text is called
+a "comment", and it is something completely disregarded by the computer. We will
+use it extensively to write down explanations for the humans that might be reading the code,
+without worrying about the computer being confused by them.
 
-The first argument of `setSmallLED` is a number between 0 and 11, denoting which of the 12 LEDs is to be turned on. The other three arguments are the red, green, and blue components of the color.
+The `loop` block is still empty and this program still will not do anything interesting.
+However, to great extent our `setup` function is complete: it prepares the SpinWheel to
+receive instructions. Through our activities, we will rarely need anything more sophisticated
+in `setup`.
 
-<div class="ssw-codecontent" markdown=0>
-<pre class="ssw-codeblock">
+Finally, let us turn on an LED, by simply adding a single command to the 
+
+```c++
+#include "SpinWearables.h"
+using namespace SpinWearables;
+
+void setup() {
+  SpinWheel.begin();
+}
+
 void loop() {
-</pre>
-<textarea class="ssw-codeblock">
-  SpinWheel.clearAllLEDs();
-  SpinWheel.setSmallLED(4, 155, 255, 0);
+  // Set the large LED number 0 to
+  // have red=255, green=0, and blue=0 color.
+  SpinWheel.setLargeLED(0, 255, 0, 0);
+  // Update the currently shinning LEDs
+  // based on the instructions provided up to here.
   SpinWheel.drawFrame();
-</textarea>
-<pre class="ssw-codeblock">
 }
-</pre>
-</div>
+```
 
-### Turn on a range of Large LEDs with `setLargeLEDs`
+Try to copy this code in the Arduino software and upload it.
+It should cause one single large LED to turn on in bright red.
+Try to modify the `setLargeLED` line (the first parameter in the parenthesis is
+the <span class="footnote">number of the affected LED<span>The number goes from 0 to 7.</span></span>
+and the other <span class="footnote">three numbers are the red,
+green, and blue components<span>They have to be numbers between 0 (color is off) and 255 (color is on at full brightness).</span></span> of the desired color.)
 
-The first and second arguments of `setLargeLEDs` are numbers between 0 and 7, denoting what range of the 8 LEDs is to be turned on. The other three arguments are the red, green, and blue components of the color.
+There are a couple more things you might have noticed about the style of this language:
 
-<div class="ssw-codecontent" markdown=0>
-<pre class="ssw-codeblock">
-void loop() {
-</pre>
-<textarea class="ssw-codeblock">
-  SpinWheel.clearAllLEDs();
-  SpinWheel.setLargeLEDs(0, 3, 255, 0, 255);
-  SpinWheel.drawFrame();
-</textarea>
-<pre class="ssw-codeblock">
-}
-</pre>
-</div>
+- We tend to have only one "command" per line. This helps with readability.
+- Each command is ended by a semicolon `;`. That makes it easier for the computer to separate different commands.
+- Commands tend to be some name followed by parenthesis `()`.
+- Inside these parenthesis we frequently put some extra information: this information can modify exactly how a command performs. For instance in `setLargeLED` we have one parameter to select the LED we want to modify and three parameters for the color of that LED.
+- There certainly are other ways in which LED colors can be modified and motion be detected. We will be discussing many such tools in futures pages.
 
-### Turn on a range of Small LEDs with `setSmallLEDs`
-
-The first and second arguments of `setSmallLEDs` are numbers between 0 and 11, denoting what range of the 12 LEDs is to be turned on. The other three arguments are the red, green, and blue components of the color.
-
-<div class="ssw-codecontent" markdown=0>
-<pre class="ssw-codeblock">
-void loop() {
-</pre>
-<textarea class="ssw-codeblock">
-  SpinWheel.clearAllLEDs();
-  SpinWheel.setSmallLEDs(2, 7, 255, 255, 0);
-  SpinWheel.drawFrame();
-</textarea>
-<pre class="ssw-codeblock">
-}
-</pre>
-</div>
-
-### Set overall brightness with `setBrightness`
-
-This function takes only one argument, between 0 and 255, that sets the brightness of the LEDs.
-At maximal settings the large LEDs are blindingly bright and pull a total current of 480 mAh,
-which would deplete our battery in less than 10 minutes.
-Using the maximal setting would cause the battery to wear out much quicker and would cause significant heating.
-
-## Color and Brightness Helpers
-
-<!--TODO: expand this section and implement as necessary-->
-
-The `colorWheel` function turns a single number representing an angle into a color from the color wheel.
-
-The `triangularWave` and `parabolaWave` functions provide for convenient periodic patterns, useful in animations.
-
-The `faston_slowoff` function can be used to pleasantly filter time-dependent measurements. For instance, it can be used to rapidly brighten an LED when a motion is detected and then slowly let the light decay after the motion stops.
+::: further-reading
+If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands). In either case, we advise you to play with the [SpinWheel examples available in the Arduino software and to peruse the many suggested activities we have prepared for you](/book).
+:::

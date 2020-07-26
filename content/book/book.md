@@ -72,7 +72,7 @@ Are you looking for a suggestion of where to start? Below we have our recommende
 
 Before doing anything else, we encourage you to read the [Quick Start Guide](/quickstart). This is where we explain how to download the Arduino software and provide essential information for the rest of the adventures.
 
-To learn the basics of controlling the LEDs, then check out our [SpinWheel Programming Reference](/basics). 
+To learn the basics of controlling the LEDs, then check out our [SpinWheel Programming Reference](/basics). Skim through that page without necessarily trying to understand the code shown there. Use it to establish a vague intuition about the code and use that intuition in the first few adventures. Then go back to this page and try to read it again with the new knowledge of programming you have gained.
 
 ## Intro Adventures
 
