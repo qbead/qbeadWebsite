@@ -144,12 +144,16 @@ void loop() {
 
 We had to divide `t_repeating` by 10, because otherwise `b` will go beyond `255`, which is the maximal permitted brightness value for our software.
 Now let us upload this code to the SpinWheel device itself. Connect your device with a USB cable to your computer and load the file, ready to upload, in the Arduino software.
-You can find the entirety of the necessary code in the Arduino software by navigating to `Examples → SpinWearables → Animations_and_Patterns → Simple_Blink`. 
-Try some of the same modifications that you attempted in the simulator from the previous paragraph.
+To run this code on your SpinWheel, navigate to `Examples → SpinWearables → Animations_and_Patterns → Simple_Blink` in the Arduino software and open the file. If you simply copy the above code, it will not run because it is missing the important setup information. The file in `Examples` contains the entirety of the necessary code.
+After you open the file, you can try some of the same modifications that you attempted in the simulator from the previous paragraph.
+
+::: further-reading
+If you want a reminder about why the above code will not work if you run it on your SpinWheel, check out the [lesson on learning to program the SpinWheel](/basics). 
+:::
 
 We also have a [webpage with detailed explanation of the code](/codedoc/examples/Animations_and_Patterns/Simple_Blink), if you are interested in learning more about what each line of the code does.
 If you are already accustomed to programming and would want to simply see the list of available commands,
-[check out our function documentation](/basics).
+[check out our function documentation](/allcommands).
 
 By learning to control the SpinWheel's LEDs, you are learning some basic coding concepts. To expand on this, we have also put together a reference guide that introduces [some of the most important patterns in programming](/progpatterns).   
 
