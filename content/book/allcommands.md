@@ -1,5 +1,5 @@
 ---
-title: SpinWheel Commands Appendix
+title: SpinWheel Functionss Appendix
 keywords: SpinWheel, arduino, setup
 toc: yes
 ---
@@ -11,8 +11,8 @@ toc: yes
 This document lists some of the most important functions available with the SpinWheel code library.
 With these functions you can detect motion and set the LEDs to different color patterns.
 If you have never programmed with Arduino before, be sure to read our [quick start guide](/quickstart)
-and [SpinWheel basics page](/basics).
-To learn more about the building blocks of coding, check out the [Computer Science 101 sections](/progpatterns). 
+and [SpinWheel basic programming page](/basics).
+To learn more about the building blocks of coding, check out the [programming patterns page](/progpatterns). 
 For more details you can consult the [annotated source code](/codedoc/SpinWearables.h.html),
 listing everything available in the library. This will serve as a reference as you code the SpinWheel in whatever designs you imagine.
 :::

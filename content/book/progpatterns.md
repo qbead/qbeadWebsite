@@ -1,5 +1,5 @@
 ---
-title: Basic Programming Patterns
+title: Programming Patterns
 keywords: physical computing, computer science, arduino, programming
 ---
 
@@ -17,7 +17,7 @@ verb, or the difference between a word and a sentence. We will describe the
 most important such patterns in this chapter. 
 
 
-# Variables
+## Variables
 
 Computer programs do one thing and one thing only: process information. That
 information can be the time of a mouse click, a voicemail on your phone,
@@ -66,7 +66,7 @@ from the usual mathematical meaning of the sign, which usually means
 computer scientists and their laziness for the misuse of this sign in most
 modern programming languages.
 
-# Functions
+## Functions
 
 In computer programming, functions are commands that take a few variables and
 do something useful with them. Functions are reusable pieces of code. A function can act like a calculator,
@@ -125,7 +125,7 @@ int number_b = 7;
 int resulting_number = max(sqrt(number_a-1) * 2, min(number_b, 2));
 ```
 
-# Creating your own functions
+## Creating your own functions
 
 A large part of programming is creating your own functions and building
 interesting, complex, and useful functions out of small simple functions. Here we
@@ -186,7 +186,7 @@ that would be cumbersome to repeat every time.
 Functions let you have a shorthand notation,
 so you do not need to make such repetitions.
 
-# Functions that do not return values
+## Functions that do not return values
 
 Functions can also be used to change something in the environment of the
 device instead of being used as advanced calculators. Such functions do not return a value
@@ -221,11 +221,7 @@ void delay_seconds(int number_of_seconds) {
 }
 ```
 
-
-
-
-
-# Comments
+## Comments
 
 As the code we write grows longer, it helps to add notes in the code to
 ourselves and our friends who might view our code.
@@ -242,7 +238,7 @@ will use such comments below in some more complicated examples of code.
 int my_test_variable = 5;
 ```
 
-# Putting it all together
+## Putting it all together
 
 After we have created all the variables and functions we need for our code to do what we 
 want it to do, we need to actually start the

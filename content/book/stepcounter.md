@@ -1,5 +1,5 @@
 ---
-title: Make a step counter
+title: Make a Step Counter
 keywords: stepcounter, motion, acceleration
 header-image: /images/banners/stepcounter.png 
 ---

@@ -112,5 +112,5 @@ There are a couple more things you might have noticed about the style of this la
 - There certainly are other ways in which LED colors can be modified and motion be detected. We will be discussing many such tools in futures pages.
 
 ::: further-reading
-If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands). In either case, we advise you to play with the [SpinWheel examples available in the Arduino software and to peruse the many suggested activities we have prepared for you](/book).
+If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands). In either case, we advise you to play with the [SpinWheel examples available in the Arduino software and to peruse the many suggested activities we have prepared for you](/book). If you would like to specifically focusing on learning more about this programming language, you can see our [programming patterns page](/progpatterns).
 :::

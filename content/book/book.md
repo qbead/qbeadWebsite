@@ -70,7 +70,7 @@ Are you looking for a suggestion of where to start? Below we have our recommende
 
 ## Getting Started
 
-Before doing anything else, we encourage you to read the [Quick Start Guide](/quickstart). This is where we explain how to download the Arduino software and provide essential information for the rest of the adventures.
+Before doing anything else, we encourage you to read the [Initial Setup Guide](/quickstart). This is where we explain how to download the Arduino software and provide essential information for the rest of the adventures.
 
 To learn the basics of controlling the LEDs, then check out our [SpinWheel Programming Reference](/basics). Skim through that page without necessarily trying to understand the code shown there. Use it to establish a vague intuition about the code and use that intuition in the first few adventures. Then go back to this page and try to read it again with the new knowledge of programming you have gained.
 
@@ -78,9 +78,9 @@ To learn the basics of controlling the LEDs, then check out our [SpinWheel Progr
 
 These adventures assume that you have no coding experience and are a great way to become comfortable with both the SpinWheel and coding. The associated lessons go into more depth into concepts that are referenced for the first time in these adventures. We have written the lessons to supplement the content in the adventures and we provide links in each adventure when we recommend checking them out to learn more. We hope these will spark your curiousity to learn even more about the world around you!
 
-1. [Biology of sight](/sight)
-2. [Animations and patterns](/animation)
-3. Stroboscope and stroboscopic photography (planned)
+1. [Biology of Sight](/sight)
+2. [Animations and Patterns](/animation)
+3. Stroboscope and Stroboscopic Photography (planned)
 
 ### Associated Lessons
 1. [Light and Color](/lightandcolor)
@@ -93,13 +93,13 @@ These adventures assume that you have no coding experience and are a great way t
 
 These activities build on the ideas presented in the introductory adventures. If you have coding experience, you can jump right in and then refer back to the earlier adventures and lessons as you have questions.
 
-1. [Make a step counter](/stepcounter)
-2. Dancing companion (planned)
+1. [Make a Step Counter](/stepcounter)
+2. Dancing Companion (planned)
 
 ### Associated Lessons
 1. [Vectors and Kinematics](/vectors)
 2. [Rotation](/rotation)
-3. Inertial reference frames / Free fall (planned)
+3. Inertial Reference Frames / Free Fall (planned)
 
 ## Advanced Adventures
 

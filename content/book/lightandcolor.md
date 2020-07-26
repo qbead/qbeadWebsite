@@ -12,7 +12,7 @@ As you are reading this lesson, you are most likely surrounded by a variety of l
 ![Understanding the interplay between color and light enables  
 the creation of wondrous technology and art. <a class="imagecredit" href="https://www.pikrepo.com/fqyvu/multicolored-strobe-lights">image credit Pikrepo</a>](/images/bookpics/disco_lights.jpg)
 
-### White Light is a Mixture of Colors
+## White Light is a Mixture of Colors
 Let's begin by talking about white light. When light travels from the Sun, or most other sources of illumination, we perceive it as lacking a hue. We call this white light. In reality, white light is a mixture of many colors of light. This mixture can be seen by using a prism to split apart the different colors that make up the mixture.
 
 ![White light being split into colors by a prism. The white light shines on the prism from the bottom left, and most of it is refracted and split as it passes through the prism. <a class="imagecredit" href="https://www.pexels.com/photo/optical-glass-triangular-prism-3845161/">image credit Pexels</a>](/images/bookpics/optical_glass_triangular_prism.jpg "Picture of a white light being split into colors by a prism")
