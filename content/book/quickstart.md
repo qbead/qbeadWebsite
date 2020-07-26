@@ -15,7 +15,7 @@ Your kit contains a SpinWheel, a battery, and a paper copy of the SpinWheel Fiel
 
 The SpinWheel has four main components: a power source (the battery), a sensor (for motion and magnetic fields), a set of lights (the light emitting diodes, or LEDs), and a micro computer (the brain of the device).
 
-![Unboxing the device](/images/quickstart/unboxing.small.png "Unboxing the device.")
+![Unboxing the device](/images/quickstart/unboxing.small.png "Unboxing the device."){style="max-width:90%"}
 
 ::: warning :
 The SpinWheel contains sensitive electronic components that are securely soldered onto the printed circuit board, but that can break if jostled excessively. For this reason, it is important that you are gentle with your SpinWheel when you plug it into your computer to program or plug it in to charge, and be gentle when putting it into storage in a backpack, purse, or pocket. Storing the SpinWheel in a smaller pocket within your bag or in the box you received it in will help keep it safe. 
