@@ -1,13 +1,12 @@
 ---
 title: Behind the Scenes
 keywords: spinwheel, education, STEM, outreach, science, engineering day, electronics, computer science, physics
-header-image: /images/behindthescenes/soldering-2.jpg
-subtitle: A more in-depth look at designing and building the SpinWheel.
 ---
 
-<div class="wide">
-<div class="row">
-<div class="column long-text">
+:::intro-box
+Here we discuss how we went about designing and building the SpinWheel.
+:::
+
 ## The Idea
 
 The idea for a stylish wearable device to encourage the pursuit of science and engineering originated in 2017 with one of our regular outreach events on Yale’s campus. We invited high schoolers to campus to use breadboards, LED strips, and a motion sensor to create a [motion-sensing bracelet](https://www.engineeringday.com/2017/01/29/motion-sensing-bracelet/).
@@ -32,34 +31,19 @@ We have also found that the LED bracelets are an engaging demo when there isn't 
 </figcaption>
 </figure>
     
-</div>
-</div>
-</div>
 
-<div class="row">
-<div class="column long-text">
 Building on this idea, we have developed the SpinWheel. Through motion sensors and programming capabilities, it provides a rich platform for teaching physics and computer science. Potential lesson plans include vectors and kinematics, physics of light and color mixing, intro to programming, and even signal processing. The hands-on “adventures” that come with the device build on these lessons and bring together science and art.
 
 (A similar desire, to present math as beautiful and creative subject, was behind the later creation of our [Fractals and Art lesson plan](https://www.engineeringday.com/2018/09/28/fractal-art/), but we digress...)
-</div>
-</div>
 
 
-<div class="wide">
-<div class="row">
-<div class="column long-text">
 ## Turning it into a self-contained device
     
 We continue to use the LED-strip bracelet as a platform to teach electronics; however, this activity requires experienced volunteers to help with debugging and wiring. With the SpinWheel, we desired to create something self-contained: a beautiful wearable device that the student can confidently use to explore the marvels of science on their own. This led us to our current design, which is both more resilient and quite a bit more elegant than the initial LED-strip bracelet. 
 
 In the rest of this page, we will further describe the design process and our choice of tools.
-</div>
-</div>
-</div>
 
-<div class="row dark">
-<div class="column long-text">
- In an advanced section of the ["The SpinWheel Science and Exploration Field Guide"](/book), we will discuss the design and testing process in more detail, in the hope that young makers will feel empowered enough to create their own devices. In particular, we would like to demystify what can be the most terrifying part of the process: debugging an initially failing new design.
+In an advanced section of the ["The SpinWheel Science and Exploration Field Guide"](/book), we will discuss the design and testing process in more detail, in the hope that young makers will feel empowered enough to create their own devices. In particular, we would like to demystify what can be the most terrifying part of the process: debugging an initially failing new design.
     
 <figure>
 <img src="/images/for_parents/final_cover.jpg">
@@ -67,13 +51,7 @@ In the rest of this page, we will further describe the design process and our ch
 The cover of the SpinWheel Science and Exploration Field Guide. 
 </figcaption>
 </figure>    
-    
-</div>
-</div>
 
-<div class="wide">
-<div class="row">
-<div class="column long-text">
 ### Initial parameters, component selection, and rough shape
 
 Since accessibility was our top priority, we decided to base our device on the wonderful, open source Arduino platform. This platform has been extensively tested by the world-wide maker community and features a simple installation procedure. For the main controller on the board, we chose the Atmega32u4 chip, which is directly supported by the Arduino software. This particular chip has a built-in USB interface that the students can use for programming. The open hardware community, and in particular the Arduino organization, has used this chip in many designs, providing a wealth of documentation that made our work much easier.
@@ -91,13 +69,8 @@ We simultaneously iterated through the physical parameters for the device to arr
 The first draft of what would become the final layout of the SpinWheel, with enough LEDs to not only be beautiful, but also be able to represent cardinal directions, measured tilt, and other physical quantities.
 </figcaption>
 </figure>
-</div>
-</div>
-</div>
 
-<div class="wide">
-<div class="row">
-<div class="column long-text">
+
 ### Creating the circuit diagrams and the board layouts
 Once we had our components and a rough sketch of the layout, we began designing the circuit board using computer aided design (CAD) tools. In a typical electronic design software, one starts by drawing the abstract circuit diagrams. In our case, this mostly mostly involved copying the reference schematics provided by the manufacturers of the microcontroller, motion sensor, and battery charger. The main challenge was fitting all of the components into a compact form factor and completing the circuit without crossing electrical components.
 
@@ -108,13 +81,7 @@ Once we had our components and a rough sketch of the layout, we began designing 
 The schematics and 3D renders of the SpinWheel.
 </figcaption>
 </figure>
-</div>
-</div>
-</div>
 
-<div class="wide">
-<div class="row">
-<div class="column long-text">
 ### Testing the newly printed boards
 
 Before we were comfortable pushing the project forward, we wanted to test the SpinWheel design under various conditions. For that purpose we ordered multiple unpopulated breadboards, on which to build and test the prototype device.
@@ -135,13 +102,12 @@ Bridget checking connections on a newly hand-soldered SpinWheel.
 </figcaption>
 </figure>
 
-</div>
-</div>
-</div>
+
 
 <div class="wide">
 <div class="row">
 <div class="column long-text">
+
 ### More about the software
 
 The SpinWheel is suitable for a very rich Computer Science curriculum, covering many difficulty levels and topics as outlined above. However, our main focus was to have easy on-boarding for students who have never programmed before. Therefore, we are structuring the libraries so that a very small amount of code is sufficient to create interesting patterns and responses from the device. Advanced users will also have the option to use a lower-level set of operations to create even more imaginative patterns.
@@ -167,9 +133,7 @@ void loop() {
 <div class="column"><video src="/images/behindthescenes/circling.mp4" muted autoplay playsinline loop></video></div>
 </div>
 
-<div class="wide">
-<div class="row">
-<div class="column long-text">
+
 ## Final results
 
 This is the SpinWheel: a brilliant, easily-programmable, wearable device through which students can explore computer science and physics while creating a beautiful accessory for themselves.:
@@ -187,6 +151,4 @@ The SpinWheel.
 The SpinWheel as jewelry. Works as a keychain or an impropmptu compass as well.
 </figcaption>
 </figure>
-</div>
-</div>
-</div>
+

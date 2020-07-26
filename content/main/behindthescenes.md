@@ -70,6 +70,6 @@ The SpinWheel eliminates the need for experienced volunteers to help with debugg
 
 
 <div class="row">
-<p>If this sparked your curiosity, check out a more [detailed version](/behindthescenes_long/) and learn about the [specs](/specs/) of the device.</p>
+<p>If this sparked your curiosity, check out a more [detailed version](/behindthescenes_long/) and learn about the [specs](/specs/) of the device in the "Engineer's Diary" part of our educational guide.</p>
 <p>By discussing the design and testing process in more detail, we hope that makers of all ages will feel empowered to create their own devices.</p>
 </div>

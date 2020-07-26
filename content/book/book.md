@@ -122,9 +122,11 @@ Here's a [list of the commands](/allcommands) for controlling the SpinWheel's LE
 
 Want to learn more about how the SpinWheel was created? We'll be adding additional lessons about designing the SpinWheel to empower you to design your own electronic creations!
 
-1. Circuit Design
-2. Hardware Testing
-3. Kickstarter Setup and Manufacturing Partner
+1. [Behind the Scenes Overview](/behindthescenes_long/)
+2. [Technical Specifications](/specs)
+3. Circuit Design
+4. Hardware Testing
+5. Kickstarter Setup and Manufacturing Partner
 
 ## Community Rules
 
