@@ -3,6 +3,12 @@ title: Programming Patterns
 keywords: physical computing, computer science, arduino, programming
 ---
 
+::: intro-box
+This page will introduce you to many of the typical patterns programmers follow when writing code.
+If this is your first time thinking about computer code, it would be helpful to also
+consult the [mini-reference on the particular programming style for the SpinWheel](/basics).
+:::
+
 Writing a computer program of your own, whether a desktop app, an interactive
 website, or the hidden brain of a robot, starts by writing a sequence of
 instructions in one of the many available computer languages. 
