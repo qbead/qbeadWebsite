@@ -12,7 +12,7 @@ You'll will learn how to trick your eyes into perceiving a rainbow of colors usi
 :::
 
 ::: warning
-<strong> WARNING: PHOTOSENSITIVITY/EPILEPSY SEIZURES </strong>
+<strong> Photosensitivity and Epilepsy Warning </strong>
 
 Some activities on this page involve flashing colors. If you (or a family member) have epilepsy, please talk to a parent or teacher before continuing.
 :::
@@ -32,7 +32,7 @@ The light-sensing tissue in the back of our eyes, the retina, has small cells th
 This leads to a problem… If our eyes can sense only red, green, and blue, how come we can see yellow? Our eyes and brains have evolved so that our red- and green-sensing cones both respond slightly to yellow. If our brain detects that both groups of cones are activated, it knows to interpret the color as yellow. And similar compromises are made for the other colors we can detect. For instance, purple activates both red- and blue-sensing cones.
 
 ::: further-reading
-There is an animal that can (unlike us) detect the difference between a true pure color, and a mixture of colors that fakes the presence of the given color (for humans, the true pure colors we can see are red, green, and blue). This animal is a mantis shrimp, and it has 12 different types of cone cells in its eye. The Oatmeal comic has [an informative and entertaining strip about it](https://theoatmeal.com/comics/mantis_shrimp).
+There is an animal that can (unlike us) detect the difference between a true pure color, and a mixture of colors that fakes the presence of the given color (for humans, the true pure colors we can see are red, green, and blue). This animal is the mantis shrimp, and it has 12 different types of cone cells in its eye. The Oatmeal comic has [an informative and entertaining strip about it](https://theoatmeal.com/comics/mantis_shrimp).
 :::
 
 
@@ -122,14 +122,14 @@ using namespace SpinWearables;
 void setup() {
   // Initialize all of the hardware on the SpinWheel.
   SpinWheel.begin();
+}
+
+void loop() {
   // Ask the SpinWheel to prepare all large LEDs to
   // show a particular color.
   SpinWheel.setLargeLEDsUniform(0, 0, 0);
   // Make the SpinWheel show the registered color.
   SpinWheel.drawFrame();
-}
-
-void loop() {
 }
 ```
 
@@ -137,7 +137,7 @@ void loop() {
 If you have trouble uploading to your SpinWheel, be sure to read our [Quick Start Guide](/quickstart). If you want more explanation about the code shown here, you can read the [Programming Patterns lesson](/progpatterns).
 :::
 
-You can try this code in the virtual SpinWheel simulator - this lets you see how your physical SpinWheel would respond if you ran the same code. Below you can change the brightness of each of the red, green, and blue components of the light emitters.
+Instead of copying the code, you can also find a complete example in the Arduino examples menu under `Examples → SpinWearables → Biology_of_Sight →  Mixing_Colors`. You can try this code in the virtual SpinWheel simulator below - this lets you see how your physical SpinWheel would respond if you ran the same code. Below you can change the brightness of each of the red, green, and blue components of the light emitters.
 
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
 <script src='/simspinwheel/simspinwheel.js'></script>
@@ -145,6 +145,8 @@ You can try this code in the virtual SpinWheel simulator - this lets you see how
 <pre class="ssw-codeblock">
 void setup() {
   SpinWheel.begin();
+}
+void loop() {
 </pre>
 <textarea class="ssw-codeblock">
   SpinWheel.setLargeLEDsUniform(195, 0, 255);
@@ -254,11 +256,13 @@ void loop() {
 }
 ```
 
+This code is also available in the Arduino examples menu under `Examples → SpinWearables → Biology_of_Sight →  Persistence_of_Vision`.
+
 Right at the point where the red and blue stop being observable on their own, you can perform another experiment that showcases the persistence of vision effect. Instead of keeping the SpinWheel still, start shaking it back and forth rapidly. By doing this, the light emitters will be in different locations in space when they emit either red or blue, and this will let you once again distinguish the two colors (and stop seeing purple). Once you stop shaking the device, it will once again look purple.
 
 ![If you move the SpinWheel rapidly in front of your eyes, you will see the purple color separate in two distinct streaks of red and blue.](/images/bookpics/fast_pov_streak.jpg "Picture of a fast-moving SpinWheel")
 
-These two tools -- faking rich colors by combining just red, green, and blue, and faking a faking one image by rapidly cycling through others -- are the basis for many technologies, and are tools we’ll keep using as we program the SpinWheel in more advanced ways.
+These two tools -- faking rich colors by combining just red, green, and blue, and faking one complete image by rapidly cycling through partial images -- are the basis for many technologies, and are tools we’ll keep using as we program the SpinWheel in more advanced ways.
 
 
 <!--TODO: This further reading box seems inappropriate. Use different format for this block-->
