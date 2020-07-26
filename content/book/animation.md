@@ -45,6 +45,9 @@ Keep in mind that we will be learning a new language,
 a language that lets us instruct a simple computer (the SpinWheel's brain) to do something.
 Just like with any other language, at first you will not be able to understand all the words or the <span class="footnote">entire sentence.<span>In this metaphor a sentence is a computer program.</span></span>
 As a new acolyte, the important thing is to latch on to the words that mean something to you, even if you can not read the entire spell.
+
+We have prepared many small example programs you can play with, before you start trying to modify them.
+Simply attempt to upload them to the device and read through them, even if you are not changing them.
 :::
 
 ## Timing
@@ -69,7 +72,7 @@ We will shortly see how this command can be weaved in with others in a whole pro
 Here, `millis()` is a
 <span class="footnote">command that reads the number of milliseconds since the device has started.<span>This command, together with many other useful commands comes built into the software we are using.
 We will later even learn how to make commands of our own.</span></span>
-Commands are special directions that ask the computer to complete a task.
+These commands are special directions that ask the computer to complete a task.
 The rest of the small piece of code depicted above ensures that the number of milliseconds given by `millis()` is stored somewhere: in the variable we have named `t` (you can use more descriptive names if you wish). We also had to specify the type of the variable (`int` as in "integer") because otherwise our SpinWheel will get confused.
 
 <!--FIGURE: An image showing the type and name on the lhs, and the expression on the rhs, stressing the rigidity of this syntax.-->
@@ -106,22 +109,22 @@ and long enough that our eyes can capture how things change during this interval
 
 Lastly, we need to tell the computer that we want it to compute a division with reminder for us.
 Thankfully, we can find in our dictionary of programming languages that the notation `a % b` is <span class="footnote">frequently used<span>Programmers have the bad habit of taking established symbols like the percentage sign and using it for unrelated concepts, like its use here for division with remainder.</span></span> to mean "find the reminder of dividing `a` by `b`".
-With all this knowledge, we now know how to store a new variable `t_repeat` which measures time in repeating intervals of (for example) 2500 milliseconds.
+With all this knowledge, we now know how to store a new variable `t_repeating` which measures time in repeating intervals of (for example) 2500 milliseconds.
 
 ```c++
-int t_repeat = t % 2500;
+int t_repeating = t % 2500;
 ```
 
 <figure><video src="/images/bookpics/time_remainder.mp4" muted autoplay playsinline loop></video><figcaption>Using a clock to create a repeating pattern: the counter in our timer (in blue) is divided in equal intervals, and the remainder of that division (in orange) provides a steady repeating sequence of numbers on which we can base a repeating animation.</figcaption></figure>
 
 ### A picture that depends on time
 
-Finally, we have all that we need to create our first animation. We will use the timing variable we have created `t_repeat`, and based on its value we will calculate a brightness value `b`.
+Finally, we have all that we need to create our first animation. We will use the timing variable we have created `t_repeating`, and based on its value we will calculate a brightness value `b`.
 We will use this brightness variable to set all of the large LEDs (and each of their red, green, and blue colors) to the same time-dependent value.
 A brief excerpt of the necessary code is shown in the SpinWheel simulator below.
 <span class="footnote">Try to explain in the words of your own language what every single line of the computer programming language says.<span>You will frequently hear programmers talk about the "story" that their code tells. Being able to retell the instructions of a piece of computer code in the form of a human-language story is a sure sign you are starting to understand a piece of code.</span></span>
 As a hint, we will mention that `setLargeLEDsUniform` is used to set all large LEDs to the same uniform color (specified by three numbers, corresponding to the red, green, and blue components of the color).
-Try to make small modifications (change the color from white to red, make the brightness lower, etc) and run the code in the simulator by clicking the "run" button.
+Try to make small modifications ([change the color from white to red](/colortheory), make the brightness lower, etc) and run the code in the simulator by clicking the "run" button.
 
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
@@ -129,8 +132,8 @@ void loop() {
 </pre>
 <textarea class="ssw-codeblock">
   int t = millis();
-  int t_repeat = t % 2500;
-  int b = t_repeat / 10;
+  int t_repeating = t % 2500;
+  int b = t_repeating / 10;
   SpinWheel.setLargeLEDsUniform(b, b, b);
   SpinWheel.drawFrame();
 </textarea>
@@ -139,16 +142,20 @@ void loop() {
 </pre>
 </div>
 
-We had to divide `t_repeat` by 10, because otherwise `b` will go beyond `255`, which is the maximal permitted brightness value for our software.
+We had to divide `t_repeating` by 10, because otherwise `b` will go beyond `255`, which is the maximal permitted brightness value for our software.
 Now let us upload this code to the SpinWheel device itself. Connect your device with a USB cable to your computer and load the file, ready to upload, in the Arduino software.
 You can find the entirety of the necessary code in the Arduino software by navigating to `Examples → SpinWearables → Animations_and_Patterns → Simple_Blink`. 
 Try some of the same modifications that you attempted in the simulator from the previous paragraph.
 
-We also have a [webpage with detailed explanation of the code](/codedoc/examples/Animations_and_Patterns/Simple_Blink/Simple_Blink.ino.html), if you are interested in learning more about what each line of the code does. 
+We also have a [webpage with detailed explanation of the code](/codedoc/examples/Animations_and_Patterns/Simple_Blink), if you are interested in learning more about what each line of the code does.
+If you are already accustomed to programming and would want to simply see the list of available commands,
+[check out our function documentation](/basics).
 
 By learning to control the SpinWheel's LEDs, you are learning some basic coding concepts. To expand on this, we have also put together a reference guide that introduces [some of the most important patterns in programming](/progpatterns).   
 
 ## More sophisticated patterns
+
+### Smoother pulsing
 
 There is a whole universe of patterns to explore:
 simply pick a piece of paper,
@@ -163,9 +170,15 @@ We can perform this by writing a function that first goes up and then slowly tur
 We have already written such a function for you to use
 and called it [`triangularWave`](/codedoc/SpinWearables.h.html#triangular-wave),
 because when you plot it, it looks like a series of triangles.
+
+<figure><video src="/images/bookpics/triangular_wave.mp4" muted autoplay playsinline loop></video><figcaption>Instead of the sawtooth time-dependent pattern of brightness we saw previously, we can employ a pattern that also decreases steadily (instead of abruptly dropping to zero), making for a more pleasant pulsing light.</figcaption></figure>
+
 Below you can see and a small modification of our previous example that employs such triangular waves.
 In order to also show some color, instead of purely white LEDs,
 we will [mix only red and blue, and leave the green set to zero](/colortheory).
+[You can peruse the entirety of the code online](/codedoc/examples/Animations_and_Patterns/Smoother_Blink),
+or access it directly from the Arduino software from 
+`Examples → SpinWearables → Animations_and_Patterns → Smoother_Blink`.
 
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
@@ -173,8 +186,8 @@ void loop() {
 </pre>
 <textarea class="ssw-codeblock">
   int t = millis();
-  int t_repeat = t % 2500;
-  int b = triangularWave(t_repeat / 10);
+  int t_repeating = t % 2500;
+  int b = triangularWave(t_repeating / 10);
   // The next function takes three arguments:
   // The red, green, and blue components of the color we desire.
   // We are mixing only red and blue, setting green to zero.
@@ -189,6 +202,8 @@ void loop() {
 ::: further-reading
 If you want to learn more about controlling the SpinWheel's LEDs, then try out our [Biology of Sight](/sight) Adventure. The [color theory](/colortheory) lesson provides more information about why we can use red, green, and blue LEDs to represent all the colors of the rainbow.
 :::
+
+### The color wheel
 
 Up until now we have discussed how to turn a time-dependent number into a brightness.
 However, instead of having time-dependent intensity of light,
@@ -205,8 +220,8 @@ void loop() {
 </pre>
 <textarea class="ssw-codeblock">
   int t = millis();
-  int t_repeat = t % 2500;
-  int s = t_repeat/10;
+  int t_repeating = t % 2500;
+  int s = t_repeating/10;
   SpinWheel.setLargeLEDsUniform(colorWheel(s));
   SpinWheel.drawFrame();
 </textarea>
@@ -214,6 +229,8 @@ void loop() {
 }
 </pre>
 </div>
+
+As usual, [the entirety of the code is documented on its own page](/codedoc/examples/Animations_and_Patterns/Color_Wheel), and in the Arduino examples menu under `Animations_and_Patterns → Color_Wheel`
 
 
 ### Non-uniform patterns and accessing separate LEDs
@@ -242,8 +259,8 @@ void loop() {
 </pre>
 <textarea class="ssw-codeblock">
   int t = millis();
-  int t_repeat = t % 2500;
-  int w = triangularWave(t_repeat/10);
+  int t_repeating = t % 2500;
+  int w = triangularWave(t_repeating/10);
   int w_opposite = 255 - w;
   SpinWheel.setLargeLED(0, w, 0, 0);
   SpinWheel.setLargeLED(2, 0, w_opposite, 0);
@@ -254,7 +271,9 @@ void loop() {
 </pre>
 </div>
 
-A particularly useful trick is to add "delay" between the time-dependent numbers controlling the color of each LED.
+The code above can be opened from the examples folder, under the name `Railroad_Signal` or [viewed online](/codedoc/examples/Animations_and_Patterns/Railroad_Signal).
+
+Another particularly useful trick is to add "delay" between the time-dependent numbers controlling the color of each LED.
 This creates the illusion that the LEDs are following each other.
 
 <div class="ssw-codecontent" markdown=0>
@@ -263,11 +282,11 @@ void loop() {
 </pre>
 <textarea class="ssw-codeblock">
   int t = millis();
-  int delay = 200; // Change this number! What happens?
+  int t_delay = 200; // Change this number! What happens?
   int t0 = (t % 2500) / 10;
-  int t1 = ((t+delay) % 2500) / 10;
-  int t2 = ((t+2*delay) % 2500) / 10;
-  int t3 = ((t+3*delay) % 2500) / 10;
+  int t1 = ((t+t_delay) % 2500) / 10;
+  int t2 = ((t+2*t_delay) % 2500) / 10;
+  int t3 = ((t+3*t_delay) % 2500) / 10;
   SpinWheel.setLargeLED(0, colorWheel(t0));
   SpinWheel.setLargeLED(1, colorWheel(t1));
   SpinWheel.setLargeLED(2, colorWheel(t2));
@@ -279,9 +298,24 @@ void loop() {
 </pre>
 </div>
 
+This code is [in the `Rainbow_Chase` example](/codedoc/examples/Animations_and_Patterns/Rainbow_Chase).
+
 With these tools mastered,
 you might want to peruse the [list of available functions](/basics),
 or learn more about [mixing of colors](/sight).
 You can also delve deeper in [the tools that this programming language provides](/progpatterns),
 which could enable you to write more sophisticated programs and patterns.
 
+Here are some suggestions: Try to add more LEDs to your patterns.
+Try to have some of them (e.g. the small ones) have varying brightness,
+while others (e.g. the large ones) have changing colors.
+Mix and match code from the previous examples.
+Let your creativity sing through the code.
+
+::: further-reading
+You might have noticed that many of the functions and commands we have used are set to
+repeat themselves when their input passes through 255. There is a reason for this.
+There are 256 numbers from 0 to 255. And 256 is exactly how many different values can be stored in one byte.
+One byte is how much space is dedicated to many typical variables in the language used by the
+Arduino software, hence, much of its functions are made to expect numerical values on that scale.
+:::
