@@ -305,7 +305,7 @@ void loop() {
 This code is [in the `Rainbow_Chase` example](/codedoc/examples/Animations_and_Patterns/Rainbow_Chase).
 
 With these tools mastered,
-you might want to peruse the [list of available functions](/basics),
+you might want to peruse the [list of available functions](/allcommands),
 or learn more about [mixing of colors](/sight).
 You can also delve deeper in [the tools that this programming language provides](/progpatterns),
 which could enable you to write more sophisticated programs and patterns.
