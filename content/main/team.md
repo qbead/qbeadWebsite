@@ -132,7 +132,6 @@ Jack has always been passionate about both art and science. As a high schooler, 
 </div>
 </div>
 
-<div class="row dark">
 <div class="team-member">
 <img src="/images/teampics/jen_s.jpg">
 <div>
