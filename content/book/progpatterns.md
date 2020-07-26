@@ -31,6 +31,8 @@ or a picture of the road taken by a self-driving car.
 Before processing such data, we have to tell the computer to store it
 in its memory. This is done using **variables**.
 
+!["Variables" are like labeled shelves for information. When you need to save a number for later use, you put it in a variable of your choice. Above we have number 3 stored in the variable `a`, number 4 stored in variable `b` and the number 7 is about to be stored in a variable named `e`. We can pick the names for the variables ourselves (any sequence of letters that is not interrupted by whitespaces).](/images/bookpics/variables.png)
+
 We will only discuss two types of variables: integers and
 decimals. Other types do exist, but we won't cover them here. Integers are easier for a computer to work with because it does
 not need to store all of the data after the decimal point. Treating them
@@ -102,6 +104,8 @@ Let's step through each part of this code.
 `number_a` and `number_b`, and returns the larger number.
 
 The value stored in `resulting_number` in this case would be `7`. 
+
+![Functions are tools provided in a given programming language that are capable of ingesting a number of parameters and producting (a.k.a "returning") some new value that depended on the input parameters.](/images/bookpics/functions.png)
 
 Here is another example where one of the arguments for our function is
 specified directly, without first being stored in a variable. In this case, the
