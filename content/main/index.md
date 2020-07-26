@@ -14,7 +14,7 @@ subtitle: Children have the natural <em>curiosity</em> and <br> <em>capacity</em
 <div class="column large-text">
 <p>**Introducing the SpinWheel!** </p>
 <p>A small, colorful, programmable, wearable kit to facilitate student exploration of physics, engineering, and computer science.</p> 
-<p>With the programs that come pre-loaded on the device, it can be immediately worn as jewelry or sported as a keychain. With help from our educational guide, it can be programmed to be a compass, step-counter, and more.</p>
+<p>With the programs that come pre-loaded on the device, it can be immediately worn as jewelry or sported as a keychain. With help from our [educational guide](/book), it can be programmed to be a compass, step-counter, and more.</p>
 <p>All proceeds will go to the science outreach efforts of the Yale graduate student section of the Society of Women Engineers.</p>
 </div>
 </div>
@@ -29,7 +29,7 @@ We have successfully funded a first manufacturing run of the SpinWheel on Kickst
 <div class="row row-small-reverse">
 <div class="column column-long"><img src="/images/tree_keychain.jpg"></div>
 <div class="column large-text">
-Now that our crowdfunding campaign is over, we just need to manufacture the SpinWheels and finish crafting the educational materials. The device is fully built and tested. We can't wait to get it into our backers' hands! 
+The SpinWheel's are now manufactured and we're finishing crafting the educational materials. The device is fully built and tested. We can't wait to get it into our backers' hands! 
 </div>
 </div>
 
@@ -72,13 +72,13 @@ Now that our crowdfunding campaign is over, we just need to manufacture the Spin
 <div class="row row-small-reverse dark-transparent">
 <div class="column column-long"><img src="/images/for_parents/kid_coding_spinwheel.jpg"></div>
 <div class="column large-text">
-Our STEM backgrounds provided us with the technical expertise to design the SpinWheel. We made the SpinWheel aesthetically-pleasing and wrote the educational materials assuming [no prior experience](/for_parents) to help make STEM more accessible. 
+Our STEM backgrounds provided us with the technical expertise to design the SpinWheel. We made the SpinWheel [aesthetically-pleasing](/behindthescenes) and wrote the educational materials assuming [no prior experience](/for_parents) to help make STEM more accessible. 
 </div>
 </div>
 
 <div class="row">
 <div class="column large-text">
-The SpinWheel comes with a "Field Guide" containing multiple educational and artistic activities written for students ages 12-212. Anyone can program the SpinWheel to create a unique, science-infused piece of art that they would be proud to wear and call their own.
+The SpinWheel comes with a "[Field Guide](/book)" containing multiple educational and artistic activities written for students ages 12-212. Anyone can program the SpinWheel to create a unique, science-infused piece of art that they would be proud to wear and call their own.
 </div>
 <div class="column column-long"><img src="/images/for_parents/final_cover.jpg"></div>
 </div>
@@ -87,13 +87,13 @@ The SpinWheel comes with a "Field Guide" containing multiple educational and art
 <div class="column">
 Contact us at [mail@spinwearables.com](mailto:mail@spinwearables.com)!
 
-At the following link you can see [some draft teaching materials](/book).
+At the following link, you can see [our teaching materials](/book) that are ready to be shared. We'll be releasing more hands on activities ("adventures") and associated lessons over the coming months. 
     
 We have more information for [parents and educators here](/for_parents).
 
 [Behind-the-scenes pictures of the device and testing runs](/behindthescenes) are also available.
 
-And for the electrical engineers, we have [the technical specifications of the device](/specs).
+We delve into the material in the [behind the scenes page](/behindthescenes) in more depth in the "Engineer's Diary" section of the [field guide](/book).
 </div>
 </div>
 
