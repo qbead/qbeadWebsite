@@ -4,27 +4,14 @@ keywords: neural network, gesture recognition, arduino
 header-video: /images/bookpics/rnn_vis_pad.mp4
 ---
 
-This lesson is part of the SpinWheel series. The
-[SpinWheel](https://www.kickstarter.com/projects/spinwheel/447670470)
-is a small Arduino-compatible sensor-enabled wearable device, meant to be used
-for teaching physics and computer science through an artistic medium. You can
-support our non-profit
-[Kickstarter](https://www.kickstarter.com/projects/spinwheel/447670470)
-to help us reach more curious young minds and to get the device and teaching
-kit showcased in this lesson.
-
 ::: intro-box
-For the majority of our lessons we use the [SpinWheel](https://www.kickstarter.com/projects/spinwheel/447670470) and its [engaging aesthetics](https://spinwearables.com) as a hook and introduction to many STEM topics accessible to K12 students without prior experience. Here we decided to do something different and show how that same platform can be used to study much more advanced topics. In this writeup we will see:
+For the majority of our lessons we use the SpinWheel and its [engaging aesthetics](https://spinwearables.com) as a hook and introduction to many STEM topics accessible to K12 students without prior experience. Here we decided to do something different and show how that same platform can be used to study much more advanced topics. In this writeup we will see:
 
 - simple linear algebra and neural networks on a microcontroller
 - hardware speed testing to decide how big of a NN to use
 - recurrent NN from scratch as a filter and a gesture recognizer
 - recording training data from a microcontroller
 - visualizing information propagating through the NN
-:::
-
-::: warning
-Lessons are still under development!
 :::
 
 ## Brief review: Neural Networks and Recurrent Neural Networks
@@ -457,10 +444,6 @@ we just explode the number of training parameters, hopefully making the cost
 landscape easier to train on. However, such questions of simplifying our neural
 network might be important when we want to run them on simple underpowered
 hardware.
-
-<a href="https://www.kickstarter.com/projects/spinwheel/447670470">
-<figure><img src="/images/kickstarter_support.png"></figure><figcaption>We are trying to bring similar resources, from the middle-school level to the undergraduate level, to more curious minds. Supporting our non-profit Kickstarter would greatly help us.</figcaption>
-</a>
 
 ## Next Steps
 
