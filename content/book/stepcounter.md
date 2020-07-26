@@ -168,8 +168,10 @@ But if we set the threshold too high, then none of the motions are counted, and 
 <!--TODO: Make the plot fit with the rest of the aesthetics. Maybe use rough.js -->
 
 <script src='/chart/Chart.bundle.min.js'></script>
-<div><input style="width:30%" type="range" min="0" max="100" value="20" id="thrSlider"> Use this slider to set the threshold.</div>
+<div style="text-align:center">
+<div><input style="width:30%;" type="range" min="0" max="100" value="20" id="thrSlider"> Use this slider to set the threshold.</div>
 <div>The threshold is set at <code id="thrView"></code> which leads to a total sum of <code id="thrSum"></code>.</div>
+</div>
 <div style="width:100%;height:200px;">
 <canvas id="thresholdchart"></canvas>
 </div>
@@ -225,14 +227,16 @@ var thrChart = new Chart(ctx, {
                 ticks: {
                     min:0,
                     max:40
-                }
+                },
+                gridLines: {display: false}
             }],
             yAxes: [{
                 scaleLabel: {labelString: 'value', display: true},
                 ticks: {
                     min:0,
                     max:1
-                }
+                },
+                gridLines: {display: false}
             }]
         }
     }
