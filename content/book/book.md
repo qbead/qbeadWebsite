@@ -72,7 +72,7 @@ Are you looking for a suggestion of where to start? Below we have our recommende
 
 Before doing anything else, we encourage you to read the [Quick Start Guide](/quickstart). This is where we explain how to download the Arduino software and provide essential information for the rest of the adventures.
 
-To learn the basics of controlling the LEDs, then check out our [SpinWheel Programming Reference](/basics). While this has been written for those who are discovering coding for the first time, it can also be used as a reference to create your own SpinWheel designs if you are comfortable with programming. We recommend using it as a reference as you are going through the adventures, either way!
+To learn the basics of controlling the LEDs, then check out our [SpinWheel Programming Reference](/basics). 
 
 ## Intro Adventures
 
@@ -113,6 +113,9 @@ These are the most challenging SpinWheel activities. We recommend completing at 
 2. Electricity (planned)
 3. Neural Networks (planned)
 
+## Appendix
+
+Here's a [list of the commands](/allcommands) for controlling the SpinWheel's LEDs. While this has been written for those who are discovering coding for the first time, it can also be used as a reference to create your own SpinWheel designs if you are comfortable with programming. We recommend using it as a reference as you are going through the adventures, either way!
 
 
 ## Engineer’s Diary
