@@ -144,6 +144,12 @@ void loop() {
 
 As you move the SpinWheel, do you notice the different colors and brightness? Just like in our one-dimensional line, could you see different colors representing directions? Now we have three lines and 6 directions to move. Did the speed you moved your SpinWheel change the brightness?
 
+If you are interested in reading a more detailed explanation of what each line above does, then check out [this annotated script](/codedoc/examples/Dancing_with_Color/Acceleration_Light_Up_Basic/Acceleration_Light_Up_Basic.ino.html). 
+
+::: further-reading
+To learn more about modifying the SpinWheel's LED display with the output from the SpinWheel's motion sensors, check out the ["Step Counter" activity](/stepcounter). This lesson will teach you to access the output from the motion sensors, monitor it on your computer, and use this to turn your SpinWheel into a step counter. You can do this lesson either now or after finishing the rest of this lesson.
+:::
+
 
 ## Turning: Rotational Motion
 
@@ -169,10 +175,6 @@ Polar coordinates are useful to describe points along a circle more easily than 
 There are special sensors in your SpinWheel, called gyroscopes, that allow it to detect rotational motion. 
 We can use the output from these sensors to have the SpinWheel respond to spinning! To begin, we can start with a simpler case and program the SpinWheel to light up when it detects rotation around one axis. 
 
-::: further-reading
-To learn more about modifying the SpinWheel's LED display with the output from the SpinWheel's motion sensors, check out the ["Step Counter" activity](/stepcounter). This lesson will teach you to access the output from the motion sensors, monitor it on your computer, and use this to turn your SpinWheel into a step counter.
-:::
-
 In this case, we're measuring the rotation around the SpinWhee's x-axis, which is stored in the variable SpinWheel.gx. As the sensor is very sensitive, we only want to change color if there is sufficient rotation. In this case, we will only have the color change if absolute value of the rotation is greater than 1. 
 
 ![In this picture you can see the x and y axes of your SpinWheel.
@@ -182,7 +184,7 @@ To see the senor respond to rotional motion, upload [this sketch](/codedoc/examp
 
 <!--TODO: Maybe only choose one or two of these to be in the lesson and have the rest be elsewhere; Add more context/explanation/better commenting -->
 
-One simple modification we can make to the previous sketch is to have the LEDs change color based on the direction of rotation. In the script below, the LEDs light up green up when the device is spun in one direction, and blue when spun in the other direction. If you prefer other colors, then you can modify the code below to change the colors.
+One simple modification we can make to the previous sketch is to have the LEDs change color based on the direction of rotation. In the script below, the LEDs light up green up when the device is spun in one direction, and blue when spun in the other direction. If you prefer other colors, then you can modify the code below to change the colors. For a hint of how to do this and a more detailed explanation of those code, you can also check out [this script](/codedoc/examples/Dancing_with_Color/1D_Rotation_Light_Up_Advanced/1D_Rotation_Light_Up_Advanced.ino.html).
   
 ```cpp
 #include "SpinWearables.h"
@@ -224,7 +226,7 @@ void loop() {
 It is also possible to measure and change the SpinWheel's LEDs color based on rotation in 3D space. 
 In [this sketch](/codedoc/examples/Dancing_with_Color/3D_Rotation_Light_Up/3D_Rotation_Light_Up.ino.html) 
 ,you can code the red, green, and blue components of the LEDs to respond to the rotation around the x, y, and z axes. 
-We have the small LEDs and the large LEDs light up in response to the SpinWheel's motion.
+Rather than only modifying the large LEDs as in the earlier sketches, this sketch also has the small LEDs light up in response to the SpinWheel's rotational motion.
 
 
 One of the programs that came preloaded on your SpinWheel was an LED "snake" that spins around the device. 
@@ -236,14 +238,14 @@ Angle controls how big the snake is,
 decay the fade at the end of the snake, and red, green, and blue represent the red, green, and blue component of the small LEDs. 
 The "snake" only moves when you rotate along the x axis. 
 Can you modify the color of the snake? 
-How long the snake is? Have it respond to other motion?
+What about changing how long the snake is? Can you have it respond to rotation around the other axes? What about making it change with respect to acceleration in one direction? What about making it respond to motion in all three directions? 
 
 
 ## The Grand Finale: Showing Off All Its Colors
 
-You’ve explored motion so far in this adventure. Using the above scripts as a starting point, you can modify the SpinWheel to respond to your motion however you see fit! 
+You’ve explored both linear and rotational motion independtly so far in this adventure. Using the above scripts as a starting point, you can modify the SpinWheel to respond to your motion however you see fit! 
 We'll leave you with one final more complicated sketch to inspire your imagination. 
-Here is a webpage with a [grand finale code and explaination](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html). 
+Here is a webpage with a [grand finale code and explaination](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html). This script has the SpinWheel respond to both acceleration and rotation.
 
 
 To see even more dances mathematically, 
