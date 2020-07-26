@@ -262,6 +262,8 @@ function, which is named this way because it **runs in a loop** (or repeats itse
 
 Here is a large example that includes all these features. It will use the
 `Serial.println()` function in order to send messages to the computer.
+Use the `Serial Monitor` tool in the arduino software in order to see these
+messages being sent back over the USB cable.
 
 ```c++
 // Here we define a convenient pausing function
