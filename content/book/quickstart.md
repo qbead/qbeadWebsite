@@ -54,6 +54,8 @@ Learning to code is just like learning a new language - you will understand only
 
 ![Installing Arduino libraries.](/images/quickstart/adding_libraries_screenshot.png "Installing Arduino libraries."){style="max-width:90%"}
 
+You might need to download two extra libraries, if they were not automatically downloaded. You can search for them in `Sketch → Include Library → Manage Libraries...`. Install `Adafruit_NeoPixel.h` from Adafruit (for the large LEDs) and `ICM_20948.h` from SparkFun (for the motion sensor).
+
 
 The new files can be found under `File → Examples → SpinWearables`. Open any file to see an example of the language used to communicate with the SpinWheel. You will learn more about this language in future lessons.
 Feel free to edit the examples without worry of overwriting them — the original example will always be there.
