@@ -586,3 +586,5 @@ we will use them in various creative endeavors,
 where a small piece of code will be able to react to motion in a colorful way.
 For instance, consider how we use acceleration measurements in the [make a step counter](/stepcounter)
 project, or their more artistic use in the [dance and motion visualization](/dancing) project.
+
+<!-- TODO: Insert 3D animation or widget -->
