@@ -32,7 +32,7 @@ The light-sensing tissue in the back of our eyes, the retina, has small cells th
 This leads to a problem… If our eyes can sense only red, green, and blue, how come we can see yellow? Our eyes and brains have evolved so that our red- and green-sensing cones both respond slightly to yellow. If our brain detects that both groups of cones are activated, it knows to interpret the color as yellow. And similar compromises are made for the other colors we can detect. For instance, purple activates both red- and blue-sensing cones.
 
 ::: further-reading
-There is an animal that can (unlike us) detect the difference between a true pure color, and a mixture of colors that fakes the presence of the given color (for humans, the true pure colors we can see are red, green, and blue). This animal is the mantis shrimp, and it has 12 different types of cone cells in its eye. The Oatmeal comic has [an informative and entertaining strip about it](https://theoatmeal.com/comics/mantis_shrimp).
+There is an animal that can detect the difference between many more pure colors than us. For humans, the only true pure colors we can see are red, green, and blue (for other colors, we can't tell a difference between the pure color and a mixture of red, green, and blue light). This animal is the mantis shrimp, and it has 12 different types of cone cells in its eye. The Oatmeal comic has [an informative and entertaining strip about it](https://theoatmeal.com/comics/mantis_shrimp).
 :::
 
 
@@ -42,8 +42,8 @@ If you look at a TV screen displaying a white page with a magnifying glass, you 
 
 ![An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background. (image credit to Wikimedia)](/images/bookpics/lcd_pixels_macro.jpg "An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background")
 
-The SpinWheel produces colorful displays using a similar method. If you look closely at
-a LED light on the SpinWheel, you can see that it contain 3 small light sources: one red, one green and one blue. Combining these lights in different intensities allows for a wide variety of colors to be displayed on the LEDs.
+The SpinWheel's colorful display uses a similar method. If you look closely at
+a LED light on the SpinWheel, you can see that it contain 3 small light sources: one red, one green, and one blue. Combining these lights in different intensities allows for a wide variety of colors to be displayed on the LEDs.
 This will allow us to program the SpinWheel to display beautiful colorful patterns (while using only a small set of hardware components). 0-255 is the range used by the SpinWheel for the minimum and maximum of red, green, and blue allowed in the mixture (while these numbers look strange to a human, who would probably prefer the range 0-100, computers use binary numbers and it is more efficient to use ranges that are powers of 2, as in $256=2^8$). 
 
 Below, you can move the sliders to see how all the colors of the rainbow can be made by mixing just red, green, and blue (or our eyes can be convinced of this, even if it is not true).
@@ -103,41 +103,16 @@ changeColor();
 </div>
 
 
-::: further-reading
-You can learn more about the spectrum of light and the physics behind it in the section on
-[Light and Color](/lightandcolor).
-Or if you are interested in the study of color as perceived by humans,
-and how this informs the choice of pigments and colored lights,
-see the section on [Color Theory](/colortheory).
-:::
+Now let us start programming the SpinWheel to light up as your favorite color from above! 
 
-
-Now let us start programming the SpinWheel to light up in a specific color! First, copy the code shown here to a new sketch in the Arduino software. Pick a color you like by changing the sliders above (for instance, we like this purple `(195,0,255)`)
-You can make the large LEDs on the SpinWheel display that color by changing the values in `SpinWheel.setLargeLEDsUniform(...)` . For example, to create our pretty purple color, we would change `SpinWheel.setLargeLEDsUniform(0, 0, 0)` to `SpinWheel.setLargeLEDsUniform(195,0,255)`. Finally, save the sketch and upload it to your SpinWheel. If you do not have a SpinWheel at hand, you can program the virtual one further down on this page. 
-
-```cpp
-#include "SpinWearables.h"
-using namespace SpinWearables;
-
-void setup() {
-  // Initialize all of the hardware on the SpinWheel.
-  SpinWheel.begin();
-}
-
-void loop() {
-  // Ask the SpinWheel to prepare all large LEDs to
-  // show a particular color.
-  SpinWheel.setLargeLEDsUniform(0, 0, 0);
-  // Make the SpinWheel show the registered color.
-  SpinWheel.drawFrame();
-}
-```
+First, you can also use the red, green, and blue sliders to determine the amount of red, green, and blue light necessary to make your favorite color. 
 
 ::: further-reading
-If you have trouble uploading to your SpinWheel, be sure to read our [Quick Start Guide](/quickstart). If you want more explanation about the code shown here, you can read the [Programming Patterns lesson](/progpatterns).
+If you are new to coding, be sure to read our [Quick Start Guide](/quickstart) and the [Basic SpinWheel Code lesson](/basics). 
 :::
 
-Instead of copying the code, you can also find a complete example in the Arduino examples menu under `Examples → SpinWearables → Biology_of_Sight →  Mixing_Colors`. You can try this code in the virtual SpinWheel simulator below - this lets you see how your physical SpinWheel would respond if you ran the same code. Below you can change the brightness of each of the red, green, and blue components of the light emitters.
+To begin, let's try changing the code in the browser.
+We have created a virtual SpinWheel simulator to let you see how your physical SpinWheel would respond if you ran the same code. This makes it easy to quickly see how a particular change would affect the SpinWheel without waiting for the code to upload to the SpinWheel.
 
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
 <script src='/simspinwheel/simspinwheel.js'></script>
@@ -149,13 +124,29 @@ void setup() {
 void loop() {
 </pre>
 <textarea class="ssw-codeblock">
-  SpinWheel.setLargeLEDsUniform(195, 0, 255);
+  SpinWheel.setLargeLEDsUniform(255, 255, 255);
 </textarea>
 <pre class="ssw-codeblock">
   SpinWheel.drawFrame();
 }
 </pre>
 </div>
+
+What happens when you hit run?
+
+To have the SpinWheel light up another color other than white, you can change the large LEDs on the SpinWheel display that color by changing the values in `SpinWheel.setLargeLEDsUniform(...)`.
+For example, to create a pretty purple color that we like, we would change `SpinWheel.setLargeLEDsUniform(255, 255, 255)` to `SpinWheel.setLargeLEDsUniform(195,0,255)`. This purple is created by changing the first component to `195` to represent the addition of red light, the green component to `0`, and the blue component to `255`.
+Try making this change above (or choose your favorite color that you picked above). 
+
+To change the color of the large LEDs on your SpinWheel, you can find the complete sketch in the Arduino examples menu under `Examples → SpinWearables → Biology_of_Sight →  Mixing_Colors`. You can then change the color of the SpinWheel's LEDs to whatever color you would like. After you have made any changes you want to that Arduino sketch, you will be prompted to save the sketch in a new location. Finally, you can upload it to your SpinWheel and see it light up as your favorite color!
+
+::: further-reading
+You can learn more about the spectrum of light and the physics behind it in our lesson on
+[Light and Color](/lightandcolor).
+Or if you are interested in the study of color as perceived by humans,
+and how this informs the choice of pigments and colored lights,
+see our lesson on [Color Theory](/colortheory).
+:::
 
 ## Persistence of Vision
 
@@ -226,7 +217,7 @@ getT();
 </script>
 </div>
 
-Since web browsers are not particularly well adapted to this type of rapid color change, the flicker at high speeds is rather unpleasant. However, as you speed up the color changes, you will start to see purple, and the original red and blue will become less clearly distinct. Unlike web browsers, the SpinWheel is up to this task. The following program will cycle between red and blue at variable delays. Upload it to your SpinWheel and experiment with the value for the delay time by changing the line `int delay_time_in_milliseconds = 500;`. At what delay time do you stop distinguishing the two original colors and start seeing only purple?
+Since web browsers are not particularly well adapted to this type of rapid color change, the flicker at high speeds is rather unpleasant. However, as you speed up the color changes, you will start to see purple, and the original red and blue will become less clearly distinct. Unlike web browsers, the SpinWheel is up to this task. The following program will cycle between red and blue at variable delays. You can find this code in the examples menu under `Examples → SpinWearables → Biology_of_Sight →  Persistence_of_Vision`. Upload it to your SpinWheel and experiment with the value for the delay time by changing the line `int delay_time_in_milliseconds = 500;`. At what delay time do you stop distinguishing the two original colors and start seeing only purple?
 
 ```cpp
 // BE CAREFUL IF YOU HAVE EPILEPSY AS THIS WILL CAUSE FLASHING COLORS!!!
@@ -255,8 +246,6 @@ void loop() {
   delay(delay_time_in_milliseconds);  
 }
 ```
-
-This code is also available in the Arduino examples menu under `Examples → SpinWearables → Biology_of_Sight →  Persistence_of_Vision`.
 
 Right at the point where the red and blue stop being observable on their own, you can perform another experiment that showcases the persistence of vision effect. Instead of keeping the SpinWheel still, start shaking it back and forth rapidly. By doing this, the light emitters will be in different locations in space when they emit either red or blue, and this will let you once again distinguish the two colors (and stop seeing purple). Once you stop shaking the device, it will once again look purple.
 
