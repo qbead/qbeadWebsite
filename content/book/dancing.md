@@ -256,6 +256,4 @@ a physics graduate student who studies particle physics as well as physics and d
 
 You can also watch more of her videos [here](https://vimeo.com/400641881) and read a [paper](https://arxiv.org/abs/1907.05297)  on this research.  
 
-
-<!--TODO: insert Mariel's video here -->
-
+<figure><video src="/images/bookpics/mariel.mp4" controls></video><figcaption>A physicist's interpretation of a dance.</figcaption></figure>
