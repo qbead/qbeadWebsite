@@ -46,7 +46,7 @@ a language that lets us instruct a simple computer (the SpinWheel's brain) to do
 Just like with any other language, at first you will not be able to understand all the words or the <span class="footnote">entire sentence.<span>In this metaphor a sentence is a computer program.</span></span>
 As a new programmer, the important thing is to latch on to the words that mean something to you, even if you cannot understand the entire language.
 
-We have prepared many small example programs you can play with, before you start trying to modify them. All of these sketches are in the zipfile that you downloaded while completeing the [quickstart guide](/quickstart). You should not need to type yourself any of the examples described here.
+We have prepared many small example programs you can play with, before you start trying to modify them. All of these sketches are in the zipfile that you downloaded while completeing the [quickstart guide](/quickstart). You should not need to type out any of the examples described here.
 Simply attempt to upload them to the device and read through them, even if you are not changing them.
 :::
 
@@ -62,7 +62,7 @@ To make our device blink, we need to tell it how long to be on or off.
 This is the timing of our animation.
 Thankfully our device has a built-in timer that can measure milliseconds (thousandths of a second).
 One of the first things we will need to do in our generative art program is to ask for the time and save it for future calculations.
-The necessary command that we need to write looks like
+The necessary command that we need to write looks like:
 
 ```c++
 int t = millis();
@@ -70,7 +70,7 @@ int t = millis();
 
 We will shortly see how this command can be woven in with others in a whole program.
 Here, `millis()` is a
-<span class="footnote">command that reads the number of milliseconds since the device has started.<span>This command, together with many other useful commands comes built into the software we are using.
+<span class="footnote">command that reads the number of milliseconds that have passed since the device was started.<span>This command, together with many other useful commands comes built into the software we are using.
 We will later even learn how to make commands of our own.</span></span>
 These commands are special directions that ask the computer to complete a task.
 The rest of the small piece of code depicted above ensures that the number of milliseconds given by `millis()` is stored somewhere: in the variable we have named `t` (you can use more descriptive names if you wish). We also had to specify the type of the variable (`int` as in "integer") because otherwise our SpinWheel will get confused.
@@ -95,7 +95,7 @@ should itself repeat in the same manner.
 ![Division of time into intervals of 2500. In this example, 5600 milliseconds have passed, which is 2 full cycles with a remainder of 600.](/images/Modular_division_timeline.png "Division of time (shown in blue) into intervals of 2500 (shown in orange)")
 
 
-The simplest way to do that is to subdivide time into intervals of the same length of our animation
+The simplest way to do that is to subdivide time into intervals of the same length as our animation
 and see how many milliseconds have passed since the start of the current interval.
 We can do that by looking at the remainder after dividing time by the length of our repeating unit.
 For example, if 5600 milliseconds have passed since the device was powered, then
@@ -104,12 +104,12 @@ This means that  two full intervals of 2500 milliseconds have passed and we are 
 
 <!--FIGURE: figure describing this division and reminder. -->
 
-We can also consider different length intervals,
+We can also consider intervals of different lengths,
 but for now we will stick to 2.5 seconds as it is short enough for us to be able to see the animation we create without waiting an unnecessary amount of time,
 and long enough that our eyes can capture how things change during this interval.
 
-Lastly, we need to tell the computer that we want it to compute a division with reminder for us.
-Thankfully, we can find in our dictionary of programming languages that the notation `a % b` is <span class="footnote">frequently used<span>Programmers have the bad habit of taking established symbols like the percentage sign and using it for unrelated concepts, like its use here for division with remainder.</span></span> to mean "find the reminder of dividing `a` by `b`".
+Lastly, we need to tell the computer that we want it to compute a division with remainder for us.
+Thankfully, we can find in our dictionary of programming languages that the notation `a % b` is <span class="footnote">frequently used<span>Programmers have the bad habit of taking established symbols like the percentage sign and using it for unrelated concepts, like its use here for division with remainder.</span></span> to mean "find the remainder of dividing `a` by `b`".
 With all this knowledge, we now know how to store a new variable `t_repeating` which measures time in repeating intervals of (for example) 2500 milliseconds.
 
 ```c++
@@ -153,7 +153,7 @@ If you want a reminder about why the above code will not work if you run it on y
 :::
 
 We also have a [webpage with detailed explanation of the code](/codedoc/examples/Animations_and_Patterns/Simple_Blink), if you are interested in learning more about what each line of the code does.
-If you are already accustomed to programming and would want to simply see the list of available commands,
+If you are already accustomed to programming and want to simply see the list of available commands,
 [check out our function documentation](/allcommands).
 
 By learning to control the SpinWheel's LEDs, you are learning some basic coding concepts. To expand on this, we have also put together a reference guide that introduces [some of the most important patterns in programming](/progpatterns).   
@@ -170,15 +170,15 @@ However, that much freedom can be paralysing at first.
 Here we will see two more functions that can give us ideas upon which to build.
 
 First, notice that the brightness of the LEDs in our previous examples was abruptly cut off.
-Would it not be prettier if we gently turn off the LEDs, similarly to how gently we are ramping them up?
-We can perform this by writing a function that first goes up and then slowly turns back down.
+Wouldn't it be prettier if we gently turned off the LEDs, similarly to how gently we are ramping them up?
+We can perform this by writing a function that first goes up and then slowly goes back down.
 We have already written such a function for you to use
 and called it [`triangularWave`](/codedoc/SpinWearables.h.html#triangular-wave),
 because when you plot it, it looks like a series of triangles.
 
 <figure><video src="/images/bookpics/triangular_wave.mp4" muted autoplay playsinline loop></video><figcaption>Instead of the sawtooth time-dependent pattern of brightness we saw previously, we can employ a pattern that also decreases steadily (instead of abruptly dropping to zero), making for a more pleasant pulsing light.</figcaption></figure>
 
-Below you can see and a small modification of our previous example that employs such triangular waves.
+Below you can see a small modification of our previous example that employs such triangular waves.
 In order to also show some color, instead of purely white LEDs,
 we will [mix only red and blue, and leave the green set to zero](/colortheory).
 [You can peruse the entirety of the code online](/codedoc/examples/Animations_and_Patterns/Smoother_Blink),
@@ -246,7 +246,7 @@ we have already seen that we need to use `SpinWheel.setLargeLEDsUniform(r,g,b)`,
 where `r`, `g`, and `b` are the red, green, and blue components of the color we desire.
 They need to be between 0 (turned off) and 255 (maximum intensity).
 To do the same to the smaller LEDs, we can use `SpinWheel.setSmallLEDsUniform(r,g,b)`.
-To illuminate a single large LED (enumerate from 0 to 7),
+To illuminate a single large LED (numbered from 0 to 7),
 we can use `SpinWheel.setLargeLED(i,r,g,b)`,
 where the first argument `i` is the number of the LED we want to change.
 Similarly, we use `SpinWheel.setSmallLED(i,r,g,b)` to do the same for the smaller LEDs.
@@ -322,5 +322,5 @@ You might have noticed that many of the functions and commands we have used are 
 repeat themselves when their input passes through 255. There is a reason for this.
 There are 256 numbers from 0 to 255. And 256 is exactly how many different values can be stored in one byte.
 One byte is how much space is dedicated to many typical variables in the language used by the
-Arduino software, hence, much of its functions are written to expect numerical values on that scale.
+Arduino software, hence, many of its functions are written to expect numerical values on that scale.
 :::
