@@ -264,11 +264,11 @@ Here is a webpage with a [grand finale code and explaination](/codedoc/examples/
 
 
 To see even more dances mathematically, 
-you can watch Mariel Pettee’s, 
-a physics graduate student who studies particle physics as well as physics and dance, 
-[AI-generated dances](https://vimeo.com/400629616) below. 
+you can watch [this video](https://vimeo.com/400629616) below, created by Mariel Pettee, 
+a physics graduate student who studies particle physics as well as physics and dance.
 
 <figure><video src="/images/bookpics/mariel.mp4" controls></video><figcaption>A physicist's interpretation of a dance.</figcaption></figure>
 
-You can also watch more of her videos [here](https://vimeo.com/400641881) and read a [paper](https://arxiv.org/abs/1907.05297)  on this research.  
-
+::: further-reading
+Mariel created this video using programming tools that she developed in a collaboration of dancers, physicists, and computer science researchers. You can watch more of her videos [here](https://vimeo.com/400641881) and read a [paper](https://arxiv.org/abs/1907.05297) on this research.
+:::
