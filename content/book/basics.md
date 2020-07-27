@@ -39,7 +39,7 @@ It contains two blocks (or sections) of code which start and end
 with the brackets `{` and `}`.
 For our program to do anything, we need to fill these blocks with instructions.
 The first block is called `setup` and executes only once, immediately after the device is powered up.
-This block is used for (surprise) setting up any initial conditions we might require.
+This block is used for setting up any initial conditions we might require.
 
 Next there is the `loop` block. This block is executed repeatedly "in a loop",
 starting immediately after `setup` is done and repeating itself until the power is turned off.
@@ -48,7 +48,7 @@ They will frequently take the form of measuring time or motion,
 and then producing a color or a pattern of colors depending on the measurement.
 
 To produce a program capable of sending instructions to the hardware of the SpinWheel
-(e.g. the LEDs and motion sensor), our program require a few more lines:
+(e.g. the LEDs and motion sensor), our program requires a few more lines:
 
 ```c++
 // Include extra resources and commands
@@ -69,8 +69,8 @@ void loop() {
 
 Notice the faded bluish lines that begin with two slashes `//`. This text is called
 a "comment." By starting the line with `//`, the computer is told to 
-completely disregarded everything else on the line. We will use comments 
-extensively to write down explanations for the humans that might be reading the code,
+completely disregard everything else on the line. We will use comments 
+extensively to write down explanations for ourselves and any other humans that might be reading the code,
 without worrying about the computer being confused by them.
 
 The `loop` block is still empty and this program still will not do anything interesting.
@@ -92,16 +92,16 @@ void loop() {
   // Set the large LED number 0 to
   // have red=255, green=0, and blue=0 color.
   SpinWheel.setLargeLED(0, 255, 0, 0);
-  // Update the currently shinning LEDs
+  // Update the currently shining LEDs
   // based on the instructions provided up to here.
   SpinWheel.drawFrame();
 }
 ```
 
-Try to copy this code in the Arduino software and upload it to your SpinWheel.
+Try to copy this code into the Arduino software and upload it to your SpinWheel.
 It should cause one single large LED to turn on in bright red.
 You can modify the `setLargeLED` line to change the appearance of the SpinWheel.
-The first item (also called "parameters") in the parenthesis 
+The first item (also called a "parameter") in the parentheses 
  <span class="footnote">identifies the affected LED<span>The number goes from 0 to 7.</span></span>
 and the other <span class="footnote">three numbers are the red,
 green, and blue components<span>They have to be numbers between 0 (color is off) and 255 (color is on at full brightness).</span></span> of the desired color.)
@@ -110,9 +110,9 @@ There are a couple more things you might have noticed about the style of this la
 
 - We tend to have only one "command" per line. This makes the code more readable.
 - Each command is followed by a semicolon `;`. That makes it easier for the computer to separate different commands.
-- Commands tend to be some name followed by parenthesis `()`.
-- Inside these parenthesis we frequently put some extra information: this information can control how a command performs. For instance, in `setLargeLED` we have one parameter that selects the LED we want to modify and three parameters for the color of that LED.
-- There are other ways in which LED colors can be modified and motion be detected. We will be discussing many such tools in futures pages.
+- Commands tend to be some name followed by parentheses `()`.
+- Inside these parentheses we frequently put some extra information: this information can control how a command performs. For instance, in `setLargeLED` we have one parameter that selects the LED we want to modify and three parameters for the color of that LED.
+- There are other ways in which LED colors can be modified and motion be detected. We will be discussing many such tools in future pages.
 
 ::: further-reading
 We invite you to play with the [SpinWheel examples available in the Arduino software and to peruse the many suggested activities we have prepared for you](/book). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands). If you would like to specifically focus on learning more about this programming language, you can see our [programming patterns page](/progpatterns).
