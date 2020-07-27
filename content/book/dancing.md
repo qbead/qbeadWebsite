@@ -251,7 +251,10 @@ Here is a webpage with a [grand finale code and explaination](/codedoc/examples/
 To see even more dances mathematically, 
 you can watch Mariel Pettee’s, 
 a physics graduate student who studies particle physics as well as physics and dance, 
-[AI-generated dances](https://vimeo.com/400629616) below. You can also watch more of her videos [here](https://vimeo.com/400641881) and read a [paper](https://arxiv.org/abs/1907.05297)  on this research.  
+[AI-generated dances](https://vimeo.com/400629616) below. 
+![Mariel Pette: Mirror Exercise](/images/PlaceholderDancing.png)
+
+You can also watch more of her videos [here](https://vimeo.com/400641881) and read a [paper](https://arxiv.org/abs/1907.05297)  on this research.  
 
 
 <!--TODO: insert Mariel's video here -->
