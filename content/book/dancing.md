@@ -115,12 +115,9 @@ As you can see, when you drag the mouse faster, the line gets more colorful! How
 
 ## Linear motion: A Three Line Dance
 
-We’ve talked about motion in 1-D, but we don’t live and move and dance on a single line. We’re free to go forwards and back, left and right, up and down, and even along curves. Instead of one line, we can represent our everyday motions by moving along three lines. We call this three dimensional (3D) motion. Maybe you’ve seen an X Y Z grid before. This is called a cartesian coordinate system. If you click a point on the animation below, you can see how we could jump to any location in space with these three lines. 
-
-<!-- TODO: Insert animation -->
-Insert animation: I am imagining a grid (I was thinking 3D, but we could move to 2D if needed) where you click on a point, and the animation draws how you move to that line in (x,y,z) coordinates. I was also hoping to display the point (x, y, z) as a title or the top corner. First, trace the x-direction in one color (maybe pink), and fill in the x coordinate in pink. Trace y in a light blue color (fill in coordinate too), and trace z in. Leave the colorful path there until another point is selected. I think the exact color depends on the color scheme!
-
-You’re SpinWheel can do the same! Inside your SpinWheel is a motion sensor. You can program your SpinWheel to light up different colors as it moves through space like this animation. Upload this sketch to your SpinWheel and explore how it can dance through 3D space. 
+We’ve talked about motion in 1-D, but we don’t live and move and dance on a single line. We’re free to go forwards and back, left and right, up and down, and even along curves. Instead of one line, we can represent our everyday motions by moving along three lines. We call this three dimensional (3D) motion. When we move, or when the SpinWheel moves, we
+are travelling in 3D space. Inside your SpinWheel is a motion sensor that can tell when the SpinWheel moves. You can program your SpinWheel to light up different colors as it moves through 3D space like this animation. Upload this sketch to your SpinWheel and explore how it can dance through 3D space. 
+<!--TODO: Add link to Sketch -->
 
 # Test of motion simulation
 
