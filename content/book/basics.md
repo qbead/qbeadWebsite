@@ -76,7 +76,7 @@ However, to great extent our `setup` function is complete: it prepares the SpinW
 receive instructions. Through our activities, we will rarely need anything more sophisticated
 in `setup`.
 
-Finally, let us turn on an LED, by simply adding a single command to the 
+Finally, let us turn on an LED, by simply adding a single command to the block of code we started above.
 
 ```c++
 #include "SpinWearables.h"
