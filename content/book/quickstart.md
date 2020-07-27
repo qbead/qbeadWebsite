@@ -34,7 +34,7 @@ The SpinWheel contains sensitive electronic components that are securely soldere
 
 4. To turn off the SpinWheel, flip the switch to "USB".
 
-5. To charge, plug a micro USB cable into the USB jack, keep the switch to "USB" and charge using a computer or USB-to-wall converter. You should also keep the switch in this position when you are not using the SpinWheel and for long term storage to protect the battery from discharging. Note: the battery may require charging before use.
+5. To charge, plug a micro USB cable into the USB jack, keep the switch on "USB" and charge using a computer or USB-to-wall converter. You should also keep the switch in this position when you are not using the SpinWheel and for long term storage to protect the battery from discharging. Note: the battery may require charging before use.
 
 Your kit contains a booklet (the SpinWheel Field Guide) with various activities you can complete. The activities in the booklet are also found in expanded versions online. We highly recommend that you make use of both. 
 
@@ -44,7 +44,7 @@ While you can use the SpinWheel with the preloaded animations, much of the joy o
 
 Plug your SpinWheel into your computer with a micro USB cable and flip the switch to the position labeled "USB". Open the Arduino software. You should see your device appear in the Tools menu under `Tools → Port`. You will see a list of serial ports on your computer; you need to find the one for the SpinWheel. If there are multiple ports and you are unsure which one to use, simply unplug the SpinWheel and see which serial port disappears when you do so. This port corresponds to your SpinWheel's serial port.
 
-![Use `Tools → Port` and `Tools → Board` to pick the "Leonardo" board type and the port corresponding to the SpinWheel.](/images/quickstart/port_and_board_screenshot.png "Use `Tools→ Port` and `Tools→ Board` to change the settings on the Arduino software.")
+![Use `Tools → Port` and `Tools → Board` to pick the port corresponding to the SpinWheel and the "Leonardo" board type.](/images/quickstart/port_and_board_screenshot.png "Use `Tools→ Port` and `Tools→ Board` to change the settings on the Arduino software.")
 
 Now you can go back to the Tools menu and select `Tools → Board`. Select Arduino Leonardo as the board (a.k.a. processor), so that the software knows which “dialect” to use to talk to the SpinWheel (computer languages have dialects just like human languages!).
 
