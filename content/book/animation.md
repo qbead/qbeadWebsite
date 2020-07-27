@@ -44,7 +44,7 @@ If you haven't already done the [quickstart guide](/quickstart) and [learning to
 Keep in mind that we will be learning a new language,
 a language that lets us instruct a simple computer (the SpinWheel's brain) to do something.
 Just like with any other language, at first you will not be able to understand all the words or the <span class="footnote">entire sentence.<span>In this metaphor a sentence is a computer program.</span></span>
-As a new acolyte, the important thing is to latch on to the words that mean something to you, even if you cannot read the entire spell.
+As a new programmer, the important thing is to latch on to the words that mean something to you, even if you cannot understand the entire language.
 
 We have prepared many small example programs you can play with, before you start trying to modify them. All of these sketches are in the zipfile that you downloaded while completeing the [quickstart guide](/quickstart). You should not need to type yourself any of the examples described here.
 Simply attempt to upload them to the device and read through them, even if you are not changing them.
@@ -83,23 +83,24 @@ when to be illuminating brightly or showing subdued colors,
 when to alternate hues from one LED to the other,
 and in this particular case, simply when to blink.
 
-What follows is the most crucial concepts in the construction of our animations.
+What follows is the most crucial concept in the construction of our animations.
 If we want our animations to repeat,
 we will need to turn this ever-growing counter `time`,
 into a number that *wraps around*.
 For instance,
 if we want our animation to repeat every 2500 milliseconds (2.5 seconds),
-then the number on which the animation depends,
+then the number on which the animation depends
 should itself repeat in the same manner.
 
-<!--FIGURE: Figure or Animation showing subdividing time into equal intervals. -->
+![Division of time into intervals of 2500. In this example, 5600 milliseconds have passed, which is 2 full cycles with a remainder of 600.](/images/Modular_division_timeline.png "Division of time (shown in blue) into intervals of 2500 (shown in orange)")
 
-The simplest way to do that is to subdivide the number of milliseconds into equal intervals,
+
+The simplest way to do that is to subdivide time into intervals of the same length of our animation
 and see how many milliseconds have passed since the start of the current interval.
-We can do that by dividing the number of seconds and looking at the remainder.
-For example, if 5600 milliseconds have passed since the device was powered, then two full intervals of 2500 milliseconds have passed and we are 600 milliseconds into the third interval:
-
-$$5600 = 2\times2500 + 600.$$
+We can do that by looking at the remainder after dividing time by the length of our repeating unit.
+For example, if 5600 milliseconds have passed since the device was powered, then
+$$ 5600\div 2500 = 2 \text{ with a remainder of } 600.$$
+This means that  two full intervals of 2500 milliseconds have passed and we are 600 milliseconds into the third interval.
 
 <!--FIGURE: figure describing this division and reminder. -->
 
