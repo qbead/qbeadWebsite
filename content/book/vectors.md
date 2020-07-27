@@ -5,14 +5,14 @@ keywords: vectors, kinematics
 
 ::: intro-box
 Scientist and engineers use drawings of arrows to denote position and motion.
-They are called vectors and as thinking about them make many motion-related
+They are called vectors and using them makes many motion-related
 problems much easier.
 :::
 
 Doodling is a crucial and empowering tool used by artists, scientists, and engineers.
 Many great inventions, many ideas that have changed the world,
 were born out of a lively conversation and scribble on a napkin.
-The process of rendering our thoughts in drawings allows us to clarify and better understand our own thoughts and leads us to more clearly communicate our ideas to others.
+The process of rendering our ideas in drawings allows us to clarify and better understand our own thoughts and leads us to more clearly communicate our ideas to others.
 
 One of the most important elements of many scientific doodles is the arrow.
 We use arrows to denote directions, positions, orientations, flows, motions,
@@ -42,12 +42,12 @@ Frequently this center is called the *origin* of our map.
 Vectors starting at that origin can be thought of representing not only displacement,
 but also a current position.
 
-<figure><video src="/images/bookpics/vector_displacement.mp4" muted autoplay playsinline loop></video><figcaption>A vector can be used to denote the motion from one point to another.</figcaption></figure>
+<figure><video src="/images/bookpics/vector_displacement.mp4" muted autoplay playsinline loop></video><figcaption>A vector can be used to denote motion from one point to another (like of the orange dot above).</figcaption></figure>
 
 However, what if you want to represent a more complicated journey?
 Maybe after stopping at Location 1,
 you then move to Location 2.
-This second displacement will be denoted by a second vector.
+This second displacement will be denoted by a second vector. In the journey represented in the image below, one more step is taken to reach the final destination (and a third vector represents that stage).
 
 <figure><video src="/images/bookpics/vector_multiple_steps.mp4" muted autoplay playsinline loop></video><figcaption>For each step of your journey, you can draw a vector between the prior and current location.</figcaption></figure>
 
@@ -83,7 +83,7 @@ This would be a vector whose orientation points along the current direction of m
 This vector is longer if the position is changing faster (a longer vector represents a higher speed),
 or shorter if the position is changing slowly.
 
-Below you are provided with an interactive visualization of the notion of velocity vector.
+Below you are provided with an interactive visualization of the notion of a velocity vector.
 You can pick the velocity by dragging the black dot with the cursor of your mouse.
 In the left circle, the velocity vector will be visualized.
 This would be the velocity with which the position (in blue) depicted in the right rectangle would be modified.
@@ -584,5 +584,5 @@ which represent the components of the acceleration along the $X$, $Y$, and $Z$ d
 Now that you have a rough understanding of what these number represent,
 we will use them in various creative endeavors,
 where a small piece of code will be able to react to motion in a colorful way.
-For instance, consider how we use acceleration measurements in the [make a stepcounter](/stepcounter)
+For instance, consider how we use acceleration measurements in the [make a step counter](/stepcounter)
 project, or their more artistic use in the [dance and motion visualization](/dancing) project.
