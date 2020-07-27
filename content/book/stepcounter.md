@@ -22,7 +22,7 @@ We will build our Step Counter program step by step, starting with this empty sk
 A good first step is to write some simple test code that just prints a few messages, confirming that your device is still functioning. For instance, copy the following code into your file. This code, once running on the SpinWheel, will repeatedly send the message "I am working!" to the computer that your SpinWheel is attached to. As always, we will add comments to the code, so that the purpose of each line is explained. (A comment is a line of code that is not run by the computer, but meant to be interpreted by humans. In this code, comment lines start with `//`).
 
 ::: further-reading
-You can consult our [Programming Patterns page](/progpatterns) to remind yourself how to read the computer code shown below.
+You can consult our [SpinWheel basic commands page](/basics) to remind yourself how to read the computer code shown below. For more details about coding itself, check out the [Programming Patterns page](/progpatterns).
 :::
 
 ```cpp
@@ -71,7 +71,7 @@ We will also send this value to the computer connected to the SpinWheel to confi
 
 <video src="/images/bookpics/stepcounter_nolights.mp4" muted autoplay playsinline loop></video>
 
-Here is all the code put together:
+Here is all the code put together (if you want to open this sketch in the Arduino software to add it to your SpinWheel, navigate to `Examples → SpinWearables → Step_Counter →  Detect_Total_Acceleration`):
 
 ```cpp
 #include "SpinWearables.h"
@@ -107,7 +107,7 @@ The intensity of each color will be proportional to the detected acceleration. H
 To account for that, we subtract 1 (the magnitude of gravity) from `total_acceleration`.
 This is how we obtain `kinematic_acceleration = total_acceleration - 1`. "Kinematic" is a fancy word physicists use to refer to things related to motion. We calculate intensity based on that value with `intensity = 20*kinematic_acceleration` and use it in the `setLargeLEDsUniform` function. We chose a factor of 20 in order to make the LEDs brighter.
 
-Below you can see the code to perform this task.
+Here is all the code put together (you can find it in `Examples → SpinWearables → Step_Counter →  Detect_Kinematic_Acceleration`):
 
 ::: further-reading
 There are a lot of intricate facts about motion and gravity that relate to why our motion sensor can not distinguish between the two. You can read more about it in the section on ["Inertial reference frames and Free fall"](./inertia), which will also explain why `total_acceleration` at rest, as measured by our sensor, is 1 unit. Einstein himself was thinking about this everyday fact when he was developing the general theory of relativity.
@@ -246,7 +246,8 @@ thrUpdate();
 
 Finally, we use the 12 smaller LEDs in order to show the value of `total_motion`. If `total_motion` is 1, we light up only the first LED. If it is 5, we light up the first five LEDs, and so on. We use the `SpinWheel.setSmallLEDs()` function to do this.
 
-Below you can see the code in its entirety, and <a href="#stepcounter-sim1">at the bottom of the page</a> you can try running it on a virtual SpinWheel.
+Below you can see the code in its entirety, and <a href="#stepcounter-sim1">at the bottom of the page</a> you can try running it on a virtual SpinWheel. To add this code to your SpinWheel, go to `Examples → SpinWearables → Step_Counter →  Fancy_Step_Counter`):
+
 
 ```cpp
 #include "SpinWearables.h"
