@@ -108,9 +108,9 @@ We can also consider intervals of different lengths,
 but for now we will stick to 2.5 seconds as it is short enough for us to be able to see the animation we create without waiting an unnecessary amount of time,
 and long enough that our eyes can capture how things change during this interval.
 
-Lastly, we need to tell the computer that we want it to compute a division with remainder for us.
+Lastly, we need to tell the computer that we want it to compute a division with a remainder for us.
 Thankfully, we can find in our dictionary of programming languages that the notation `a % b` is <span class="footnote">frequently used<span>Programmers have the bad habit of taking established symbols like the percentage sign and using it for unrelated concepts, like its use here for division with remainder.</span></span> to mean "find the remainder of dividing `a` by `b`".
-With all this knowledge, we now know how to store a new variable `t_repeating` which measures time in repeating intervals of (for example) 2500 milliseconds.
+With all this knowledge, we now know how to measure time in repeating intervals of (for example) 2500 milliseconds. We can store this value in a new variable `t_repeating`.
 
 ```c++
 int t_repeating = t % 2500;
