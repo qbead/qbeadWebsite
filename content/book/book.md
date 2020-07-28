@@ -7,6 +7,8 @@ nocomments: nocomments
 
 ::: warning :
 This is only a scaffolding for the (printed and electronic) textbook that will be developed as part of the project.
+
+Many of our activities and lessons have interactive widgets. Not all of these currently work in all browsers (particularly Safari and on phones). We are actively working on ensuring that all interactive elements are enjoyable across platforms.
 :::
 
 Welcome to the table of contents for the SpinWheel! We hope you enjoy the adventures (hands-on activities that use the SpinWheel) and associated lessons. 
