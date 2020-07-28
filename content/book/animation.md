@@ -216,8 +216,8 @@ we might be more interested in a time-dependent hue.
 One particularly lovely way to achieve this is to use a color wheel,
 where we assign a color to each point of a circle,
 and use it as a reference when turning numbers into colors.
-We have written a function, `colorWheel()`, that converts the time
-to a color as seen in the image below. For each time point, the red,
+We provide you with a function, `colorWheel()`, that converts the numbers between 0 and 255
+to a color as seen in the image below. For each input number, the appropriate red,
 blue and green components of a color from the colorWheel are calculated
 and used to color our LED lights.
 
