@@ -23,6 +23,7 @@ jQuery(function(){
   var graph = new Springy.Graph();
 
   var quick = graph.newNode({label: "Quick Start"});
+  var basic = graph.newNode({label: "Basic SpinWheel Commands"});
   var sight = graph.newNode({label: "Biology of Sight"});
   var strobe = graph.newNode({label: "Stroboscope"});
   var ani = graph.newNode({label: "Animations and Patterns"});
@@ -37,17 +38,18 @@ jQuery(function(){
   var magnet = graph.newNode({label: "Magnetism"});
   var vector = graph.newNode({label: "Vectors and Kinematics"});
   
-  graph.newEdge(quick, sight); 
-  graph.newEdge(quick, strobe);
-  graph.newEdge(quick, ani); 
+  graph.newEdge(quick, basic);
+  graph.newEdge(basic, sight); 
+  graph.newEdge(basic, strobe);
+  graph.newEdge(basic, ani); 
   graph.newEdge(sight, light); 
   graph.newEdge(light, colortheory); 
   graph.newEdge(ani, step); 
   graph.newEdge(ani, progpatterns); 
-  graph.newEdge(progpatterns, dance);
+  graph.newEdge(ani, dance);
   graph.newEdge(dance, compass); 
   graph.newEdge(compass, magnet);
-  graph.newEdge(dance, inertia); 
+  graph.newEdge(step, compass);
   graph.newEdge(dance, vector); 
   graph.newEdge(vector, rotation); 
   graph.newEdge(step, inertia);
@@ -66,7 +68,7 @@ jQuery(function(){
 </canvas>
 
 
-Are you looking for a suggestion of where to start? Below we have our recommended order. However, this is just a recommendation! Depending on which activities you are excited by and your comfort with programming, then you may jump around.
+There is a lot going on in the map above, so below we have our recommended order for completing the lessons and adventures. However, this is just a recommendation! Depending on which activities you are excited by and your comfort with programming, then you may jump around.
 
 ## Getting Started
 
