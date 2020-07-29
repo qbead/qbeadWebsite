@@ -312,14 +312,19 @@ void loop() {
 This code is [in the `Rainbow_Chase` example](/codedoc/examples/Animations_and_Patterns/Rainbow_Chase).
 
 You now have the tools you need to control each LED of the SpinWheel
-and create a time dependent color or brightness. Use these tools to create
-new and exciting patterns on your SpinWheel! To expand these tools,
-you might want to peruse the [list of available functions](/allcommands),
-or learn more about [mixing of colors](/sight).
-You can also delve deeper in [the tools that this programming language provides](/progpatterns),
-which could enable you to write more sophisticated programs and patterns.
+and create a time dependent color or brightness. Use these sketches and the building blocks introduced in them to create
+new and exciting patterns on your SpinWheel! We have created a 
+[reference](/allcommands) with the various commands (like `setLargeLED()` and `setSmallLEDsUniform()`), that we introduced above, as well as some new ones for programming the SpinWheel in even more ways. As you try out the other adventures and begin to program the SpinWheel for yourself, 
+we hope that you will find these functions useful. 
+These functions also have virtual SpinWheels embedded in the page to allow you to experiment with the code and see how they work more easily!
 
-Overwhelmed by the possibilities? Here are some suggestions: 
+::: further-reading
+If you are interested in learning more about mixing of colors with LEDs and how the human eye works, then check out our [adventure on the biology of the human eye](/sight).
+You can also delve deeper into [the tools that this programming language provides](/progpatterns),
+which could enable you to write more sophisticated programs and patterns.
+:::
+
+Overwhelmed by the possibilities of how you can modify the above sketches? Here are some suggestions: 
 Try to add more LEDs to your patterns.
 Try to have some of them (e.g. the small ones) have varying brightness,
 while others (e.g. the large ones) have changing colors.
