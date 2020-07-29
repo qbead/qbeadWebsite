@@ -89,7 +89,7 @@ These adventures assume that you have no coding experience and are a great way t
 ### Associated Lessons
 1. [Light and Color](/lightandcolor)
 2. [Color Theory](/colortheory)
-3. [Programming Patterns](/progpatterns)
+3. [Coding Building Blocks](/progpatterns)
 4. Physical Computing (planned)
 
 
@@ -136,4 +136,4 @@ Want to learn more about how the SpinWheel was created? We'll be adding addition
 
 We are excited to provide you with this adventure guide, to be your companion on your journey of exploration with the SpinWheel. Each adventure and lesson includes a comment section in which you are encouraged to ask questions or help other adventurers understand the world around them. Comments will be moderated by our volunteers, so we ask you to be polite and helpful and to expect the same from others.
 
-
+<a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">Header image credit: Jack Hegarty</a>
