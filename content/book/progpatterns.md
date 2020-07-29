@@ -1,10 +1,10 @@
 ---
-title: Programming Patterns
+title: Coding Building Blocks
 keywords: physical computing, computer science, arduino, programming
 ---
 
 ::: intro-box
-This page will introduce you to many of the typical patterns programmers follow when writing code.
+This page will introduce you to many of the typical building blocks programmers use to write code.
 If this is your first time thinking about computer code, it would be helpful to also
 consult the [mini-reference on the particular programming style for the SpinWheel](/basics).
 :::
