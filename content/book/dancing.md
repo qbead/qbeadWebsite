@@ -253,6 +253,10 @@ To create this snake, we'll introduce a new function: `SpinWheel.setSmallLEDsPoi
 To begin with, try modifying the code to change the color of the snake. 
 Can you change how many LEDs turn on to make a longer or shorter snake? 
 
+::: further-reading
+Looking for a refresher on how to customize the LEDs to light up your favorite color? In our [biology of sight adventure](/sight), we discuss how three light sources can be used to represent any color of the rainbow by taking advantage of how our eyes perceive color.
+:::
+
 You may have noticed that the "snake" currently only moves when you rotate along the x axis. 
 Can you have it respond to rotation around the other axes?  
 What about making it respond to motion in all three directions? 
