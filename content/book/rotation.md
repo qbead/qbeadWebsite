@@ -198,7 +198,7 @@ Let's tie all of these concepts together to describe your ride on the merry-go-r
 Now, imagine a second ride where you chose the yellow horse to your left (closer to the center) instead. 
 How would the following properties of your trip change: Angular displacement, angular velocity, linear velocity, angular acceleration?
 
-![Here's a picture of this merry-go-round ride! Notice that the different radii for the canopy, inner horse, and outer horse. How will that affect their linear and rotational velocities? <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanov</a>](/images/bookpics/merry-go-round.png)
+![Here's a picture of this merry-go-round ride! Notice that the different radii for the canopy, inner horse, and outer horse. How will that affect their linear and rotational velocities? <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/merry-go-round.png)
 <!-- TODO: Add final version once Mariya uploads it -->
 
 
