@@ -168,22 +168,15 @@ Can you picture how their arms and feet move through space in small tight turns,
 
 
 There are many different ways we can describe all types of different dances! 
-Mathematically, we could say that there are many different coordinate systems to describe motion. A dancer moving side to side is a type of translational motion.
-A dancer turning is a type of rotational motion. 
-Instead of describing each point by its location in each dimension, 
-we could think of this motion in terms of points along a circle. 
-This system is called polar coordinates.
+A dancer moving side to side is a type of translational motion.
+A dancer turning in a circle is a type of rotational motion. 
 
 ![Notice how in tight turns or wide turns, a dancers feet create different size circles through space.
 ](/images/dance_turn.jpg)
 
-::: further-reading
-Polar coordinates are useful to describe points along a circle more easily than in Cartesian coordinates, but knowing more about them isn't important for the rest of this lesson. If you are interested in diving into this idea a bit more deeply, then check out our [rotation lesson](/rotation).  
-:::
-
 ### Rotation Around One Axis
 
-We can also consider rotational motion as movement around an axis. When a dancer spins, without moving around the stage, they are rotating around the axis of their body. 
+A simple way to describe rotational motion is as the movement around an axis. When a dancer spins, without moving around the stage, they are rotating around the axis of their body. 
 There are special sensors in your SpinWheel, called gyroscopes, that allow it to detect rotational motion. 
 We can use the output from these sensors to have the SpinWheel respond to spinning! 
 
