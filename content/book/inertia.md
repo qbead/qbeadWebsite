@@ -45,3 +45,4 @@ This could also be explained by the idea of putting a box and scale in the eleva
 todo: Sketch that makes the spinwheel shine when it experiences acceleration. See it is dark when thrown in the air. See it is bright when shaken or rotated around holder. See it brighten up in an elevator, but only at a start of a trip.
 :::
 
+<a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">Header image credit: Jack Hegarty</a>

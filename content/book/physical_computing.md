@@ -33,3 +33,4 @@ void main() {
 }
 ```
 
+<a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">Header image credit: Jack Hegarty</a>
