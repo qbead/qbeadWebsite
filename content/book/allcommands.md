@@ -149,24 +149,24 @@ At maximal settings the large LEDs are blindingly bright and pull a total curren
 which would deplete our battery in less than 10 minutes.
 Using the maximal setting would cause the battery to wear out much quicker and would cause significant heating.
 
-## Advanced LED Manipulation
+<!--## Advanced LED Manipulation-->
 
 <!--TODO: expand this section and implement as necessary-->
 
-There are some undocumented and unfinished functions, among them: `setSmallLEDsPointer` and `setSmallLEDsProgress` and the unfinished `setSmallLEDsRainbow` and `setLargeLEDsRainbow`.
+<!--There are some undocumented and unfinished functions, among them: `setSmallLEDsPointer` and `setSmallLEDsProgress` and the unfinished `setSmallLEDsRainbow` and `setLargeLEDsRainbow`.-->
 
-## Color and Brightness Helpers
+<!--## Color and Brightness Helpers-->
 
 <!--TODO: expand this section and implement as necessary-->
 
-The `colorWheel` function turns a single number representing an angle into a color from the color wheel.
+<!--The `colorWheel` function turns a single number representing an angle into a color from the color wheel.
 
 The `triangularWave` and `parabolaWave` functions provide for convenient periodic patterns, useful in animations.
 
 The `faston_slowoff` function can be used to pleasantly filter time-dependent measurements. For instance, it can be used to rapidly brighten an LED when a motion is detected and then slowly let the light decay after the motion stops.
 
-## Motion Sensing and Compass
+## Motion Sensing and Compass-->
 
 <!--TODO: expand this section and implement as necessary-->
 
-To request measurements from the sensor you need to call `SpinWearables.readIMU`. Then the measurement data will be available in `ax,ay,az,gx,gy,gz,mx,my,mz` in some units. There is also a temperature sensor.
+<!--To request measurements from the sensor you need to call `SpinWearables.readIMU`. Then the measurement data will be available in `ax,ay,az,gx,gy,gz,mx,my,mz` in some units. There is also a temperature sensor.-->
