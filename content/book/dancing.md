@@ -162,7 +162,7 @@ To learn more about modifying the SpinWheel's LED display with the output from t
 
 ## Turning: Rotational Motion
 
-We've talked about moving through space in line, 
+We've talked about moving through space in a line, 
 but now imagine a dancer's feet doing turn after turn and their arms outstretched in different configurations. 
 Can you picture how their arms and feet move through space in small tight turns, like chaînés turns, and wide turns, like an attitude or a fouetté? 
 
@@ -253,13 +253,13 @@ We can change that basic snake code so that it only rotates colors when you rota
 
 <video src="/images/behindthescenes/circling.mp4" muted autoplay playsinline loop></video>
 
-To create this snake, we'll introduce a new function that lights up several LEDs (making a snake): `SpinWheel.snake(red, green, and blue)`. 
-`Red`, `green`, and `blue` control the red, green, and blue components of the small LEDs. By changing these values, you can change the color that your LED "snake" lights up. To try modifying the snake on your SpinWheel, upload the example sketch from here: `Examples → SpinWearables → Dancing_with_Color → Motion_Snake`. You can also read more about our [motion snake script here](/codedoc/examples/Dancing_with_Color/Motion_Snake/Motion_Snake.ino.html) to learn more about how this script works.
+To create this snake, we'll introduce a new function that lights up several LEDs (making a snake): `SpinWheel.setSmallLEDsPointer(angle, red, green, and blue)`. 
+`Angle` controls where your snake starts, while `red`, `green`, and `blue` control the red, green, and blue components of the small LEDs. By changing these values, you can change the color that your LED "snake" lights up. To try modifying the snake on your SpinWheel, upload the example sketch from here: `Examples → SpinWearables → Dancing_with_Color → Motion_Snake`. You can also read more about our [motion snake script here](/codedoc/examples/Dancing_with_Color/Motion_Snake/Motion_Snake.ino.html) to learn more about how this script works.
 
 You may have noticed that the "snake" currently only moves when you rotate along the x-axis. 
 Can you have it respond to rotation around the other axes?  
 What about making it respond to motion in all three directions? 
-For a hint of how to do this with acceleration, you can check out the [code for the final example of this adventure](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html).
+For a hint of how to do this, you can check out the [code for the final example of this adventure](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html).
 
 The past few examples are all relying on the measurements from the gyroscope (sensing rotation). 
 However, you could also have the snake (or any of the other sketches) respond to acceleration instead. You can modify the snake to respond to acceleration in one direction or even all three.
