@@ -204,6 +204,8 @@ To see your SpinWheel light up in response to rotional motion, upload the full s
 
 If you prefer other colors to the light blue that we chose, then you can modify the code for this example to light up your SpinWheel a different color. 
 
+For an additional look at 1D rotation, check out [this code sketch](/codedoc/examples/Dancing_with_Color/Rainbow_Chase_Advanced/Rainbow_Chase_Advanced.ino.html) which builds off of the skills covered in the animations lesson, but using rotation instead of time to update the animation. 
+
 ::: further-reading
 Looking for a refresher on how to customize the LEDs to light up your favorite color? In our [biology of sight adventure](/sight), we discuss how three light sources can be used to represent any color of the rainbow by taking advantage of how our eyes perceive color.
 :::
