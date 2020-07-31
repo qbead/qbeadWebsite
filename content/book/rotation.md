@@ -9,9 +9,9 @@ We'll introduce concepts like angular velocity and polar coordinates that make i
 :::
 
 Imagine you are getting on a merry-go-round. 
-Out of the many colorful options, you choose to ride your favorite horse in the middle row. 
+Out of the many colorful options, you choose to ride your favorite horse on the outer row. 
 The operator starts the ride, and you begin traveling around under flashing lights and bright mirrors. 
-Now what would have been physically different about this ride had you chosen the horse to your right or left? 
+Now what would have been physically different about this ride had you chosen a different horse? 
 You'll be able to answer this by the end of the lesson!
 
 ![When learning about rotation, try to connect these concepts to the experince of riding a merry-go-round. <a class="imagecredit" href="https://www.pikrepo.com/ftrla/selective-focus-photography-of-merry-go-round-during-nighttime">image credit Pikrepo</a>](/images/bookpics/MerryGoRound.jpg)
@@ -194,10 +194,10 @@ This is easier to describe using a visual. In this image, we can see how the sam
 ![The same point can be described using cartesian coordinates (left image) and polar coordinates (right plot).
 ](/images/rotation_polarCoordinates.png)
 
-It sometimes is important to switch from Cartesian to polar coordiantes or in the reverse from polar to Cartesian coordinates. $x$, $r$, and $\theta$ are related to each other using the cosine function where
-$$ x = r\times\cos{\theta}$$
+It sometimes is important to switch from Cartesian to polar coordiantes or in the reverse from polar to Cartesian coordinates. Luckily, there is an easy way to convert between these variables: $x$ is simply  the product of $r$ and $cos{\theta}$ :
+$$ x = r * \cos{\theta}$$
 $y$, $r$, and $\theta$ are related to each other using the sin function where
-$$ y = r\times\sin{\theta} $$
+$$ y = r * \sin{\theta} $$
 
 
 ![Conversion between polar and Cartesian coordinates requires the use of sin and cos functions.
@@ -210,7 +210,7 @@ Going back to our discussion above about angular displacement, you can see how p
 # Summary 
 
 Let's tie all of these concepts together to describe your ride on the merry-go-round! 
-Now, imagine a second ride where you chose the yellow horse to your left (closer to the center) instead. 
+On your first ride, you chose a horse on the outer ring of the merry-go-round. Now, imagine a second ride where you chose the yellow horse to your left (closer to the center) instead. 
 How would the following properties of your trip change: Angular displacement, angular velocity, linear velocity, angular acceleration?
 
 ![Here's a picture of this merry-go-round ride! Notice that the different radii for the canopy, inner horse, and outer horse. How will that affect their linear and rotational velocities? <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/merry-go-round.png)
@@ -220,22 +220,33 @@ How would the following properties of your trip change: Angular displacement, an
 <!-- TODO: Maybe hide this in a dropdown box that you have to click to open? -->
 
 Your angular displacement, angular velocity, and angular acceleration would stay the same on both rides. 
-The two horses lie along the same radial line, so in polar coordinates, their $\theta$ coordinate would be the same, but $r$ would change. 
+In polar coordinates, the two horses have the same change in $\theta$ coordinate but different but $r$ values. 
 Since $\theta$ remains the same, both horses have equal angular displacements. 
 For angular velocity and acceleration, every horse on the ride would have the same value. 
 This is because the entire merry-go-round starts, moves, and stops together at the same rate.
 
 What would change between the two horses is your linear velocity. 
-Switching to the yellow horse decreases your $r$ coordinate, and means you are traveling in a smaller circle. 
+Switching to a horse closer to the center decreases  $r$ and means you are traveling in a smaller circle. 
 Just like for the ball on a string, when $r$ decreases, your linear velocity also decreases.
 
+What about if your friend chose the horse in front of you? In this case, your initial $\theta$ values would be different but your linear velocity and angular velocities would
+be identical for the entire ride. This is because you have the same $r$ values and same change in $\theta$ over time. 
+
+
+Finally, let's think about how the ride changes over time?
 How would your angular acceleration change as you ride on the merry-go-round?
 
 
 <!-- TODO: Maybe hide this in a dropdown box that you have to click to open? -->
 
-When you first get on the merry-go-round, your angular velocity and angular acceration are both zero. Once the merry-go-round starts moving, your angular velocity increases until it reaches a constant velocity. During that time, your angular acceleration will describe this increase in angular velocity. However, once you reach the constant angular velocity of most of the merry-go-round ride, your angular velocity is no longer changing and so your angular acceleration is again zero. At the end of the ride, your angular velocity is going to decrease back to zero at a rate controlled by the angular acceleration. Then when once the merry-go-round has stopped moving, your angular velocity and acceleration are again zero.
+When you first get on the merry-go-round, your angular velocity and angular acceration are both zero. Once the merry-go-round starts moving, your angular velocity increases until it reaches a constant velocity. During that time, your angular acceleration will describe this increase in angular velocity. Eventually, the ride will reach a constant angular velocity that it will remain at for a most of the ride. At this point, your angular velocity is no longer changing and your angular acceleration is zero. At the end of the ride, your angular velocity is going to decrease back to zero at a rate controlled by the angular acceleration. Then once the merry-go-round has stopped moving, your angular velocity and acceleration are again zero.
  
+|Part of Ride  | Velocity | Acceleration
+|---		|--- | ---
+|Beginning     | Increasing | Positive
+|Middle   	|Constant | Zero
+|Almost Over   	| Decreasing | Negative
+|Done | Zero | Zero
 
 ::: further-reading 
 To apply some of these concepts to the SpinWheel, go to [Dancing with Color](/dancing) adventure.
