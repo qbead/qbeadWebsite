@@ -278,12 +278,13 @@ However, you could also have the snake (or any of the other sketches) respond to
 ## The Grand Finale: Showing Off All Its Colors
 
 You’ve explored both linear and rotational motion independently so far in this adventure. Using the above scripts as a starting point, you can modify the SpinWheel to respond to your motion however you see fit! 
-We'll leave you with one final more complicated sketch to inspire your imagination. 
+We'll leave you with one final more complicated sketch that combines both the `Motion_Snake` and `Rainbow_Chase_Advanced` sketches to inspire your imagination. 
 Here is a webpage with our [grand finale code and explanation](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html). This script has the SpinWheel respond to both acceleration and rotation. To try this code on your SpinWheel or use it as a framework for your own creations, you can find it at `Examples → SpinWearables → Dancing_with_Color → Grand_Finale`.
 
 
-To see even more dances mathematically, 
-you can watch [this video](https://vimeo.com/400629616) below, created by Mariel Pettee, 
+To wrap up this adventure, 
+we'll leave you with [this video](https://vimeo.com/400629616) that illustrates another way math, physics, and art can be combined.
+This animation was created by Mariel Pettee, 
 a physics graduate student who studies particle physics as well as physics and dance.
 
 <figure><video src="/images/bookpics/mariel.mp4" controls></video><figcaption>A physicist's interpretation of a dance.</figcaption></figure>
