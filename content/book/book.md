@@ -38,7 +38,7 @@ jQuery(function(){
   var inertia = graph.newNode({label: "Inertial Reference Frames"});
   var rotation = graph.newNode({label: "Rotation"});
   var magnet = graph.newNode({label: "Magnetism"});
-  var vector = graph.newNode({label: "Vectors and Kinematics"});
+  var vector = graph.newNode({label: "Vectors and Motion"});
   
   graph.newEdge(quick, basic);
   graph.newEdge(basic, sight); 
@@ -101,7 +101,7 @@ These activities build on the ideas presented in the introductory adventures. If
 2. Dancing Companion (planned)
 
 ### Associated Lessons
-1. [Vectors and Kinematics](/vectors)
+1. [Vectors and Motion](/vectors)
 2. Rotation (planned)
 3. Inertial Reference Frames / Free Fall (planned)
 
@@ -122,16 +122,16 @@ These are the most challenging SpinWheel activities. We recommend completing at 
 Here's a [list of the commands](/allcommands) for controlling the SpinWheel's LEDs. While this has been written for those who are discovering coding for the first time, it can also be used as a reference to create your own SpinWheel designs if you are comfortable with programming. We recommend using it as a reference as you are going through the adventures, either way!
 
 Throughout this guide we use a number of text formatting tools to bring attention to important conceps. Footnotes (actually hovernotes) are visible when you hover <span class="footnote">over dotted text like this<span>Such hovernotes frequently carry interesting additional information.</span></span>.
-Further reading blocks look as follows and
+Further reading blocks look as follows:
 
 ::: further-reading
-denote additional sources of information you might be interested in, either on our own website or elsewhere on the web.
+These boxes denote additional sources of information you might be interested in, either on our own website or elsewhere on the web.
 :::
 
-On a few occasions we have warning blocks like
+On a few occasions we have warning blocks:
 
 ::: warning
-which denote important considerations about health and device care that should be seen before attempting an activity.
+These denote important considerations about health and device care that should be seen before attempting an activity.
 :::
 
 We have a variety of interactive visualizations throughout these pages, that work well on desktop browsers like Firefox and Chrome. Lastly, we have many [code examples](/basics) in pages that explain how to program the device, [including some interactive simulations of the device with which you can play directly from the browser](/allcommands).
