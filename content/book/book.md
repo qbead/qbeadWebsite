@@ -24,8 +24,8 @@ The concept map illustrates how we see the lessons and adventures being connecte
 jQuery(function(){
   var graph = new Springy.Graph();
 
-  var quick = graph.newNode({label: "Quick Start"});
-  var basic = graph.newNode({label: "Basic SpinWheel Commands"});
+  var quick = graph.newNode({label: "Initial Setup", color: "red"});
+  var basic = graph.newNode({label: "Basic Structure of a Program"});
   var sight = graph.newNode({label: "Biology of Sight"});
   var strobe = graph.newNode({label: "Stroboscope"});
   var ani = graph.newNode({label: "Animations and Patterns"});
@@ -75,8 +75,8 @@ There is a lot going on in the map above, so below we have our recommended order
 ## Getting Started
 
 Before doing anything else, we encourage you to read the [Initial Setup Guide](/quickstart). This is where we explain how to download the Arduino software and provide essential information for the rest of the adventures.
-
-To learn the basics of controlling the LEDs, then check out our [SpinWheel Programming Reference](/basics). Skim through that page without necessarily trying to understand the code shown there. Use it to establish a vague intuition about the code and use that intuition in the first few adventures. Then go back to this page and try to read it again with the new knowledge of programming you have gained.
+Before writing your own programs, you might want to check what the [basic structure of a program](/basics) looks like.
+Use that page to establish a vague intuition about the code and use that intuition in the first few adventures. Then go back to this page and try to read it and pages linked within again, with the new knowledge of programming you have gained.
 
 ## Intro Adventures
 

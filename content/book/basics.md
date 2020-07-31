@@ -1,12 +1,12 @@
 ---
-title: Learning to Program the SpinWheel
+title: Basic Structure of a Program
 keywords: SpinWheel, arduino, setup
 ---
 
 ::: intro-box
-This document will help you learn the basics of programming the SpinWheel's
-LEDs to different color patterns.
-Before reading this, be sure to read our [quick start guide](/quickstart). 
+A progam is writen as a text file containing multiple commands for your computer to follow.
+Here you will see what such a program might look like in one particular computer language.
+Before reading this, be sure to read our [initial setup guide](/quickstart). 
 :::
 
 Approach this page the way you would approach the first page of a foreign language you want to learn.
@@ -115,5 +115,5 @@ There are a couple more things you might have noticed about the style of this la
 - There are other ways in which LED colors can be modified and motion be detected. We will be discussing many such tools in future pages.
 
 ::: further-reading
-We invite you to play with the [SpinWheel examples available in the Arduino software and to peruse the many suggested activities we have prepared for you](/book). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands). If you would like to specifically focus on learning more about this programming language, you can see our [programming patterns page](/progpatterns).
+We invite you to play with the [SpinWheel examples available in the Arduino software and to peruse the many suggested activities we have prepared for you](/book). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands) or to peruse the [code of this library](/codedoc/SpinWearables.h.html). If you would like to specifically focus on learning more about this programming language, you can see our [programming patterns page](/progpatterns).
 :::
