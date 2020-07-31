@@ -4,7 +4,8 @@ keywords: rotation, angular velocity, polar coordinates
 ---
 
 ::: intro-box
-In this lesson, we'll talk more about rotation, introducing concepts like angular velocity and polar coordinates. 
+In this lesson, we'll talk more about rotation. 
+We'll introduce concepts like angular velocity and polar coordinates that make it more easy to describe circular motion. 
 :::
 
 Imagine you are getting on a merry-go-round. 
@@ -30,14 +31,19 @@ If you aren't already familiar with the concepts of displacement, velocity, and 
 When dealing with circular motion or rotation (for instance, for a ball on a string or a horse on a merry-go-round),  it is useful to describe position using an angle ($\theta$, pronounced 'theta'). The change between the original angle of the ball and its final angle is typically specified as the change in $\theta$ (or $\Delta \theta$) and is known as angular displacement. Displacement is a useful term to describe an object's change in position and can be defined as an angle (angular displacement) or distance (linear displacement). This concept is easier to understand through diagrams. In the image below you can see how linear displacement and angular displacement are related to each other.
 
 <video src="/images/bookpics/ang_lin_displacement.mp4" muted autoplay playsinline loop></video>
-<center>This pictures shows the difference between angular displacement ($\theta$) and linear displacement. </center>
+<center>This picture shows the difference between angular displacement ($\theta$) and linear displacement. </center>
 
 
 <video src="/images/bookpics/compare_rotations.mp4" muted autoplay playsinline loop></video>
 <center>Two movements can have the same angular displacement but different linear displacements.</center>
 
 # Angular Velocity 
-To describe the motion of a ball as it is spun around on a string, we use something called angular velocity. Usually when we think of velocity, we are thinking of something called linear velocity, which is defined as the change in position over the time. Angular velocity is very similar, but it is instead defined as the change in angle over the time. While angular velocity and linear velocity are related they are not the same. For instance, take our ball, if we change the length of the string, we can keep our angular velocity the same, but the linear velocity will be different. You can experiment with how changing the length of the string changes the angular and linear velocity using the interactive animation below.
+To describe the motion of a ball as it is spun around on a string and other circular motion, we use something called angular velocity. 
+Usually when we think of velocity, we are thinking of <span class="footnote">linear velocity<span>this type of velocity is sometimes also called translational velocity</span></span> defined as the change in position (displacement) over the time. 
+Angular velocity is very similar, but it is instead defined as the change in angle over time. 
+While angular velocity and linear velocity are related they are not the same. 
+For instance, take our ball, if we change the length of the string, we can keep our angular velocity the same, but the linear velocity will be different. 
+You can experiment with how changing the length of the string changes the angular and linear velocity using the interactive animation below.
 
 <style>
 #angRot {
@@ -154,7 +160,7 @@ angButton.onclick = myMove;
 </script>
 
 
-Did you notice how as you made the radius larger, the linear velocity increased but the angular velocity stayed the same? In this example, we have chosen to keep the angular velocity the same, no matter the radius. Because the distance the ball has to travel is larger with a larger radius, the ball has to move faster to complete a full circle in the same amount of time. Every time we increase the radius, the linear velocity has to increase to keep the angular velocity the same.
+Did you notice how as you made the radius larger, the linear velocity increased but the angular velocity stayed the same? In this example, we have chosen to keep the angular velocity the same, no matter the radius. Because the distance the ball has to travel farther with a larger radius, the ball has to move faster to complete a full circle in the same amount of time. Every time we increase the radius, the linear velocity has to increase to keep the angular velocity the same.
 
 
 # Angular Acceleration
