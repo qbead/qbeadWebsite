@@ -31,7 +31,7 @@ If you aren't already familiar with the concepts of displacement, velocity, and 
 ::: 
 
 # Angular Displacement
-When dealing with circular motion or rotation (for instance, for a ball on a string or a horse on a merry-go-round), then it is useful to describe its position using an angle ($\theta$). The change between the original angle of the ball and its final angle is typically specified as the change in $\theta$ (or $\Delta \theta$) and is known as angular displacement. Displacement is a useful term to describe an object's change in position and can be defined as an angle (angular displacement) or distance (linear displacement). This concept is easier to understand through diagrams. In the image below you can see how linear displacement and angular displacement are related to each other.
+When dealing with circular motion or rotation (for instance, for a ball on a string or a horse on a merry-go-round),  it is useful to describe position using an angle ($\theta$, pronounced 'theta'). The change between the original angle of the ball and its final angle is typically specified as the change in $\theta$ (or $\Delta \theta$) and is known as angular displacement. Displacement is a useful term to describe an object's change in position and can be defined as an angle (angular displacement) or distance (linear displacement). This concept is easier to understand through diagrams. In the image below you can see how linear displacement and angular displacement are related to each other.
 
 <video src="/images/bookpics/ang_lin_displacement.mp4" muted autoplay playsinline loop></video>
 <center>This pictures shows the difference between angular displacement ($\theta$) and linear displacement. </center>
@@ -41,12 +41,12 @@ When dealing with circular motion or rotation (for instance, for a ball on a str
 <center>Two movements can have the same angular displacement but different linear displacements.</center>
 
 # Angular Velocity 
-To describe the motion of this ball as it is spun around on a string, we use something called angular velocity. Usually when we think of velocity, we are thinking of something called linear velocity, which is defined as the change in position over the time. Angular velocity is very similar, but it is instead defined as the change in angle over the time. While angular velocity and linear velocity are related they are not the same. For instance, take our ball, if we change the length of the string, we can keep our angular velocity the same, but the linear velocity will be different. You can experiment with how changing the length of the string changes the angular and linear velocity using the interactive animation below.
+To describe the motion of a ball as it is spun around on a string, we use something called angular velocity. Usually when we think of velocity, we are thinking of something called linear velocity, which is defined as the change in position over the time. Angular velocity is very similar, but it is instead defined as the change in angle over the time. While angular velocity and linear velocity are related they are not the same. For instance, take our ball, if we change the length of the string, we can keep our angular velocity the same, but the linear velocity will be different. You can experiment with how changing the length of the string changes the angular and linear velocity using the interactive animation below.
 
 <style>
 #angRot {
   width: 400px;
-  height: 600px;
+  height: 400px;
   position: relative;
   justify-content: center;
 
@@ -55,6 +55,7 @@ To describe the motion of this ball as it is spun around on a string, we use som
   width: 800px;
   height: 400px;
   position: absolute;
+  border-style: solid;
 
 }
 #angAnimation {
@@ -70,25 +71,29 @@ To describe the motion of this ball as it is spun around on a string, we use som
 width: 10px;
   height: 10px;
   position: absolute;
+  border-style: solid;
+  border-width: thin;
   }
   
-  #angOutput {
-left: 400px;
-  top: 0px;
-  position: absolute;
+#angOutput {
+	left: 450px;
+  	top: 0px;
+  	position: absolute;
   }
 </style>
 
 
 <div id="angRot">
-<div id="dataBar">
-<span class="spacer">radius : </span><input type="number" min="0" max="10"  id="rvalue">
-<button id="angButton">Show</button>
-</div>
+
 <div id="angBox">
 <canvas class="trajectory" width=400 height=400></canvas>
 <div id ="angAnimation"></div>
+
 <div id="angOutput">
+<div id="dataBar">
+<span class="spacer">Radius : </span><input type="number" min="0" max="10"  id="rvalue">
+<button id="angButton">Show</button>
+</div>
 <span class="spacer">Velocities </span><br> 
 <span class="spacer">Linear (units/second): </span><span class="vis" id="linV">  </span><br> 
 <span class="spacer">Angular (degrees/second): </span><span class="vis" id="angV">   </span>
@@ -153,44 +158,50 @@ angButton.onclick = myMove;
 </script>
 
 
-Did you notice how as you made the string longer, the linear velocity increased but the angular velocity stayed the same? This is because to trace the larger circle at the same rate, it has to move faster when it is farther away. If you measured the linear velocity at points moving out from the origin, you could see that they steadily increase. However, the angular velocity remains the same because the ball is still covering the same 360 degrees of the circle. 
+Did you notice how as you made the radius larger, the linear velocity increased but the angular velocity stayed the same? In this example, we have chosen to keep the angular velocity the same, no matter the radius. Because the distance the ball has to travel is larger with a larger radius, the ball has to move faster to complete a full circle in the same amount of time. Every time we increase the radius, the linear velocity has to increase to keep the angular velocity the same.
+
 
 # Angular Acceleration
 
-To describe the change in velocity of an object, scientists use a concept called acceleration. For instance, as a ball picks up speed as it rolls down a ramp. The acceleration will change depending on the tilt of the ramp. If it is steeper, it will pick up speed more quickly and has a higher acceleration. In a similar way, you can use angular acceleration to describe the rate of change of angular velocity.
+To describe the change in velocity of an object, scientists use a concept called acceleration. For instance, if you roll a ball down down a ramp, it will pick up speed as it goes. This acceleration will change depending on the tilt of the ramp. If it is steeper, it will pick up speed more quickly and has a higher acceleration. In a similar way, you can use angular acceleration to describe the rate of change of angular velocity.
 
-To help understand better the idea of angular acceleration, we have two animations below. On the left, the ball on a string is spinning at a constant angular velocity. As its angular velocity is not changing, the angular acceleration is zero. However, on the right, you can see that the ball's angular velocity increases and then decreases. The faster that this change in angular velocity occurs the larger the angular acceleration will be. If you adjust the sliders below, you can see that the time that it takes to change between the minimum and maximum acceleration changes. 
+To help understand better the idea of angular acceleration, we have two animations below. On the left, the ball on a string is spinning at a constant angular velocity. As its angular velocity is not changing, the angular acceleration is zero. However, on the right, you can see that the ball's angular velocity increases and then decreases due the angular velocity changing. 
 
 <video src="/images/bookpics/rotation_acceleration.mp4" muted autoplay playsinline loop></video>
 
 
-Did you notice how if you increase the angular acceleration that the time it takes to get to the maximum velocity decreases? This is because with a faster angular acceleration, it takes less time to get to the maximum angular velocity. Conversely, with a smaller angular acceleration, it will take more time to get to the maxiumum angular velocity. This is similar to how a sprinter that can accelerate faster will beat in a race another sprinter who has the same top speed but a slower acceleration. Since the first sprinter can reach their top speed faster, they will be ahead of the other sprinter in the race, even if they can run equally fast. 
 
 
 # Polar Coordinates
 In the [vectors and kinematics lesson](/vectors), 
 we introduced the idea of coordinates, which describe a point in space. 
-In this lesson, we used something called 'Cartesian coordinates.' 
-If we think of a line connecting the origin to the point, 
+In that lesson, we used something called 'Cartesian coordinates.' 
+If we think of a line connecting the origin to a point, 
 Cartesian coordinates provide the x and y position $(x, y)$. 
-This is very useful for straight lines, (give more examples). 
+This is very useful for describing straight lines and many mathematical functions,
+such as those we created in the [Animations and Patterns](/animation) adventure.
 In other cases, something called polar coordinates can be more useful. 
 Polar coordinates define points in space differently. 
 Rather than giving the x and y position, they specify points as their position on a circle. 
-The two polar coordinates describes the radius of the circle ($r$) and its direction ($\theta$) $(r, \theta)$. 
-This is easier to describe using a visual:
+The two polar coordinates describes the radius of the circle ($r$) and the distance that has been traveled along the circle, which is measured as the angle $\theta$. Instead of reporting coordinates as $(x, y)$, polar coordinates are reported as $(r, \theta)$. 
+This is easier to describe using a visual. In this image, we can see how the same point in space can be described using either Cartesian or polar coordinates.
 
 
 ![The same point can be described using cartesian coordinates (left image) and polar coordinates (right plot).
 ](/images/rotation_polarCoordinates.png)
 
-It sometimes is important to switch from Cartesian to polar coordiantes or in the reverse from polar to Cartesian coordinates. $x$, $r$, and $\theta$ are related to each other using the cosine function, which relates $\theta$ to the ratio between $x$ and $r$ ($cos(\theta) = x/r$). The sine function ($sin(\theta) = y/r$) relates $/theta$ to the ratio between $y$ and $r$.
+It sometimes is important to switch from Cartesian to polar coordiantes or in the reverse from polar to Cartesian coordinates. $x$, $r$, and $\theta$ are related to each other using the cosine function where
+$$ x = r\times\cos{\theta}$$
+$y$, $r$, and $\theta$ are related to each other using the sin function where
+$$ y = r\times\sin{\theta} $$
 
-##add visualization of this
 
-Going back to our discussion above about angular displacement, you can see how polar coordinates make it easy to describe the ball's location. Polar coordinates make it easier to describe the ball's motion as well. By steadily increasing theta (or the angle), you can draw a circle with a specific radius.
+![Conversion between polar and Cartesian coordinates requires the use of sin and cos functions.
+](/images/rotation_polarCart_trig.png)
 
-## add an animation here, maybe of a ball on a string
+Going back to our discussion above about angular displacement, you can see how polar coordinates make it easy to describe the ball's location. As the ball moves in a circle, we can describe its location using the radius and angle. This is much simpler than determining $x$ and $y$ for each position. Polar coordinates make it easier to describe the ball's motion as well. By steadily increasing $\theta$ (or the angle), you can draw a circle with a specific radius.
+
+<video src="/images/bookpics/polar_animation.mp4" muted autoplay playsinline loop></video>
 
 # Summary 
 
