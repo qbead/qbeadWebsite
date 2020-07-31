@@ -216,7 +216,9 @@ If you prefer other colors to the light blue that we chose, then you can modify 
 Looking for a refresher on how to customize the LEDs to light up your favorite color? In our [biology of sight adventure](/sight), we discuss how three light sources can be used to represent any color of the rainbow by taking advantage of how our eyes perceive color.
 :::
 
-In the [animations and patterns adventure](/animation), you created animations for the SpinWheel that relied on time. It is possible to use those same sketches, but only have them change color when rotational motion is detected. For instance, check out [this version of the rainbow chase sketch](/codedoc/examples/Dancing_with_Color/Rainbow_Chase_Advanced/Rainbow_Chase_Advanced.ino.html) to see how you can use rotation around the z-axis of the SpinWheel instead of time to update the animation. You can also upload the full sketch onto your SpinWheel from here: full sketch (`Examples → SpinWearables → Dancing_with_Color → Rainbow_Chase_Advanced`.
+In the [animations and patterns adventure](/animation), you created animations for the SpinWheel that relied on time. It is possible to use those same sketches, but only have them change color when rotational motion is detected. For instance, check out [this version of the rainbow chase sketch](/codedoc/examples/Dancing_with_Color/Rainbow_Chase_Advanced/Rainbow_Chase_Advanced.ino.html) to see how you can use rotation around the z-axis of the SpinWheel instead of time to update the animation. You can also upload the full sketch onto your SpinWheel from here: full sketch (`Examples → SpinWearables → Dancing_with_Color → Rainbow_Chase_Advanced`. 
+
+To get the full effect of this sketch, we recommend you unplug your SpinWheel from your computer and try spinning in a circle yourself. If you hold the SpinWheel horizontal as you turn, you'll be able to see the colors change as you're moving and stop when you stop. Just remember, when you plug the SpinWheel back into the computer to make sure the switch is back on `usb`.
 
 Another modification you can make to the first rotation sketch sketch is to have the LEDs change color based on the direction of rotation. 
 We include the important new elements of the code below, including defining new variables `pos_spin` and `neg_spin` to store the direction that the SpinWheel is rotating around the x-axis.
@@ -237,12 +239,12 @@ else {
   pos_spin = 0;
   neg_spin = 0;
 }
-// If gz is positive, set the big LEDs to light up green
-// If gz is negative, set the big LEDs to light up blue
+// If gx is positive, set the big LEDs to light up green
+// If gx is negative, set the big LEDs to light up blue
 SpinWheel.setLargeLEDsUniform(0, pos_spin, neg_spin);
 ```
 
-In this script, the LEDs light up green up when the device is spun around the x-axis in one direction (`if (SpinWheel.gz > 1)`), and blue when spun in the other direction (`else if (SpinWheel.gx < -1)`). The `else` statment ensures that the SpinWheel's LEDs turn off when not enough rotation is detected. You can upload the sketch from: `Examples → SpinWearables → Dancing_with_Color → 1D_Rotation_Light_Up_Advanced` to give it a try on your own SpinWheel. 
+In this script, the LEDs light up green up when the device is spun around the x-axis in one direction (`if (SpinWheel.gx > 1)`), and blue when spun in the other direction (`else if (SpinWheel.gx < -1)`). The `else` statment ensures that the SpinWheel's LEDs turn off when not enough rotation is detected. You can upload the sketch from: `Examples → SpinWearables → Dancing_with_Color → 1D_Rotation_Light_Up_Advanced` to give it a try on your own SpinWheel. 
 For a more detailed explanation of this code, you can also check out [this script](/codedoc/examples/Dancing_with_Color/1D_Rotation_Light_Up_Advanced/1D_Rotation_Light_Up_Advanced.ino.html). 
 
 
