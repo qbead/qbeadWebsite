@@ -183,8 +183,16 @@ We can use the output from these sensors to have the SpinWheel respond to spinni
 
 To begin, we can program the SpinWheel to light up when it detects rotation around one axis. 
 This is similar to the dancer spinning in place where their body represents the axis of each turn. 
-In this case, we're measuring the rotation around the SpinWhee's x-axis, which is stored in the variable `SpinWheel.gx`. 
-As the sensor is very sensitive, we only want to change color if there is sufficient rotation. 
+In this case, we're measuring the rotation around the SpinWhee's x-axis, which is stored in the variable `SpinWheel.gx`. `SpinWheel.gx` provides us with the angular velocity of the SpinWheel around the <span class="footnote">x-axis of the device.<span>To see on the SpinWheel what this represents scroll up to the image of the SpinWheel and its axes.</span></span> 
+
+::: further-reading 
+In our lesson on [vectors and motion](/vectors), we cover in more depth the velocity you are probably already familiar with: velocity along a straight line (like a car moving down a straight stretch of highway). 
+Above we reference another type of velocity, angular velocity, which is often used for describing rotatonal motion like that of our dancer spinning or a car speeding along a circular racetrack. 
+You can read [our lesson on rotation](/rotation) to learn more about angular velocity.
+:::
+
+As the SpinWheel's sensors are very sensitive to even small motions of the device, we only want to change color if the rotation is fast enough.
+This ensures that the lights don't turn on when you are just holding it in your hand without intentionally moving it.
 In this case, we will only have the color change `if` the absolute value of the rotation is greater than 1, `abs(SpinWheel.gx) > 1`. 
 Below is the essential piece of code, where we tell the SpinWheel to light up only when motion is detected (`if (abs(SpinWheel.gx) > 1)` and to otherwise (`else`) turn off all of the LEDs.
 
@@ -204,13 +212,14 @@ To see your SpinWheel light up in response to rotional motion, upload the full s
 
 If you prefer other colors to the light blue that we chose, then you can modify the code for this example to light up your SpinWheel a different color. 
 
-For an additional look at 1D rotation, check out [this code sketch](/codedoc/examples/Dancing_with_Color/Rainbow_Chase_Advanced/Rainbow_Chase_Advanced.ino.html) which builds off of the skills covered in the animations lesson, but using rotation instead of time to update the animation. 
-
 ::: further-reading
 Looking for a refresher on how to customize the LEDs to light up your favorite color? In our [biology of sight adventure](/sight), we discuss how three light sources can be used to represent any color of the rainbow by taking advantage of how our eyes perceive color.
 :::
 
-Another modification you can make to the previous sketch is to have the LEDs change color based on the direction of rotation. We include the important new elements of the code below, including defining new variables `pos_spin` and `neg_spin` to store the direction that the SpinWheel is rotating around the x-axis.
+In the [animations and patterns adventure](/animation), you created animations for the SpinWheel that relied on time. It is possible to use those same sketches, but only have them change color when rotational motion is detected. For instance, check out [this version of the rainbow chase sketch](/codedoc/examples/Dancing_with_Color/Rainbow_Chase_Advanced/Rainbow_Chase_Advanced.ino.html) to see how you can use rotation around the z-axis of the SpinWheel instead of time to update the animation. You can also upload the full sketch onto your SpinWheel from here: full sketch (`Examples → SpinWearables → Dancing_with_Color → Rainbow_Chase_Advanced`.
+
+Another modification you can make to the first rotation sketch sketch is to have the LEDs change color based on the direction of rotation. 
+We include the important new elements of the code below, including defining new variables `pos_spin` and `neg_spin` to store the direction that the SpinWheel is rotating around the x-axis.
 
 ```cpp
 // If the x rotation (gx) is big enough, then 
@@ -236,9 +245,6 @@ SpinWheel.setLargeLEDsUniform(0, pos_spin, neg_spin);
 In this script, the LEDs light up green up when the device is spun around the x-axis in one direction (`if (SpinWheel.gz > 1)`), and blue when spun in the other direction (`else if (SpinWheel.gx < -1)`). The `else` statment ensures that the SpinWheel's LEDs turn off when not enough rotation is detected. You can upload the sketch from: `Examples → SpinWearables → Dancing_with_Color → 1D_Rotation_Light_Up_Advanced` to give it a try on your own SpinWheel. 
 For a more detailed explanation of this code, you can also check out [this script](/codedoc/examples/Dancing_with_Color/1D_Rotation_Light_Up_Advanced/1D_Rotation_Light_Up_Advanced.ino.html). 
 
-::: further-reading
-At this point you may want to check out [our lesson on rotation](/rotation) to learn more.
-:::
 
 ### Rotation in 3D Space
 
@@ -256,9 +262,11 @@ We can change that basic snake code so that it only rotates colors when you rota
 <video src="/images/behindthescenes/circling.mp4" muted autoplay playsinline loop></video>
 
 To create this snake, we'll introduce a new function that lights up several LEDs (making a snake): `SpinWheel.setSmallLEDsPointer(angle, red, green, and blue)`. 
-`Angle` controls where your snake starts, while `red`, `green`, and `blue` control the red, green, and blue components of the small LEDs. By changing these values, you can change the color that your LED "snake" lights up. To try modifying the snake on your SpinWheel, upload the example sketch from here: `Examples → SpinWearables → Dancing_with_Color → Motion_Snake`. You can also read more about our [motion snake script here](/codedoc/examples/Dancing_with_Color/Motion_Snake/Motion_Snake.ino.html) to learn more about how this script works.
+`Angle` controls where your snake starts, while `red`, `green`, and `blue` control the red, green, and blue components of the small LEDs. By changing these values, you can change the color that your LED "snake" lights up and where the "head" of the snake is. 
+To try modifying the snake on your SpinWheel, upload the example sketch from here: `Examples → SpinWearables → Dancing_with_Color → Motion_Snake`. 
+You can also read more about our [motion snake script here](/codedoc/examples/Dancing_with_Color/Motion_Snake/Motion_Snake.ino.html) to learn more about how this script works.
 
-You may have noticed that the "snake" currently only moves when you rotate along the x-axis. 
+You may have noticed that the "snake" currently only moves when you rotate around the x-axis. 
 Can you have it respond to rotation around the other axes?  
 What about making it respond to motion in all three directions? 
 For a hint of how to do this, you can check out the [code for the final example of this adventure](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html).
@@ -271,7 +279,7 @@ However, you could also have the snake (or any of the other sketches) respond to
 
 You’ve explored both linear and rotational motion independently so far in this adventure. Using the above scripts as a starting point, you can modify the SpinWheel to respond to your motion however you see fit! 
 We'll leave you with one final more complicated sketch to inspire your imagination. 
-Here is a webpage with our [grand finale code and explaination](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html). This script has the SpinWheel respond to both acceleration and rotation. To try this code on your SpinWheel or use it as a framework for your own creations, you can find it at `Examples → SpinWearables → Dancing_with_Color → Grand_Finale`.
+Here is a webpage with our [grand finale code and explanation](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html). This script has the SpinWheel respond to both acceleration and rotation. To try this code on your SpinWheel or use it as a framework for your own creations, you can find it at `Examples → SpinWearables → Dancing_with_Color → Grand_Finale`.
 
 
 To see even more dances mathematically, 
