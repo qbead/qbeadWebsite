@@ -1,6 +1,6 @@
 ---
-title: Vectors and Kinematics
-keywords: vectors, kinematics
+title: Vectors and Motion
+keywords: vectors, kinematics, motion
 ---
 
 ::: intro-box
