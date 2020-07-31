@@ -7,10 +7,6 @@ keywords: rotation, angular velocity, polar coordinates
 In this lesson, we'll talk more about rotation, introducing concepts like angular velocity and polar coordinates. 
 :::
 
-::: warning :
-This lesson is still under-development. Check back soon for more links and the full lesson!
-:::
-
 Imagine you are getting on a merry-go-round. 
 Out of the many colorful options, you choose to ride your favorite horse in the middle row. 
 The operator starts the ride, and you begin traveling around under flashing lights and bright mirrors. 
