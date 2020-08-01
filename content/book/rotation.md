@@ -1,10 +1,10 @@
 ---
-title: Rotation
+title: Rotation and Moving in Circles
 keywords: rotation, angular velocity, polar coordinates
 ---
 
 ::: intro-box
-Here we introduce the concepts necessary to describe the motion of rotating bodies: using angles to measure the orientation of a body, and using angular velocity, i.e. the rate of change of that angle, as a way to describe the rotating motion.
+Here we introduce the concepts necessary to describe the motion of rotating bodies, whether rotating around their own center, or moving in circles around a third point. We will use angles to measure the orientation of a body, and use angular velocity, i.e. the rate of change of that angle, as a way to describe the rotating motion.
 :::
 
 Imagine you are getting on a merry-go-round. 
