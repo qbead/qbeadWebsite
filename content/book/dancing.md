@@ -220,6 +220,17 @@ In the [animations and patterns adventure](/animation), you created animations f
 
 To get the full effect of this sketch, we recommend you unplug your SpinWheel from your computer and try spinning in a circle yourself. If you hold the SpinWheel horizontal as you turn, you'll be able to see the colors change as you're moving and stop when you stop. Just remember, when you plug the SpinWheel back into the computer to make sure the switch is back on `usb`.
 
+::: further-reading
+An interesting experiment with this sketch gets at the distinction between moving around a circular track and spinning. 
+Often we lump these together both as rotation, but the sensor in the SpinWheel is actually only capable of detecting spinning. 
+You've seen above that spinning while holding the SpinWheel causes the LEDs to change.
+Similarly, if you walk around a chair while holding the SpinWheel and continuously turn to face the chair, the LEDs will change color.
+However, if you walk around the chair again and keep yourself facing a window, then the SpinWheel won't detection rotation and the LEDs won't change color.
+In the first two, the sensor has been rotated, so the LEDs change.
+In the last example, you moved in a circular path, but the SpinWheel's orientation didn't change. As the sensor itself didn't rotate, the LEDs won't change color.
+This distinction is complicated and we discuss it further in our[lesson on rotation](/rotation).
+:::
+
 Another modification you can make to the first rotation sketch sketch is to have the LEDs change color based on the direction of rotation. 
 We include the important new elements of the code below, including defining new variables `pos_spin` and `neg_spin` to store the direction that the SpinWheel is rotating around the x-axis.
 
