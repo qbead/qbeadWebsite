@@ -46,115 +46,83 @@ You can experiment with how changing the length of the string changes the angula
 <style>
 #angRot {
   width: 400px;
-  height: 400px;
-  position: relative;
-  justify-content: center;
-
+  margin: 2rem auto;
 }
 #angBox{
-  width: 800px;
-  height: 400px;
-  position: absolute;
-  border-style: solid;
-
+  position: relative;
 }
 #angAnimation {
   width: 10px;
   height: 10px;
-  position: absolute;
   background-color: red;
+  border-radius: 50%;
   top: 200px;
   left: 200px;
-}
-
-#trajectory {
-width: 10px;
-  height: 10px;
   position: absolute;
+}
+#trajectory {
+  width: 10px;
+  height: 10px;
   border-style: solid;
   border-width: thin;
-  }
-  
+}
 #angOutput {
-	left: 450px;
-  	top: 0px;
-  	position: absolute;
-  }
+  text-align: center;
+  margin: 1rem;
+}
 </style>
 
 
 <div id="angRot">
-
 <div id="angBox">
 <canvas class="trajectory" width=400 height=400></canvas>
 <div id ="angAnimation"></div>
-
+</div>
 <div id="angOutput">
-<div id="dataBar">
-<span class="spacer">Radius : </span><input type="number" min="0" max="10"  id="rvalue">
-<button id="angButton">Show</button>
-</div>
-<span class="spacer">Velocities </span><br> 
-<span class="spacer">Linear (units/second): </span><span class="vis" id="linV">  </span><br> 
-<span class="spacer">Angular (degrees/second): </span><span class="vis" id="angV">   </span>
-</div>
+Radius: <span id="linR"></span> pixels <br>
+<input type="range" min="1" max="15" value="5" id="rvalue"><br>
+Linear velocity: <span id="linV"></span> pixels per second<br> 
+Angular velocity: <span id="angV"></span> degrees per second
 </div>
 </div>
 
 <script>
-
 var radius = document.getElementById("radiusBar");
 const drawBox = document.getElementById("angBox");
 const angImage = drawBox.getElementsByClassName('trajectory')[0].getContext('2d');
+const rotatingbody = document.getElementById("angAnimation");   
 var rElement = document.getElementById("rvalue");
+var r = rElement.value*10;
+var pos = 0;
 
+function frame() {
+  pos++; 
+  rotatingbody.style.top = 195 - Math.sin(pos*Math.PI/180)*r + 'px'; 
+  rotatingbody.style.left = 195 + Math.cos(pos*Math.PI/180)*r + 'px'; 
+}
+setInterval(frame, 10); // one degree per 10 ms is 100 degrees per second
 
 function myMove() {
-	var r = rElement.value;
-	if (r> 0){
-	var linVol = 2*Math.PI*r/4; // animation takes 4 seconds
-	var angVol = 90;
-	}
-	else{
-	var linVol = 0;
-	var angVol = 0;
-	}
-	document.getElementById("linV").innerHTML=linVol.toFixed(2);
-	document.getElementById("angV").innerHTML=angVol.toFixed(2);
+  r = rElement.value*10;
+  var linVol = 2*Math.PI*r/3.6; // 3.6 seconds for a full circle 
+  var angVol = 100;
 
-
-	var m_canvas = document.createElement('canvas'); // A frame buffer for only the path
-  	m_canvas.width = 400;
-  	m_canvas.height = 400
+  document.getElementById("linR").innerHTML=r;
+  document.getElementById("linV").innerHTML=linVol.toFixed(1);
+  document.getElementById("angV").innerHTML=angVol;
   
-	angImage.clearRect(0,0,400,400);
-	angImage.beginPath();
-	angImage.arc(200, 200, r*10, 0, 2 * Math.PI);
-	angImage.stroke();
-	angImage.beginPath();
-	angImage.moveTo(200, 200);
-  	angImage.lineTo((r*10+200), 200);
-	angImage.stroke();
-
-
-  var elem = document.getElementById("angAnimation");   
-  var pos = 0;
-  
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (pos == 360) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.top = 195- Math.sin(pos*Math.PI/180)*r*10 + 'px'; 
-      elem.style.left = 195+ Math.cos(pos*Math.PI/180)*r*10 + 'px'; 
-    }
-  }
-  
+  angImage.clearRect(0,0,400,400);
+  angImage.beginPath();
+  angImage.arc(200, 200, r, 0, 2 * Math.PI);
+  angImage.stroke();
+  angImage.beginPath();
+  angImage.moveTo(200, 200);
+  angImage.lineTo((r+200), 200);
+  angImage.stroke();
 }
+myMove();
 
-angButton.onclick = myMove;
-
+rElement.oninput = myMove;
 </script>
 
 
