@@ -228,7 +228,7 @@ Similarly, if you walk around a chair while holding the SpinWheel and continuous
 However, if you walk around the chair again and keep yourself facing a window, then the SpinWheel won't detection rotation and the LEDs won't change color.
 In the first two, the sensor has been rotated, so the LEDs change.
 In the last example, you moved in a circular path, but the SpinWheel's orientation didn't change. As the sensor itself didn't rotate, the LEDs won't change color.
-This distinction is complicated and we discuss it further in our[lesson on rotation](/rotation).
+We discuss this further at the end of our [lesson on rotation](/rotation).
 :::
 
 Another modification you can make to the first rotation sketch sketch is to have the LEDs change color based on the direction of rotation. 
