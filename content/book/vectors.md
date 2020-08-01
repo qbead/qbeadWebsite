@@ -584,7 +584,7 @@ For instance, in the example of a cafeteria with a tile floor,
 the third component of the vector would be the height above the floor (usually denoted as $Z$).
 Similar grids can be constructed for velocity vectors and acceleration vectors (the grids are called *coordinate systems*). 
 
-![In this image you can visualize how a 3D grid can be superimposed on (or added on top of) our cafeteria example. See how the $x$ direction goes to the kid's right, $y$ is to their front, and $z$ is straight up from the floor. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/cafeteria_floor_3D.png)
+![In this image you can visualize how a 3D grid can be superimposed on (or added on top of) our cafeteria floor example. See how the $x$ direction goes to the kid's right, $y$ is to their front, and $z$ is straight up from the floor. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/cafeteria_floor_3D.png)
 
 In fact, our SpinWheel device has its own grid in which it measures acceleration.
 The way this measurement is provided, is as three variables, $a_x$, $a_y$, and $a_z$,
