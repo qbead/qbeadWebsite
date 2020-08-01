@@ -98,11 +98,11 @@ These adventures assume that you have no coding experience and are a great way t
 These activities build on the ideas presented in the introductory adventures. If you have coding experience, you can jump right in and then refer back to the earlier adventures and lessons as you have questions.
 
 1. [Make a Step Counter](/stepcounter)
-2. Dancing Companion (planned)
+2. [Dancing with Color](/dancing)
 
 ### Associated Lessons
 1. [Vectors and Motion](/vectors)
-2. Rotation (planned)
+2. [Rotation and Moving in Circles](/rotation)
 3. Inertial Reference Frames / Free Fall (planned)
 
 ## Advanced Adventures
