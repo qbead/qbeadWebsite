@@ -4,7 +4,7 @@ keywords: rotation, angular velocity, polar coordinates
 ---
 
 ::: intro-box
-Here we introduce the concepts necessary to describe the motion of rotating bodies, whether spinning around their own center, or moving in circles around a third point. We will use angles to measure the orientation of a body, and use angular velocity, i.e. the rate of change of that angle, as a way to describe the rotating motion.
+Here we introduce the concepts necessary to describe the motion of rotating bodies, whether spinning around their own center or moving in circles around a third point. We will use angles to measure the orientation of a body, and use angular velocity, i.e. the rate of change of that angle, as a way to describe the rotatational motion.
 :::
 
 Imagine you are getting on a merry-go-round. 
@@ -128,6 +128,10 @@ rElement.oninput = myMove;
 
 Did you notice how as you made the radius larger, the linear velocity increased but the angular velocity stayed the same? In this example, we have chosen to keep the angular velocity the same, no matter the radius. Because the ball has to travel farther with a larger radius, the ball has to move faster to complete a full circle in the same amount of time. Every time we increase the radius, the linear velocity has to increase to keep the angular velocity the same.
 
+::: further-reading
+The SpinWheel has sensors capable of detecting angular velocity. 
+You can learn how to use these sensors to create motion sensitive animations in our [Dancing with Color adventure](/dancing).
+:::
 
 # Angular Acceleration
 
