@@ -27,6 +27,8 @@ even if they use modern computer graphics technologies to automate some of their
 This method requires a lot of manual work,
 and a lot of computer memory to store the artwork.
 
+![What if the computer itself created the images? This is called generative art and you'll be learning how to do this yourself in the rest of this adventure. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/generative_art.png)
+
 However, there is another type of art, called *generative art*,
 which does not have such taxing requirements.
 It obeys different constraints, and it requires a particular mindset,
