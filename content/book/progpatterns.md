@@ -137,6 +137,9 @@ int resulting_number = max(sqrt(number_a-1) * 2, min(number_b, 2));
 
 ## Creating your own functions
 
+![Now we have the pieces to begin to create our own functions. In the beginning, this may be like creating a poem using a limited set of magnetic word tiles. With practice, your bank of pieces will increaase, enabling you to write more complicated code. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/creating_own_functions.png)
+
+
 A large part of programming is creating your own functions and building
 interesting, complex, and useful functions out of small simple functions. Here we
 give an example of how to write your own function that takes two numbers, $x$ and $y$,
