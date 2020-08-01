@@ -4,8 +4,7 @@ keywords: rotation, angular velocity, polar coordinates
 ---
 
 ::: intro-box
-In this lesson, we'll talk more about rotation. 
-We'll introduce concepts like angular velocity and polar coordinates that make it more easy to describe circular motion. 
+Here we introduce the concepts necessary to describe the motion of rotating bodies: using angles to measure the orientation of a body, and using angular velocity, i.e. the rate of change of that angle, as a way to describe the rotating motion.
 :::
 
 Imagine you are getting on a merry-go-round. 
@@ -20,7 +19,7 @@ This lesson will focus on understanding the many things around us that spin.
 Whether it's a frisbee, a tire wheel, a dancer, or even yourself on an amusement park ride, rotation is all around us. 
 When objects move in straight lines, 
 we call this linear motion. 
-In previous lessons, we’ve discussed how to describe linear motion.
+In [previous lessons](/vectors), we’ve discussed how to describe linear motion.
 How about rotational motion? What tools do we have to explain this motion?
 
 ::: further-reading 
@@ -28,20 +27,17 @@ If you aren't already familiar with the concepts of displacement, velocity, and 
 ::: 
 
 # Angular Displacement
-When dealing with circular motion or rotation (for instance, for a ball on a string or a horse on a merry-go-round),  it is useful to describe position using an angle ($\theta$, pronounced 'theta'). The change between the original angle of the ball and its final angle is typically specified as the change in $\theta$ (or $\Delta \theta$) and is known as angular displacement. Displacement is a useful term to describe an object's change in position and can be defined as an angle (angular displacement) or distance (linear displacement). This concept is easier to understand through diagrams. In the image below you can see how linear displacement and angular displacement are related to each other.
-
+When dealing with circular motion or rotation (for instance, for a ball on a string or a horse on a merry-go-round),  it is useful to describe position using an angle (denoted as $\theta$, pronounced 'theta'). The change between the original angle of the ball and its final angle is typically specified as the change in $\theta$ (or $\Delta \theta$) and is known as angular displacement. Displacement is a useful term to describe an object's change in position and can be defined as an angle (angular displacement) or distance (linear displacement). This concept is easier to understand through diagrams. In the image below you can see how linear displacement and angular displacement are related to each other.
 
 <figure><video src="/images/bookpics/ang_lin_displacement.mp4" muted autoplay playsinline loop></video>
 <figcaption>This picture shows the difference between angular displacement ($\theta$) and linear displacement. </figcaption></figure>
-
-
 
 <figure><video src="/images/bookpics/compare_rotations.mp4" muted autoplay playsinline loop></video>
 <figcaption>Two movements can have the same angular displacement but different linear displacements.</figcaption></figure>
 
 # Angular Velocity 
 To describe the motion of a ball as it is spun around on a string and other circular motion, we use something called angular velocity. 
-Usually when we think of velocity, we are thinking of <span class="footnote">linear velocity<span>this type of velocity is sometimes also called translational velocity</span></span> defined as the change in position (displacement) over the time. 
+Usually when we think of velocity, we are thinking of <span class="footnote">linear velocity<span>This type of velocity is sometimes also called translational velocity.</span></span> defined as the change in position (displacement) during a specified interval of time. 
 Angular velocity is very similar, but it is instead defined as the change in angle over time. 
 While angular velocity and linear velocity are related they are not the same. 
 For instance, take our ball, if we change the length of the string, we can keep our angular velocity the same, but the linear velocity will be different. 
