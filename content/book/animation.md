@@ -6,6 +6,13 @@ keywords: animations, frames, timing
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
 <script src='/simspinwheel/simspinwheel.js'></script>
 
+::: intro-box
+An animation is created by rapidly cycling through a series of still images.
+You may be familiar with animations from watching cartoons, 
+but we can also create animations with the SpinWheel's LEDs. 
+In this lesson, you'll be able to try out doing just this. 
+:::
+
 
 To create an animation or a video,
 we need a rapid sequence of still images, called frames.
