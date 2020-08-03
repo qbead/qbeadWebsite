@@ -67,14 +67,21 @@ void loop() {
 }
 ```
 
+When you are writing other programs with the SpinWheel, these extra lines are essential. t
+Adding `#include "SpinWearables.h"` and `using namespace SpinWearables;` before the `setup` loop ensures that the rest of the program has access to some extra resources and commands specific for programming your SpinWheel. 
+It is also necessary to add `SpinWheel.begin();` in the `setup` loop. 
+This line makes sure that the SpinWheel hardware is ready for the instructions that we will add in `loop` in the next chunk of code. 
+
 Notice the faded bluish lines that begin with two slashes `//`. This text is called
-a "comment." By starting the line with `//`, the computer is told to 
-completely disregard everything else on the line. We will use comments 
-extensively to write down explanations for ourselves and any other humans that might be reading the code,
+a "comment." 
+By starting the line with `//`, the computer is told to 
+completely disregard everything else on the line. 
+If you reread the comments above, you will notice that they give the same information as we wrote in the paragraph above.  
+We will use comments extensively to write down explanations for ourselves and any other humans that might be reading the code,
 without worrying about the computer being confused by them.
 
 The `loop` block is still empty and this program still will not do anything interesting.
-However, to great extent our `setup` section is complete: it prepares the SpinWheel to
+However, our `setup` section is complete: it prepares the SpinWheel to
 receive instructions. Through our activities, we will rarely need anything more sophisticated
 in `setup`.
 
@@ -104,7 +111,7 @@ You can modify the `setLargeLED` line to change the appearance of the SpinWheel.
 The first item (also called a "parameter") in the parentheses 
  <span class="footnote">identifies the affected LED<span>The number goes from 0 to 7.</span></span>
 and the other <span class="footnote">three numbers are the red,
-green, and blue components<span>They have to be numbers between 0 (color is off) and 255 (color is on at full brightness).</span></span> of the desired color.)
+green, and blue components<span>They have to be numbers between 0 (color is off) and 255 (color is on at full brightness).</span></span> of the desired color. 
 
 There are a couple more things you might have noticed about the style of this language:
 
