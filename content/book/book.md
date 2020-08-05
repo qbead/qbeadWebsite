@@ -74,13 +74,19 @@ There is a lot going on in the map above, so below we have our recommended order
 
 ## Getting Started
 
-Before doing anything else, we encourage you to read the [Initial Setup Guide](/quickstart). This is where we explain how to download the Arduino software and provide essential information for the rest of the adventures.
-Before writing your own programs, you might want to check what the [basic structure of a program](/basics) looks like.
-Use that page to establish a vague intuition about the code and use that intuition in the first few adventures. Then go back to this page and try to read it and pages linked within again, with the new knowledge of programming you have gained.
+These two pages provide instructions for setting up your SpinWheel
+and the basic structure of the programs the SpinWheel uses.
+
+1. [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures.
+2. [Basic Structure of a Program](/basics): This page is not required to complete SpinWheel
+activities, but provides basic information on the structure of programs. 
+Use it to establish a vague intuition about the code and use that intuition in the first few adventures.
+Then go back to this page and try to read it and pages linked within again, 
+with the new knowledge of programming you have gained.
 
 ## Intro Adventures
 
-These adventures assume that you have no coding experience and are a great way to become comfortable with both the SpinWheel and coding. The associated lessons go into more depth into concepts that are referenced for the first time in these adventures. We have written the lessons to supplement the content in the adventures and we provide links in each adventure when we recommend checking them out to learn more. We hope these will spark your curiousity to learn even more about the world around you!
+These adventures assume that you have no coding experience and are a great way to become comfortable with both the SpinWheel and coding. The associated lessons go into more depth on the concepts that are referenced for the first time in these adventures. We have written the lessons to supplement the content in the adventures and we provide links in each adventure when we recommend checking them out to learn more. We hope these will spark your curiousity to learn even more about the world around you!
 
 1. [Biology of Sight](/sight)
 2. [Animations and Patterns](/animation)
