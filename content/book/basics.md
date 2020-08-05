@@ -4,7 +4,7 @@ keywords: SpinWheel, arduino, setup
 ---
 
 ::: intro-box
-A progam is writen as a text file containing multiple commands for your computer to follow.
+A progam is written as a text file containing multiple commands for your computer to follow.
 Here you will see what such a program might look like in one particular computer language.
 Before reading this, be sure to read our [initial setup guide](/quickstart). 
 :::
@@ -67,16 +67,16 @@ void loop() {
 }
 ```
 
-When you are writing other programs with the SpinWheel, these extra lines are essential. t
+When you are writing other programs with the SpinWheel, these extra lines are essential.
 Adding `#include "SpinWearables.h"` and `using namespace SpinWearables;` before the `setup` loop ensures that the rest of the program has access to some extra resources and commands specific for programming your SpinWheel. 
-It is also necessary to add `SpinWheel.begin();` in the `setup` loop. 
+It is also necessary to add `SpinWheel.begin();` in the `setup` block. 
 This line makes sure that the SpinWheel hardware is ready for the instructions that we will add in `loop` in the next chunk of code. 
 
 Notice the faded bluish lines that begin with two slashes `//`. This text is called
 a "comment." 
 By starting the line with `//`, the computer is told to 
 completely disregard everything else on the line. 
-If you reread the comments above, you will notice that they give the same information as we wrote in the paragraph above.  
+If you reread the comments above, you will notice that they give the same information as we wrote in the paragraph above.
 We will use comments extensively to write down explanations for ourselves and any other humans that might be reading the code,
 without worrying about the computer being confused by them.
 
@@ -105,7 +105,7 @@ void loop() {
 }
 ```
 
-Try to copy this code into the Arduino software and upload it to your SpinWheel.
+Try to copy this code into a new file in the Arduino software and upload it to your SpinWheel.
 It should cause one single large LED to turn on in bright red.
 You can modify the `setLargeLED` line to change the appearance of the SpinWheel.
 The first item (also called a "parameter") in the parentheses 
