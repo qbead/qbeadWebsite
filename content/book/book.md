@@ -143,9 +143,10 @@ Want to learn more about how the SpinWheel was created? We'll be adding addition
 
 1. [Behind the Scenes Overview](/behindthescenes_long/)
 2. [Technical Specifications](/specs)
-3. Circuit Design
-4. Hardware Testing
-5. Kickstarter Setup and Manufacturing Partner
+3. [Creating the Virtual SpinWheel](/transpile)
+4. Circuit Design
+5. Hardware Testing
+6. Kickstarter Setup and Manufacturing Partner
 
 ## Community Rules
 
