@@ -26,9 +26,9 @@ The SpinWheel contains sensitive electronic components that are securely soldere
 
 ![<a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/arduino_library_setup.small.png "Arduino setup.")
 
-1. You'll notice that the battery is not attached to the SpinWheel. Simply plug the battery connector into the battery jack on the circuit board and you can start using the SpinWheel as a wearable accessory, as it is already preloaded with several basic animations. 
+1. You'll notice that the battery is not attached to the SpinWheel when you receive it. Before attaching the battery, slide the switch to be on "USB." To attach the battery, firmly insert the battery connector into the battery jack on the circuit board. If you have difficulty, then read the section on "Attaching the Battery" below. 
 
-2. To turn on the SpinWheel, flip the switch on the back to "BAT" (for "battery"). You should see it turn on and light up brightly! 
+2. Once the battery is in, you can start using the SpinWheel as a wearable accessory! It already comes preloaded with several basic animations. To turn on the SpinWheel, flip the switch on the back to "BAT" (for "battery"). You should see it turn on and light up brightly! 
 
 3. You can press the button on the back of the SpinWheel to toggle between different animations. 
 
@@ -36,7 +36,20 @@ The SpinWheel contains sensitive electronic components that are securely soldere
 
 5. To charge, plug a micro USB cable into the USB jack, keep the switch on "USB" and charge using a computer or USB-to-wall converter. You should also keep the switch in this position when you are not using the SpinWheel and for long term storage to protect the battery from discharging. Note: the battery may require charging before use.
 
-Your kit contains a booklet (the SpinWheel Field Guide) with various activities you can complete. The activities in the booklet are also found in expanded versions online. We highly recommend that you make use of both. 
+Your kit contains a booklet (the SpinWheel [Field Guide](/book)) with some hands-on adventures and reference materials to assist you as you are programming the SpinWheel. The activities in the booklet are also found in expanded versions online. We highly recommend that you make use of both. 
+
+## Attaching the Battery
+
+When you try to insert the battery, you may find that the connection between the battery is very tight. 
+This is normal and it may take some force to insert it. 
+We recommend using your thumbs on either side of the connector to push it up into the jack. 
+You do not need to insert it all of the way for a secure connection.
+While it is fine to use force on the plastic connector, it is very important to be careful not to pierce or bend the battery itself.
+After you add the battery, you can use the two-sided tape included in your package to attach it to the back of the SpinWheel as shown in the photo below.
+
+![This is what the back of your SpinWheel will look like when it attached to the board. When the SpinWheel is off, charging, or being programmed, make sure that the switch is in the "USB" position as shown.](/images/quickstart/battery_back.jpg "Here is an image of what the battery will look like when it added onto the board.")
+
+
 
 ## Setting Up the Arduino Software
 
