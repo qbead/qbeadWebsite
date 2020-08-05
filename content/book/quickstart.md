@@ -40,14 +40,14 @@ Your kit contains a booklet (the SpinWheel [Field Guide](/book)) with some hands
 
 ## Attaching the Battery
 
-When you try to insert the battery, you may find that the connection between the battery is very tight. 
+When you try to insert the battery, you may find that the connection between the battery and the SpinWheel is very tight. 
 This is normal and it may take some force to insert it. 
 We recommend using your thumbs on either side of the connector to push it up into the jack. 
 You do not need to insert it all of the way for a secure connection.
 While it is fine to use force on the plastic connector, it is very important to be careful not to pierce or bend the battery itself.
 After you add the battery, you can use the two-sided tape included in your package to attach it to the back of the SpinWheel as shown in the photo below.
 
-![This is what the back of your SpinWheel will look like when it attached to the board. When the SpinWheel is off, charging, or being programmed, make sure that the switch is in the "USB" position as shown.](/images/quickstart/battery_back.jpg "Here is an image of what the battery will look like when it added onto the board.")
+![This is what the back of your SpinWheel will look like when the battery is attached to the board. When the SpinWheel is off, charging, or being programmed, make sure that the switch is in the "USB" position as shown.](/images/quickstart/battery_back.jpg "Here is an image of what the battery will look like when it added onto the board.")
 
 
 
@@ -55,11 +55,19 @@ After you add the battery, you can use the two-sided tape included in your packa
 
 While you can use the SpinWheel with the preloaded animations, much of the joy of the SpinWheel comes from your potential to change it, and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. Start by installing the Arduino software on your computer, which you can download for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software).
 
-Plug your SpinWheel into your computer with a micro USB cable and flip the switch to the position labeled "USB". Open the Arduino software. You should see your device appear in the Tools menu under `Tools → Port`. You will see a list of serial ports on your computer; you need to find the one for the SpinWheel. If there are multiple ports and you are unsure which one to use, simply unplug the SpinWheel and see which serial port disappears when you do so. This port corresponds to your SpinWheel's serial port.
+Once the software is installed, we have to configure it to communicate with the SpinWheel.
+
+1. Plug your SpinWheel into your computer with a micro USB cable and flip the switch to the position labeled "USB". 
+
+2. Open the Arduino software. 
+
+3. Open the `Tools` menu and go to `Port`. You will see a list of serial ports on your computer; you need to find the one for the SpinWheel. If there are multiple ports and you are unsure which one to use, simply unplug the SpinWheel and see which serial port disappears when you do so. This port corresponds to your SpinWheel's serial port.
+
+4. Go back to the Tools menu and select `Tools → Board`. Select Arduino Leonardo as the board (a.k.a. processor), so that the software knows which “dialect” to use to talk to the SpinWheel (computer languages have dialects just like human languages!).
 
 ![Use `Tools → Port` and `Tools → Board` to pick the port corresponding to the SpinWheel and the "Leonardo" board type. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/port_and_board_screenshot.png "Use `Tools→ Port` and `Tools→ Board` to change the settings on the Arduino software.")
 
-Now you can go back to the Tools menu and select `Tools → Board`. Select Arduino Leonardo as the board (a.k.a. processor), so that the software knows which “dialect” to use to talk to the SpinWheel (computer languages have dialects just like human languages!).
+Properly selecting the board and port are essential for the Arduino software to communicate with the SpinWheel. If you are unable to upload code to the Spinwheel in the next section, double check that you have the correct board and port selected.
 
 ## Programming the SpinWheel
 
@@ -71,7 +79,7 @@ You might need to download two extra libraries, if they were not automatically d
 
 
 The new files can be found under `File → Examples → SpinWearables`. Open any file to see an example of the language used to communicate with the SpinWheel. You will learn more about this language in future lessons.
-Feel free to edit the examples without worry of overwriting them — the original example will always be there.
+Feel free to edit the examples without worry of overwriting them — you can always download the original examples again.
 
 ![Upload programs to your SpinWheel using the `Upload` button (highlighted in white). <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/upload_button_screenshot.png "Upload programs to your SpinWheel using the `Upload` button (highlighted in white)."){style="max-width:388px"}
 
@@ -79,6 +87,6 @@ To test that your SpinWheel is working properly, you can install a new program, 
 
 Doing this will overwrite the preloaded sketch that came on your SpinWheel. If you want your SpinWheel to have the sketch that was preloaded on the SpinWheel again, simply open the [`SpinWheelStockFirmware`](/codedoc/examples/SpinWheelStockFirmware) example and upload it.
 
-In future SpinWheel activities, you will be writing new programs to animate the SpinWheel. To transfer a program from your computer to your SpinWheel, simply connect your SpinWheel to your computer, open the code of your new program in the Arduino software and press the upload button. 
+In future SpinWheel activities, you will be writing new programs to animate the SpinWheel. To transfer a program from your computer to your SpinWheel, simply connect your SpinWheel to your computer, change the switch to "USB", open the code of your new program in the Arduino software and press the upload button. 
  
 Congratulations! You are now ready to continue with the rest of the SpinWheel activities!
