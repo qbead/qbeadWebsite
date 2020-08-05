@@ -12,22 +12,11 @@ header-video: /images/banners/linewheel_crossfade.mp4
 }
 </style>
 
-This lesson is part of the SpinWheel series. The
-[SpinWheel](https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit?ref=skiphq)
-is a small Arduino-compatible sensor-enabled wearable device, meant to be used
-for teaching physics and computer science through an artistic medium. You can
-support our non-profit
-[Kickstarter](https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit?ref=skiphq)
-to help us reach more curious young minds and to get the device and teaching
-kit showcased in this lesson.
 
 ::: intro-box
 We built the [SpinWheel](https://www.kickstarter.com/projects/spinwheel/447670470) and its [engaging aesthetics](https://spinwearables.com) around the Arduino platform because of its low barrier to entry. We also wanted our online learning resources to be interactive, in the style of [Explorable Explanations](https://explorabl.es/), as this significantly improves learning outcomes. Thus, we needed to find a way to "compile" example C code in our webpages and show how changes to the code would affect the physical device. Since the SpinWheel contains motion sensors which are central to many of the lessons we want to teach, we sought a way to simulate that in a web page as well. Read on to see our misadventures in hacking together the most fragile C-to-Javascript transpiler: 100 lines of silly code that open up great pedagogical opportunities.
 :::
 
-::: warning
-Lessons are still under development!
-:::
 
 ## The SpinWheel - the C++ code which we want to simulate in the browser
 
@@ -265,10 +254,7 @@ function elementDrag(e) {
 
 Now all we have to do is flesh out our Javascript `SpinWheel` class such that it is up to feature parity with the C++ one running on our hardware, and start using this in all of our lessons. (We also plan to add functionality for the rotation sensor.)
 
-We would be happy to hear your feedback on this little hack of ours. Feel free to contact us at `mail@spinwearables.com`! And consider supporting our kickstarter.
+We would be happy to hear your feedback on this little hack of ours. Feel free to contact us at `mail@spinwearables.com`! 
 
 
-<a href="https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit?ref=skiphq">
-<figure><img src="/images/kickstarter_support.png"></figure><figcaption>We are trying to bring similar resources, from the middle-school level to the undergraduate level, to more curious minds. Supporting our non-profit Kickstarter would greatly help us.</figcaption>
-</a>
  
