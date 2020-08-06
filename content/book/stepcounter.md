@@ -42,6 +42,10 @@ void loop() {
 }
 ```
 
+If you upload this sketch to the SpinWheel, you won't be able to see anything happen. 
+It doesn't turn on the LEDs, instead the sketch simply set ups the SpinWheel and sends a confirmation message ("I am working!") repeatedly using `Serial.println()`. 
+If you want to see this message, navigate to `Tools -> Serial Monitor` in the Arduino software. 
+
 ## Measuring Motion
 
 Now we can begin to add useful functionality to our sketch.
