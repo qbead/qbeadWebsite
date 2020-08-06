@@ -22,7 +22,7 @@ We will build our Step Counter program step by step, starting with this empty sk
 A good first step is to write some simple test code that just prints a few messages, confirming that your device is still functioning. For instance, copy the following code into your file. This code, once running on the SpinWheel, will repeatedly send the message "I am working!" to the computer that your SpinWheel is attached to. As always, we will add comments to the code, so that the purpose of each line is explained. (A comment is a line of code that is not run by the computer, but meant to be interpreted by humans. In this code, comment lines start with `//`).
 
 ::: further-reading
-You can consult our [SpinWheel basic commands page](/basics) to remind yourself how to read the computer code shown below. For more details about coding itself, check out the [Programming Patterns page](/progpatterns).
+You can consult our [SpinWheel basic commands page](/basics) to remind yourself how to read the computer code shown below. For more details about coding itself, check out the [Coding Building Blocks page](/progpatterns).
 :::
 
 ```cpp
@@ -41,6 +41,10 @@ void loop() {
   Serial.println("I am working!"); 
 }
 ```
+
+If you upload this sketch to the SpinWheel, you won't be able to see anything happen. 
+It doesn't turn on the LEDs, instead the sketch simply set ups the SpinWheel and sends a confirmation message ("I am working!") repeatedly using `Serial.println()`. 
+If you want to see this message, navigate to `Tools -> Serial Monitor` in the Arduino software. 
 
 ## Measuring Motion
 

@@ -34,10 +34,13 @@ in its memory. This is done using **variables**.
 !["Variables" are like labeled shelves for information. When you need to save a number for later use, you put it in a variable of your choice. Above we have number 3 stored in the variable `a`, number 4 stored in variable `b` and the number 7 is about to be stored in a variable named `e`. We can pick the names for the variables ourselves (any sequence of letters that is not interrupted by whitespaces). <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/variables.png)
 
 We will only discuss two types of variables: integers and
-decimals. Other types do exist, but we won't cover them here. Integers are easier for a computer to work with because it does
-not need to store all of the data after the decimal point. Treating them
+decimals. Other types do exist, but we won't cover them here. 
+If you store a number as an integer, it must be a whole number (like 2 or 3011) and cannot have a decimal component. On the other hand, a decimal can have a decimal part (like 0.4, 560.17, or 2.0).
+Integers are easier for a computer to work with because it does
+not need to store all of the data after the decimal point. 
+Treating them
 separately from decimals lets us have faster code, which is especially
-important for small computers like in the SpinWheel.
+important for small computers that don't have much storage space like in the SpinWheel.
 
 To **define** a new integer variable you need the following line in your code:
 
@@ -100,7 +103,7 @@ Let's step through each part of this code.
 * `int number_a = 5` assigns the value of 5 to the integer variable `number_a`
 * `int number_b = 7` assigns the value of 7 to the integer variable `number_b`
 * `int resulting_number = max(....)` store the result of the function `max(...)` in the integer variable `resulting number`
-* `max(number_a, number_b)` calls the function `max(...)` with two arguments,
+* `max(number_a, number_b)` calls, or uses, the function `max(...)` with two arguments,
 `number_a` and `number_b`, and returns the larger number.
 
 The value stored in `resulting_number` in this case would be `7`. 
@@ -135,9 +138,11 @@ int number_b = 7;
 int resulting_number = max(sqrt(number_a-1) * 2, min(number_b, 2));
 ```
 
+![In this diagram, you can see the order in which the computer evaluates this piece of code. It first subtracts `1` from `number_a`, then evaluates the functions `sqrt()` and `min()`, next multiplies the output of `sqrt()` by `2`, and finally evaluates `max()`. This is similar to how when solving a math equation, you first do anything within parenthenses and then work your way out.]()
+
 ## Creating your own functions
 
-![Now we have the pieces to begin to create our own functions. In the beginning, this may be like creating a poem using a limited set of magnetic word tiles. With practice, your bank of pieces will increaase, enabling you to write more complicated code. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/creating_own_functions.png)
+![Now we have the pieces to begin to create our own functions. In the beginning, this may be like creating a poem using a limited set of magnetic word tiles. With practice, your bank of pieces will increase in size, enabling you to write more complicated code. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/creating_own_functions.png)
 
 
 A large part of programming is creating your own functions and building
@@ -181,8 +186,9 @@ be returned to the code that called the function.
 We can have multiple sequential instructions inside the block when the
 computation is more difficult. That is the purpose of the curly brackets `{ }`
 - to separate all the code that defines our function from the rest of the
-program that might be in the same file. For instance, here we will show how to compute the 4th root of a
-number:
+program that might be in the same file. For instance, here we will show how to compute the fourth root of a number. 
+The fourth root of a number, or x raised to the $\frac{1}{4}$ power, can be computed by taking the square root of a square root 
+and we will use this fact to write the fourth root function below.
 
 ```c++
 float root4(float x) {
@@ -265,7 +271,7 @@ function, which is named this way because it **runs in a loop** (or repeats itse
 
 Here is a large example that includes all these features. It will use the
 `Serial.println()` function in order to send messages to the computer.
-Use the `Serial Monitor` tool in the arduino software in order to see these
+Use the `Serial Monitor` tool in the Arduino software in order to see these
 messages being sent back over the USB cable.
 
 ```c++
