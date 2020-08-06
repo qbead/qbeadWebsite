@@ -11,11 +11,11 @@ header-image: /images/banners/dancer_color.png
 In this adventure, you will explore the ways we can describe motion mathematically and code colorful representations of that math. 
 :::
 
-Whether you’ve watched a dance, or are a dancer yourself, you know dancing is all about movement. Be it a pirouette, a leap, or a straight line, dancers gracefully move through space in exciting ways. Your SpinWheel can act as a dancer too! Mathematically we can represent this motion in many ways. In this lesson, we will write colorful visualizations of this math that you can explore with you SpinWheel!
+Whether you’ve watched a dance, or are a dancer yourself, you know dancing is all about movement. Be it a pirouette, a leap, or a straight line, dancers gracefully move through space in exciting ways. The LEDs on your SpinWheel can dance too! Mathematically, we can represent this motion in many ways. In this lesson, we will write colorful visualizations of this math that you can explore with your SpinWheel!
 
 ## Linear Motion: Line Dancing
 
-The first way we will think about motion is by moving along a line. We can move back and forth on a line but in no other direction. This is called one dimension motion. Below you can use your mouse to drag the circle along one dimension. Think of this like a dancer moving back and forth across the stage. 
+The first way we will think about motion is by moving along a line. We can move back and forth on a line but in no other direction. This is called one dimensional motion. Below you can use your mouse to drag the circle along one dimension. Think of this like a dancer moving back and forth across the stage. 
 
 
 <style>
@@ -119,7 +119,7 @@ We discuss the idea of velocity more in our lesson on [vectors and kinematics](/
 
 ## Linear motion: A Three Line Dance
 
-We’ve talked about motion in one dimension (1D), but we don’t live and move and dance on a single line. We’re free to go forwards and back, left and right, up and down, and even along curves. Instead of one line, we can represent our everyday motions by moving along three lines. We call this three dimensional (3D) motion. When we move, or when the SpinWheel moves, we
+We’ve talked about motion in one dimension (1D), but we don’t live and move and dance on a single line. We’re free to go forwards and back, left and right, up and down, and even along curves. Instead of one line, we can represent our everyday motions as the movement along three lines. We call this three dimensional (3D) motion. When we move, or when the SpinWheel moves, we
 are travelling in 3D space. Inside your SpinWheel is a motion sensor that can tell when the SpinWheel moves. 
 
 ::: further-reading
@@ -164,10 +164,10 @@ To learn more about modifying the SpinWheel's LED display with the output from t
 
 We've talked about moving through space in a line, 
 but now imagine a dancer's feet doing turn after turn and their arms outstretched in different configurations. 
-Can you picture how their arms and feet move through space in small tight turns, like chaînés turns, and wide turns, like an attitude or a fouetté? 
+Can you picture how their arms and legs move through space in small tight turns, like chaînés turns, and wide turns, like an attitude or a fouetté? 
 
 
-There are many different ways we can describe all types of different dances! 
+There are many different ways we can describe dances mathematically! 
 A dancer moving side to side is a type of translational motion.
 A dancer turning in a circle is a type of rotational motion. 
 
@@ -175,7 +175,7 @@ A dancer turning in a circle is a type of rotational motion.
 
 A simple way to describe rotational motion is as the movement around an axis. When a dancer spins, without moving around the stage, they are rotating around the axis of their body. 
 There are special sensors in your SpinWheel, called gyroscopes, that allow it to detect rotational motion. 
-We can use the output from these sensors to have the SpinWheel respond to spinning! 
+We can use the output from these sensors to program the SpinWheel to respond to spinning! 
 
 ![This picture demonstrates the three axes that the SpinWheel can detect rotation around. We'll dive into what this means more in the rest of the lesson! <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/dance_axis.png)
 
@@ -183,7 +183,7 @@ We can use the output from these sensors to have the SpinWheel respond to spinni
 
 To begin, we can program the SpinWheel to light up when it detects rotation around one axis. 
 This is similar to the dancer spinning in place where their body represents the axis of each turn. 
-In this case, we're measuring the rotation around the SpinWhee's x-axis, which is stored in the variable `SpinWheel.gx`. `SpinWheel.gx` provides us with the angular velocity of the SpinWheel around the <span class="footnote">x-axis of the device.<span>To see on the SpinWheel what this represents scroll up to the image of the SpinWheel and its axes.</span></span> 
+In this case, we're measuring the rotation around the SpinWheel's x-axis, which is stored in the variable `SpinWheel.gx`. `SpinWheel.gx` provides us with the angular velocity of the SpinWheel around the <span class="footnote">x-axis of the device.<span>To visualize what this represents on the SpinWheel, scroll up to the image of the SpinWheel and its axes.</span></span> 
 
 ::: further-reading 
 In our lesson on [vectors and motion](/vectors), we cover in more depth the velocity you are probably already familiar with: velocity along a straight line (like a car moving down a straight stretch of highway). 
@@ -221,13 +221,13 @@ In the [animations and patterns adventure](/animation), you created animations f
 To get the full effect of this sketch, we recommend you unplug your SpinWheel from your computer and try spinning in a circle yourself. If you hold the SpinWheel horizontal as you turn, you'll be able to see the colors change as you're moving and stop when you stop. Just remember, when you plug the SpinWheel back into the computer to make sure the switch is back on `usb`.
 
 ::: further-reading
-An interesting experiment with this sketch gets at the distinction between moving around a circular track and spinning. 
-Often we lump these together both as rotation, but the sensor in the SpinWheel is actually only capable of detecting spinning. 
-You've seen above that spinning while holding the SpinWheel causes the LEDs to change.
+We can do a simple experiment to illustrate the difference between moving in a circular path and spinning. 
+Often we lump these both together as rotation, but the sensor in the SpinWheel is actually only capable of detecting spinning. 
+You've seen above that spinning causes the SpinWheel's LEDs to change.
 Similarly, if you walk around a chair while holding the SpinWheel and continuously turn to face the chair, the LEDs will change color.
-However, if you walk around the chair again and keep yourself facing a window, then the SpinWheel won't detection rotation and the LEDs won't change color.
-In the first two, the sensor has been rotated, so the LEDs change.
-In the last example, you moved in a circular path, but the SpinWheel's orientation didn't change. As the sensor itself didn't rotate, the LEDs won't change color.
+However, if you walk around the chair again and keep yourself facing a window, then the SpinWheel won't detect rotation and the LEDs won't change color.
+In the first two cases, the sensor has been rotated, so the LEDs change.
+In the last case, you moved in a circular path, but the SpinWheel's orientation didn't change. As the sensor itself didn't rotate, the LEDs won't change color.
 We discuss this further at the end of our [lesson on rotation](/rotation).
 :::
 
@@ -263,8 +263,8 @@ For a more detailed explanation of this code, you can also check out [this scrip
 
 In the two last sketches, the SpinWheel only changed color when its rotation was around the x-axis. It is also possible to measure and change the SpinWheel's LEDs color based on rotation around any axis in 3D space!
 
-To start off, upload the [3D Rotation sketch](/codedoc/examples/Dancing_with_Color/3D_Rotation_Light_Up/3D_Rotation_Light_Up.ino.html) from here: `Examples → SpinWearables → Dancing_with_Color → 3D_Rotation_Light_Up`. If you read the [details about the code](/codedoc/examples/Dancing_with_Color/3D_Rotation_Light_Up/3D_Rotation_Light_Up.ino.html), you will see how you can code the red, green, and blue components of the LEDs to respond to the rotation around the x, y, and z axes. 
-Rather than only modifying the large LEDs as in the earlier sketches, this sketch also has the small LEDs light up in response to the SpinWheel's rotational motion. Try rotating your SpinWheel in different directions to make it fully red, green or blue. Can you combine these rotations to make other colors? If the rotation is around two axis at the 
+To start off, upload the 3D rotation sketch from here: `Examples → SpinWearables → Dancing_with_Color → 3D_Rotation_Light_Up`. If you read the [details about the code](/codedoc/examples/Dancing_with_Color/3D_Rotation_Light_Up/3D_Rotation_Light_Up.ino.html), you will see how you can code the red, green, and blue components of the LEDs to respond to the rotation around the x, y, and z axes. 
+Rather than only modifying the large LEDs as in the earlier sketches, this sketch also has the small LEDs light up in response to the SpinWheel's rotational motion. Try rotating your SpinWheel in different directions to make it fully red, green or blue. Can you combine these rotations to make other colors? If the rotation is around two axes at the 
 same time, both colors are shown, making yellow, purple or teal.
 
 ## Rotating Lights (or an LED "snake")
@@ -284,15 +284,15 @@ Can you have it respond to rotation around the other axes?
 What about making it respond to motion in all three directions? 
 For a hint of how to do this, you can check out the [code for the final example of this adventure](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html).
 
-The past few examples are all relying on the measurements from the gyroscope (sensing rotation). 
+The past few examples all rely on the measurements from the gyroscope (rotation sensor). 
 However, you could also have the snake (or any of the other sketches) respond to acceleration instead. You can modify the snake to respond to acceleration in one direction or even all three.
 
 
 ## The Grand Finale: Showing Off All Its Colors
 
 You’ve explored both linear and rotational motion independently so far in this adventure. Using the above scripts as a starting point, you can modify the SpinWheel to respond to your motion however you see fit! 
-We'll leave you with one final more complicated sketch that combines both the `Motion_Snake` and `Rainbow_Chase_Advanced` sketches to inspire your imagination. 
-Here is a webpage with our [grand finale code and explanation](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html). This script has the SpinWheel respond to both acceleration and rotation. To try this code on your SpinWheel or use it as a framework for your own creations, you can find it at `Examples → SpinWearables → Dancing_with_Color → Grand_Finale`.
+To inspire your imagination, we'll leave you with one final more complicated sketch that combines both the `Motion_Snake` and `Rainbow_Chase_Advanced` sketches. 
+Here is a webpage with our [grand finale code and explanation](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html). This sketch programs the SpinWheel to respond to both acceleration and rotation. To try this code on your SpinWheel or use it as a framework for your own creations, you can find it at `Examples → SpinWearables → Dancing_with_Color → Grand_Finale`.
 
 
 To wrap up this adventure, 
@@ -303,7 +303,7 @@ a physics graduate student who studies particle physics as well as physics and d
 <figure><video src="/images/bookpics/mariel.mp4" controls></video><figcaption>A physicist's interpretation of a dance.</figcaption></figure>
 
 ::: further-reading
-Mariel created this video using programming tools that she developed in a collaboration of dancers, physicists, and computer science researchers. You can watch more of her videos [here](https://vimeo.com/400641881) and read a [paper](https://arxiv.org/abs/1907.05297) on this research.
+Mariel created this video using programming tools that she developed in collaboration with dancers, physicists, and computer science researchers. You can watch more of her videos [here](https://vimeo.com/400641881) and read a [paper](https://arxiv.org/abs/1907.05297) on this research.
 :::
 
 <a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">Header image credit: Jack Hegarty</a>
