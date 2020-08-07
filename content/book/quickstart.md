@@ -71,15 +71,12 @@ Properly selecting the board and port are essential for the Arduino software to 
 
 ## Programming the SpinWheel
 
-Learning to code is just like learning a new language - you will understand only a couple of words and commands at first, but as your skills grow you will be able to command the computer to do more sophisticated tasks! To get the first set of examples of this new language, download [our collection of sample code](/software/SpinWearablesFirmware.zip) (this will download a zip file). Then you can use `Sketch → Include Library → Add .ZIP Library` and navigate to the zip file to add it. Experimentation with the provided examples is encouraged, and the originals will always be available, so do not worry about making a mistake.
+Learning to code is just like learning a new language - you will understand only a couple of words and commands at first, but as your skills grow you will be able to command the computer to do more sophisticated tasks! To get the first set of examples of this new language and the other libraries necessary to run the SpinWheel code, download our SpinWearables Arduino Library using `Sketch → Include Library → Manage Libraries...`. In the search bar of the Library Manager, search for `SpinWearables` and then click `Install`. 
 
 ![Installing Arduino libraries. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/adding_libraries_screenshot.png "Installing Arduino libraries."){style="max-width:90%"}
 
-You might need to download two extra libraries, if they were not automatically downloaded. You can search for them in `Sketch → Include Library → Manage Libraries...`. Install `Adafruit_NeoPixel.h` from Adafruit (for the large LEDs) and `ICM_20948.h` from SparkFun (for the motion sensor).
-
-
 The new files can be found under `File → Examples → SpinWearables`. Open any file to see an example of the language used to communicate with the SpinWheel. You will learn more about this language in future lessons.
-Feel free to edit the examples without worry of overwriting them — you can always download the original examples again.
+We encourage you to experiment with these examples! If you want to save any changes, you will be prompted to save the sketch in a new location (can be anywhere on your computer), so you can always open the original example again.
 
 ![Upload programs to your SpinWheel using the `Upload` button (highlighted in white). <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/upload_button_screenshot.png "Upload programs to your SpinWheel using the `Upload` button (highlighted in white)."){style="max-width:388px"}
 
