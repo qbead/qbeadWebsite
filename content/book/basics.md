@@ -3,8 +3,11 @@ title: Basic Structure of a Program
 keywords: SpinWheel, arduino, setup
 ---
 
+<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
+<script src='/simspinwheel/simspinwheel.js'></script>
+
 ::: intro-box
-A progam is written as a text file containing multiple commands for your computer to follow.
+A program is written as a text file containing multiple commands for your computer to follow.
 Here you will see what such a program might look like in one particular computer language.
 Before reading this, be sure to read our [initial setup guide](/quickstart). 
 :::
@@ -16,13 +19,12 @@ and see whether you can understand a bit more of it.
 
 In different communities, computer programs are referred to by different names:
 program, sketch, script, etc.
-Arduino tends to call them sketches, because in them you sketch out what your device is supposed to do.
-We also like the name script, because it invokes the idea of a sequence of instructions:
-the instructions you give to the device and the order in which you want them to be executed.
+Arduino tends to call them sketches, because you use them to sketch out what your device is supposed to do.
+We also like the name script, because it invokes the idea of a sequence of instructions: the programs you write are a set of instructions you give to the device and the order in which you want them to be executed.
 
-Computers are not particularly smart, so you need to be very explicit in your instructions.
+Computers follow instructions, and do not solve problems on their own. So, you need to be very explicit in the instructions that you write when you program!
 The particular language we are using imposes a certain structure on our programs.
-The most bare-bones program would look like this:
+The most bare-bones program looks like this:
 
 ```c++
 void setup() {
@@ -43,9 +45,9 @@ This block is used for setting up any initial conditions we might require.
 
 Next there is the `loop` block. This block is executed repeatedly "in a loop",
 starting immediately after `setup` is done and repeating itself until the power is turned off.
-Most of our instructions will be written in that block.
+Most of our instructions will be written in this block.
 They will frequently take the form of measuring time or motion,
-and then producing a color or a pattern of colors depending on the measurement.
+and then producing a color or a pattern of colors depending on the SpinWheel's measurement.
 
 <figure><video src="/images/bookpics/setup_loop.mp4" muted autoplay playsinline loop></video><figcaption> When you turn on the SpinWheel, `set_up()` is run once and then the `loop()` block is run repeatedly until the SpinWheel is turned off. </figcaption></figure>
 
@@ -114,9 +116,32 @@ You can modify the `setLargeLED` line to change the appearance of the SpinWheel.
 The first item (also called a "parameter") in the parentheses 
  <span class="footnote">identifies the affected LED<span>The number goes from 0 to 7.</span></span>
 and the other <span class="footnote">three numbers are the red,
-green, and blue components<span>They have to be numbers between 0 (color is off) and 255 (color is on at full brightness).</span></span> of the desired color. 
+green, and blue components<span>They have to be numbers between 0 (color is off) and 255 (color is on at full brightness).</span></span> of the desired color. Together, this line of code looks something like: SpinWheel.setLargeLED(LED_you_want_to_change, amount_of_red, amount_of_green, amount_of_blue). 
 
-There are a couple more things you might have noticed about the style of this language:
+![SpinWheel LED numbering.](/images/spinwheel_with_numbers.png "SpinWheel LED numbering")
+
+Play around with lighting up all of the different large LEDs, or combinations of them! For example, you can experiment with this virtual SpinWheel to light up the LEDs of your choice. What happens when you run the following code on the virtual SpinWheel or on your physical SpinWheel? How would you modify this code to light up the opposite set of LEDs?
+
+
+<div class="ssw-codecontent" markdown=0>
+<pre class="ssw-codeblock">
+void loop() {
+</pre>
+<textarea class="ssw-codeblock">
+  SpinWheel.setLargeLED(0, 255, 0, 0);
+  SpinWheel.setLargeLED(2, 255, 0, 0);
+  SpinWheel.setLargeLED(7, 255, 255, 255);
+  SpinWheel.setLargeLED(5, 255, 255, 255);
+  SpinWheel.drawFrame();
+</textarea>
+<pre class="ssw-codeblock">
+}
+</pre>
+</div>
+
+You will be seeing plenty more virtual SpinWheels in the upcoming adventures. You can use them to test and experiment with your code and see what the result might look like before uploading to your real SpinWheel!
+
+There are a couple more things you might have noticed about the style of this programming language:
 
 - We tend to have only one "command" per line. This makes the code more readable.
 - Each command is followed by a semicolon `;`. That makes it easier for the computer to separate different commands.
