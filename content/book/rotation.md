@@ -191,13 +191,12 @@ By steadily increasing $\theta$ (or the angle), you can draw a circle with a spe
 # Summary 
 
 Let's tie all of these concepts together to describe your ride on the merry-go-round! 
-On your first ride, you chose a horse on the outer ring of the merry-go-round. 
-Now, imagine a second ride where you chose the yellow horse to your left (closer to the center) instead. 
+On your first ride, you chose a purple horse on the outer ring of the merry-go-round. 
+Now, imagine a second ride where you chose the green horse that is closer to the senter instead. 
 How would the following properties of your trip change: Angular displacement, angular velocity, linear velocity, angular acceleration?
 
-![Here's a picture of this merry-go-round ride! Notice that the different radii for the canopy, inner horse, and outer horse. How will that affect their linear and rotational velocities? <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/merry-go-round.png)
-<!-- TODO: Add final version once Mariya uploads it -->
-
+![Here's a picture of this merry-go-round ride! Notice that the different radii for the blue, green, and purple horses. How will that affect their linear and rotational velocities? <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>
+](/images/bookpics/merry-go-round.png)
 
 <!-- TODO: Maybe hide this in a dropdown box that you have to click to open? -->
 
@@ -208,11 +207,11 @@ For angular velocity and acceleration, every horse on the ride would have the sa
 This is because the entire merry-go-round starts, moves, and stops together at the same rate.
 
 What would change between the two horses is your linear velocity. 
-Switching to a horse closer to the center decreases  $r$ and means you are traveling in a smaller circle. 
+Switching to a horse closer to the center (like the green horse) decreases  $r$ and means you are traveling in a smaller circle. 
 Just like for the ball on a string, when $r$ decreases, your linear velocity also decreases.
 
 What about if your friend chose the horse in front of you? In this case, your initial $\theta$ values would be different but your linear velocity and angular velocities would
-be identical for the entire ride. This is because you have the same $r$ values and same change in $\theta$ over time. 
+be identical for the entire ride. This is because you have the same $r$ values and same change in $\theta$ over time. What would be different if they chose the blue horse instead?
 
 
 Finally, let's think about how the ride changes over time?
