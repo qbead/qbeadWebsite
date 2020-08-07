@@ -47,6 +47,9 @@ Most of our instructions will be written in that block.
 They will frequently take the form of measuring time or motion,
 and then producing a color or a pattern of colors depending on the measurement.
 
+<figure><video src="/images/bookpics/setup_loop.mp4" muted autoplay playsinline loop></video><figcaption> When you turn on the SpinWheel, `set_up()` is run once and then the `loop()` block is run repeatedly until the SpinWheel is turned off. </figcaption></figure>
+
+
 To produce a program capable of sending instructions to the hardware of the SpinWheel
 (e.g. the LEDs and motion sensor), our program requires a few more lines:
 
