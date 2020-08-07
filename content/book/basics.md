@@ -124,6 +124,105 @@ There are a couple more things you might have noticed about the style of this la
 - Inside these parentheses we frequently put some extra information: this information can control how a command performs. For instance, in `setLargeLED` we have one parameter that selects the LED we want to modify and three parameters for the color of that LED.
 - There are other ways in which LED colors can be modified and motion be detected. We will be discussing many such tools in future pages.
 
+
+In order to produce more interesting patterns on our SpinWheel, we have to modify the loop section. Currently, every loop produces the same result; the same LED is lit up with the same color. To begin writing more complex code, we need to introduce the idea of *variables*.
+Variables allow us to store information in the program and change that information as needed.
+
 ::: further-reading
-We invite you to play with the [SpinWheel examples available in the Arduino software and to peruse the many suggested activities we have prepared for you](/book). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands) or to peruse the [code of this library](/codedoc/SpinWearables.h.html). If you would like to specifically focus on learning more about this programming language, you can see our [programming patterns page](/progpatterns).
+In this section, we will begin working with the building blocks of programming. These
+ideas are expanded upon in more detail in the [future lessons](/progpatterns). Feel free to go back and forth between these pages as you deepen your understanding of programming the SpinWheel.
+:::
+
+
+To **define** a new variable we can add the following line to the loop block:
+
+```c++
+int which_LED = 1;
+
+```
+This reserves a location in the memory of the computer, 
+lets us refer to that location by the name `which_LED`,
+and stores the value `1` there. By itself, this variable doesn't impact the output of the SpinWheel. We can use it to store the location of the LED we want to light up.
+
+```c++
+#include "SpinWearables.h"
+using namespace SpinWearables;
+
+void setup() {
+  SpinWheel.begin();
+}
+
+void loop() {
+  int which_LED = 1;
+  SpinWheel.setLargeLED(which_LED, 255, 0, 0);
+  SpinWheel.drawFrame();
+}
+```
+Try to copy this code into a new file in the Arduino software and upload it to your SpinWheel. If you change the value of `which_LED`, you'll see a different LED light up.
+
+In this code, every loop still produces the same result; `which_LED` has the same value every time `loop()` is run. Lets add another variable that controls the brightness of the LEDs and change the brightness every time loop is run.
+
+```c++
+#include "SpinWearables.h"
+using namespace SpinWearables;
+
+void setup() {
+  SpinWheel.begin();
+}
+
+// We have to declare brightness outside of the loop.
+int brightness = 0; 
+
+void loop() {
+
+  // change brightness value
+  brightness = brightness + 1;
+  
+  int which_LED = 1;
+  SpinWheel.setLargeLED(which_LED, brightness, 0, 0);
+  SpinWheel.drawFrame();
+  
+}
+```
+In this code, every loop increases the value of brightness by 1. This value is then used in `SpinWheel.setLargeLED()` to control the brightness of the red LED. This concept is further illustrated below. As each `loop()` block is run, the value stored in memory for `brightness` is changed.
+
+<video src="/images/bookpics/brightness_loop.mp4" muted autoplay playsinline loop></video>
+
+As the code runs on the SpinWheel, brightness will continually get larger. But the function `SpinWheel.setLargeLED()` can only take color values between 0 and 255. Luckily
+if it receives a larger value, it corrects for this problem. But we'd like to keep the value of brightness between 0 and 255. To do this, we can add an `if` statement to our code. 
+
+```c++
+#include "SpinWearables.h"
+using namespace SpinWearables;
+
+void setup() {
+  SpinWheel.begin();
+}
+
+// We have to declare brightness outside of the loop.
+int brightness = 0; 
+
+void loop() {
+
+  // change brightness value
+  brightness = brightness + 1;
+  
+  // if statement to keep brightness under 255
+  if (brightness > 255){
+  	brightness = 0;
+  	}
+  	
+  int which_LED = 1;
+  SpinWheel.setLargeLED(which_LED, brightness, 0, 0);
+  SpinWheel.drawFrame();
+  
+}
+```
+These extra lines of code will check if brightness is larger than 255. If it is, that value of brightness will be reset to 0 and the code will continue. Try playing around with this code to change the color of your SpinWheel, to decrease the brightness instead of increasing or change the speed of the brightness change.
+
+You have now written your first piece of code for the SpinWheel!! Continue the adventure by [making computer generated animations](/animation) or [learn about how colors are represented](/sight) in the SpinWheel. To learn more about the programming language used by the SpinWheel, check out our [programming patterns page](/progpatterns).
+
+
+::: further-reading
+We invite you to play with the [SpinWheel examples available in the Arduino software and to peruse the many suggested activities we have prepared for you](/book). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands) or to peruse the [code of this library](/codedoc/SpinWearables.h.html). 
 :::
