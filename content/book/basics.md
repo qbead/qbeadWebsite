@@ -141,23 +141,8 @@ void loop() {
 
 You will be seeing plenty more virtual SpinWheels in the upcoming adventures. You can use them to test and experiment with your code and see what the result might look like before uploading to your real SpinWheel!
 
-There are a couple more things you might have noticed about the style of this programming language:
-
-- We tend to have only one "command" per line. This makes the code more readable.
-- Each command is followed by a semicolon `;`. That makes it easier for the computer to separate different commands.
-- Commands tend to be some name followed by parentheses `()`.
-- Inside these parentheses we frequently put some extra information: this information can control how a command performs. For instance, in `setLargeLED` we have one parameter that selects the LED we want to modify and three parameters for the color of that LED.
-- There are other ways in which LED colors can be modified and motion be detected. We will be discussing many such tools in future pages.
-
-
 In order to produce more interesting patterns on our SpinWheel, we have to modify the loop section. Currently, every loop produces the same result; the same LED is lit up with the same color. To begin writing more complex code, we need to introduce the idea of *variables*.
 Variables allow us to store information in the program and change that information as needed.
-
-::: further-reading
-In this section, we will begin working with the building blocks of programming. These
-ideas are expanded upon in more detail in the [future lessons](/progpatterns). Feel free to go back and forth between these pages as you deepen your understanding of programming the SpinWheel.
-:::
-
 
 To **define** a new variable we can add the following line to the loop block:
 
@@ -184,6 +169,11 @@ void loop() {
 }
 ```
 Try to copy this code into a new file in the Arduino software and upload it to your SpinWheel. If you change the value of `which_LED`, you'll see a different LED light up.
+
+::: further-reading
+To learn more about variables and other important concepts for creating programs, check out our [lesson on the building blocks of programming]](/progpatterns). 
+We encourage you to go back and forth between these pages as you deepen your understanding of programming the SpinWheel.
+:::
 
 In this code, every loop still produces the same result; `which_LED` has the same value every time `loop()` is run. Lets add another variable that controls the brightness of the LEDs and change the brightness every time loop is run.
 
@@ -214,7 +204,13 @@ In this code, every loop increases the value of brightness by 1. This value is t
 <video src="/images/bookpics/brightness_loop.mp4" muted autoplay playsinline loop></video>
 
 As the code runs on the SpinWheel, brightness will continually get larger. But the function `SpinWheel.setLargeLED()` can only take color values between 0 and 255. Luckily
-if it receives a larger value, it corrects for this problem. But we'd like to keep the value of brightness between 0 and 255. To do this, we can add an `if` statement to our code. 
+if it receives a larger value, it corrects for this problem.
+
+In this example, your SpinWheel increases to its maximum brightness and then will just hold there. What if instead you wanted this pattern to repeat itself over and over again? Check out the [animations and patterns](/animation) adventure next to learn how!  
+
+<!--
+
+But we'd like to keep the value of brightness between 0 and 255. To do this, we can add an `if` statement to our code. 
 
 ```c++
 #include "SpinWearables.h"
@@ -245,9 +241,22 @@ void loop() {
 ```
 These extra lines of code will check if brightness is larger than 255. If it is, that value of brightness will be reset to 0 and the code will continue. Try playing around with this code to change the color of your SpinWheel, to decrease the brightness instead of increasing or change the speed of the brightness change.
 
+-->
+
 You have now written your first piece of code for the SpinWheel!! Continue the adventure by [making computer generated animations](/animation) or [learn about how colors are represented](/sight) in the SpinWheel. To learn more about the programming language used by the SpinWheel, check out our [programming patterns page](/progpatterns).
 
+There are a couple more things you might have noticed about the style of this programming language:
+
+- We tend to have only one "command" per line. This makes the code more readable.
+- Each command is followed by a semicolon `;`. That makes it easier for the computer to separate different commands.
+- Commands tend to be some name followed by parentheses `()`.
+- Inside these parentheses we frequently put some extra information: this information can control how a command performs. For instance, in `setLargeLED` we have one parameter that selects the LED we want to modify and three parameters for the color of that LED.
+- There are other ways in which LED colors can be modified and motion be detected. We will be discussing many such tools in future pages.
 
 ::: further-reading
 We invite you to play with the [SpinWheel examples available in the Arduino software and to peruse the many suggested activities we have prepared for you](/book). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands) or to peruse the [code of this library](/codedoc/SpinWearables.h.html). 
 :::
+
+
+
+
