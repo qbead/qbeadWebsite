@@ -37,7 +37,7 @@ The SpinWheel contains sensitive electronic components that are securely soldere
 
 4. To turn off the SpinWheel, flip the switch to "USB".
 
-5. To charge, plug a micro USB cable into the USB jack on the back of the SpinWheel, keep the switch on "USB" and charge using a computer or USB-to-wall converter. The switch should be set to "USB" whenever it is plugged into your computer, whether to charge or to program. You should also keep the switch in this position when you are not using the SpinWheel and for long term storage to protect the battery from discharging. Note: the battery may require charging before use.
+5. To charge, plug a micro USB cable into the USB jack on the back of the SpinWheel, keep the switch on "USB" and charge using a computer or USB-to-wall converter. The switch should be set to "USB" whenever it is plugged into your computer, whether to charge or to program. You should also keep the switch in this position when you are not using the SpinWheel and for long term storage to protect the battery from discharging. Note: the battery may require charging before use. Reaching full charge takes approximately 1 hr.
 
 Your kit may have come with a paper booklet (the SpinWheel [Field Guide](/book)) with some hands-on adventures and reference materials to assist you as you are programming the SpinWheel. The activities in the booklet are also found in expanded versions online. We highly recommend that you make use of both. 
 
