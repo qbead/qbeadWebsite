@@ -11,7 +11,10 @@ process of setting you up to create new and exciting programs on your SpinWheel!
 
 ## Contents
 
-Your kit contains a SpinWheel, a battery, and if you ordered one, a paper copy of the SpinWheel Field Guide. A micro USB cable is needed to charge and program the SpinWheel and is not included with the kit. You likely already own a micro USB cable (a Kindle or an old Android smartphone would use such a cable), but you can also buy a micro USB cable online.
+Your kit contains a SpinWheel, a battery, and if you ordered one, a paper copy of the SpinWheel Field Guide. 
+It also includes a piece of double stick tape to attach the battery.
+A micro USB cable is needed to charge and program the SpinWheel and is not included with the kit. 
+You likely already own a micro USB cable (a Kindle or an old Android smartphone would use such a cable), but you can also buy a micro USB cable online.
 
 The SpinWheel has four main components: a power source (the battery), a sensor (for motion and magnetic fields), a set of lights (the light emitting diodes, or LEDs), and a micro computer (the brain of the device).
 
@@ -53,7 +56,7 @@ After you add the battery, you can use the two-sided tape included in your packa
 
 ## Setting Up the Arduino Software
 
-While you can use the SpinWheel with the preloaded animations, much of the joy of the SpinWheel comes from your potential to change it, and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. Start by installing the Arduino software on your computer, which you can download for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software#download). Select the correct version for your computer's operating system.
+While you can use the SpinWheel with the preloaded animations, much of the joy of the SpinWheel comes from your ability to change it, and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. Start by installing the Arduino software on your computer, which you can download for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software#download). Select the correct version for your computer's operating system.
 
 Once the software is installed, we have to configure it to communicate with the SpinWheel.
 
@@ -63,7 +66,7 @@ Once the software is installed, we have to configure it to communicate with the 
 
 3. Open the `Tools` menu and go to `Port`. You will see a list of serial ports on your computer; you need to find the one for the SpinWheel. If there are multiple ports and you are unsure which one to use, simply unplug the SpinWheel and see which serial port disappears when you do so. This port corresponds to your SpinWheel's serial port. If you do not see a port appear/disappear, you may need to try another micro USB cable. <!--(see Troubleshooting guide for more details).-->
 
-4. Go back to the Tools menu and select `Tools → Board`. Select Arduino Leonardo as the board (a.k.a. processor), so that the software knows which “dialect” to use to talk to the SpinWheel (computer languages have dialects just like human languages!).
+4. Go back to the Tools menu and select `Tools → Board`. Select Arduino Leonardo as the board (a.k.a. processor), so that the software knows which <span class="footnote">“dialect” <span>Computer languages have dialects just like human languages!</span></span> to use to talk to the SpinWheel.
 
 ![Use `Tools → Port` and `Tools → Board` to pick the port corresponding to the SpinWheel and the "Leonardo" board type. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/port_and_board_screenshot.png "Use `Tools→ Port` and `Tools→ Board` to change the settings on the Arduino software.")
 
