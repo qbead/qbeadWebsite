@@ -88,7 +88,7 @@ with the new knowledge of programming you have gained.
 These adventures assume that you have no coding experience and are a great way to become comfortable with both the SpinWheel and coding. The associated lessons go into more depth on the concepts that are referenced for the first time in these adventures. We have written the lessons to supplement the content in the adventures and we provide links in each adventure when we recommend checking them out to learn more. We hope these will spark your curiousity to learn even more about the world around you!
 
 1. [Biology of Sight](/sight)
-2. [Animations and Patterns](/animation)
+2. [Intro to Animation](/animation)
 3. Stroboscope and Stroboscopic Photography (planned)
 
 ### Associated Lessons
@@ -102,8 +102,9 @@ These adventures assume that you have no coding experience and are a great way t
 
 These activities build on the ideas presented in the introductory adventures. If you have coding experience, you can jump right in and then refer back to the earlier adventures and lessons as you have questions.
 
-1. [Make a Step Counter](/stepcounter)
-2. [Dancing with Color](/dancing)
+1. [Animations and Patterns](/animation2)
+2. [Make a Step Counter](/stepcounter)
+3. [Dancing with Color](/dancing)
 
 ### Associated Lessons
 1. [Vectors and Motion](/vectors)
