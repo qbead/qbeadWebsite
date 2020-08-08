@@ -141,6 +141,11 @@ void loop() {
 
 You will be seeing plenty more virtual SpinWheels in the upcoming adventures. You can use them to test and experiment with your code and see what the result might look like before uploading to your real SpinWheel!
 
+::: further-reading
+If you are eager to customize the SpinWheel in other ways (for instance by lighting up the small LEDs), check out the [list of ways to manipulate the SpinWheel's LEDs](/allcommands) we have created. 
+For each of the functions introduced, there is a virtual SpinWheel to allow you to experiment with the code and become comfortable with how it works.
+:::
+
 In order to produce more interesting patterns on our SpinWheel, we have to modify the loop section. Currently, every loop produces the same result; the same LED is lit up with the same color. To begin writing more complex code, we need to introduce the idea of *variables*.
 Variables allow us to store information in the program and change that information as needed.
 
@@ -203,10 +208,11 @@ In this code, every loop increases the value of brightness by 1. This value is t
 
 <video src="/images/bookpics/brightness_loop.mp4" muted autoplay playsinline loop></video>
 
-As the code runs on the SpinWheel, brightness will continually get larger. But the function `SpinWheel.setLargeLED()` can only take color values between 0 and 255. Luckily
-if it receives a larger value, it corrects for this problem.
-
-In this example, your SpinWheel increases to its maximum brightness and then will just hold there. What if instead you wanted this pattern to repeat itself over and over again? Check out the [animations and patterns](/animation) adventure next to learn how!  
+As the code runs on the SpinWheel, brightness will continually get larger. 
+But the function `SpinWheel.setLargeLED()` can only take color values between 0 and 255. 
+Once your SpinWheel reaches 255, the LEDs will be at their maximum brightness and can't get any brighter. 
+Luckily if it receives a larger value, the SpinWheel corrects for this problem and continues to just hold at its maximum brightness.  What if instead you wanted this pattern to repeat itself over and over again? 
+Check out the adventure on [creating computer generated animations](/animation) to learn how!  
 
 <!--
 
@@ -243,7 +249,10 @@ These extra lines of code will check if brightness is larger than 255. If it is,
 
 -->
 
-You have now written your first piece of code for the SpinWheel!! Continue the adventure by [making computer generated animations](/animation) or [learn about how colors are represented](/sight) in the SpinWheel. To learn more about the programming language used by the SpinWheel, check out our [programming patterns page](/progpatterns).
+You have now written your first piece of code for the SpinWheel!! 
+
+Continue the adventure by [making computer generated animations](/animation) or [learn about how colors are represented](/sight) in the SpinWheel. 
+To learn more about the programming language used by the SpinWheel, check out our [programming patterns page](/progpatterns).
 
 There are a couple more things you might have noticed about the style of this programming language:
 

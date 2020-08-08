@@ -78,10 +78,9 @@ These two pages provide instructions for setting up your SpinWheel
 and the basic structure of the programs the SpinWheel uses.
 
 1. [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures.
-2. [Basic Structure of a Program](/basics): This page is not required to complete SpinWheel
-activities, but provides basic information on the structure of programs. 
-Use it to establish a vague intuition about the code and use that intuition in the first few adventures.
-Then go back to this page and try to read it and pages linked within again, 
+2. [Basic Structure of a Program](/basics): Here we provide introductory information on the structure of programs that will help you jump into the intro adventures, particularly if you have never coded before. 
+As you try the other adventures, refer back to this material and the linked pages again 
+and see what more you understand
 with the new knowledge of programming you have gained.
 
 ## Intro Adventures
