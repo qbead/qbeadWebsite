@@ -1,5 +1,5 @@
 ---
-title: Animations and patterns
+title: Intro to Animation
 keywords: animations, frames, timing
 ---
 
