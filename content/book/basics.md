@@ -22,6 +22,8 @@ program, sketch, script, etc.
 Arduino tends to call them sketches, because you use them to sketch out what your device is supposed to do.
 We also like the name script, because it invokes the idea of a sequence of instructions: the programs you write are a set of instructions you give to the device and the order in which you want them to be executed.
 
+## Writing your first sketch
+
 Computers follow instructions, and do not solve problems on their own. So, you need to be very explicit in the instructions that you write when you program!
 The particular language we are using imposes a certain structure on our programs.
 The most bare-bones program looks like this:
@@ -49,7 +51,7 @@ Most of our instructions will be written in this block.
 They will frequently take the form of measuring time or motion,
 and then producing a color or a pattern of colors depending on the SpinWheel's measurement.
 
-<figure><video src="/images/bookpics/setup_loop.mp4" muted autoplay playsinline loop></video><figcaption> When you turn on the SpinWheel, `set_up()` is run once and then the `loop()` block is run repeatedly until the SpinWheel is turned off. </figcaption></figure>
+<figure><video src="/images/bookpics/setup_loop.mp4" muted autoplay playsinline loop></video><figcaption> When you turn on the SpinWheel, `setup()` is run once and then the `loop()` block is run repeatedly until the SpinWheel is turned off. </figcaption></figure>
 
 
 To produce a program capable of sending instructions to the hardware of the SpinWheel
@@ -116,7 +118,7 @@ You can modify the `setLargeLED` line to change the appearance of the SpinWheel.
 The first item (also called a "parameter") in the parentheses 
  <span class="footnote">identifies the affected LED<span>The number goes from 0 to 7.</span></span>
 and the other <span class="footnote">three numbers are the red,
-green, and blue components<span>They have to be numbers between 0 (color is off) and 255 (color is on at full brightness).</span></span> of the desired color. Together, this line of code looks something like: SpinWheel.setLargeLED(LED_you_want_to_change, amount_of_red, amount_of_green, amount_of_blue). 
+green, and blue components<span>They have to be numbers between 0 (color is off) and 255 (color is on at full brightness).</span></span> of the desired color. Together, this line of code looks something like: `SpinWheel.setLargeLED(LED_you_want_to_change, amount_of_red, amount_of_green, amount_of_blue)`. 
 
 ![SpinWheel LED numbering.](/images/spinwheel_with_numbers.png "SpinWheel LED numbering")
 
@@ -145,6 +147,8 @@ You will be seeing plenty more virtual SpinWheels in the upcoming adventures. Yo
 If you are eager to customize the SpinWheel in other ways (for instance by lighting up the small LEDs), check out the [list of ways to manipulate the SpinWheel's LEDs](/allcommands) we have created. 
 For each of the functions introduced, there is a virtual SpinWheel to allow you to experiment with the code and become comfortable with how it works.
 :::
+
+## Creating changing patterns
 
 In order to produce more interesting patterns on our SpinWheel, we have to modify the loop section. Currently, every loop produces the same result; the same LED is lit up with the same color. To begin writing more complex code, we need to introduce the idea of *variables*.
 Variables allow us to store information in the program and change that information as needed.
@@ -176,7 +180,7 @@ void loop() {
 Try to copy this code into a new file in the Arduino software and upload it to your SpinWheel. If you change the value of `which_LED`, you'll see a different LED light up.
 
 ::: further-reading
-To learn more about variables and other important concepts for creating programs, check out our [lesson on the building blocks of programming]](/progpatterns). 
+To learn more about variables and other important concepts for creating programs, check out our [lesson on the building blocks of programming](/progpatterns). 
 We encourage you to go back and forth between these pages as you deepen your understanding of programming the SpinWheel.
 :::
 
@@ -190,66 +194,37 @@ void setup() {
   SpinWheel.begin();
 }
 
-// We have to declare brightness outside of the loop.
-int brightness = 0; 
+// We have to declare which_LED outside of the loop to change it every loop
+int which_LED = 0; 
 
 void loop() {
 
-  // change brightness value
-  brightness = brightness + 1;
+  // clear all LEDs
+  SpinWheel.clearAllLEDs();
   
-  int which_LED = 1;
-  SpinWheel.setLargeLED(which_LED, brightness, 0, 0);
+  // Turn on 1 LED
+  SpinWheel.setLargeLED(which_LED, 255, 0, 0);
   SpinWheel.drawFrame();
+  
+  // change the LED to use
+  which_LED = which_LED + 1;
+  
+  // pause the code to delay running the next loop
+  delay(500);
   
 }
 ```
-In this code, every loop increases the value of brightness by 1. This value is then used in `SpinWheel.setLargeLED()` to control the brightness of the red LED. This concept is further illustrated below. As each `loop()` block is run, the value stored in memory for `brightness` is changed.
+In this code, every loop increases the value of `which_LED` by 1. This value is then used in `SpinWheel.setLargeLED()` to indicate the LED to light up. This concept is further illustrated below. As each `loop()` block is run, the value stored in memory for `which_LED` is changed. Because the `loop` block runs many times a second, we have added the line `delay(500)` to pause the code for 500 milliseconds (0.5 seconds) before the loop if finished. Without the delay, the lights would change too quickly for us to see the change.
 
 <video src="/images/bookpics/brightness_loop.mp4" muted autoplay playsinline loop></video>
 
-As the code runs on the SpinWheel, brightness will continually get larger. 
-But the function `SpinWheel.setLargeLED()` can only take color values between 0 and 255. 
-Once your SpinWheel reaches 255, the LEDs will be at their maximum brightness and can't get any brighter. 
-Luckily if it receives a larger value, the SpinWheel corrects for this problem and continues to just hold at its maximum brightness.  What if instead you wanted this pattern to repeat itself over and over again? 
+You may have noticed that after a few seconds your SpinWheel stops lighting up. This is because the value in `which_LED` no longer corresponds to one of the 8 LEDs on the SpinWheel. For example, if `which_LED` equals 10, the code will try to turn on LED number 10. Since it doesn't exist, nothing happens. To light up the SpinWheel again, unplug it or toggle the BAT/USB switch. This restarts the code, running `setup` again and starting `which_LED` over at 0.
+
+What if instead you wanted this pattern to repeat itself over and over again? 
 Check out the adventure on [creating computer generated animations](/animation) to learn how!  
 
-<!--
 
-But we'd like to keep the value of brightness between 0 and 255. To do this, we can add an `if` statement to our code. 
-
-```c++
-#include "SpinWearables.h"
-using namespace SpinWearables;
-
-void setup() {
-  SpinWheel.begin();
-}
-
-// We have to declare brightness outside of the loop.
-int brightness = 0; 
-
-void loop() {
-
-  // change brightness value
-  brightness = brightness + 1;
-  
-  // if statement to keep brightness under 255
-  if (brightness > 255){
-  	brightness = 0;
-  	}
-  	
-  int which_LED = 1;
-  SpinWheel.setLargeLED(which_LED, brightness, 0, 0);
-  SpinWheel.drawFrame();
-  
-}
-```
-These extra lines of code will check if brightness is larger than 255. If it is, that value of brightness will be reset to 0 and the code will continue. Try playing around with this code to change the color of your SpinWheel, to decrease the brightness instead of increasing or change the speed of the brightness change.
-
--->
-
-You have now written your first piece of code for the SpinWheel!! 
+You have now written your first piece of code for the SpinWheel!
 
 Continue the adventure by [making computer generated animations](/animation) or [learn about how colors are represented](/sight) in the SpinWheel. 
 To learn more about the programming language used by the SpinWheel, check out our [programming patterns page](/progpatterns).

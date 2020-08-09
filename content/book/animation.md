@@ -86,6 +86,9 @@ The rest of the small piece of code depicted above ensures that the number of mi
 
 <!--FIGURE: An image showing the type and name on the lhs, and the expression on the rhs, stressing the rigidity of this syntax.-->
 
+<figure><video src="/images/bookpics/time_loop.mp4" muted autoplay playsinline loop></video><figcaption> Every time the loop block is run, t is set to millis() and shows the number of milliseconds since the setup() was run. </figcaption></figure>
+
+
 The entirety of our animation will depend on the number stored in this `time` variable.
 Based on that number, another piece of code can decide when to shine a given color,
 when to be illuminating brightly or showing subdued colors,
