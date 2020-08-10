@@ -24,7 +24,7 @@ We also like the name script, because it invokes the idea of a sequence of instr
 
 ## Writing your first sketch
 
-Computers follow instructions, and do not solve problems on their own. So, you need to be very explicit in the instructions that you write when you program!
+Computers follow instructions, and do not solve problems on their own. So, you need to be very explicit in the instructions that you write in your programs!
 The particular language we are using imposes a certain structure on our programs.
 The most bare-bones program looks like this:
 
@@ -141,7 +141,7 @@ void loop() {
 </pre>
 </div>
 
-You will be seeing plenty more virtual SpinWheels in the upcoming adventures. You can use them to test and experiment with your code and see what the result might look like before uploading to your real SpinWheel!
+You will be seeing plenty more virtual SpinWheels in the upcoming adventures. You can use them to test and experiment with your code and see what the result might look like before uploading to your real SpinWheel! The virtual Spinwheels will only show the `loop` block of the code. Make sure to add the `setup` block when copying into the Arduino software!
 
 ::: further-reading
 If you are eager to customize the SpinWheel in other ways (for instance by lighting up the small LEDs), check out the [list of ways to manipulate the SpinWheel's LEDs](/allcommands) we have created. 
@@ -184,7 +184,7 @@ To learn more about variables and other important concepts for creating programs
 We encourage you to go back and forth between these pages as you deepen your understanding of programming the SpinWheel.
 :::
 
-In this code, every loop still produces the same result; `which_LED` has the same value every time `loop()` is run. Lets add another variable that controls the brightness of the LEDs and change the brightness every time loop is run.
+In this code, every loop still produces the same result; `which_LED` has the same value every time `loop()` is run. Lets modify the code to change the selected LED every time loop is run.
 
 ```c++
 #include "SpinWearables.h"
@@ -214,7 +214,7 @@ void loop() {
   
 }
 ```
-In this code, every loop increases the value of `which_LED` by 1. This value is then used in `SpinWheel.setLargeLED()` to indicate the LED to light up. This concept is further illustrated below. As each `loop()` block is run, the value stored in memory for `which_LED` is changed. Because the `loop` block runs many times a second, we have added the line `delay(500)` to pause the code for 500 milliseconds (0.5 seconds) before the loop if finished. Without the delay, the lights would change too quickly for us to see the change.
+In this code, every loop increases the value of `which_LED` by 1. This value is then used in `SpinWheel.setLargeLED()` to indicate the LED to light up. This concept is further illustrated below. As each `loop()` block is run, the value stored in memory for `which_LED` is changed. Because the `loop` block runs many times a second, we have added the line `delay(500)` to pause the code for 500 milliseconds (0.5 seconds) before the loop is finished. Without the delay, the lights would change too quickly for us to see the change.
 
 <video src="/images/bookpics/brightness_loop.mp4" muted autoplay playsinline loop></video>
 
