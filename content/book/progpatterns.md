@@ -88,7 +88,7 @@ around it, like blinking an LED, playing a sound, or sending a message.
 Most programing languages have some functions built into them, similar to how
 a new cellphone comes with pre-installed apps. We can use these functions without
 having to write them ourselves.
-Here is an example function called `max` that takes two
+Here is some code that uses an example function called `max` that takes two
 numbers as input and returns the larger number. The input values are also called the
 **arguments** of the function.
 
@@ -173,7 +173,7 @@ Let's step through each part of this code.
 * `float avg(.....)`: The very first `float` specifies the type of data the
 function will produce (in this case they
 are decimals). This is followed by the name we have picked for our function, `avg`. 
-* `float first_argument, float second_argument`: In parentheses, we have a list of the arguments the function
+* `(float first_argument, float second_argument)`: In parentheses, we have a list of the arguments the function
 will be taking. Unlike when we call the function, we have to specify their types, 
 so we wrote `float` to denote working with decimals. We also gave
 temporary names for these arguments so that we can refer to them in the function. 
@@ -187,7 +187,7 @@ We can have multiple sequential instructions inside the block when the
 computation is more difficult. That is the purpose of the curly brackets `{ }`
 - to separate all the code that defines our function from the rest of the
 program that might be in the same file. For instance, here we will show how to compute the fourth root of a number. 
-The fourth root of a number, or x raised to the $\frac{1}{4}$ power, can be computed by taking the square root of a square root 
+The fourth root of a number, or x raised to the $\frac{1}{4}$ power, can be computed by taking the square root of the square root 
 and we will use this fact to write the fourth root function below.
 
 ```c++
@@ -268,6 +268,11 @@ to run these functions first. It finds the `setup` function and runs it
 before anything else. Usually this function is used to **set up** any
 settings we need in advance. Then the computer repeatedly runs the `loop`
 function, which is named this way because it **runs in a loop** (or repeats itself).
+
+::: further-reading
+To learn more about the `setup` and `loop` functions, check out
+ [the basic structure of a program](/basics) page.  
+:::
 
 Here is a large example that includes all these features. It will use the
 `Serial.println()` function in order to send messages to the computer.
