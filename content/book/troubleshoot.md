@@ -57,10 +57,10 @@ cables that were intended to be used to transfer information and not just for ch
 
 If this is the first sketch you are trying to upload, 
 start here and look a bit closer at the error message. 
-Error messages will appear at the bottom of the window with your sketch when you upload it onto the device. 
-You only will be able to see part of the error message with the default layout of the window, 
-but you can resize it to read the full message. 
-We include some example errors below to help with troubleshooting.
+
+![Here is an example of how your window will look if your code faied. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/troubleshoot/error_message.png "Example SpinWheel error message.")
+
+Error messages will appear at the bottom of the window with your sketch when you upload it onto the device. You only will be able to see part of the error message with the default layout of the window, but you can resize it to read the full message. We include some example errors below to help with troubleshooting.
 
 1. First make sure you have the proper board selected. 
 This error message `avrdude: ser_open(): can't open device "/dev/cu.usbmodem142101": No such file or directory` indicates that you likely need to change which board you chose to the Arduino Leonardo. 
