@@ -12,7 +12,6 @@ process of setting you up to create new and exciting programs on your SpinWheel!
 ## Contents
 
 Your kit contains a SpinWheel, a battery, and, if you ordered one, a paper copy of the SpinWheel Field Guide. 
-It also includes a piece of double stick tape to attach the battery.
 A micro USB cable is needed to charge and program the SpinWheel and is not included with the kit. 
 You likely already own a micro USB cable (a Kindle or an old Android smartphone would use such a cable), but you can also buy a micro USB cable online.
 
@@ -29,7 +28,7 @@ The SpinWheel contains sensitive electronic components that are securely soldere
 
 ![<a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/arduino_library_setup.small.png "Arduino setup.")
 
-1. You'll notice that the battery is not attached to the SpinWheel when you receive it. Before attaching the battery, slide the switch on the back of the SpinWheel to be on "USB." To attach the battery, firmly insert the battery connector into the battery jack on the circuit board. If you have difficulty, then read the section on "Attaching the Battery" below. 
+1. The battery of your Spinwheel might not be attached when you receive it. Before attaching the battery, slide the switch on the back of the SpinWheel to be on "USB." To attach the battery, firmly insert the battery connector into the battery jack on the circuit board. If you have difficulty, see our [troubleshooting guide](/troubleshoot). 
 
 2. Once the battery is in, you can start using the SpinWheel as a wearable accessory! It comes preloaded with several basic animations. To turn on the SpinWheel, flip the switch on the back to "BAT" (for "battery"). You should see it turn on and light up brightly! 
 
@@ -40,17 +39,6 @@ The SpinWheel contains sensitive electronic components that are securely soldere
 5. To charge, plug a micro USB cable into the USB jack on the back of the SpinWheel, keep the switch on "USB" and charge using a computer or USB-to-wall converter. The switch should be set to "USB" whenever it is plugged into your computer, whether to charge or to program. You should also keep the switch in this position when you are not using the SpinWheel and for long term storage to protect the battery from discharging. Note: the battery may require charging before use. Reaching full charge takes approximately 1 hr.
 
 Your kit may have come with a paper booklet (the SpinWheel [Field Guide](/book)) with some hands-on adventures and reference materials to assist you as you are programming the SpinWheel. The activities in the booklet are also found in expanded versions online. We highly recommend that you make use of both. 
-
-## Attaching the Battery
-
-When you try to insert the battery, you may find that the connection between the battery and the SpinWheel is very tight. 
-This is normal and it may take some force to insert it. 
-We recommend using your thumbs on either side of the connector to push it up into the jack. 
-You do not need to insert it all of the way for a secure connection.
-While it is fine to use force on the plastic connector, it is very important not to pierce or bend the battery itself.
-After you add the battery, you can use the two-sided tape included in your package to attach it to the back of the SpinWheel as shown in the photo below.
-
-![This is what the back of your SpinWheel will look like when the battery is attached to the board. When the SpinWheel is off, charging, or being programmed, make sure that the switch is in the "USB" position as shown.](/images/quickstart/battery_back.jpg "Here is an image of what the battery will look like when it added onto the board.")
 
 
 
