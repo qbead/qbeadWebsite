@@ -51,16 +51,16 @@ cables that were intended to be used to transfer information and not just for ch
 ## My code won't upload onto my SpinWheel
 
 If this is the first sketch you are trying to upload, 
-start here and make sure that you have the correct port and board selected. Reminder: your board should say Arduino Leonardo, and your port should correspond to the port your USB cable is plugged into (see above). 
+start here and make sure that you have the correct board and port selected. Reminder: your board should say Arduino Leonardo, and your port should correspond to the port your USB cable is plugged into (see above). 
 If you recently closed the software and opened it again, make sure to double check your board and port assignments.
 
-1. Error messages will appear at the bottom of the window with your sketch when upload it onto the device. You only will be able to see part of the error message with the default layout of the window, but you can resize it to read the full message. We include some example errors below to help with troubleshooting.
+1. Error messages will appear at the bottom of the window with your sketch when you upload it onto the device. You only will be able to see part of the error message with the default layout of the window, but you can resize it to read the full message. We include some example errors below to help with troubleshooting.
 
 2. This error message `avrdude: ser_open(): can't open device "/dev/cu.usbmodem142101": No such file or directory` indicates that you have the wrong board selected. To fix this, navigate to `Tools → Board:` and click on `Arduino Leonardo`.
 
 3. If instead you have the message `avrdude: butterfly_recv(): programmer is not responding` repeating itself, then you haven't picked the right port. See the above section "Arduino won't recognize my SpinWheel" for more help.
 
-4. If you have an error like `In file included from [will give the file location] fatal error: Adafruit_NeoPixel.h: No such file or directory #include "Adafruit_NeoPixel.h"`, then you likely need to install the SpinWearables library. If you don't remember doing this, then you can install it using `Sketch → Include Library → Manage Libraries...`. In the search bar of the Library Manager, search for `SpinWearables` and then click `Install`. If you navigate to the libraries installer and you search for `SpinWearables` and see the word "Installed" next to the library name, your library is already included.
+4. If you have an error like `In file included from [file location] fatal error: Adafruit_NeoPixel.h: No such file or directory #include "Adafruit_NeoPixel.h"`, then you likely need to install the SpinWearables library. If you don't remember doing this, then you can install it using `Sketch → Include Library → Manage Libraries...`. In the search bar of the Library Manager, search for `SpinWearables` and then click `Install`. If you navigate to the libraries installer and you search for `SpinWearables` and see the word "Installed" next to the library name, your library is already included.
 
 5. If you have done all of these things, you can try unplugging your SpinWheel and plugging it back in again
 or try restarting the Arduino software. 
