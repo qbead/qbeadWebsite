@@ -56,7 +56,9 @@ After you add the battery, you can use the two-sided tape included in your packa
 
 ## Setting Up the Arduino Software
 
-While you can use the SpinWheel with the preloaded animations, much of the joy of the SpinWheel comes from your ability to change it, and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. Start by installing the Arduino software on your computer, which you can download for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software#download). Select the correct version for your computer's operating system.
+While you can use the SpinWheel with the preloaded animations, much of the joy of the SpinWheel comes from your ability to change it, and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. The rest of the guide will get you to a point where you can add a new animation to your SpinWheel. Do not worry if you find this part challenging, as you are trying to learn something new. If you get stuck, check out the [troubleshooting guide](/troubleshoot) and don't be afraid to experiment. While feeling confused is normal, it will get easier as you go!
+
+Start by installing the Arduino software on your computer, which you can download for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software#download). Select the correct version for your computer's operating system.
 
 Once the software is installed, we have to configure it to communicate with the SpinWheel.
 
