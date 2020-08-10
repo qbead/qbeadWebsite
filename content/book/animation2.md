@@ -30,7 +30,7 @@ There is a whole universe of patterns you can create with the SpinWheel:
 simply pick a piece of paper,
 draw the pattern you desire,
 and translate it to an expression of code and math that implements it.
-However, that much freedom can be paralysing at first.
+However, that much freedom can be daunting at first.
 Here we will start by modifying the animation that you created in the [intro adventure on animation](/animation).
 Then we will present some additional sketches that allow you to create animations with changing colors and where you can control each LED separately.
 We invite you upload these sketches from `Examples → SpinWearables → Animations_and_Patterns` to see what they do on your SpinWheel and then experiment with modifying them.
@@ -38,14 +38,14 @@ We invite you upload these sketches from `Examples → SpinWearables → Animati
 
 ### Smoother pulsing
 
-First, notice that the brightness of the LEDs in the [sketch we present in the intro to animation](/codedoc/examples/Animations_and_Patterns/Simple_Blink) was abruptly cut off.
+You may have noticed that the brightness of the LEDs in the [sketch we present in the intro to animation](/codedoc/examples/Animations_and_Patterns/Simple_Blink) was abruptly cut off.
 Wouldn't it be prettier if we gently turned off the LEDs, similarly to how gently we are ramping them up?
 We can perform this by writing a function that first goes up and then slowly goes back down.
 We have already written such a function for you to use
 and called it [`triangularWave`](/codedoc/SpinWearables.h.html#triangular-wave),
 because when you plot it, it looks like a series of triangles.
 
-<figure><video src="/images/bookpics/triangular_wave.mp4" muted autoplay playsinline loop></video><figcaption>Instead of the sawtooth time-dependent pattern of brightness we saw previously, we can employ a pattern that also decreases steadily (instead of abruptly dropping to zero), making for a more pleasant pulsing light.</figcaption></figure>
+<figure><video src="/images/bookpics/triangular_wave.mp4" muted autoplay playsinline loop></video><figcaption>Instead of the pattern of brightness that abruptly dropped to zero that we saw previously, we can employ a pattern that also decreases steadily, making for a more pleasant pulsing light.</figcaption></figure>
 
 Below you can see a small modification of our previous example that employs such triangular waves.
 In order to also show some color, instead of purely white LEDs,
@@ -204,6 +204,7 @@ Try to have some of them (e.g. the small ones) have varying brightness,
 while others (e.g. the large ones) have changing colors.
 Mix and match code from the previous examples.
 Let your creativity sing through the code.
+
 
 ::: further-reading
 You might have noticed that many of the functions and commands we have used are set to repeat themselves when their input passes through 255. There is a reason for this. There are 256 numbers from 0 to 255. And 256 is exactly how many different values can be stored in one byte. One byte is how much space is dedicated to many typical variables in the language used by the Arduino software, hence, many of its functions are written to expect numerical values on that scale.
