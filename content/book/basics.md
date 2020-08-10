@@ -220,9 +220,10 @@ In this code, every loop increases the value of `which_LED` by 1. This value is 
 
 You may have noticed that after a few seconds your SpinWheel stops lighting up. This is because the value in `which_LED` no longer corresponds to one of the 8 LEDs on the SpinWheel. For example, if `which_LED` equals 10, the code will try to turn on LED number 10. Since it doesn't exist, nothing happens. To light up the SpinWheel again, unplug it or toggle the BAT/USB switch. This restarts the code, running `setup` again and starting `which_LED` over at 0.
 
+::: further-reading
 What if instead you wanted this pattern to repeat itself over and over again? 
 Check out the adventure on [creating computer generated animations](/animation) to learn how!  
-
+:::
 
 You have now written your first piece of code for the SpinWheel!
 
