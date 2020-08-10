@@ -24,7 +24,7 @@ and we can help sort it out.
 
 ## I can't plug my battery into my SpinWheel
 
-The battery fits very snuggly into its jack on the SpinWheel, so attaching your battery can be challenging. You can push with plenty of force on the plastic plug of the battery - just make sure to be careful not to twist or damage the battery's wires or the body of the battery itself. Make sure the notch at the top of the battery plug is lined up with the notch on the jack attached to the SpinWheel. Use both thumbs to push the battery into place. The battery does not need to fit all the way into the jack; you just need to make sure you get good contact with the two metal leads inside the jack. When you've plugged in your battery, turn on your SpinWheel by toggling the switch to "BAT" and see if it lights up. If it does, you are good to go. If it does not, keep trying to push the battery in a little more. 
+The battery fits very snugly into its jack on the SpinWheel, so attaching your battery can be challenging. You can push with plenty of force on the plastic plug of the battery - just be careful not to twist or damage the battery's wires or the body of the battery itself. Make sure the notch at the top of the battery plug is lined up with the notch on the jack attached to the SpinWheel. Use both thumbs to push the battery into place. The battery does not need to fit all the way into the jack; you just need to make sure you get good contact with the two metal leads inside the jack. When you've plugged in your battery, turn on your SpinWheel by toggling the switch to "BAT" and see if it lights up. If it does, you are good to go. If it does not, keep trying to push the battery in a little more. 
 
 ![This is what the back of your SpinWheel will look like when the battery is attached. This is approximately how far your battery should fit into the jack on the board.](/images/quickstart/battery_back.jpg "Battery attached to the SpinWheel.")
 
@@ -39,17 +39,14 @@ When you do this, make sure that you first close the `Tools` menu.
 If you didn't close it before unplugging it, you will not see a change 
 because it doesn't automatically refresh itself. When you plug your SpinWheel back in, re-open the `Tools` menu, navigate to `Port` and see if you see your port appear. 
 
-2. If this doesn't work, another thing to try is closing and re-opening the Arduino software. 
+2. If this doesn't work, try closing and re-opening the Arduino software. 
 Occasionally this will clear up the problem.
 
-3. If neither of these works, it suggests that your micro USB cable may be the problem. 
+3. If neither of the first two solutions works, your micro USB cable is likely the problem. 
 Do you have another cable you can try? If so, first try your new cable. 
-While most cables do work to communicate with the SpinWheel, 
-some microUSB manufacturers have stopped including the extra wires necessary for passing information in their microUSB cables to cut costs if the cable is only meant to be used for charging. 
-If your SpinWheel turns on but isn’t detected by the Arduino software, 
-we recommend trying a different cable 
-(we have had better luck with older cables and those from Kindles: 
-cables that were intended to be used to transfer information and not just for charging). 
+While most cables are able to communicate with the SpinWheel, 
+some manufacturers have stopped including the extra wires necessary for passing information in their micro USB cables to cut costs (particularly if the cable is only meant to be used for charging). We have had better luck with older cables and those from Kindles: 
+cables that were intended to be used to transfer information and not just for charging. 
 
 ## My code won't upload onto my SpinWheel
 
@@ -95,9 +92,9 @@ here are some suggestions:
 3. You may find it helpful to look at your code line-by-line and make sure you are not missing any important pieces. For instance, maybe you are missing a semicolon or forgot to close a parenthesis. 
 
 4. Try breaking up the task in your code into simpler parts and testing each one individually. 
-This will help you find the problem and then be more likely to be able to fix it. For example, if you are asking your SpinWheel to perform three tasks, try commenting out the second and third tasks (with `\\` at the beginning of the line) and making sure the first task works. Then do this for the second and third to try to isolate the problem.
+This will help you find the problem and be more likely to fix it. For example, if you are asking your SpinWheel to perform three tasks, try "commenting out" the second and third tasks (by adding `\\` at the beginning of the line) and making sure the first task works. Then do this for the second and third to try to isolate the problem.
 
-5. One thing that can help is trying out small pieces of the code on one of the virtual SpinWheels. You can navigate to any adventure or lesson with a virtual SpinWheel to try this. 
+5. Another thing that can help is trying out small pieces of the code on one of the virtual SpinWheels. You can navigate to any adventure or lesson with a virtual SpinWheel to try this. 
 Not all modifications can be tested in this way, but it can help diagnose the problem.
 
 6. Another suggestion to help identify an error in your code is to explain your code to a "rubber duck." This doesn't mean that you need to go hunt down a rubber duck.
@@ -105,7 +102,7 @@ It simply means that by explaining what you are trying to do with every line to 
 (even an inanimate object who can give no feedback like a rubber duck)
 you can sometimes better spot the problem. Remember that computers do not solve problems on their own; they require a very specific set of instructions to follow. So, you'll need to make sure your instructions are clear! 
 
-Arduino also has lots of helpful online resources you can find in your favorite search engine - while this won't help you with specific SpinWheel commands, you can learn a lot about general Arduino programming by looking through all of the past troubleshooting tips and tricks generated by other Arduino users. 
+There are lots of helpful online resources for Arduino that you can find using your favorite search engine - while this won't help you with specific SpinWheel commands, you can learn a lot about general Arduino programming by looking through all of the past troubleshooting tips and tricks generated by other Arduino users. 
 
 
 
@@ -135,4 +132,4 @@ To find the serial monitor, navigate to `Tools` → `Serial Monitor`. Want to se
 
 -->
 
-If you have tried all of these recommendations and are still stuck, just email us at mail@spinwearables.com and we can help you troubleshoot. Please include a copy of the code you were trying to run and the error message. Having this information will help us more easily help you out.
+If you have tried all of these recommendations and are still stuck, just email us at mail@spinwearables.com and we can help you troubleshoot. Please include a copy of the code you were trying to run and the error message. Having this information will allow us to more easily help you out.
