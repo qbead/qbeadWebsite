@@ -21,7 +21,7 @@ The SpinWheel has four main components: a power source (the battery), a sensor (
 ![Unboxing the device. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/unboxing.small.png "Unboxing the device."){style="max-width:90%"}
 
 ::: warning :
-The SpinWheel contains sensitive electronic components that are securely soldered onto the printed circuit board but that can break if jostled excessively. For this reason, it is important that you are gentle with your SpinWheel when you plug it into your computer to program or plug it in to charge, and be gentle when putting it into storage in a backpack, purse, or pocket. Storing the SpinWheel in a smaller pocket within your bag or in the box you received it in will help keep it safe. 
+The SpinWheel contains sensitive electronic components that are securely soldered onto the printed circuit board but that can break if jostled excessively. For this reason, it is important that you are gentle with your SpinWheel when you plug it into your computer to program or plug it in to charge, and be gentle when putting it into storage in a backpack, purse, or pocket. It is also particularly important to treat the battery with care, to not puncture or bend it. Storing the SpinWheel in a smaller pocket within your bag or in the box you received it in will help keep it safe. 
 :::
 
 
@@ -64,7 +64,7 @@ Once the software is installed, we have to configure it to communicate with the 
 
 2. Open the Arduino software. 
 
-3. Open the `Tools` menu and go to `Port`. You will see a list of serial ports on your computer; you need to find the one for the SpinWheel. If there are multiple ports and you are unsure which one to use, simply unplug the SpinWheel and see which serial port disappears when you do so. This port corresponds to your SpinWheel's serial port. If you do not see a port appear/disappear, you may need to try another micro USB cable. <!--(see Troubleshooting guide for more details).-->
+3. Open the `Tools` menu and go to `Port`. You will see a list of serial ports on your computer; you need to find the one for the SpinWheel. If there are multiple ports and you are unsure which one to use, simply unplug the SpinWheel and see which serial port disappears when you do so. This port corresponds to your SpinWheel's serial port. If you do not see a port appear/disappear, you may need to try another micro USB cable. We have more hints about this in our [Troubleshooting guide](/troubleshoot).
 
 4. Go back to the Tools menu and select `Tools → Board`. Select Arduino Leonardo as the board (a.k.a. processor), so that the software knows which <span class="footnote">“dialect” <span>Computer languages have dialects just like human languages!</span></span> to use to talk to the SpinWheel.
 
@@ -74,19 +74,31 @@ Properly selecting the board and port are essential for the Arduino software to 
 
 ## Programming the SpinWheel
 
-Learning to code is just like learning a new language - you will understand only a couple of words and commands at first, but as your skills grow you will be able to command the computer to do more sophisticated tasks! To get the first set of examples of this new language and the other libraries necessary to run the SpinWheel code, download our SpinWearables Arduino Library using `Sketch → Include Library → Manage Libraries...`. In the search bar of the Library Manager, search for `SpinWearables` and then click `Install`. You will be automatically promted to install two other required libraries ('NeoPixel' for controlling the LEDs and `ICM 20948` for reading the motion sensor). Install them all.
+Learning to code is just like learning a new language - you will understand only a couple of words and commands at first, but as your skills grow you will be able to command the computer to do more sophisticated tasks! To get the first set of examples of this new language and the other libraries necessary to run the SpinWheel code, download our SpinWearables Arduino Library using `Sketch → Include Library → Manage Libraries...`. In the search bar of the Library Manager, search for `SpinWearables` and then click `Install`. You will be automatically prompted to install two other required libraries (`NeoPixel` for controlling the LEDs and `ICM 20948` for reading the motion sensor). You will need to install both of these to use the SpinWheel.
 
 ![Installing Arduino libraries. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/adding_libraries_screenshot.png "Installing Arduino libraries."){style="max-width:90%"}
 
-The new files can be found under `File → Examples → SpinWearables`. Open any file to see an example of the language used to communicate with the SpinWheel. You will learn more about this language in future lessons.
-We encourage you to experiment with these examples! If you want to save any changes, you will be prompted to save the sketch in a new location (can be anywhere on your computer), so you can always open the original example again.
+To test that your SpinWheel is working properly, you can install a new program, or sketch, from the example files to animate your SpinWheel. 
+Choose a file to install by opening `File → Examples → SpinWearables` and picking one of the examples. 
+For instance, pick [`BlinkingFirmware`](/codedoc/examples/BlinkingFirmware) and upload it by pressing the upload button (the arrow at the top). 
+Now your SpinWheel will have the new colorful blinking pattern (from `BlinkingFirmware`) you just uploaded. 
+If you get an error here, then check out our [troubleshooting guide](/troubleshoot) for help on some common problems.
 
 ![Upload programs to your SpinWheel using the `Upload` button (highlighted in white).](/images/quickstart/upload_button_screenshot.png "Upload programs to your SpinWheel using the `Upload` button (highlighted in white)."){style="max-width:388px"}
 
-To test that your SpinWheel is working properly, you can install a new program, or sketch, from the example files to animate your SpinWheel. Choose a file to install by opening `File → Examples → SpinWearables` and picking one of the examples. For instance, pick [`BlinkingFirmware`](/codedoc/examples/BlinkingFirmware) and upload it by pressing the upload button (the arrow at the top). Now your SpinWheel will have the new colorful blinking pattern (from `BlinkingFirmware`) you just uploaded. 
+Feel free to open any of the other SpinWheel sketches and upload them onto the device.
+At this point, do not worry about understanding what the code of each of these does, 
+you will learn more about this language in future lessons.
+At this point and as you go through the provided adventures,
+we encourage you to experiment with these examples! 
+If you want to save any changes, you will be prompted to save the sketch in a new location (can be anywhere on your computer), so you can always open the original example again.
 
-Doing this will overwrite the preloaded sketch that came on your SpinWheel. If you want your SpinWheel to have the sketch that was preloaded on the SpinWheel again, simply open the [`SpinWheelStockFirmware`](/codedoc/examples/SpinWheelStockFirmware) example and upload it.
+Uploading a new sketch will overwrite the preloaded sketch that came on your SpinWheel. 
+If you want your SpinWheel to have the sketch that was preloaded on the SpinWheel again, simply open the [`SpinWheelStockFirmware`](/codedoc/examples/SpinWheelStockFirmware) example and upload it.
 
-In future SpinWheel activities, you will be writing new programs to animate the SpinWheel. To transfer a program from your computer to your SpinWheel, simply connect your SpinWheel to your computer, change the switch to "USB", open the code of your new program in the Arduino software and press the upload button. 
+In future SpinWheel activities, you will be writing new programs to animate the SpinWheel. 
+To transfer a program from your computer to your SpinWheel, 
+simply connect your SpinWheel to your computer, change the switch to "USB", 
+open the code of your new program in the Arduino software and press the upload button. 
  
 Congratulations! You are now ready to continue with the rest of the SpinWheel activities!
