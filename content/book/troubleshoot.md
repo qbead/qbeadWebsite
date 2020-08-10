@@ -30,6 +30,11 @@ The battery fits very snugly into its jack on the SpinWheel, so attaching your b
 
 Important! If you are using your SpinWheel with the battery (not connected to a computer), make sure the switch on the back is set to "BAT". If you are using your SpinWheel plugged into your computer, make sure the switch on the back is set to "USB". You may notice strange behavior with your SpinWheel if your switch is not set properly.
 
+## I'm having problems installing Arduino
+
+When you navigate to the installation page for the Arduino software, make sure to download the one for your computer: Windows (and the correct version), Mac, or Linux. Once you download it, your computer will direct you through the process of installing it like for any other program. If you get stuck, Arduino has provided [instructions for each operating system](https://www.arduino.cc/en/Guide) that you can check out for more help.
+
+
 ## Arduino won't recognize my SpinWheel
 
 If nothing appears in the `Tools` → `Port` menu when you plug in the SpinWheel there are a few things to try:
