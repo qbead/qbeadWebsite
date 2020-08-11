@@ -137,11 +137,12 @@ This command takes the time that we stored in `t` and uses the `%` notation to f
 ### A picture that depends on time
 
 Finally, we have all that we need to create our first animation. We will use the timing variable we have created, `t_repeating`, and based on its value we will calculate a brightness value `b`.
-We will use this brightness variable to set all of the large LEDs (and each of their red, green, and blue colors) to the same time-dependent value.
-The <span class="footnote"> important part of the necessary code <span>We skip the setup code for the sake of space</span></span>is shown in the SpinWheel simulator below.
-<span class="footnote">Try to explain in the words of your own language what every single line of the computer programming language says.<span>You will frequently hear programmers talk about the "story" that their code tells. Being able to retell the instructions of a piece of computer code in the form of a human-language story is a sure sign you are starting to understand a piece of code.</span></span>
+We will use this brightness variable to set all of the large LEDs (and each of their red, green, and blue colors) to the same time-dependent value. The maximal permitted brightness value of our software is `255`. Because `t_repeating` can have any value between 0 and 2500, we have to divide `t_repeating` by 10 to keep `b` from going beyond `255`.
+
+The <span class="footnote"> important part of the necessary code<span>We skip the setup code for the sake of space</span></span> is shown in the SpinWheel simulator below.<span class="footnote"> Try to explain in the words of your own language what every single line of the computer programming language says.<span>You will frequently hear programmers talk about the "story" that their code tells. Being able to retell the instructions of a piece of computer code in the form of a human-language story is a sure sign you are starting to understand a piece of code.</span></span>
 As a hint, we will mention that `setLargeLEDsUniform` is used to set all large LEDs to the same uniform color (specified by three numbers, corresponding to the red, green, and blue components of the color).
-Try to make small modifications ([change the color from white to red](/colortheory), make the brightness lower, etc) and run the code in the simulator by clicking the "run" button.
+
+Now let's put all of this together and see what happens by clicking run on the virtual SpinWheel.
 
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
@@ -159,18 +160,17 @@ void loop() {
 </pre>
 </div>
 
-The maximal permitted brightness value of our software is `255`. Because `t_repeating` can have any value between 0 and 2500, we have to divide `t_repeating` by 10 to keep `b` from going beyond `255`.
-Now let us upload this code to the SpinWheel device itself. Connect your device with a USB cable to your computer.
+At this point, you might be wondering whether you can <span class="footnote"> modify the color <span>Try modifying other lines above to see what happens as well! </span></span> of the LEDs in the above sketch. By changing the line `SpinWheel.setLargeLEDsUniform(b, b, b)`, you can do just that! For instance, to make the LEDs teal instead of white, change that line to be `SpinWheel.setLargeLEDsUniform(0, b, b)`. What about making the LEDs light up yellow? To experiment more quickly, first try this in the virtual SpinWheel above. Then, when you have some modifications that you are interested in trying out on your SpinWheel, you can make the same changes in the example sketch in the Arduino software. 
+
+::: further-reading
+Feeling stumped on how to make a different color? In our [Biology of Sight](/sight) adventure you will have the opportunity to try mixing colors with red, green, and blue light. The [color theory](/colortheory) lesson provides more information about why we can use red, green, and blue LEDs to represent all the colors of the rainbow.
+:::
+
+Now let us upload this code to the SpinWheel device itself. Make sure that the SpinWheel's switch is on `USB` and then connect your device with a micro USB cable to your computer.
 To run this code on your SpinWheel, navigate to `Examples → SpinWearables → Animations_and_Patterns → Simple_Blink` in the Arduino software and open the file and upload it to your SpinWheel. If you simply copy the above code, it will not run because it is missing the important setup information. The file in `Examples` contains the entirety of the necessary code.
 
 ::: further-reading
 If you want a reminder about why the above code will not work if you run it on your SpinWheel, check out the [lesson on learning to program the SpinWheel](/basics). 
-:::
-
-At this point, you might be wondering whether you can modify the color of the LEDs in the above sketch. By changing the line `SpinWheel.setLargeLEDsUniform(b, b, b)`, you can do just that! For instance, to make the LEDs teal instead of white, change that line to be `SpinWheel.setLargeLEDsUniform(0, b, b)`. What about making the LEDs light up yellow? To experiment more quickly, first try this in the virtual SpinWheel above. Then, when you have some modifications that you are interested in trying out on your SpinWheel, you can make the same changes in the example sketch in the Arduino software. 
-
-::: further-reading
-Feeling stumped on how to make a different color? In our [Biology of Sight](/sight) Adventure you will have the opportunity to try mixing colors with red, green, and blue light. The [color theory](/colortheory) lesson provides more information about why we can use red, green, and blue LEDs to represent all the colors of the rainbow.
 :::
 
 So far in this lesson, we have discussed certain building blocks of the above code (like `millis()`), 
@@ -180,6 +180,8 @@ you may have noticed that the sketch had many more comments
 than the code for the virtual SpinWheel. 
 These comments provide more in-depth explanations of the code. 
 We have also provided a [webpage with these detailed explanation of the sketch](/codedoc/examples/Animations_and_Patterns/Simple_Blink) where you can read more.
+
+![Check out our lesson on the building blocks of coding to learn more about the essential pieces of writing a sketch. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/creating_own_functions.png)
 
 By learning to control the SpinWheel's LEDs, you are already learning some basic coding concepts. To expand on this, we have also put together a reference guide that introduces [some of the most important patterns in programming](/progpatterns). We recommend checking this out now and also referring back to it as you move onto the more advanced adventures.   
 
