@@ -7,25 +7,25 @@ keywords: SpinWheel, arduino, setup
 <script src='/simspinwheel/simspinwheel.js'></script>
 
 ::: intro-box
-A program is written as a text file containing multiple commands for your computer to follow.
+A program is a set of written commands for your computer to follow.
 Here you will see what such a program might look like in one particular computer language.
 Before reading this, be sure to read our [initial setup guide](/quickstart). 
 :::
 
-Approach this page the way you would approach the first page of a foreign language you want to learn.
-Try to pick out separate words and commands that make sense, without worrying about the overall structure,
+Approach this page the way you would approach the first few lines of a foreign language you want to learn.
+Try to pick out words that make sense, without worrying about the overall structure,
 correct syntax, or proper grammar. As time passes and you have learned new things, come back to this page
 and see whether you can understand a bit more of it.
 
 In different communities, computer programs are referred to by different names:
 program, sketch, script, etc.
-Arduino tends to call them sketches, because you use them to sketch out what your device is supposed to do.
-We also like the name script, because it invokes the idea of a sequence of instructions: the programs you write are a set of instructions you give to the device and the order in which you want them to be executed.
+Arduino tends to call them sketches because you use them to sketch out what you want your device to do.
+We also like the name script, because it invokes the idea of a sequence of instructions. The programs you write are a set of instructions you give to the device and the order in which you want them to be executed.
 
 ## Writing your first sketch
 
-Computers follow instructions, and do not solve problems on their own. So, you need to be very explicit in the instructions that you write in your programs!
-The particular language we are using imposes a certain structure on our programs.
+Computers follow instructions. They do not solve problems on their own. So, when writing a program for the SpinWheel's onboard computer, you need to be very explicit in the instructions that you write!
+The particular language we are using requires our programs to have a certain structure.
 The most bare-bones program looks like this:
 
 ```c++
@@ -40,15 +40,15 @@ void loop() {
 
 This program does absolutely nothing.
 It contains two blocks (or sections) of code which start and end 
-with the brackets `{` and `}`.
+with the brackets: `{` and `}`.
 For our program to do anything, we need to fill these blocks with instructions.
-The first block is called `setup` and executes only once, immediately after the device is powered up.
+The first block is called `setup` and runs only once, immediately after the device is powered up.
 This block is used for setting up any initial conditions we might require.
 
 Next there is the `loop` block. This block is executed repeatedly "in a loop",
 starting immediately after `setup` is done and repeating itself until the power is turned off.
 Most of our instructions will be written in this block.
-They will frequently take the form of measuring time or motion,
+They will frequently involve measuring time or motion
 and then producing a color or a pattern of colors depending on the SpinWheel's measurement.
 
 <figure><video src="/images/bookpics/setup_loop.mp4" muted autoplay playsinline loop></video><figcaption> When you turn on the SpinWheel, `setup()` is run once and then the `loop()` block is run repeatedly until the SpinWheel is turned off. </figcaption></figure>
@@ -74,10 +74,10 @@ void loop() {
 }
 ```
 
-When you are writing other programs with the SpinWheel, these extra lines are essential.
-Adding `#include "SpinWearables.h"` and `using namespace SpinWearables;` before the `setup` loop ensures that the rest of the program has access to some extra resources and commands specific for programming your SpinWheel. 
+Adding `#include "SpinWearables.h"` and `using namespace SpinWearables;` before the `setup` loop ensures that the rest of the program has access to extra resources and commands specific for programming your SpinWheel. 
 It is also necessary to add `SpinWheel.begin();` in the `setup` block. 
 This line makes sure that the SpinWheel hardware is ready for the instructions that we will add in `loop` in the next chunk of code. 
+When you start writing other programs for the SpinWheel, these extra lines will be essential.
 
 Notice the faded bluish lines that begin with two slashes `//`. This text is called
 a "comment." 
@@ -122,7 +122,7 @@ green, and blue components<span>They have to be numbers between 0 (color is off)
 
 ![SpinWheel LED numbering.](/images/spinwheel_with_numbers.png "SpinWheel LED numbering")
 
-Play around with lighting up all of the different large LEDs, or combinations of them! For example, you can experiment with this virtual SpinWheel to light up the LEDs of your choice. What happens when you run the following code on the virtual SpinWheel or on your physical SpinWheel? How would you modify this code to light up the opposite set of LEDs?
+Play around with lighting up all of the different large LEDs, or combinations of them! For example, you can experiment with this virtual SpinWheel to light up the LEDs of your choice. What happens when you run the following code on the virtual SpinWheel or on your physical SpinWheel? How would you modify this code to light up the opposite set of large LEDs?
 
 
 <div class="ssw-codecontent" markdown=0>
@@ -150,7 +150,7 @@ For each of the functions introduced, there is a virtual SpinWheel to allow you 
 
 ## Creating changing patterns
 
-In order to produce more interesting patterns on our SpinWheel, we have to modify the loop section. Currently, every loop produces the same result; the same LED is lit up with the same color. To begin writing more complex code, we need to introduce the idea of *variables*.
+In order to produce more dynamic patterns on our SpinWheel, we have to modify the loop section. Currently, every loop produces the same result; the same LED is lit up with the same color. To begin writing more complex code, we need to introduce the idea of *variables*.
 Variables allow us to store information in the program and change that information as needed.
 
 To **define** a new variable we can add the following line to the loop block:
@@ -161,7 +161,7 @@ int which_LED = 1;
 ```
 This reserves a location in the memory of the computer, 
 lets us refer to that location by the name `which_LED`,
-and stores the value `1` there. By itself, this variable doesn't impact the output of the SpinWheel. We can use it to store the location of the LED we want to light up.
+and stores the value `1` there. By itself, this variable doesn't impact the output of the SpinWheel, but we can use it to store the location of the LED we want to light up.
 
 ```c++
 #include "SpinWearables.h"
@@ -218,7 +218,7 @@ In this code, every loop increases the value of `which_LED` by 1. This value is 
 
 <video src="/images/bookpics/brightness_loop.mp4" muted autoplay playsinline loop></video>
 
-You may have noticed that after a few seconds your SpinWheel stops lighting up. This is because the value in `which_LED` no longer corresponds to one of the 8 LEDs on the SpinWheel. For example, if `which_LED` equals 10, the code will try to turn on LED number 10. Since it doesn't exist, nothing happens. To light up the SpinWheel again, unplug it or toggle the BAT/USB switch. This restarts the code, running `setup` again and starting `which_LED` over at 0.
+You may have noticed that after a few seconds your SpinWheel stops lighting up. This is because the value in `which_LED` no longer corresponds to one of the 8 LEDs on the SpinWheel. For example, if `which_LED` equals 10, the code will try to turn on LED number 10. Since it doesn't exist, nothing happens. To light up the SpinWheel again, unplug it and toggle the BAT/USB switch. This restarts the code, running `setup` again and starting `which_LED` over at 0.
 
 ::: further-reading
 What if instead you wanted this pattern to repeat itself over and over again? 
@@ -228,7 +228,7 @@ Check out the adventure on [creating computer generated animations](/animation) 
 You have now written your first piece of code for the SpinWheel!
 
 Continue the adventure by [making computer generated animations](/animation) or [learn about how colors are represented](/sight) in the SpinWheel. 
-To learn more about the programming language used by the SpinWheel, check out our [programming patterns page](/progpatterns).
+To learn more about the programming language used by the SpinWheel, check out our lesson on the [building blocks of coding](/progpatterns).
 
 There are a couple more things you might have noticed about the style of this programming language:
 
@@ -239,7 +239,7 @@ There are a couple more things you might have noticed about the style of this pr
 - There are other ways in which LED colors can be modified and motion be detected. We will be discussing many such tools in future pages.
 
 ::: further-reading
-We invite you to play with the [SpinWheel examples available in the Arduino software and to peruse the many suggested activities we have prepared for you](/book). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands) or to peruse the [code of this library](/codedoc/SpinWearables.h.html). 
+We invite you to play with the SpinWheel examples available in the Arduino software and to peruse [the many suggested activities we have prepared for you](/book). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands) or to peruse the [code of the SpinWearables library](/codedoc/SpinWearables.h.html). 
 :::
 
 
