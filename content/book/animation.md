@@ -58,7 +58,7 @@ Just like with any other language, at first you will not be able to understand a
 As a new programmer, the important thing is to latch on to the words that mean something to you, even if you cannot understand the entire language.
 :::
 
-We have prepared many small example programs you can play with, before you start trying to modify them. All of these sketches are in the zipfile that you downloaded while completeing the [quickstart guide](/quickstart). You should not need to type out any of the examples described here.
+We have prepared many small example programs you can play with, before you start trying to modify them. All of these sketches are included in the SpinWearables library, which you downloaded while completing the [quickstart guide](/quickstart). You should not need to type out any of the examples described here.
 Simply attempt to upload them to the device and read through them, even if you are not changing them.
 
 
@@ -74,22 +74,22 @@ To make our device blink, we need to tell it how long to be on or off.
 This is the timing of our animation.
 Thankfully our device has a built-in timer that can measure milliseconds (1 second equals 1000 milliseconds).
 One of the first things we will need to do in our generative art program is to ask for the time and save it for future calculations.
-The necessary command that we need to write looks like:
+The command that we need to write looks like:
 
 ```c++
 int t = millis();
 ```
 
-We will shortly see how this command can be woven in with others in a whole program.
+Shortly, we will see how this command can be woven in with others as part of a complete program.
 Here, `millis()` is a
 <span class="footnote">command that reads the number of milliseconds that have passed since the device was started.<span>This command, together with many other useful commands comes built into the software we are using.
-We will later even learn how to make commands of our own.</span></span>
+Later, we will even learn how to make commands of our own.</span></span>
 These commands are special directions that ask the computer to complete a task.
 The rest of the small piece of code depicted above ensures that the number of milliseconds given by `millis()` is stored somewhere: in the variable we have named `t` (you can use more descriptive names if you wish). We also had to specify the type of the variable (`int` as in "integer") because otherwise our SpinWheel will get confused. If we put this line of code in the `loop` block of our code, the value of t will change every time the `loop` is repeated.
 
 <!--FIGURE: An image showing the type and name on the lhs, and the expression on the rhs, stressing the rigidity of this syntax.-->
 
-<figure><video src="/images/bookpics/time_loop.mp4" muted autoplay playsinline loop></video><figcaption> Every time the `loop()` block is run, `millis()` determines the number of milliseconds since `setup()` was run and stores it in the variable `t`. </figcaption></figure>
+<figure><video src="/images/bookpics/time_loop.mp4" muted autoplay playsinline loop></video><figcaption> Every time the `loop()` block is run, `millis()` determines the number of milliseconds since `setup()` was run and stores it in the variable `t`. Think of it as if you are checking the time on a stopwatch. You hit 'start' right when the SpinWheel is initialized in `setup()` and then check how much time has passed at the start of each loop by using the `millis()` command.  </figcaption></figure>
 
 
 The entirety of our animation will depend on the number stored in this `t` variable.
