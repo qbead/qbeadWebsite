@@ -214,7 +214,7 @@ void loop() {
   
 }
 ```
-In this code, every loop increases the value of `which_LED` by 1. This value is then used in `SpinWheel.setLargeLED()` to indicate the LED to light up. This concept is further illustrated below. As each `loop()` block is run, the value stored in memory for `which_LED` is changed. Because the `loop` block runs many times a second, we have added the line `delay(500)` to pause the code for 500 milliseconds (0.5 seconds) before the loop is finished. Without the delay, the lights would change too quickly for us to see the change.
+In this code, every loop increases the value of `which_LED` by 1. This value is then used in `SpinWheel.setLargeLED()` to indicate which LED to light up. This concept is further illustrated below. As each `loop()` block is run, the value stored in memory for `which_LED` is changed. Because the `loop` block runs many times a second, we have added the line `delay(500)` to pause the code for 500 milliseconds (0.5 seconds) before finishing the loop. Without the delay, the lights would change too quickly for us to see the change.
 
 <video src="/images/bookpics/brightness_loop.mp4" muted autoplay playsinline loop></video>
 
