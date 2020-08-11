@@ -44,7 +44,9 @@ Your kit may have come with a paper booklet (the SpinWheel [Field Guide](/book))
 
 ## Setting Up the Arduino Software
 
-While you can use the SpinWheel with the preloaded animations, much of the joy of the SpinWheel comes from your ability to change it and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. The rest of the guide will get you to a point where you can add a new animation to your SpinWheel. Do not worry if you find this part challenging, as you are trying to learn something new. If you get stuck, check out the [troubleshooting guide](/troubleshoot) and don't be afraid to experiment. While feeling confused is normal, it will get easier as you go!
+While you can use the SpinWheel with the preloaded animations, much of the joy of the SpinWheel comes from your ability to change it and make it do whatever you wish! To do this, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. 
+
+The rest of the guide will get you to a point where you can add a new animation to your SpinWheel. Do not worry if you find this part challenging, as you are trying to learn something new. If you get stuck, check out the [troubleshooting guide](/troubleshoot) and don't be afraid to experiment. While feeling confused is normal, it will get easier as you go!
 
 Start by installing the Arduino software on your computer, which you can download for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software#download). Select the correct version for your computer's operating system.
 
@@ -64,7 +66,9 @@ Properly selecting the board and port are essential for the Arduino software to 
 
 ## Programming the SpinWheel
 
-Learning to code is just like learning a new language - you will understand only a couple of words and commands at first, but as your skills grow you will be able to command the computer to do more sophisticated tasks! To get the first set of examples of this new language and the other libraries necessary to run the SpinWheel code, download our SpinWearables Arduino Library using `Sketch → Include Library → Manage Libraries...`. In the search bar of the Library Manager, search for `SpinWearables` and then click `Install`. You will be automatically prompted to install two other required libraries (`NeoPixel` for controlling the LEDs and `ICM 20948` for reading the motion sensor). You will need to install both of these to use the SpinWheel.
+Learning to code is just like learning a new language - you will understand only a couple of words and commands at first, but as your skills grow you will be able to command the computer to do more sophisticated tasks! 
+
+To get the first set of examples of this new language and the other libraries necessary to run the SpinWheel code, download our SpinWearables Arduino Library using `Sketch → Include Library → Manage Libraries...`. In the search bar of the Library Manager, search for `SpinWearables` and then click `Install`. You will be automatically prompted to install two other required libraries (`NeoPixel` for controlling the LEDs and `ICM 20948` for reading the motion sensor). You will need to install both of these to use the SpinWheel.
 
 ![Installing Arduino libraries. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/adding_libraries_screenshot.png "Installing Arduino libraries."){style="max-width:90%"}
 
