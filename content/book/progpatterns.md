@@ -277,7 +277,12 @@ To learn more about the `setup` and `loop` functions, check out
 Here is a large example that includes all these features. It will use the
 `Serial.println()` function in order to send messages to the computer.
 Use the `Serial Monitor` tool in the Arduino software in order to see these
-messages being sent back over the USB cable.
+messages being sent back over the USB cable (`Tools → Serial Monitor`.
+
+::: further-reading
+We provide more information about the `Serial Monitor` in 
+our [intro to the Arduino software](/arduino101) page.  
+:::
 
 ```c++
 // Here we define a convenient pausing function
