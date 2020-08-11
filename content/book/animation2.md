@@ -17,7 +17,7 @@ we need a rapid sequence of still images, called frames.
 The frames must be displayed rapidly enough that it looks like a smoothly changing pattern to our eyes.
 This is true both for the computer screen playing a video
 and for the SpinWheel lights changing their patterns.
-For example, this is a short repeating animation that you learned how to make in the first [Intro to Animation](/animation).
+For example, this is a short repeating animation that you learned how to make in the first [Intro to Animation](/animation) adventure.
 
 <video src="/images/bookpics/simple_blink.mp4" muted autoplay playsinline loop></video>
 
@@ -198,11 +198,14 @@ which could enable you to write more sophisticated programs and patterns.
 :::
 
 Overwhelmed by the possibilities of how you can modify the above sketches? Here are some suggestions: 
-Try to add more LEDs to your patterns.
-Try to have some of them (e.g. the small ones) have varying brightness,
-while others (e.g. the large ones) have changing colors.
-Mix and match code from the previous examples.
-Let your creativity sing through the code.
+<ul>
+<li> Try to add more LEDs to your patterns. </li>
+<li> Try to have some of them (e.g. the small ones) have varying brightness, 
+while others (e.g. the large ones) have changing colors. </li>
+<li> Mix and match code from the previous examples. </li>
+</ul>
+Let your creativity sing through the code!
+
 
 
 ::: further-reading
