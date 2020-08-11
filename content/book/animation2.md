@@ -7,8 +7,8 @@ keywords: animations, frames, timing
 <script src='/simspinwheel/simspinwheel.js'></script>
 
 ::: intro-box
-This adventure builds on what you learned in Intro to Animation adventure,
-empowering you to make slightly more sophisticated patterns. 
+This adventure builds on what you learned in the Intro to Animation adventure,
+empowering you to make some more sophisticated patterns. 
 :::
 
 
@@ -17,10 +17,9 @@ we need a rapid sequence of still images, called frames.
 The frames must be displayed rapidly enough that it looks like a smoothly changing pattern to our eyes.
 This is true both for the computer screen playing a video
 and for the SpinWheel lights changing their patterns.
-For example, this is a short repeating animation of a rainbow pattern playing on the LEDs.
+For example, this is a short repeating animation that you learned how to make in the first [Intro to Animation](/animation).
 
-<video src="/images/behindthescenes/pretty_device.mp4" muted autoplay playsinline loop></video>
-
+<video src="/images/bookpics/simple_blink.mp4" muted autoplay playsinline loop></video>
 
 ::: warning :
 If you haven't already done the [Intro to Animation](/animation) adventure, we recommend looking it over before starting this lesson. 
