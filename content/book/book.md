@@ -48,14 +48,15 @@ jQuery(function(){
   graph.newEdge(sight, light); 
   graph.newEdge(light, colortheory); 
   graph.newEdge(ani, ani2); 
-  graph.newEdge(ani, step); 
   graph.newEdge(ani, progpatterns); 
+  graph.newEdge(ani2, step); 
   graph.newEdge(ani2, dance);
   graph.newEdge(dance, compass); 
   graph.newEdge(compass, magnet);
   graph.newEdge(step, compass);
   graph.newEdge(dance, vector); 
   graph.newEdge(vector, rotation); 
+  graph.newEdge(dance, inertia);
   graph.newEdge(step, inertia);
 
   var springy = jQuery('#springymap').springy({
