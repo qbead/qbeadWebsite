@@ -174,12 +174,12 @@ If you want a reminder about why the above code will not work if you run it on y
 :::
 
 So far in this lesson, we have discussed certain building blocks of the above code (like `millis()`), 
-but we haven't yet dived into what every line means. 
+but we have yet to dive into what every line means. 
 When you uploaded the code onto your SpinWheel, 
 you may have noticed that the sketch had many more comments 
 than the code for the virtual SpinWheel. 
 These comments provide more in-depth explanations of the code. 
-We have also provided a [webpage with these detailed explanation of the sketch](/codedoc/examples/Animations_and_Patterns/Simple_Blink) where you can read more.
+We have also provided a [webpage with a detailed explanation of the sketch](/codedoc/examples/Animations_and_Patterns/Simple_Blink) where you can read more.
 
 ![Check out our lesson on the building blocks of coding to learn more about the essential pieces of writing a sketch. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/creating_own_functions.png)
 
