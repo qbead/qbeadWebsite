@@ -26,6 +26,7 @@ jQuery(function(){
 
   var quick = graph.newNode({label: "Initial Setup", color: "red"});
   var basic = graph.newNode({label: "Basic Structure of a Program"});
+  var arduino = graph.newNode({label: "Arduino 101", color: "grey"});
   var sight = graph.newNode({label: "Biology of Sight"});
   var strobe = graph.newNode({label: "Stroboscope"});
   var ani = graph.newNode({label: "Intro to Animations"});
@@ -33,21 +34,23 @@ jQuery(function(){
   var step = graph.newNode({label: "Step Counter"});
   var dance = graph.newNode({label: "Dancing Companion"});
   var compass = graph.newNode({label: "Compass"});
-  var progpatterns = graph.newNode({label: "Building Blocks of Coding"});
-  var light = graph.newNode({label: "Light and Color"});
-  var colortheory = graph.newNode({label: "Color Theory"});
-  var inertia = graph.newNode({label: "Inertial Reference Frames"});
-  var rotation = graph.newNode({label: "Rotation"});
-  var magnet = graph.newNode({label: "Magnetism"});
-  var vector = graph.newNode({label: "Vectors and Motion"});
+  var progpatterns = graph.newNode({label: "Building Blocks of Coding", color: "grey"});
+  var light = graph.newNode({label: "Light and Color", color: "grey"});
+  var colortheory = graph.newNode({label: "Color Theory", color: "grey"});
+  var inertia = graph.newNode({label: "Inertial Reference Frames", color: "grey"});
+  var rotation = graph.newNode({label: "Rotation", color: "grey"});
+  var magnet = graph.newNode({label: "Magnetism", color: "grey"});
+  var vector = graph.newNode({label: "Vectors and Motion", color: "grey"});
   
   graph.newEdge(quick, basic);
   graph.newEdge(basic, sight); 
   graph.newEdge(basic, strobe);
   graph.newEdge(basic, ani); 
+  graph.newEdge(basic, arduino);  
   graph.newEdge(sight, light); 
   graph.newEdge(light, colortheory); 
   graph.newEdge(ani, ani2); 
+  graph.newEdge(arduino, progpatterns); 
   graph.newEdge(ani, progpatterns); 
   graph.newEdge(ani2, step); 
   graph.newEdge(ani2, dance);
@@ -92,13 +95,13 @@ These adventures assume that you have no coding experience and are a great way t
 
 1. [Biology of Sight](/sight)
 2. [Intro to Animation](/animation)
-3. Stroboscope and Stroboscopic Photography (planned)
+3. Stroboscopes and Stroboscopic Photography (planned)
 
 ### Associated Lessons
 1. [Light and Color](/lightandcolor)
 2. [Color Theory](/colortheory)
 3. [Coding Building Blocks](/progpatterns)
-4. Physical Computing (planned)
+4. [Arduino 101](/arduino101)
 
 
 ## Intermediate Adventures
@@ -113,6 +116,7 @@ These activities build on the ideas presented in the introductory adventures. If
 1. [Vectors and Motion](/vectors)
 2. [Rotation and Moving in Circles](/rotation)
 3. Inertial Reference Frames / Free Fall (planned)
+4. Physical Computing (planned)
 
 ## Advanced Adventures
 
