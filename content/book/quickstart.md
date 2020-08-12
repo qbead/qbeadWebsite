@@ -73,7 +73,7 @@ Properly selecting the board and port are essential for the Arduino software to 
 
 Learning to code is just like learning a new language - you will understand only a couple of words and commands at first, but as your skills grow you will be able to command the computer to do more sophisticated tasks! 
 
-**Installing the SpinWheel libraries**
+### Installing the SpinWheel libraries
 
 1. To get the first set of examples of this new language and the other libraries necessary to run the SpinWheel code, download our SpinWearables Arduino Library using `Sketch → Include Library → Manage Libraries...`. 
   
@@ -82,7 +82,7 @@ Learning to code is just like learning a new language - you will understand only
 
 ![Installing Arduino libraries. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/adding_libraries_screenshot.png "Installing Arduino libraries."){style="max-width:90%"}
 
-**Running a program on the SpinWheel**
+### Running a program on the SpinWheel
 
 To test that your SpinWheel is working properly, you can install a new program, or sketch, from the example files to animate your SpinWheel. 
 
@@ -94,7 +94,7 @@ For instance, pick [`BlinkingFirmware`](/codedoc/examples/BlinkingFirmware). Thi
 ![Upload programs to your SpinWheel using the `Upload` button (highlighted in white).](/images/quickstart/upload_button_screenshot.png "Upload programs to your SpinWheel using the `Upload` button (highlighted in white)."){style="max-width:388px"}
   
 Now your SpinWheel will have the new colorful blinking pattern (from `BlinkingFirmware`) you just uploaded. 
-If you get an error here, then check out our [troubleshooting guide](/troubleshoot) for help on some common problems.
+If you get an error here, then check out our [troubleshooting guide](/troubleshoot) for help on some common problems. 
 
 
 Feel free to open any of the other SpinWheel sketches and upload them onto the device.
