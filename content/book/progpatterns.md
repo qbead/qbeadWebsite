@@ -279,11 +279,6 @@ Here is a large example that includes all these features. It will use the
 Use the `Serial Monitor` tool in the Arduino software in order to see these
 messages being sent back over the USB cable (`Tools → Serial Monitor`.
 
-::: further-reading
-We provide more information about the `Serial Monitor` in 
-our [intro to the Arduino software](/arduino101) page.  
-:::
-
 ```c++
 // Here we define a convenient pausing function
 // that waits a given number of seconds
@@ -320,7 +315,9 @@ void loop() {
 ```
 
 ::: further-reading
-The Arduino community has very detailed resources on the programming language
+We provide more information about the `Serial Monitor` in 
+our [intro to the Arduino software](/arduino101) page. 
+The Arduino community also has very detailed resources on the programming language
 that we are using. You can start with their
 [tutorial](https://www.arduino.cc/en/Tutorial/Foundations) for instance.
 :::
