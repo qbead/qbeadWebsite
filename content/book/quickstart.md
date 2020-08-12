@@ -51,7 +51,7 @@ Much of the joy of the SpinWheel comes from your ability to change it and make i
 
 In order to write new animations for the SpinWheel, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. 
 
-1. Start by installing the Arduino software on your computer, which you can download for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software#download). Select the correct version for your computer's operating system.
+1. Start by installing the Arduino software on your computer, which you can download for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software#download). For step by step help, Arduino has provided [instructions](https://www.arduino.cc/en/Guide) for each operating system.
 
 Once the software is installed, we have to configure it to communicate with the SpinWheel.
 
