@@ -8,8 +8,8 @@ The SpinWheel relies on the Arduino software to be programmed.
 This guide provides the important information for understanding how this software works. 
 :::
 
-Many simple computer chips for DIY projects makes use of the Arduino software, 
-a platform for writing and uploading code onto a physical board. 
+Many simple computer chips for DIY projects make use of the Arduino software, 
+a platform for writing and uploading code onto a physical circuit board. 
 The Arduino software makes use of a simplified version of C++, 
 a programming language that we will begin to introduce below.
 This page will take you through the basics of using the Arduino software 
@@ -35,7 +35,7 @@ The one that disappears and reappears is the one to choose.
 
 Next you will have to select `Board` for the device you want to program. For instance, for the SpinWheel you would select the Arduino Leonardo as the board (a.k.a. processor), so that the software knows which <span class="footnote">“dialect” <span>Computer languages have dialects just like human languages!</span></span> to use to talk to the SpinWheel.
 
-Properly selecting the board and port are essential for the Arduino software to communicate with whatever software you are working with.
+Properly selecting the board and port is essential for the Arduino software to communicate with whatever software you are working with.
 
 ::: further-reading
 For more help with this for the SpinWheel, first read our [Initial Setup Guide](/quickstart) and then check out our [troubleshooting guide](/troubleshoot), if you are still stuck.  
@@ -100,7 +100,7 @@ You may have noticed that nothing happens when you upload this sketch to your de
 
 It can be very useful to have a way to receive message from the computer chip you are programming. 
 For instance, in the code above you want to be able to see how counter is increasing with time.
-Having this information can be very important when debugging code to have a way to keep track of what the value of different variables are. 
+Having this information can be very important when debugging - or attempting to find errors in - code to have a way to keep track of what the value of different variables are. 
 
 Different computer languages provide different ways of doing this. 
 If you are working with Arduino, 
@@ -108,7 +108,7 @@ then you can use the `Serial Monitor` to see these messages being sent back over
 To access the `Serial Monitor`, navigate to `Tools → Serial Monitor`.
 
 Then if you want to see how a particular variable changes, 
-we can setup the device to send messages at the right connection speed using `Serial.begin(9000)` 
+we can setup the device to send messages at the right connection speed using `Serial.begin(9600)` 
 and print the message you want using the `Serial.println()` function.
 In the code below, you will use `Serial.println(counter)` 
 in order to send the value of `counter` back to the computer.
@@ -122,7 +122,7 @@ void setup() {
   // on our device is ready to send messages.
   // The name "Serial" is such for historical reasons
   // (it is the name for this type of communication).
-  Serial.begin(9600); // The 9600 is the speed of the conection.
+  Serial.begin(9600); // The 9600 is the speed of the connection.
 }
 
 // Define a variable in which we will store a counter that goes up by one on
@@ -150,7 +150,7 @@ or half a second (there are 1000 milliseconds in a second).
 
 These concepts will be useful as you begin to code a computer chip, 
 like the one inside the SpinWheel. 
-We will refer back to it and hope that you will use it as a reference.
+We will refer back to this guide and hope that you will use it as a reference.
 
 
 
