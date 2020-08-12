@@ -21,7 +21,8 @@ and should be used as a guide as you read the other lessons and adventures.
 To be able to write your own programs and control your computer chip, 
 you first have to download the Arduino software. 
 You can download it for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software#download). 
-Select the correct version for your computer's operating system.
+Be careful to select the correct version for your computer's operating system (for instance, if you have a  Windows computer, choose the one for the version of Windows you have).
+If you get stuck, Arduino has provided [instructions](https://www.arduino.cc/en/Guide) for each operating system that you can check out for more help.
 
 ## Configuring Arduino for your device
 
