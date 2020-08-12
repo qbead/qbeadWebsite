@@ -17,7 +17,7 @@ we need a rapid sequence of still images, called frames.
 The frames must be displayed rapidly enough that it looks like a smoothly changing pattern to our eyes.
 This is true both for the computer screen playing a video
 and for the SpinWheel lights changing their patterns.
-For example, this is a short repeating animation that you learned how to make in the first [Intro to Animation](/animation) adventure.
+For example, this is a short repeating animation that you learned how to make in the [Intro to Animation](/animation) adventure.
 
 <video src="/images/bookpics/simple_blink.mp4" muted autoplay playsinline loop></video>
 
@@ -26,9 +26,9 @@ If you haven't already done the [Intro to Animation](/animation) adventure, we r
 :::
 
 There is a whole universe of patterns you can create with the SpinWheel:
-simply pick a piece of paper,
+simply grab a piece of paper,
 draw the pattern you desire,
-and translate it to an expression of code and math that implements it.
+and translate it into an expression of code and math that implements it.
 However, that much freedom can be daunting at first.
 Here we will start by modifying the animation that you created in the [intro adventure on animation](/animation).
 Then we will present some additional sketches that allow you to create animations with changing colors and where you can control each LED separately.
@@ -39,7 +39,7 @@ We invite you upload these sketches from `Examples → SpinWearables → Animati
 
 You may have noticed that the brightness of the LEDs in the [sketch we present in the intro to animation](/codedoc/examples/Animations_and_Patterns/Simple_Blink) was abruptly cut off.
 Wouldn't it be prettier if we gently turned off the LEDs, similarly to how gently we are ramping them up?
-We can perform this by writing a function that first goes up and then slowly goes back down.
+We can implement this by writing a function that first goes up and then slowly goes back down.
 We have already written such a function for you to use
 and called it [`triangularWave`](/codedoc/SpinWearables.h.html#triangular-wave),
 because when you plot it, it looks like a series of triangles.
