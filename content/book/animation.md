@@ -132,7 +132,7 @@ int t_repeating = t % 2500;
 ```
 This command takes the time that we stored in `t` and uses the `%` notation to find the remainder when `t` is divided by 2500. The remainder is stored in a new variable, `t_repeating`.
 
-<figure><video src="/images/bookpics/time_remainder.mp4" muted autoplay playsinline loop></video><figcaption>Using time to create a repeating pattern: the value returned by `millis()`` (in blue) is divided into equal intervals. The remainder of that division (in orange) provides a steady repeating sequence of numbers on which we can base a repeating animation.</figcaption></figure>
+<figure><video src="/images/bookpics/time_remainder.mp4" muted autoplay playsinline loop></video><figcaption>Using time to create a repeating pattern: the value returned by `millis()` (in blue) is divided into equal intervals. The remainder of that division (in orange) provides a steady repeating sequence of numbers on which we can base a repeating animation.</figcaption></figure>
 
 ### A picture that depends on time
 
