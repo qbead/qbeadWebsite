@@ -1,6 +1,6 @@
 ---
 title: Basic Structure of a Program
-keywords: SpinWheel, arduino, setup
+keywords: SpinWheel, arduino, setup, programming
 ---
 
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
