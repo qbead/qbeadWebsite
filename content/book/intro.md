@@ -10,7 +10,7 @@ keywords: SpinWheel, getting started, experimenting
 Before you dive into programming the SpinWheel, 
 first give this adventure a try to learn more about what the SpinWheel is capable of.
 We'll start with some simple animations
-and end with some code that in later adventures you'll add to the SpinWheel itself.
+and end with some code that you'll add to the SpinWheel itself in later adventures.
 :::
 
 Welcome to the SpinWheel educational materials! 
@@ -114,7 +114,7 @@ changeColor();
 
 ::: further-reading
 To learn why we are mixing colors using red, green, and blue,  
-check out our [Biology of Sight] adventure.
+check out our [Biology of Sight](/sight) adventure.
 On this page, you can try this out this on your own SpinWheel, 
 as well as learn more about how our eyes work.
 ::: 
@@ -123,14 +123,15 @@ On your SpinWheel, rather than using sliders to change the color,
 you will instead use building blocks of code.
 On the virtual SpinWheel below, you can see how the code that you
 would run on your physical SpinWheel would change the LED display.
-For now, focus only on the line `SpinWheel.setLargeLEDsUniform(50, 255, 225`.
+For now, focus only on the line `SpinWheel.setLargeLEDsUniform(50, 255, 225)`.
 It has three numbers that you can change to control the color that the SpinWheel lights up. 
 Like with the sliders, where you created colors by mixing red, green, and blue together,
 the first number, `50`, represents the amount of red, 
 the next, `255`, represents the amount of green, 
 and the final, `225`, gives the amount of blue.
 These combinations give a bright blue color.
-Try changing these numbers for yourself and see what happens.
+Try changing these numbers for yourself 
+and then press "Run for 10 seconds" button to see what happens.
 
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
 <script src='/simspinwheel/simspinwheel.js'></script>
@@ -163,7 +164,7 @@ It is also possible to specifically turn on just one large LED.
 #### an interactive widget will be added here to allow students to try controlling each large LED's color independently of the others 
 <!-- is there some way that we can hide the code and just have sliders for each LED where they can cahnge the colors?-->
 
-Now lets try doing the same thing, 
+Now let's try doing the same thing, 
 but using the code you will put on your SpinWheel.
 To start with, we are just turning on one LED.
 However, you can copy this line and independently control each large LED.
@@ -193,7 +194,7 @@ void loop() {
 You can also turn on only the small LEDs.
 To do this, rather than using `SpinWheel.setLargeLEDsUniform`,
 you instead can use the line `SpinWheel.setSmallLEDsUniform`.
-Like above the three numbers represent the red, green, and blue 
+Like above, the three numbers represent the red, green, and blue 
 components of the color you want to make.
 
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
