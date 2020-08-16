@@ -163,6 +163,7 @@ It is also possible to specifically turn on just one large LED.
 
 #### an interactive widget will be added here to allow students to try controlling each large LED's color independently of the others 
 <!-- is there some way that we can hide the code and just have sliders for each LED where they can cahnge the colors?-->
+<!-- in this widget, it should be very clear which number corresponds to which LED on the device, maybe having numbering directly on the SpinWheel. -->
 
 Now let's try doing the same thing, 
 but using the code you will put on your SpinWheel.
