@@ -24,6 +24,7 @@ The concept map illustrates how we see the lessons and adventures being connecte
 jQuery(function(){
   var graph = new Springy.Graph();
 
+  var intro = graph.newNode({label: "Color Coding"});
   var quick = graph.newNode({label: "Initial Setup", color: "red"});
   var basic = graph.newNode({label: "Basic Structure of a Program"});
   var arduino = graph.newNode({label: "Arduino 101", color: "grey"});
@@ -42,6 +43,7 @@ jQuery(function(){
   var magnet = graph.newNode({label: "Magnetism", color: "grey"});
   var vector = graph.newNode({label: "Vectors and Motion", color: "grey"});
   
+  graph.newEdge(intro, quick);
   graph.newEdge(quick, basic);
   graph.newEdge(basic, sight); 
   graph.newEdge(basic, strobe);
@@ -80,11 +82,12 @@ There is a lot going on in the map above, so below we have our recommended order
 
 ## Getting Started
 
-These two pages provide instructions for setting up your SpinWheel
-and the basic structure of the programs the SpinWheel uses.
+These three pages provide the essentials to get started programming your SpinWheel. 
+If you have coding experience, we recommend doing the [Initial Setup Guide](/quickstart) before jumping into any of the adventures.
 
-1. [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures.
-2. [Basic Structure of a Program](/basics): Here we provide introductory information on the structure of programs that will help you jump into the intro adventures, particularly if you have never coded before. 
+1. [Color Coding](/intro): Before you download the software for programming your SpinWheel, try out this page to get your first taste of how to control the SpinWheel's LEDs. 
+2. [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures.
+3. [Basic Structure of a Program](/basics): Here we provide introductory information on the structure of programs that will help you jump into the intro adventures, particularly if you have never coded before. 
 As you try the other adventures, refer back to this material and the linked pages again 
 and see what more you understand
 with the new knowledge of programming you have gained.

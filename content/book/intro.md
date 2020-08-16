@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Color Coding
 keywords: SpinWheel, getting started, experimenting
 ---
 
