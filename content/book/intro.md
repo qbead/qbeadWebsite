@@ -53,7 +53,7 @@ everything the first time you read it.
 To start with, let's try turning on all of the big LEDs.
 Using the sliders you can try changing the colors
 on the virtual SpinWheel below:
-/
+
 <!--WARNING: This really abuses the virtual spinwheel code. Here be dragons... and bugs...-->
 <style>
 .colortests {
@@ -183,7 +183,7 @@ we explain them more in our [basic structure of a program](basics) adventure.
 We recommend doing that page after the [initial setup guide](/quickstart).
 :::
 
-It is also possible to specifically turn on just one large LED.
+It is also possible to specifically turn on just one large LED. With the first slider, you can select the LED that you want to change the color of. Then, using the sliders below, you can adjust the color of that LED. Adjust the sliders to experiment below to see how the number works (or check out the diagram at the bottom of the page).
 
 <!--WARNING: This really abuses the virtual spinwheel code. Here be dragons... and bugs...-->
 <div id="second-color" class="ssw-container ssw-skip">
@@ -367,3 +367,5 @@ and the [basic structure of a program](/basics)
 that will get you to the point where you can put the code that you wrote above
 onto your own SpinWheel.
 
+
+![SpinWheel LED numbering.](/images/spinwheel_with_numbers.png "SpinWheel LED numbering")
