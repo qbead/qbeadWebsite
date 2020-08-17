@@ -133,8 +133,6 @@ These combinations give a bright blue color.
 Try changing these numbers for yourself 
 and then press "Run for 10 seconds" button to see what happens.
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
