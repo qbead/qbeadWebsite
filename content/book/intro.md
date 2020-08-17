@@ -53,11 +53,10 @@ everything the first time you read it.
 To start with, let's try turning on all of the big LEDs.
 Using the sliders you can try changing the colors
 on the virtual SpinWheel below:
-
-#### this will be updated to have a virtual SpinWheel whose large LEDs change instead of just a box that shows the color 
-<!--TODO: is there some way that we can instead have the sliders control the color on a virtual SpinWheel?-->
+/
+<!--WARNING: This really abuses the virtual spinwheel code. Here be dragons... and bugs...-->
 <style>
-#colortests {
+.colortests {
   font-size: 2rem;
   text-shadow:
     -1px -1px 0 white,
@@ -65,49 +64,80 @@ on the virtual SpinWheel below:
     -1px 1px 0  white,
     1px 1px 0   white;
 }
-#colortests input {
-  width: 20%;
+.colortests input {
+  width: 80%;
   margin: 0;
 }
-#colortests span {
+.colortests span {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
 }
-#colortests .spacer {
-  width:5%;
-}
-#colortests .vis {
-  width: 20%;
+.colortests .vis {
+  width: 80%;
   height: 2em;
   line-height: 2em;
   border: solid 1px;
 }
-#redshow {border-color: red !important;}
-#greenshow {border-color: green !important;}
-#blueshow {border-color: blue !important;}
+.redshow {border-color: red !important;}
+.greenshow {border-color: green !important;}
+.blueshow {border-color: blue !important;}
 </style>
-<div id="colortests">
-<div><input type="range" min="0" max="255" value="255" id="red"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="green"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="blue"></div>
-<div><span class="vis" id="redshow">255</span><span class="spacer">+</span><span class="vis" id="greenshow">255</span><span class="spacer">+</span><span class="vis" id="blueshow">255</span><span class="spacer">=</span><span class="vis" id="rgbshow">&nbsp;</span></div>
+<div id="first-color" class="ssw-container ssw-skip">
+<div class="ssw-code">
+<div class="colortests">
+<div><input type="range" min="0" max="255" value="255" class="red"><br><span class="vis redshow">255</span><br><br><input type="range" min="0" max="255" value="255" class="green"><br><span class="vis greenshow">255</span><br><br><input type="range" min="0" max="255" value="255" class="blue"><br><span class="vis blueshow">255</span></div>
 <script>
+var firstcolornode = document.getElementById("first-color");
 function changeColor(){
-  var r = document.getElementById("red").value;
-  var g = document.getElementById("green").value;
-  var b = document.getElementById("blue").value;
-  document.getElementById("rgbshow").style["background-color"]=`rgb(${r},${g},${b})`;
-  document.getElementById("redshow").innerHTML=r;
-  document.getElementById("redshow").style["background-color"]=`rgb(${r},0,0)`;
-  document.getElementById("greenshow").innerHTML=g;
-  document.getElementById("greenshow").style["background-color"]=`rgb(0,${g},0)`;
-  document.getElementById("blueshow").innerHTML=b;
-  document.getElementById("blueshow").style["background-color"]=`rgb(0,0,${b})`;
+  var r = firstcolornode.getElementsByClassName("red")[0].value;
+  var g = firstcolornode.getElementsByClassName("green")[0].value;
+  var b = firstcolornode.getElementsByClassName("blue")[0].value;
+  var col =`rgb(${r},${g},${b})`;
+  for (let led of firstcolornode.getElementsByClassName("ssw-large-led")) {
+    led.style["background-color"]=col;
+  }
+  firstcolornode.getElementsByClassName("redshow")[0].innerHTML=r;
+  firstcolornode.getElementsByClassName("redshow")[0].style["background-color"]=`rgb(${r},0,0)`;
+  firstcolornode.getElementsByClassName("greenshow")[0].innerHTML=g;
+  firstcolornode.getElementsByClassName("greenshow")[0].style["background-color"]=`rgb(0,${g},0)`;
+  firstcolornode.getElementsByClassName("blueshow")[0].innerHTML=b;
+  firstcolornode.getElementsByClassName("blueshow")[0].style["background-color"]=`rgb(0,0,${b})`;
 }
-document.getElementById("red").oninput = changeColor;
-document.getElementById("green").oninput = changeColor;
-document.getElementById("blue").oninput = changeColor;
+firstcolornode.getElementsByClassName("red")[0].oninput = changeColor;
+firstcolornode.getElementsByClassName("green")[0].oninput = changeColor;
+firstcolornode.getElementsByClassName("blue")[0].oninput = changeColor;
 changeColor();
 </script>
+</div>
+</div>
+<div class="ssw-vis-out" style="width: 200px;">
+<div class="ssw-vis">
+<div>
+<img src="/simspinwheel/spinwheel_invertgray.png">
+<div class="ssw-large-led ssw-large-led0"></div>
+<div class="ssw-large-led ssw-large-led1"></div>
+<div class="ssw-large-led ssw-large-led2"></div>
+<div class="ssw-large-led ssw-large-led3"></div>
+<div class="ssw-large-led ssw-large-led4"></div>
+<div class="ssw-large-led ssw-large-led5"></div>
+<div class="ssw-large-led ssw-large-led6"></div>
+<div class="ssw-large-led ssw-large-led7"></div>
+<div class="ssw-small-led ssw-small-led0"></div>
+<div class="ssw-small-led ssw-small-led1"></div>
+<div class="ssw-small-led ssw-small-led2"></div>
+<div class="ssw-small-led ssw-small-led3"></div>
+<div class="ssw-small-led ssw-small-led4"></div>
+<div class="ssw-small-led ssw-small-led5"></div>
+<div class="ssw-small-led ssw-small-led6"></div>
+<div class="ssw-small-led ssw-small-led7"></div>
+<div class="ssw-small-led ssw-small-led8"></div>
+<div class="ssw-small-led ssw-small-led9"></div>
+<div class="ssw-small-led ssw-small-led10"></div>
+<div class="ssw-small-led ssw-small-led11"></div>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -133,8 +163,6 @@ These combinations give a bright blue color.
 Try changing these numbers for yourself 
 and then press "Run for 10 seconds" button to see what happens.
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
@@ -157,10 +185,62 @@ We recommend doing that page after the [initial setup guide](/quickstart).
 
 It is also possible to specifically turn on just one large LED.
 
-
-#### an interactive widget will be added here to allow students to try controlling each large LED's color independently of the others 
-<!-- is there some way that we can hide the code and just have sliders for each LED where they can cahnge the colors?-->
-<!-- in this widget, it should be very clear which number corresponds to which LED on the device, maybe having numbering directly on the SpinWheel. -->
+<!--WARNING: This really abuses the virtual spinwheel code. Here be dragons... and bugs...-->
+<div id="second-color" class="ssw-container ssw-skip">
+<div class="ssw-code">
+<div class="colortests">
+<div><input type="range" min="0" max="7" value="0" class="number"><br>LED Number <span class="numshow">0</span><br><br><input type="range" min="0" max="255" value="255" class="red"><br><span class="vis redshow">255</span><br><br><input type="range" min="0" max="255" value="255" class="green"><br><span class="vis greenshow">255</span><br><br><input type="range" min="0" max="255" value="255" class="blue"><br><span class="vis blueshow">255</span></div>
+<script>
+var secondcolornode = document.getElementById("second-color");
+function changeSingleColor(){
+  var n = secondcolornode.getElementsByClassName("number")[0].value;
+  var r = secondcolornode.getElementsByClassName("red")[0].value;
+  var g = secondcolornode.getElementsByClassName("green")[0].value;
+  var b = secondcolornode.getElementsByClassName("blue")[0].value;
+  var col =`rgb(${r},${g},${b})`;
+  secondcolornode.getElementsByClassName(`ssw-large-led${n}`)[0].style["background-color"]=col;
+  secondcolornode.getElementsByClassName("numshow")[0].innerHTML=n;
+  secondcolornode.getElementsByClassName("redshow")[0].style["background-color"]=`rgb(${r},0,0)`;
+  secondcolornode.getElementsByClassName("greenshow")[0].innerHTML=g;
+  secondcolornode.getElementsByClassName("greenshow")[0].style["background-color"]=`rgb(0,${g},0)`;
+  secondcolornode.getElementsByClassName("blueshow")[0].innerHTML=b;
+  secondcolornode.getElementsByClassName("blueshow")[0].style["background-color"]=`rgb(0,0,${b})`;
+}
+secondcolornode.getElementsByClassName("red")[0].oninput = changeSingleColor;
+secondcolornode.getElementsByClassName("green")[0].oninput = changeSingleColor;
+secondcolornode.getElementsByClassName("blue")[0].oninput = changeSingleColor;
+changeSingleColor();
+</script>
+</div>
+</div>
+<div class="ssw-vis-out" style="width: 200px;">
+<div class="ssw-vis">
+<div>
+<img src="/simspinwheel/spinwheel_invertgray.png">
+<div class="ssw-large-led ssw-large-led0"></div>
+<div class="ssw-large-led ssw-large-led1"></div>
+<div class="ssw-large-led ssw-large-led2"></div>
+<div class="ssw-large-led ssw-large-led3"></div>
+<div class="ssw-large-led ssw-large-led4"></div>
+<div class="ssw-large-led ssw-large-led5"></div>
+<div class="ssw-large-led ssw-large-led6"></div>
+<div class="ssw-large-led ssw-large-led7"></div>
+<div class="ssw-small-led ssw-small-led0"></div>
+<div class="ssw-small-led ssw-small-led1"></div>
+<div class="ssw-small-led ssw-small-led2"></div>
+<div class="ssw-small-led ssw-small-led3"></div>
+<div class="ssw-small-led ssw-small-led4"></div>
+<div class="ssw-small-led ssw-small-led5"></div>
+<div class="ssw-small-led ssw-small-led6"></div>
+<div class="ssw-small-led ssw-small-led7"></div>
+<div class="ssw-small-led ssw-small-led8"></div>
+<div class="ssw-small-led ssw-small-led9"></div>
+<div class="ssw-small-led ssw-small-led10"></div>
+<div class="ssw-small-led ssw-small-led11"></div>
+</div>
+</div>
+</div>
+</div>
 
 Now let's try doing the same thing, 
 but using the code you will put on your SpinWheel.
@@ -168,8 +248,6 @@ To start with, we are just turning on one LED.
 However, you can copy this line and independently control each large LED.
 Try this for yourself below!
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
@@ -192,8 +270,6 @@ you instead can use the line `SpinWheel.setSmallLEDsUniform`.
 Like above, the three numbers represent the red, green, and blue 
 components of the color you want to make.
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
@@ -214,8 +290,6 @@ each of the 12 small LEDs on their own.
 Experiment with adding more lines to turn on more of the small LEDs
 or create a completely different pattern.
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
@@ -239,8 +313,6 @@ void loop() {
 It is also possible to control each large and small LED independently,
 below we turn on all of the LEDs together:
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
