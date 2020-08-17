@@ -147,15 +147,15 @@ Now let's put all of this together and see what happens by clicking run on the v
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
-</pre>
-<textarea class="ssw-codeblock">
   int t = millis();
   int t_repeating = t % 2500;
   int b = t_repeating / 10;
+</pre>
+<textarea class="ssw-codeblock">
   SpinWheel.setLargeLEDsUniform(b, b, b);
-  SpinWheel.drawFrame();
 </textarea>
 <pre class="ssw-codeblock">
+  SpinWheel.drawFrame();
 }
 </pre>
 </div>
