@@ -137,9 +137,6 @@ and then press "Run for 10 seconds" button to see what happens.
 <script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
-void setup() {
-  SpinWheel.begin();
-}
 void loop() {
   SpinWheel.clearAllLEDs();
 </pre>
@@ -175,9 +172,6 @@ Try this for yourself below!
 <script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
-void setup() {
-  SpinWheel.begin();
-}
 void loop() {
   SpinWheel.clearAllLEDs();
 </pre>
@@ -202,9 +196,6 @@ components of the color you want to make.
 <script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
-void setup() {
-  SpinWheel.begin();
-}
 void loop() {
   SpinWheel.clearAllLEDs();
 </pre>
@@ -227,9 +218,6 @@ or create a completely different pattern.
 <script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
-void setup() {
-  SpinWheel.begin();
-}
 void loop() {
   SpinWheel.clearAllLEDs();
 </pre>
@@ -255,9 +243,6 @@ below we turn on all of the LEDs together:
 <script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
-void setup() {
-  SpinWheel.begin();
-}
 void loop() {
   SpinWheel.clearAllLEDs();
 </pre>
