@@ -107,7 +107,7 @@ void loop() {
 </pre>
 </div>
 
-As usual, [the entirety of the code is documented on its own page](/codedoc/examples/Animations_and_Patterns/Color_Wheel), and in the Arduino examples menu under `Animations_and_Patterns → Color_Wheel`
+In this case, rather than independently controlling the red, green, and blue components of each LED, you are providing one number that represents the color. In the color wheel diagram above, you can see on the right the relative amounts of red, green, and blue light that go into each color on the left. As usual, [the entirety of the code is documented on its own page](/codedoc/examples/Animations_and_Patterns/Color_Wheel), and in the Arduino examples menu under `Animations_and_Patterns → Color_Wheel`
 
 
 ### Non-uniform patterns and accessing separate LEDs
