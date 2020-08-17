@@ -207,6 +207,11 @@ function changeSingleColor(){
   secondcolornode.getElementsByClassName("blueshow")[0].innerHTML=b;
   secondcolornode.getElementsByClassName("blueshow")[0].style["background-color"]=`rgb(0,0,${b})`;
 }
+function changeSingleColorNumber(){
+  var n = secondcolornode.getElementsByClassName("number")[0].value;
+  secondcolornode.getElementsByClassName("numshow")[0].innerHTML=n;
+}
+secondcolornode.getElementsByClassName("number")[0].oninput = changeSingleColorNumber;
 secondcolornode.getElementsByClassName("red")[0].oninput = changeSingleColor;
 secondcolornode.getElementsByClassName("green")[0].oninput = changeSingleColor;
 secondcolornode.getElementsByClassName("blue")[0].oninput = changeSingleColor;
