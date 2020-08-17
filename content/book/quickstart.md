@@ -42,7 +42,9 @@ Your kit may have come with a paper booklet (the SpinWheel [Field Guide](/book))
 
 The switch on the SpinWheel should be set to "USB" whenever it is plugged into your computer, whether to charge or to program. You should also keep the switch in this position when you are not using the SpinWheel and for long term storage to protect the battery from discharging. 
 
-
+::: warning :
+The SpinWheel will not work properly if connected to a computer/charger without having the switch set to USB. It will not charge and programming it would be extremely unreliable.
+::: 
 
 
 ## Setting Up the Arduino Software
