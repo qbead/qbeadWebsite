@@ -86,7 +86,7 @@ on the virtual SpinWheel below:
 <div id="first-color" class="ssw-container ssw-skip">
 <div class="ssw-code">
 <div class="colortests">
-<div><input type="range" min="0" max="255" value="255" class="red"><br><span class="vis redshow">255</span><br><br><input type="range" min="0" max="255" value="255" class="green"><br><span class="vis greenshow">255</span><br><br><input type="range" min="0" max="255" value="255" class="blue"><br><span class="vis blueshow">255</span></div>
+<div><input type="range" min="0" max="255" value="0" class="red"><br><span class="vis redshow">0</span><br><br><input type="range" min="0" max="255" value="0" class="green"><br><span class="vis greenshow">0</span><br><br><input type="range" min="0" max="255" value="0" class="blue"><br><span class="vis blueshow">0</span></div>
 <script>
 var firstcolornode = document.getElementById("first-color");
 function changeColor(){
@@ -200,6 +200,7 @@ function changeSingleColor(){
   var col =`rgb(${r},${g},${b})`;
   secondcolornode.getElementsByClassName(`ssw-large-led${n}`)[0].style["background-color"]=col;
   secondcolornode.getElementsByClassName("numshow")[0].innerHTML=n;
+  secondcolornode.getElementsByClassName("redshow")[0].innerHTML=r;
   secondcolornode.getElementsByClassName("redshow")[0].style["background-color"]=`rgb(${r},0,0)`;
   secondcolornode.getElementsByClassName("greenshow")[0].innerHTML=g;
   secondcolornode.getElementsByClassName("greenshow")[0].style["background-color"]=`rgb(0,${g},0)`;
