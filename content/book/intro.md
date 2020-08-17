@@ -168,8 +168,6 @@ To start with, we are just turning on one LED.
 However, you can copy this line and independently control each large LED.
 Try this for yourself below!
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
@@ -192,8 +190,6 @@ you instead can use the line `SpinWheel.setSmallLEDsUniform`.
 Like above, the three numbers represent the red, green, and blue 
 components of the color you want to make.
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
@@ -214,8 +210,7 @@ each of the 12 small LEDs on their own.
 Experiment with adding more lines to turn on more of the small LEDs
 or create a completely different pattern.
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
+
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
@@ -239,8 +234,6 @@ void loop() {
 It is also possible to control each large and small LED independently,
 below we turn on all of the LEDs together:
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
