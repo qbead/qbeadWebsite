@@ -114,6 +114,7 @@ If you are new to coding, be sure to read our [Quick Start Guide](/quickstart) a
 To begin, let's try changing the code in the browser.
 We have created a virtual SpinWheel simulator to let you see how your physical SpinWheel would respond if you ran the same code. This makes it easy to quickly see how a particular change would affect the SpinWheel without waiting for the code to upload to the SpinWheel.
 
+<!-- fast timer -->
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
 <script src='/simspinwheel/simspinwheel.js'></script>
 <div class="ssw-codecontent" markdown=0>

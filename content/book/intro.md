@@ -163,6 +163,7 @@ These combinations give a bright blue color.
 Try changing these numbers for yourself 
 and then press the "Run for 10 seconds" button to see what happens.
 
+<!-- fast timer -->
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
@@ -254,6 +255,7 @@ To start with, we are just turning on one LED.
 However, you can copy this line and independently control each large LED.
 Try this for yourself below!
 
+<!-- fast timer -->
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
@@ -277,6 +279,7 @@ you can use the line
 Like above, the three numbers represent the red, green, and blue 
 components of the color you want to make.
 
+<!-- fast timer -->
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
@@ -297,6 +300,7 @@ each of the 12 small LEDs on their own.
 Experiment with adding more lines to turn on more of the small LEDs
 or create a completely different pattern.
 
+<!-- fast timer -->
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
@@ -320,6 +324,7 @@ void loop() {
 It is also possible to control each large and small LED independently,
 below we turn on all of the LEDs together:
 
+<!-- fast timer -->
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
 void loop() {
