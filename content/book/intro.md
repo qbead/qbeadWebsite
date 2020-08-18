@@ -14,14 +14,14 @@ and end with some code that you'll add to the SpinWheel itself in later adventur
 :::
 
 Welcome to the SpinWheel educational materials! 
-This page is the first of many adventures and lessons that we have written
-to empower you to begin coding the SpinWheel for yourself.
+This page is the first of many adventures and lessons we have written
+to empower you create exciting new programs on your SpinWheel.
 If you have never programmed before, 
 we hope that this lesson will help you become more comfortable 
-with looking at code and guessing what it might do.
+with looking at new code and figuring out what it might do.
 If you already have coding experience, 
-then you may prefer to complete the [initial setup guide](/quickstart)
-and then jump into the later adventures.
+then you may prefer jumping to the [initial setup guide](/quickstart)
+and then continuing into the other adventures.
 
 
 ## The SpinWheel
@@ -33,7 +33,7 @@ you can see some of the many things that the SpinWheel can do.
 You can program the LEDs to make repeating patterns or respond to the motion of the device.
 You can also light up all the LEDs in one color. 
 As you go through the adventures and lessons in our [field guide](/book), 
-you will learn how we did this and become comfortable customizing it further.
+you will learn how these animations were written and become comfortable customizing it further.
 
 ## Controlling the SpinWheel
 
@@ -51,7 +51,7 @@ everything the first time you read it.
 ### Turning on the Large LEDs
 
 To start with, let's try turning on all of the big LEDs.
-Using the sliders you can try changing the colors
+Using the sliders, you can change the colors
 on the virtual SpinWheel below:
 
 <!--WARNING: This really abuses the virtual spinwheel code. Here be dragons... and bugs...-->
@@ -153,15 +153,15 @@ On your SpinWheel, rather than using sliders to change the color,
 you will instead use building blocks of code.
 On the virtual SpinWheel below, you can see how the code that you
 would run on your physical SpinWheel would change the LED display.
-For now, focus only on the line `SpinWheel.setLargeLEDsUniform(50, 255, 225)`.
-It has three numbers that you can change to control the color that the SpinWheel lights up. 
+For now, focus only on the line `SpinWheel.setLargeLEDsUniform(50, 255, 250)`.
+It has three numbers that you can change to control the color of the SpinWheel LEDs. 
 Like with the sliders, where you created colors by mixing red, green, and blue together,
 the first number, `50`, represents the amount of red, 
 the next, `255`, represents the amount of green, 
-and the final, `225`, gives the amount of blue.
+and the final, `250`, gives the amount of blue.
 These combinations give a bright blue color.
 Try changing these numbers for yourself 
-and then press "Run for 10 seconds" button to see what happens.
+and then press the "Run for 10 seconds" button to see what happens.
 
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
@@ -183,7 +183,7 @@ we explain them more in our [basic structure of a program](basics) adventure.
 We recommend doing that page after the [initial setup guide](/quickstart).
 :::
 
-It is also possible to specifically turn on just one large LED. With the first slider, you can select the LED that you want to change the color of. Then, using the sliders below, you can adjust the color of that LED. Adjust the sliders to experiment below to see how the number works (or check out the diagram at the bottom of the page).
+It is also possible to specifically turn on just one large LED. With the first slider, you can select the LED that you want to change the color of. Then, using the other sliders, you can adjust the color of that LED. Experiment with the sliders to see how the numberin of the LEDs works (or check out the diagram at the bottom of the page).
 
 <!--WARNING: This really abuses the virtual spinwheel code. Here be dragons... and bugs...-->
 <div id="second-color" class="ssw-container ssw-skip">
@@ -270,9 +270,10 @@ void loop() {
 
 ### Turning on the Small LEDs
 
-You can also turn on only the small LEDs.
-To do this, rather than using `SpinWheel.setLargeLEDsUniform`,
-you instead can use the line `SpinWheel.setSmallLEDsUniform`.
+You can also turn on all of the small LEDs.
+To do this, instead of using `SpinWheel.setLargeLEDsUniform`, 
+you can use the line  
+`SpinWheel.setSmallLEDsUniform`.
 Like above, the three numbers represent the red, green, and blue 
 components of the color you want to make.
 
@@ -282,7 +283,7 @@ void loop() {
   SpinWheel.clearAllLEDs();
 </pre>
 <textarea class="ssw-codeblock">
-  SpinWheel.setSmallLEDsUniform(255, 255, 255);
+  SpinWheel.setSmallLEDsUniform(0, 200, 255);
 </textarea>
 <pre class="ssw-codeblock">
   SpinWheel.drawFrame();
@@ -361,9 +362,9 @@ At this point, you can modify the code above to create your own pattern
 that uses all of the LEDs.
 We encourage you to take some time to experiment with this to create your own designs.
 Once you have some patterns that you are excited 
-to try on your own SpinWheel, then proceed to the [initial setup guide](/quickstart)
-that leads you through installing the computer program necessary to use the SpinWheel
-and the [basic structure of a program](/basics) 
+to try on your own SpinWheel, proceed to the [initial setup guide](/quickstart)
+that leads you through installing the computer program necessary to communicate with the SpinWheel.
+Then work through the [basic structure of a program](/basics) 
 that will get you to the point where you can put the code that you wrote above
 onto your own SpinWheel.
 
