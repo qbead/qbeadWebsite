@@ -273,8 +273,8 @@ This is similar to how above you could change the color of each LED.
 Rather than adjusting sliders, copy the `SpinWheel.setLargeLED` line 
 and change the first number. For instance, to light up the very top large LED
 in the same color, add `SpinWheel.setLarge(4, 255, 0, 100);`.
-This command takes the form, 
-`SpinWheel.setLarge(led to light up, amount of red, amount of green, amount of blue)`.
+The first number gives the LED and the next three give the amount of red,
+green, and blue light (like in the `SpinWheel.setLargeLEDsUniform` command).
 Try adding more LEDs or changing the color yourself on the SpinWheel!
 
 ![SpinWheel LED numbering.](/images/spinwheel_with_numbers.png "SpinWheel LED numbering")
