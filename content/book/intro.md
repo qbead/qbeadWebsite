@@ -184,7 +184,7 @@ we explain them more in our [basic structure of a program](basics) adventure.
 We recommend doing that page after the [initial setup guide](/quickstart).
 :::
 
-It is also possible to specifically turn on just one large LED. With the first slider, you can select the LED that you want to change the color of. Then, using the other sliders, you can adjust the color of that LED. Experiment with the sliders to see how the numberin of the LEDs works (or check out the diagram at the bottom of the page).
+It is also possible to specifically control each large LED. With the first slider, you can select the LED that you want to change the color of. Then, using the other sliders, you can adjust the color of that LED. Repeat this process for each LED you want to change the color of. If you move all three sliders for a given LED to zero, then that will turn the LED "off" again. Experiment with the LED number slider to see how the numbering of the LEDs works (or check out the diagram at the bottom of this section).
 
 <!--WARNING: This really abuses the virtual spinwheel code. Here be dragons... and bugs...-->
 <div id="second-color" class="ssw-container ssw-skip">
@@ -252,8 +252,6 @@ changeSingleColor();
 Now let's try doing the same thing, 
 but using the code you will put on your SpinWheel.
 To start with, we are just turning on one LED.
-However, you can copy this line and independently control each large LED.
-Try this for yourself below!
 
 <!-- fast timer -->
 <div class="ssw-codecontent" markdown=0>
@@ -269,6 +267,17 @@ void loop() {
 }
 </pre>
 </div>
+
+You can also copy this line and independently control each large LED.
+This is similar to how above you could change the color of each LED.
+Rather than adjusting sliders, copy the `SpinWheel.setLargeLED` line 
+and change the first number. For instance, to light up the very top large LED
+in the same color, add `SpinWheel.setLarge(4, 255, 0, 100);`.
+This command takes the form, 
+`SpinWheel.setLarge(led to light up, amount of red, amount of green, amount of blue)`.
+Try adding more LEDs or changing the color yourself on the SpinWheel!
+
+![SpinWheel LED numbering.](/images/spinwheel_with_numbers.png "SpinWheel LED numbering")
 
 ### Turning on the Small LEDs
 
@@ -372,6 +381,3 @@ that leads you through installing the computer program necessary to communicate 
 Then work through the [basic structure of a program](/basics) 
 that will get you to the point where you can put the code that you wrote above
 onto your own SpinWheel.
-
-
-![SpinWheel LED numbering.](/images/spinwheel_with_numbers.png "SpinWheel LED numbering")
