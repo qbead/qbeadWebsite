@@ -74,7 +74,7 @@ void loop() {
 }
 ```
 
-Adding `#include "SpinWearables.h"` and `using namespace SpinWearables;` before the `setup` loop ensures that the rest of the program has access to extra resources and commands specific for programming your SpinWheel. 
+Adding `#include "SpinWearables.h"` and `using namespace SpinWearables;` before the `setup` block ensures that the rest of the program has access to extra resources and commands specific for programming your SpinWheel. 
 It is also necessary to add `SpinWheel.begin();` in the `setup` block. 
 This line makes sure that the SpinWheel hardware is ready for the instructions that we will add in `loop` in the next chunk of code. 
 When you start writing other programs for the SpinWheel, these extra lines will be essential.
