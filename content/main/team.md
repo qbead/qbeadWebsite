@@ -115,10 +115,10 @@ with her dog Cary.
 </div>
 
 <div class="team-member">
-<img src="/images/teampics/emily_s.jpg">
+<img src="/images/teampics/hannah_s.jpg">
 <div>
 <h1>Hannah</h1>
-<h2>Physics</h2>
+<h2>Nuclear Physics</h2>
 Hannah is a PhD student in the Yale Physics Department. She works on the ALICE experiment which is a detector on the world’s largest machine; the Large Hadron Collider. There, she studies the results of the extremely hot and dense heavy-ion collisions which are designed to recreate the conditions of the early universe. Outside of physics, Hannah is a fan of almost anything outside. Whether it’s running, hiking, yoga, rock climbing, or skiing - she is always up for some time outside with friends!
 </div>
 </div>
