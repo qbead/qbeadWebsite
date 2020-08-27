@@ -160,8 +160,7 @@ the first number, `50`, represents the amount of red,
 the next, `255`, represents the amount of green, 
 and the final, `250`, gives the amount of blue.
 These combinations give a bright blue color.
-Try changing these numbers for yourself 
-and then press the "Run for 10 seconds" button to see what happens.
+Press the "Run for 10 seconds" button to see what happens.
 
 <!-- fast timer -->
 <div class="ssw-codecontent" markdown=0>
@@ -177,6 +176,10 @@ void loop() {
 }
 </pre>
 </div>
+
+Try changing the code for yourself
+by typing the numbers you want instead of `50, 255, 250` 
+in the line `SpinWheel.setLargeLEDsUniform(50, 255, 250)`. Then, press "Run for 10 seconds" to see the color you created on the SpinWheel.
 
 ::: further-reading
 If you are really curious about what those other lines mean, 
