@@ -24,7 +24,7 @@ The concept map illustrates how we see the lessons and adventures being connecte
 jQuery(function(){
   var graph = new Springy.Graph();
 
-  var intro = graph.newNode({label: "Getting to Know Your SpinWheel"});
+  var intro = graph.newNode({label: "Getting to Know Your SpinWheel", color: "red"});
   var quick = graph.newNode({label: "Initial Setup", color: "red"});
   var basic = graph.newNode({label: "Basic Structure of a Program"});
   var arduino = graph.newNode({label: "Arduino 101", color: "grey"});
@@ -44,16 +44,16 @@ jQuery(function(){
   var vector = graph.newNode({label: "Vectors and Motion", color: "grey"});
   
   graph.newEdge(intro, quick);
-  graph.newEdge(quick, basic);
-  graph.newEdge(basic, sight); 
-  graph.newEdge(basic, strobe);
-  graph.newEdge(basic, ani); 
+  graph.newEdge(quick, sight); 
+  graph.newEdge(quick, strobe);
+  graph.newEdge(sight, ani); 
+  graph.newEdge(ani, basic);
   graph.newEdge(basic, arduino);  
   graph.newEdge(sight, light); 
   graph.newEdge(light, colortheory); 
   graph.newEdge(ani, ani2); 
   graph.newEdge(arduino, progpatterns); 
-  graph.newEdge(ani, progpatterns); 
+  graph.newEdge(ani2, progpatterns); 
   graph.newEdge(ani2, step); 
   graph.newEdge(ani2, dance);
   graph.newEdge(dance, compass); 
@@ -87,10 +87,6 @@ If you have coding experience, we recommend doing the [Initial Setup Guide](/qui
 
 1. [Getting to Know Your SpinWheel](/intro): Before you download the software for programming your SpinWheel, try out this page to get your first taste of how to control the SpinWheel's LEDs. 
 2. [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures.
-3. [Basic Structure of a Program](/basics): Here we provide introductory information on the structure of programs that will help you jump into the intro adventures, particularly if you have never coded before. 
-As you try the other adventures, refer back to this material and the linked pages again 
-and see what more you understand
-with the new knowledge of programming you have gained.
 
 ## Intro Adventures
 
@@ -103,8 +99,7 @@ These adventures assume that you have no coding experience and are a great way t
 ### Associated Lessons
 1. [Light and Color](/lightandcolor)
 2. [Color Theory](/colortheory)
-3. [Coding Building Blocks](/progpatterns)
-4. [Arduino 101](/arduino101)
+3. [Basic Structure of a Program](/basics)
 
 
 ## Intermediate Adventures
@@ -113,25 +108,27 @@ These activities build on the ideas presented in the introductory adventures. If
 
 1. [Animations and Patterns](/animation2)
 2. [Make a Step Counter](/stepcounter)
-3. [Dancing with Color](/dancing)
 
 ### Associated Lessons
-1. [Vectors and Motion](/vectors)
-2. [Rotation and Moving in Circles](/rotation)
-3. Inertial Reference Frames / Free Fall (planned)
-4. Physical Computing (planned)
+1. [Coding Building Blocks](/progpatterns)
+2. [Arduino 101](/arduino101) 
+3. [Vectors and Motion](/vectors)
+5. Inertial Reference Frames / Free Fall (planned)
+6. Physical Computing (planned)
 
 ## Advanced Adventures
 
 These are the most challenging SpinWheel activities. We recommend completing at least one earlier adventure before trying them out. If you have completed the other adventures, then you should be able to jump into any of these. 
 
-1. Compass (planned)
-2. [Recurrent Neural Networks for Gesture Recognition](/rnn)
+1. [Dancing with Color](/dancing)
+2. Compass (planned)
+3. [Recurrent Neural Networks for Gesture Recognition](/rnn)
 
 ### Associated Lessons
-1. Magnetism (planned)
-2. Electricity (planned)
-3. Neural Networks (planned)
+1. [Rotation and Moving in Circles](/rotation)
+2. Magnetism (planned)
+3. Electricity (planned)
+4. Neural Networks (planned)
 
 ## Appendix
 
