@@ -5,7 +5,7 @@ header-image: /images/banners/colors_and_eye.png
 ---
 
 ::: intro-box
-You'll will learn how to trick your eyes into perceiving a rainbow of colors using only red, green, and blue LEDs. This lesson has two parts:
+You will learn how to trick your eyes into perceiving a rainbow of colors using only red, green, and blue LEDs. This lesson has two parts:
 
 1. <strong> Colors</strong>: Learn more about how your eyes detect color and program the SpinWheel to mimic arbitrary colors.
 2. <strong> Persistence of Vision</strong>: Use the SpinWheel to explore a limitation of our eyes that animators take advantage of.
