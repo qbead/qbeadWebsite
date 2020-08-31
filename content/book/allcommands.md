@@ -207,7 +207,7 @@ A good place to see why these functions are useful is the set of lessons on [ani
 
 The `colorWheel` function turns a single number representing an angle into a color from the color wheel.
 
-<!--TODO: add plots-->
+![Turning an input byte into a hue from the color wheel.](/images/bookpics/colorwheel.png "Turning an input byte into a hue from the color wheel.")
 
 <div class="ssw-codecontent" markdown=0>
 <pre class="ssw-codeblock">
