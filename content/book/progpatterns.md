@@ -138,7 +138,7 @@ int number_b = 7;
 int resulting_number = max(sqrt(number_a-1) * 2, min(number_b, 2));
 ```
 
-![In this diagram, you can see the order in which the computer evaluates this piece of code. It first subtracts `1` from `number_a`, then evaluates the functions `sqrt()` and `min()`, next multiplies the output of `sqrt()` by `2`, and finally evaluates `max()`. This is similar to how when solving a math equation, you first do anything within parenthenses and then work your way out.]()
+<figure><video src="/images/bookpics/calc_tree.mp4" muted autoplay playsinline loop></video><figcaption>In this diagram, you can see the order in which the computer evaluates this piece of code. It first subtracts `1` from `number_a`, then evaluates the functions `sqrt()` and `min()`, next multiplies the output of `sqrt()` by `2`, and finally evaluates `max()`. This is similar to how when solving a math equation, you first do anything within parenthenses and then work your way out.</figcaption></figure>
 
 ## Creating your own functions
 
