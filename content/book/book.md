@@ -24,7 +24,7 @@ The concept map illustrates how we see the lessons and adventures being connecte
 jQuery(function(){
   var graph = new Springy.Graph();
 
-  var intro = graph.newNode({label: "Getting to Know Your SpinWheel", color: "red"});
+  var intro = graph.newNode({label: "Getting Started with the SpinWheel", color: "red"});
   var quick = graph.newNode({label: "Initial Setup", color: "red"});
   var basic = graph.newNode({label: "Basic Structure of a Program"});
   var arduino = graph.newNode({label: "Arduino 101", color: "grey"});
@@ -85,7 +85,7 @@ There is a lot going on in the map above, so below we have our recommended order
 These three pages provide the essentials to get started programming your SpinWheel. 
 If you have coding experience, we recommend doing the [Initial Setup Guide](/quickstart) before jumping into any of the adventures.
 
-1. [Getting to Know Your SpinWheel](/intro): Before you download the software for programming your SpinWheel, try out this page to get your first taste of how to control the SpinWheel's LEDs. 
+1. [Getting Started with the SpinWheel](/intro): Before you download the software for programming your SpinWheel, try out this page to get your first taste of how to control the SpinWheel's LEDs. 
 2. [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures.
 
 ## Intro Adventures
