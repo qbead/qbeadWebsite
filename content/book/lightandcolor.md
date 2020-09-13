@@ -194,7 +194,7 @@ workings of electromagnetic waves, we have focused on describing light, based on
 can measure about it, such as its wavelength. 
 
 ::: further-reading
-If you are interested in learning more topic related to electromagnetic waves, go to the lessons on [Electricity]() and [Magnetism](/magnetism).
+If you are interested in learning more topic related to electromagnetic waves, go to the lessons on Electricity and [Magnetism](/magnetism).
 :::
 <!--TODO: Add link to electricity page.-->
 
