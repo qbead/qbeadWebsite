@@ -1,5 +1,5 @@
 ---
-title: Animations and patterns
+title: Animations and Patterns
 keywords: animations, frames, timing
 ---
 
@@ -30,14 +30,14 @@ simply grab a piece of paper,
 draw the pattern you desire,
 and translate it into an expression of code and math that implements it.
 However, that much freedom can be daunting at first.
-Here we will start by modifying the animation that you created in the [intro adventure on animation](/animation).
+Here we will start by modifying the animation that you created in the [Intro to Animation adventure](/animation).
 Then we will present some additional sketches that allow you to create animations with changing colors and where you can control each LED separately.
 We invite you upload these sketches from `Examples → SpinWearables → Animations_and_Patterns` to see what they do on your SpinWheel and then experiment with modifying them.
 
 
 ### Smoother pulsing
 
-You may have noticed that the brightness of the LEDs in the [sketch we present in the intro to animation](/codedoc/examples/Animations_and_Patterns/Simple_Blink) was abruptly cut off.
+You may have noticed that the brightness of the LEDs in the [sketch we present in the Intro to Animation adventure](/codedoc/examples/Animations_and_Patterns/Simple_Blink) was abruptly cut off.
 Wouldn't it be prettier if we gently turned off the LEDs, similarly to how gently we are ramping them up?
 We can implement this by writing a function that first goes up and then slowly goes back down.
 We have already written such a function for you to use
@@ -73,7 +73,7 @@ void loop() {
 </div>
 
 ::: further-reading
-If you want to learn more about controlling the SpinWheel's LEDs, then try out our [Biology of Sight](/sight) Adventure. The [color theory](/colortheory) lesson provides more information about why we can use red, green, and blue LEDs to represent all the colors of the rainbow.
+If you want to learn more about controlling the SpinWheel's LEDs, then try out our [Biology of Sight](/sight) adventure. The [Color Theory](/colortheory) lesson provides more information about why we can use red, green, and blue LEDs to represent all the colors of the rainbow.
 :::
 
 ### The color wheel
@@ -126,7 +126,7 @@ where the first argument `i` is the number of the LED we want to change.
 Similarly, we use `SpinWheel.setSmallLED(i,r,g,b)` to do the same for the smaller LEDs.
 
 ::: further-reading
-For a refresher on how to control individual LEDs and a reminder of the number that corresponds to each LED, you can refer back to our [basic structure of a program guide](/basics).
+For a refresher on how to control individual LEDs and a reminder of the number that corresponds to each LED, you can refer back to our [Basic Structure of a Program lesson](/basics).
 :::
 
 By accessing individual LEDs, we can create an interesting time-dependent pattern
@@ -192,8 +192,8 @@ we hope that you will find these functions useful.
 These functions also have virtual SpinWheels embedded in the page to allow you to experiment with the code and see how they work more easily!
 
 ::: further-reading
-If you are interested in learning more about mixing of colors with LEDs and how the human eye works, then check out our [adventure on the biology of the human eye](/sight).
-You can also delve deeper into [the tools that this programming language provides](/progpatterns),
+If you are interested in learning more about mixing of colors with LEDs and how the human eye works, then check out our [Biology of Sight adventure](/sight).
+You can also delve deeper into [the building blocks of this programming language](/progpatterns),
 which could enable you to write more sophisticated programs and patterns.
 :::
 

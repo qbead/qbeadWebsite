@@ -592,7 +592,7 @@ which represent the components of the acceleration along the $X$, $Y$, and $Z$ d
 Now that you have a rough understanding of what these number represent,
 we will use them in various creative endeavors,
 where a small piece of code will be able to react to motion in a colorful way.
-For instance, consider how we use acceleration measurements in the [make a step counter](/stepcounter)
-project, or their more artistic use in the [dance and motion visualization](/dancing) project.
+For instance, consider how we use acceleration measurements in the [Step Counter](/stepcounter)
+Adventure, or their more artistic use in the [Dancing with Color](/dancing) adventure.
 
 <!-- TODO: Insert 3D animation or widget -->

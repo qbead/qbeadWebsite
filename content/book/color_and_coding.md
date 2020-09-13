@@ -249,7 +249,7 @@ void loop() {
 </pre>
 </div>
 
-If after playing with these SpinWheel simulations, you are interested in learning more about coding in Arduino, then check out our lesson on [basic coding patterns](/progpatterns).
+If after playing with these SpinWheel simulations, you are interested in learning more about coding in Arduino, then check out our lesson on [basic coding building blocks](/progpatterns).
 
 If you are interested in trying this out on a physical SpinWheel, then you can read more about the SpinWheel and our project at [our website](/). We're selling the SpinWheel on the crowdfunding site [Kickstarter](https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit) until April 30. 
 

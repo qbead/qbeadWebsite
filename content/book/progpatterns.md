@@ -6,7 +6,7 @@ keywords: physical computing, computer science, arduino, programming
 ::: intro-box
 This page will introduce you to many of the typical building blocks programmers use to write code.
 If this is your first time thinking about computer code, it would be helpful to also
-consult the [mini-reference on the particular programming style for the SpinWheel](/basics).
+consult the [Basic Structure of a Program lesson](/basics), which is a mini-reference on the SpinWheel's programming style.
 :::
 
 Writing a computer program of your own, whether a desktop app, an interactive
@@ -271,7 +271,7 @@ function, which is named this way because it **runs in a loop** (or repeats itse
 
 ::: further-reading
 To learn more about the `setup` and `loop` functions, check out
- [the basic structure of a program](/basics) page.  
+ [the Basic Structure of a Program](/basics) lesson.  
 :::
 
 Here is a large example that includes all these features. It will use the
@@ -316,7 +316,7 @@ void loop() {
 
 ::: further-reading
 We provide more information about the `Serial Monitor` in 
-our [intro to the Arduino software](/arduino101) page. 
+our [intro to the Arduino Software](/arduino101) page. 
 The Arduino community also has very detailed resources on the programming language
 that we are using. You can start with their
 [tutorial](https://www.arduino.cc/en/Tutorial/Foundations) for instance.

@@ -19,11 +19,11 @@ This lesson will focus on understanding the many things around us that rotate.
 Whether it's a frisbee, a tire wheel, a dancer, or even yourself on an amusement park ride, rotation is all around us. 
 When objects move in straight lines, 
 we call this linear motion. 
-In [previous lessons](/vectors), we’ve discussed how to describe linear motion.
+In our [Vectors and Motion lesson](/vectors), we discussed how to describe linear motion.
 How about rotational motion? What tools do we have to explain this motion?
 
 ::: further-reading 
-If you aren't already familiar with the concepts of displacement, velocity, and acceleration, we recommend first reading our [vectors and motion lesson](/vectors) lesson. 
+If you aren't already familiar with the concepts of displacement, velocity, and acceleration, we recommend first reading our [Vectors and Motion lesson](/vectors) lesson. 
 ::: 
 
 # Angular Displacement
@@ -153,13 +153,13 @@ First, the angular acceleration is positive, leading to the angular velocity to 
 
 
 # Polar Coordinates
-In the [vectors and kinematics lesson](/vectors), 
+In the [Vectors and Motion lesson](/vectors), 
 we introduced the idea of coordinates, which describe a point in space. 
 In that lesson, we used something called 'Cartesian coordinates.' 
 If we think of a line connecting the origin to a point, 
 Cartesian coordinates provide the x and y position $(x, y)$. 
 This is very useful for describing straight lines and many mathematical functions,
-such as those we created in the [Animations and Patterns](/animation) adventure.
+such as those we created in the [Intro to Animation](/animation) adventure.
 In other cases, something called polar coordinates can be more useful. 
 Polar coordinates define points in space differently. 
 Rather than giving the x and y position, they specify points as their position on a circle. 

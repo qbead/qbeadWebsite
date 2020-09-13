@@ -9,7 +9,7 @@ keywords: SpinWheel, arduino, setup, programming
 ::: intro-box
 A program is a set of written commands for your computer to follow.
 Here you will see what such a program might look like in one particular computer language.
-Before reading this, be sure to read our [initial setup guide](/quickstart). 
+Before reading this, be sure to read our [Initial Setup Guide](/quickstart). 
 :::
 
 Approach this page the way you would approach the first few lines of a foreign language you want to learn.

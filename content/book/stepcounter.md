@@ -14,7 +14,7 @@ and a number of LEDs that can be used as a display.
 Here we will see how to put these features together to make our own custom step counter.
 :::
 
-To start, plug the SpinWheel into your computer and open up an "empty" sketch in the Arduino software. If you need help remembering how to do this, you can get a recap of how to connect your SpinWheel to your computer in our [Quick Start Guide](/quickstart).
+To start, plug the SpinWheel into your computer and open up an "empty" sketch in the Arduino software. If you need help remembering how to do this, you can get a recap of how to connect your SpinWheel to your computer in our [Initial Setup Guide](/quickstart).
 
 ## From an Empty Sketch
 
@@ -104,7 +104,7 @@ You might have noticed that we are currently only detecting motion; we are not a
 Our next task is to change the SpinWheel's LEDs based on the motion data we have collected. Having visual feedback at each stage of our work makes it easier to detect errors in our code. We will use the `setLargeLEDsUniform` function to turn all 8 of the large LEDs on at the same time. We will use an equal mixture of red, green, and blue, in order to make them light up in white.
 
 ::: further-reading
-To further explore why we can trick our brains to perceive a mixture of red, green, and blue colors as white, check out the ["Biology of Sight" activity](/sight).
+To further explore why we can trick our brains to perceive a mixture of red, green, and blue colors as white, check out the [Biology of Sight adventure](/sight).
 :::
 
 The intensity of each color will be proportional to the detected acceleration. However, you might have noticed that the `total_acceleration` value is 1, not 0, at rest. This is because the motion sensor (called an accelerometer) cannot distinguish between the force of gravity acting on it at all times, and the forces of inertia acting on it when you shake it.
@@ -114,7 +114,7 @@ This is how we obtain `kinematic_acceleration = total_acceleration - 1`. "Kinema
 Here is all the code put together (you can find it in `Examples → SpinWearables → Step_Counter →  Detect_Kinematic_Acceleration`):
 
 ::: further-reading
-There are a lot of intricate facts about motion and gravity that relate to why our motion sensor can not distinguish between the two. You can read more about it in the section on ["Inertial reference frames and Free fall"](./inertia), which will also explain why `total_acceleration` at rest, as measured by our sensor, is 1 unit. Einstein himself was thinking about this everyday fact when he was developing the general theory of relativity.
+There are a lot of intricate facts about motion and gravity that relate to why our motion sensor can not distinguish between the two. You can read more about it in the section on [inertial reference frames and free fall](/inertia), which will also explain why `total_acceleration` at rest, as measured by our sensor, is 1 unit. Einstein himself was thinking about this everyday fact when he was developing the general theory of relativity.
 :::
 
 ```cpp

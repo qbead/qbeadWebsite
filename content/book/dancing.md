@@ -114,7 +114,7 @@ Notice when you dragged your mouse, your screen lit up at different brightnesses
 As you can see, when you drag the mouse faster, the color gets brighter! How fast or slow the mouse is moving is called speed. Now, did you also notice that if you dragged the mouse to the left, then to the right, the color changes? This is because we can assign a direction to our speed, and call it velocity! The color of the box becomes blue when we drag the slider to the right and red when we drag the slider to the left. The color tells us the direction we are moving (right or left). When we represent velocity with numbers, we call motion in one direction positive and motion in the opposite direction negative.
 
 ::: further-reading
-We discuss the idea of velocity more in our lesson on [vectors and kinematics](/vectors). Kinematics is simply a fancy word for the study of motion. 
+We discuss the idea of velocity more in our lesson on [Vectors and Motion](/vectors). Kinematics is simply a fancy word for the study of motion. 
 :::
 
 ## Linear motion: A Three Line Dance
@@ -156,7 +156,7 @@ Did the speed you moved your SpinWheel change the brightness? With a faster acce
 If you are interested in reading a more detailed explanation of what each line of the example sketch does, then check out [this annotated script](/codedoc/examples/Dancing_with_Color/Acceleration_Light_Up_Basic/Acceleration_Light_Up_Basic.ino.html). 
 
 ::: further-reading
-To learn more about modifying the SpinWheel's LED display with the output from the SpinWheel's motion sensors, check out the ["Step Counter" activity](/stepcounter). This lesson will teach you to access the output from the motion sensors, monitor it on your computer, and use this to turn your SpinWheel into a step counter. You can do this lesson either now or after finishing the rest of this lesson. 
+To learn more about modifying the SpinWheel's LED display with the output from the SpinWheel's motion sensors, check out the [Step Counter adventure](/stepcounter). This lesson will teach you to access the output from the motion sensors, monitor it on your computer, and use this to turn your SpinWheel into a step counter. You can do this lesson either now or after finishing the rest of this lesson. 
 :::
 
 
@@ -186,9 +186,9 @@ This is similar to the dancer spinning in place where their body represents the 
 In this case, we're measuring the rotation around the SpinWheel's x-axis, which is stored in the variable `SpinWheel.gx`. `SpinWheel.gx` provides us with the angular velocity of the SpinWheel around the <span class="footnote">x-axis of the device.<span>To visualize what this represents on the SpinWheel, scroll up to the image of the SpinWheel and its axes.</span></span> 
 
 ::: further-reading 
-In our lesson on [vectors and motion](/vectors), we cover in more depth the velocity you are probably already familiar with: velocity along a straight line (like a car moving down a straight stretch of highway). 
+In our [Vectors and Motion](/vectors) lesson, we cover in more depth the velocity you are probably already familiar with: velocity along a straight line (like a car moving down a straight stretch of highway). 
 Above we reference another type of velocity, angular velocity, which is often used for describing rotatonal motion like that of our dancer spinning or a car speeding along a circular racetrack. 
-You can read [our lesson on rotation](/rotation) to learn more about angular velocity.
+You can read our [Rotation](/rotation) lesson to learn more about angular velocity.
 :::
 
 As the SpinWheel's sensors are very sensitive to even small motions of the device, we only want to change color if the rotation is fast enough.
@@ -213,10 +213,10 @@ To see your SpinWheel light up in response to rotional motion, upload the full s
 If you prefer other colors to the light blue that we chose, then you can modify the code for this example to light up your SpinWheel a different color. 
 
 ::: further-reading
-Looking for a refresher on how to customize the LEDs to light up your favorite color? In our [biology of sight adventure](/sight), we discuss how three light sources can be used to represent any color of the rainbow by taking advantage of how our eyes perceive color.
+Looking for a refresher on how to customize the LEDs to light up your favorite color? In our [Biology of Sight adventure](/sight), we discuss how three light sources can be used to represent any color of the rainbow by taking advantage of how our eyes perceive color.
 :::
 
-In the [animations and patterns adventure](/animation), you created animations for the SpinWheel that relied on time. It is possible to use those same sketches, but only have them change color when rotational motion is detected. For instance, check out [this version of the rainbow chase sketch](/codedoc/examples/Dancing_with_Color/Rainbow_Chase_Advanced/Rainbow_Chase_Advanced.ino.html) to see how you can use rotation around the z-axis of the SpinWheel instead of time to update the animation. You can also upload the full sketch onto your SpinWheel from here: full sketch (`Examples → SpinWearables → Dancing_with_Color → Rainbow_Chase_Advanced`. 
+In the [Intro to Animations adventure](/animation), you created animations for the SpinWheel that relied on time. It is possible to use those same sketches, but only have them change color when rotational motion is detected. For instance, check out [this version of the rainbow chase sketch](/codedoc/examples/Dancing_with_Color/Rainbow_Chase_Advanced/Rainbow_Chase_Advanced.ino.html) to see how you can use rotation around the z-axis of the SpinWheel instead of time to update the animation. You can also upload the full sketch onto your SpinWheel from here: full sketch (`Examples → SpinWearables → Dancing_with_Color → Rainbow_Chase_Advanced`. 
 
 To get the full effect of this sketch, we recommend you unplug your SpinWheel from your computer and try spinning in a circle yourself. If you hold the SpinWheel horizontal as you turn, you'll be able to see the colors change as you're moving and stop when you stop. Just remember, when you plug the SpinWheel back into the computer to make sure the switch is back on `usb`.
 
@@ -228,7 +228,7 @@ Similarly, if you walk around a chair while holding the SpinWheel and continuous
 However, if you walk around the chair again and keep yourself facing a window, then the SpinWheel won't detect rotation and the LEDs won't change color.
 In the first two cases, the sensor has been rotated, so the LEDs change.
 In the last case, you moved in a circular path, but the SpinWheel's orientation didn't change. As the sensor itself didn't rotate, the LEDs won't change color.
-We discuss this further at the end of our [lesson on rotation](/rotation).
+We discuss this further at the end of our [Rotation](/rotation) lesson.
 :::
 
 Another modification you can make to the first rotation sketch sketch is to have the LEDs change color based on the direction of rotation. 

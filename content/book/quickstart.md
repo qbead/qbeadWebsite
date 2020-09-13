@@ -30,7 +30,7 @@ Your kit may have come with a paper booklet (the SpinWheel [Field Guide](/book))
 
 ![<a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/arduino_library_setup.small.png "Arduino setup.")
 
-1. The battery of your Spinwheel might not be attached when you receive it. Before attaching the battery, slide the switch on the back of the SpinWheel to be on "USB." Then firmly insert the battery connector into the battery jack on the circuit board. If you have difficulty, see our [troubleshooting guide](/troubleshoot). 
+1. The battery of your Spinwheel might not be attached when you receive it. Before attaching the battery, slide the switch on the back of the SpinWheel to be on "USB." Then firmly insert the battery connector into the battery jack on the circuit board. If you have difficulty, see our [Troubleshooting Guide](/troubleshoot). 
 
 2. To turn on the SpinWheel, flip the switch on the back to "BAT" (for "battery"). You should see it turn on and light up brightly! 
 
@@ -49,7 +49,7 @@ The SpinWheel will not work properly if connected to a computer/charger without 
 
 ## Setting Up the Arduino Software
 
-Much of the joy of the SpinWheel comes from your ability to change it and make it do whatever you wish! The rest of the guide will walk you through adding a new animation to your SpinWheel. Do not worry if you find this part challenging, learning new things can be confusing at first. If you get stuck, check out the [troubleshooting guide](/troubleshoot) and don't be afraid to experiment. While feeling confused is normal, it will get easier as you go!
+Much of the joy of the SpinWheel comes from your ability to change it and make it do whatever you wish! The rest of the guide will walk you through adding a new animation to your SpinWheel. Do not worry if you find this part challenging, learning new things can be confusing at first. If you get stuck, check out the [Troubleshooting Guide](/troubleshoot) and don't be afraid to experiment. While feeling confused is normal, it will get easier as you go!
 
 In order to write new animations for the SpinWheel, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. 
 
@@ -63,7 +63,7 @@ Once the software is installed, we have to configure it to communicate with the 
 
 4. Open the `Tools` menu and go to `Port`. You will see a list of serial ports on your computer; select the port that corresponds to the SpinWheel. 
 
-    If there are multiple ports and you are unsure which one to use, simply unplug the SpinWheel and see which serial port disappears when you do so. This port corresponds to your SpinWheel's serial port. If you do not see a port appear/disappear, you may need to try a different micro USB cable. We have more tips about this in our [Troubleshooting guide](/troubleshoot).
+    If there are multiple ports and you are unsure which one to use, simply unplug the SpinWheel and see which serial port disappears when you do so. This port corresponds to your SpinWheel's serial port. If you do not see a port appear/disappear, you may need to try a different micro USB cable. We have more tips about this in our [Troubleshooting Guide](/troubleshoot).
 
 5. Go back to the Tools menu and select `Tools → Board`. Select Arduino Leonardo as the board (a.k.a. processor), so that the software knows which <span class="footnote">“dialect” <span>Computer languages have dialects just like human languages!</span></span> to use to talk to the SpinWheel.
 
@@ -96,7 +96,7 @@ For instance, pick [`BlinkingFirmware`](/codedoc/examples/BlinkingFirmware). Thi
 ![Upload programs to your SpinWheel using the `Upload` button (highlighted in white).](/images/quickstart/upload_button_screenshot.png "Upload programs to your SpinWheel using the `Upload` button (highlighted in white)."){style="max-width:388px"}
   
 Now your SpinWheel will have the new colorful blinking pattern (from `BlinkingFirmware`) you just uploaded. 
-If you get an error here, then check out our [troubleshooting guide](/troubleshoot) for help on some common problems. 
+If you get an error here, then check out our [Troubleshooting Guide](/troubleshoot) for help on some common problems. 
 
 
 Feel free to open any of the other SpinWheel sketches and upload them onto the device.

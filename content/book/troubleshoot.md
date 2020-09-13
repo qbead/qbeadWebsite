@@ -93,7 +93,7 @@ However, as you write more code, you will become more comfortable with this trou
 To help you as you do this, 
 here are some suggestions:
 
-1. First make sure that you have the important setup information for each script that we presented in the [basic structure of a SpinWheel sketch lesson](/basics). 
+1. First make sure that you have the important setup information for each script that we presented in the [Basic Structure of a Program lesson](/basics). 
 
 2. Is the error that you no longer have the right port or board selected? This is easy to forget to check, but will lead your code to fail. See above for more information. 
 

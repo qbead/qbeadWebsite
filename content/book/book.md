@@ -82,8 +82,8 @@ There is a lot going on in the map above, so below we have our recommended order
 
 ## Getting Started
 
-These three pages provide the essentials to get started programming your SpinWheel. 
-If you have coding experience, we recommend doing the [Initial Setup Guide](/quickstart) before jumping into any of the adventures.
+These two pages provide the essentials to get started programming your SpinWheel. 
+If you have coding experience, we still recommend doing the [Initial Setup Guide](/quickstart) before jumping into any of the adventures.
 
 1. [Getting Started with the SpinWheel](/intro): Before you download the software for programming your SpinWheel, try out this page to get your first taste of how to control the SpinWheel's LEDs. 
 2. [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures.

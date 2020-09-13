@@ -108,7 +108,7 @@ Now let us start programming the SpinWheel to light up as your favorite color fr
 First, you can also use the red, green, and blue sliders to determine the amount of red, green, and blue light necessary to make your favorite color. 
 
 ::: further-reading
-If you are new to coding, be sure to read our [Quick Start Guide](/quickstart) and the [Basic SpinWheel Code lesson](/basics). 
+If you are new to coding, be sure to read our [Initial Setup Guide](/quickstart) and the [Basic Structure of a Program](/basics) lesson. 
 :::
 
 To begin, let's try changing the code in the browser.

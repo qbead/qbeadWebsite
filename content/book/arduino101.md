@@ -38,7 +38,7 @@ Next you will have to select `Board` for the device you want to program. For ins
 Properly selecting the board and port is essential for the Arduino software to communicate with whatever software you are working with.
 
 ::: further-reading
-For more help with this for the SpinWheel, first read our [Initial Setup Guide](/quickstart) and then check out our [troubleshooting guide](/troubleshoot), if you are still stuck.  
+For more help with this for the SpinWheel, first read our [Initial Setup Guide](/quickstart) and then check out our [Troubleshooting Guide](/troubleshoot), if you are still stuck.  
 :::
 
 ## The skeleton of an Arduino program

@@ -43,7 +43,7 @@ We continue to use the LED-strip bracelet as a platform to teach electronics; ho
 
 In the rest of this page, we will further describe the design process and our choice of tools.
 
-In an advanced section of the ["The SpinWheel Science and Exploration Field Guide"](/book), we will discuss the design and testing process in more detail, in the hope that young makers will feel empowered enough to create their own devices. In particular, we would like to demystify what can be the most terrifying part of the process: debugging an initially failing new design.
+In an advanced section of the ["The SpinWheel Field Guide"](/book), we will discuss the design and testing process in more detail, in the hope that young makers will feel empowered enough to create their own devices. In particular, we would like to demystify what can be the most terrifying part of the process: debugging an initially failing new design.
     
 <figure>
 <img src="/images/for_parents/final_cover.jpg">

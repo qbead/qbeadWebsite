@@ -10,7 +10,7 @@ toc: yes
 ::: intro-box
 This document lists some of the most important functions available with the SpinWheel code library.
 With these functions you can detect motion and set the LEDs to different color patterns.
-If you have never programmed with Arduino before, be sure to read our [initial setup guide](/quickstart)
+If you have never programmed with Arduino before, be sure to read our [Initial Setup Guide](/quickstart)
 and [guide on the basic structure of a program](/basics).
 To learn more about the building blocks of coding, check out the [coding building blocks page](/progpatterns). 
 For more details, you can consult the [annotated source code](/codedoc/SpinWearables.h.html),
@@ -260,7 +260,7 @@ Similar to the above function, the `parabolaWave` function creates a different p
 
 To request measurements from the sensor you need to call `readIMU`. Then the measurement data will be available in `ax,ay,az,gx,gy,gz,mx,my,mz`. The acceleration along the three axes `ax, ay, az` is measured in units of $g$, i.e. the [standard gravitational acceleration at Earth's surface](https://en.wikipedia.org/wiki/Standard_gravity). The angular velocity components `gx, gy, gz` is measured in units of degrees per second. Lastly, the magnetic field `mx, my, mz` is measured in units of μT. There is also a temperature sensor, but we do not yet provide direct access to it.
 
-The [dancing with color adventure](\dancing) gives ideas of how the sensor can be used.
+The [Dancing with Color adventure](\dancing) gives ideas of how the sensor can be used.
 
 ![The axes orientations of the SpinWheel motion sensor. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/dance_axis.png)
 

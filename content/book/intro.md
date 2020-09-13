@@ -20,7 +20,7 @@ If you have never programmed before,
 we hope that this lesson will help you become more comfortable 
 with looking at new code and figuring out what it might do.
 If you already have coding experience, 
-then you may prefer jumping to the [initial setup guide](/quickstart)
+then you may prefer jumping to the [Initial Setup Guide](/quickstart)
 and then continuing into the other adventures.
 
 
@@ -32,7 +32,7 @@ As you toggle between the programs on the SpinWheel using the button on the back
 you can see some of the many things that the SpinWheel can do.
 You can program the LEDs to make repeating patterns or respond to the motion of the device.
 You can also light up all the LEDs in one color. 
-As you go through the adventures and lessons in our [field guide](/book), 
+As you go through the adventures and lessons in our [Field Guide](/book), 
 you will learn how these animations were written and become comfortable customizing it further.
 
 ## Controlling the SpinWheel
@@ -183,8 +183,8 @@ in the line `SpinWheel.setLargeLEDsUniform(50, 255, 250)`. Then, press "Run for 
 
 ::: further-reading
 If you are really curious about what those other lines mean, 
-we explain them more in our [basic structure of a program](basics) adventure.
-We recommend doing that page after the [initial setup guide](/quickstart).
+we explain them more in our [Basic Structure of a Program](/basics) lesson.
+We recommend doing that page after the [Initial Setup Guide](/quickstart).
 :::
 
 It is also possible to specifically control each large LED. With the first slider, you can select the LED that you want to change the color of. Then, using the other sliders, you can adjust the color of that LED. Repeat this process for each LED you want to change the color of. If you move all three sliders for a given LED to zero, then that will turn the LED "off" again. Experiment with the LED number slider to see how the numbering of the LEDs works (or check out the diagram at the bottom of this section).
@@ -379,8 +379,8 @@ At this point, you can modify the code above to create your own pattern
 that uses all of the LEDs.
 We encourage you to take some time to experiment with this to create your own designs.
 Once you have some patterns that you are excited 
-to try on your own SpinWheel, proceed to the [initial setup guide](/quickstart)
+to try on your own SpinWheel, proceed to the [Initial Setup Guide](/quickstart)
 that leads you through installing the computer program necessary to communicate with the SpinWheel.
-Then work through the [basic structure of a program](/basics) 
+Then work through the [Basic Structure of a Program](/basics) lesson
 that will get you to the point where you can put the code that you wrote above
 onto your own SpinWheel.

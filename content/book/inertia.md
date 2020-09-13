@@ -8,7 +8,7 @@ This lesson needs to explain the header image, that is **ALL** it needs to do. T
 
 Our device has a sensor that measures acceleration, but we have to subtract 1g from the measurement to use it for most things. Explaining this would be a nice "stretch goal" for our lessons.
 
-We do **not** need to talk about ineral forces and centripetal vs centrifugal, that would be way too advanced.
+We do **not** need to talk about inertial forces and centripetal vs centrifugal, that would be way too advanced.
 
 Suggested structure:
 - How do you know you are moving? By looking at things that you say are "stationary". But there is some arbitrariness to what you call stationary.
