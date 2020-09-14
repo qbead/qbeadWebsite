@@ -3,10 +3,6 @@ title: Troubleshooting Guide
 keywords: troubleshooting, testing, help
 ---
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
-
-
 ::: intro-box
 It can be frustrating when your code doesn't work 
 or you can't get the Arduino software to recognize your SpinWheel.
