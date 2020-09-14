@@ -193,13 +193,13 @@ You can read our [Rotation](/rotation) lesson to learn more about angular veloci
 
 As the SpinWheel's sensors are very sensitive to even small motions of the device, we only want to change color if the rotation is fast enough.
 This ensures that the lights don't turn on when you are just holding it in your hand without intentionally moving it.
-In this case, we will only have the color change `if` the absolute value of the rotation is greater than 1, `abs(SpinWheel.gx) > 1`. 
-Below is the essential piece of code, where we tell the SpinWheel to light up only when motion is detected (`if (abs(SpinWheel.gx) > 1)` and to otherwise (`else`) turn off all of the LEDs.
+In this case, we will only have the color change `if` the absolute value of the rotation is greater than 100 degrees per second, `abs(SpinWheel.gx) > 100`. 
+Below is the essential piece of code, where we tell the SpinWheel to light up only when motion is detected (`if (abs(SpinWheel.gx) > 100)` and to otherwise (`else`) turn off all of the LEDs.
 
 ```cpp
 // if there is enough rotation, then light up the 
 // LEDs a light blue
-if (abs(SpinWheel.gx) > 1) {
+if (abs(SpinWheel.gx) > 100) {
   SpinWheel.setLargeLEDsUniform(0, 255, 255);
 }
 // otherwise, keep the LEDs turned off
@@ -238,11 +238,11 @@ We include the important new elements of the code below, including defining new 
 // If the x rotation (gx) is big enough, then 
 // change the color of the big LEDs based on the
 // direction of the spin
-if (SpinWheel.gx > 1) {
+if (SpinWheel.gx > 100) {
   pos_spin = 255;
   neg_spin = 0;
 }
-else if (SpinWheel.gx < -1) {
+else if (SpinWheel.gx < -100) {
   neg_spin = 255;
   pos_spin = 0;
 }
@@ -255,7 +255,7 @@ else {
 SpinWheel.setLargeLEDsUniform(0, pos_spin, neg_spin);
 ```
 
-In this script, the LEDs light up green up when the device is spun around the x-axis in one direction (`if (SpinWheel.gx > 1)`), and blue when spun in the other direction (`else if (SpinWheel.gx < -1)`). The `else` statment ensures that the SpinWheel's LEDs turn off when not enough rotation is detected. You can upload the sketch from: `Examples → SpinWearables → Dancing_with_Color → 1D_Rotation_Light_Up_Advanced` to give it a try on your own SpinWheel. 
+In this script, the LEDs light up green up when the device is spun around the x-axis in one direction (`if (SpinWheel.gx > 100)`), and blue when spun in the other direction (`else if (SpinWheel.gx < -100)`). The `else` statment ensures that the SpinWheel's LEDs turn off when not enough rotation is detected. You can upload the sketch from: `Examples → SpinWearables → Dancing_with_Color → 1D_Rotation_Light_Up_Advanced` to give it a try on your own SpinWheel. 
 For a more detailed explanation of this code, you can also check out [this script](/codedoc/examples/Dancing_with_Color/1D_Rotation_Light_Up_Advanced/1D_Rotation_Light_Up_Advanced.ino.html). 
 
 
