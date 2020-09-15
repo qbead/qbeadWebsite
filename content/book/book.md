@@ -11,74 +11,38 @@ This is only a scaffolding for the (printed and electronic) textbook that will b
 Many of our activities and lessons have interactive widgets. Not all of these currently work in all browsers (particularly Safari and on phones). We are actively working on ensuring that all interactive elements are enjoyable across platforms.
 :::
 
-Welcome to the table of contents for the SpinWheel! We hope you enjoy the adventures (hands-on activities that use the SpinWheel) and associated lessons. 
+Welcome to the table of contents for the SpinWheel! We hope you enjoy learning to use the SpinWheel for yourself. 
 
-The concept map illustrates how we see the lessons and adventures being connected. Follow the arrows to see potential orders for completing them. If words on the map are overlapping, then you can drag the map around to better see how the different adventures and lessons are connected.  
+![Illustration of the connections between our educational resources.](/images/bookpics/concept_map_sketch_xkcd_font.png "Illustration of the connections between the print and online resources.")
 
-<script src="/jquery.min.js"></script>
-<script src="/springy/springy.js"></script>
-<script src="/springy/springyui.js"></script>
+The concept map above illustrates how we see the online lessons 
+and adventures (unfilled hexagons) being connected 
+to the chapters in the paper field guide (filled hexagons). 
+We have both adventures that make use of the SpinWheel 
+(double-lined hexagons) 
+and lessons that explore in more depth the concepts 
+behind the SpinWheel (single-lined hexagons). 
+Some adventures, like "Biology of Sight," 
+directly extend material in the paper field guide, 
+while others, like "Dancing with Color," 
+are completely new and will help you use the SpinWheel in even more exciting ways. 
+While the paper book isn't necessary, 
+the material contained complements that of the online resources.  
 
-<script>
+There is a lot going on in the map above, 
+so below we have our recommended order for completing the lessons and adventures. 
+However, this is just a recommendation! 
+Depending on which activities you are excited by 
+and your comfort with programming, then you may skip around.
 
-jQuery(function(){
-  var graph = new Springy.Graph();
-
-  var intro = graph.newNode({label: "Getting Started with the SpinWheel", color: "red"});
-  var quick = graph.newNode({label: "Initial Setup", color: "red"});
-  var basic = graph.newNode({label: "Basic Structure of a Program"});
-  var arduino = graph.newNode({label: "Arduino 101", color: "grey"});
-  var sight = graph.newNode({label: "Biology of Sight"});
-  var strobe = graph.newNode({label: "Stroboscope"});
-  var ani = graph.newNode({label: "Intro to Animations"});
-  var ani2 = graph.newNode({label: "Animations and Patterns"});
-  var step = graph.newNode({label: "Step Counter"});
-  var dance = graph.newNode({label: "Dancing Companion"});
-  var compass = graph.newNode({label: "Compass"});
-  var progpatterns = graph.newNode({label: "Building Blocks of Coding", color: "grey"});
-  var light = graph.newNode({label: "Light and Color", color: "grey"});
-  var colortheory = graph.newNode({label: "Color Theory", color: "grey"});
-  var inertia = graph.newNode({label: "Inertial Reference Frames", color: "grey"});
-  var rotation = graph.newNode({label: "Rotation", color: "grey"});
-  var magnet = graph.newNode({label: "Magnetism", color: "grey"});
-  var vector = graph.newNode({label: "Vectors and Motion", color: "grey"});
-  
-  graph.newEdge(intro, quick);
-  graph.newEdge(quick, sight); 
-  graph.newEdge(quick, strobe);
-  graph.newEdge(sight, ani); 
-  graph.newEdge(ani, basic);
-  graph.newEdge(basic, arduino);  
-  graph.newEdge(sight, light); 
-  graph.newEdge(light, colortheory); 
-  graph.newEdge(ani, ani2); 
-  graph.newEdge(arduino, progpatterns); 
-  graph.newEdge(ani2, progpatterns); 
-  graph.newEdge(ani2, step); 
-  graph.newEdge(ani2, dance);
-  graph.newEdge(dance, compass); 
-  graph.newEdge(compass, magnet);
-  graph.newEdge(step, compass);
-  graph.newEdge(dance, vector); 
-  graph.newEdge(vector, rotation); 
-  graph.newEdge(dance, inertia);
-  graph.newEdge(step, inertia);
-
-  var springy = jQuery('#springymap').springy({
-    graph: graph,
-    stiffnes: 200,
-    repulsion: 2000,
-    damping: 0.5
-  });
-});
-
-</script>
-
-<canvas id="springymap" width="800" height="600">
-</canvas>
-
-
-There is a lot going on in the map above, so below we have our recommended order for completing the lessons and adventures. However, this is just a recommendation! Depending on which activities you are excited by and your comfort with programming, then you may jump around.
+You’ll notice as you are reading that we reference other material as we go. 
+Jump around between the lessons and adventures. 
+Don’t worry if the first time you read a page you don’t understand everything. 
+By revisiting it, you will gain even more from the page. 
+This may be a new way of learning and feel uncomfortable at first. 
+However, it will get much more natural and empowering as you progress. 
+Moreover, you will be learning a whole new way of learning, 
+the way engineers and scientists both learn and create new knowledge.
 
 ## Getting Started
 
