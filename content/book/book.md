@@ -13,6 +13,8 @@ Many of our activities and lessons have interactive widgets. Not all of these cu
 
 Welcome to the table of contents for the SpinWheel! We hope you enjoy learning to use the SpinWheel for yourself. 
 
+This concept map illustrates how the online lessons and adventures (unfilled hexagons) are connected to the paper field guide (filled hexagons). Here you will find both adventures that use the SpinWheel directly (double-lined hexagons), along with lessons that further explore some of the key concepts you’ll encounter in the adventures (single-lined hexagons). You can click the hexagons to navigate to each page!
+
 <style>
 @font-face {
   font-family: 'xkcd';
@@ -195,34 +197,13 @@ for (const tile of tiles) {
 }
 </script>
 
-The concept map above illustrates how we see the online lessons 
-and adventures (unfilled hexagons) being connected 
-to the chapters in the paper field guide (filled hexagons). 
-We have both adventures that make use of the SpinWheel 
-(double-lined hexagons) 
-and lessons that explore in more depth the concepts 
-behind the SpinWheel (single-lined hexagons). 
-Some adventures, like "Biology of Sight," 
-directly extend material in the paper field guide, 
-while others, like "Dancing with Color," 
-are completely new and will help you use the SpinWheel in even more exciting ways. 
-While the paper book isn't necessary, 
-the material contained complements that of the online resources.  
+Some adventures, like “Biology of Sight”, directly extend material in the paper field guide. Others, like “Dancing with Color”, are completely new and will help you use the SpinWheel in even more exciting ways. The paper book isn’t required to get started, but it complements the online resources.
 
-There is a lot going on in the map above, 
-so below we have our recommended order for completing the lessons and adventures. 
-However, this is just a recommendation! 
-Depending on which activities you are excited by 
-and your comfort with programming, then you may skip around.
+Below, you will find a recommended order for completing the lessons and adventures. However, this is just a recommendation! Depending on which activities you are excited by and your comfort with programming, you may skip around.
 
-You’ll notice as you are reading that we reference other material as we go. 
-Jump around between the lessons and adventures. 
-Don’t worry if the first time you read a page you don’t understand everything. 
-By revisiting it, you will gain even more from the page. 
-This may be a new way of learning and feel uncomfortable at first. 
-However, it will get much more natural and empowering as you progress. 
-Moreover, you will be learning a whole new way of learning, 
-the way engineers and scientists both learn and create new knowledge.
+As you read, you will notice that we reference material from different lessons and adventures as we go. Don’t worry if you don't understand everything the first time you read a page. Jump around between the lessons and adventures – by moving between them, you will gain even more from each page. 
+This may be a new way of learning for you and it may feel unnatural at first. However, it will become much more familiar and empowering as you progress. You’ll also be practicing a whole new way of learning - one that engineers and scientists use all the time as they creatively solve problems! 
+
 
 ## Getting Started
 

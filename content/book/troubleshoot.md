@@ -13,7 +13,8 @@ We've created this page to help you become more comfortable troubleshooting Spin
 These tips will help you tackle the difficulties you encounter as you set up your SpinWheel and work through your first adventures. They will help you learn how to get better at diagnosing problems yourself.
 As you get more comfortable with programming the SpinWheel, 
 you will refer to this guide less and less and 
-discover pride in getting a piece of code to work on your own.
+discover pride in getting a piece of code to work on your own. This guide is meant to help you get started with the troubleshooting process, but you will likely come across errors in your programming explorations that are not discussed here. The framework shown here is meant to help you understand and gain experience with the troubleshooting process. Don't worry if you spot a new error and don't know how to fix it right away - learning to think creatively about errors and working through iterations of your code will help you become a better programmer!   
+
 If you have tried everything here and are still having trouble, 
 please email mail@spinwearables.com with your problem (including a screen shot if possible) 
 and we can help sort it out.
