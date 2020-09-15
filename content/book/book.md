@@ -13,7 +13,187 @@ Many of our activities and lessons have interactive widgets. Not all of these cu
 
 Welcome to the table of contents for the SpinWheel! We hope you enjoy learning to use the SpinWheel for yourself. 
 
-![Illustration of the connections between our educational resources.](/images/bookpics/concept_map_sketch_xkcd_font.png "Illustration of the connections between the print and online resources.")
+<style>
+@font-face {
+  font-family: 'xkcd';
+  src: url('/xkcd-script.ttf')  format('truetype');
+}
+
+:root {
+  /* Change this to change the appearance of the hexaons */
+  --hex-width: 150px; 
+  --hex-inner-border: 15px;
+  
+  /* Other hexagon dimentions */
+  --hex-side: calc(var(--hex-width)/2);
+  --hex-height: calc(var(--hex-side)*1.7320508075688772);
+  --hex-tiptotip: calc(var(--hex-side)*3 - var(--hex-inner-border)*0.75);
+  --hex-transition: all .2s ease;
+}
+
+/* Hexagons */
+.hexagon-container {
+  display: grid;
+  grid-template-columns: var(--hex-tiptotip) var(--hex-tiptotip) var(--hex-tiptotip) var(--hex-tiptotip);
+  grid-auto-rows: calc(var(--hex-height)/2 - var(--hex-inner-border)*1.7320508075688772/8);
+  grid-gap: 0 0;
+  font-family: xkcd;
+}
+.hexagon {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: var(--hex-height);
+  justify-content: center;
+  position: relative;
+  transition: var(--hex-transition);
+  width: var(--hex-width);
+}
+
+.hexagon:nth-child(8n + 5),
+.hexagon:nth-child(8n + 6),
+.hexagon:nth-child(8n + 7),
+.hexagon:nth-child(8n + 8) {
+  margin-left: calc(var(--hex-side) * 1.5 - var(--hex-inner-border)*0.375);
+}
+
+.hexagon {
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+}
+
+.hexagon * {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--hex-transition);
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  background-color: white;
+}
+
+.hexagon a {
+  text-align: center;
+  line-height: 18px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.hexagon *:hover {
+  background-color: white !important;
+  font-size: 18px !important;
+}
+
+.hexagon > * {
+  width: calc(var(--hex-width) - var(--hex-inner-border));
+  height: calc(var(--hex-height) - var(--hex-inner-border)*1.7320508075688772/2);
+}
+
+.hexagon > div > div {
+  width: calc(var(--hex-width) - 1.8*var(--hex-inner-border));
+  height: calc(var(--hex-height) - 1.8*var(--hex-inner-border)*1.7320508075688772/2);
+}
+
+.hexagon > div > div > a {
+  width: calc(var(--hex-width) - 2.1*var(--hex-inner-border));
+  height: calc(var(--hex-height) - 2.1*var(--hex-inner-border)*1.7320508075688772/2);
+}
+</style>
+
+<ul id="hexmap" class="hexagon-container">
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+</ul>
+
+<script>
+const tiles = [
+{x:1, y:2, bgcolor:"#ffffff", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: true, text:"Getting<br>Started<br>with the<br>SpinWheel", href:"/intro"},
+{x:2, y:3, bgcolor:"#f2d2d5", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: true, text:"SpinWheel<br>Initial<br>Setup", href:"/quickstart"},
+//light
+{x:2, y:5, bgcolor:"#d0eeec", textcolor:"#13a89e", bordercolor:"#13a89e", inner: true, text:"Mixing<br>Color with<br>Light", href:"#"},
+{x:1, y:6, bgcolor:"#ffffff", textcolor:"#13a89e", bordercolor:"#13a89e", inner: true, text:"Biology of<br>Sight", href:"/sight"},
+{x:1, y:7, bgcolor:"#ffffff", textcolor:"#13a89e", bordercolor:"#13a89e", inner: false, text:"Color<br>Theory", href:"/colortheory"},
+{x:1, y:5, bgcolor:"#ffffff", textcolor:"#13a89e", bordercolor:"#13a89e", inner: false, text:"Light and<br>Color", href:"/lightandcolor"},
+//basic prog
+{x:2, y:4, bgcolor:"#d3eef9", textcolor:"#25aae1", bordercolor:"#25aae1", inner: true, text:"Customizing<br>the SpinWheel&#39;s<br>Display", href:"#"},
+{x:2, y:6, bgcolor:"#d3eef9", textcolor:"#25aae1", bordercolor:"#25aae1", inner: true, text:"Arduino<br>101", href:"/arduino101"},
+{x:3, y:5, bgcolor:"#ffffff", textcolor:"#25aae1", bordercolor:"#25aae1", inner: false, text:"Basic<br>Structure<br>of a<br>Program", href:"/basics"},
+//animations
+{x:3, y:3, bgcolor:"#d2e2f0", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Creating<br>Animations<br>with the<br>SpinWheel", href:"#"},
+{x:3, y:2, bgcolor:"#d2e2f0", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: false, text:"Coding<br>Building<br>Blocks", href:"/progpatterns"},
+{x:3, y:4, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Intro to<br>Animations", href:"/animation"},
+{x:4, y:5, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Animations<br>and<br>Patterns", href:"/animation2"},
+//motion
+{x:4, y:7, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Make a<br>Step Counter", href:"/stepcounter"},
+{x:3, y:8, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Vectors<br>and<Motion>", href:"/vectors"},
+{x:4, y:9, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Dancing<br>with<br>Color", href:"/dancing"},
+{x:4, y:8, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Inertial<br>Reference<br>Frames", href:"/inertia"},
+{x:4, y:10, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Rotation<br>and<br>Circular<br>Motion", href:"/rotation"},
+//magnetism
+{x:3, y:10, bgcolor:"#ffffff", textcolor:"#ef5188", bordercolor:"#ef5188", inner: true, text:"Make a<br>Compass", href:"/compass"},
+{x:3, y:11, bgcolor:"#ffffff", textcolor:"#ef5188", bordercolor:"#ef5188", inner: false, text:"Magnetism", href:"/magnetism"},
+//reference
+{x:4, y:1, bgcolor:"#fdded4", textcolor:"#f1592b", bordercolor:"#f1592b", inner: false, text:"SpinWheel<br>Functions<br>Reference", href:"/allcommands"},
+];
+const hexmap = document.getElementById("hexmap");
+const allhexes = hexmap.getElementsByClassName("hexagon");
+for (const tile of tiles) {
+  const hex = allhexes[(tile.x-1)+4*(tile.y-1)];
+
+  hex.style["background-color"] = tile.bordercolor;
+  var innerHTML = `<a href="${tile.href}" style="color:${tile.textcolor};background-color:${tile.bgcolor}">${tile.text}</a>`;
+  if (tile.inner==true) {
+    innerHTML = `<div style="background-color:${tile.bgcolor}"><div style="background-color:${tile.bordercolor}">${innerHTML}</div></div>`;
+  }
+  hex.innerHTML = innerHTML;
+}
+</script>
 
 The concept map above illustrates how we see the online lessons 
 and adventures (unfilled hexagons) being connected 
