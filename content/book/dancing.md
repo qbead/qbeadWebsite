@@ -8,7 +8,12 @@ header-image: /images/banners/dancer_color.png
 <script src='/simspinwheel/simspinwheel.js'></script>
 
 ::: intro-box
-In this adventure, you will explore the ways we can describe motion mathematically and code colorful representations of that math. 
+In this adventure, you will explore the ways we can describe motion mathematically and code colorful representations of that math. The skills covered in this adventure are as follows.  
+1. Linear Motion in One Dimension  
+2. Linear Motion in Three Dimensions  
+3. Rotational Motion in One Dimension  
+4. Rotational Motion in Three Dimensions  
+5. Rotating Lights with a "Snake"  
 :::
 
 Whether you’ve watched a dance, or are a dancer yourself, you know dancing is all about movement. Be it a pirouette, a leap, or a straight line, dancers gracefully move through space in exciting ways. The LEDs on your SpinWheel can dance too! Mathematically, we can represent this motion in many ways. In this lesson, we will write colorful visualizations of this math that you can explore with your SpinWheel!
