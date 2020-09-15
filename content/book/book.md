@@ -171,7 +171,7 @@ const tiles = [
 {x:4, y:5, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Animations<br>and<br>Patterns", href:"/animation2"},
 //motion
 {x:4, y:7, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Make a<br>Step Counter", href:"/stepcounter"},
-{x:3, y:8, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Vectors<br>and<Motion>", href:"/vectors"},
+{x:3, y:8, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Vectors<br>and<br>Motion", href:"/vectors"},
 {x:4, y:9, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Dancing<br>with<br>Color", href:"/dancing"},
 {x:4, y:8, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Inertial<br>Reference<br>Frames", href:"/inertia"},
 {x:4, y:10, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Rotation<br>and<br>Circular<br>Motion", href:"/rotation"},
