@@ -274,7 +274,7 @@ On a few occasions we have warning blocks:
 These denote important considerations about health and device care that should be seen before attempting an activity.
 :::
 
-We have a variety of interactive visualizations throughout these pages, that work well on desktop browsers like Firefox and Chrome. Lastly, we have many [code examples](/basics) in pages that explain how to program the device, [including some interactive simulations of the device with which you can play directly from the browser](/allcommands).
+We have a variety of interactive visualizations throughout these pages, that work well on desktop browsers like Firefox and Chrome. Lastly, we have many code examples in our pages that explain how to program the device, [including some interactive simulations of the device with which you can play directly from the browser](/intro).
 
 
 ## Engineer’s Diary
