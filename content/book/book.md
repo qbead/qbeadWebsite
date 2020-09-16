@@ -157,6 +157,7 @@ This concept map illustrates how the online lessons and adventures (unfilled hex
 const tiles = [
 {x:1, y:2, bgcolor:"#ffffff", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: true, text:"Getting<br>Started<br>with the<br>SpinWheel", href:"/intro"},
 {x:2, y:3, bgcolor:"#f2d2d5", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: true, text:"SpinWheel<br>Initial<br>Setup", href:"/quickstart"},
+{x:2, y:2, bgcolor:"#ffffff", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: false, text:"SpinWheel<br>Troubleshooting<br>Guide", href:"/troubleshoot"},
 //light
 {x:2, y:5, bgcolor:"#d0eeec", textcolor:"#13a89e", bordercolor:"#13a89e", inner: true, text:"Mixing<br>Color with<br>Light", href:"#"},
 {x:1, y:6, bgcolor:"#ffffff", textcolor:"#13a89e", bordercolor:"#13a89e", inner: true, text:"Biology of<br>Sight", href:"/sight"},
@@ -181,7 +182,7 @@ const tiles = [
 {x:3, y:10, bgcolor:"#ffffff", textcolor:"#ef5188", bordercolor:"#ef5188", inner: true, text:"Make a<br>Compass", href:"/compass"},
 {x:3, y:11, bgcolor:"#ffffff", textcolor:"#ef5188", bordercolor:"#ef5188", inner: false, text:"Magnetism", href:"/magnetism"},
 //reference
-{x:4, y:1, bgcolor:"#fdded4", textcolor:"#f1592b", bordercolor:"#f1592b", inner: false, text:"SpinWheel<br>Functions<br>Reference", href:"/allcommands"},
+{x:4, y:1, bgcolor:"#f2d2d5", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: false, text:"SpinWheel<br>Functions<br>Reference", href:"/allcommands"},
 ];
 const hexmap = document.getElementById("hexmap");
 const allhexes = hexmap.getElementsByClassName("hexagon");
