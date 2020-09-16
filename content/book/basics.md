@@ -112,7 +112,8 @@ void loop() {
 }
 ```
 
-Try to copy this code into a new file in the Arduino software and upload it to your SpinWheel.
+Try to copy this code into a new file in the Arduino software and upload it to your SpinWheel. To open a new sketch in Arduino, click on `File → New`. 
+This will open a blank sketch with only the empty `setup` and `loop` blocks from above.
 It should cause one single large LED to turn on in bright red.
 You can modify the `setLargeLED` line to change the appearance of the SpinWheel.
 The first item (also called a "parameter") in the parentheses 
