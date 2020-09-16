@@ -212,6 +212,7 @@ If you have coding experience, we still recommend doing the [Initial Setup Guide
 
 1. [Getting Started with the SpinWheel](/intro): Before you download the software for programming your SpinWheel, try out this page to get your first taste of how to control the SpinWheel's LEDs. 
 2. [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures.
+3. [Troubleshooting Guide](/troubleshoot): If you have problems with getting the SpinWheel to work, then first look here for advice. This has tips and tricks for using your SpinWheel.
 
 ## Intro Adventures
 
