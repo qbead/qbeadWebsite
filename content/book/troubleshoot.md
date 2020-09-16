@@ -70,10 +70,10 @@ Error messages will appear at the bottom of the window with your sketch when you
 3. No matter what the error message is, it is worthwhile to retry once or twice, in case of intermitten errors due to poor cable connections.
 
 4. Make sure you have the proper board selected.
-This error message `avrdude: ser_open(): can't open device "/dev/cu.usbmodem...": No such file or directory` indicates that you likely need to change which board you chose to the Arduino Leonardo. 
+On Mac, the error message `avrdude: ser_open(): can't open device "/dev/cu.usbmodem...": No such file or directory` indicates that you likely need to change which board you chose to the Arduino Leonardo. If you are on Windows, you may get the following error: "An error occurred while uploading the sketch."
 To fix this, navigate to `Tools → Board:` and click on `Arduino Leonardo`.
 
-5. If instead you have the message `avrdude: butterfly_recv(): programmer is not responding` repeating itself, then you haven't picked the right port. See the above section "Arduino won't recognize my SpinWheel" for more help.
+5. If instead you have the message `avrdude: butterfly_recv(): programmer is not responding` repeating itself, then you haven't picked the right port. While this error is similar for Windows and Mac, you may have to wait several minutes for it to first show up on Windows. Typically, uploading the sketch should take less than 30 seconds, so if it is taking a while that is a good indication that something may be wrong. See the above section "Arduino won't recognize my SpinWheel" for more help for this problem.
 
 6. If you have an error like `In file included from [file location] fatal error: Adafruit_NeoPixel.h: No such file or directory #include "Adafruit_NeoPixel.h"`, then you likely need to install the SpinWearables library *and its dependencies*. This might be the `Adafruit_NeoPixel` library from the example above, or it might be another one. If you don't remember installing, then you can install them using `Sketch → Include Library → Manage Libraries...`. In the search bar of the Library Manager, search for `SpinWearables` and then click `Install` and also confirm that you want the dependency libraries to be installed as well. If you navigate to the libraries installer and you search for `SpinWearables` and see the word "Installed" next to the library name, your library is already included.
 
