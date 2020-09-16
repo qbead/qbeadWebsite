@@ -10,13 +10,13 @@ We will briefly explore this discipline here.
 :::
 
 
-# Colors
+## Colors
 
 Whether you're walking through a lush forest or an art museum, our world is full of colors. Colors enhance a painting's beauty and make our homes and schools much more fun. Colors also have practical uses such as the colors on a stoplight or color-coding your class notes. Let's explore how colors are made, mixed, and how they emerge from white light!
 
 ![Many bright minds of our civilization have studied the science behind colors in the pursuit of art.<a class="imagecredit" href="https://www.pikrepo.com/flrza/assorted-paint-kit">image credit Pikrepo</a>](/images/bookpics/assorted_paint_kit.jpg "image credit to Pikrepo")
 
-# Perceiving Color
+## Perceiving Color
 
 <!--TODO: Be extremely clear here (extra text to be added) that for the majority of the lesson we will pretend that only red, green, and blue photons exist. As far as color theory is converned, there is no such thing as wavelength or a yellow photon.-->
 
@@ -33,7 +33,7 @@ If this has sparked your curiosity to learn more about how your eye works and ho
 When we mix colors, whether using LEDs (or other sources of light) or pigments (that reflect certain colors of light), understanding how our eyes percieve light is necessary. We'll return to this information in the rest of this lesson as we explore how to create colors with light and pigments.
 
 
-# Mixing Colors With Light Sources
+## Mixing Colors With Light Sources
 
 One way to create color is to work directly with light sources that emit colors that match the sensors in our eyes. Computer and TV screens work in this way. These screens are made up of a grid of very small red, green, and blue light sources (pixels and sub-pixels). These colors were chosen because they match the light our cone cells detect. By placing these tiny light sources so close together, our brain sees them as one single light source. Moreover, our eyes can't distinguish between yellow light which activates both the red and green cones and a mixture of red and green light from light sources sufficiently close together. This way we can trick our brain into seeing not only red, blue, and green, but a whole rainbow of colors.
 

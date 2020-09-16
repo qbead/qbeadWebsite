@@ -26,7 +26,7 @@ How about rotational motion? What tools do we have to explain this motion?
 If you aren't already familiar with the concepts of displacement, velocity, and acceleration, we recommend first reading our [Vectors and Motion lesson](/vectors) lesson. 
 ::: 
 
-# Angular Displacement
+## Angular Displacement
 When dealing with circular motion or rotation (for instance, for a ball on a string or a horse on a merry-go-round),  it is useful to describe position using an angle (denoted as $\theta$, pronounced 'theta'). The change between the original angle of the ball and its final angle is typically specified as the change in $\theta$ (or $\Delta \theta$) and is known as angular displacement. Displacement is a useful term to describe an object's change in position and can be defined as an angle (angular displacement) or distance (linear displacement). This concept is easier to understand through diagrams. In the image below you can see how linear displacement and angular displacement are related to each other.
 
 <figure><video src="/images/bookpics/ang_lin_displacement.mp4" muted autoplay playsinline loop></video>
@@ -35,7 +35,7 @@ When dealing with circular motion or rotation (for instance, for a ball on a str
 <figure><video src="/images/bookpics/compare_rotations.mp4" muted autoplay playsinline loop></video>
 <figcaption>Two movements can have the same angular displacement but different linear displacements.</figcaption></figure>
 
-# Angular Velocity 
+## Angular Velocity 
 To describe the motion of a ball as it is spun around on a string or how fast a dancer spins, we use something called angular velocity. 
 Usually when we think of velocity, we are thinking of <span class="footnote">linear velocity<span>This type of velocity is sometimes also called translational velocity.</span></span> defined as the change in position (displacement) during a specified interval of time. 
 Angular velocity is very similar, but it is instead defined as the change in angle over time. 
@@ -133,7 +133,7 @@ The SpinWheel has sensors capable of detecting angular velocity.
 You can learn how to use these sensors to create motion sensitive animations in our [Dancing with Color adventure](/dancing).
 :::
 
-# Angular Acceleration
+## Angular Acceleration
 
 To describe the change in velocity of an object, scientists use a concept called acceleration. 
 For instance, if you roll a ball down down a ramp, it will pick up speed as it goes. 
@@ -152,7 +152,7 @@ First, the angular acceleration is positive, leading to the angular velocity to 
 
 
 
-# Polar Coordinates
+## Polar Coordinates
 In the [Vectors and Motion lesson](/vectors), 
 we introduced the idea of coordinates, which describe a point in space. 
 In that lesson, we used something called 'Cartesian coordinates.' 
@@ -188,7 +188,7 @@ By steadily increasing $\theta$ (or the angle), you can draw a circle with a spe
 
 <figure><video src="/images/bookpics/polar_animation.mp4" muted autoplay playsinline loop></video></figure>
 
-# Summary 
+## Summary 
 
 Let's tie all of these concepts together to describe your ride on the merry-go-round! 
 On your first ride, you chose a purple horse on the outer ring of the merry-go-round. 

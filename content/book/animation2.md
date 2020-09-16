@@ -35,7 +35,7 @@ Then we will present some additional sketches that allow you to create animation
 We invite you upload these sketches from `Examples → SpinWearables → Animations_and_Patterns` to see what they do on your SpinWheel and then experiment with modifying them.
 
 
-### Smoother pulsing
+## Smoother pulsing
 
 You may have noticed that the brightness of the LEDs in the [sketch we present in the Intro to Animation adventure](/codedoc/examples/Animations_and_Patterns/Simple_Blink) was abruptly cut off.
 Wouldn't it be prettier if we gently turned off the LEDs, similarly to how gently we are ramping them up?
@@ -76,7 +76,7 @@ void loop() {
 If you want to learn more about controlling the SpinWheel's LEDs, then try out our [Biology of Sight](/sight) adventure. The [Color Theory](/colortheory) lesson provides more information about why we can use red, green, and blue LEDs to represent all the colors of the rainbow.
 :::
 
-### The color wheel
+## The color wheel
 
 Up until now we have discussed how to turn a time-dependent number into a brightness.
 However, instead of having time-dependent intensity of light,
@@ -110,7 +110,7 @@ void loop() {
 In this case, rather than independently controlling the red, green, and blue components of each LED, you are providing one number that represents the color. In the color wheel diagram above, you can see on the right the relative amounts of red, green, and blue light that go into each color on the left. As usual, [the entirety of the code is documented on its own page](/codedoc/examples/Animations_and_Patterns/Color_Wheel), and in the Arduino examples menu under `Animations_and_Patterns → Color_Wheel`
 
 
-### Non-uniform patterns and accessing separate LEDs
+## Non-uniform patterns and accessing separate LEDs
 
 Lastly, we would like to have a pattern that illuminates different LEDs differently.
 To set the color of all of the larger LEDs to a single uniform color,

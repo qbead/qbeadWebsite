@@ -272,7 +272,7 @@ To start off, upload the 3D rotation sketch from here: `Examples → SpinWearabl
 Rather than only modifying the large LEDs as in the earlier sketches, this sketch also has the small LEDs light up in response to the SpinWheel's rotational motion. Try rotating your SpinWheel in different directions to make it fully red, green or blue. Can you combine these rotations to make other colors? If the rotation is around two axes at the 
 same time, both colors are shown, making yellow, purple or teal.
 
-## Rotating Lights (or an LED "snake")
+### Rotating Lights (or an LED "snake")
 
 One of the programs that came preloaded on your SpinWheel was an LED "snake" that spins around the device like a dancer. 
 We can change that basic snake code so that it only rotates colors when you rotate the SpinWheel. 
