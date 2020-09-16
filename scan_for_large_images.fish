@@ -1,5 +1,5 @@
-set suffix ".jpg"
-#set suffix ".png"
+#set suffix ".jpg"
+set suffix ".png"
 
 cd content
 for file in (find images/ -type f -name "*$suffix")
