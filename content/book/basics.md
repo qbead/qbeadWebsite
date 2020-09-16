@@ -22,9 +22,12 @@ program, sketch, script, etc.
 Arduino tends to call them sketches because you use them to sketch out what you want your device to do.
 We also like the name script, because it invokes the idea of a sequence of instructions. The programs you write are a set of instructions you give to the device and the order in which you want them to be executed.
 
-## Writing your first sketch
+## Writing your First Sketch
 
 Computers follow instructions. They do not solve problems on their own. So, when writing a program for the SpinWheel's onboard computer, you need to be very explicit in the instructions that you write!
+
+### The Skeleton of an Arduino Program
+
 The particular language we are using requires our programs to have a certain structure.
 The most bare-bones program looks like this:
 
@@ -53,6 +56,7 @@ and then producing a color or a pattern of colors depending on the SpinWheel's m
 
 <figure><video src="/images/bookpics/setup_loop.mp4" muted autoplay playsinline loop></video><figcaption> When you turn on the SpinWheel, `setup()` is run once and then the `loop()` block is run repeatedly until the SpinWheel is turned off. </figcaption></figure>
 
+### Extra Elements of a SpinWheel Program
 
 To produce a program capable of sending instructions to the hardware of the SpinWheel
 (e.g. the LEDs and motion sensor), our program requires a few more lines:
@@ -121,9 +125,15 @@ The first item (also called a "parameter") in the parentheses
 and the other <span class="footnote">three numbers are the red,
 green, and blue components<span>They have to be numbers between 0 (color is off) and 255 (color is on at full brightness).</span></span> of the desired color. Together, this line of code looks something like: `SpinWheel.setLargeLED(LED_you_want_to_change, amount_of_red, amount_of_green, amount_of_blue)`. 
 
+::: further-reading
+To remind yourself how to make any color you want using only red, green, and blue, check out the [Biology of Sight](/sight) adventure. 
+:::
+
+Check out the diagram below to see how to refer to each individual LED of the SpinWheel:
+
 ![SpinWheel LED numbering.](/images/spinwheel_with_numbers.png "SpinWheel LED numbering")
 
-Play around with lighting up all of the different large LEDs, or combinations of them! For example, you can experiment with this virtual SpinWheel to light up the LEDs of your choice. What happens when you run the following code on the virtual SpinWheel or on your physical SpinWheel? How would you modify this code to light up the opposite set of large LEDs?
+Play around with lighting up all of the different large LEDs, or combinations of them! Before trying to modify the code through the Arduino interface, you can experiment with this virtual SpinWheel to light up the LEDs of your choice. What happens when you run the following code on the virtual SpinWheel or on your physical SpinWheel? How would you modify this code to light up the opposite set of large LEDs?
 
 
 <div class="ssw-codecontent" markdown=0>
@@ -142,7 +152,7 @@ void loop() {
 </pre>
 </div>
 
-You will be seeing plenty more virtual SpinWheels in the upcoming adventures. You can use them to test and experiment with your code and see what the result might look like before uploading to your real SpinWheel! The virtual Spinwheels will only show the `loop` block of the code. Make sure to add the `setup` block when copying into the Arduino software!
+These virtual SpinWheels show up in many of our adventures as a way to test and experiment with your code and see what the result might look like before uploading to your real SpinWheel! The virtual Spinwheels will only show the `loop` block of the code. Make sure to add the `setup` block when copying into the Arduino software!
 
 ::: further-reading
 If you are eager to customize the SpinWheel in other ways (for instance by lighting up the small LEDs), check out the [list of ways to manipulate the SpinWheel's LEDs](/allcommands) we have created. 
@@ -221,15 +231,14 @@ In this code, every loop increases the value of `which_LED` by 1. This value is 
 
 You may have noticed that after a few seconds your SpinWheel stops lighting up. This is because the value in `which_LED` no longer corresponds to one of the 8 LEDs on the SpinWheel. For example, if `which_LED` equals 10, the code will try to turn on LED number 10. Since it doesn't exist, nothing happens. To light up the SpinWheel again, unplug it and toggle the BAT/USB switch. This restarts the code, running `setup` again and starting `which_LED` over at 0.
 
+You have now written your first piece of code for the SpinWheel!
+
 ::: further-reading
 What if instead you wanted this pattern to repeat itself over and over again? 
 Check out the adventure on [creating computer generated animations](/animation) to learn how!  
 :::
 
-You have now written your first piece of code for the SpinWheel!
-
-Continue the adventure by [making computer generated animations](/animation) or [learn about how colors are represented](/sight) in the SpinWheel. 
-To learn more about the programming language used by the SpinWheel, check out our lesson on the [building blocks of coding](/progpatterns).
+### Additional Programming Notes
 
 There are a couple more things you might have noticed about the style of this programming language:
 
@@ -240,7 +249,7 @@ There are a couple more things you might have noticed about the style of this pr
 - There are other ways in which LED colors can be modified and motion be detected. We will be discussing many such tools in future pages.
 
 ::: further-reading
-We invite you to play with the SpinWheel examples available in the Arduino software and to peruse [the many suggested activities we have prepared for you](/book). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands) or to peruse the [code of the SpinWearables library](/codedoc/SpinWearables.h.html). 
+We invite you to play with the SpinWheel examples available in the Arduino software and to peruse [the many suggested activities we have prepared for you](/book). To learn more about the programming language used by the SpinWheel, check out our lesson on the [building blocks of coding](/progpatterns). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands) or to peruse the [code of the SpinWearables library](/codedoc/SpinWearables.h.html). 
 :::
 
 
