@@ -47,13 +47,15 @@ The SpinWheel will not work properly if connected to a computer/charger without 
 ::: 
 
 
-## Setting Up the Arduino Software
+## Installing the Arduino Software
 
 Much of the joy of the SpinWheel comes from your ability to change it and make it do whatever you wish! The rest of the guide will walk you through adding a new animation to your SpinWheel. Do not worry if you find this part challenging, learning new things can be confusing at first. If you get stuck, check out the [Troubleshooting Guide](/troubleshoot) and don't be afraid to experiment. While feeling confused is normal, it will get easier as you go!
 
 In order to write new animations for the SpinWheel, you will need a way to reprogram the computer on the SpinWheel. We use the Arduino programming language to communicate with the SpinWheel. 
 
 1. Start by installing the Arduino software on your computer, which you can download for free from [arduino.cc/en/Main/Software](https://arduino.cc/en/Main/Software#download). For step by step help, Arduino has provided [instructions](https://www.arduino.cc/en/Guide) for each operating system.
+
+## Configuring the Arduino Software
 
 Once the software is installed, we have to configure it to communicate with the SpinWheel.
 
@@ -71,11 +73,7 @@ Once the software is installed, we have to configure it to communicate with the 
 
 Properly selecting the board and port are essential for the Arduino software to communicate with the SpinWheel. If you are unable to upload code to the Spinwheel in the next section, double check that the switch is set to "USB" and that you have the correct board and port selected.
 
-## Programming the SpinWheel
-
-Learning to code is just like learning a new language - you will understand only a couple of words and commands at first, but as your skills grow you will be able to command the computer to do more sophisticated tasks! 
-
-### Installing the SpinWheel libraries
+## Installing the SpinWheel Libraries
 
 1. To get the first set of examples of this new language and the other libraries necessary to run the SpinWheel code, download our SpinWearables Arduino Library using `Sketch → Include Library → Manage Libraries...`. 
   
@@ -84,7 +82,7 @@ Learning to code is just like learning a new language - you will understand only
 
 ![Installing Arduino libraries. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/quickstart/adding_libraries_screenshot.png "Installing Arduino libraries."){style="max-width:90%"}
 
-### Running a program on the SpinWheel
+## Running a Program on the SpinWheel
 
 To test that your SpinWheel is working properly, you can install a new program, or sketch, from the example files to animate your SpinWheel. 
 
@@ -98,6 +96,7 @@ For instance, pick [`BlinkingFirmware`](/codedoc/examples/BlinkingFirmware). Thi
 Now your SpinWheel will have the new colorful blinking pattern (from `BlinkingFirmware`) you just uploaded. 
 If you get an error here, then check out our [Troubleshooting Guide](/troubleshoot) for help on some common problems. 
 
+## Exploring the SpinWheel further
 
 Feel free to open any of the other SpinWheel sketches and upload them onto the device.
 Do not worry about understanding what the code does, 
