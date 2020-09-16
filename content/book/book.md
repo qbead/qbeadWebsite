@@ -5,12 +5,6 @@ header-video: /images/banners/linewheel_crossfade.mp4
 nocomments: nocomments
 ---
 
-::: warning :
-This is only a scaffolding for the (printed and electronic) textbook that will be developed as part of the project.
-
-Many of our activities and lessons have interactive widgets. Not all of these currently work in all browsers (particularly Safari and on phones). We are actively working on ensuring that all interactive elements are enjoyable across platforms.
-:::
-
 Welcome to the table of contents for the SpinWheel! We hope you enjoy learning to use the SpinWheel for yourself. 
 
 This concept map illustrates how the online lessons and adventures (unfilled hexagons) are connected to the paper field guide (filled hexagons). Here you will find both adventures that use the SpinWheel directly (double-lined hexagons), along with lessons that further explore some of the key concepts you’ll encounter in the adventures (single-lined hexagons). You can click the hexagons to navigate to each page!
@@ -170,7 +164,7 @@ const tiles = [
 //animations
 {x:3, y:3, bgcolor:"#d2e2f0", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Creating<br>Animations<br>with the<br>SpinWheel", href:"#"},
 {x:3, y:2, bgcolor:"#d2e2f0", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: false, text:"Coding<br>Building<br>Blocks", href:"/progpatterns"},
-{x:3, y:4, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Intro to<br>Animations", href:"/animation"},
+{x:3, y:4, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Intro to<br>Animation", href:"/animation"},
 {x:4, y:5, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Animations<br>and<br>Patterns", href:"/animation2"},
 //motion
 {x:4, y:7, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Make a<br>Step Counter", href:"/stepcounter"},
@@ -275,6 +269,10 @@ These denote important considerations about health and device care that should b
 :::
 
 We have a variety of interactive visualizations throughout these pages, that work well on desktop browsers like Firefox and Chrome. Lastly, we have many code examples in our pages that explain how to program the device, [including some interactive simulations of the device with which you can play directly from the browser](/intro).
+
+::: warning
+The virtual SpinWheel simulations and some of the other interactive widgets do not currently work in all browsers (particularly Safari and on phones). We are actively working on ensuring that all interactive elements are enjoyable across platforms.
+:::
 
 
 ## Engineer’s Diary
