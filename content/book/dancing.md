@@ -1,5 +1,5 @@
 ---
-title: Dancing with Color
+title: Dancing with Color<br>-Linear Motion-
 keywords: dancing, kinematics, color, light, programming
 header-image: /images/banners/dancer_color.png 
 ---
@@ -8,19 +8,14 @@ header-image: /images/banners/dancer_color.png
 <script src='/simspinwheel/simspinwheel.js'></script>
 
 ::: intro-box
-In this adventure, you will explore the ways we can describe motion mathematically and code colorful representations of that math. The skills covered in this adventure are as follows.  
-1. Linear Motion in One Dimension  
-2. Linear Motion in Three Dimensions  
-3. Rotational Motion in One Dimension  
-4. Rotational Motion in Three Dimensions  
-5. Rotating Lights with a "Snake"  
+In this adventure, you will explore the ways we can describe motion mathematically and code the SpinWheel to light up based on simple linear dance motions. This is part one of the Dancing with Color series that turns the SpinWheel into an accessory that responds to your motions while dancing.
 :::
 
-Whether you’ve watched a dance, or are a dancer yourself, you know dancing is all about movement. Be it a pirouette, a leap, or a straight line, dancers gracefully move through space in exciting ways. The LEDs on your SpinWheel can dance too! Mathematically, we can represent this motion in many ways. In this lesson, we will write colorful visualizations of this math that you can explore with your SpinWheel!
+Whether you’ve watched a dance, or are a dancer yourself, you know dancing is all about movement. Be it a pirouette, a leap, or chasse, dancers gracefully move through space in exciting ways. In this lesson, we will write programs that light up the SpinWheel in different ways to different motions!
 
-## Linear Motion: Line Dancing
+## A Line Dance
 
-The first way we will think about motion is by moving along a line. We can move back and forth on a line but in no other direction. This is called one dimensional motion. Below you can use your mouse to drag the circle along one dimension. Think of this like a dancer moving back and forth across the stage. 
+The first type of motion we will explore is moving along a line. We can move back and forth on a line but in no other direction. This is called one dimensional motion. Below you can use your mouse to drag the circle along one dimension. Think of this like a dancer moving back and forth across the stage. 
 
 
 <style>
@@ -116,21 +111,20 @@ locElement.oninput = getValue;
 
 Notice when you dragged your mouse, your screen lit up at different brightnesses and colors! Try moving your mouse faster and slower!
 
-As you can see, when you drag the mouse faster, the color gets brighter! How fast or slow the mouse is moving is called speed. Now, did you also notice that if you dragged the mouse to the left, then to the right, the color changes? This is because we can assign a direction to our speed, and call it velocity! The color of the box becomes blue when we drag the slider to the right and red when we drag the slider to the left. The color tells us the direction we are moving (right or left). When we represent velocity with numbers, we call motion in one direction positive and motion in the opposite direction negative.
+As you can see, when you drag the mouse faster, the color gets brighter! How fast or slow the mouse is moving is called speed. Now, did you also notice that if you dragged the mouse to the left, then to the right, the color changes? The color represents the direction of our speed. When scientists care about the direction, we call it velocity! The color of the box becomes blue when we drag the slider to the right and red when we drag the slider to the left. The color tells us the direction we are moving (right or left). When we represent velocity with numbers, we call motion in one direction positive and motion in the opposite direction negative.
 
 ::: further-reading
-We discuss the idea of velocity more in our lesson on [Vectors and Motion](/vectors). Kinematics is simply a fancy word for the study of motion. 
+We discuss the idea of velocity more in our lesson on [Vectors and Motion](/vectors). Check it out if you want to learn more about velocity (and acceleration).
 :::
 
-## Linear motion: A Three Line Dance
+## Dancing in Three Dimensions
 
 We’ve talked about motion in one dimension (1D), but we don’t live and move and dance on a single line. We’re free to go forwards and back, left and right, up and down, and even along curves. Instead of one line, we can represent our everyday motions as the movement along three lines. We call this three dimensional (3D) motion. When we move, or when the SpinWheel moves, we
-are travelling in 3D space. Inside your SpinWheel is a motion sensor that can tell when the SpinWheel moves. 
+are travelling in 3D space. Inside your SpinWheel is a motion sensor that can tell when the SpinWheel accelerates (increases in speed) or deaccelerates (decreases in speed). 
 
 ::: further-reading
 If you are curious about the sensor itself, check out our [specs](/specs) page where we talk more about the motion sensor and the other components of the SpinWheel.
 :::
-
 
 The code below will light up the virtual SpinWheel in  different colors as it moves.
 After you click `Run`, grab the SpinWheel and shake it.
@@ -141,164 +135,44 @@ void loop() {
   SpinWheel.readIMU();
   float ax = abs(SpinWheel.ax)*100;
   float ay = abs(SpinWheel.ay)*100;
-</pre>
-<textarea class="ssw-codeblock">
   SpinWheel.setLargeLEDsUniform(ax, ay, 0);
-</textarea>
-<pre class="ssw-codeblock">
   SpinWheel.drawFrame();
 }
 </pre>
 </div>
 
-The ways the SpinWheel changes with motion is easier to see if you upload the sketch directly onto your SpinWheel: `Examples → SpinWearables → Dancing_with_Color → Acceleration_Light_Up_Basic`. After you open the file and save it, you can upload this sketch to your SpinWheel and explore how the LEDs change as it dances through 3D space.
+If you are interested in reading a more detailed explanation of what each line of the above sketch does, then check out [this annotated script](/codedoc/examples/Dancing_with_Color/Acceleration_Light_Up_Basic/Acceleration_Light_Up_Basic.ino.html). 
+
+The ways the SpinWheel changes with motion is easier to see if you upload the sketch directly onto your SpinWheel: `Examples → SpinWearables → Dancing_with_Color → Acceleration_Light_Up_Basic`. After you open the file, you can upload this sketch to your SpinWheel and explore how the LEDs change as you shake the SpinWheel.
 To see these colors clearly, place your SpinWheel on a table, oriented to match the virtual SpinWheel. Try moving the SpinWheel left and right, up and down, while keeping it on the  table. 
 
 The virtual SpinWheel can only move in two dimensions as it is trapped in the plane of your computer screen. For this reason, the code above and that you just uploaded onto your SpinWheel only shows the motion in two dimensions. Acceleration to the left and right (`ax`) controls the red component of the LEDs, while acceleration up and down (`ay`) controls the green component of the LEDs. The SpinWheel flashes yellow when it moves at an angle instead of straight up and down because then there is acceleration in both the horizontal and vertical directions. If you carefully lift your SpinWheel from the table, you'll notice that the color does not change. This is because movement in the z direction isn't included in this code.
 
-Did the speed you moved your SpinWheel change the brightness? With a faster acceleration, you may have noticed that the SpinWheel's LEDs lit up more brightly.
-
-If you are interested in reading a more detailed explanation of what each line of the example sketch does, then check out [this annotated script](/codedoc/examples/Dancing_with_Color/Acceleration_Light_Up_Basic/Acceleration_Light_Up_Basic.ino.html). 
-
-::: further-reading
-To learn more about modifying the SpinWheel's LED display with the output from the SpinWheel's motion sensors, check out the [Step Counter adventure](/stepcounter). This lesson will teach you to access the output from the motion sensors, monitor it on your computer, and use this to turn your SpinWheel into a step counter. You can do this lesson either now or after finishing the rest of this lesson. 
-:::
-
-
-## Turning: Rotational Motion
-
-We've talked about moving through space in a line, 
-but now imagine a dancer's feet doing turn after turn and their arms outstretched in different configurations. 
-Can you picture how their arms and legs move through space in small tight turns, like chaînés turns, and wide turns, like an attitude or a fouetté? 
-
-
-There are many different ways we can describe dances mathematically! 
-A dancer moving side to side is a type of translational motion.
-A dancer turning in a circle is a type of rotational motion. 
-
-![Notice how in tight turns or wide turns, a dancer's feet create different size circles on the floor. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/dance_turn.png)
-
-A simple way to describe rotational motion is as the movement around an axis. When a dancer spins, without moving around the stage, they are rotating around the axis of their body. 
-There are special sensors in your SpinWheel, called gyroscopes, that allow it to detect rotational motion. 
-We can use the output from these sensors to program the SpinWheel to respond to spinning! 
-
 ![This picture demonstrates the three axes that the SpinWheel can detect rotation around. We'll dive into what this means more in the rest of the lesson! <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/dance_axis.png)
 
-### Rotation Around One Axis
-
-To begin, we can program the SpinWheel to light up when it detects rotation around one axis. 
-This is similar to the dancer spinning in place where their body represents the axis of each turn. 
-In this case, we're measuring the rotation around the SpinWheel's x-axis, which is stored in the variable `SpinWheel.gx`. `SpinWheel.gx` provides us with the angular velocity of the SpinWheel around the <span class="footnote">x-axis of the device.<span>To visualize what this represents on the SpinWheel, scroll up to the image of the SpinWheel and its axes.</span></span> 
-
-::: further-reading 
-In our [Vectors and Motion](/vectors) lesson, we cover in more depth the velocity you are probably already familiar with: velocity along a straight line (like a car moving down a straight stretch of highway). 
-Above we reference another type of velocity, angular velocity, which is often used for describing rotatonal motion like that of our dancer spinning or a car speeding along a circular racetrack. 
-You can read our [Rotation](/rotation) lesson to learn more about angular velocity.
-:::
-
-As the SpinWheel's sensors are very sensitive to even small motions of the device, we only want to change color if the rotation is fast enough.
-This ensures that the lights don't turn on when you are just holding it in your hand without intentionally moving it.
-In this case, we will only have the color change `if` the absolute value of the rotation is greater than 100 degrees per second, `abs(SpinWheel.gx) > 100`. 
-Below is the essential piece of code, where we tell the SpinWheel to light up only when motion is detected (`if (abs(SpinWheel.gx) > 100)` and to otherwise (`else`) turn off all of the LEDs.
-
-```cpp
-// if there is enough rotation, then light up the 
-// LEDs a light blue
-if (abs(SpinWheel.gx) > 100) {
-  SpinWheel.setLargeLEDsUniform(0, 255, 255);
-}
-// otherwise, keep the LEDs turned off
-else {
-  SpinWheel.setLargeLEDsUniform(0,0,0);
-}
-```
-
-To see your SpinWheel light up in response to rotional motion, upload the full sketch (`Examples → SpinWearables → Dancing_with_Color → 1D_Rotation_Light_Up_Basic`) to your SpinWheel and explore what happens when you rotate your SpinWheel. You can can also read more about what each command in [this 1D Rotation sketch](/codedoc/examples/Dancing_with_Color/1D_Rotation_Light_Up_Basic/1D_Rotation_Light_Up_Basic.ino.html) does.
-
-If you prefer other colors to the light blue that we chose, then you can modify the code for this example to light up your SpinWheel a different color. 
+Did how you moved your SpinWheel change the brightness? With a faster acceleration, you may have noticed that the SpinWheel's LEDs lit up more brightly. You may have also noticed that if you move the SpinWheel with constant speed, the LEDs don't light up. Since the SpinWheel only responds to acceleration, it only lights up when the speed is increasing (accelerating) or slowing down (deaccelerating).
 
 ::: further-reading
-Looking for a refresher on how to customize the LEDs to light up your favorite color? In our [Biology of Sight adventure](/sight), we discuss how three light sources can be used to represent any color of the rainbow by taking advantage of how our eyes perceive color.
+To learn more about modifying the SpinWheel's LED display with the output from the SpinWheel's motion sensors, check out the [Step Counter](/stepcounter) adventure. This lesson will teach you to access the output from the motion sensors, monitor it on your computer, and use this to turn your SpinWheel into a step counter. 
 :::
 
-In the [Intro to Animations adventure](/animation), you created animations for the SpinWheel that relied on time. It is possible to use those same sketches, but only have them change color when rotational motion is detected. For instance, check out [this version of the rainbow chase sketch](/codedoc/examples/Dancing_with_Color/Rainbow_Chase_Advanced/Rainbow_Chase_Advanced.ino.html) to see how you can use rotation around the z-axis of the SpinWheel instead of time to update the animation. You can also upload the full sketch onto your SpinWheel from here: full sketch (`Examples → SpinWearables → Dancing_with_Color → Rainbow_Chase_Advanced`. 
-
-To get the full effect of this sketch, we recommend you unplug your SpinWheel from your computer and try spinning in a circle yourself. If you hold the SpinWheel horizontal as you turn, you'll be able to see the colors change as you're moving and stop when you stop. Just remember, when you plug the SpinWheel back into the computer to make sure the switch is back on `usb`.
-
-::: further-reading
-We can do a simple experiment to illustrate the difference between moving in a circular path and spinning. 
-Often we lump these both together as rotation, but the sensor in the SpinWheel is actually only capable of detecting spinning. 
-You've seen above that spinning causes the SpinWheel's LEDs to change.
-Similarly, if you walk around a chair while holding the SpinWheel and continuously turn to face the chair, the LEDs will change color.
-However, if you walk around the chair again and keep yourself facing a window, then the SpinWheel won't detect rotation and the LEDs won't change color.
-In the first two cases, the sensor has been rotated, so the LEDs change.
-In the last case, you moved in a circular path, but the SpinWheel's orientation didn't change. As the sensor itself didn't rotate, the LEDs won't change color.
-We discuss this further at the end of our [Rotation](/rotation) lesson.
-:::
-
-Another modification you can make to the first rotation sketch sketch is to have the LEDs change color based on the direction of rotation. 
-We include the important new elements of the code below, including defining new variables `pos_spin` and `neg_spin` to store the direction that the SpinWheel is rotating around the x-axis.
+To have the SpinWheel instead respond to motion in all three dimensions, you can modify the code to also measure the acceleration in z direction. You can modify the `Acceleration_Light_Up_Basic` sketch by adding the following line after the lines storing the acceleration in the y direction, `float ay = abs(SpinWheel.ay)*100;`: 
 
 ```cpp
-// If the x rotation (gx) is big enough, then 
-// change the color of the big LEDs based on the
-// direction of the spin
-if (SpinWheel.gx > 100) {
-  pos_spin = 255;
-  neg_spin = 0;
-}
-else if (SpinWheel.gx < -100) {
-  neg_spin = 255;
-  pos_spin = 0;
-}
-else {
-  pos_spin = 0;
-  neg_spin = 0;
-}
-// If gx is positive, set the big LEDs to light up green
-// If gx is negative, set the big LEDs to light up blue
-SpinWheel.setLargeLEDsUniform(0, pos_spin, neg_spin);
+float az = abs(SpinWheel.az)*100;
 ```
 
-In this script, the LEDs light up green up when the device is spun around the x-axis in one direction (`if (SpinWheel.gx > 100)`), and blue when spun in the other direction (`else if (SpinWheel.gx < -100)`). The `else` statment ensures that the SpinWheel's LEDs turn off when not enough rotation is detected. You can upload the sketch from: `Examples → SpinWearables → Dancing_with_Color → 1D_Rotation_Light_Up_Advanced` to give it a try on your own SpinWheel. 
-For a more detailed explanation of this code, you can also check out [this script](/codedoc/examples/Dancing_with_Color/1D_Rotation_Light_Up_Advanced/1D_Rotation_Light_Up_Advanced.ino.html). 
+and replacing the `SpinWheel.setLargeLEDsUniform(ax, ay, 0);` line with:
 
+```cpp
+SpinWheel.setLargeLEDsUniform(ax, ay, az);
+```
 
-### Rotation in 3D Space
+Now if you lift the SpinWheel horizontally up off the table it will light up blue. Try disconnecting the SpinWheel from your computer (switch it to `BAT` to light up again) and shaking it in different ways. What colors can you create?
 
-In the two last sketches, the SpinWheel only changed color when its rotation was around the x-axis. It is also possible to measure and change the SpinWheel's LEDs color based on rotation around any axis in 3D space!
-
-To start off, upload the 3D rotation sketch from here: `Examples → SpinWearables → Dancing_with_Color → 3D_Rotation_Light_Up`. If you read the [details about the code](/codedoc/examples/Dancing_with_Color/3D_Rotation_Light_Up/3D_Rotation_Light_Up.ino.html), you will see how you can code the red, green, and blue components of the LEDs to respond to the rotation around the x, y, and z axes. 
-Rather than only modifying the large LEDs as in the earlier sketches, this sketch also has the small LEDs light up in response to the SpinWheel's rotational motion. Try rotating your SpinWheel in different directions to make it fully red, green or blue. Can you combine these rotations to make other colors? If the rotation is around two axes at the 
-same time, both colors are shown, making yellow, purple or teal.
-
-### Rotating Lights (or an LED "snake")
-
-One of the programs that came preloaded on your SpinWheel was an LED "snake" that spins around the device like a dancer. 
-We can change that basic snake code so that it only rotates colors when you rotate the SpinWheel. 
-
-<video src="/images/behindthescenes/circling.mp4" muted autoplay playsinline loop></video>
-
-To create this snake, we'll introduce a new function that lights up several LEDs (making a snake): `SpinWheel.setSmallLEDsPointer(angle, red, green, and blue)`. 
-`Angle` controls where your snake starts, while `red`, `green`, and `blue` control the red, green, and blue components of the small LEDs. By changing these values, you can change the color that your LED "snake" lights up and where the "head" of the snake is. 
-To try modifying the snake on your SpinWheel, upload the example sketch from here: `Examples → SpinWearables → Dancing_with_Color → Motion_Snake`. 
-You can also read more about our [motion snake script here](/codedoc/examples/Dancing_with_Color/Motion_Snake/Motion_Snake.ino.html) to learn more about how this script works.
-
-You may have noticed that the "snake" currently only moves when you rotate around the x-axis. 
-Can you have it respond to rotation around the other axes?  
-What about making it respond to motion in all three directions? 
-For a hint of how to do this, you can check out the [code for the final example of this adventure](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html).
-
-The past few examples all rely on the measurements from the gyroscope (rotation sensor). 
-However, you could also have the snake (or any of the other sketches) respond to acceleration instead. You can modify the snake to respond to acceleration in one direction or even all three.
-
-
-## The Grand Finale: Showing Off All Its Colors
-
-You’ve explored both linear and rotational motion independently so far in this adventure. Using the above scripts as a starting point, you can modify the SpinWheel to respond to your motion however you see fit! 
-To inspire your imagination, we'll leave you with one final more complicated sketch that combines both the `Motion_Snake` and `Rainbow_Chase_Advanced` sketches. 
-Here is a webpage with our [grand finale code and explanation](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html). This sketch programs the SpinWheel to respond to both acceleration and rotation. To try this code on your SpinWheel or use it as a framework for your own creations, you can find it at `Examples → SpinWearables → Dancing_with_Color → Grand_Finale`.
-
+::: further-reading
+You may notice that the LEDs always light up one color, even though the SpinWheel remains still. The reason for this is that the SpinWheel's acceleration sensor can't tell the difference between acceleration when you shake it and the force of gravity. If you hold the SpinWheel by the keyring, it will light of green because it experiences gravity along the y-dimension. If instead you hold the SpinWheel horizontal, it will light up blue. By changing the angle of the SpinWheel, the SpinWheel will light up other colors. This becomes important in the [Step Counter](/stepcounter) adventure, so we will learn how to adjust for the effect of gravity there.
+:::
 
 To wrap up this adventure, 
 we'll leave you with [this video](https://vimeo.com/400629616) that illustrates another way math, physics, and art can be combined.
@@ -310,5 +184,8 @@ a physics graduate student who studies particle physics as well as physics and d
 ::: further-reading
 Mariel created this video using programming tools that she developed in collaboration with dancers, physicists, and computer science researchers. You can watch more of her videos [here](https://vimeo.com/400641881) and read a [paper](https://arxiv.org/abs/1907.05297) on this research.
 :::
+
+If you are excited about having your SpinWheel respond to rotational motion, continue on to [part 2 of the Dancing with Color](/dancing2) series of adventures.
+
 
 <a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">Header image credit: Jack Hegarty</a>
