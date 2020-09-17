@@ -167,7 +167,7 @@ Feeling stumped on how to make a different color? In our [Biology of Sight](/sig
 :::
 
 Now let us upload this code to the SpinWheel device itself. Make sure that the SpinWheel's switch is on `USB` and then connect your device with a micro USB cable to your computer.
-To run this code on your SpinWheel, navigate to `Examples → SpinWearables → Animations_and_Patterns → Simple_Blink` in the Arduino software and open the file and upload it to your SpinWheel. If you simply copy the above code, it will not run because it is missing the important setup information. The file in `Examples` contains the entirety of the necessary code.
+To run this code on your SpinWheel, navigate to `File → Examples → SpinWearables → Animations_and_Patterns → Simple_Blink` in the Arduino software and open the file and upload it to your SpinWheel. If you simply copy the above code, it will not run because it is missing the important setup information. The file in `Examples` contains the entirety of the necessary code.
 
 ::: further-reading
 If you want a reminder about why the above code will not work if you run it on your SpinWheel, check out the [Basic Structure of a Program lesson](/basics). 
