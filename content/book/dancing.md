@@ -119,8 +119,10 @@ We discuss the idea of velocity more in our lesson on [Vectors and Motion](/vect
 
 ## Dancing in Three Dimensions
 
-We’ve talked about motion in one dimension (1D), but we don’t live and move and dance on a single line. We’re free to go forwards and back, left and right, up and down, and even along curves. Instead of one line, we can represent our everyday motions as the movement along three lines. We call this three dimensional (3D) motion. When we move, or when the SpinWheel moves, we
-are travelling in 3D space. Inside your SpinWheel is a motion sensor that can tell when the SpinWheel accelerates (increases in speed) or deaccelerates (decreases in speed). 
+We’ve talked about motion in one dimension (1D), but we don’t live and move and dance on a single line. We’re free to go forwards and back, left and right, up and down, and even along curves. Instead of one line, we can represent our everyday motions as the movement along three lines (or axes). We call this three dimensional (3D) motion. When we move, or when the SpinWheel moves, we
+are travelling in 3D space. Inside your SpinWheel are motion sensors that can detect different types of motion along these axes. Check out the image below to see how these axes are oriented with respect to the SpinWheel. In the rest of this adventure, we'll use the SpinWheel's acceleration sensors. These sensors measure the SpinWheel's acceleration (increase in speed) or deacceleration (decrease in speed) along the x, y, and z axes. 
+
+![This picture demonstrates the three axes that the SpinWheel can detect acceleration along. For instance, if you have the SpinWheel resting flat on the table and pick it up, the SpinWheel's acceleration sensor will detect acceleration only along the z axis. More complicated motions will have an x, y, and z axis component. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/dance_axis.png)
 
 ::: further-reading
 If you are curious about the sensor itself, check out our [specs](/specs) page where we talk more about the motion sensor and the other components of the SpinWheel.
@@ -146,12 +148,10 @@ If you are interested in reading a more detailed explanation of what each line o
 The ways the SpinWheel changes with motion is easier to see if you upload the sketch directly onto your SpinWheel: `File → Examples → SpinWearables → Dancing_with_Color → Acceleration_Light_Up_Basic`. After you open the file, you can upload this sketch to your SpinWheel and explore how the LEDs change as you shake the SpinWheel.
 To see these colors clearly, place your SpinWheel on a table, oriented to match the virtual SpinWheel. Try moving the SpinWheel left and right, as well as towards and away from you, while keeping it on the  table. 
 
-![This picture demonstrates the three axes that the SpinWheel can detect motion along. If the SpinWheel is resting on the table, x represents left right motion and y represents motion towards and away from you. Lift up the SpinWheel for movement along the z axis. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/dance_axis.png)
-
 The virtual SpinWheel can only move in two dimensions as it is trapped in the plane of your computer screen. For this reason, the code above and that you just uploaded onto your SpinWheel only shows the motion in two dimensions. Acceleration to the left and right (`ax`) controls the red component of the LEDs, while acceleration up and down (`ay`) controls the green component of the LEDs. The SpinWheel flashes yellow when it moves at an angle instead of straight up and down because then there is acceleration in both the horizontal and vertical directions (along both the x axis and y axis). If you carefully lift your SpinWheel from the table, you'll notice that the color does not change. This is because movement along the z axis isn't included in this code.
 
 ::: further-reading
-In the [Vectors and Motion](/vectors) lesson, we talk more about how linear motion in 3D can be represented by the proportion of its motion in the x, y, and z direction. If this adventure is confusing, we encourage you to check that out for some background that might be useful.
+In the [Vectors and Motion](/vectors) lesson, we talk more about how acceleration in 3D can be represented by the proportion of its acceleration in the x, y, and z direction. If this adventure is confusing, we encourage you to check that out for some background that might be useful.
 :::
 
 Did how you moved your SpinWheel change the brightness? With a faster acceleration, you may have noticed that the SpinWheel's LEDs lit up more brightly. You may have also noticed that if you move the SpinWheel with constant speed, the LEDs don't light up. Since the SpinWheel only responds to acceleration, it only lights up when the speed is increasing (accelerating) or slowing down (deaccelerating).
