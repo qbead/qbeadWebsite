@@ -14,7 +14,7 @@ This may be a new way of learning for you and it may feel unnatural at first. Ho
 
 ## Getting Started
 
-These two pages provide the essentials to get started programming your SpinWheel. 
+These pages provide the essentials to get started programming your SpinWheel. 
 If you have coding experience, we still recommend doing the [Initial Setup Guide](/quickstart) before jumping into any of the adventures.
 
 1. [Getting Started with the SpinWheel](/intro): Before you download the software for programming your SpinWheel, try out this page to get your first taste of how to control the SpinWheel's LEDs. 
@@ -26,7 +26,7 @@ If you have coding experience, we still recommend doing the [Initial Setup Guide
 These adventures assume that you have no coding experience and are a great way to become comfortable with both the SpinWheel and coding. The associated lessons go into more depth on the concepts that are referenced for the first time in these adventures. We have written the lessons to supplement the content in the adventures and we provide links in each adventure when we recommend checking them out to learn more. We hope these will spark your curiousity to learn even more about the world around you!
 
 1. [Biology of Sight](/sight) - if you find the learning curve too steep, you might enjoy the [Mixing Color with Light lesson from the companion booklet](/paper_booklet)
-2. [Intro to Animation](/animation) - similarly, if this adventure seems to overwhelming at first, check out the [Customizing the SpinWheel&#39;s Display and Creating Animations with the SpinWheel chapters from the companion booklet](/paper_booklet)
+2. [Intro to Animation](/animation) - similarly, if this adventure seems too overwhelming at first, check out the [Customizing the SpinWheel&#39;s Display and Creating Animations with the SpinWheel chapters from the companion booklet](/paper_booklet)
 3. Stroboscopes and Stroboscopic Photography (planned)
 
 ### Associated Lessons
@@ -67,7 +67,7 @@ These are the most challenging SpinWheel activities. We recommend completing at 
 
 This concept map illustrates how the lessons and adventures are connected and build upon each other. Here you will find both sophisticated engineering adventures that use the SpinWheel directly (double-lined hexagons), along with companion lessons that further explore some of the key concepts you’ll encounter in the adventures (single-lined hexagons).
 
-The three shaded hexagons are gentler introductory lessons present only in the [paper booklet](/paper_booklet/). Feel free to skip them and jump directly into the adventures, but do not shy away from skimming through them if this is the first time you have attempted to write a program.
+The three shaded hexagons are gentler introductory lessons found only in the [paper booklet](/paper_booklet/). Feel free to skip them and jump directly into the adventures. We do recommend skimming through them if this is the first time you have attempted to write a program.
 
 <style>
 @font-face {
@@ -291,8 +291,5 @@ Want to learn more about how the SpinWheel was created? We'll be adding addition
 5. Hardware Testing
 6. Kickstarter Setup and Manufacturing Partner
 
-## Community Rules
-
-We are excited to provide you with this adventure guide, to be your companion on your journey of exploration with the SpinWheel. Each adventure and lesson includes a comment section in which you are encouraged to ask questions or help other adventurers understand the world around them. Comments will be moderated by our volunteers, so we ask you to be polite and helpful and to expect the same from others.
 
 <a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">Header image credit: Jack Hegarty</a>
