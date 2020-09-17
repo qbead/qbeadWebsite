@@ -5,69 +5,7 @@ header-video: /images/banners/linewheel_crossfade.mp4
 nocomments: nocomments
 ---
 
-Welcome to the repository of SpinWheel adventures! We hope you will enjoy learning to use the SpinWheel to uncover more about the world around you!
-
-Below, you will find a recommended order for completing the lessons and adventures. However, this is just a recommendation! Depending on which activities you are excited by and your comfort with programming, you may skip around.
-
-As you read, you will notice that we reference material from different lessons and adventures as we go. Don’t worry if you don't understand everything the first time you read a page. Jump around between the lessons and adventures – by moving between them, you will gain even more from each page. 
-This may be a new way of learning for you and it may feel unnatural at first. However, it will become much more familiar and empowering as you progress. You’ll also be practicing a whole new way of learning - one that engineers and scientists use all the time as they solve problems and create new knowledge! 
-
-## Getting Started
-
-These pages provide the essentials to get started programming your SpinWheel. 
-If you have coding experience, we still recommend doing the [Initial Setup Guide](/quickstart) before jumping into any of the adventures.
-
-1. [Getting Started with the SpinWheel](/intro): Before you download the software for programming your SpinWheel, try out this page to get your first taste of how to control the SpinWheel's LEDs. 
-2. [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures.
-3. [Troubleshooting Guide](/troubleshoot): If you have problems with getting the SpinWheel to work, then first look here for advice. This has tips and tricks for using your SpinWheel.
-
-## Intro Adventures
-
-These adventures assume that you have no coding experience and are a great way to become comfortable with both the SpinWheel and coding. The associated lessons go into more depth on the concepts that are referenced for the first time in these adventures. We have written the lessons to supplement the content in the adventures and we provide links in each adventure when we recommend checking them out to learn more. We hope these will spark your curiousity to learn even more about the world around you!
-
-1. [Biology of Sight](/sight) - if you find the learning curve too steep, you might enjoy the [Mixing Color with Light lesson from the companion booklet](/paper_booklet)
-2. [Intro to Animation](/animation) - similarly, if this adventure seems too overwhelming at first, check out the [Customizing the SpinWheel&#39;s Display and Creating Animations with the SpinWheel chapters from the companion booklet](/paper_booklet)
-3. Stroboscopes and Stroboscopic Photography (planned)
-
-### Associated Lessons
-1. [Light and Color](/lightandcolor)
-2. [Color Theory](/colortheory)
-3. [Basic Structure of a Program](/basics)
-
-
-## Intermediate Adventures
-
-These activities build on the ideas presented in the introductory adventures. If you have coding experience, you can jump right in and then refer back to the earlier adventures and lessons as you have questions.
-
-1. [Animations and Patterns](/animation2)
-2. [Dancing with Color: Linear Motion](/dancing)
-3. [Make a Step Counter](/stepcounter)
-
-### Associated Lessons
-1. [Coding Building Blocks](/progpatterns)
-2. [Arduino 101](/arduino101) 
-3. [Vectors and Motion](/vectors)
-5. Inertial Reference Frames / Free Fall (planned)
-6. Physical Computing (planned)
-
-## Advanced Adventures
-
-These are the most challenging SpinWheel activities. We recommend completing at least one earlier adventure before trying them out. If you have completed the other adventures, then you should be able to jump into any of these. 
-
-1. [Dancing with Color: Rotational Motion](/dancing2)
-2. Compass (planned)
-3. [Recurrent Neural Networks for Gesture Recognition](/rnn)
-
-### Associated Lessons
-1. [Rotation and Moving in Circles](/rotation)
-2. Magnetism (planned)
-3. Electricity (planned)
-
-## Concept Map
-
-This concept map illustrates how the lessons and adventures are connected and build upon each other. Here you will find both sophisticated engineering adventures that use the SpinWheel directly (double-lined hexagons), along with companion lessons that further explore some of the key concepts you’ll encounter in the adventures (single-lined hexagons).
-
-The three shaded hexagons are gentler introductory lessons found only in the [paper booklet](/paper_booklet/). Feel free to skip them and jump directly into the adventures. We do recommend skimming through them if this is the first time you have attempted to write a program.
+Welcome to the SpinWheel Field Guide! We hope you will enjoy learning to use the SpinWheel to uncover more about the world around you!
 
 <style>
 @font-face {
@@ -207,8 +145,124 @@ The three shaded hexagons are gentler introductory lessons found only in the [pa
   <li class="hexagon"></li>
 </ul>
 
+Keep reading for our recommended order for completing the lessons and adventures. However, this is just a recommendation! Depending on which activities you are excited by and your comfort with programming, you may skip around. Feel free to click on any hexagon in this diagram to navigate to any of the adventures to start exploring.
+
+As you read, you will notice that we reference material from different lessons and adventures as we go. Don’t worry if you don't understand everything the first time you read a page. Jump around between the lessons and adventures – by moving between them, you will gain even more from each page. 
+This may be a new way of learning for you and it may feel unnatural at first. However, it will become much more familiar and empowering as you progress. You’ll also be practicing a whole new way of learning - one that engineers and scientists use all the time as they solve problems and create new knowledge! 
+
+## Getting Started
+
+These pages provide the essentials to get started programming your SpinWheel. 
+If you have coding experience, we still recommend doing the [Initial Setup Guide](/quickstart) before jumping into any of the adventures.
+
+1. [Getting Started with the SpinWheel](/intro): Before you download the software for programming your SpinWheel, try out this page to get your first taste of how to control the SpinWheel's LEDs. 
+2. [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures.
+3. [Troubleshooting Guide](/troubleshoot): If you have problems with getting the SpinWheel to work, then first look here for advice. This has tips and tricks for using your SpinWheel.
+
+## Intro Adventures
+
+These adventures assume that you have no coding experience and are a great way to become comfortable with both the SpinWheel and coding. The associated lessons go into more depth on the concepts that are referenced for the first time in these adventures. We have written the lessons to supplement the content in the adventures and we provide links in each adventure when we recommend checking them out to learn more. We hope these will spark your curiousity to learn even more about the world around you!
+
+1. [Biology of Sight](/sight) - if you find the learning curve too steep, you might enjoy the [Mixing Color with Light lesson from the companion booklet](/paper_booklet)
+2. [Intro to Animation](/animation) - similarly, if this adventure seems too overwhelming at first, check out the [Customizing the SpinWheel&#39;s Display and Creating Animations with the SpinWheel chapters from the companion booklet](/paper_booklet)
+3. Stroboscopes and Stroboscopic Photography (planned)
+
+### Associated Lessons
+1. [Light and Color](/lightandcolor)
+2. [Color Theory](/colortheory)
+3. [Basic Structure of a Program](/basics)
+
+
+## Intermediate Adventures
+
+These activities build on the ideas presented in the introductory adventures. If you have coding experience, you can jump right in and then refer back to the earlier adventures and lessons as you have questions.
+
+1. [Animations and Patterns](/animation2)
+2. [Dancing with Color: Linear Motion](/dancing)
+3. [Make a Step Counter](/stepcounter)
+
+### Associated Lessons
+1. [Coding Building Blocks](/progpatterns)
+2. [Arduino 101](/arduino101) 
+3. [Vectors and Motion](/vectors)
+5. Inertial Reference Frames / Free Fall (planned)
+6. Physical Computing (planned)
+
+## Advanced Adventures
+
+These are the most challenging SpinWheel activities. We recommend completing at least one earlier adventure before trying them out. If you have completed the other adventures, then you should be able to jump into any of these. 
+
+1. [Dancing with Color: Rotational Motion](/dancing2)
+2. Compass (planned)
+3. [Recurrent Neural Networks for Gesture Recognition](/rnn)
+
+### Associated Lessons
+1. [Rotation and Moving in Circles](/rotation)
+2. Magnetism (planned)
+3. Electricity (planned)
+
+## Concept Map
+
+This concept map illustrates how the lessons and adventures are connected and build upon each other. Here you will find both sophisticated engineering adventures that use the SpinWheel directly (double-lined hexagons), along with companion lessons that further explore some of the key concepts you’ll encounter in the adventures (single-lined hexagons).
+
+The three shaded hexagons are gentler introductory lessons found only in the [paper booklet](/paper_booklet/). Feel free to skip them and jump directly into the adventures. We do recommend skimming through them if this is the first time you have attempted to write a program.
+
+
+<ul id="hexmap2" class="hexagon-container">
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+  <li class="hexagon"></li>
+</ul>
+
 <script>
 const tiles = [
+{x:1, y:1, bgcolor:"#ffffff", textcolor:"#fffff", bordercolor:"#ffffff", inner: false, text:"Begin Here ➘", href:""},
 {x:1, y:2, bgcolor:"#ffffff", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: true, text:"Getting<br>Started<br>with the<br>SpinWheel", href:"/intro"},
 {x:2, y:3, bgcolor:"#ffffff", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: true, text:"SpinWheel<br>Initial<br>Setup", href:"/quickstart"},
 {x:2, y:2, bgcolor:"#ffffff", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: false, text:"SpinWheel<br>Troubleshooting<br>Guide", href:"/troubleshoot"},
@@ -239,18 +293,25 @@ const tiles = [
 //reference
 {x:4, y:1, bgcolor:"#ffffff", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: false, text:"SpinWheel<br>Functions<br>Reference", href:"/allcommands"},
 ];
-const hexmap = document.getElementById("hexmap");
-const allhexes = hexmap.getElementsByClassName("hexagon");
-for (const tile of tiles) {
-  const hex = allhexes[(tile.x-1)+4*(tile.y-1)];
 
-  hex.style["background-color"] = tile.bordercolor;
-  var innerHTML = `<a href="${tile.href}" style="color:${tile.textcolor};background-color:${tile.bgcolor}">${tile.text}</a>`;
-  if (tile.inner==true) {
-    innerHTML = `<div style="background-color:${tile.bgcolor}"><div style="background-color:${tile.bordercolor}">${innerHTML}</div></div>`;
+function render_hexmap(id) {
+  const hexmap = document.getElementById(id);
+  const allhexes = hexmap.getElementsByClassName("hexagon");
+  for (const tile of tiles) {
+    const hex = allhexes[(tile.x-1)+4*(tile.y-1)];
+
+    hex.style["background-color"] = tile.bordercolor;
+    var innerHTML = `<a href="${tile.href}" style="color:${tile.textcolor};background-color:${tile.bgcolor}">${tile.text}</a>`;
+    if (tile.inner==true) {
+      innerHTML = `<div style="background-color:${tile.bgcolor}"><div style="background-color:${tile.bordercolor}">${innerHTML}</div></div>`;
+    }
+    hex.innerHTML = innerHTML;
   }
-  hex.innerHTML = innerHTML;
 }
+
+render_hexmap("hexmap");
+render_hexmap("hexmap2");
+
 </script>
 
 Some adventures, like [Biology of Sight](/sight), directly extend material from [the paper field guide](/paper_booklet). Others, like [Dancing with Color](/dancing), are completely new and will help you use the SpinWheel in even more exciting ways. The paper book isn’t required to get started, but it complements the online resources.
