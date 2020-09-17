@@ -8,10 +8,10 @@ header-image: /images/banners/dancer_color.png
 <script src='/simspinwheel/simspinwheel.js'></script>
 
 ::: intro-box
-This adventure builds on the first Dancing with Color Adventure. You will now learn how to have the SpinWheel light up in response to rotational motion. By combining what you learned in the previous adventure with this one, you will be able to create an accessory that lights up and changes color based on the motions of a dance. 
+This adventure builds on the first Dancing with Color Adventure. You will now start coding the SpinWheel to light up in response to rotational motion. By combining what you learned in the previous adventure with this one, you will be able to create an accessory that lights up and changes color based on the motions of a dance. 
 :::
 
-In the first part of the [Dancing with Color](/dancing) Adventure, we talked about moving through space in a line, 
+In the first part of the [Dancing with Color](/dancing) adventure, we talked about moving through space in a line, 
 but now imagine a dancer's feet doing turn after turn and their arms being outstretched in different configurations. 
 Can you picture how their arms and legs move through space in small tight turns, like chaînés turns, and wide turns, like an attitude or a fouetté? 
 
@@ -57,7 +57,7 @@ else {
 }
 ```
 
-To see your SpinWheel light up in response to rotional motion, upload the full sketch (`Examples → SpinWearables → Dancing_with_Color → 1D_Rotation_Light_Up_Basic`) to your SpinWheel and explore what happens when you rotate your SpinWheel. You can can also read more about what each command in [this 1D Rotation sketch](/codedoc/examples/Dancing_with_Color/1D_Rotation_Light_Up_Basic/1D_Rotation_Light_Up_Basic.ino.html) does.
+To see your SpinWheel light up in response to rotional motion, upload the full sketch (`File → Examples → SpinWearables → Dancing_with_Color → 1D_Rotation_Light_Up_Basic`) to your SpinWheel and explore what happens when you rotate your SpinWheel. You can can also read more about what each command in [this 1D Rotation sketch](/codedoc/examples/Dancing_with_Color/1D_Rotation_Light_Up_Basic/1D_Rotation_Light_Up_Basic.ino.html) does.
 
 If you prefer other colors to the light blue that we chose, then you can modify the code for this example to light up your SpinWheel a different color. 
 
@@ -121,7 +121,7 @@ You can also read more about our [motion snake script here](/codedoc/examples/Da
 You may have noticed that the "snake" currently only moves when you rotate around the x-axis. 
 Can you have it respond to rotation around the other axes?  
 What about making it respond to motion in all three directions? 
-For a hint of how to do this, you can check out the [code for the final example of this adventure](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html).
+For a hint of how to do this, think about how we [detected motion in the Step Counter adventure](/stepcounter).
 
 The past few examples all rely on the measurements from the gyroscope (rotation sensor). 
 However, you could also have the snake (or any of the other sketches) respond to acceleration instead. You can modify the snake to respond to acceleration in one direction or even all three.
@@ -136,13 +136,13 @@ same time, both colors are shown, making yellow, purple or teal.
 
 ## The Grand Finale: Showing Off All Its Colors
 
-You’ve explored both linear and rotational motion independently so far in this adventure. Using the above scripts as a starting point, you can modify the SpinWheel to respond to your motion however you see fit! 
+You’ve explored both linear and rotational motion independently in the two parts of the Dancing with Color adventure series. Using the scripts you've created as a starting point, you can modify the SpinWheel to respond to your motion however you see fit! 
 To inspire your imagination, we'll leave you with one final more complicated sketch that combines both the `Motion_Snake` and `Rainbow_Chase_Advanced` sketches. 
 Here is a webpage with our [grand finale code and explanation](/codedoc/examples/Dancing_with_Color/Grand_Finale/Grand_Finale.ino.html). This sketch programs the SpinWheel to respond to both acceleration and rotation. To try this code on your SpinWheel or use it as a framework for your own creations, you can find it at `Examples → SpinWearables → Dancing_with_Color → Grand_Finale`.
 
 Using the code we've presented as an inspiration, try writing your own sketch where the SpinWheel's LEDs respond to your motion! 
 
-Here is the diagram of the SpinWheel again, if you want a reminder of what number corresponds to which LED:
+Here is the diagram of the SpinWheel again, if you want a reminder of what number corresponds to which LED as you are creating your own dancing companion sketches:
 
 ![SpinWheel LED numbering.](/images/spinwheel_with_numbers.png "SpinWheel LED numbering")
 
