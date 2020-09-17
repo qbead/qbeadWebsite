@@ -192,7 +192,7 @@ for (const tile of tiles) {
 }
 </script>
 
-Some adventures, like “Biology of Sight”, directly extend material in the paper field guide. Others, like “Dancing with Color”, are completely new and will help you use the SpinWheel in even more exciting ways. The paper book isn’t required to get started, but it complements the online resources.
+Some adventures, like “Biology of Sight”, directly extend material from [the paper field guide](/paper_booklet/). Others, like “Dancing with Color”, are completely new and will help you use the SpinWheel in even more exciting ways. The paper book isn’t required to get started, but it complements the online resources.
 
 Below, you will find a recommended order for completing the lessons and adventures. However, this is just a recommendation! Depending on which activities you are excited by and your comfort with programming, you may skip around.
 
