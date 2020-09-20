@@ -200,6 +200,7 @@ These are the most challenging SpinWheel activities. We recommend completing at 
 1. [Rotation and Moving in Circles](/rotation)
 2. Magnetism (planned)
 3. Electricity (planned)
+4. [Advanced Programming](/advanced_programming)
 
 ## Concept Map
 
