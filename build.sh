@@ -6,6 +6,7 @@ rm -rf build
 mkdir build
 
 cp -r content/images build/images
+cp -r content/data build/data
 cp -r static/* build/
 
 for mdfile in content/main/*{index,$@}*md; do\
