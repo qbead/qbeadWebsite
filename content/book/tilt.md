@@ -417,7 +417,7 @@ This is a rather minimal example that reads
 only the gravity and acceleration along $x$,
 interpreting that value as a description of the tilt along that axis,
 and then lits a corresponding LED along the same axis as appropriate.
-The value is contained in the $SpinWheel.ax$ variable. 
+The value is contained in the `SpinWheel.ax` variable. 
 
 ```c++
 #include "SpinWearables.h"
