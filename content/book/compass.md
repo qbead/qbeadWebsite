@@ -13,10 +13,17 @@ just use the magnetic field `mx, my` instead of the gravitational field
 .threediv {
   text-align: center;
   width: 100%;
+  font-size: 0.9rem;
 }
 .threediv > * {
   display: block;
   margin: auto;
+}
+.threediv > p {
+  width:400px;
+}
+.threediv > p > span {
+  font-weight:var(--font-weight-strong);
 }
 </style>
 
@@ -28,7 +35,9 @@ The issue is that all of the metal around the sensor creates a constant magnetic
 The widget should have two plots: one where the camera is from the outside like here
 and a second plot of the measurements themselves in the reference frame of the device
 
-<div id="threediv" class="threediv"><div id="threejsanim" class="threejsanim"></div>Tilt back and forth:<input id="fbtilt" type="range" min="-100" max="+100" value="30">Tilt sideways:<input id="lrtilt" type="range" min="-100" max="+100">Rotate face:<input id="frotate" type="range" min="-100" max="+100"></div>
+<div id="threediv" class="threediv"><p>The SpinWheel from the point of view of an outside observer:</p><div id="threejsanim" class="threejsanim"></div><p>The Magnetic fields with respect to the SpinWheel (i.e. from the SpinWheel's point of view):</p><div id="threejsanim2" class="threejsanim"></div>Tilt back and forth:<input id="fbtilt" type="range" min="-100" max="+100" value="30">Tilt sideways:<input id="lrtilt" type="range" min="-100" max="+100">Rotate face:<input id="frotate" type="range" min="-100" max="+100"><div><button id="clearsphere">Clear Points</button><button id="autorot">Autorotate</button></div>
+<p>The three axes of the SpinWheel are colored as <span style="color:#92bd80;">X</span>, <span style="color:#8fb0d3;">Y</span>, and <span style="color:#f58559;">Z</span>. Also colored are the <span style="color:#d42c2b;">external magnetic field we want to measure</span>, <span style="color:#111111;">the total field that the sensor directly measures</span>, and the <span style="color:#9266bc;">magnetic field caused by the metalic SpinWheel components that causes the difference</span>.</p>
+</div>
 
 </style>
 
@@ -67,7 +76,7 @@ function makeSpinWheel() {
   return outerbox;
 }
 
-function makeScene() {
+function makeScene(dogrid=true) {
   var scene = new THREE.Scene();
   scene.background = new THREE.Color( 0xffffff );
 
@@ -83,69 +92,90 @@ function makeScene() {
   scene.add( lights[ 1 ] );
   scene.add( lights[ 2 ] );
 
-  var grid = new THREE.GridHelper( 1500, 70 );
-  grid.position.set(0,-100,0);
-  scene.add(grid);
+  if (dogrid==true) {
+    var grid = new THREE.GridHelper( 1500, 70 );
+    grid.position.set(0,-100,0);
+    scene.add(grid);
+  }
 
   return scene;
 }
 
 var camera, scene, renderer;
+var camera2, scene2, renderer2;
 var box;
-var arrow;
-var xarrow, yarrow, zarrow;
-var sphere;
 const size = 400;
 const animdiv = document.getElementById('threejsanim');
+const animdiv2 = document.getElementById('threejsanim2');
 const fgtilt = document.getElementById('fbtilt');
 const lrtilt = document.getElementById('lrtilt');
 const frotate = document.getElementById('frotate');
-   
+
+var Boutnormal = new THREE.Vector3(1,2,0.5).normalize();
+var Bout = Boutnormal.clone().multiplyScalar(40);
+var Binnormal = new THREE.Vector3(1,0.1,2).normalize();
+var Bin = Binnormal.clone().multiplyScalar(12);
+var Boutarrow2;
+var Btotarrow2;
+var pointcloudgeom;
+var MAXPOINTS = 10000
+var pointsarray = new Float32Array(3*MAXPOINTS);
+var pointslen = 0;
+var newpoint = false;
+
+fgtilt.addEventListener('input', function (){newpoint=true;clearInterval(intervalid);})
+lrtilt.addEventListener('input', function (){newpoint=true;clearInterval(intervalid);})
+frotate.addEventListener('input', function (){newpoint=true;clearInterval(intervalid);})
+
 function init() {
   scene = makeScene();
   
   box = makeSpinWheel();
   scene.add(box);
 
-  arrow = new THREE.ArrowHelper(
-    new THREE.Vector3(0,1,0),
-    new THREE.Vector3(0,0,0),
-    //40, 0xf58559,
-    40, 0xaaaaaa,
-    10, 4
-  );
-  scene.add(arrow);
+  for (var i = 1; i<=5; i++) {
+    for (var j = 1; j<=5; j++) {
+      var Boutarrow = new THREE.ArrowHelper(
+        Boutnormal,
+        new THREE.Vector3(i*40-120,0,j*40-120),
+        40, 0xd42c2b,
+        5, 2
+      );
+      scene.add(Boutarrow);
+    }
+  }
 
-  xarrow = new THREE.ArrowHelper(
+  var Binarrow = new THREE.ArrowHelper(
+    Binnormal,
+    new THREE.Vector3(0,2,0),
+    12, 0x9266bc,
+    5, 2
+  );
+  box.add(Binarrow);
+
+  var xarrow = new THREE.ArrowHelper(
     new THREE.Vector3(1,0,0),
     new THREE.Vector3(0,2,0),
-    40, 0x92bd80,
-    10, 4
+    25, 0x92bd80,
+    0, 4
   );
   box.add(xarrow);
 
-  yarrow = new THREE.ArrowHelper(
+  var yarrow = new THREE.ArrowHelper(
     new THREE.Vector3(0,0,-1),
     new THREE.Vector3(0,2,0),
-    40, 0x8fb0d3,
-    10, 4
+    25, 0x8fb0d3,
+    0, 4
   );
   box.add(yarrow);
 
-  zarrow = new THREE.ArrowHelper(
+  var zarrow = new THREE.ArrowHelper(
     new THREE.Vector3(0,1,0),
     new THREE.Vector3(0,2,0),
-    40, 0xf58559,
-    10, 4
+    25, 0xf58559,
+    0, 4
   );
   box.add(zarrow);
-
-  /*
-  var sgeometry = new THREE.SphereGeometry( 3, 12, 12 );
-  var smaterial = new THREE.MeshBasicMaterial( {color: 0xf58559} );
-  sphere = new THREE.Mesh( sgeometry, smaterial );
-  scene.add(sphere);
-  */ 
 
   var fov = 60;
   var aspect = 2;
@@ -160,6 +190,78 @@ function init() {
 
   var controls = new OrbitControls(camera, renderer.domElement);
 }
+
+function init2() {
+  scene2 = makeScene(false);
+  
+  var xarrow = new THREE.ArrowHelper(
+    new THREE.Vector3(1,0,0),
+    new THREE.Vector3(0,0,0),
+    25, 0x92bd80,
+    0, 4
+  );
+  scene2.add(xarrow);
+
+  var yarrow = new THREE.ArrowHelper(
+    new THREE.Vector3(0,0,-1),
+    new THREE.Vector3(0,0,0),
+    25, 0x8fb0d3,
+    0, 4
+  );
+  scene2.add(yarrow);
+
+  var zarrow = new THREE.ArrowHelper(
+    new THREE.Vector3(0,1,0),
+    new THREE.Vector3(0,0,0),
+    25, 0xf58559,
+    0, 4
+  );
+  scene2.add(zarrow);
+
+  Boutarrow2 = new THREE.ArrowHelper(
+    Boutnormal,
+    Bin,
+    40, 0xd42c2b,
+    5, 2
+  );
+  scene2.add(Boutarrow2);
+
+  Btotarrow2 = new THREE.ArrowHelper(
+    Boutnormal,
+    new THREE.Vector3(0,0,0),
+    0, 0x111111,
+    5, 2
+  );
+  scene2.add(Btotarrow2);
+
+  var Binarrow = new THREE.ArrowHelper(
+    Binnormal,
+    new THREE.Vector3(0,0,0),
+    12, 0x9266bc,
+    5, 2
+  );
+  scene2.add(Binarrow);
+
+  pointcloudgeom = new THREE.BufferGeometry();
+  var pcmaterial = new THREE.PointsMaterial( {size: 1, color: 0x111111} );
+  var points = new THREE.Points(pointcloudgeom, pcmaterial);
+  scene2.add(points);
+
+  var fov = 60;
+  var aspect = 2;
+  var near = 0.10;
+  var far = 500;
+  camera2 = new THREE.PerspectiveCamera(fov, aspect, near, far);
+  camera2.position.z = 50;
+  camera2.position.y = 50;
+  camera2.position.x = 50;
+  
+  renderer2 = new THREE.WebGLRenderer( { antialias: true } );
+  renderer2.setSize( size, size/2 );
+  animdiv2.appendChild( renderer2.domElement );
+
+  var controls = new OrbitControls(camera2, renderer2.domElement);
+}
  
 function animate() {
   requestAnimationFrame( animate );
@@ -168,59 +270,64 @@ function animate() {
   const r = frotate.value*Math.PI/2/100;
   const euler = new THREE.Euler(fb,r,lr,'ZXY');
   box.setRotationFromEuler(euler);
-  const g = new THREE.Vector3(0,1,0);
-  const py0 = new THREE.Vector3(0,0,-1);
-  const my0 = new THREE.Vector3(0,0,1);
-  const y0 = new THREE.Vector3(0,0,-1).applyEuler(euler);
-  const ly = y0.dot(g);
-  const aly = Math.abs(ly)*40
-  yarrow.setLength(aly, Math.min(10,aly), 4);
-  var dy;
-  if (ly > 0) {
-    dy = py0;
-  } else {
-    dy = my0;
+  const quat = new THREE.Quaternion();
+  const inverted = quat.setFromEuler(euler).conjugate();
+
+  var localBoutnormal = Boutnormal.clone().applyQuaternion(inverted);
+  Boutarrow2.setDirection(localBoutnormal);
+  var localBtot = localBoutnormal.multiplyScalar(40).add(Bin);
+  Btotarrow2.setLength(localBtot.length(), 5, 2);
+  Btotarrow2.setDirection(localBtot.clone().normalize());
+
+  if (newpoint) {
+    pointsarray[3*pointslen] = localBtot.x;
+    pointsarray[3*pointslen+1] = localBtot.y;
+    pointsarray[3*pointslen+2] = localBtot.z;
+    pointslen = (pointslen+1)%MAXPOINTS;
+    pointcloudgeom.setAttribute('position', new THREE.BufferAttribute(pointsarray.subarray(0,3*pointslen), 3));
+    pointcloudgeom.computeBoundingBox();
+    newpoint = false;
   }
-  const px0 = new THREE.Vector3(1,0,0);
-  const mx0 = new THREE.Vector3(-1,0,0);
-  const x0 = new THREE.Vector3(1,0,0).applyEuler(euler);
-  const lx = x0.dot(g);
-  const alx = Math.abs(lx)*40
-  xarrow.setLength(alx, Math.min(10,alx), 4);
-  var dx;
-  if (lx > 0) {
-    dx = px0;
-  } else {
-    dx = mx0;
-  }
-  const pz0 = new THREE.Vector3(0,1,0);
-  const mz0 = new THREE.Vector3(0,-1,0);
-  const z0 = new THREE.Vector3(0,1,0).applyEuler(euler);
-  const lz = z0.dot(g);
-  const alz = Math.abs(lz)*40
-  zarrow.setLength(alz, Math.min(10,alz), 4);
-  var dz;
-  if (lz > 0) {
-    dz = pz0;
-  } else {
-    dz = mz0;
-  }
-  xarrow.setDirection(dx);
-  yarrow.setDirection(dy);
-  zarrow.setDirection(dz);
-  /*
-  const xy = x0.clone()
-               .multiplyScalar(lx*40);
-  xy.add(y0.clone()
-           .multiplyScalar(ly*40));
-  sphere.position.copy(xy);
-  */
+
   renderer.render( scene, camera );
+  renderer2.render( scene2, camera2 );
 }
  
 init();
+init2();
 animate();
- 
+
+var dir = 1;
+function autoincrement() {
+  if (fbtilt.valueAsNumber>=100) {
+    fbtilt.valueAsNumber-=200;
+  }  
+  if (lrtilt.valueAsNumber>=100) {
+    dir = -1;
+    fbtilt.valueAsNumber+=11;
+  }
+  if (lrtilt.valueAsNumber<=-100) {
+    dir = +1;
+    fbtilt.valueAsNumber+=11;
+  }
+  lrtilt.valueAsNumber=lrtilt.valueAsNumber+6*dir;
+  newpoint=true;
+}
+
+var intervalid = setInterval(autoincrement, 50);
+
+const bautorot = document.getElementById('autorot');
+const bclearsphere = document.getElementById('clearsphere');
+
+bautorot.addEventListener('click', function (){
+  clearInterval(intervalid);
+  intervalid = setInterval(autoincrement, 50);
+})
+bclearsphere.addEventListener('click', function (){
+  pointslen = 0;
+  newpoint = true;
+})
+
 </script>
 
 ## The code to get measurements
@@ -293,10 +400,6 @@ function makeScene() {
   scene.add( lights[ 1 ] );
   scene.add( lights[ 2 ] );
 
-  var grid = new THREE.GridHelper( 1500, 70 );
-  grid.position.set(0,-100,0);
-  scene.add(grid);
-
   return scene;
 }
 
@@ -312,23 +415,23 @@ function init() {
 
   xarrow = new THREE.ArrowHelper(
     new THREE.Vector3(1,0,0),
-    new THREE.Vector3(0,2,0),
+    new THREE.Vector3(0,0,0),
     70, 0x92bd80,
     10, 2
   );
   scene.add(xarrow);
 
   yarrow = new THREE.ArrowHelper(
-    new THREE.Vector3(0,0,-1),
-    new THREE.Vector3(0,2,0),
+    new THREE.Vector3(0,1,0),
+    new THREE.Vector3(0,0,0),
     70, 0x8fb0d3,
     10, 2
   );
   scene.add(yarrow);
 
   zarrow = new THREE.ArrowHelper(
-    new THREE.Vector3(0,1,0),
-    new THREE.Vector3(0,2,0),
+    new THREE.Vector3(0,0,1),
+    new THREE.Vector3(0,0,0),
     70, 0xf58559,
     10, 2
   );
@@ -346,6 +449,8 @@ function init() {
   var far = 500;
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
   camera.position.z = 80;
+  camera.position.x = 80;
+  camera.position.y = 80;
   
   renderer = new THREE.WebGLRenderer( { antialias: true } );
   renderer.setSize( size, size/2 );
@@ -361,7 +466,7 @@ function animate() {
 
 function processData() {
   var array = new Float32Array;
-  array = Float32Array.from(document.getElementById("pointcloudtext").value.replaceAll('\n','\t').split('\t'));
+  array = Float32Array.from(document.getElementById("pointcloudtext").value.replaceAll('\n','\t').replaceAll(' ', '\t').split('\t'));
   pointcloudgeom.setAttribute('position', new THREE.BufferAttribute(array, 3));
   pointcloudgeom.computeBoundingBox();
 }
@@ -373,6 +478,8 @@ fetch('/data/compass.txt')
     init();
     animate();
   });
+
+document.getElementById("pointcloudtext").addEventListener('input', processData);
 </script>
 
 ## Compass with automatic calibration
