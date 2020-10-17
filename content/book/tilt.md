@@ -6,38 +6,37 @@ keywords: tilt sensor, gravitation, motion, acceleration
 ::: intro-box
 The motion sensor in the SpinWheel can be used to detect the direction of gravity,
 which in turn can be visualized, creating a colorful digital level or tilt sensor.
-Here is one way to do this, which will also introduce vectors in a new way.
+In this adventure, we'll cover one way to make a tilt sensor, which will also introduce vectors in a new way.
 :::
 
 ## Simple Levels
 
-On our planet what is horizontal and what is vertical
+On our planet, what is horizontal and what is vertical
 is defined with respect to the direction of Earth's gravitational pull.
 This makes it easy to measure how level a surface is
-by observing whether gravity can pull something off the surface,
-e.g., make a steel ball roll off.
+by observing whether gravity can pull something off the surface. For example, what happens if you put a ball on a table that is not level? The ball will roll off and fall to the ground.
 One can even use a toy like a [ball-in-a-maze puzzle](https://en.wikipedia.org/wiki/Ball-in-a-maze_puzzle) as a simple tilt sensor.
 
 ![A toy in which the tilt can force a ball to roll in a given direction. <a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:Round_maze.jpg">image credit Wikimedia</a>](/images/bookpics/round_maze.jpg)
 
-More commonly, an actual [bubble level](https://en.wikipedia.org/wiki/Spirit_level) is used,
-where a small bubble encosed in a container with liquid
-is used to point out whether a surface is flat.
-The bubble tries to go as far up as possible,
-i.e., it rises against the direction of gravity.
-As the top of the bubble level is slightly domed,
-if the surface is flat, the highest point is the center
+More commonly, to check whether a surface is level or not, an actual [bubble level](https://en.wikipedia.org/wiki/Spirit_level) is used. You may have tried using one when hanging pictures or other decorations on a wall! In a bubble level, 
+a small bubble enclosed in a container with liquid surrounding it. 
+The bubble tries to go as far up in its enclosure as possible, since the bubble is made of air and air is lighter than the surrounding liquid. This means that the bubble will rise against the direction of gravity (just think of what happens to bubbles in soda - they rise up through the liquid in your glass!).
+
+The top of the bubble level enclosure is slightly domed. This means that
+if the surface you've placed the level on is flat, the highest point in the bubble level enclosure is the center
 of level and the bubble will move there.
-If the surface is not flat,
-the bubble will not be centered, 
-but will rise to the highest point.
+If the surface is not flat, the bubble will still rise to the highest point in the enclosure, but the bubble will not be centered in this case. 
+
+<!-- I find this bubble level part confusing, tried to re-word. Could we maybe add some images of examples with a level and not level surface, showing what the bubble level looks like in each case? Also maybe a close up of the domed shape?
+-->
 
 ![A bubble level. <a class="imagecredit" href="https://publiclab.org/notes/mathew/10-26-2015/deploying-passive-particle-monitors">image credit Public Lab</a>](/images/bookpics/onebubble.jpg)
 
-We can do the same measurement using the SpinWheel.
-It contains a motion sensor, which is capable of measuring acceleration.
-Moreover, as the sensation of accelerating cannot be distinguished
-from the sensation of being pulled by gravity,
+We can program the SpinWheel to make this same measurement.
+The SpinWheel contains a motion sensor, which is capable of measuring acceleration.
+Because the sensation of accelerating cannot be distinguished
+from the sensation of being pulled by gravity, so 
 this same sensor also reports Earth's gravity.
 
 ::: further-reading
@@ -67,7 +66,7 @@ perpendicular to each other,
 instead of one single dome.
 Now we can use one number per bubble,
 simply denoting its displacement away from the middle of its tube.
-Those two numbers together contain all the information about the tilt of the surface.
+These two numbers together contain all the information about the tilt of the surface.
 We just described a <span class="footnote">position in the two-dimensional plane<span>Something that cannot be expressed by a single number.</span></span>,
 by using a <span class=footnote>pair of numbers<span>Each giving the displacements along a single axis.</span></span>.
 Mathematicians call this operation [vector decomposition](/vectors).
@@ -76,7 +75,12 @@ You can gain some more intuition about this decomposition procedure below.
 The black arrow is <span class="footnote">the two-dimensional object
 <span>Having both length and direction in a 2D plane.</span></span>
 that we want to represent by splitting it in a component along the $x$ axis
-and a component along the $y$ axis (green and blue, respectively).
+and a component along the $y$ axis (green and blue, respectively). The black arrow is called a vector.
+
+::: further-reading
+You can learn more about how to describe and work with quantities that have
+a direction from our [lesson on vectors](/vectors).
+:::
 
 <style>
 #grid2d {
@@ -195,10 +199,6 @@ setInterval(plot_all, 50);
 <!-- TODO: Stefan will be modifying this to better link with the bubble sensors.
 -->
 
-::: further-reading
-You can learn more about how to describe and work with quantities that have
-a direction from our [lesson on vectors](/vectors).
-:::
 
 ## Measuring Gravity with the SpinWheel
 
@@ -206,7 +206,7 @@ The SpinWheel has sensors that can measure gravity along
 <span class="footnote">three axes<span>Below the interactive SpinWheel animation, you can see how these three axes, $x$, $y$, and $z$, are defined.</span></span>.
 Before we use this information to create a tilt sensor, 
 first play with the interactive SpinWheel animation below.
-Pay particularly close attention to the $x$ and $y$ components 
+Pay close attention to the $x$ and $y$ components 
 as they are the ones
 corresponding to the displacement of the air bubbles seen
 in the bubble levels above.
@@ -216,6 +216,13 @@ carefully observing how <span class="footnote">the green and blue components cha
 
 <!-- I think this needs more explanation.
 -->
+
+<!-- Are x, y, z labels possible to add to the interactive animation? So that people don't need to match the colors? 
+-->
+
+<!-- This animation is fun, but I do not understand what I am supposed to be doing with it? 
+-->
+
 
 <div id="threediv"><div id="threejsanim"></div>Tilt back and forth:<input id="fbtilt" type="range" min="-100" max="+100" value="30">Tilt sideways:<input id="lrtilt" type="range" min="-100" max="+100">Rotate face:<input id="frotate" type="range" min="-100" max="+100"></div>
 
@@ -578,7 +585,7 @@ or have more LEDs also light up.
 
 ### Improving the Tilt Sensor
 
-If you want your tilt sensor to behave more like the second level,
+If you want your tilt sensor to behave more like the second level in the pictures above,
 then you can upload a slightly more detailed
 version of the above code that senses both along $x$ and $y$.
 Go to the Examples menu in the Arduino software, and open the file here:
