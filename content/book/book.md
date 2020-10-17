@@ -178,8 +178,9 @@ These adventures assume that you have no coding experience and are a great way t
 These activities build on the ideas presented in the introductory adventures. If you have coding experience, you can jump right in and then refer back to the earlier adventures and lessons as you have questions.
 
 1. [Animations and Patterns](/animation2)
-2. [Dancing with Color: Linear Motion](/dancing)
-3. [Make a Step Counter](/stepcounter)
+2. [Make a Tilt Sensor](/tilt)
+3. [Dancing with Color: Linear Motion](/dancing)
+4. [Make a Step Counter](/stepcounter)
 
 ### Associated Lessons
 1. [Coding Building Blocks](/progpatterns)
@@ -263,35 +264,35 @@ The three shaded hexagons are gentler introductory lessons found only in the [pa
 <script>
 const tiles = [
 {x:1, y:1, bgcolor:"#ffffff", textcolor:"#fffff", bordercolor:"#ffffff", inner: false, text:"Begin Here ➘", href:""},
-{x:1, y:2, bgcolor:"#ffffff", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: true, text:"Getting<br>Started<br>with the<br>SpinWheel", href:"/intro"},
-{x:2, y:3, bgcolor:"#ffffff", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: true, text:"SpinWheel<br>Initial<br>Setup", href:"/quickstart"},
-{x:2, y:2, bgcolor:"#ffffff", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: false, text:"SpinWheel<br>Troubleshooting<br>Guide", href:"/troubleshoot"},
+{x:2, y:3, bgcolor:"#ffffff", textcolor:"#25aae1", bordercolor:"#25aae1", inner: true, text:"SpinWheel<br>Initial<br>Setup", href:"/quickstart"},
+{x:2, y:2, bgcolor:"#ffffff", textcolor:"#25aae1", bordercolor:"#25aae1", inner: true, text:"SpinWheel<br>Troubleshooting<br>Guide", href:"/troubleshoot"},
+{x:2, y:6, bgcolor:"#ffffff", textcolor:"#25aae1", bordercolor:"#25aae1", inner: false, text:"Arduino<br>101", href:"/arduino101"},
 //light
 {x:2, y:5, bgcolor:"#d0eeec", textcolor:"#13a89e", bordercolor:"#13a89e", inner: true, text:"Mixing<br>Color with<br>Light", href:"/paper_booklet"},
 {x:1, y:6, bgcolor:"#ffffff", textcolor:"#13a89e", bordercolor:"#13a89e", inner: true, text:"Biology of<br>Sight", href:"/sight"},
 {x:1, y:7, bgcolor:"#ffffff", textcolor:"#13a89e", bordercolor:"#13a89e", inner: false, text:"Color<br>Theory", href:"/colortheory"},
 {x:1, y:5, bgcolor:"#ffffff", textcolor:"#13a89e", bordercolor:"#13a89e", inner: false, text:"Light and<br>Color", href:"/lightandcolor"},
-//basic prog
-{x:2, y:4, bgcolor:"#d3eef9", textcolor:"#25aae1", bordercolor:"#25aae1", inner: true, text:"Customizing<br>the SpinWheel&#39;s<br>Display", href:"/paper_booklet"},
-{x:2, y:6, bgcolor:"#ffffff", textcolor:"#25aae1", bordercolor:"#25aae1", inner: true, text:"Arduino<br>101", href:"/arduino101"},
-{x:3, y:5, bgcolor:"#ffffff", textcolor:"#25aae1", bordercolor:"#25aae1", inner: false, text:"Basic<br>Structure<br>of a<br>Program", href:"/basics"},
 //animations
+{x:1, y:2, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Getting<br>Started<br>with the<br>SpinWheel", href:"/intro"},
+{x:2, y:4, bgcolor:"#d3eef9", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Customizing<br>the SpinWheel&#39;s<br>Display", href:"/paper_booklet"},
+{x:3, y:1, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: false, text:"Basic<br>Structure<br>of a<br>Program", href:"/basics"},
 {x:3, y:3, bgcolor:"#d2e2f0", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Creating<br>Animations<br>with the<br>SpinWheel", href:"/paper_booklet"},
 {x:3, y:2, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: false, text:"Coding<br>Building<br>Blocks", href:"/progpatterns"},
 {x:3, y:4, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Intro to<br>Animation", href:"/animation"},
 {x:4, y:5, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Animations<br>and<br>Patterns", href:"/animation2"},
 //motion
-{x:4, y:7, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Make a<br>Step Counter", href:"/stepcounter"},
-{x:4, y:8, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Vectors<br>and<br>Motion", href:"/vectors"},
+{x:3, y:6, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Make a<br>Tilt Sensor", href:"/tilt"},
+{x:3, y:8, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Make a<br>Step Counter", href:"/stepcounter"},
+{x:4, y:7, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Vectors<br>and<br>Motion", href:"/vectors"},
 {x:4, y:6, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Dancing<br>with Color:<br>Linear<br>Motion", href:"/dancing"},
-{x:4, y:9, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Dancing<br>with Color:<br>Rotational<br>Motion", href:"/dancing2"},
-//{x:4, y:8, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Inertial<br>Reference<br>Frames<br>(planned)", href:"/inertia"},
-{x:3, y:10, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Rotation<br>and<br>Circular<br>Motion", href:"/rotation"},
+{x:4, y:8, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Dancing<br>with Color:<br>Rotational<br>Motion", href:"/dancing2"},
+{x:4, y:9, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Inertial<br>Reference<br>Frames", href:"/inertia"},
+{x:4, y:10, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Rotation<br>and<br>Circular<br>Motion", href:"/rotation"},
 //magnetism
-//{x:3, y:10, bgcolor:"#ffffff", textcolor:"#ef5188", bordercolor:"#ef5188", inner: true, text:"Make a<br>Compass<br>(planned)", href:"/compass"},
-//{x:3, y:11, bgcolor:"#ffffff", textcolor:"#ef5188", bordercolor:"#ef5188", inner: false, text:"Magnetism<br>(planned)", href:"/magnetism"},
+{x:3, y:9, bgcolor:"#ffffff", textcolor:"#ef5188", bordercolor:"#ef5188", inner: true, text:"Make a<br>Compass", href:"/compass"},
+{x:2, y:10, bgcolor:"#ffffff", textcolor:"#ef5188", bordercolor:"#ef5188", inner: false, text:"Magnetism", href:"/magnetism"},
 //reference
-{x:4, y:1, bgcolor:"#ffffff", textcolor:"#bf1e2e", bordercolor:"#bf1e2e", inner: false, text:"SpinWheel<br>Functions<br>Reference", href:"/allcommands"},
+{x:4, y:1, bgcolor:"#ffffff", textcolor:"#25aae1", bordercolor:"#25aae1", inner: true, text:"SpinWheel<br>Functions<br>Reference", href:"/allcommands"},
 ];
 
 function render_hexmap(id) {
