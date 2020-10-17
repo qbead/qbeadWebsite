@@ -6,8 +6,7 @@ keywords: tilt sensor, gravitation, motion, acceleration
 ::: intro-box
 The motion sensor in the SpinWheel can be used to detect the direction of gravity,
 which in turn can be visualized, creating a colorful digital level or tilt sensor.
-Here is one way to do this, which will also introduce you in a new way to the notion
-of vectors.
+Here is one way to do this, which will also introduce vectors in a new way.
 :::
 
 On our planet what is horizontal and what is vertical
@@ -24,49 +23,54 @@ where a small bubble encosed in a container with liquid
 is used to point out whether a surface is flat.
 The bubble tries to go as far up as possible,
 i.e., it rises against the direction of gravity.
+As the top of the bubble level is slightly domed,
+if the surface is flat, the highest point is the center
+of level and the bubble will move there.
 If the surface is not flat,
-the bubble will not be centered in the domed top of the container.
+the bubble will not be centered, 
+but will rise to the highest point.
 
 ![A bubble level. <a class="imagecredit" href="https://publiclab.org/notes/mathew/10-26-2015/deploying-passive-particle-monitors">image credit Public Lab</a>](/images/bookpics/onebubble.jpg)
 
 We can do the same measurement using the SpinWheel.
 It contains a motion sensor, which is capable of measuring acceleration.
-Moreover, as the sensation of accelerating can not be distinguished
-from the senation of being pulled by gravity,
+Moreover, as the sensation of accelerating cannot be distinguished
+from the sensation of being pulled by gravity,
 this same sensor also reports Earth's gravity.
 
 ::: further-reading
-The indistinguishability of gavity and acceleration is a fascinating topic
+The indistinguishability of gravity and acceleration is a fascinating topic
 that has puzzled scientists and physics students for centuries.
-It is what has inspired Einstein to work on his general theory of relativity.
+It even inspired Einstein to work on his general theory of relativity!
 You can learn more about it in our [lesson on inertia and free fall](/inertia).
 :::
 
-Now we need to find a convenient way to encode this notion of "direction of gravity"
+Now we need to find a convenient way to encode the "direction of gravity"
+measured by the SpinWheel's acceleration sensor
 in a way that a piece of computer code can understand.
 The main difficulty is that gravity does not only have a certain strength (or intensity),
-but also a direction,
-therefore one single number is not sufficient to fully describe the measurement.
+but also a direction.
+Therefore, we cannot fully describe the measurement with one number.
 For instance, notice how in the bubble level above,
-it is not only the distance between the bubble and the center of the dome that matters,
-but also, the direction in which the bubble has been displaced.
-For our solution, we can continue being inspired by other types of bubble levels.
+both the direction in which the bubble has been displaced
+and the distance between the bubble and the center of the dome matters.
+Other types of bubble levels offer the inspiration for solving this problem.
 
 ![A bubble level with separate sensors for each axis of tilt. <a class="imagecredit" href="https://publiclab.org/notes/mathew/10-26-2015/deploying-passive-particle-monitors">image credit Public Lab</a>](/images/bookpics/twobubble.jpg)
 
-Notice how in this new level, we are using two separate tubes,
+Notice how in this new level, we are using two separate tubes that are
 perpendicular to each other,
 instead of one single dome.
 Now we can use one number per bubble,
 simply denoting its displacement away from the middle of its tube.
 Those two numbers together contain all the information about the tilt of the surface.
-We just described a <span class="footnote">position in the two-dimensional plane<span>Something that can not be expressed by a single number.</span></span>,
+We just described a <span class="footnote">position in the two-dimensional plane<span>Something that cannot be expressed by a single number.</span></span>,
 by using a <span class=footnote>pair of numbers<span>Each giving the displacements along a single axis.</span></span>.
 Mathematicians call this operation [vector decomposition](/vectors).
 
 You can gain some more intuition about this decomposition procedure below.
 The black arrow is <span class="footnote">the two-dimensional object
-<span>Having not only length but also a direction in a 2D plane.</span></span>
+<span>Having both length and direction in a 2D plane.</span></span>
 that we want to represent by splitting it in a component along the $x$ axis
 and a component along the $y$ axis (green and blue, respectively).
 
@@ -188,6 +192,11 @@ setInterval(plot_all, 50);
 You can learn more about how to describe and work with quantities that have
 a direction from our [lesson on vectors](/vectors).
 :::
+
+<!--- I think this section needs the readIMU to be described more fully or 
+maybe not even talk about the "Inertial Measurement Unit".
+-->
+
 
 Now we have everything we need to start working with
 measurements of tilt (direction of gravity) on the SpinWheel.
@@ -411,13 +420,13 @@ animate();
 ![These are the three axes that the SpinWheel can detect acceleration and gravity along. In the interactive 3D diagram you can see how the vector of gravitational acceleration (in grey) is decomposed along these three axes. You can drag, ctrl+drag, or scroll on the 3D image to rotate, pan, or zoom the camera.<a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/dance_axis.png)
 
 
-Our code needs little more than reading the $x$ and $y$ components
-and trigger the corresponding LEDs.
-This is a rather minimal example that reads
-only the gravity and acceleration along $x$,
-interpreting that value as a description of the tilt along that axis,
-and then lits a corresponding LED along the same axis as appropriate.
-The value is contained in the `SpinWheel.ax` variable. 
+To start, we'll have two of the SpinWheel's LEDs respond to
+tilt along the $x$ axis.
+The SpinWheel will read
+the gravity and acceleration along the $x$ axis,
+interpret that value as a description of the tilt along that axis,
+and then light up a corresponding LED along the same axis as appropriate.
+The measurement of gravity and acceleration is contained in the `SpinWheel.ax` variable. 
 
 ```c++
 #include "SpinWearables.h"
@@ -440,6 +449,8 @@ void loop() {
 
   // If the tilt is in a given direction,
   // turn on the corresponding LED.
+  // We only want the SpinWheel to register
+  // if the tilt is sufficiently large.
   if (x>10) {
     SpinWheel.setLargeLED(5,-x, -x,-x);
   }
@@ -451,7 +462,7 @@ void loop() {
 }
 ```
 
-You can upload this code directly from the Examples menu in the Arduino software.
+You can upload the above code directly from the Examples menu in the Arduino software.
 `Examples → SpinWearables → Tilt_Sensor →  Simple` has a slightly more detailed
 version of the above code, sensing both along $x$ and $y$.
 However, you should feel free to explore your artistic tendencies,
@@ -470,7 +481,7 @@ code examples can also be seen through the browser in literate programming rendi
 ::: further-reading
 We have [a list of visualization functions](/allcommands) that can be of use
 when making more elaborate tilt visualizations.
-You might also be interested in the [dancing with colors](/dancing)
+You might also be interested in the [dancing with color](/dancing)
 or [step counter](/stepcounter) projects,
 which explore different ways to depict motion with the SpinWheel.
 :::
