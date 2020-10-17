@@ -50,7 +50,7 @@ If you want to see this message, navigate to `Tools -> Serial Monitor` in the Ar
 
 Now we can begin to add useful functionality to our sketch.
 The first step is to ensure that the SpinWheel can measure something related to its motion.
-The function `loop` is repeatedly being called by our SpinWheel. Each time thist happens, we want
+The function `loop` is repeatedly being called by our SpinWheel. Each time this happens, we want
 to instruct the motion sensor to report the new values it has measured.
 We do this by calling `SpinWheel.readIMU()` where IMU stands for Inertial Measurement Unit:
 a fancy name for something that senses motion. This function will return 3 acceleration values, one for each direction of motion.
