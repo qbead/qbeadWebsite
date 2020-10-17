@@ -19,13 +19,13 @@ One can even use a toy like a [ball-in-a-maze puzzle](https://en.wikipedia.org/w
 
 ![A toy in which the tilt can force a ball to roll in a given direction. <a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:Round_maze.jpg">image credit Wikimedia</a>](/images/bookpics/round_maze.jpg)
 
-More commonly, an actual bubble level is used,
+More commonly, an actual [bubble level](https://en.wikipedia.org/wiki/Spirit_level) is used,
 where a small bubble encosed in a container with liquid
 is used to point out whether a surface is flat.
 The bubble tries to go as far up as possible,
 i.e., it rises against the direction of gravity.
 If the surface is not flat,
-the buble will not be centered in the domed top of the container.
+the bubble will not be centered in the domed top of the container.
 
 ![A bubble level. <a class="imagecredit" href="https://publiclab.org/notes/mathew/10-26-2015/deploying-passive-particle-monitors">image credit Public Lab</a>](/images/bookpics/onebubble.jpg)
 
