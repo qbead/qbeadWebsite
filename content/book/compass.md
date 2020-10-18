@@ -15,13 +15,18 @@ against this error, the same type of program that runs
 inside of smartphone apps when they give you directions.
 :::
 
-Making a compass is done in a similar way to creating [the tilt sensor](/tilt).
-Just use the magnetic field `mx, my`
-instead of the gravitational field `ax, ay`.
-That way the display of the SpinWheel will point along the direction
-of Earth's magnetic field, giving us a North/South orientation.
-This is analogous to how the tilt sensor showed us the direction of gravity,
-letting us know if a surface is flat.
+<!-- The part about the iron and calibrating against the error feels abrupt, since they haven't even made the compass yet. Can we simplify this to just the 1st sentence, plus something like "Here, we will walk through how to program your SpinWheel to work as your very own compass" or something?
+-->
+
+Making a compass is done in a similar way to creating [the tilt sensor](/tilt). Be sue to check out the tilt sensor adventure before diving into the rest of this one. Also, you can refresh your memory on magnetic fields by reviewing our [magnetism](/magnetism) lesson.
+
+<!-- I know the magnetism lesson isn't ready yet but I think it would be useful to link to it here
+-->
+
+To turn your SpinWheel into a compass, just use the magnetic field vector components `mx, my`instead of the gravitational field `ax, ay`.
+This way, the SpinWheel's display will point along the direction
+of Earth's magnetic field, giving us an indication of which way is North and which way is South. This is analogous to how the tilt sensor showed us the direction of gravity,
+allowing us to determine whether or not a surface was flat.
 
 However, the metal of other SpinWheel components
 can create <span style="color:#9266bc;">**a magnetic field**</span>,
@@ -32,18 +37,22 @@ and <span style="color:#9266bc;">**the field created by objects near the sensor*
 Using this **total measured magnetic field**
 would result in an imprecise compass,
 therefore we need to find a way to remove
-<span style="color:#9266bc;">**the spurrious field**</span>,
+<span style="color:#9266bc;">**the spurious field**</span>,
 so that only
 <span style="color:#d42c2b;">**Earth's magnetic field**</span> remains.
 
+<!-- Perhaps for an "extra experimentation" box: 
+Want to observe this phenomenon before your eyes? Grab your physical compass, and figure out which way is north. Then, put your compass near something metal and see what happens to your directional measurement.
+-->
+
 Every smartphone manufacturer also faces this same problem.
 In addition to magnetic fields from 
-metallic components inside of such a device, temporary magnetization
+metallic components inside of smartphones, temporary magnetization
 can also be caused by various other objects, like keys kept in the same pocket.
-To correct for these magnetic fields, pathfinding apps sometimes ask you to move your phone
-along a figure "8", before they provide directions. 
+To correct for the magnetic fields caused by nearby metal components, pathfinding apps sometimes ask you to move your phone
+along a figure "8" to calibrate the sensors before they provide directions. 
 
-These <span style="color:#9266bc;">**spurrious fields**</span>
+These <span style="color:#9266bc;">**spurious fields**</span>
 are always present and will remain fixed with respect to the sensor.
 This means that even when we rotate the sensor,
 that component of the measured result will not be changed.
@@ -51,6 +60,10 @@ However, the <span style="color:#d42c2b;">**Earth's field**</span>
 will change its orientation with respect to the sensor as it is rotated.
 For this reason, different values will be detected as the 
 device is rotated.
+
+<!-- I find the part above confusing. I am having trouble visualizing it (even with the interactive diagrams below). Maybe we could add a sketch here to show an example of this spurious fields? 
+-->
+
 We can use this to our advantage!
 By rotating the device in complete circles,
 we can remove <span style="color:#d42c2b;">**the external field**</span>.
@@ -70,6 +83,9 @@ The <span style="color:#9266bc;">**field caused by the device itself,
 i.e. the smaller purple vector**</span>,
 rotates with the SpinWheel.
 Their sum, the black vector is what we actually measure.
+
+<!-- Perhaps could use some more instructions about how to manipulate this interactive widget - I am not super clear on what I should be doing (but perhaps my confusion is related to my comment about the spurious fields above).
+-->
 
 <style>
 .threediv {
@@ -399,10 +415,10 @@ To begin, let's actually perform some measurements on our SpinWheel.
 The code below, which can also be found in 
 [`Examples → SpinWearables → Compass →  Calibrate`](/codedoc/examples/Compass/Calibrate/Calibrate.ino.html),
 will take direct measurements from the magnetic sensor
-and immediately send them back to the host computer
-over the USB cable.
-On the host computer you can use the
-`Serial Plotter` Arduino tool tool, to observe how the values change
+and immediately send them back to your computer
+over your USB cable.
+On your computer, you can use the
+`Serial Plotter` Arduino tool to observe how the magnetic field values change
 as you rotate the device.
 
 ::: further-reading
@@ -440,12 +456,12 @@ void loop() {
 ```
 
 To visualize this cloud of points,
-you can also copy the data into the text box below.
+you can also copy the data from your Serial Monitor into the text box below.
 The webpage will then regenerate the image
 based on the numbers that you provided.
-Currently that text field contains real data we observed
-with one of the first SpinWheels ever manufactured.
-If you rotate the plot (by dragging over it),
+Currently, the text you see in the textbook contains real data we observed
+with one of the first SpinWheels we ever manufactured.
+If you rotate the plot (by dragging it),
 you can clearly see that the sphere of measurements
 is not at the center of the sphere of points.
 Rather there is an offset that we have to correct for.
@@ -565,12 +581,12 @@ document.getElementById("pointcloudtext").addEventListener('input', processData)
 
 ## Compass with automatic calibration
 
-Now instead of recording all of this data and preprocessing it
-in order to find the corrections we need to put to our measurements,
+Now, instead of recording all of this data and processing it
+in order to correct our magnetic field measurements,
 we can instruct the SpinWheel to continuously correct itself.
 Initially, such an automatic correction will be significantly off,
 but after a few seconds of playing with the device,
-it will have measured enough data in order to correct itself.
+it will have measured enough data in order to perform accurate corrections.
 
 The code below works by first storing the biggest and smallest
 measurements for each axis of the magnetic sensor.
