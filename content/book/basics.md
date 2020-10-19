@@ -249,7 +249,7 @@ There are a couple more things you might have noticed about the style of this pr
 - There are other ways in which LED colors can be modified and motion be detected. We will be discussing many such tools in future pages.
 
 ::: further-reading
-We invite you to play with the SpinWheel examples available in the Arduino software and to peruse [the many suggested activities we have prepared for you](/book). To learn more about the programming language used by the SpinWheel, check out our lesson on the [building blocks of coding](/progpatterns). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands) or to peruse the [code of the SpinWearables library](/codedoc/SpinWearables.h.html). 
+We invite you to play with the SpinWheel examples available in the Arduino software and to peruse [the many suggested activities we have prepared for you](/book). To learn more about the programming language used by the SpinWheel, check out our lesson on the [building blocks of coding](/progpatterns). If you are already accustomed to programming, you might want to see the [list of all functions provided with the SpinWheel](/allcommands) or to peruse the [code of the SpinWearables library](/codedoc/src/SpinWearables.h.html). 
 :::
 
 

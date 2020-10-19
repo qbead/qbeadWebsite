@@ -123,7 +123,7 @@ Our "transpiler" framework detects all `ssw-codecontent` classes and adds all of
 
 ## The "Virtual" Device
 
-We also needed to implement a virtual version of the device. Consider the `drawFrame()` function that takes the buffer of color values and actually renders it to the LEDs. The implementation of the physical version involves a method in a C++ class (which you can view rendered in a [beautiful literary programming style](/codedoc/SpinWearables.h.html)). It involves some crazy bit shifting and persistence of vision tricks running on the microcontroller. Thankfully, the Javascript version is much simpler. First, we recreate the device in html:
+We also needed to implement a virtual version of the device. Consider the `drawFrame()` function that takes the buffer of color values and actually renders it to the LEDs. The implementation of the physical version involves a method in a C++ class (which you can view rendered in a [beautiful literary programming style](/codedoc/src/SpinWearables.h.html)). It involves some crazy bit shifting and persistence of vision tricks running on the microcontroller. Thankfully, the Javascript version is much simpler. First, we recreate the device in html:
 
 ```html
 <div>

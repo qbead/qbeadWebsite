@@ -41,7 +41,7 @@ You may have noticed that the brightness of the LEDs in the [sketch we present i
 Wouldn't it be prettier if we gently turned off the LEDs, similarly to how gently we are ramping them up?
 We can implement this by writing a function that first goes up and then slowly goes back down.
 We have already written such a function for you to use
-and called it [`triangularWave`](/codedoc/SpinWearables.h.html#triangular-wave),
+and called it [`triangularWave`](/codedoc/src/SpinWearables.h.html#triangular-wave),
 because when you plot it, it looks like a series of triangles.
 
 <figure><video src="/images/bookpics/triangular_wave.mp4" muted autoplay playsinline loop></video><figcaption>Instead of the pattern of brightness that abruptly dropped to zero that we saw previously, we can employ a pattern that also decreases steadily, making for a more pleasant pulsing light.</figcaption></figure>

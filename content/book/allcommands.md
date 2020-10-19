@@ -13,7 +13,7 @@ With these functions you can detect motion and set the LEDs to different color p
 If you have never programmed with Arduino before, be sure to read our [Initial Setup Guide](/quickstart)
 and [guide on the basic structure of a program](/basics).
 To learn more about the building blocks of coding, check out the [coding building blocks page](/progpatterns). 
-For more details, you can consult the [annotated source code](/codedoc/SpinWearables.h.html),
+For more details, you can consult the [annotated source code](/codedoc/src/SpinWearables.h.html),
 listing everything available in the library. This will serve as a reference as you code the SpinWheel in whatever designs you imagine.
 :::
 
@@ -196,7 +196,7 @@ You can use this to create an arc around the SpinWheel with the small LEDs. It h
 
 ### Circular pointer with `setSmallLEDsPointer`
 
-This is similar to the above function, but instead you can specify the middle of the arc. To use our default arc length (check out our [annotated source code](codedoc/SpinWearables.h.html)), simply specify the angle for the middle of the arc (0-255) and the color (either the red, green, and blue components individually or as rgb). 
+This is similar to the above function, but instead you can specify the middle of the arc. To use our default arc length (check out our [annotated source code](/codedoc/src/SpinWearables.h.html)), simply specify the angle for the middle of the arc (0-255) and the color (either the red, green, and blue components individually or as rgb). 
 
 ## Color and Brightness Helpers
 
@@ -268,7 +268,7 @@ The [Dancing with Color adventure](\dancing) gives ideas of how the sensor can b
 
 ## Advance direct use of the hardware, bypassing the SpinWheel
 
-You can consult the `begin`, `readIMU`, `drawFrame`, `setLargeLED`, and `setSmallLED` function in our [source code](codedoc/SpinWearables.h.html) to see how to use the motion sensor, small LEDs, and large LEDs, without relying on the SpinWearables library.
+You can consult the `begin`, `readIMU`, `drawFrame`, `setLargeLED`, and `setSmallLED` function in our [source code](/codedoc/src/SpinWearables.h.html) to see how to use the motion sensor, small LEDs, and large LEDs, without relying on the SpinWearables library.
 
 The button is attached to pin 7, and you can use `digitalWrite(7, INPUT_PULLUP)` to set it up. Then you can use `digitalRead(7)` to read the button directly or `attachInterrupt(digitalPinToInterrupt(7), callback, FALLING)` to set up an asynchronous callback.
 
