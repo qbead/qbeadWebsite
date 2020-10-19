@@ -77,6 +77,11 @@ from the usual mathematical meaning of the sign, which usually means
 computer scientists and their laziness for the misuse of this sign in most
 modern programming languages.
 
+Now that you've learned more about variables, we encourage you to look at the start of
+[Arduino 101](/arduino101) that discusses variables again. As you move through the online
+material and deepen your understanding of the SpinWheel, we encourage you to go back and
+forth between the various online pages.
+
 ## Functions
 
 In computer programming, functions are commands that take a few variables and
@@ -102,7 +107,7 @@ Let's step through each part of this code.
 
 * `int number_a = 5` assigns the value of 5 to the integer variable `number_a`
 * `int number_b = 7` assigns the value of 7 to the integer variable `number_b`
-* `int resulting_number = max(....)` store the result of the function `max(...)` in the integer variable `resulting number`
+* `int resulting_number = max(....)` store the result of the function `max(...)` in the integer variable `resulting_number`
 * `max(number_a, number_b)` calls, or uses, the function `max(...)` with two arguments,
 `number_a` and `number_b`, and returns the larger number.
 
@@ -138,7 +143,12 @@ int number_b = 7;
 int resulting_number = max(sqrt(number_a-1) * 2, min(number_b, 2));
 ```
 
-<figure><video src="/images/bookpics/calc_tree.mp4" muted autoplay playsinline loop></video><figcaption>In this diagram, you can see the order in which the computer evaluates this piece of code. It first subtracts `1` from `number_a`, then evaluates the functions `sqrt()` and `min()`, next multiplies the output of `sqrt()` by `2`, and finally evaluates `max()`. This is similar to how when solving a math equation, you first do anything within parenthenses and then work your way out.</figcaption></figure>
+<figure><video src="/images/bookpics/calc_tree.mp4" muted autoplay playsinline loop></video><figcaption>
+In this diagram, you can see the order in which the computer evaluates this piece of code.
+It first finds the minimum of `number_b` and `2`. It then subtracts `1` from `number_a`,
+then evaluates the `sqrt()` function and multiples the output by `2`. Finally,
+it evaluates `max()`. This is similar to how when solving a math equation, 
+you first do anything within parenthenses and then work your way out.</figcaption></figure>
 
 ## Creating your own functions
 
@@ -277,7 +287,7 @@ To learn more about the `setup` and `loop` functions, check out
 Here is a large example that includes all these features. It will use the
 `Serial.println()` function in order to send messages to the computer.
 Use the `Serial Monitor` tool in the Arduino software in order to see these
-messages being sent back over the USB cable (`Tools → Serial Monitor`.
+messages being sent back over the USB cable (`Tools → Serial Monitor`).
 
 ```c++
 // Here we define a convenient pausing function
@@ -313,6 +323,17 @@ void loop() {
   delay_seconds(1);
 }
 ```
+Read the comments in the code above to try to understand what each line does.
+One great way to test your understanding is to consider what would happen if you change the code.
+For example, if you changed the line `counter = counter + 1` to the line below,
+how would the output change?
+```c++
+counter = counter + 2
+```
+
+Variables and functions are two of the most important building blocks of programming.
+At this point, we encourage you to continue to [Intro to Animation](/animation) to 
+continue discovering more about programming!
 
 ::: further-reading
 We provide more information about the `Serial Monitor` in 
