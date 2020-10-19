@@ -7,69 +7,85 @@ header-image: /images/banners/compass.png
 ::: intro-box
 By detecting Earth's magnetic field,
 the SpinWheel can act as a compass.
-However, just as an old-school compass with a magnetic needle
-can be confused if you put it near a piece of iron,
-so does the magnetic sensor inside of the SpinWheel can
-give incorrect results.
+However, both an old-school compass with a magnetic needle
+and the magnetic sensor inside of the SpinWheel
+can be confused if you put it near a piece of iron.
 Here we will see how to write a program that calibrates
 against this error, the same type of program that runs
 inside of smartphone apps when they give you directions.
 :::
 
-Making a compass is in principle as easy as making [the tilt sensor](/tilt).
-Just use the magnetic field `mx, my`
-instead of the gravitational field `ax, ay`.
-That way the display of the SpinWheel will point along the direction
-of Earth's magnetic field, giving us a North/South orientation.
-This is analogous to how the tilt sensor showed us the direction of gravity,
-letting us know if a surface is flat.
+<!-- The part about the iron and calibrating against the error feels abrupt, since they haven't even made the compass yet. Can we simplify this to just the 1st sentence, plus something like "Here, we will walk through how to program your SpinWheel to work as your very own compass" or something?
+-->
 
-However, our SpinWheel device might have many components near its sensor,
-that create <span style="color:#9266bc;">**a spurrious magnetic field**</span>,
-causing confusion.
-Instead of measuring only <span style="color:#d42c2b;">**Earth's magnetic field**</span>,
-the sensor will measure both <span style="color:#d42c2b;">**Earth's field**</span>,
+Making a compass is done in a similar way to creating [the tilt sensor](/tilt). Be sue to check out the tilt sensor adventure before diving into the rest of this one. Also, you can refresh your memory on magnetic fields by reviewing our [magnetism](/magnetism) lesson.
+
+<!-- I know the magnetism lesson isn't ready yet but I think it would be useful to link to it here
+-->
+
+To turn your SpinWheel into a compass, just use the magnetic field vector components `mx, my`instead of the gravitational field `ax, ay`.
+This way, the SpinWheel's display will point along the direction
+of Earth's magnetic field, giving us an indication of which way is North and which way is South. This is analogous to how the tilt sensor showed us the direction of gravity,
+allowing us to determine whether or not a surface was flat.
+
+However, the metal of other SpinWheel components
+can create <span style="color:#9266bc;">**a magnetic field**</span>,
+that its magnetic sensors can also detect.
+Instead of measuring only the <span style="color:#d42c2b;">**Earth's magnetic field**</span>,
+the sensor will measure both <span style="color:#d42c2b;">**Earth's magnetic field**</span>,
 and <span style="color:#9266bc;">**the field created by objects near the sensor**</span>.
 Using this **total measured magnetic field**
-would result in a bad imprecise compass,
+would result in an imprecise compass,
 therefore we need to find a way to remove
-<span style="color:#9266bc;">**the spurrious field**</span>
-and be left only with
-<span style="color:#d42c2b;">**Earth's field**</span>.
+<span style="color:#9266bc;">**the spurious field**</span>,
+so that only
+<span style="color:#d42c2b;">**Earth's magnetic field**</span> remains.
 
-This is a problem every smartphone manufacturer also faces.
-All of the metallic components inside of such a device might have
-their own magnetic fields, as well as temporary magnetization
-caused by various other objects, like keys kept in the same pocket.
-This is why pathfinding apps might ask you to shake your phone
-along a figure "8", before they provide directions. We will
-see why these apps have such a requirement.
+<!-- Perhaps for an "extra experimentation" box: 
+Want to observe this phenomenon before your eyes? Grab your physical compass, and figure out which way is north. Then, put your compass near something metal and see what happens to your directional measurement.
+-->
 
-The main insight is that <span style="color:#9266bc;">**the spurrious field**</span>
-is always present and fixed with respect to the sensor.
-If we rotate the sensor,
+Every smartphone manufacturer also faces this same problem.
+In addition to magnetic fields from 
+metallic components inside of smartphones, temporary magnetization
+can also be caused by various other objects, like keys kept in the same pocket.
+To correct for the magnetic fields caused by nearby metal components, pathfinding apps sometimes ask you to move your phone
+along a figure "8" to calibrate the sensors before they provide directions. 
+
+These <span style="color:#9266bc;">**spurious fields**</span>
+are always present and will remain fixed with respect to the sensor.
+This means that even when we rotate the sensor,
 that component of the measured result will not be changed.
-However, such a rotation would cause <span style="color:#d42c2b;">**Earth's field**</span>
-to be oriented differently with respect to the sensor,
-causing different values along each axis of the sensor.
+However, the <span style="color:#d42c2b;">**Earth's field**</span>
+will change its orientation with respect to the sensor as it is rotated.
+For this reason, different values will be detected as the 
+device is rotated.
+
+<!-- I find the part above confusing. I am having trouble visualizing it (even with the interactive diagrams below). Maybe we could add a sketch here to show an example of this spurious fields? 
+-->
+
 We can use this to our advantage!
 By rotating the device in complete circles,
-we can average out <span style="color:#d42c2b;">**the external field**</span>
-leaving only <span style="color:#9266bc;">**the field caused by the device itself**</span>.
-Having that value saved, we can now subtract it from future measurements,
-thus leaving us only with the desired result:
-<span style="color:#d42c2b;">**Earth's field**</span>.
+we can remove <span style="color:#d42c2b;">**the external field**</span>.
+By saving <span style="color:#9266bc;">**the field caused by the device itself**</span>,
+and subtracting this value from our future measurements of the 
+magnetic field around the device, we can return only the 
+<span style="color:#d42c2b;">**Earth's magnetic field**</span>
+in the future.
 
-Below you can see a simulation of such a series of measurement.
+Below you can see a simulation how these measurements may be taken.
 The SpinWheel rotates in space, making constant measurements
 (each measurement is represented by a black dot).
 The <span style="color:#d42c2b;">**external field, due to Earth's magnetic field,
 i.e. the red vector**</span>
 is fixed.
-The <span style="color:#9266bc;">**spurrious field caused by the device itself,
+The <span style="color:#9266bc;">**field caused by the device itself,
 i.e. the smaller purple vector**</span>,
 rotates with the SpinWheel.
 Their sum, the black vector is what we actually measure.
+
+<!-- Perhaps could use some more instructions about how to manipulate this interactive widget - I am not super clear on what I should be doing (but perhaps my confusion is related to my comment about the spurious fields above).
+-->
 
 <style>
 .threediv {
@@ -387,21 +403,27 @@ bclearsphere.addEventListener('click', function (){
 You can see that the cloud of measurements creates a sphere,
 but one not centered at the $(0,0,0)$ point.
 Rather, the center of this sphere is the tip of the
-<span style="color:#9266bc;">**purple vector, the spurrious field**</span>.
+<span style="color:#9266bc;">**purple vector, the field from the SpinWheel's metallic components**</span>.
 We will see a simple procedure we can use to find that center
 and subtract it from all future measurements.
 
+<!-- this is hard to observe at the moment -->
+
 ## Reading Magnetic Measurements from The SpinWheel
 
-But first, let us actually perform some measurements on our SpinWheel.
+To begin, let's actually perform some measurements on our SpinWheel.
 The code below, which can also be found in 
 [`Examples → SpinWearables → Compass →  Calibrate`](/codedoc/examples/Compass/Calibrate/Calibrate.ino.html),
 will take direct measurements from the magnetic sensor
-and immediately send them back to the host computer
-over the USB cable.
-On the host computer you can use the
-`Serial Plotter` Arduino tool tool, to observe how the values change
+and immediately send them back to your computer
+over your USB cable.
+On your computer, you can use the
+`Serial Plotter` Arduino tool to observe how the magnetic field values change
 as you rotate the device.
+
+::: further-reading
+If you want to refresh your memory about accessing `Serial Plotter`, then check out the [Arduino 101](/arduino101) lesson.
+:::
 
 ```c++
 #include "SpinWearables.h"
@@ -433,16 +455,15 @@ void loop() {
 }
 ```
 
-You can also use the `Serial Monitor` tool
-to copy the data and analyse it in a software of your choosing
-(a spreadsheet processor for instance).
-You can also simply copy the data in the text field below,
-to have it plotted directly in the browser.
-Currently that text field contains real data we observed
-with one of the first SpinWheels ever manufactured.
-If you rotate the plot (by dragging over it),
+To visualize this cloud of points,
+you can also copy the data from your Serial Monitor into the text box below.
+The webpage will then regenerate the image
+based on the numbers that you provided.
+Currently, the text you see in the textbook contains real data we observed
+with one of the first SpinWheels we ever manufactured.
+If you rotate the plot (by dragging it),
 you can clearly see that the sphere of measurements
-is not at all centered at the origin.
+is not at the center of the sphere of points.
 Rather there is an offset that we have to correct for.
 
 <div id="pointclouddiv" class="threediv"><div id="pointcloudanim" class="threejsanim"></div><textarea id="pointcloudtext"></textarea></div>
@@ -560,16 +581,15 @@ document.getElementById("pointcloudtext").addEventListener('input', processData)
 
 ## Compass with automatic calibration
 
-This leads us to the last step before having a functional compass.
-Instead of recording all of this data and preprocessing it
-in order to find the corrections we need to put to our measurements,
+Now, instead of recording all of this data and processing it
+in order to correct our magnetic field measurements,
 we can instruct the SpinWheel to continuously correct itself.
 Initially, such an automatic correction will be significantly off,
 but after a few seconds of playing with the device,
-it would have measured enough data in order to correct itself.
+it will have measured enough data in order to perform accurate corrections.
 
-The main insight here, is that we can store the maximal and minimal
-measurement value for each axis of the magnetometer.
+The code below works by first storing the biggest and smallest
+measurements for each axis of the magnetic sensor.
 Then we use these maxima and minima, to find the offset of the sphere
 along each axis, and correct for it.
 
@@ -578,6 +598,16 @@ You can also find it in
 [`Examples → SpinWearables → Compass →  Calibrated_Compass`](/codedoc/examples/Compass/Calibrate/Calibrate.ino.html).
 
 ```c++
+#include "SpinWearables.h"
+using namespace SpinWearables; 
+
+void setup() {
+// Ensure all of the SpinWheel hardware is on.
+  SpinWheel.begin();
+// Set up communication with the host computer.
+  Serial.begin(9600);
+}
+
 float minx, miny, minz, maxx, maxy, maxz;
 
 void loop() {
@@ -609,8 +639,7 @@ void loop() {
 }
 ```
 
-Compared to the [tilt sensor](/tilt), there is little more to it
-than the lines like:
+The main difference between the compass and [tilt sensor](/tilt) are the lines in this style:
 
 ```c++
   if (x > maxx) maxx=x;
@@ -622,9 +651,9 @@ than the lines like:
 Here we continuously update the maximal and minimal values ever measured,
 and then use them to correct the current measurement result.
 
-We will leave it to you to mix together the tilt and compass sensors,
-for after all, a good compass needs a tilt sensor that lets you know
-if you are indeed measuring only the horizontal component of Earth's
-magnetic field.
+As an extension, you can combine both the tilt and magnetic sensors. 
+It is useful for a compass to have a tilt sensor, you can be sure that
+you are only measuring the horizontal component of Earth's magnetic field.
+
 
 <a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">Header image credit: Jack Hegarty</a>
