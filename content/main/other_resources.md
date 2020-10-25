@@ -199,8 +199,8 @@ Creating Innovators: The Making of Young People Who Will Change the World - Tony
 </style>
 <div id="kickstarter">
 <p id="signup-form"><strong>For the SpinWheel:</strong></p>    
-<p>You can follow us for updates on the project or support us by donating or purchasing the SpinWheel.</p>
-<a href="https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit" class="round-button">Take me to the Kickstarter page!</a>
+<p>You can get a SpinWheel for yourself through our online store.</p>
+<a href="https://store.spinwearables.com/" class="round-button">Take me to the Kickstarter page!</a>
 <p><strong>You can also follow us on:</strong></p>
 <p><strong>[Twitter](https://twitter.com/SpinWearables) and [Instagram](https://instagram.com/spinwearables?igshid=1hk2qphff1j1b)</strong></p>
 </div>
@@ -211,7 +211,7 @@ Creating Innovators: The Making of Young People Who Will Change the World - Tony
 <div class="column">
 Contact us at [mail@spinwearables.com](mailto:mail@spinwearables.com)!
 
-At the following link you can see [some draft teaching materials that will come with the final SpinWheel](/book).
+At the following link you can see [some teaching materials that will come with the SpinWheel](/book).
     
 We have more SpinWheel-related information for [parents and educators here](/for_parents).
 
