@@ -320,8 +320,10 @@ Some adventures, like [Biology of Sight](/sight), directly extend material from 
 
 ## Appendix
 
+### SpinWheel Commands
 Here's a [list of the commands](/allcommands) for controlling the SpinWheel's LEDs. While this has been written for those who are discovering coding for the first time, it can also be used as a reference to create your own SpinWheel designs if you are comfortable with programming. We recommend using it as a reference as you are going through the adventures, either way!
 
+### Notes about Interacting with this Guide
 Throughout this guide we use a number of text formatting tools to bring attention to important conceps. Footnotes (actually hovernotes) are visible when you hover <span class="footnote">over dotted text like this<span>Such hovernotes frequently carry interesting additional information.</span></span>.
 Further reading blocks look as follows:
 
@@ -341,17 +343,9 @@ We have a variety of interactive visualizations throughout these pages, that wor
 The virtual SpinWheel simulations and some of the other interactive widgets do not currently work in all browsers (particularly Safari and on phones). We are actively working on ensuring that all interactive elements are enjoyable across platforms.
 :::
 
+### Engineer's Diary
 
-## Engineer’s Diary
-
-Want to learn more about how the SpinWheel was created? We'll be adding additional lessons about designing the SpinWheel to empower you to design your own electronic creations!
-
-1. [Behind the Scenes Overview](/behindthescenes_long/)
-2. [Technical Specifications](/specs)
-3. [Creating the Virtual SpinWheel](/transpile)
-4. Circuit Design
-5. Hardware Testing
-6. Kickstarter Setup and Manufacturing Partner
+Learn more about how the SpinWheel was created and running our Kickstarter on our[engineer's diary](/diary) page!
 
 
 <a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">Header image credit: Jack Hegarty</a>
