@@ -11,7 +11,7 @@ Check out the links below to learn more about how the SpinWheel was created. Thi
 1. [Behind the Scenes Overview](/behindthescenes_long/)
 2. [Technical Specifications](/specs)
 3. [Creating the Virtual SpinWheel](/transpile)
-4. [Circuit Design](/circuidesign)
+4. [Circuit Design](/circuitdesign)
 5. [Hardware Testing](/hardwaretesting)
 6. [Kickstarter Setup](/kicstartersetup)
 7. [Manufacturing Partner](/manufacturing)
