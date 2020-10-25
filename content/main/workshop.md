@@ -62,7 +62,7 @@ For everyone just tuning in, we've included answers to some of the questions tha
 
 <div class="row dark">
 <div class="column">
-If you have more questions, contact us at [mail@spinwearables.com](mailto:mail@spinwearables.com) or ask a question on [our facebook page]/(facebook.com/spinwearables). We'll do what we can to help!
+If you have more questions, contact us at [mail@spinwearables.com](mailto:mail@spinwearables.com) or ask a question on [our facebook page](https://www.facebook.com/spinwearables). We'll do what we can to help!
 </div>
 </div>
 

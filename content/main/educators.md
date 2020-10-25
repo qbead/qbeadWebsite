@@ -36,3 +36,26 @@ The SpinWheel also provides opportunities to explore scientific phenomena, such 
 <p>For instance, one of the adventures in our educational materials will take students through learning to program the SpinWheel to become a compass. If you have computer access, your students can dive into the programming portion of the activity. In addition to the programming activity, we will also include supplemental lessons and activities for exploring magnetism using both a physical compass (of the type students are probably more comfortable with - a physical compass is not included in the kit) and using pre-loaded programs on the SpinWheel.</p>
 </div>
 </div>
+
+<div class="row row-small-reverse dark-transparent">
+<style>
+#kickstarter {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  padding: 1em;
+}
+
+#kickstarter > a {
+  margin: 0.2em;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+}
+</style>
+<div id="kickstarter">
+<p>If you are interested in using the SpinWheel in your classroom, we have a limited number of SpinWheels available for order [from our store](https://store.spinwearables.com/) while supplies last.</p>
+<a href="https://store.spinwearables.com/" class="round-button">Buy a SpinWheel!</a>
+</div>
+</div>
+

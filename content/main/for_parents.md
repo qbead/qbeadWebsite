@@ -41,7 +41,7 @@ However, more experienced coders of all ages can bypass the introductory guide a
 <li>A way to explore how vision works</li>
 <li>A tool to discover stroboscope photography</li> 
 </ul>
-<strong>For even more ideas, check out our [draft teaching materials](/book).</strong>
+<strong>For even more ideas, check out our [teaching materials](/book).</strong>
 </div>
 </div>
 
@@ -106,22 +106,28 @@ form {
   padding: 1em;
 }
 
-form > input {
+
+<div class="row row-small-reverse dark-transparent">
+<div class="column column-long"><img src="/images/backpack_keychains.jpg"></div>
+<div class="column large-text">
+<style>
+#kickstarter {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  padding: 1em;
+}
+
+#kickstarter > a {
   margin: 0.2em;
-  /*border-radius: 1.5em;*/
   padding: 0.5em 1em;
   text-align: center;
-  border: none;
+  text-decoration: none;
 }
 </style>
-<form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScpB8NUWgx-FhHzPOE5s-GHF2pZI4DTbhna-90F1GGhoF2YQQ/formResponse" method="post" id="signup-form">
-<p><strong>And if you'd like to be alerted when our Kickstarter is live, sign up for updates on the project!</strong></p>
-<label>My Email:</label>
-<input id="email" type="email" autocomplete="email" tabindex="0" aria-label="Your email" name="emailAddress" placeholder="email address" value="" required="" aria-invalid="true">
-<input class="round-button" id="button" type="submit" value="Notify me when launched!" />
-<!--<p style="width:70%;margin:1em auto 1em auto;">We will not email you more than twice, as we respect your time!</p>-->
-</form>
-<!--
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScpB8NUWgx-FhHzPOE5s-GHF2pZI4DTbhna-90F1GGhoF2YQQ/viewform?embedded=true" height="600" frameborder="0" marginheight="0" marginwidth="0" style="width:100%;">Loading…</iframe>
--->
+<div id="kickstarter">
+<p>We have a limited number of SpinWheels available for order [from our store](https://store.spinwearables.com/) while supplies last.</p>
+<a href="https://store.spinwearables.com/" class="round-button">Buy a SpinWheel!</a>
+</div>
+</div>
 </div>
