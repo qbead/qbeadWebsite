@@ -19,16 +19,25 @@ One can even use a toy like a [ball-in-a-maze puzzle](https://en.wikipedia.org/w
 
 ![A toy in which the tilt can force a ball to roll in a given direction. <a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:Round_maze.jpg">image credit Wikimedia</a>](/images/bookpics/round_maze.jpg)
 
-More commonly, to check whether a surface is level or not, an actual [bubble level](https://en.wikipedia.org/wiki/Spirit_level) is used. You may have tried using one when hanging pictures or other decorations on a wall! In a bubble level, 
+More commonly, to check whether a surface is level or not, an actual [bubble level](https://en.wikipedia.org/wiki/Spirit_level) is used. You may have tried using one when hanging pictures or other decorations on a wall! 
+
+To understand how a bubble level works, imagine what would happen if you took a glass of water and placed it on a table. If the table was perfectly horizontal, you would see the surface of the water in the glass appearing perfectly horizontal too. What if the table has two legs that are slightly shorter than the others? Then, you might notice the surface of water in the glass appearing tilted. You observe this tilt in the surface of the water because the surface is trying to remain perpendicular to gravity. 
+
+Now, what happens if you replace your water with soda? On the tilted table, you should observe the surface of the soda in the glass to appear tilted, and the bubbles in your soda to be rising perpendicularly to the soda surface. Try this out and see what you see! The bubbles in your soda are made of gas (carbon dioxide in this case), and since carbon dioxide gas is less dense than your liquid soda, the gas bubbles will rise to the top of the liquid soda. 
+
+<!-- TODO: add a sketch of the table and glass of water and soda with bubbles? Also, I don't know about the "perpendicular to gravity" thing... but we could show the direction of gravity in the sketch
+-->
+
+In a real bubble level, 
 a small bubble enclosed in a container with liquid surrounding it. 
-The bubble tries to go as far up in its enclosure as possible, since the bubble is made of air and air is lighter than the surrounding liquid. This means that the bubble will rise against the direction of gravity (just think of what happens to bubbles in soda - they rise up through the liquid in your glass!).
+The bubble tries to go as far up in its enclosure as possible, since the bubble is made of air and air is lighter than the surrounding liquid. This means that the bubble will rise against the direction of gravity (just think of what happened to bubbles in your soda glass).
 
 The top of the bubble level enclosure is slightly domed. This means that
 if the surface you've placed the level on is flat, the highest point in the bubble level enclosure is the center
-of level and the bubble will move there.
+of level and the bubble will move there (since the bubble is trying to rise as far up as it can).
 If the surface is not flat, the bubble will still rise to the highest point in the enclosure, but the bubble will not be centered in this case. 
 
-<!-- I find this bubble level part confusing, tried to re-word. Could we maybe add some images of examples with a level and not level surface, showing what the bubble level looks like in each case? Also maybe a close up of the domed shape?
+<!-- Could we maybe add some images of examples with a level and not level surface, showing what the bubble level looks like in each case? Also maybe a close up of the domed shape? Video of bubble level?
 -->
 
 ![A bubble level. <a class="imagecredit" href="https://publiclab.org/notes/mathew/10-26-2015/deploying-passive-particle-monitors">image credit Public Lab</a>](/images/bookpics/onebubble.jpg)
@@ -39,12 +48,18 @@ Because the sensation of accelerating cannot be distinguished
 from the sensation of being pulled by gravity, so 
 this same sensor also reports Earth's gravity.
 
+Before jumping into the rest of this adventure, upload the tilt sensor code from `Examples → SpinWearables → Tilt_Sensor →  Simple`, and see what happens when you move the SpinWheel around!
+
+<figure><video src="/images/bookpics/preloaded_tilt3.mp4" muted autoplay playsinline loop></video><figcaption>   </figcaption></figure>
+
 ::: further-reading
 The indistinguishability of gravity and acceleration is a fascinating topic
 that has puzzled scientists and physics students for centuries.
 It even inspired Einstein to work on his general theory of relativity!
 You can learn more about it in our [lesson on inertia and free fall](/inertia).
 :::
+
+Now, let's dive into how exactly the tilt sensor you just experimented with works.
 
 ## Measuring Gravity in Two Dimensions
 
@@ -223,6 +238,8 @@ carefully observing how <span class="footnote">the green and blue components cha
 <!-- This animation is fun, but I do not understand what I am supposed to be doing with it? 
 -->
 
+<!-- TODO: add some pictures showing how if the SpinWheel is tilted, gravity is no longer perpendicular to the plane and that is how the measurements work
+-->
 
 <div id="threediv"><div id="threejsanim"></div>Tilt back and forth:<input id="fbtilt" type="range" min="-100" max="+100" value="30">Tilt sideways:<input id="lrtilt" type="range" min="-100" max="+100">Rotate face:<input id="frotate" type="range" min="-100" max="+100"></div>
 
@@ -602,7 +619,7 @@ and the
 [`Fancy`](/codedoc/examples/Tilt_Sensor/Fancy/Fancy.ino.html)
 code examples can also be seen through the browser in literate programming renditions.
 
-<figure><video src="/images/bookpics/preloaded_tilt3.mp4" muted autoplay playsinline loop></video><figcaption>   </figcaption></figure>
+
 
 ::: further-reading
 We have [a list of visualization functions](/allcommands) that can be of use
