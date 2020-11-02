@@ -1,6 +1,7 @@
 ---
 title: Engineer's Diary
 keywords: spinwheel, education, STEM, outreach, science, engineering day, electronics, computer science, physics, creators, getting started, resources
+header-video: /images/behindthescenes/schem_timelapse.mp4
 ---
 
 ::: intro-box
