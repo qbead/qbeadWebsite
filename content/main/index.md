@@ -93,7 +93,7 @@ We have more information for [parents and educators here](/for_parents).
 
 [Behind-the-scenes pictures of the device and testing runs](/behindthescenes) are also available.
 
-We delve into the material in the [behind the scenes page](/behindthescenes) in more depth in the "Engineer's Diary" section of the [field guide](/book).
+We delve into the material in the [behind the scenes page](/behindthescenes) in more depth in the ["Engineer's Diary" section of the field guide](/diary).
 </div>
 </div>
 
