@@ -202,7 +202,36 @@ These are the most challenging SpinWheel activities. We recommend completing at 
 2. Magnetism (planned)
 3. Electricity (planned)
 
-## Concept Map
+## Appendix
+
+### SpinWheel Commands
+Here's a [list of the commands](/allcommands) for controlling the SpinWheel's LEDs. While this has been written for those who are discovering coding for the first time, it can also be used as a reference to create your own SpinWheel designs if you are comfortable with programming. We recommend using it as a reference as you are going through the adventures, either way!
+
+### Notes about Interacting with this Guide
+Throughout this guide we use a number of text formatting tools to bring attention to important conceps. Footnotes (actually hovernotes) are visible when you hover <span class="footnote">over dotted text like this<span>Such hovernotes frequently carry interesting additional information.</span></span>.
+Further reading blocks look as follows:
+
+::: further-reading
+These boxes denote additional sources of information you might be interested in, either on our own website or elsewhere on the web.
+:::
+
+On a few occasions we have warning blocks:
+
+::: warning
+These denote important considerations about health and device care that should be seen before attempting an activity.
+:::
+
+We have a variety of interactive visualizations throughout these pages, that work well on desktop browsers like Firefox and Chrome. Lastly, we have many code examples in our pages that explain how to program the device, [including some interactive simulations of the device with which you can play directly from the browser](/intro).
+
+::: warning
+The virtual SpinWheel simulations and some of the other interactive widgets do not currently work in all browsers (particularly Safari and on phones). We are actively working on ensuring that all interactive elements are enjoyable across platforms.
+:::
+
+### Engineer's Diary
+
+Learn more about how the SpinWheel was created and running our Kickstarter on our [engineer's diary](/diary) page!
+
+### Concept Map
 
 This concept map illustrates how the lessons and adventures are connected and build upon each other. Here you will find both sophisticated engineering adventures that use the SpinWheel directly (double-lined hexagons), along with companion lessons that further explore some of the key concepts you’ll encounter in the adventures (single-lined hexagons).
 
@@ -316,36 +345,5 @@ render_hexmap("hexmap2");
 </script>
 
 Some adventures, like [Biology of Sight](/sight), directly extend material from [the paper field guide](/paper_booklet). Others, like [Dancing with Color](/dancing), are completely new and will help you use the SpinWheel in even more exciting ways. The paper book isn’t required to get started, but it complements the online resources.
-
-
-## Appendix
-
-### SpinWheel Commands
-Here's a [list of the commands](/allcommands) for controlling the SpinWheel's LEDs. While this has been written for those who are discovering coding for the first time, it can also be used as a reference to create your own SpinWheel designs if you are comfortable with programming. We recommend using it as a reference as you are going through the adventures, either way!
-
-### Notes about Interacting with this Guide
-Throughout this guide we use a number of text formatting tools to bring attention to important conceps. Footnotes (actually hovernotes) are visible when you hover <span class="footnote">over dotted text like this<span>Such hovernotes frequently carry interesting additional information.</span></span>.
-Further reading blocks look as follows:
-
-::: further-reading
-These boxes denote additional sources of information you might be interested in, either on our own website or elsewhere on the web.
-:::
-
-On a few occasions we have warning blocks:
-
-::: warning
-These denote important considerations about health and device care that should be seen before attempting an activity.
-:::
-
-We have a variety of interactive visualizations throughout these pages, that work well on desktop browsers like Firefox and Chrome. Lastly, we have many code examples in our pages that explain how to program the device, [including some interactive simulations of the device with which you can play directly from the browser](/intro).
-
-::: warning
-The virtual SpinWheel simulations and some of the other interactive widgets do not currently work in all browsers (particularly Safari and on phones). We are actively working on ensuring that all interactive elements are enjoyable across platforms.
-:::
-
-### Engineer's Diary
-
-Learn more about how the SpinWheel was created and running our Kickstarter on our[engineer's diary](/diary) page!
-
 
 <a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">Header image credit: Jack Hegarty</a>
