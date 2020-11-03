@@ -56,7 +56,7 @@ Before jumping into the rest of this adventure, upload the tilt sensor code from
 The indistinguishability of gravity and acceleration is a fascinating topic
 that has puzzled scientists and physics students for centuries.
 It even inspired Einstein to work on his general theory of relativity!
-You can learn more about it in our [lesson on inertia and free fall](/inertia).
+You can learn more about it in our lesson on inertia and free fall.
 :::
 
 Now, let's dive into how exactly the tilt sensor you just experimented with works.
