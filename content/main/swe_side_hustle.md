@@ -47,3 +47,10 @@ This page pulls together some resources that we found useful along our journey. 
 <p>[IRS Website with information for small businesses](https://www.irs.gov/businesses)</p>
 </div>
 </div>
+
+<div class="row dark">
+<div class="column large-text">
+<p>Learn more about Aditi's ocean-themed product line at her [website](https://www.waywardmanatee.com)</p>
+<p>and Bridget's educational kit on the rest of [this site](https://spinwearables.com).</p>
+</div>
+</div>
