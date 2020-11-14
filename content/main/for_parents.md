@@ -131,3 +131,9 @@ form {
 </div>
 </div>
 </div>
+
+<div class="row dark-transparent">
+<div class="column">
+Throughout the completion of this project we have prepared more general materials as well, unrelated to the SpinWheel. We have a small curated set of [outside educational materials](/other_resources), as well as a short workshop we led on how to use some of the available resources for [at-home educational events](/workshop). Lastly, we ran an [Ask-a-Scientist](/ask_a_scientist) series where all attendees were able to discuss with working scientist what their work and life look like.
+</div>
+</div>

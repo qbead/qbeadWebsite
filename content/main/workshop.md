@@ -86,10 +86,11 @@ If you have more questions, contact us at [mail@spinwearables.com](mailto:mail@s
 }
 </style>
 <div id="kickstarter">
-<p id="signup-form">If you are looking for more STEM kits, we also highly recommend checking out the colorful, engaging program kit that we developed (the SpinWheel).</p>
-<a href="https://www.kickstarter.com/projects/spinwheel/the-spinwheel-the-colorful-wearable-programming-kit" class="round-button">Take me to the Kickstarter page!</a>
+<p><strong>Our crowdfunding campaign is now over.</strong></p>    
+<p>However, we do have a limited number of SpinWheels available for order [from our store](https://store.spinwearables.com/) while supplies last.</p>
+<a href="https://store.spinwearables.com/" class="round-button">Buy a SpinWheel!</a>
 <p><strong>You can also follow us on:</strong></p>
-<p><strong>[Twitter](https://twitter.com/SpinWearables) and [Instagram](https://instagram.com/spinwearables?igshid=1hk2qphff1j1b)</strong></p>
+<p><strong>[Twitter](https://twitter.com/SpinWearables) | [Facebook](https://facebook.com/spinwearables) | [Instagram](https://instagram.com/spinwearables?igshid=1hk2qphff1j1b)</strong></p>
 </div>
 </div>
 </div>
