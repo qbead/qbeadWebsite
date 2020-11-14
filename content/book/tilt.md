@@ -25,8 +25,7 @@ To understand how a bubble level works, imagine what would happen if you took a 
 
 Now, what happens if you replace your water with soda? On the tilted table, you should observe the surface of the soda in the glass to appear tilted, and the bubbles in your soda to be rising perpendicularly to the soda surface. Try this out and see what happens! The bubbles in your soda are made of gas (carbon dioxide in this case), and since carbon dioxide gas is less dense than your liquid soda, the gas bubbles will rise to the top of the liquid soda. 
 
-<!-- TODO: add a sketch of the table and glass of water and soda with bubbles? Also, I don't know about the "perpendicular to gravity" thing... but we could show the direction of gravity in the sketch
--->
+<figure><img src="/images/bookpics/level_and_glass.png" style="max-width:90%"><figcaption>Bubbles rise against gravity, both in the cylinder of the level and in a glass of carbonated water.<a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a></figcaption></figure>
 
 In a real bubble level, 
 a small bubble enclosed in a container with liquid surrounding it. 
@@ -87,8 +86,7 @@ by using a <span class=footnote>pair of numbers<span>Each giving the displacemen
 Mathematicians call this operation [vector decomposition](/vectors).
 
 You can gain some more intuition about this decomposition procedure below.
-The black arrow is <span class="footnote">the two-dimensional object
-<span>Having both length and direction in a 2D plane.</span></span>
+The black arrow is <span class="footnote">the two-dimensional object<span>Having both length and direction in a 2D plane.</span></span>
 that we want to represent by splitting it in a component along the $x$ axis
 and a component along the $y$ axis (green and blue, respectively). The black arrow is called a vector.
 
@@ -226,7 +224,7 @@ as they are the ones
 corresponding to the displacement of the air bubbles seen
 in the bubble levels above.
 You can gain intuition about how these components of gravity will behave by
-exploring the interactive SpinWheel visualization below and
+exploring the interactive SpinWheel visualization above and
 carefully observing how <span class="footnote">the green and blue components change<span>Representing the x and y axes.</span></span>.
 
 <!-- I think this needs more explanation.
@@ -507,7 +505,7 @@ to measure the three components of the gravitational vector
 (shown in grey in the visualization below).
 IMU stands for Inertial Measurement Unit:
 a fancy name for something that senses motion. 
-This function will return 3 values, one for each direction of motion.
+This function will record 3 values, one for each direction of motion.
 Below you can see how the three axes, $x$, $y$, and $z$ are defined.
 To begin with, we will only use the $x$ components of the measurement.
 
@@ -529,7 +527,7 @@ void loop() {
 }
 ```
 
-In the sketch above, the measurement of gravity and acceleration is 
+In the sketch above, the measurement of gravity and acceleration along the $x$ axis is 
 contained in the `SpinWheel.ax` variable.
 We aren't using this measurement to do anything yet, however. 
 In the next section, we'll begin changing the LEDs based on this information.
