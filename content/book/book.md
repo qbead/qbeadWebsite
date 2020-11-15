@@ -194,7 +194,7 @@ These activities build on the ideas presented in the introductory adventures. If
 These are the most challenging SpinWheel activities. We recommend completing at least one earlier adventure before trying them out. If you have completed the other adventures, then you should be able to jump into any of these. 
 
 1. [Dancing with Color: Rotational Motion](/dancing2)
-2. Compass (planned)
+2. [Make a Compass](/compass)
 3. [Recurrent Neural Networks for Gesture Recognition](/rnn)
 
 ### Associated Lessons
@@ -312,13 +312,14 @@ const tiles = [
 //motion
 {x:3, y:6, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Make a<br>Tilt Sensor", href:"/tilt"},
 {x:3, y:8, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Make a<br>Step Counter", href:"/stepcounter"},
+{x:3, y:10, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Gesture<br>recognition", href:"/rnn"},
 {x:4, y:7, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Vectors<br>and<br>Motion", href:"/vectors"},
 {x:4, y:6, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Dancing<br>with Color:<br>Linear<br>Motion", href:"/dancing"},
 {x:4, y:8, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: true, text:"Dancing<br>with Color:<br>Rotational<br>Motion", href:"/dancing2"},
 //{x:4, y:9, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Inertial<br>Reference<br>Frames", href:"/inertia"},
 {x:4, y:10, bgcolor:"#ffffff", textcolor:"#9678b6", bordercolor:"#9678b6", inner: false, text:"Rotation<br>and<br>Circular<br>Motion", href:"/rotation"},
 //magnetism
-//{x:3, y:9, bgcolor:"#ffffff", textcolor:"#ef5188", bordercolor:"#ef5188", inner: true, text:"Make a<br>Compass", href:"/compass"},
+{x:3, y:9, bgcolor:"#ffffff", textcolor:"#ef5188", bordercolor:"#ef5188", inner: true, text:"Make a<br>Compass", href:"/compass"},
 //{x:2, y:10, bgcolor:"#ffffff", textcolor:"#ef5188", bordercolor:"#ef5188", inner: false, text:"Magnetism", href:"/magnetism"},
 //reference
 {x:4, y:1, bgcolor:"#ffffff", textcolor:"#25aae1", bordercolor:"#25aae1", inner: true, text:"SpinWheel<br>Functions<br>Reference", href:"/allcommands"},
