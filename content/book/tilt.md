@@ -116,9 +116,9 @@ a direction from our [lesson on vectors](/vectors).
 </div>
 <div id="values">
 <div class="grid2dcontrol xcom">X component: <span id="xshow">0</span></div>
-<div><input type="range" min="-10" max="10"  id="xvalue"></div>
+<div><input type="range" min="-6" max="6"  id="xvalue"></div>
 <div class="grid2dcontrol ycom">Y component: <span id="yshow">0</span></div>
-<div><input type="range" min="-10" max="10"  id="yvalue"></div>
+<div><input type="range" min="-6" max="6"  id="yvalue"></div>
 <div class="grid2dcontrol">Magnitude: <span id="magshow">0</span></div>
 <!--<div class="grid2dcontrol">Angle: <span id="angshow">0</span>&deg;</div>-->
 </div>
@@ -137,6 +137,14 @@ function canvas_arrow(context, fromx, fromy, tox, toy) {
   context.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
 }
 
+const level_tube_img = new Image();
+level_tube_img.src = "/images/bookpics/level_canvas_tube.png";
+const level_bubble_img = new Image();
+level_bubble_img.src = "/images/bookpics/level_canvas_bubble.png";
+const level_tube_img_r = new Image();
+level_tube_img_r.src = "/images/bookpics/level_canvas_tube_r.png";
+const level_bubble_img_r = new Image();
+level_bubble_img_r.src = "/images/bookpics/level_canvas_bubble_r.png";
 const v_to_path2D = document.getElementById('vectorGrid');
 const ctx2D = v_to_path2D.getElementsByClassName('trajectory1D')[0].getContext('2d');
 var xElement = document.getElementById("xvalue");
@@ -168,6 +176,8 @@ function canvas_axis(context, maxX, maxY) {
     context.lineTo(midX+i*stepX,maxY);
   }
   context.stroke();
+  context.drawImage(level_tube_img,45,360, 310, 34);
+  context.drawImage(level_tube_img_r,6,45, 34, 310);
 }
 
 function plot_all(){
@@ -181,6 +191,8 @@ function plot_all(){
     ctx2D.clearRect(0,0,400,400);
     ctx2D.beginPath();
     canvas_axis(ctx2D, 400, 400);
+    ctx2D.drawImage(level_bubble_img,x_scale-22,360, 44, 34);
+    ctx2D.drawImage(level_bubble_img_r,6,y_scale-22, 34, 44);
     ctx2D.font = '14px sans';
     ctx2D.fillStyle = '#228e2c';
     ctx2D.strokeStyle = '#228e2c';
