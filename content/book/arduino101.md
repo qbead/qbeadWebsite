@@ -1,6 +1,7 @@
 ---
 title: Arduino 101
 keywords: physical computing, computer science, arduino, programming
+header-image: /images/banners/sensor_controller_actuator.png 
 ---
 
 ::: intro-box

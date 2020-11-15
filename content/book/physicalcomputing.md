@@ -1,7 +1,7 @@
 ---
 title: Physical Computing
 keywords: physical computing, computer science, arduino, programming
-header-image: /images/banners/sensor_controller_actuator.png 
+header-image: /images/banners/breadboard.png 
 ---
 
 # The Virtual and the Real World
