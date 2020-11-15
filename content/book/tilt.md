@@ -41,13 +41,13 @@ If the surface is not flat, the bubble will still rise to the highest point in t
 
 ![A bubble level. <a class="imagecredit" href="https://publiclab.org/notes/mathew/10-26-2015/deploying-passive-particle-monitors">image credit Public Lab</a>](/images/bookpics/onebubble.jpg)
 
-We can program the SpinWheel to make this same measurement.
+We can program the SpinWheel to act as a level.
 The SpinWheel contains a motion sensor, which is capable of measuring acceleration.
 Because the sensation of accelerating cannot be distinguished
 from the sensation of being pulled by gravity, 
 this same sensor also reports Earth's gravity.
 
-Before jumping into the rest of this adventure, upload the tilt sensor code from `Examples → SpinWearables → Tilt_Sensor →  Simple`, and see what happens when you move the SpinWheel around!
+Before jumping into the rest of this adventure, upload the tilt sensor code from [`Examples → SpinWearables → Tilt_Sensor →  Simple`](/codedoc/examples/Tilt_Sensor/Simple/Simple.ino.html), and see how the LEDs respond to the tilt of the SpinWheel!
 
 <figure><video src="/images/bookpics/preloaded_tilt3.mp4" muted autoplay playsinline loop></video><figcaption>   </figcaption></figure>
 
@@ -61,23 +61,16 @@ You can learn more about it in our lesson on inertia and free fall.
 
 ## Measuring Gravity in Two Dimensions
 
-To create this tilt sensor, 
-we need to find a convenient way to encode the "direction of gravity"
-measured by the SpinWheel's acceleration sensor
-in a way that a piece of computer code can understand.
-The main difficulty is that gravity does not only have a certain strength (or intensity),
-but also a direction.
-Therefore, we cannot fully describe the measurement with one number.
+We can use the SpinWheel's acceleration sensor to measure the direction of gravity with respect to the surface of the SpinWheel, which gives us the tilt of that surface.
+However we cannot use one single number to describe tilt, because we need both information about its left/right tilt and its forward/backward tilt.
 For instance, notice how in the bubble level above,
 both the direction in which the bubble has been displaced
 and the distance between the bubble and the center of the dome give information
 about the tilt of the surface. 
 If a surface is more tilted, the bubble will move farther from the center, for instance.
-Other types of bubble levels offer the inspiration for solving this problem.
 
-![A bubble level with separate sensors for each axis of tilt. <a class="imagecredit" href="https://publiclab.org/notes/mathew/10-26-2015/deploying-passive-particle-monitors">image credit Public Lab</a>](/images/bookpics/twobubble.jpg)
-
-Notice how in this new level, we are using two separate tubes that are
+Other types of bubble levels show the left/right vs forward/backward tilt more directly.
+Notice how in the level shown below, we are using two separate tubes that are
 perpendicular to each other,
 instead of one single dome.
 Now we can use one number per bubble,
@@ -87,14 +80,15 @@ We just described a <span class="footnote">position in the two-dimensional plane
 by using a <span class=footnote>pair of numbers<span>Each giving the displacements along a single axis.</span></span>.
 Mathematicians call this operation [vector decomposition](/vectors).
 
-You can gain some more intuition about this decomposition procedure below. 
-Imagine that the bubble from the first tilt sensor is at the end of the black arrow. 
-The arrow represents how the bubble moves from the center if you were to
-tilt the surface it is resting on. 
-The bubbles on the side represent the two tubes of a level like that shown above.
-The black arrow is <span class="footnote">the two-dimensional object<span>Having both length and direction in a 2D plane.</span></span>
-that we want to represent by splitting it in a component along the $x$ axis (green)
-and a component along the $y$ axis (blue). The black arrow is called a vector.
+![A bubble level with separate sensors for each axis of tilt. <a class="imagecredit" href="https://publiclab.org/notes/mathew/10-26-2015/deploying-passive-particle-monitors">image credit Public Lab</a>](/images/bookpics/twobubble.jpg)
+
+You can gain some more intuition about using *two* numbers to represent a position in a 2D plane below. 
+Imagine that the bubble from the domed tilt sensor is at the end of the black arrow. 
+The arrow gives the position of the bubble relative to the center of the dome, which depends on its tilt. 
+This arrow is <span class="footnote">the two-dimensional object<span>Having both length and direction in a 2D plane.</span></span>
+that we want to represent by splitting it in a component along the <span style="color:#228e2c;">$x$ axis</span>
+and a component along the <span style="color:#2676b3;">$y$ axis</span>. The black arrow is called a vector.
+We also depict two tube bubble levels acting as left/right and forward/backward tilt sensors.
 
 
 <style>
@@ -235,15 +229,14 @@ a direction from our [lesson on vectors](/vectors).
 
 The SpinWheel has sensors that can measure gravity along 
 <span class="footnote">three axes<span>Below the interactive SpinWheel animation, you can see how these three axes, x, y, and z, are defined.</span></span>.
-Before we use this information to create a tilt sensor, 
-first play with the interactive SpinWheel animation below.
-Pay close attention to the $x$ and $y$ components 
+In the visualization below you can see how different tilts will result in different measurement results:
+e.g., tilting left/right changes the measurement along the <span style="color:#228e2c;">$x$</span> axis.
+As you are playing with the sliders, pay close attention to the <span style="color:#228e2c;">$x$</span> and <span style="color:#2676b3;">$y$</span> components 
 as they are the ones
 corresponding to the displacement of the air bubbles seen
 in the bubble levels above.
-You can gain intuition about how these components of gravity will behave by
-exploring the interactive SpinWheel visualization above and
-carefully observing how <span class="footnote">the green and blue components change<span>Representing the x and y axes.</span></span>.
+The upright grey vector is the acceleration due to gravity, which is fixed with respect to the surface of Earth.
+That vector's <span style="color:#228e2c;">$x$</span> and <span style="color:#2676b3;">$y$</span> components (shown below) give the <span style="color:#228e2c;">$x$</span> and <span style="color:#2676b3;">$y$</span> measurements we will be using.
 
 <!-- I think this needs more explanation.
 -->
@@ -257,7 +250,7 @@ carefully observing how <span class="footnote">the green and blue components cha
 <!-- TODO: add some pictures showing how if the SpinWheel is tilted, gravity is no longer perpendicular to the plane and that is how the measurements work
 -->
 
-<div id="threediv"><div id="threejsanim"></div><span id="xlenp">X component: <span id="xlen"></span></span><span id="ylenp">Y component: <span id="ylen"></span></span>Tilt back and forth:<input id="fbtilt" type="range" min="-100" max="+100" value="30">Tilt sideways:<input id="lrtilt" type="range" min="-100" max="+100">Rotate face:<input id="frotate" type="range" min="-100" max="+100"></div>
+<div id="threediv"><div id="threejsanim"></div><span id="xlenp">X component: <span id="xlen"></span></span><span id="ylenp">Y component: <span id="ylen"></span></span>Tilt back and forth:<input id="fbtilt" type="range" min="-100" max="+100" value="30">Tilt left and right:<input id="lrtilt" type="range" min="-100" max="+100">Rotate face:<input id="frotate" type="range" min="-100" max="+100"></div>
 
 <style>
 #threediv {
@@ -476,7 +469,7 @@ animate();
 
 ![These are the three axes that the SpinWheel can detect acceleration and gravity along. In the interactive 3D diagram you can see how the vector of gravitational acceleration (in grey) is decomposed along these three axes. You can drag, ctrl+drag, or scroll on the 3D image to rotate, pan, or zoom the camera.<a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/dance_axis.png)
 
-## Coding your own Tilt Sensor
+## Programming your own Tilt Sensor
 
 Now that we have experimented with how the SpinWheel measures gravity, 
 let's start writing the code for the tilt sensor! 
@@ -533,11 +526,11 @@ Now we can start working with
 measurements of tilt (direction of gravity) on the SpinWheel.
 We do this by calling the `SpinWheel.readIMU()` function
 to measure the three components of the gravitational vector
-(shown in grey in the visualization below).
+(shown in grey in the visualization above).
 IMU stands for Inertial Measurement Unit:
 a fancy name for something that senses motion. 
 This function will record 3 values, one for each direction of motion.
-Below you can see how the three axes, $x$, $y$, and $z$ are defined.
+Refer back to the image above to see how the $x$, $y$, and $z$ axes are defined.
 To begin with, we will only use the $x$ components of the measurement.
 
 ```c++
@@ -566,7 +559,7 @@ In the next section, we'll begin changing the LEDs based on this information.
 ### Responding to Tilt Along the X-axis
 
 To make a useful level, we need the LEDs to change in response to how the 
-SpinWheel is tilted. The code below lights up either the large LED 5 or 7
+SpinWheel is tilted. The code below lights up either large LED 5 or 7
 depending on which LED is pointing down. Upload the below code onto your 
 SpinWheel and experiment some to see how it works. 
 
@@ -607,7 +600,7 @@ void loop() {
 Because the SpinWheel's motion sensors are very sensitive,
 we only want the LEDs to light up if the SpinWheel tilts enough.
 We have decided that if `SpinWheel.ax`, or `x` in the code above,
-is bigger than 10, then we want the LED to light up. 
+is <span class="footnote">bigger than 10<span>We picked 10 arbitrarily and you can set it to a different value.</span></span>, then we want the LED to light up. 
 You could decide to make your tilt sensor more or less sensitive 
 by adjusting the value in the lines: 
 `if (x > 10)` and `else if (x < -10)`. 
@@ -633,20 +626,20 @@ or have more LEDs also light up.
 
 If you want your tilt sensor to behave more like the second level in the pictures above,
 then you can upload a slightly more detailed
-version of the above code that senses both along $x$ and $y$.
+version of the above code that senses both along the $x$ and $y$ axes.
 Go to the Examples menu in the Arduino software, and open the file here:
-`Examples → SpinWearables → Tilt_Sensor →  Simple`. 
+[`Examples → SpinWearables → Tilt_Sensor →  Simple`](/codedoc/examples/Tilt_Sensor/Simple/Simple.ino.html). 
 After looking at this version, 
 feel free to modify the code further,
 creating more elaborate visualizations.
 A version similar to the one shown below can be found in
-`Examples → SpinWearables → Tilt_Sensor →  Fancy`.
+[`Examples → SpinWearables → Tilt_Sensor →  Fancy`](/codedoc/examples/Tilt_Sensor/Fancy/Fancy.ino.html).
 
 Both the
 [`Simple`](/codedoc/examples/Tilt_Sensor/Simple/Simple.ino.html)
 and the
 [`Fancy`](/codedoc/examples/Tilt_Sensor/Fancy/Fancy.ino.html)
-code examples can also be seen through the browser in literate programming renditions.
+code examples can also be seen in your browser in literate programming renditions.
 
 
 
@@ -654,6 +647,6 @@ code examples can also be seen through the browser in literate programming rendi
 We have [a list of visualization functions](/allcommands) that can be of use
 when making more elaborate tilt visualizations.
 You might also be interested in the [dancing with color](/dancing)
-or [step counter](/stepcounter) projects,
+or [step counter](/stepcounter) adventures,
 which explore different ways to depict motion with the SpinWheel.
 :::
