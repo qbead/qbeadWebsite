@@ -28,11 +28,11 @@ This way, the SpinWheel's display will point along the direction
 of Earth's magnetic field, giving us an indication of which way is North and which way is South. This is analogous to how the tilt sensor showed us the direction of gravity,
 allowing us to determine whether or not a surface was flat.
 
-However, the metal of other SpinWheel components
-can create <span style="color:#9266bc;">**a magnetic field**</span>,
-that its magnetic sensors can also detect.
-Instead of measuring only the <span style="color:#d42c2b;">**Earth's magnetic field**</span>,
-the sensor will measure both <span style="color:#d42c2b;">**Earth's magnetic field**</span>,
+However, our SpinWheel device might have many components near its sensor,
+that create <span style="color:#9266bc;">**a spurrious magnetic field**</span>,
+causing confusion.
+Instead of measuring only <span style="color:#d42c2b;">**Earth's magnetic field**</span>,
+the sensor will measure both <span style="color:#d42c2b;">**Earth's field**</span>,
 and <span style="color:#9266bc;">**the field created by objects near the sensor**</span>.
 Using this **total measured magnetic field**
 would result in an imprecise compass,
@@ -47,31 +47,29 @@ Want to observe this phenomenon before your eyes? Grab your physical compass, an
 
 Every smartphone manufacturer also faces this same problem.
 In addition to magnetic fields from 
-metallic components inside of smartphones, temporary magnetization
-can also be caused by various other objects, like keys kept in the same pocket.
-To correct for the magnetic fields caused by nearby metal components, pathfinding apps sometimes ask you to move your phone
+various components inside of smartphones, temporary magnetization
+can also be caused by external objects, like keys kept in the same pocket.
+To correct for the magnetic fields caused by other components, pathfinding apps sometimes ask you to move your phone
 along a figure "8" to calibrate the sensors before they provide directions. 
 
 These <span style="color:#9266bc;">**spurious fields**</span>
 are always present and will remain fixed with respect to the sensor.
 This means that even when we rotate the sensor,
 that component of the measured result will not be changed.
-However, the <span style="color:#d42c2b;">**Earth's field**</span>
-will change its orientation with respect to the sensor as it is rotated.
-For this reason, different values will be detected as the 
-device is rotated.
+However, such a rotation would cause <span style="color:#d42c2b;">**Earth's field**</span>
+to be oriented differently with respect to the sensor,
+causing different values along each axis of the sensor.
 
 <!-- I find the part above confusing. I am having trouble visualizing it (even with the interactive diagrams below). Maybe we could add a sketch here to show an example of this spurious fields? 
 -->
 
 We can use this to our advantage!
 By rotating the device in complete circles,
-we can remove <span style="color:#d42c2b;">**the external field**</span>.
-By saving <span style="color:#9266bc;">**the field caused by the device itself**</span>,
-and subtracting this value from our future measurements of the 
-magnetic field around the device, we can return only the 
-<span style="color:#d42c2b;">**Earth's magnetic field**</span>
-in the future.
+we can average out <span style="color:#d42c2b;">**the external field**</span>
+leaving only <span style="color:#9266bc;">**the field caused by the device itself**</span>.
+Having that value saved, we can now subtract it from future measurements,
+thus leaving us only with the desired result:
+<span style="color:#d42c2b;">**Earth's field**</span>.
 
 Below you can see a simulation how these measurements may be taken.
 The SpinWheel rotates in space, making constant measurements
@@ -79,7 +77,7 @@ The SpinWheel rotates in space, making constant measurements
 The <span style="color:#d42c2b;">**external field, due to Earth's magnetic field,
 i.e. the red vector**</span>
 is fixed.
-The <span style="color:#9266bc;">**field caused by the device itself,
+The <span style="color:#9266bc;">**spurrious field caused by the device itself,
 i.e. the smaller purple vector**</span>,
 rotates with the SpinWheel.
 Their sum, the black vector is what we actually measure.
@@ -456,7 +454,7 @@ void loop() {
 ```
 
 To visualize this cloud of points,
-you can also copy the data from your Serial Monitor into the text box below.
+you can also copy the data from your `Serial Monitor` into the text box below.
 The webpage will then regenerate the image
 based on the numbers that you provided.
 Currently, the text you see in the textbook contains real data we observed
