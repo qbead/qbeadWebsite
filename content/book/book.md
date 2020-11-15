@@ -191,7 +191,7 @@ These activities build on the ideas presented in the introductory adventures. If
 
 ## Advanced Adventures
 
-These are the most challenging SpinWheel activities. We recommend completing at least one earlier adventure before trying them out. If you have completed the other adventures, then you should be able to jump into any of these. 
+These are the most challenging SpinWheel activities. Playing with them will be enjoyable for everyone, but to fully master them an undergrad level of understanding of CS and physics might be necessary. They build on concepts introduced in earlier adventures.
 
 1. [Dancing with Color: Rotational Motion](/dancing2)
 2. [Make a Compass](/compass)
