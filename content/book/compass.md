@@ -18,12 +18,12 @@ inside of smartphone apps when they give you directions.
 <!-- The part about the iron and calibrating against the error feels abrupt, since they haven't even made the compass yet. Can we simplify this to just the 1st sentence, plus something like "Here, we will walk through how to program your SpinWheel to work as your very own compass" or something?
 -->
 
-Making a compass is done in a similar way to creating [the tilt sensor](/tilt). Be sue to check out the tilt sensor adventure before diving into the rest of this one. Also, you can refresh your memory on magnetic fields by reviewing our [magnetism](/magnetism) lesson.
+Making a compass is done in a similar way to creating [the tilt sensor](/tilt). Be sure to check out the tilt sensor adventure before diving into the rest of this one. <!--Also, you can refresh your memory on magnetic fields by reviewing our [magnetism](/magnetism) lesson.-->
 
 <!-- I know the magnetism lesson isn't ready yet but I think it would be useful to link to it here
 -->
 
-To turn your SpinWheel into a compass, just use the magnetic field vector components `mx, my`instead of the gravitational field `ax, ay`.
+To turn your SpinWheel into a compass, just use the magnetic field vector components `mx`, `my` instead of the gravitational field `ax`, `ay`.
 This way, the SpinWheel's display will point along the direction
 of Earth's magnetic field, giving us an indication of which way is North and which way is South. This is analogous to how the tilt sensor showed us the direction of gravity,
 allowing us to determine whether or not a surface was flat.
