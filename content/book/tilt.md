@@ -257,7 +257,7 @@ carefully observing how <span class="footnote">the green and blue components cha
 <!-- TODO: add some pictures showing how if the SpinWheel is tilted, gravity is no longer perpendicular to the plane and that is how the measurements work
 -->
 
-<div id="threediv"><div id="threejsanim"></div>Tilt back and forth:<input id="fbtilt" type="range" min="-100" max="+100" value="30">Tilt sideways:<input id="lrtilt" type="range" min="-100" max="+100">Rotate face:<input id="frotate" type="range" min="-100" max="+100"></div>
+<div id="threediv"><div id="threejsanim"></div><span id="xlenp">X component: <span id="xlen"></span></span><span id="ylenp">Y component: <span id="ylen"></span></span>Tilt back and forth:<input id="fbtilt" type="range" min="-100" max="+100" value="30">Tilt sideways:<input id="lrtilt" type="range" min="-100" max="+100">Rotate face:<input id="frotate" type="range" min="-100" max="+100"></div>
 
 <style>
 #threediv {
@@ -267,6 +267,12 @@ carefully observing how <span class="footnote">the green and blue components cha
 #threediv > * {
   display: block;
   margin: auto;
+}
+#threediv #xlenp {
+  color: #228e2c;
+}
+#threediv #ylenp {
+  color: #2676b3;
 }
 </style>
 
@@ -333,11 +339,14 @@ var box;
 var arrow;
 var xarrow, yarrow, zarrow;
 var sphere;
+var lx_glob, ly_glob;
 const size = 400;
 const animdiv = document.getElementById('threejsanim');
 const fgtilt = document.getElementById('fbtilt');
 const lrtilt = document.getElementById('lrtilt');
 const frotate = document.getElementById('frotate');
+const xlen = document.getElementById('xlen');
+const ylen = document.getElementById('ylen');
    
 function init() {
   scene = makeScene();
@@ -376,7 +385,7 @@ function init() {
     40, 0xf58559,
     10, 4
   );
-  box.add(zarrow);
+  //box.add(zarrow);
 
   /*
   var sgeometry = new THREE.SphereGeometry( 3, 12, 12 );
@@ -436,7 +445,7 @@ function animate() {
   const z0 = new THREE.Vector3(0,1,0).applyEuler(euler);
   const lz = z0.dot(g);
   const alz = Math.abs(lz)*40
-  zarrow.setLength(alz, Math.min(10,alz), 4);
+  //zarrow.setLength(alz, Math.min(10,alz), 4);
   var dz;
   if (lz > 0) {
     dz = pz0;
@@ -445,7 +454,7 @@ function animate() {
   }
   xarrow.setDirection(dx);
   yarrow.setDirection(dy);
-  zarrow.setDirection(dz);
+  //zarrow.setDirection(dz);
   /*
   const xy = x0.clone()
                .multiplyScalar(lx*40);
@@ -454,6 +463,10 @@ function animate() {
   sphere.position.copy(xy);
   */
   renderer.render( scene, camera );
+  lx_glob = lx;
+  ly_glob = ly;
+  xlen.innerHTML = Math.round(lx_glob*100)/100;
+  ylen.innerHTML = Math.round(ly_glob*100)/100;
 }
  
 init();
