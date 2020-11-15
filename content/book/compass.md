@@ -595,7 +595,7 @@ along each axis, and correct for it.
 
 The code below, does exactly this.
 You can also find it in 
-[`Examples → SpinWearables → Compass →  Calibrated_Compass`](/codedoc/examples/Compass/Calibrate/Calibrate.ino.html).
+[`Examples → SpinWearables → Compass →  Calibrated_Compass`](/codedoc/examples/Compass/Calibrated_Compass/Calibrated_Compass.ino.html).
 
 ```c++
 #include "SpinWearables.h"
