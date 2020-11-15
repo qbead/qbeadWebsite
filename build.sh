@@ -9,6 +9,7 @@ cp -r content/images build/images
 cp -r content/data build/data
 cp -r static/* build/
 
+echo "MAIN"
 for mdfile in content/main/*{index,$@}*md; do\
     name=$(basename -s .md $mdfile)
     echo $name
@@ -18,6 +19,7 @@ for mdfile in content/main/*{index,$@}*md; do\
 done
 cp build/index/index.html build/index.html
 
+echo "BOOK"
 for mdfile in content/book/*{book,$@}*md; do\
     name=$(basename -s .md $mdfile)
     echo $name
@@ -29,4 +31,14 @@ for mdfile in content/book/*{book,$@}*md; do\
     fi
     mkdir build/$name
     mv build/$name.html build/$name/index.html
+done
+
+echo "SLIDES"
+mkdir build/slides
+for mdfile in content/slides/*$@*md; do\
+    name=$(basename -s .md $mdfile)
+    echo $name
+    pandoc -t revealjs -s -o build/slides/"$name".html -V theme=black -V revealjs-url=/reveal.js $mdfile
+    mkdir build/slides/$name
+    mv build/slides/$name.html build//slides/$name/index.html
 done
