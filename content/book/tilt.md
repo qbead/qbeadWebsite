@@ -23,13 +23,13 @@ More commonly, to check whether a surface is level or not, an actual [bubble lev
 
 To understand how a bubble level works, imagine what would happen if you took a glass of water and placed it on a table. If the table was perfectly horizontal, you would see the surface of the water in the glass appears horizontal too. What if the table has two legs that are slightly shorter than the others? Then, you might notice the surface of water in the glass appears tilted. You observe this tilt in the surface of the water because the surface is trying to remain perpendicular to gravity. 
 
-Now, what happens if you replace your water with soda? On the tilted table, you should observe the surface of the soda in the glass to appear tilted, and the bubbles in your soda to be rising perpendicularly to the soda surface. Try this out and see what happens! The bubbles in your soda are made of gas (carbon dioxide in this case), and since carbon dioxide gas is less dense than your liquid soda, the gas bubbles will rise to the top of the liquid soda. 
+Now, what happens if you replace your water with soda? On the tilted table, you should observe the surface of the soda in the glass shifts to remain parallel to the ground, and the bubbles in your soda still rise straight up (perpindicular to the soda's surface, but not to the bottom of the glass). Try this out and see what happens! The bubbles in your soda are made of gas (carbon dioxide in this case), and since carbon dioxide gas is less dense than your liquid soda, the gas bubbles rise to the top of the liquid soda. 
 
 <figure><img src="/images/bookpics/level_and_glass.png" style="max-width:90%"><figcaption>Bubbles rise against gravity, both in the cylinder of the level and in a glass of carbonated water.<a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a></figcaption></figure>
 
 In a real bubble level, 
-a small bubble enclosed in a container with liquid surrounding it. 
-The bubble tries to go as far up in its enclosure as possible, since the bubble is made of air and air is lighter than the surrounding liquid. This means that the bubble will rise against the direction of gravity (just think of what happened to bubbles in your soda glass).
+a small bubble is enclosed in a container with liquid surrounding it. 
+The bubble tries to go as far up in its enclosure as possible, since the bubble is made of air and air is lighter than the surrounding liquid. This means that the bubble will rise against the direction of gravity (just think of what happened to bubbles in your soda glass). You can see this illustrated in the picture above where the bubble in the level on the tilted table rises to the highest point (to the right). 
 
 The top of the bubble level enclosure is slightly domed. This means that
 if the surface you've placed the level on is flat, the highest point in the bubble level enclosure is the center
@@ -44,7 +44,7 @@ If the surface is not flat, the bubble will still rise to the highest point in t
 We can program the SpinWheel to make this same measurement.
 The SpinWheel contains a motion sensor, which is capable of measuring acceleration.
 Because the sensation of accelerating cannot be distinguished
-from the sensation of being pulled by gravity, so 
+from the sensation of being pulled by gravity, 
 this same sensor also reports Earth's gravity.
 
 Before jumping into the rest of this adventure, upload the tilt sensor code from `Examples → SpinWearables → Tilt_Sensor →  Simple`, and see what happens when you move the SpinWheel around!
@@ -58,11 +58,11 @@ It even inspired Einstein to work on his general theory of relativity!
 You can learn more about it in our lesson on inertia and free fall.
 :::
 
-Now, let's dive into how exactly the tilt sensor you just experimented with works.
 
 ## Measuring Gravity in Two Dimensions
 
-Now we need to find a convenient way to encode the "direction of gravity"
+To create this tilt sensor, 
+we need to find a convenient way to encode the "direction of gravity"
 measured by the SpinWheel's acceleration sensor
 in a way that a piece of computer code can understand.
 The main difficulty is that gravity does not only have a certain strength (or intensity),
@@ -70,7 +70,9 @@ but also a direction.
 Therefore, we cannot fully describe the measurement with one number.
 For instance, notice how in the bubble level above,
 both the direction in which the bubble has been displaced
-and the distance between the bubble and the center of the dome matters.
+and the distance between the bubble and the center of the dome give information
+about the tilt of the surface. 
+If a surface is more tilted, the bubble will move farther from the center, for instance.
 Other types of bubble levels offer the inspiration for solving this problem.
 
 ![A bubble level with separate sensors for each axis of tilt. <a class="imagecredit" href="https://publiclab.org/notes/mathew/10-26-2015/deploying-passive-particle-monitors">image credit Public Lab</a>](/images/bookpics/twobubble.jpg)
@@ -85,15 +87,15 @@ We just described a <span class="footnote">position in the two-dimensional plane
 by using a <span class=footnote>pair of numbers<span>Each giving the displacements along a single axis.</span></span>.
 Mathematicians call this operation [vector decomposition](/vectors).
 
-You can gain some more intuition about this decomposition procedure below.
+You can gain some more intuition about this decomposition procedure below. 
+Imagine that the bubble from the first tilt sensor is at the end of the black arrow. 
+The arrow represents how the bubble moves from the center if you were to
+tilt the surface it is resting on. 
+The bubbles on the side represent the two tubes of a level like that shown above.
 The black arrow is <span class="footnote">the two-dimensional object<span>Having both length and direction in a 2D plane.</span></span>
-that we want to represent by splitting it in a component along the $x$ axis
-and a component along the $y$ axis (green and blue, respectively). The black arrow is called a vector.
+that we want to represent by splitting it in a component along the $x$ axis (green)
+and a component along the $y$ axis (blue). The black arrow is called a vector.
 
-::: further-reading
-You can learn more about how to describe and work with quantities that have
-a direction from our [lesson on vectors](/vectors).
-:::
 
 <style>
 #grid2d {
@@ -224,11 +226,15 @@ setInterval(plot_all, 50);
 <!-- TODO: Stefan will be modifying this to better link with the bubble sensors.
 -->
 
+::: further-reading
+You can learn more about how to describe and work with quantities that have
+a direction from our [lesson on vectors](/vectors).
+:::
 
 ## Measuring Gravity with the SpinWheel
 
 The SpinWheel has sensors that can measure gravity along 
-<span class="footnote">three axes<span>Below the interactive SpinWheel animation, you can see how these three axes, $x$, $y$, and $z$, are defined.</span></span>.
+<span class="footnote">three axes<span>Below the interactive SpinWheel animation, you can see how these three axes, x, y, and z, are defined.</span></span>.
 Before we use this information to create a tilt sensor, 
 first play with the interactive SpinWheel animation below.
 Pay close attention to the $x$ and $y$ components 
