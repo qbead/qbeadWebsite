@@ -23,17 +23,16 @@ Making a compass is done in a similar way to creating [the tilt sensor](/tilt). 
 <!-- I know the magnetism lesson isn't ready yet but I think it would be useful to link to it here
 -->
 
-To turn your SpinWheel into a compass, just use the magnetic field vector components `mx`, `my` instead of the gravitational field `ax`, `ay`.
+To turn your SpinWheel into a compass, we will use the magnetic field vector components `mx`, `my` instead of the gravitational field `ax`, `ay`.
 This way, the SpinWheel's display will point along the direction
 of Earth's magnetic field, giving us an indication of which way is north and which way is south. This is analogous to how the tilt sensor showed us the direction of gravity,
 allowing us to determine whether or not a surface was flat.
 
-However, our SpinWheel device might have many other components near its sensor,
-that create additional magnetic fields, causing confusion. 
-
-Instead of measuring only <span style="color:#d42c2b;">**Earth's magnetic field**</span>,
+However, instead of measuring only <span style="color:#d42c2b;">**Earth's magnetic field**</span>,
 the sensor will measure both <span style="color:#d42c2b;">**Earth's magnetic field**</span>,
-and <span style="color:#9266bc;">**the field created by objects near the sensor**</span>.
+and <span style="color:#9266bc;">**the field created by objects near the sensor**</span>. 
+This is a problem as other components near the SpinWheel's magnetic sensor
+create additional magnetic fields. 
 Using this **total measured magnetic field**
 would result in an imprecise compass,
 therefore we need to find a way to remove these 
@@ -49,13 +48,14 @@ Every smartphone manufacturer also faces this same problem.
 In addition to magnetic fields from 
 various components inside of smartphones, temporary magnetization
 can also be caused by external objects, like keys kept in the same pocket.
-To correct for the magnetic fields caused by other components, pathfinding apps sometimes ask you to move your phone
+To correct for the magnetic fields caused by other nearby objects, 
+pathfinding apps sometimes ask you to move your phone
 along a figure "8" to calibrate the sensors before they provide directions. 
 
 These <span style="color:#9266bc;">**extra magnetic fields**</span>
 are always present and will remain fixed with respect to the sensor.
 This means that even when we rotate the sensor,
-<span style="color:#9266bc;">**this component**</span> of the measured result will not be changed.
+<span style="color:#9266bc;">**this component**</span> of the measured result will not change.
 However, such a rotation would cause <span style="color:#d42c2b;">**Earth's magnetic field**</span>
 to be oriented differently with respect to the sensor,
 causing the measurements to change along each axis of the sensor. 
@@ -100,7 +100,7 @@ Their **sum, shown as the black vector** in the second animation, is what the Sp
 </style>
 
 <div id="threediv" class="threediv"><p>The magnetic fields with respect to an observer (i.e. your point of view)</p><div id="threejsanim" class="threejsanim"></div><p>The magnetic fields with respect to the SpinWheel (i.e. from the SpinWheel's point of view):</p><div id="threejsanim2" class="threejsanim"></div>Tilt back and forth:<input id="fbtilt" type="range" min="-100" max="+100" value="30">Tilt sideways:<input id="lrtilt" type="range" min="-100" max="+100">Rotate face:<input id="frotate" type="range" min="-100" max="+100"><div><button id="clearsphere">Clear Points</button><button id="autorot">Autorotate</button></div>
-<p>The three axes of the SpinWheel are colored as <span style="color:#92bd80;">X</span>, <span style="color:#8fb0d3;">Y</span>, and <span style="color:#f58559;">Z</span>. Also colored are the <span style="color:#d42c2b;">Earth's magnetic field that we want to measure</span>, the <span style="color:#9266bc;">magnetic field caused by the SpinWheel's metallic components,</span> and **the sum of these vectors, the total magnetic field** that the SpinWheel's sensors measure. </p>
+<p>The three axes of the SpinWheel are colored as <span style="color:#92bd80;">X</span>, <span style="color:#8fb0d3;">Y</span>, and <span style="color:#f58559;">Z</span>. Also colored are the <span style="color:#d42c2b;">Earth's magnetic field that we want to measure</span>, the <span style="color:#9266bc;">magnetic field caused by the SpinWheel's metallic components,</span> and **the sum of these vectors, the total magnetic field** that the SpinWheel's sensor measures. </p>
 </div>
 
 </style>
@@ -395,15 +395,16 @@ bclearsphere.addEventListener('click', function (){
 </script>
 
 You can see that the cloud of measurements creates a sphere,
-but one not centered at the $(0,0,0)$ point. Instead, $(0,0,0)$ corresponds to the location of the magnetic field sensor on the SpinWheel, shown as the intersection of the three axes in the animation above. Rather, the center of this sphere is the tip of the
-<span style="color:#9266bc;">**purple vector, the magnetic field caused by the SpinWheel's metallic components**</span>. If you are having trouble visualizing this, try rotating the sphere in the animation above until the <span style="color:#f58559;">orange vector</span> points straight upwards.
-Below, we will introduce a procedure we can use to find the center of the sphere, or the <span style="color:#9266bc;">**extra magnetic field,**</span> and subtract it from all future measurements so that we just display the <span style="color:#d42c2b;">**Earth's magnetic field**</span>. 
+but one not centered at the $(0,0,0)$ point. Instead, $(0,0,0)$ corresponds to the location of the magnetic field sensor on the SpinWheel, shown as the intersection of the three axes in the animation above. 
+The center of this sphere is the tip of the
+<span style="color:#9266bc;">**purple vector, the magnetic field caused by the SpinWheel's metallic components**</span>. If you are having trouble visualizing this, try rotating the sphere in the animation above until the <span style="color:#f58559;">**orange vector**</span> points straight upwards.
+Below, we will introduce a procedure we can use to find the center of the sphere, or the <span style="color:#9266bc;">**extra magnetic field,**</span> and subtract it from all future measurements. In this way, we will just display the <span style="color:#d42c2b;">**Earth's magnetic field**</span>. 
 
 <!-- this is hard to observe at the moment -->
 
 ## Reading magnetic field measurements from the SpinWheel
 
-To begin, let's actually perform some measurements with our SpinWheel.
+To begin, let's perform some measurements with our SpinWheel.
 The code below, which can also be found in 
 [`Examples → SpinWearables → Compass →  Calibrate`](/codedoc/examples/Compass/Calibrate/Calibrate.ino.html),
 will take direct measurements from the magnetic sensor
@@ -451,12 +452,13 @@ To visualize the cloud of points that this creates,
 you can also copy the data from your `Serial Monitor` into the text box below. Uncheck `Autoscroll` and `Show timestamp` to more easily copy and paste.
 The webpage will then regenerate the image
 based on the numbers that you provided.
-Currently, the text you see in the textbook contains real data we observed
+Currently, the text you see in the textbox contains real data we measured
 with one of the first SpinWheels we ever manufactured.
 If you rotate the plot (by dragging it),
 you can clearly see that the sphere of measurements
 is not at the center of the sphere of points.
-Rather there is an offset that we have to correct for.
+Instead, like you could see in the animation above,
+there is an offset that we have to correct for.
 
 <div id="pointclouddiv" class="threediv"><div id="pointcloudanim" class="threejsanim"></div><textarea id="pointcloudtext"></textarea></div>
 
@@ -642,6 +644,8 @@ and then use them to correct the current measurement result.
 
 As an extension, you can combine both the tilt and magnetic sensors. 
 It is useful for a compass to have a tilt sensor, so that you can be sure that
-you are only measuring the horizontal component of Earth's magnetic field. When you using the SpinWheel as a compass, make sure to keep it level for best results!
+you are only measuring the horizontal component of Earth's magnetic field. 
+When you are using the SpinWheel as a compass, 
+make sure to keep it level for best results!
 
 <a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">Header image credit: Jack Hegarty</a>
