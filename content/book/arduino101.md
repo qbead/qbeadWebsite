@@ -106,7 +106,8 @@ Having this information can be very important when debugging - or attempting to 
 Different computer languages provide different ways of doing this. 
 If you are working with Arduino, 
 then you can use the `Serial Monitor` to see these messages being sent back over the USB cable. 
-To access the `Serial Monitor`, navigate to `Tools → Serial Monitor`.
+To access the `Serial Monitor`, navigate to `Tools → Serial Monitor`. 
+When you you use `Serial Monitor` or `Serial Plotter` a single small red LED will light up. 
 
 Then if you want to see how a particular variable changes, 
 we can setup the device to send messages at the right connection speed using `Serial.begin(9600)` 
