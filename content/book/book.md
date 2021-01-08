@@ -155,52 +155,65 @@ This may be a new way of learning for you and it may feel unnatural at first. Ho
 These pages provide the essentials to get started programming your SpinWheel. 
 If you have coding experience, we still recommend doing the [Initial Setup Guide](/quickstart) before jumping into any of the adventures.
 
-1. [Getting Started with the SpinWheel](/intro): Before you download the software for programming your SpinWheel, try out this page to get your first taste of how to control the SpinWheel's LEDs. 
-2. [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures.
-3. [Troubleshooting Guide](/troubleshoot): If you have problems with getting the SpinWheel to work, then first look here for advice. This has tips and tricks for using your SpinWheel.
+<ol>
+<li> [Getting Started with the SpinWheel](/intro): Before you download the software for programming your SpinWheel, try out this page to get your first taste of how to control the SpinWheel's LEDs. </li>
+<li> [Initial Setup Guide](/quickstart): This is where we explain how to set up your SpinWheel, download the Arduino software and provide essential information for the rest of the adventures. </li>
+<li> [Troubleshooting Guide](/troubleshoot): If you have problems with getting the SpinWheel to work, then first look here for advice. This has tips and tricks for using your SpinWheel. </li>
+</ol>
 
 ## Intro Adventures
 
 These adventures assume that you have no coding experience and are a great way to become comfortable with both the SpinWheel and coding. The associated lessons go into more depth on the concepts that are referenced for the first time in these adventures. We have written the lessons to supplement the content in the adventures and we provide links in each adventure when we recommend checking them out to learn more. We hope these will spark your curiousity to learn even more about the world around you!
 
-1. [Biology of Sight](/sight) - if you find the learning curve too steep, you might enjoy the [Mixing Color with Light lesson from the companion booklet](/paper_booklet)
-2. [Intro to Animation](/animation) - similarly, if this adventure seems too overwhelming at first, check out the [Customizing the SpinWheel&#39;s Display and Creating Animations with the SpinWheel chapters from the companion booklet](/paper_booklet)
-3. Stroboscopes and Stroboscopic Photography (planned)
+<ol>
+<li>[Biology of Sight](/sight) - if you find the learning curve too steep, you might enjoy the [Mixing Color with Light lesson from the companion booklet](/paper_booklet)</li>
+<li> [Intro to Animation](/animation) - similarly, if this adventure seems too overwhelming at first, check out the [Customizing the SpinWheel&#39;s Display and Creating Animations with the SpinWheel chapters from the companion booklet](/paper_booklet)</li>
+<li> Stroboscopes and Stroboscopic Photography (planned) </li>
+</ol>
 
 ### Associated Lessons
-1. [Light and Color](/lightandcolor)
-2. [Color Theory](/colortheory)
-3. [Basic Structure of a Program](/basics)
-
+<ol>
+<li> [Light and Color](/lightandcolor)</li>
+<li> [Color Theory](/colortheory) </li>
+<li> [Basic Structure of a Program](/basics)</li>
+</ol>
 
 ## Intermediate Adventures
 
 These activities build on the ideas presented in the introductory adventures. If you have coding experience, you can jump right in and then refer back to the earlier adventures and lessons as you have questions.
 
-1. [Animations and Patterns](/animation2)
-2. [Make a Tilt Sensor](/tilt)
-3. [Dancing with Color: Linear Motion](/dancing)
-4. [Make a Step Counter](/stepcounter)
+<ol>
+<li>[Animations and Patterns](/animation2)</li>
+<li> [Make a Tilt Sensor](/tilt)</li>
+<li> [Dancing with Color: Linear Motion](/dancing)</li>
+<li> [Make a Step Counter](/stepcounter)</li>
+</ol>
 
 ### Associated Lessons
-1. [Coding Building Blocks](/progpatterns)
-2. [Arduino 101](/arduino101) 
-3. [Vectors and Motion](/vectors)
-5. Inertial Reference Frames / Free Fall (planned)
-6. Physical Computing (planned)
+<ol>
+<li> [Coding Building Blocks](/progpatterns)</li>
+<li> [Arduino 101](/arduino101) </li>
+<li> [Vectors and Motion](/vectors)</li>
+<li> Inertial Reference Frames / Free Fall (planned)</li>
+<li> Physical Computing (planned)</li>
+</ol>
 
 ## Advanced Adventures
 
 These are the most challenging SpinWheel activities. Playing with them will be enjoyable for everyone, but to fully master them an undergrad level of understanding of CS and physics might be necessary. They build on concepts introduced in earlier adventures.
 
-1. [Dancing with Color: Rotational Motion](/dancing2)
-2. [Make a Compass](/compass)
-3. [Recurrent Neural Networks for Gesture Recognition](/rnn)
+<ol>
+<li> [Dancing with Color: Rotational Motion](/dancing2)</li>
+<li> [Make a Compass](/compass)</li>
+<li> [Recurrent Neural Networks for Gesture Recognition](/rnn)</li>
+</ol>
 
 ### Associated Lessons
-1. [Rotation and Moving in Circles](/rotation)
-2. Magnetism (planned)
-3. Electricity (planned)
+<ol>
+<li> [Rotation and Moving in Circles](/rotation)</li>
+<li> Magnetism (planned)</li>
+<li> Electricity (planned)</li>
+</ol>
 
 ## Appendix
 
