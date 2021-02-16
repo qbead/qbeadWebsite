@@ -2,8 +2,7 @@
 
 shopt -s nullglob # permit empty set globs
 
-rm -rf build
-mkdir build
+rm -rf build/*
 
 cp -r content/images build/images
 cp -r content/data build/data
@@ -40,5 +39,5 @@ for mdfile in content/slides/*$@*md; do\
     echo $name
     pandoc -t revealjs -s -o build/slides/"$name".html --css="/custom_slides.css" --slide-level 2 -V theme=black -V revealjs-url=/reveal.js $mdfile
     mkdir build/slides/$name
-    mv build/slides/$name.html build//slides/$name/index.html
+    mv build/slides/$name.html build/slides/$name/index.html
 done

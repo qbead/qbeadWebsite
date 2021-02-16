@@ -150,6 +150,8 @@ Keep reading for our recommended order for completing the lessons and adventures
 As you read, you will notice that we reference material from different lessons and adventures as we go. Don’t worry if you don't understand everything the first time you read a page. Jump around between the lessons and adventures – by moving between them, you will gain even more from each page. 
 This may be a new way of learning for you and it may feel unnatural at first. However, it will become much more familiar and empowering as you progress. You’ll also be practicing a whole new way of learning - one that engineers and scientists use all the time as they solve problems and create new knowledge! 
 
+We also provide a set of [slide decks](/slides) that educators might want to use in their lessons.
+
 ## Getting Started
 
 These pages provide the essentials to get started programming your SpinWheel. 
