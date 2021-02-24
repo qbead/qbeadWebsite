@@ -13,7 +13,7 @@ These slight decks are meant to be used by educators who have gained a passing f
 
 - [Introductory Slides](/slides/intro): The first lesson would almost always be based around demonstrating the [possibilities that the SpinWheel opens](/intro) and the [software and hardware required for its initial setup](/quickstart).
 - [Basics of Programming](/slides/programming): This lessons covers both the discussion of [what a program is](/basics), as well as the most [important constructs used to create a program](/progpatterns)
-- [Sight](/slides/sight): [UNFINISHED] A slide deck encompassing topics discussed in [Biology of sight](/sight), [Physics of color and light](/lightandcolor), and the more artistic sides of [Color theory](/colortheory)
+- [Sight](/slides/sight): A slide deck encompassing topics discussed in [Biology of sight](/sight), [Physics of color and light](/lightandcolor), and the more artistic sides of [Color theory](/colortheory)
 - Animations: [NOT STARTED] The most important lessons introducing the notion of [time-dependent visuals necessary for animations](/animation) and [effects and patterns used in making the animations more wondrous](/animation2)
 - [Tilt](/slides/tilt): [UNFINISHED] Discussion of the basics kinematics necessary for the creation of the [tilt sensor](/tilt)
 

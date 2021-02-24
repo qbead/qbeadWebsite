@@ -1,48 +1,19 @@
 ---
-title: Color Theory
+title: Color, Light, and Sight
 keywords: color, light, electromagnetism, color theory, pigments, art
 ---
 
+Based on the [Biology of Sight](/sight), [Color Theory](/colortheory), and [Light and Color](/lightandcolor) pages.
 
-![Many bright minds of our civilization have studied the science behind colors in the pursuit of art.<a class="imagecredit" href="https://www.pikrepo.com/flrza/assorted-paint-kit">image credit Pikrepo</a>](/images/bookpics/assorted_paint_kit.jpg "image credit to Pikrepo")
-
-::: notes
-
-The premise of the presentation is to first 
-describe how much of our tech does use only 3 colors
-whether in screens or in print.
-
-We explain that this is because our eyes
-have only three color sensors. We do not
-introduce the physical reality yet: we do not
-say that there are other colors and we do not
-say that there is difference between purple light
-and a mixture of red and blue light. We do not go there
-exactly because our eyes are not tools that can make
-the distinction.
-
-Then we play a bit with the SpinWheel and show
-a simple program to change its colors.
-
-Only then we go back to light and explain what
-it is and that there is a very substantial
-difference between purple and red+blue even if our
-eyes can not see the difference.
-We even mention the mantis shrimp.
-
-The we talk about additional imperfections of our eyes
-that we can exploit for cool effects, namely,
-persistence of vision.
-
-:::
-
-# Perceiving Color
+# The Biology of Sight
 
 ---
 
-### Three main colors in our paint, our screens, and our eyes
-
 ![](/images/banners/colors_and_eye.png)
+
+---
+
+![White light being split into colors by a prism. The white light shines on the prism from the bottom left, and a big part of it is refracted and split as it passes through the prism. <a class="imagecredit" href="https://www.pexels.com/photo/optical-glass-triangular-prism-3845161/">image credit Pexels</a>](/images/bookpics/optical_glass_triangular_prism.jpg "Picture of a white light being split into colors by a prism")
 
 ---
 
@@ -50,25 +21,123 @@ persistence of vision.
 
 ---
 
-![An up-close picture of a computer screen, showing the red, green, and blue light sources, making up the white background.<a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:LCD_Pixels_Macro.jpg">image credit Wikimedia</a>](/images/bookpics/lcd_pixels_macro.jpg "An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background"){width=50%}
+<iframe src="https://theoatmeal.com/comics/mantis_shrimp" style="width:100%; height:70vh"></iframe>
+
+[The Oatmeal](https://theoatmeal.com/comics/mantis_shrimp) has a great educational comics on an animal with even more color sensitivity.
 
 ---
 
-![The [halftone technique](https://en.wikipedia.org/wiki/Halftone) is a good example of this, where microscopic dots of different sizes and colors are used to make the illusion of a smooth color at a distance. <a class="imagecredit" href="https://en.wikipedia.org/wiki/File:Halftoningcolor.svg">image credit Wikimedia</a>](/images/bookpics/halftone.png "The halftone technique.")
+![An up-close picture of some of the SpinWheel's LEDs, showing the red, green, and blue subpixels.](/images/bookpics/LED_close-up.jpg "An up-close picture of five SpinWheel LEDs, showing the red, green, and blue subpixels.")
 
 ---
 
-### Additive (light-based) color mixing
+## An example of Red, Green, Blue mixing
 
-A white ball illuminated by three colored lights of different brightness.
+<style>
+#colortests {
+  font-size: 2rem;
+  color: black;
+  text-align: left;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0  white,
+    -1px 1px 0  white,
+    1px 1px 0   white;
+}
+#colortests input {
+  width: 20%;
+  margin: 0;
+}
+#colortests span {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+}
+#colortests .spacer {
+  width:5%;
+}
+#colortests .vis {
+  width: 20%;
+  height: 2em;
+  line-height: 2em;
+  border: solid 1px;
+}
+#redshow {border-color: red !important;}
+#greenshow {border-color: green !important;}
+#blueshow {border-color: blue !important;}
+</style>
+<div id="colortests">
+<div><input type="range" min="0" max="255" value="255" id="red"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="green"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="blue"></div>
+<div><span class="vis" id="redshow">255</span><span class="spacer">+</span><span class="vis" id="greenshow">255</span><span class="spacer">+</span><span class="vis" id="blueshow">255</span><span class="spacer">=</span><span class="vis" id="rgbshow">&nbsp;</span></div>
+<script>
+function changeColor(){
+  var r = document.getElementById("red").value;
+  var g = document.getElementById("green").value;
+  var b = document.getElementById("blue").value;
+  document.getElementById("rgbshow").style["background-color"]=`rgb(${r},${g},${b})`;
+  document.getElementById("redshow").innerHTML=r;
+  document.getElementById("redshow").style["background-color"]=`rgb(${r},0,0)`;
+  document.getElementById("greenshow").innerHTML=g;
+  document.getElementById("greenshow").style["background-color"]=`rgb(0,${g},0)`;
+  document.getElementById("blueshow").innerHTML=b;
+  document.getElementById("blueshow").style["background-color"]=`rgb(0,0,${b})`;
+}
+document.getElementById("red").oninput = changeColor;
+document.getElementById("green").oninput = changeColor;
+document.getElementById("blue").oninput = changeColor;
+changeColor();
+</script>
+</div>
+
+---
+
+<!-- fast timer -->
+<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
+<script src='/simspinwheel/simspinwheel.js'></script>
+<div class="ssw-codecontent" markdown=0>
+<pre class="ssw-codeblock">
+void setup() {
+  SpinWheel.begin();
+}
+void loop() {
+</pre>
+<textarea class="ssw-codeblock">
+  SpinWheel.setLargeLEDsUniform(255, 255, 255);
+</textarea>
+<pre class="ssw-codeblock">
+  SpinWheel.drawFrame();
+}
+</pre>
+</div>
+
+# Color Theory
+
+The science of mixing paints and lights
+
+---
+
+![Many bright minds of our civilization have studied the science behind colors in the pursuit of art.<a class="imagecredit" href="https://www.pikrepo.com/flrza/assorted-paint-kit">image credit Pikrepo</a>](/images/bookpics/assorted_paint_kit.jpg "image credit to Pikrepo")
+
+---
+
+## Perceiving Color
+
+![An artistic rendering of a close-up of the back of the eye illustrating the rods (black) and cones (triangles colored by type). <a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">image credit Jack Hegarty</a>](/images/bookpics/rods_cones.png "Close-up cartoon of rods and cones in an eye")
+
+---
+
+## Mixing Colors With Light Sources
+
+![An up-close picture of a computer screen, showing the red, green, and blue light sources, making up the white background. These sources, or subpixels, are so close together that from a distance we see them as overlapping and observe only their mixture.<a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:LCD_Pixels_Macro.jpg">image credit Wikimedia</a>](/images/bookpics/lcd_pixels_macro.jpg "An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background")
+
+---
+
+## A white ball illuminated by three colored lights
 
 <style>
 #acolortests {
-  font-size: 2rem;
   text-align: left;
-  background: white;
-  padding: 2rem;
-  color: black;
+  font-size: 2rem;
 }
 #acolortests .explain {
   font-size: 1rem;
@@ -105,6 +174,8 @@ A white ball illuminated by three colored lights of different brightness.
 }
 </style>
 <div id="acolortests">
+<div class="explain">
+</div>
 <div><input type="range" min="0" max="255" value="255" id="ared"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="agreen"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="ablue"></div>
 <div><span class="vis" id="aredshow">255</span><span class="spacer">+</span><span class="vis" id="agreenshow">255</span><span class="spacer">+</span><span class="vis" id="ablueshow">255</span><span class="spacer">=</span><span class="vis" id="argbshow">&nbsp;</span></div>
 <div class="svganim">
@@ -135,7 +206,7 @@ achangeColor();
 
 ---
 
-### Subractive (pigment-based) color mixing
+## Mixing Colors with Pigments
 
 |Primary Pigment Color<br>(a.k.a. subtractive)  | Complemented by Primary Light Color<br>(a.k.a. additive)
 |---    |---    
@@ -145,17 +216,21 @@ achangeColor();
 
 ---
 
-### Subractive (pigment-based) color mixing
-
-Three color droplets overlapping on a white sheet of paper.
+## Three overlapping colored stains on white paper
 
 <style>
 #scolortests {
-  font-size: 2rem;
-  background: white;
+  background-color: white;
+  padding: 2em;
   color: black;
+  border-radius: 1em;
   text-align: left;
-  padding: 2rem;
+  font-size: 2rem;
+}
+#scolortests .explain {
+  font-size: 1rem;
+  width: 80%;
+  margin: 0 auto;
 }
 #scolortests input {
   width: 20%;
@@ -211,6 +286,8 @@ Three color droplets overlapping on a white sheet of paper.
 }
 </style>
 <div id="scolortests">
+<div class="explain">
+</div>
 <div><input type="range" min="0" max="255" value="255" id="sred"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="sgreen"><span class="spacer"></span><input type="range" min="0" max="255" value="255" id="sblue"></div>
 <div><span class="vis" id="sredshow">255</span><span class="spacer">+</span><span class="vis" id="sgreenshow">255</span><span class="spacer">+</span><span class="vis" id="sblueshow">255</span><span class="spacer">=</span><span class="vis" id="srgbshow">&nbsp;</span></div>
 <div class="svganim"><span id="cblob"></span><span id="yblob"></span><span id="mblob"></span></div>
@@ -239,37 +316,32 @@ schangeColor();
  	  
 ---
 
-![](/images/banners/colors_and_eye.png)
+![The [halftone technique](https://en.wikipedia.org/wiki/Halftone) is a good example of this, where microscopic dots of different sizes and colors are used to make the illusion of a smooth color at a distance. <a class="imagecredit" href="https://en.wikipedia.org/wiki/File:Halftoningcolor.svg">image credit Wikimedia</a>](/images/bookpics/halftone.png "The halftone technique.")
 
 ---
 
-![An up-close picture of some of the SpinWheel's LEDs, showing the red, green, and blue subpixels.](/images/bookpics/LED_close-up.jpg "An up-close picture of five SpinWheel LEDs, showing the red, green, and blue subpixels.")
+# Light and Color
+
+The physics of colored light
 
 ---
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
-<div class="ssw-codecontent" markdown=0>
-<pre class="ssw-codeblock">
-void setup() {
-  SpinWheel.begin();
-}
-void loop() {
-</pre>
-<textarea class="ssw-codeblock">
-  SpinWheel.setLargeLEDsUniform(255, 255, 255);
-</textarea>
-<pre class="ssw-codeblock">
-  SpinWheel.drawFrame();
-}
-</pre>
-</div>
-
-# Light is an Electromagnetic Wave
+![Understanding the interplay between color and light enables  
+the creation of wondrous technology and art. <a class="imagecredit" href="https://www.pikrepo.com/fqyvu/multicolored-strobe-lights">image credit Pikrepo</a>](/images/bookpics/disco_lights.jpg)
 
 ---
 
-### Waves are traveling motion
+## White Light is a Mixture of Colors
+
+![White light being split into colors by a prism. The white light shines on the prism from the bottom left, and most of it is refracted and split as it passes through the prism. <a class="imagecredit" href="https://www.pexels.com/photo/optical-glass-triangular-prism-3845161/">image credit Pexels</a>](/images/bookpics/optical_glass_triangular_prism.jpg "Picture of a white light being split into colors by a prism")
+
+---
+
+## Light is an Electromagnetic Wave
+
+---
+
+## Waves are traveling motion
 
 A wave is a repetitive motion traveling through a medium. Some examples are shown in the table below.
 
@@ -281,13 +353,13 @@ A wave is a repetitive motion traveling through a medium. Some examples are show
 
 ---
 
-### Wavelength and Color
+## Properties of Waves
 
 <style>
 #wavewidget {
-  text-align: center;
-  background: white;
   color: black;
+  background-color: white;
+  text-align: center;
 }
 #wavewidget .vis {
   width: 40%;
@@ -307,7 +379,7 @@ A wave is a repetitive motion traveling through a medium. Some examples are show
 </style>
 <div id="wavewidget">
 <div>Pick a wavelength :</div>
-<div>300nm <input style="width:60%;top:0.5rem;position:relative;" type="range" min="300" max="800" value="500" id="waveSlider"> 800nm</div>
+<div>300nm <input style="width:50%;top:0.5rem;position:relative;" type="range" min="300" max="800" value="500" id="waveSlider"> 800nm</div>
 <div><span class="vis"><span id="waveView"></span>nm</span></div>
 <svg id="tagsvgwave" width="800" height="100" viewBox="0 0 800 100"> <defs> <path id="svgwave" fill=none stroke=black stroke-width="2" d="M0 50 C 40 90, 60 90, 100 50 C 140 10, 160 10, 200 50 C 240 90, 260 90, 300 50 C 340 10, 360 10, 400 50 C 440 90, 460 90, 500 50 C 540 10, 560 10, 600 50 C 640 90, 660 90, 700 50 C 740 10, 760 10, 800 50 C 840 90, 860 90, 900 50 C 940 10, 960 10, 1000 50 C 1040 90, 1060 90, 1100 50 C 1140 10, 1160 10, 1200 50 C 1240 90, 1260 90, 1300 50 C 1340 10, 1360 10, 1400 50 C 1440 90, 1460 90, 1500 50 C 1540 10, 1560 10, 1600 50 C 1640 90, 1660 90, 1700 50 C 1740 10, 1760 10, 1800 50 C 1840 90, 1860 90, 1900 50 C 1940 10, 1960 10, 2000 50 C 2040 90, 2060 90, 2100 50 C 2140 10, 2160 10, 2200 50 C 2240 90, 2260 90, 2300 50 C 2340 10, 2360 10, 2400 50 C 2440 90, 2460 90, 2500 50 C 2540 10, 2560 10, 2600 50 C 2640 90, 2660 90, 2700 50 C 2740 10, 2760 10, 2800 50 C 2840 90, 2860 90, 2900 50 C 2940 10, 2960 10, 3000 50 C 3040 90, 3060 90, 3100 50 C 3140 10, 3160 10, 3200 50 C 3240 90, 3260 90, 3300 50 C 3340 10, 3360 10, 3400 50 C 3440 90, 3460 90, 3500 50 C 3540 10, 3560 10, 3600 50 C 3640 90, 3660 90, 3700 50 C 3740 10, 3760 10, 3800 50 C 3840 90, 3860 90, 3900 50 C 3940 10, 3960 10, 4000 50 C 4040 90, 4060 90, 4100 50 C 4140 10, 4160 10, 4200 50 C 4240 90, 4260 90, 4300 50 C 4340 10, 4360 10, 4400 50 C 4440 90, 4460 90, 4500 50 C 4540 10, 4560 10, 4600 50 C 4640 90, 4660 90, 4700 50 C 4740 10, 4760 10, 4800 50 C 4840 90, 4860 90, 4900 50 C 4940 10, 4960 10, 5000 50 C 5040 90, 5060 90, 5100 50" /> </defs> <use xlink:href="#svgwave" x="0" y="0"> <animate attributeName="x" from="0" to="-200" dur="3s" repeatCount="indefinite"/> </use> </svg>
 <script>
@@ -394,138 +466,3 @@ waveUpdate();
 
 ![The Electromagnetic Spectrum, only a small portion of which is visible to our eyes. <a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:EM_spectrumrevised.png">image credit Wikimedia</a>](/images/bookpics/EM_spectrum.png "The Electromagnetic Spectrum"){style="width:100%;max-width:100%"}
 
-
----
-
-![White light being split into colors by a prism. The white light shines on the prism from the bottom left, and a big part of it is refracted and split as it passes through the prism. <a class="imagecredit" href="https://www.pexels.com/photo/optical-glass-triangular-prism-3845161/">image credit Pexels</a>](/images/bookpics/optical_glass_triangular_prism.jpg "Picture of a white light being split into colors by a prism")
-
----
-
-![An artistic rendering of a close-up of the back of the eye illustrating the rods (black) and cones (triangles colored by type). <a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">image credit Jack Hegarty</a>](/images/bookpics/rods_cones.png "Close-up cartoon of rods and cones in an eye")
-
----
-
-<iframe src="https://theoatmeal.com/comics/mantis_shrimp" style="width:80%;height:50vh;"></iframe>
-
-The Oatmeal comics has a story about the mantis shrimp: an animal that can distinguish 12 different base colors.
-
-# Other limitations of our Eyes
-
----
-
-### Persistence of vision
-
-<p style="color:red;font-size:0.7em;">Warning: This demo involves rapidly flashing bright colors.</p>
-
-<style>
-#povtests {
-  background: white;
-  color: black;
-  padding: 2rem;
-  font-size: 2rem;
-  text-shadow:
-    -1px -1px 0 white,
-    1px -1px 0  white,
-    -1px 1px 0  white,
-    1px 1px 0   white;
-}
-#povtests input {
-  width: 30%;
-  margin: 0;
-}
-#povtests span {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-}
-#povtests .vis {
-  width: 30%;
-  height: 2em;
-  line-height: 2em;
-}
-#povshow {
-  background-color: red;
-  animation-name: flicker;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: step-start;
-  animation-play-state: paused;
-}
-@keyframes flicker {
-  0%   {background-color: red;}
-  50% {background-color: blue;}
-}
-</style>
-<div id="povtests">
-<div><input type="range" min="80" max="2000" value="1000" id="time"><span class="vis" id="timeshow"></span><span class="vis" id="povshow">&nbsp;</span></div>
-<button id="start">Start</button>
-<button id="stop">Stop</button>
-<script>
-var t = document.getElementById("time").value;
-var squarestyle = document.getElementById("povshow").style;
-function getT(){
-  t = document.getElementById("time").value;
-  document.getElementById("timeshow").innerHTML = `${t}ms`;
-  squarestyle["animation-duration"] = `${t/1000}s`;
-}
-function startCycle(){
-  squarestyle["animation-play-state"]="running";
-}
-function stopCycle(){
-  squarestyle["animation-play-state"]="paused";
-}
-document.getElementById("time").oninput = getT;
-document.getElementById("start").onclick = startCycle;
-document.getElementById("stop").onclick = stopCycle;
-getT();
-</script>
-</div>
-
-Pick the frequency at which the rectangle will change colors from blue to red and back.
-
----
-
-### Implemented on the SpinWheel
-
-```cpp
-// BE CAREFUL IF YOU HAVE EPILEPSY AS THIS WILL CAUSE FLASHING COLORS!!!
-#include "SpinWearables.h"
-using namespace SpinWearables;
-
-void setup() {
-  // Initialize all of the hardware on the SpinWheel.
-  SpinWheel.begin();
-}
-
-// BE CAREFUL IF YOU HAVE EPILEPSY AS THIS WILL CAUSE FLASHING COLORS!!!
-// Change this value! Experiment!
-int delay_time_in_milliseconds = 500;
-
-void loop() {
-  // Show red...
-  SpinWheel.setLargeLEDsUniform(255, 0, 0);
-  SpinWheel.drawFrame();
-  // Wait...
-  delay(delay_time_in_milliseconds);
-  // Show blue...
-  SpinWheel.setLargeLEDsUniform(0, 0, 255);
-  SpinWheel.drawFrame();
-  // Wait...
-  delay(delay_time_in_milliseconds);  
-}
-```
-
----
-
-![If you move the SpinWheel rapidly in front of your eyes, you will see the purple color separate in two distinct streaks of red and blue.](/images/bookpics/fast_pov_streak.jpg "Picture of a fast-moving SpinWheel")
-
----
-
-![Understanding the interplay between color and light enables  
-the creation of wondrous technology and art. <a class="imagecredit" href="https://www.pikrepo.com/fqyvu/multicolored-strobe-lights">image credit Pikrepo</a>](/images/bookpics/disco_lights.jpg)
-
-# Suggested lessons and activities
-
----
-
-TODO
