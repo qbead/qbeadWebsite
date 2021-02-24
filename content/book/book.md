@@ -239,7 +239,7 @@ These denote important considerations about health and device care that should b
 We have a variety of interactive visualizations throughout these pages, that work well on desktop browsers like Firefox and Chrome. Lastly, we have many code examples in our pages that explain how to program the device, [including some interactive simulations of the device with which you can play directly from the browser](/intro).
 
 ::: warning
-The virtual SpinWheel simulations and some of the other interactive widgets do not currently work in all browsers (particularly Safari and on phones). We are actively working on ensuring that all interactive elements are enjoyable across platforms.
+The virtual SpinWheel simulations and some of the other interactive widgets do not always work well on mobile devices. The Safari browser also causes issues with some visualizatons.
 :::
 
 ### Engineer's Diary
