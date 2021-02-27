@@ -196,8 +196,8 @@ These activities build on the ideas presented in the introductory adventures. If
 <li> [Coding Building Blocks](/progpatterns)</li>
 <li> [Arduino 101](/arduino101) </li>
 <li> [Vectors and Motion](/vectors)</li>
-<li> Inertial Reference Frames / Free Fall (planned)</li>
-<li> Physical Computing (planned)</li>
+<!--<li> Inertial Reference Frames / Free Fall (planned)</li>
+<li> Physical Computing (planned)</li>-->
 </ol>
 
 ## Advanced Adventures
@@ -213,8 +213,8 @@ These are the most challenging SpinWheel activities. Playing with them will be e
 ### Associated Lessons
 <ol>
 <li> [Rotation and Moving in Circles](/rotation)</li>
-<li> Magnetism (planned)</li>
-<li> Electricity (planned)</li>
+<!--<li> Magnetism (planned)</li>
+<li> Electricity (planned)</li>-->
 </ol>
 
 ## Appendix
