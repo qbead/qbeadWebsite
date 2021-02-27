@@ -316,6 +316,7 @@ const tiles = [
 {x:1, y:6, bgcolor:"#ffffff", textcolor:"#13a89e", bordercolor:"#13a89e", inner: true, text:"Biology of<br>Sight", href:"/sight"},
 {x:1, y:7, bgcolor:"#ffffff", textcolor:"#13a89e", bordercolor:"#13a89e", inner: false, text:"Color<br>Theory", href:"/colortheory"},
 {x:1, y:5, bgcolor:"#ffffff", textcolor:"#13a89e", bordercolor:"#13a89e", inner: false, text:"Light and<br>Color", href:"/lightandcolor"},
+{x:1, y:8, bgcolor:"#ffffff", textcolor:"#13a89e", bordercolor:"#13a89e", inner: true, text:"Stroboscope", href:"/stroboscope"},
 //animations
 {x:1, y:2, bgcolor:"#ffffff", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Getting<br>Started<br>with the<br>SpinWheel", href:"/intro"},
 {x:2, y:4, bgcolor:"#d3eef9", textcolor:"#0e75bc", bordercolor:"#0e75bc", inner: true, text:"Customizing<br>the SpinWheel&#39;s<br>Display", href:"/paper_booklet"},
