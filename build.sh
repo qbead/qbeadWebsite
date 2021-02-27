@@ -12,7 +12,7 @@ echo "MAIN"
 for mdfile in content/main/*{index,$@}*md; do\
     name=$(basename -s .md $mdfile)
     echo $name
-    pandoc -o build/"$name".html -s -f markdown+emoji --mathjax --css="/custom.css" --css="/custom_main_v2.css" --template="custom_v2" --data-dir="data-dir" $mdfile
+    pandoc -o build/"$name".html -s -f markdown+emoji --mathjax="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" --css="/custom.css" --css="/custom_main_v2.css" --template="custom_v2" --data-dir="data-dir" $mdfile
     mkdir build/$name
     mv build/$name.html build/$name/index.html
 done
@@ -24,9 +24,9 @@ for mdfile in content/book/*{book,$@}*md; do\
     echo $name
     if grep -Fxq "toc: yes" $mdfile
     then
-        pandoc -o build/"$name".html -s --toc -f markdown+emoji --mathjax --css="/custom.css" --css="/custom_book.css" --template="custom_book" --data-dir="data-dir" $mdfile
+        pandoc -o build/"$name".html -s --toc -f markdown+emoji --mathjax="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" --css="/custom.css" --css="/custom_book.css" --template="custom_book" --data-dir="data-dir" $mdfile
     else
-        pandoc -o build/"$name".html -s       -f markdown+emoji --mathjax --css="/custom.css" --css="/custom_book.css" --template="custom_book" --data-dir="data-dir" $mdfile
+        pandoc -o build/"$name".html -s       -f markdown+emoji --mathjax="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" --css="/custom.css" --css="/custom_book.css" --template="custom_book" --data-dir="data-dir" $mdfile
     fi
     mkdir build/$name
     mv build/$name.html build/$name/index.html

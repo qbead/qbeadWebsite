@@ -170,7 +170,7 @@ These adventures assume that you have no coding experience and are a great way t
 <ol>
 <li>[Biology of Sight](/sight) - if you find the learning curve too steep, you might enjoy the [Mixing Color with Light lesson from the companion booklet](/paper_booklet)</li>
 <li> [Intro to Animation](/animation) - similarly, if this adventure seems too overwhelming at first, check out the [Customizing the SpinWheel&#39;s Display and Creating Animations with the SpinWheel chapters from the companion booklet](/paper_booklet)</li>
-<li> Stroboscopes and Stroboscopic Photography (planned) </li>
+<li> [Stroboscopes and Stroboscopic Photography](/stroboscope) - using rapidly-flashing sources of light can permit us to photograph very fast objects </li>
 </ol>
 
 ### Associated Lessons
