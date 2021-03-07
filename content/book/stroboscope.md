@@ -105,8 +105,8 @@ On the right is the same image as it would be seen if the light source was inter
 The sliders let you change the frequency of the flashes and the relative duration of illumination and consecutive darkness.
 Can you adjust the sliders such that the right image appears always in the same location.
 
-<div style="text-align:center">briefly on<input type="range" min="10" max="100" value="50" id="strobduty">always on</div>
-<div style="text-align:center">flash often<input type="range" min="10" max="100" value="100" id="strobperiod">flash rarely</div>
+<div style="text-align:center"><strong>Relative duration:</strong><br>briefly on<input type="range" min="10" max="100" value="50" id="strobduty">always on</div>
+<div style="text-align:center"><strong>Frequency (or period):</strong><br>flash often<input type="range" min="10" max="100" value="100" id="strobperiod">flash rarely</div>
 <div style="text-align:center">Light turns on every <strong id=visperiod></strong> seconds for a duration of <strong id=visduty></strong> seconds.</div>
 <div class="strobanim" id="strob_stick_figure">
 <canvas id="strob_all" width=200 height=200></canvas>
@@ -174,11 +174,15 @@ It was not that easy, was it? There are a couple of features you might have noti
 - It is easier to calibrate the period of the flashes if the duration of each flash is short. If the illumination is on for too long, it does not matter whether the flashing frequency is synchronized to the motion of the stick figure: the stick figure will still move too much during that duration and will look like a blur. Set the duration of the flash to a very low value by using the top slider.
 - Now that the duration is low and the image is as sharp as it will get, try to change the periods of the flashes so that the image on the right appears always in the same location. Could you now say, after performing this procedure, how many seconds does it take for the stick figure to make one full rotation?
 
+## Real world example
+
 We can do this with a real stick figure attached to a real fan or toy motor:
 
 <figure><video src="/images/strob_blur.mp4" controls></video><figcaption>Illuminating a stick figure attached to a toy motor. The illumination is even and constant, leading to the fast-moving stick figure looking like a blur.</figcaption></figure>
 
 <figure><video src="/images/strob_good.mp4" controls></video><figcaption>Same stick figure illuminated by a light source flashing roughly a hundred times each second. Notice two things: it took us a while to precisely calibrate the flashing period and until we did that the stick figure still looked like a blur moving all over the place; while at the end we do have the stick figure mostly in the same location, it still looks a bit blurry -- this is because even during the short time the light is on (three ten-thousands of a second) the stick moves a couple of millimeters.</figcaption></figure>
+
+## Creating your own Stroboscope
 
 This was achieved by using the SpinWheel's LEDs (yes, they are capable of such high speeds). We will now see how this was done so you can try at home. A good target for the device we will create (called a stroboscope) would be any random fan you have at home (which usually perform anything between 50 and 200 rotations per second). Another interesting target would be rapid consecutive droplets of water coming from a leaky faucet (if you time the flashes to be just a bit shorter than the period between droplets, it would look like the droplets are slowly moving upwards).
 
@@ -279,3 +283,9 @@ Lastly, could you guess what happens if you use a period that is half (or one-th
 of the correct period?
 
 <figure><video src="/images/strob_half.mp4" controls></video><figcaption>The stick figure illuminated with continuous light and with rapidly flashing light at a period equal to one-half of the period of the rotating stick. Why does the image double up?</figcaption></figure>
+
+## Stroboscopic illusions on camera
+
+This effect can also be observed when the frame rate of a camera syncs up with a repetitive motion being recorded. You can see in the video below, that the blades of a flying helicopter can look motionless even though they are actually rapidly spinning. The educational channel of Captain Disillusion goes into further detail, [explaining the phenomenon](https://www.youtube.com/watch?v=mPHsRcI5LLQ).
+
+<figure><video src="/images/strob_heli.mp4" controls></video><figcaption>The shutter of the camera syncs up with the motion of the blades, creating an illusion of motionless blades. This particular occurrence happened at a soccer stadium in Esbjerg, but you can find many more examples online.</figcaption></figure>
