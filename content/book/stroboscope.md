@@ -170,9 +170,9 @@ turn_strob_on();
 
 It was not that easy, was it? There are a couple of features you might have noticed:
 
-- It is important to distinguish the "period" of the flashes (i.e., the time between the onsets of two consecutive flashes) for the duration of each flash (i.e., the time over which a flash is on). The duration is always less than a period. The duration of the flash plus the duration of the darkness is equal to the period.
+- It is important to distinguish the "period" of the flashes (i.e., the time between the onsets of two consecutive flashes) from the duration of each flash (i.e., the time over which a flash is on). The duration is always less than a period. The duration of the flash plus the duration of the darkness is equal to the period.
 - It is easier to calibrate the period of the flashes if the duration of each flash is short. If the illumination is on for too long, it does not matter whether the flashing frequency is synchronized to the motion of the stick figure: the stick figure will still move too much during that duration and will look like a blur. Set the duration of the flash to a very low value by using the top slider.
-- Now that the duration is low and the image is as sharp as it will get, try to change the periods of the flashes so that the image on the right appears always in the same location. Could you now say, after performing this procedure, how many seconds does it take for the stick figure to make one full rotation?
+- Now that the duration is low and the image is as sharp as it will get, try to change the periods of the flashes so that the image on the right appears always in the same location. After performing this procedure, could you determine how many seconds does it take for the stick figure to make one full rotation?
 
 ## Real world example
 
