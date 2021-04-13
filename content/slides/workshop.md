@@ -7,18 +7,59 @@ keywords: SpinWheel, programming, electronics, physics, color, light, electromag
 
 <link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
 <script src='/simspinwheel/simspinwheel.js'></script>
+<style>
+.note_question {
+  color: #2676b0;
+}
+</style>
 
+<aside class="notes">
+<h3>To be done in Session 1 (10ish minutes)</h1>
+
+This section aims to introduce a couple of curious facts about color, light, and sight.
+Of particular importance is to introduce the idea that mixing the primary red, green, and blue color light
+enables tricking our eyes into perceiving any other color. **However, the main goal is to excite the kids
+with a non-technical topic before we talk about code**.
+
+_For this first lesson, we will learn how to trick our eyes into perceiving a rainbow of colors using only red, green, and blue LEDs._
+
+Be sure to check out the [biology of sight](/sight) and [color theory](/colortheory) lessons on which this section is based or see [the detailed slide deck on Sight and Light for more](/slides/sight).
+</aside>
 ---
 
 ![](/images/banners/colors_and_eye.png)
+
+<aside class="notes">
+Consider spending a second to mention the structure of our eyes and the sub-pixels of a TV, just briefly as you will have a chance to mention this in more detail later.
+
+_Our eyes have sensors for three different colors and our brain knows to interpret mixtures of these base colors as new derivative colors. Our technology, including TVs, use this to create any desired color by using only red, green, and blue light sources._
+</aside>
 
 ---
 
 ![White light being split into colors by a prism. The white light shines on the prism from the bottom left, and a big part of it is refracted and split as it passes through the prism. <a class="imagecredit" href="https://www.pexels.com/photo/optical-glass-triangular-prism-3845161/">image credit Pexels</a>](/images/bookpics/optical_glass_triangular_prism.jpg "Picture of a white light being split into colors by a prism")
 
+<aside class="notes">
+If you care about physics and electrodynamics, mention in some detail that white light is a mixture of all wavelengths, and that color and wavelength are related. However, this is unrelated to the way eyes perceive color and can be skipped if you prefer. Consult the [light and color lesson](/lightandcolor) for more details.
+ 
+_In reality, white light is a mixture of many colors. This mixture can be seen by using a prism to separate the components of the mixture._
+
+_A prism works by bending, or “refracting”, light at different angles depending on its color, thereby allowing us to see all of the colors that make up white light. This is why if you let sunlight shine through a prism, you can see a rainbow._
+</aside>
+
 ---
 
 ![An artistic rendering of a close-up of the back of the eye illustrating the rods (black) and cones (triangles colored by type). <a class="imagecredit" href="https://johnhegarty8.wixsite.com/johnhegarty">image credit Jack Hegarty</a>](/images/bookpics/rods_cones.png "Close-up cartoon of rods and cones in an eye")
+
+<aside class="notes">
+Spend some time talking about this schematic and what it means that our eyes have only three colors sensor but we are able to see more colors.
+
+_The light-sensing tissue in the back of our eyes, the retina, has small cells that respond to some of these colors. They are called “cone cells” and are classified into three separate groups by the color that they sense the best: red, green, or blue. Each of these cells responds only to one of these three colors, but not the others. For instance, the blue-sensing cones respond to blue light, but do not respond to red light, and vice versa._
+
+_This leads to a problem… <span class="note_question">If our eyes can sense only red, green, and blue, how come we can see yellow?</span>_
+
+_Our eyes and brains have evolved so that our red- and green-sensing cones both respond slightly to yellow. If our brain detects that both groups of cones are activated, it knows to interpret the color as yellow. And similar compromises are made for the other colors we can detect. For instance, purple activates both red- and blue-sensing cones._
+</aside>
 
 ---
 
@@ -26,13 +67,28 @@ keywords: SpinWheel, programming, electronics, physics, color, light, electromag
 
 [The Oatmeal](https://theoatmeal.com/comics/mantis_shrimp) has a great educational comics on an animal with even more color sensitivity.
 
----
-
-![An up-close picture of some of the SpinWheel's LEDs, showing the red, green, and blue subpixels.](/images/bookpics/LED_close-up.jpg "An up-close picture of five SpinWheel LEDs, showing the red, green, and blue subpixels.")
+<aside class="notes">
+Up to you if you want to mention there are animals with different number of color receptors, or mention the Oatmeal comics that talks about how amazing the Mantis Shrimp is with its 12 receptors and its thermonuclear explosion of colors and blood soaked rainbows.
+</aside>
 
 ---
 
 ![An up-close picture of a computer screen, showing the red, green, and blue light sources, making up the white background. These sources, or subpixels, are so close together that from a distance we see them as overlapping and observe only their mixture.<a class="imagecredit" href="https://commons.wikimedia.org/wiki/File:LCD_Pixels_Macro.jpg">image credit Wikimedia</a>](/images/bookpics/lcd_pixels_macro.jpg "An up-close picture of a computer screen, showing the red, green, and blue subpixels, making up the white background")
+
+
+<aside class="notes">
+_We can exploit this imperfection of our eyes to make rich colorful displays while using only three colors. For instance, our eyes cannot distinguish between true purple and a mixture of blue and red, so we don’t need a purple light source, only blue and red lights._
+
+_If you look at a TV screen displaying a white page with a magnifying glass, you will see that it is made out of red, blue, and green dots. Combinations of these red, blue, and green dots make up the colorful displays you are looking at on your screen._
+</aside>
+
+---
+
+![An up-close picture of some of the SpinWheel's LEDs, showing the red, green, and blue subpixels.](/images/bookpics/LED_close-up.jpg "An up-close picture of five SpinWheel LEDs, showing the red, green, and blue subpixels.")
+
+<aside class="notes">
+_The SpinWheel’s colorful display uses a similar method. If you look closely at a LED light on the SpinWheel or in the above image, you can see that it contains 3 small light sources: one red, one green, and one blue. Combining these lights in different intensities allows for a wide variety of colors to be displayed on the LEDs. This will allow us to program the SpinWheel to display beautiful colorful patterns (while using only a small set of hardware components)._
+</aside>
 
 ---
 
@@ -108,12 +164,20 @@ achangeColor();
 </script>
 </div>
 
----
-
-See [the detailed slide deck on Sight and Light for more](/slides/sight).
+<aside class="notes">
+Play a bit with the sliders, ask about favorite colors, make them guess how to mix it, mention that shortly we will do it with the device itself.
+</aside>
 
 
 # Programming an artistic piece of electronics
+
+<aside class="notes">
+We will finally start modifying code and uploading it to the SpinWheel. In the next few slides we will **not** explain in detail what "variables" or "functions" are. Using the word "command" instead of "function" might help. We will just hack around to get a sense of it.
+
+Moreover, each "code" slide would have an interactive "sliders based" slide before it, where we can observe what the device can in principle do before trying to express it in code. Try to stress that idea to the students: _do not start thinking in code, rather start by thinking what you want to happen, and only then express it in code_.
+
+Try to gauge the engagement of the students here: this would be a crucial spot to learn whether you are going too slow or too fast for them.
+</aside>
 
 ---
 
@@ -207,9 +271,21 @@ changeColor();
 </div>
 </div>
 
+<aside class="notes">
+Very briefly reprise the discussion from the last color-mixing slide, this time in the context of it being possible on the SpinWheel LEDs.
+</aside>
+
 ---
 
-The corresponding command in code looks like `SpinWheel.setLargeLEDsUniform(50, 255, 250)`
+The corresponding command in code looks like
+
+`SpinWheel.setLargeLEDsUniform(50, 255, 250)`
+
+<aside class="notes">
+Maybe mention that they are not expected to "know" this command, rather these things usually come in documentation tables provided with the language or device you are programming.
+
+There is also `setSmallLEDsUniform`.
+</aside>
 
 ---
 
@@ -226,6 +302,12 @@ void loop() {
 }
 </pre>
 </div>
+
+<aside class="notes">
+Finally, we will actually write and upload code. Briefly explain what each line does. The students do not need to write the code from scratch, they can open it from the Example's folder in the Arduino software. It is the sketch in [`Paper_Guide Purple_LEDs`](/codedoc/examples/Paper_Guide/Purple_LEDs/). Instruct them to set it up to light up with their favorite color. **After** the successful uploads, do not spend much time here: the next slide is more interesting.
+
+You should be able to make suggestions in the simulator on this page, but having your own Arduino software running and shared on screen would be pretty important too. Expect a lot of errors due to semicolons and commas.
+</aside>
 
 ---
 
@@ -292,9 +374,21 @@ changeSingleColor();
 </div>
 </div>
 
+<aside class="notes">
+By sequentially selecting an LED and then setting its color we can do this for all LEDs.
+Spend a minute or so, showing an example in which a few consecutive LEDs are turned in
+something like red, then blue, then purple. We will do this on the actual device shortly.
+</aside>
+
 ---
 
-The corresponding command is `SpinWheel.setLarge(4, 255, 0, 100);`
+The corresponding command is `SpinWheel.setLargeLED(4, 255, 0, 100);`
+
+<aside class="notes">
+Note that now we do not just give the 3 colors to be used, but also specify which LED to turn on.
+
+There is also `setSmallLED`.
+</aside>
 
 ---
 
@@ -312,9 +406,23 @@ void loop() {
 </pre>
 </div>
 
+<aside class="notes">
+Unleash some more creativity here. As a starting point, the students can use [`Paper_Guide Red_LED`](/codedoc/examples/Paper_Guide/Red_LED/). Feel free to spend a lot of time here, and have them copy paste the line with `setLargeLED` and even start using `setSmallLED` and make their own pattern. If they are getting impatient, tell them that soon we will see how to make these things flash and change with time, but for the moment **we need to learn how to do static images**.
+
+**Do not necessarily stay on this page. The next few pages have tips that on the small LEDs and other ideas that might be of use. For the next few minutes at least, do not feel bound by the sliders, rather really focus on doing things with the kids and making new patterns by adding more larger or small LEDs in various colors.**
+
+**Encourage them to make pictures, selfies, screenshots, etc.**
+
+You should be able to make suggestions in the simulator on this page, but having your own Arduino software running and shared on screen would be pretty important too. Expect a lot of errors due to semicolons and commas.
+</aside>
+
 ---
 
 ![SpinWheel LED numbering.](/images/spinwheel_with_numbers.png "SpinWheel LED numbering")
+
+<aside class="notes">
+Let them know that this schematic is also available in their booklets and online.
+</aside>
 
 ---
 
@@ -326,6 +434,12 @@ you can use the line
 `SpinWheel.setSmallLEDsUniform`.
 Like above, the three numbers represent the red, green, and blue 
 components of the color you want to make.
+
+<aside class="notes">
+The next few slides explain the commands for the small LEDs. Just stick to one of them, or better, open your own Arduino software, and play with the kids.
+
+**Encourage them to make pictures, selfies, screenshots, etc.**
+</aside>
 
 ---
 
@@ -381,6 +495,13 @@ Consider checking out:
   - [Arduino 101 at `/arduino101`](/arduino101)
 
 
+<aside class="notes">
+Some userful resources, some of which we will do together. This is probably the end of the first session.
+No need to spend time on this slide, rather show the upcoming slide and excite them about what we are going to do:
+**a bit more advanced programming that lets us make time dependent and even motion sensing patterns**.
+
+If you ended early, do the "General Programming Principles", but do not worry too much about it.
+</aside>
 
 # More general programming principles
 
