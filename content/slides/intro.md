@@ -297,7 +297,7 @@ changeSingleColor();
 
 ---
 
-The corresponding command is `SpinWheel.setLarge(4, 255, 0, 100);`
+The corresponding command is `SpinWheel.setLargeLED(4, 255, 0, 100);`
 
 ---
 

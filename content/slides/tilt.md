@@ -448,10 +448,10 @@ void loop() {
   // We only want the SpinWheel to register
   // if the tilt is sufficiently large.
   if (x > 10) {
-    SpinWheel.setLargeLED(5,-x, -x,-x);
+    SpinWheel.setLargeLED(5, x, x, x);
   }
   else if (x < -10) {
-    SpinWheel.setLargeLED(7, x, x, x);
+    SpinWheel.setLargeLED(7,-x,-x,-x);
   }
 
   SpinWheel.drawFrame();
@@ -462,9 +462,9 @@ void loop() {
 
 ```c++
   if (x > 10) {
-    SpinWheel.setLargeLED(7,-x, -x,-x);
+    SpinWheel.setLargeLED(5, x, x, x);
   }
   else if (x < -10) {
-    SpinWheel.setLargeLED(5, x, x, x);
+    SpinWheel.setLargeLED(7,-x,-x,-x);
   }
 ```
