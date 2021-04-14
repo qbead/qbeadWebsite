@@ -723,6 +723,12 @@ You can reprise the previous explanation of the similar visualization: _First we
 - Commands tend to be some name followed by parentheses `()`.
 - Inside these parentheses we put some extra information: this information can control how a command performs.
 
+<aside class="notes">
+The next few slides are a bit dry. Try to gauge your students interest here and abreviate things if they are not interested.
+
+Just use the content of the slides, they are self-explantory: we cover the two main ideas necessary for simple procedural programming: what a variable is and what a function (or command or routine) is. We do not even discuss how to create your own functions, only how to use functions that are already created.
+</aside>
+
 ---
 
 ## Building Blocks for your Program
@@ -779,6 +785,10 @@ int number_b = 7;
 int resulting_number = max(number_a, number_b);
 ```
 
+<aside class="notes">
+Try to run through and ask the students what they expect to happen, line by line.
+</aside>
+
 ---
 
 ```c++
@@ -793,6 +803,10 @@ The value stored in `resulting_number` in this case would be `7`.
 
 ![Functions are tools provided in a given programming language that are capable of ingesting a number of parameters and producting (a.k.a "returning") some new value that depended on the input parameters. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/functions.png)
 
+<aside class="notes">
+_It takes something in and it spits something out._
+</aside>
+
 ---
 
 ```c++
@@ -804,6 +818,12 @@ int result = max(sqrt(number_a-1) * 2, min(number_b, 2));
 <figure><video src="/images/bookpics/calc_tree.mp4" muted playsinline loop></video><figcaption>
 </figcaption></figure>
 
+<aside class="notes">
+If the students are bored, just skip this, but if they are engaged, this is an important slide that helps understand how nested functions work. How each function gives its result to the outer function that uses it.
+
+Right click to play and try to explain in detail each layer of the computation as it appears in the diagram. Do not worry if it is going too fast, just use a few more loops of the animation.
+</aside>
+
 ---
 
 ## Comments
@@ -814,6 +834,11 @@ int result = max(sqrt(number_a-1) * 2, min(number_b, 2));
 // in the variable named my_test_variable.
 int my_test_variable = 5;
 ```
+
+<aside class="notes">
+Mention that comments will be used a lot for explanations in the example pieces of code.
+</aside>
+
 
 ---
 
