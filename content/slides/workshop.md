@@ -14,7 +14,7 @@ keywords: SpinWheel, programming, electronics, physics, color, light, electromag
 </style>
 
 <aside class="notes">
-<h3>To be done in Session 1 (10ish minutes)</h1>
+<h3>To be done in Session 1 (10ish minutes of mostly instructing students)</h1>
 
 This section aims to introduce a couple of curious facts about color, light, and sight.
 Of particular importance is to introduce the idea that mixing the primary red, green, and blue color light
@@ -172,6 +172,7 @@ Play a bit with the sliders, ask about favorite colors, make them guess how to m
 # Programming an artistic piece of electronics
 
 <aside class="notes">
+<h3>To be done in Session 1 (30ish minutes with a lot of interaction from students)</h3>
 We will finally start modifying code and uploading it to the SpinWheel. In the next few slides we will **not** explain in detail what "variables" or "functions" are. Using the word "command" instead of "function" might help. We will just hack around to get a sense of it.
 
 Moreover, each "code" slide would have an interactive "sliders based" slide before it, where we can observe what the device can in principle do before trying to express it in code. Try to stress that idea to the students: _do not start thinking in code, rather start by thinking what you want to happen, and only then express it in code_.
@@ -505,6 +506,16 @@ If you ended early, do the "General Programming Principles", but do not worry to
 
 # More general programming principles
 
+<aside class="notes">
+<h3>To be done in Session 2, but might start in Session 1 (15ish minutes of mostly instructing students)</h3>
+
+Now that the students have basic understanding of color mixing and have seen some simple examples of what the device can do (and made simplistic programs themselves), we can talk about what a program actually looks like. Remember, up to now they have just been "hacking" some code, based on what the names of commands sound like and changed some numbers, they have not learnt why commands are ordered in a certain way. We will learn this here.
+
+For a lot of this section you probably want to use the word "command", not the word "function", to avoid confusion among students that might know what a mathematical function is.
+
+Based on the [Basic Structure of a Program](/basics) and [Coding Building Blocks](/progpatterns) pages. Check out the [Programming slide deck](/slides/programming) which includes more details.
+</aside>
+
 ---
 
 ## The Skeleton of an Arduino Program
@@ -521,9 +532,22 @@ void loop() {
 
 This program does absolutely nothing.
 
+<aside class="notes">
+The video on the next page might be when you actually want to talk a lot as it explains this slide well visually. But here is what the code of an "empty" program looks like.
+
+_Most programs for any computer are split in a section that prepares various prerequisites and turns on various hardware,
+followed by a section that actually runs the interesting features of the program. Arduino makes this separation very obvious: We have a block called `setup` that performs the setup, and a block of commands called `loop` that is executed repeatedly (in a "loop"). That block usually looks for any detected events (e.g. keystrokes on a computer or shaking of a phone) and responds with something useful (e.g. shows a character or turns on a light). Frequently this type of loop is called "the event loop"._
+
+_This program does nothing, as we have not put any commands in either of the two blocks._
+</aside>
+
 ---
 
 <figure><video src="/images/bookpics/setup_loop.mp4" muted playsinline loop></video><figcaption> When you turn on the SpinWheel, `setup()` is run once and then the `loop()` block is run repeatedly until the SpinWheel is turned off. </figcaption></figure>
+
+<aside class="notes">
+Right click on the image to play the video, and reprise the explanation from the previous slide, showing how at first only `setup` is executed and then the commands from `loop` are executed repeatedly.
+</aside>
 
 ---
 
@@ -545,6 +569,10 @@ void loop() {
 
 }
 ```
+
+<aside class="notes">
+_The SpinWheel needs a few extra functionalities to be enabled. In different languages that happens in different ways. In the case of the language used by Arduino (C++), you need the `#include` and `using` invocations. They make a lot of extra SpinWheel commands available to you. You also need to use a particular `setup` command that turns on much of the SpinWheel hardware._
+</aside>
 
 ---
 
@@ -568,9 +596,17 @@ void loop() {
 }
 ```
 
+<aside class="notes">
+_Finally, we get to remake the simple program we saw previous that just turns on one LED. Shortly we will make it a bit more interesting. Here `setLargeLED` sets the collor, and `drawFrame` heeds all previous `set` commands and updates the actual LEDs with the given colors. Be careful with semicolons, computers can be stupid about typos._
+</aside>
+
 ---
 
 ![SpinWheel LED numbering.](/images/spinwheel_with_numbers.png "SpinWheel LED numbering")
+
+<aside class="notes">
+This diagram of LEDs and their indices is available in the booklet or on the website as well.
+</aside>
 
 ---
 
@@ -590,6 +626,10 @@ void loop() {
 </pre>
 </div>
 
+<aside class="notes">
+Just another interactive example to drill the idea down. Feel free to skip it.
+</aside>
+
 ---
 
 ## Creating changing patterns
@@ -602,6 +642,12 @@ To **define** a new variable we can add the following line to the loop block:
 ```c++
 int which_LED = 1;
 ```
+
+<aside class="notes">
+_Finally, we will make something that is dynamic and changes. To track and update values that we want to change,
+we will put these values in variables, e.g., a variable that contains which LED should be on. In this particular
+language `int` denotes a variable that contains integer numbers._
+</aside>
 
 ---
 
@@ -619,6 +665,10 @@ void loop() {
   SpinWheel.drawFrame();
 }
 ```
+
+<aside class="notes">
+_Compared to the previous function implementatation, this does not do anything new, but we will see how story the number of the LED in a variable lets us change that value if we wish._
+</aside>
 
 ---
 
@@ -651,9 +701,18 @@ void loop() {
 }
 ```
 
+<aside class="notes">
+_We had to define the variable **outside** of the `loop` block in order to have it retain its value in between each `loop` run. But now, in each loop we are incrementing the value of `which_LED` and we can see how it cause the LED which is on to change when we upload it to the SpinWheel. We had to also use the `delay` function to make this happen slowly enough so that we can see it with our eyes. We also use the `clearAllLEDs` function to erase the state of the LEDs that was set up to now._
+</aside>
+
 ---
 
 <video src="/images/bookpics/brightness_loop.mp4" muted playsinline loop></video>
+
+<aside class="notes">
+Right click to get the play menu for this video.
+You can reprise the previous explanation of the similar visualization: _First we have `setup` and then in each `loop` we increment `which_LED`._
+</aside>
 
 ---
 
