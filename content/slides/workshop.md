@@ -852,16 +852,29 @@ Check out the [Programming slide deck](/slides/programming) which includes more 
 
 How to use code to light up the display and make properly timed animation frames.
 
+<aside class="notes">
+<h3>To be done in Session 2 (10ish minutes of mostly instructing students)</h3>
+
+_We learnt how to make static images and we were introduced to the very basics of creating a program in this language. Now we will join the two skills into making a image that changes through time._
+
+See the [Intro to Animation](/animation) and [Animations and Patterns](/animation2) pages for details.
+</aside>
+
 ---
 
-<link rel="stylesheet" href="/simspinwheel/simspinwheel.css">
-<script src='/simspinwheel/simspinwheel.js'></script>
-
 <video src="/images/behindthescenes/pretty_device.mp4" muted autoplay playsinline loop></video>
+
+<aside class="notes">
+Just a pretty video showing what is possible.
+</aside>
 
 ---
 
 ![We will create "generative" art. Instead of having pre-drawn animation frames, we will let the computer generate them from scratch. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/generative_art.png)
+
+<aside class="notes">
+_There is a caveat to what we call "animation" here. We are not making a sequence of cartoon drawings, rather we will be making more abstract colorful patterns. This type of art is frequently called **generative art**, because we programmed a computer to generate the artwork, instead of creating the artwork directly. It is a great way to create an infinite family of art._
+</aside>
 
 ---
 
@@ -870,6 +883,10 @@ How to use code to light up the display and make properly timed animation frames
 <video src="/images/bookpics/simple_blink.mp4" muted autoplay playsinline loop></video>
 
 How does the computer keep time so that it knows when to change a frame?
+
+<aside class="notes">
+_We want our image to change through time, i.e. to depend on the current time. Therefore we need to find a way to **measure** time in our program._
+</aside>
 
 ---
 
@@ -881,17 +898,31 @@ int t = millis();
 
 `millis()` gives the number of milliseconds since the device was turned on. 
 
+<aside class="notes">
+_Storing the result of the function `millis` (the number of millisecondds since startup) lets us use it later to make brightness or color depend on time._
+</aside>
+
 ---
 
 <figure><video src="/images/bookpics/time_loop.mp4" muted playsinline loop></video><figcaption> Every time the `loop()` block is run, `millis()` determines the number of milliseconds since `setup()` was run and stores it in the variable `t`.</figcaption></figure>
 
----
+<aside class="notes">
+Similar to previous videos that showcase the `setup` and many consecutive `loop` executions, here we repeat this demonstration to show how the value of `t` changes as each `loop` function is executed. Mention that there is some mismatch here in the numbers: `t` will grow at each execution, but depending on how fast each `loop` is, `t` would be growing by different amounts.
+</aside>
 
-![Division of time into intervals of 2500. In this example, 5600 milliseconds have passed, which is 2 full cycles of 2500 milliseconds with a remainder of 600.](/images/Modular_division_timeline.png "Division of time (shown in blue) into intervals of 2500 (shown in orange)")
+---
 
 ```c++
 int t_repeating = t % 2500;
 ```
+
+![Division of time into intervals of 2500. In this example, 5600 milliseconds have passed, which is 2 full cycles of 2500 milliseconds with a remainder of 600.](/images/Modular_division_timeline.png "Division of time (shown in blue) into intervals of 2500 (shown in orange)")
+
+<aside class="notes">
+_If we want to have images that repeat, we need to divide the measured time in equal intervals and see how much time has passed since the start of the current interval (not since powering on the device). We can do that by performing division with remainder, and retaining the remainder. The `%` sign is used in this language to denote this remainder calculation._
+
+Spend some time showing through the graphical representation of this operation, and stress that we do this only if we want repeating patterns (where we will use `t_repeating` instead of `t`)
+</aside>
 
 ---
 
@@ -901,9 +932,17 @@ int t_repeating = t % 2500;
 
 <figure><video src="/images/bookpics/time_remainder.mp4" muted autoplay playsinline loop></video><figcaption>Using time to create a repeating pattern: the value returned by `millis()` (in blue) is divided into equal intervals. The remainder of that division (in orange) provides a steady repeating sequence of numbers on which we can base a repeating animation.</figcaption></figure>
 
+<aside class="notes">
+Play the video and reprise a similar explanation of the intervals and remainders, but in the new graphical context.
+</aside>
+
 ---
 
 ## A picture that depends on time
+
+<aside class="notes">
+_And now, finally, a simple changing image._
+</aside>
 
 ---
 
@@ -923,14 +962,35 @@ void loop() {
 </pre>
 </div>
 
+<aside class="notes">
+_And now, finally, a simple changing image._
+
+Go line by line in it. Stress that the brightness ramps up gently but then turns of abruptly (we will do more pleasing patterns soon). The students can also get this code from the examples menu at [`Animaitions_and_Patterns Simple_Blink`](/codedoc/examples/Animations_and_Patterns/Simple_Blink/), which is a very heavily commented version. Be sure to be showing your own Arduino editor if you go that route.
+
+We are sweeping under the rug the fact that we aim for `b` to always be between 0 and 255, because those are the permitted scales. Feel free to talk a bit more about it.
+</aside>
+
 ---
 
 ![Check out our lesson on the building blocks of coding to learn more about the essential pieces of writing a sketch. <a class="imagecredit" href="https://monochra.com/">image credit Mariya Krastanova</a>](/images/bookpics/creating_own_functions.png)
 
+<aside class="notes">
+A little inspirational image about making your own fancier patterns.
+</aside>
 
 # Animations and Patterns
 
 Common tools for more pleasant animations
+
+<aside class="notes">
+<h3>To be done in Session 2 (20ish minutes with a lot of interaction from students)</h3>
+
+_To the aforementioned simple idea of "measuring repeating intervals of time" we will now add a few **suggested** extra patterns that might be of interest. They are not speical in any way, but they are pleasant and convenient. You can use them directly or even create completely new patterns)._
+
+See [Animations and Patterns](/animation2) pages for details.
+
+Just follow along with the slide content and code for the next few slides, going through examples. Each example is also available from the examples menu in the Arduino software (the sketch name is given on each slide).
+</aside>
 
 ---
 
@@ -991,6 +1051,10 @@ void loop() {
 
 ## Non-uniform patterns and accessing separate LEDs
 
+<aside class="notes">
+Here we will slowly transition to examples that the students will be modifying and experimenting with. Go through the first one relatively quickly, just stressing the idea that we can calculate new variables from the old variables, such that some relationship is imposed between LEDs (e.g., that they are the opposite brightness of each other).
+</aside>
+
 ---
 
 <div class="ssw-codecontent" markdown=0>
@@ -1040,6 +1104,10 @@ void loop() {
 </div>
 
 [`Rainbow_Chase`](/codedoc/examples/Animations_and_Patterns/Rainbow_Chase)
+
+<aside class="notes">
+Here we also started adding arbitrary artificial delays between LEDs so that it looks like the colors are chasing each other. Spend the rest of the session simply experimenting with this sketch and making it fancier and weirder. Use the small LEDs too. A lot of copy-pasting is fine too!
+</aside>
 
 ---
 
