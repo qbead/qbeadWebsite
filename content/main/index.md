@@ -52,11 +52,8 @@ The SpinWheel's are now manufactured and we're finishing crafting the educationa
 }
 </style>
 <div id="kickstarter">
-<p><strong>Our crowdfunding campaign is now over.</strong></p>    
-<p>However, we do have a limited number of SpinWheels available for order [from our store](https://store.spinwearables.com/) while supplies last.</p>
-<a href="https://store.spinwearables.com/" class="round-button">Buy a SpinWheel!</a>
-<p><strong>You can also follow us on:</strong></p>
-<p><strong>[Twitter](https://twitter.com/SpinWearables) | [Facebook](https://facebook.com/spinwearables) | [Instagram](https://instagram.com/spinwearables?igshid=1hk2qphff1j1b)</strong></p>
+<p><strong>Our crowdfunding campaign is now over and all devices are sold out.</strong></p>    
+<p>All the blueprints are freely available if you want to order/produce your own batch. And we are always available to help (for free if the project is educational). Moreover, all of the interactive lessons in our online booklet are applicable to non-SpinWheel Arduino-like devices.</p>
 </div>
 </div>
 </div>
