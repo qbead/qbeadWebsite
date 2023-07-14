@@ -1,10 +1,17 @@
 ---
-title: SpinWearables
-keywords: spinwheel, education, STEM, outreach, science, engineering day, electronics, computer science, physics
+title: The Qbead
+keywords: quantum, education, STEM, outreach, science, electronics, computer science, physics
 header-image: /images/behindthescenes/sky_lit_up_device_crop2.jpg
 landing: landing
 subtitle: Children have the natural <em>curiosity</em> and <br> <em>capacity</em> to engineer a better world. <br> <br> Our kits just remind them.
 ---
+
+<div class="row">
+<div class="column large-text">
+<p>**Introducing the Qbead** </p>
+<p>This is just a placeholder website.</p> 
+</div>
+</div>
 
 <div class="row dark-transparent">
 <div class="column"><video style="margin:auto;max-width:100%;" poster="/images/kickvideo_snap.jpg" src="/images/kickvideo.mp4" playsinline controls></video></div>

@@ -1,4 +1,4 @@
-The majority of the [spinwearables.com](https://spinwearables.com) website is generated from this source code. You can use `make html` to create all of the necessary files in the `build` folder. You can run `make local_test_server` in order to preview these changes on your local machine.
+The majority of the [qbead.org](https://qbead.org) website is generated from this source code. You can use `make html` to create all of the necessary files in the `build` folder. You can run `make local_test_server` in order to preview these changes on your local machine.
 
 You need to install `pandoc` to generate the website.
 
@@ -24,7 +24,7 @@ git commit -m "A_GOOD_COMMIT_MESSAGE." # commit the changes
 git push # push the changes to the central repo
 ```
 
-This will store the changes to the website source code, but it will not render it to the live host. To do the rendering, you need the `SpinWearables.github.io` repo, which also includes other submodules.
+This will store the changes to the website source code, but it will not render it to the live host.
 
 If you want to experiment with your own changes, you can create a branch and work on it, without pushing it to the origin remote:
 
