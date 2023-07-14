@@ -10,6 +10,8 @@ git config --global user.email "your@email.com"
 git config --global credential.helper store
 ```
 
+You also need to create a `build` folder where the rendered website can be stored for inspection.
+
 A typical workflow would be:
 
 ```bash
@@ -31,8 +33,8 @@ If you want to experiment with your own changes, you can create a branch and wor
 ```bash
 git checkout -b BRANCH_NAME # make the branch
 # edit, git add, and git commit to the new branch
-git checkout master # go back to master
-git pull # get new master branch changes
+git checkout main # go back to main
+git pull # get new main branch changes
 git merge BRANCH_NAME # merge the local branch on which you worked
 git push # push the newly merged commits to the origin remote
 ```
