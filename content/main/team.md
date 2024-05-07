@@ -58,11 +58,21 @@ If you want to get in touch or have any questions, email [mail@qbead.org](mailto
 <div class="frontwall dark">
 
 <div class="team-member">
+<img src="/images/teampics/carlos_s.jpg">
+<div>
+<h1>Carlos</h1>
+<h2>Delft University of Technology, QuTech</h2>
+Carlos loves science, crafts, and art, and sometimes combines them into a beautiful gadget like the Qbead. On top of that, he enjoys mentoring and contributing to diversity in science and engineering. Examples are organizing science-art workshops with asylum seekers in Sweden and the quantum hackathon iQuHACK at MIT. 
+Now at Delft University of Technology and QuTech, Carlos is a professor exploring quantum photonics while he continues to lead outreach projects to democratize science and technology.
+</div>
+</div>
+
+<div class="team-member">
 <img src="/images/teampics/stefan_s.jpg">
 <div>
 <h1>Stefan</h1>
 <h2>University of Massachusetts Amherst</h2>
-Since high school [Stefan](/stefan) has enjoyed sharing the wonders of science with
+Since high school Stefan has enjoyed sharing the wonders of science with
 others, organizing extraculicular courses and summer break Physics events.
 While a graduate student at Yale's Quantum Institute he felt most at home in
 Yale's makerspace, preparing contraptions to be used in middle- and high-school
