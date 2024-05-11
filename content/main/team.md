@@ -83,6 +83,24 @@ Now, as a professor at UMass Amherst, he is designing the Qbead as a way to brin
 </div>
 </div>
 
+<div class="team-member">
+<img src="/images/teampics/hugo_s.jpg">
+<div>
+<h1>Hugo</h1>
+<h2>MIT</h2>
+Hugo appreciates taking part in various efforts promoting higher education in STEM to various communities. Since his undergraduate studies at the University of Ottawa, these have included participation in the university’s mini-courses program and engaging with elementary school students about being a grad student. He is currently a doctoral student in electrical engineering at MIT.
+</div>
+</div>
+
+<div class="team-member">
+<img src="/images/teampics/saumil_s.jpg">
+<div>
+<h1>Saumil</h1>
+<h2>MIT</h2>
+Saumil has always held a fascination for building things. As a graduate student at MIT, Saumil worked on silicon photonics, where he spent a great deal of time hacking together electronics and microcontrollers to run his experiments. He also enjoys teaching and has helped develop several courses and hands-on labs to introduce students to photonic hardware. Saumil is now a postdoc jointly at MIT and NTT Research, where he has continued his research at the intersection of optics and computing. He hopes to share his love of building hardware through the Qbead and inspire the next generation of quantum scientists and engineers.
+</div>
+</div>
+
 <!--TODO: the other team members-->
 
 </div>
